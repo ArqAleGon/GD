@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {GLTFLoader} from './GLTFLoader.js';
 
 const scale = 0.06;
 const point = (p, height = 0) => new THREE.Vector3(p[0] * scale, height, -p[1] * scale);
@@ -12,7 +13,8 @@ export async function loadUrbanMap() {
   const [data, buildings, roads, volumesData, volumes, volumeFootprints, parcels] = await Promise.all([
     read('map.json'), read('buildings.bin', true), read('roads.bin', true), read('volumes.json'), read('volumes.bin', true), read('volume-footprints.bin', true), read('parcels.bin', true)
   ]);
-  return {data, volumesData, volumes: new Float32Array(volumes), volumeFootprints: new Float32Array(volumeFootprints), parcels: new Float32Array(parcels), buildings: new Float32Array(buildings), roads: new Float32Array(roads)};
+  const [ifc, placement] = await Promise.all([new GLTFLoader().loadAsync('./e15-1100.glb'), fetch('./e15-placement.json').then(r=>{if(!r.ok)throw new Error('IFC placement unavailable');return r.json()})]);
+  return {ifc:ifc.scene, placement, data, volumesData, volumes: new Float32Array(volumes), volumeFootprints: new Float32Array(volumeFootprints), parcels: new Float32Array(parcels), buildings: new Float32Array(buildings), roads: new Float32Array(roads)};
 }
 
 function segments(group, coords, color, height) {
@@ -94,6 +96,15 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
     const label = addLabel(point(road.center, .4).toArray(), () => road.name, null, 'roadLabel');
     label.geographic = true;
   }
+  // Preserve the IFC asset; apply one reversible placement to the entire model.
+  const placement=assets.placement, model=assets.ifc.clone(true);
+  model.traverse(o=>{if(o.isMesh){o.geometry=o.geometry.clone();o.material=Array.isArray(o.material)?o.material.map(m=>m.clone()):o.material.clone();}});
+  model.position.set(-placement.sourceCenterXY[0],-placement.verticalDatumAssumed,placement.sourceCenterXY[1]);
+  const ifcGroup=new THREE.Group();ifcGroup.name='IFC E15 1100';ifcGroup.add(model);
+  ifcGroup.rotation.y=placement.rotationZRadians;ifcGroup.scale.setScalar(scale);
+  ifcGroup.position.copy(point(placement.targetRelativeXY,.24));root.add(ifcGroup);ifcGroup.updateMatrixWorld(true);
+  const ifcBounds=new THREE.Box3().setFromObject(ifcGroup,true);
+  const ifcLabel=addLabel([ifcGroup.position.x,ifcBounds.max.y+.6,ifcGroup.position.z],()=> 'IFC · E15 · 1100',null,'pilotLabel');ifcLabel.geographic=true;
   const bounds = geometry => {
     const box = new THREE.Box3();
     const visit = c => typeof c[0] === 'number' ? box.expandByPoint(point(c)) : c.forEach(visit);
@@ -103,5 +114,5 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
   const all = bounds(data.pilot);
   data.zones.forEach(z => all.union(bounds(z.geometry)));
   all.union(bounds(assets.volumesData.corridor));
-  return {seismic, volumes, pilotBounds: bounds(data.pilot).union(bounds(assets.volumesData.corridor)), fullBounds: all};
+  return {seismic, volumes, ifcBounds, pilotBounds: bounds(data.pilot).union(bounds(assets.volumesData.corridor)), fullBounds: all};
 }

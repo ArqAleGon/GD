@@ -1,0 +1,19 @@
+{
+  "source": "L1T1-1100-315-CON-ED-EST-MO-0001_V00.ifc",
+  "placement": "User-directed illustrative placement south of E15 on L1; GIS registration unvalidated",
+  "targetRelativeXY": [
+    -126.51976025969137,
+    -929.1044291383404
+  ],
+  "sourceCenterXY": [
+    101413.57220927987,
+    105809.42058871753
+  ],
+  "rotationZRadians": 0.0026288815146753297,
+  "verticalDatumAssumed": 2550,
+  "scale": 0.06,
+  "stationSouthChainage": 1305.0152307834855,
+  "targetChainage": 1205.0152307834855,
+  "stationCenterChainage": 1380.0160908464545,
+  "routeDistanceM": 2.4402770943801743e-15
+}
