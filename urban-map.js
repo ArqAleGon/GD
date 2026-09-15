@@ -11,16 +11,17 @@ export async function loadUrbanMap() {
     if (!response.ok) throw new Error('No se pudo cargar la cartografía: ' + name);
     return binary ? response.arrayBuffer() : response.json();
   };
-  const [data, buildings, roads, volumesData, volumes, volumeFootprints, parcels] = await Promise.all([
-    read('map.json'), read('buildings.bin', true), read('roads.bin', true), read('volumes.json'), read('volumes.bin', true), read('volume-footprints.bin', true), read('parcels.bin', true)
-  ]);
-  const loader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
-  const [ifcStructure, ifcArchitecture, placement] = await Promise.all([
-    loader.loadAsync('./e15-1100.glb'),
-    loader.loadAsync('./e15-architecture-web.glb'),
+  const [data, buildings, roads, volumesData, volumes, volumeFootprints, parcels, placement] = await Promise.all([
+    read('map.json'), read('buildings.bin', true), read('roads.bin', true), read('volumes.json'), read('volumes.bin', true), read('volume-footprints.bin', true), read('parcels.bin', true),
     fetch('./e15-placement.json').then(r=>{if(!r.ok)throw new Error('IFC placement unavailable');return r.json()})
   ]);
-  return {ifcStructure:ifcStructure.scene, ifcArchitecture:ifcArchitecture.scene, placement, data, volumesData, volumes: new Float32Array(volumes), volumeFootprints: new Float32Array(volumeFootprints), parcels: new Float32Array(parcels), buildings: new Float32Array(buildings), roads: new Float32Array(roads)};
+  const loader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
+  const modelDefs=placement.models||[
+    {file:'e15-architecture-web.glb',section:'E15',label:'IFC · E15 · ARQ + EST'},
+    {file:'e15-1100.glb',section:'E15',label:'IFC · E15 · ARQ + EST'}
+  ];
+  const ifcModels=await Promise.all(modelDefs.map(async definition=>({definition,scene:(await loader.loadAsync('./'+definition.file)).scene})));
+  return {ifcModels, placement, data, volumesData, volumes: new Float32Array(volumes), volumeFootprints: new Float32Array(volumeFootprints), parcels: new Float32Array(parcels), buildings: new Float32Array(buildings), roads: new Float32Array(roads)};
 }
 
 function segments(group, coords, color, height) {
@@ -102,20 +103,29 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
     const label = addLabel(point(road.center, .4).toArray(), () => road.name, null, 'roadLabel');
     label.geographic = true;
   }
-  // Both IFCs share coordinates. One group preserves their relative alignment and
-  // applies the documented street datum without altering either source asset.
+  // The IFCs share the project coordinate system. Section groups preserve the
+  // alignment inside E15, I16 and E16 without altering any source asset.
   const placement=assets.placement;
-  const ifcGroup=new THREE.Group();ifcGroup.name='IFC E15 · arquitectura y estructura';
-  for(const source of [assets.ifcArchitecture,assets.ifcStructure]){
-    const model=source.clone(true);
+  const ifcGroup=new THREE.Group();ifcGroup.name='IFC E15–I16–E16';root.add(ifcGroup);
+  const sections=new Map();
+  for(const asset of assets.ifcModels){
+    const definition=asset.definition;
+    if(!sections.has(definition.section)){
+      const section=new THREE.Group();section.name='IFC '+definition.section;section.scale.setScalar(scale);section.position.y=placement.streetHeightInScene??.24;ifcGroup.add(section);sections.set(definition.section,{group:section,label:definition.label||('IFC · '+definition.section)});
+    }
+    const model=asset.scene.clone(true);
     model.traverse(o=>{if(o.isMesh){o.geometry=o.geometry.clone();o.material=Array.isArray(o.material)?o.material.map(m=>m.clone()):o.material.clone();}});
-    model.position.set(-placement.gisOrigin[0],-placement.streetDatum,placement.gisOrigin[1]);
-    ifcGroup.add(model);
+    model.position.set(-placement.gisOrigin[0],-(definition.streetDatum??placement.streetDatum),placement.gisOrigin[1]);
+    sections.get(definition.section).group.add(model);
   }
-  ifcGroup.scale.setScalar(scale);ifcGroup.position.y=.24;root.add(ifcGroup);ifcGroup.updateMatrixWorld(true);
+  ifcGroup.updateMatrixWorld(true);
   const ifcBounds=new THREE.Box3().setFromObject(ifcGroup,true);
-  const ifcCenter=ifcBounds.getCenter(new THREE.Vector3());
-  const ifcLabel=addLabel([ifcCenter.x,ifcBounds.max.y+.6,ifcCenter.z],()=> 'IFC · E15 · ARQ + EST',null,'pilotLabel');ifcLabel.geographic=true;
+  const ifcSections={};
+  for(const [sectionName,entry] of sections){
+    const sectionBounds=new THREE.Box3().setFromObject(entry.group,true);ifcSections[sectionName]=sectionBounds;
+    const sectionCenter=sectionBounds.getCenter(new THREE.Vector3());
+    const ifcLabel=addLabel([sectionCenter.x,sectionBounds.max.y+.6,sectionCenter.z],()=>entry.label,null,'pilotLabel');ifcLabel.geographic=true;
+  }
   const bounds = geometry => {
     const box = new THREE.Box3();
     const visit = c => typeof c[0] === 'number' ? box.expandByPoint(point(c)) : c.forEach(visit);
@@ -125,5 +135,5 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
   const all = bounds(data.pilot);
   data.zones.forEach(z => all.union(bounds(z.geometry)));
   all.union(bounds(assets.volumesData.corridor));
-  return {seismic, volumes, ifcBounds, pilotBounds: bounds(data.pilot).union(bounds(assets.volumesData.corridor)), fullBounds: all};
+  return {seismic, volumes, ifcBounds, ifcSections, pilotBounds: bounds(data.pilot).union(bounds(assets.volumesData.corridor)), fullBounds: all};
 }

@@ -1,9 +1,87 @@
 {
-  "sources": [
-    "L1T1-0000-315-CON-ED-ARQ-MO-0001_V00.ifc",
-    "L1T1-1100-315-CON-ED-EST-MO-0001_V00.ifc"
+  "models": [
+    {
+      "file": "e15-architecture-web.glb",
+      "source": "L1T1-0000-315-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E15",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 91464,
+      "missing": 1,
+      "label": "IFC · E15 · ARQ + EST"
+    },
+    {
+      "file": "e15-1100.glb",
+      "source": "L1T1-1100-315-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E15",
+      "discipline": "EST",
+      "version": "V00",
+      "converted": 297,
+      "missing": 0,
+      "label": "IFC · E15 · ARQ + EST"
+    },
+    {
+      "file": "i16-est-1100-web.glb",
+      "source": "L1T1-1100-216-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "I16",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 1488,
+      "missing": 0,
+      "label": "IFC · I16 · EST"
+    },
+    {
+      "file": "i16-est-1150-web.glb",
+      "source": "L1T1-1150-216-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "I16",
+      "discipline": "EST",
+      "version": "V00",
+      "converted": 4090,
+      "missing": 0,
+      "label": "IFC · I16 · EST"
+    },
+    {
+      "file": "e16-arq-0000-web.glb",
+      "source": "L1T1-0000-316-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E16",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 127525,
+      "missing": 1,
+      "label": "IFC · E16 · ARQ + EST"
+    },
+    {
+      "file": "e16-est-1100-web.glb",
+      "source": "L1T1-1100-316-CON-CN-EST-MO-0001_V09.ifc",
+      "section": "E16",
+      "discipline": "EST",
+      "version": "V09",
+      "converted": 844,
+      "missing": 0,
+      "label": "IFC · E16 · ARQ + EST"
+    },
+    {
+      "file": "e16-est-1150-web.glb",
+      "source": "L1T1-1150-316-CON-CN-EST-MO-0001_V00.ifc",
+      "section": "E16",
+      "discipline": "EST",
+      "version": "V00",
+      "converted": 55,
+      "missing": 0,
+      "label": "IFC · E16 · ARQ + EST"
+    },
+    {
+      "file": "e16-est-1200-web.glb",
+      "source": "L1T1-1200-316-CON-CN-EST-MO-0001_V00.ifc",
+      "section": "E16",
+      "discipline": "EST",
+      "version": "V00",
+      "converted": 4832,
+      "missing": 0,
+      "label": "IFC · E16 · ARQ + EST"
+    }
   ],
-  "placement": "Shared IFC coordinates aligned to the EPSG:6247 GIS origin; vertical street datum inferred from the architectural model minimum elevation and pending survey validation",
+  "placement": "Shared IFC coordinates aligned to the EPSG:6247 GIS origin; common street datum inferred from E15 and pending survey validation",
   "gisOrigin": [101509.32564429587, 106566.17298935403],
   "streetDatum": 2561.1997,
   "streetHeightInScene": 0.24,
