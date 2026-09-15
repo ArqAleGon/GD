@@ -3,6 +3,7 @@ import {GLTFLoader} from './GLTFLoader.js';
 import {MeshoptDecoder} from './meshopt_decoder.module.js';
 
 const scale = 0.06;
+const assetRevision = '20260915-i16-e16';
 const point = (p, height = 0) => new THREE.Vector3(p[0] * scale, height, -p[1] * scale);
 
 export async function loadUrbanMap() {
@@ -13,14 +14,14 @@ export async function loadUrbanMap() {
   };
   const [data, buildings, roads, volumesData, volumes, volumeFootprints, parcels, placement] = await Promise.all([
     read('map.json'), read('buildings.bin', true), read('roads.bin', true), read('volumes.json'), read('volumes.bin', true), read('volume-footprints.bin', true), read('parcels.bin', true),
-    fetch('./e15-placement.json').then(r=>{if(!r.ok)throw new Error('IFC placement unavailable');return r.json()})
+    fetch('./e15-placement.json?v='+assetRevision).then(r=>{if(!r.ok)throw new Error('IFC placement unavailable');return r.json()})
   ]);
   const loader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
   const modelDefs=placement.models||[
     {file:'e15-architecture-web.glb',section:'E15',label:'IFC · E15 · ARQ + EST'},
     {file:'e15-1100.glb',section:'E15',label:'IFC · E15 · ARQ + EST'}
   ];
-  const ifcModels=await Promise.all(modelDefs.map(async definition=>({definition,scene:(await loader.loadAsync('./'+definition.file)).scene})));
+  const ifcModels=await Promise.all(modelDefs.map(async definition=>({definition,scene:(await loader.loadAsync('./'+definition.file+'?v='+assetRevision)).scene})));
   return {ifcModels, placement, data, volumesData, volumes: new Float32Array(volumes), volumeFootprints: new Float32Array(volumeFootprints), parcels: new Float32Array(parcels), buildings: new Float32Array(buildings), roads: new Float32Array(roads)};
 }
 

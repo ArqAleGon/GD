@@ -1,5 +1,5 @@
 import { localizeInterface } from './interface-language.js';
-import { loadUrbanMap, buildUrbanMap } from './urban-map.js';
+import { loadUrbanMap, buildUrbanMap } from './urban-map.js?v=20260915-i16-e16';
 import { networkLines } from './network-data.js';
 import * as THREE from 'three';
 import { OrbitControls } from './vendor/OrbitControls.js';
