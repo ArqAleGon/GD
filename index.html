@@ -6,7 +6,8 @@
 <aside id="panels"></aside><aside id="gisLegend" aria-label="Leyenda cartográfica" hidden></aside>
 <div id="selection" hidden></div>
 <div id="viewBadge"><strong id="sectionName"></strong><span id="viewName"></span></div>
-<div id="cameraDock"><button data-camera="home" title="Vista inicial">⌂</button><button data-camera="top" data-i18n="top">Planta</button><button data-camera="front" data-i18n="front">Frente</button><button data-camera="side" data-i18n="side">Lateral</button><button id="rotate" title="Rotación automática">⟳</button><button id="zoomIn" aria-label="Acercar">＋</button><button id="zoomOut" aria-label="Alejar">−</button><button id="panelToggle" title="Mostrar / ocultar paneles">▥</button></div>
+<button id="panelToggle" aria-controls="panels" aria-expanded="true" title="Ocultar dashboards"><span aria-hidden="true">▥</span><b>Ocultar dashboards</b></button>
+<div id="cameraDock"><button data-camera="home" title="Vista inicial">⌂</button><button data-camera="top" data-i18n="top">Planta</button><button data-camera="front" data-i18n="front">Frente</button><button data-camera="side" data-i18n="side">Lateral</button><button id="rotate" title="Rotación automática">⟳</button><button id="zoomIn" aria-label="Acercar">＋</button><button id="zoomOut" aria-label="Alejar">−</button></div>
 <div id="toolbar"></div><div id="timeline" hidden><button id="playTimeline">Ⅱ</button><input aria-label="Tiempo de simulación" type="range" min="0" max="100" value="0"><span>00:00</span></div>
 <footer><span class="liveDot"></span><span data-i18n="simulation">DEMO · OPERACIÓN SIMULADA</span><span id="hint" data-i18n="hint">Arrastra para orbitar · Rueda para acercar · Clic para inspeccionar</span><span id="rendererStatus">WebGL</span></footer>
 <div id="toast" role="status"></div><div id="loader"><div class="spinner"></div><p>URBAN RAIL TRANSIT</p><small>Loading 3D environment</small></div>

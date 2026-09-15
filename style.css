@@ -9,6 +9,10 @@ dialog.cctv{width:700px;max-width:94vw}#cctvCanvas{border:1px solid #617d9240;ba
 
 .panel{overflow:auto}.pilotLabel{z-index:3}#modalContent img{max-height:65vh;object-fit:contain}
 
+#panelToggle{position:absolute;z-index:8;right:20px;top:80px;padding:7px 10px;background:#101d2ae8;border:1px solid #5480a466;border-radius:3px;display:flex;align-items:center;gap:7px;color:#d8e9f2}
+#panelToggle b{font-size:11px;font-weight:500}
+.panelHidden #panelToggle{background:#315b78f2;border-color:#7ac9f1;color:#fff}
+
 #gisLegend{position:absolute;right:18px;top:95px;width:225px;max-height:calc(100vh - 235px);overflow:auto;padding:16px;background:#0b1825ed;border:1px solid #345069;border-radius:6px;color:#d6e5ed;font-size:13px;z-index:5}#gisLegend[hidden]{display:none}#gisLegend strong{display:block;margin-bottom:10px;font-size:14px}#gisLegend p{font-size:12px;line-height:1.5;color:#a8bfd0;margin:10px 0 15px}.gisKey{display:flex;gap:8px;align-items:center;margin:7px 0}.gisKey i{display:inline-block;flex-shrink:0;width:14px;height:5px}.roadLabel{font-size:11px;pointer-events:none;background:#101b25c9;color:#adbfce;border:0}.sceneLabel.pilotLabel{font-size:14px!important}#toolbar button{flex-shrink:0}#toolbar button[aria-pressed="true"]{border-color:#f6bd60;color:#fff1be}#panels{z-index:6}@media(max-width:800px){#gisLegend{top:80px;right:8px;width:174px;padding:10px;font-size:12px;max-height:42vh}#gisLegend p{font-size:11px}#gisLegend strong{font-size:13px}}
 
 /* Persistent dashboards across scenes, with an explicit simulation source. */
@@ -20,4 +24,4 @@ dialog.cctv{width:700px;max-width:94vw}#cctvCanvas{border:1px solid #617d9240;ba
 #gisLegend{right:calc(min(33vw,450px) + 32px);width:195px;max-height:35vh}
 @media(min-width:1800px){#gisLegend{right:542px}}
 @media(max-width:1050px){#gisLegend{right:calc(30vw + 22px);width:170px}}
-@media(max-width:700px){#panels .panelCol+.panelCol{display:flex;margin-top:6px}#panels .panelCol{overflow:visible}#panels .dashboardSource{margin-bottom:6px}#gisLegend{top:auto;bottom:125px;left:10px;right:auto;width:118px;max-height:25vh}}
+@media(max-width:700px){#panelToggle{top:58px;right:8px;padding:7px 9px}#panelToggle b{font-size:10px}#panels .panelCol+.panelCol{display:flex;margin-top:6px}#panels .panelCol{overflow:visible}#panels .dashboardSource{margin-bottom:6px}#gisLegend{top:auto;bottom:125px;left:10px;right:auto;width:118px;max-height:25vh}}

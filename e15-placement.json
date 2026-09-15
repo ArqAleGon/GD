@@ -1,19 +1,11 @@
 {
-  "source": "L1T1-1100-315-CON-ED-EST-MO-0001_V00.ifc",
-  "placement": "User-directed illustrative placement south of E15 on L1; GIS registration unvalidated",
-  "targetRelativeXY": [
-    -126.51976025969137,
-    -929.1044291383404
+  "sources": [
+    "L1T1-0000-315-CON-ED-ARQ-MO-0001_V00.ifc",
+    "L1T1-1100-315-CON-ED-EST-MO-0001_V00.ifc"
   ],
-  "sourceCenterXY": [
-    101413.57220927987,
-    105809.42058871753
-  ],
-  "rotationZRadians": 0.0026288815146753297,
-  "verticalDatumAssumed": 2550,
-  "scale": 0.06,
-  "stationSouthChainage": 1305.0152307834855,
-  "targetChainage": 1205.0152307834855,
-  "stationCenterChainage": 1380.0160908464545,
-  "routeDistanceM": 2.4402770943801743e-15
+  "placement": "Shared IFC coordinates aligned to the EPSG:6247 GIS origin; vertical street datum inferred from the architectural model minimum elevation and pending survey validation",
+  "gisOrigin": [101509.32564429587, 106566.17298935403],
+  "streetDatum": 2561.1997,
+  "streetHeightInScene": 0.24,
+  "scale": 0.06
 }

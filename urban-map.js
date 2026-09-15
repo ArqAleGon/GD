@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import {GLTFLoader} from './GLTFLoader.js';
+import {MeshoptDecoder} from './meshopt_decoder.module.js';
 
 const scale = 0.06;
 const point = (p, height = 0) => new THREE.Vector3(p[0] * scale, height, -p[1] * scale);
@@ -13,8 +14,13 @@ export async function loadUrbanMap() {
   const [data, buildings, roads, volumesData, volumes, volumeFootprints, parcels] = await Promise.all([
     read('map.json'), read('buildings.bin', true), read('roads.bin', true), read('volumes.json'), read('volumes.bin', true), read('volume-footprints.bin', true), read('parcels.bin', true)
   ]);
-  const [ifc, placement] = await Promise.all([new GLTFLoader().loadAsync('./e15-1100.glb'), fetch('./e15-placement.json').then(r=>{if(!r.ok)throw new Error('IFC placement unavailable');return r.json()})]);
-  return {ifc:ifc.scene, placement, data, volumesData, volumes: new Float32Array(volumes), volumeFootprints: new Float32Array(volumeFootprints), parcels: new Float32Array(parcels), buildings: new Float32Array(buildings), roads: new Float32Array(roads)};
+  const loader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
+  const [ifcStructure, ifcArchitecture, placement] = await Promise.all([
+    loader.loadAsync('./e15-1100.glb'),
+    loader.loadAsync('./e15-architecture-web.glb'),
+    fetch('./e15-placement.json').then(r=>{if(!r.ok)throw new Error('IFC placement unavailable');return r.json()})
+  ]);
+  return {ifcStructure:ifcStructure.scene, ifcArchitecture:ifcArchitecture.scene, placement, data, volumesData, volumes: new Float32Array(volumes), volumeFootprints: new Float32Array(volumeFootprints), parcels: new Float32Array(parcels), buildings: new Float32Array(buildings), roads: new Float32Array(roads)};
 }
 
 function segments(group, coords, color, height) {
@@ -96,15 +102,20 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
     const label = addLabel(point(road.center, .4).toArray(), () => road.name, null, 'roadLabel');
     label.geographic = true;
   }
-  // Preserve the IFC asset; apply one reversible placement to the entire model.
-  const placement=assets.placement, model=assets.ifc.clone(true);
-  model.traverse(o=>{if(o.isMesh){o.geometry=o.geometry.clone();o.material=Array.isArray(o.material)?o.material.map(m=>m.clone()):o.material.clone();}});
-  model.position.set(-placement.sourceCenterXY[0],-placement.verticalDatumAssumed,placement.sourceCenterXY[1]);
-  const ifcGroup=new THREE.Group();ifcGroup.name='IFC E15 1100';ifcGroup.add(model);
-  ifcGroup.rotation.y=placement.rotationZRadians;ifcGroup.scale.setScalar(scale);
-  ifcGroup.position.copy(point(placement.targetRelativeXY,.24));root.add(ifcGroup);ifcGroup.updateMatrixWorld(true);
+  // Both IFCs share coordinates. One group preserves their relative alignment and
+  // applies the documented street datum without altering either source asset.
+  const placement=assets.placement;
+  const ifcGroup=new THREE.Group();ifcGroup.name='IFC E15 · arquitectura y estructura';
+  for(const source of [assets.ifcArchitecture,assets.ifcStructure]){
+    const model=source.clone(true);
+    model.traverse(o=>{if(o.isMesh){o.geometry=o.geometry.clone();o.material=Array.isArray(o.material)?o.material.map(m=>m.clone()):o.material.clone();}});
+    model.position.set(-placement.gisOrigin[0],-placement.streetDatum,placement.gisOrigin[1]);
+    ifcGroup.add(model);
+  }
+  ifcGroup.scale.setScalar(scale);ifcGroup.position.y=.24;root.add(ifcGroup);ifcGroup.updateMatrixWorld(true);
   const ifcBounds=new THREE.Box3().setFromObject(ifcGroup,true);
-  const ifcLabel=addLabel([ifcGroup.position.x,ifcBounds.max.y+.6,ifcGroup.position.z],()=> 'IFC · E15 · 1100',null,'pilotLabel');ifcLabel.geographic=true;
+  const ifcCenter=ifcBounds.getCenter(new THREE.Vector3());
+  const ifcLabel=addLabel([ifcCenter.x,ifcBounds.max.y+.6,ifcCenter.z],()=> 'IFC · E15 · ARQ + EST',null,'pilotLabel');ifcLabel.geographic=true;
   const bounds = geometry => {
     const box = new THREE.Box3();
     const visit = c => typeof c[0] === 'number' ? box.expandByPoint(point(c)) : c.forEach(visit);
