@@ -9,19 +9,36 @@ dialog.cctv{width:700px;max-width:94vw}#cctvCanvas{border:1px solid #617d9240;ba
 
 .panel{overflow:auto}.pilotLabel{z-index:3}#modalContent img{max-height:65vh;object-fit:contain}
 
+#gisLegend{position:absolute;right:18px;top:95px;width:225px;max-height:calc(100vh - 235px);overflow:auto;padding:16px;background:#0b1825ed;border:1px solid #345069;border-radius:6px;color:#d6e5ed;font-size:13px;z-index:5}#gisLegend[hidden]{display:none}#gisLegend strong{display:block;margin-bottom:10px;font-size:14px}#gisLegend p{font-size:12px;line-height:1.5;color:#a8bfd0;margin:10px 0 15px}.gisKey{display:flex;gap:8px;align-items:center;margin:7px 0}.gisKey i{display:inline-block;flex-shrink:0;width:14px;height:5px}.roadLabel{font-size:11px;pointer-events:none;background:#101b25c9;color:#adbfce;border:0}.sceneLabel.pilotLabel{font-size:14px!important}#toolbar button{flex-shrink:0}#toolbar button[aria-pressed="true"]{border-color:#f6bd60;color:#fff1be}#panels{z-index:6}@media(max-width:800px){#gisLegend{top:80px;right:8px;width:174px;padding:10px;font-size:12px;max-height:42vh}#gisLegend p{font-size:11px}#gisLegend strong{font-size:13px}}
 #panelToggle{position:absolute;z-index:8;right:20px;top:80px;padding:7px 10px;background:#101d2ae8;border:1px solid #5480a466;border-radius:3px;display:flex;align-items:center;gap:7px;color:#d8e9f2}
 #panelToggle b{font-size:11px;font-weight:500}
 .panelHidden #panelToggle{background:#315b78f2;border-color:#7ac9f1;color:#fff}
 
-#gisLegend{position:absolute;right:18px;top:95px;width:225px;max-height:calc(100vh - 235px);overflow:auto;padding:16px;background:#0b1825ed;border:1px solid #345069;border-radius:6px;color:#d6e5ed;font-size:13px;z-index:5}#gisLegend[hidden]{display:none}#gisLegend strong{display:block;margin-bottom:10px;font-size:14px}#gisLegend p{font-size:12px;line-height:1.5;color:#a8bfd0;margin:10px 0 15px}.gisKey{display:flex;gap:8px;align-items:center;margin:7px 0}.gisKey i{display:inline-block;flex-shrink:0;width:14px;height:5px}.roadLabel{font-size:11px;pointer-events:none;background:#101b25c9;color:#adbfce;border:0}.sceneLabel.pilotLabel{font-size:14px!important}#toolbar button{flex-shrink:0}#toolbar button[aria-pressed="true"]{border-color:#f6bd60;color:#fff1be}#panels{z-index:6}@media(max-width:800px){#gisLegend{top:80px;right:8px;width:174px;padding:10px;font-size:12px;max-height:42vh}#gisLegend p{font-size:11px}#gisLegend strong{font-size:13px}}
-
 /* Persistent dashboards across scenes, with an explicit simulation source. */
-#panels{grid-template-rows:auto minmax(0,1fr)}
+#panels{grid-template-rows:auto minmax(0,1fr);bottom:140px}
 .dashboardSource{grid-column:1/-1;font-size:10px;line-height:1.4;color:#f4ca80;background:#101b26ee;border:1px solid #77633c;padding:6px 8px}
 #panels .panelCol{overflow-y:auto;scrollbar-width:thin}
 #panels .panel{flex:1 0 auto;min-height:160px;overflow:visible}
-#panels{bottom:140px}
 #gisLegend{right:calc(min(33vw,450px) + 32px);width:195px;max-height:35vh}
 @media(min-width:1800px){#gisLegend{right:542px}}
 @media(max-width:1050px){#gisLegend{right:calc(30vw + 22px);width:170px}}
 @media(max-width:700px){#panelToggle{top:58px;right:8px;padding:7px 9px}#panelToggle b{font-size:10px}#panels .panelCol+.panelCol{display:flex;margin-top:6px}#panels .panelCol{overflow:visible}#panels .dashboardSource{margin-bottom:6px}#gisLegend{top:auto;bottom:125px;left:10px;right:auto;width:118px;max-height:25vh}}
+
+/* Render E15 comparison: a camera spot plus an explicitly identified visual-reference overlay. */
+#renderOverlay{position:absolute;inset:0;z-index:2;pointer-events:none;background:#8cb4cb;transition:opacity .12s linear}
+#renderOverlay[hidden],#renderCompareControls[hidden]{display:none}
+#renderOverlay img{display:block;width:100%;height:100%;object-fit:cover;object-position:center center}
+#sceneLabels{z-index:3}
+.renderSpotLabel{color:#fff!important;border-color:#ffd166!important;background:#573b12e8!important;box-shadow:0 0 18px #ffbe3b66!important;font-weight:700}
+.renderSpotLabel em{color:#ffd166!important}
+#renderCompareControls{position:absolute;z-index:10;top:86px;left:50%;transform:translateX(-50%);display:flex;align-items:center;gap:8px;max-width:calc(100vw - 430px);padding:8px 10px;background:#0b1723f2;border:1px solid #7eb8d166;border-radius:5px;box-shadow:0 8px 28px #0009;color:#dcebf3}
+#renderCompareControls strong{font-size:11px;white-space:nowrap;color:#ffd88a}
+#renderCompareControls button{padding:6px 9px;border:1px solid #719ab966;background:#264865aa;white-space:nowrap;font-size:11px}
+#renderCompareControls button[aria-pressed="true"]{border-color:#ffd166;color:#fff3c9}
+#renderCompareControls label{font-size:11px;white-space:nowrap;color:#9fb7c6}
+#renderCompareControls input{width:min(150px,18vw);accent-color:#ffd166}
+#renderOpacityValue{min-width:38px;font-size:11px;color:#f0f6f9}
+#renderCompareClose{font-size:18px!important;line-height:1;padding:3px 7px!important}
+@media(max-width:1050px){#renderCompareControls{top:70px;max-width:calc(100vw - 180px);gap:5px;padding:6px}#renderCompareControls strong{display:none}#renderCompareControls button{font-size:10px;padding:5px 7px}}
+@media(max-width:700px){#renderCompareControls{top:58px;left:8px;right:8px;transform:none;max-width:none;overflow-x:auto;justify-content:flex-start}#renderCompareControls label{display:none}#renderCompareControls input{min-width:82px;width:24vw}}
+
