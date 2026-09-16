@@ -22,3 +22,7 @@ Completed status takes priority, followed by delay. Selection outlines do not ov
 ## Checks
 
 Run `node bim-state.test.mjs` for schedule boundaries, status priority and combined filtering. Serve the repository over HTTP for browser checks. Tested local model loading, sector/discipline filtering, table selection, isolation, original materials, plan view, empty search/reset, and mobile width 390px. Browser error log was empty during these checks.
+
+## Execution units (UE)
+
+`bim-ue.json` maps each model filename to its verified UE string. Unknown values are null and shown as Sin asignar. The UE selector filters KPI counts, averages, model visibility and table rows together, and UE is shown in table/detail. Reset clears UE. No UE assignment is inferred from station names or from the video. The current mapping awaits official project data. If one package spans multiple UEs, geometry must be split or linked at element level before precise UE isolation is possible; do not assign the whole package to an arbitrary UE.

@@ -1,0 +1,13 @@
+{
+  "description": "Correspondencia oficial UE por paquete. null indica sin asignacion verificada. No inferir UE desde el codigo de estacion.",
+  "models": {
+    "e15-architecture-web.glb": null,
+    "e15-1100.glb": null,
+    "i16-est-1100-web.glb": null,
+    "i16-est-1150-web.glb": null,
+    "e16-arq-0000-web.glb": null,
+    "e16-est-1100-web.glb": null,
+    "e16-est-1150-web.glb": null,
+    "e16-est-1200-web.glb": null
+  }
+}

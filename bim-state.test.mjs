@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {metrics,matches,STATES} from './bim-state.js';
+import {metrics,matches,STATES,normalizeUE,ueOptions,UNASSIGNED_UE} from './bim-state.js';
 const r={start:'2026-09-01',end:'2026-09-30',actual:0};
 assert.equal(metrics(r,'2026-08-31').status,'pending');
 assert.equal(metrics(r,'2026-09-16').status,'late');
@@ -13,3 +13,14 @@ assert.ok(matches(record,{sector:'E16',discipline:'EST',status:'late',search:'11
 assert.ok(!matches(record,{sector:'E15'}));
 assert.ok(!matches(record,{status:'done'}));
 console.log('10 assertions passed: schedule boundaries, priority, filters and transparency');
+const ueRecords=[{...record,ue:'UE-TEST-1',actual:25},{...record,ue:'UE-TEST-2',actual:75},{...record,ue:null,actual:0}];
+assert.equal(ueRecords.filter(r=>matches(r,{ue:'UE-TEST-1'})).length,1);
+assert.equal(ueRecords.filter(r=>matches(r,{ue:'UE-TEST-1'}))[0].actual,25);
+assert.equal(ueRecords.filter(r=>matches(r,{ue:UNASSIGNED_UE})).length,1);
+assert.equal(ueRecords.filter(r=>matches(r,{ue:''})).length,3);
+assert.equal(ueRecords.filter(r=>matches(r,{ue:'UE-TEST-1',sector:'E15'})).length,0);
+assert.equal(ueRecords.filter(r=>matches(r,{ue:'UE-TEST-1',sector:'E16',discipline:'EST',status:'late'})).length,1);
+assert.deepEqual(ueOptions([...ueRecords,{ue:' UE-TEST-1 '}]),['UE-TEST-1','UE-TEST-2']);
+assert.equal(normalizeUE(null),'');
+assert.equal(normalizeUE(['UE-TEST-1','UE-TEST-2']),'');
+console.log('9 UE assertions passed: independent units, combined filters, reset and missing mapping');

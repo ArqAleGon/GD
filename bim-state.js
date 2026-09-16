@@ -7,4 +7,7 @@ export function metrics(record,cutoff){
  const status=record.actual>=100?'done':record.actual<planned?'late':record.actual>0?'started':'pending';
  return {planned,status};
 }
-export function matches(record,filters){return (!filters.sector||record.section===filters.sector)&&(!filters.discipline||record.discipline===filters.discipline)&&(!filters.status||record.status===filters.status)&&(!filters.search||(record.source+' '+record.section+' '+record.discipline).toLowerCase().includes(filters.search.toLowerCase()));}
+export const UNASSIGNED_UE='__unassigned__';
+export function normalizeUE(value){return typeof value==='string'?value.trim():'';}
+export function ueOptions(records){return [...new Set(records.map(r=>normalizeUE(r.ue)).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es',{numeric:true}));}
+export function matches(record,filters){return (!filters.ue||(filters.ue===UNASSIGNED_UE?!normalizeUE(record.ue):normalizeUE(record.ue)===filters.ue))&&(!filters.sector||record.section===filters.sector)&&(!filters.discipline||record.discipline===filters.discipline)&&(!filters.status||record.status===filters.status)&&(!filters.search||(record.source+' '+record.section+' '+record.discipline).toLowerCase().includes(filters.search.toLowerCase()));}
