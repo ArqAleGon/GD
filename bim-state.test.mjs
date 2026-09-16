@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {metrics,matches,STATES,normalizeUE,ueOptions,UNASSIGNED_UE} from './bim-state.js';
+import {metrics,matches,STATES,normalizeUE,ueOptions,UNASSIGNED_UE,recordUEs} from './bim-state.js';
 const r={start:'2026-09-01',end:'2026-09-30',actual:0};
 assert.equal(metrics(r,'2026-08-31').status,'pending');
 assert.equal(metrics(r,'2026-09-16').status,'late');
@@ -24,3 +24,11 @@ assert.deepEqual(ueOptions([...ueRecords,{ue:' UE-TEST-1 '}]),['UE-TEST-1','UE-T
 assert.equal(normalizeUE(null),'');
 assert.equal(normalizeUE(['UE-TEST-1','UE-TEST-2']),'');
 console.log('9 UE assertions passed: independent units, combined filters, reset and missing mapping');
+const shared=[{...record,section:'I16',ues:['93'],count:99},{...record,section:'E16',ues:['093'],count:6},{...record,section:'E16',ues:['93','94'],count:55},{...record,ues:['N/A'],count:30}];
+assert.equal(shared.filter(r=>matches(r,{ue:'93'})).reduce((n,r)=>n+r.count,0),160);
+assert.equal(shared.filter(r=>matches(r,{ue:'93',sector:'E16'})).reduce((n,r)=>n+r.count,0),61);
+assert.equal(shared.filter(r=>matches(r,{ue:'94'})).length,1);
+assert.deepEqual(recordUEs({ues:['93','093','N/A']}),['93']);
+assert.equal(shared.filter(r=>matches(r,{ue:UNASSIGNED_UE})).length,1);
+assert.deepEqual(ueOptions(shared),['93','94']);
+console.log('6 many-to-many assertions passed: shared UE, multi-membership, zero padding, missing values');

@@ -8,6 +8,11 @@ export function metrics(record,cutoff){
  return {planned,status};
 }
 export const UNASSIGNED_UE='__unassigned__';
-export function normalizeUE(value){return typeof value==='string'?value.trim():'';}
-export function ueOptions(records){return [...new Set(records.map(r=>normalizeUE(r.ue)).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es',{numeric:true}));}
-export function matches(record,filters){return (!filters.ue||(filters.ue===UNASSIGNED_UE?!normalizeUE(record.ue):normalizeUE(record.ue)===filters.ue))&&(!filters.sector||record.section===filters.sector)&&(!filters.discipline||record.discipline===filters.discipline)&&(!filters.status||record.status===filters.status)&&(!filters.search||(record.source+' '+record.section+' '+record.discipline).toLowerCase().includes(filters.search.toLowerCase()));}
+export function normalizeUE(value){
+ if(typeof value!=='string')return '';
+ const v=value.trim();if(!v||/^(N\/?A|NULL|NONE|SIN ASIGNAR)$/i.test(v))return '';
+ return /^\d+$/.test(v)?v.replace(/^0+(?=\d)/,''):v;
+}
+export function recordUEs(record){return [...new Set((Array.isArray(record.ues)?record.ues:[record.ue]).map(normalizeUE).filter(Boolean))];}
+export function ueOptions(records){return [...new Set(records.flatMap(recordUEs))].sort((a,b)=>a.localeCompare(b,'es',{numeric:true}));}
+export function matches(record,filters){return (!filters.ue||(filters.ue===UNASSIGNED_UE?!recordUEs(record).length:recordUEs(record).includes(normalizeUE(filters.ue))))&&(!filters.sector||record.section===filters.sector)&&(!filters.discipline||record.discipline===filters.discipline)&&(!filters.status||record.status===filters.status)&&(!filters.search||(record.source+' '+record.section+' '+record.discipline+' '+recordUEs(record).join(' ')).toLowerCase().includes(filters.search.toLowerCase()));}

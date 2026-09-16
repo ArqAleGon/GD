@@ -2,7 +2,7 @@ import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
 import {GLTFLoader} from './GLTFLoader.js';
 import {MeshoptDecoder} from './meshopt_decoder.module.js';
-import {STATES,DEMO,metrics,matches,normalizeUE,ueOptions} from './bim-state.js?v=20260916-ue';
+import {STATES,DEMO,metrics,matches,normalizeUE,ueOptions,recordUEs} from './bim-state.js?v=20260916-elements';
 const $=id=>document.getElementById(id);
 const canvas=$('model'),host=canvas.parentElement;
 const scene=new THREE.Scene();
@@ -42,20 +42,20 @@ function render(){
  for(const r of records)Object.assign(r,metrics(r,$('cutoff').value||'2026-09-16'));
  const f=filters(),base=records.filter(r=>matches(r,{...f,status:''})),list=visibleRecords();
  if(selected&&!list.includes(selected)){selected=null;isolated=false;$('context').setAttribute('aria-pressed','false');}
- $('count').textContent=`${list.length} / ${records.length} paquetes`;
- const missing=list.filter(r=>!r.ue).length;
- $('ueNote').textContent=missing?`${missing} paquetes visibles sin UE asignada. Se necesita la correspondencia oficial UE–modelo.`:list.length?`${ueOptions(list).length} UE en los modelos filtrados.`:'No hay modelos para esta combinación de filtros.';
- $('kpis').innerHTML=Object.entries(STATES).map(([key,s])=>`<button class="kpi" data-state="${key}" aria-pressed="${f.status===key}" style="--state:${s.color}"><span>${s.label}</span><b>${base.filter(r=>r.status===key).length}<small>paquetes</small></b></button>`).join('');
+ $('count').textContent=`${list.reduce((n,r)=>n+r.count,0).toLocaleString('es')} elementos · ${new Set(list.map(r=>r.file)).size} modelos`;
+ const missing=list.filter(r=>!recordUEs(r).length).reduce((n,r)=>n+r.count,0);
+ $('ueNote').textContent=`${ueOptions(list).length} UE en la selección. ${missing.toLocaleString('es')} elementos sin UE válida. Unidades extraídas de los IFC; pueden aparecer en varios modelos.`;
+ $('kpis').innerHTML=Object.entries(STATES).map(([key,s])=>`<button class="kpi" data-state="${key}" aria-pressed="${f.status===key}" style="--state:${s.color}"><span>${s.label}</span><b>${base.filter(r=>r.status===key).reduce((n,r)=>n+r.count,0).toLocaleString('es')}<small>elementos</small></b></button>`).join('');
  $('kpis').querySelectorAll('button').forEach(b=>b.onclick=()=>{$('status').value=f.status===b.dataset.state?'':b.dataset.state;render();fit();});
  const avg=key=>list.length?list.reduce((sum,r)=>sum+r[key],0)/list.length:0;
  $('planned').textContent=list.length?percent(avg('planned')):'—';$('actual').textContent=list.length?percent(avg('actual')):'—';
  $('plannedBar').style.width=avg('planned')+'%';$('actualBar').style.width=avg('actual')+'%';
- $('rows').innerHTML=list.map(r=>`<tr class="${selected===r?'selected':''}"><td><button class="modelButton" data-id="${r.id}" aria-pressed="${selected===r}">${r.section} · ${r.code}<small>${r.file}</small></button></td><td>${escapeHTML(r.ue||'Sin asignar')}</td><td>${r.discipline==='ARQ'?'Arquitectura':'Estructura'}</td><td>${r.version}</td><td>${percent(r.planned)}<div class="miniBar"><i style="width:${r.planned}%"></i></div></td><td>${percent(r.actual)}</td><td><span class="statusPill" style="--state:${STATES[r.status].color}">${swatch(r.status)}${STATES[r.status].label}</span></td><td>${r.start} / ${r.end}</td></tr>`).join('');
+ $('rows').innerHTML=list.map(r=>`<tr class="${selected===r?'selected':''}"><td><button class="modelButton" data-id="${r.id}" aria-pressed="${selected===r}">${r.section} · ${r.code}<small>${r.count.toLocaleString('es')} elementos · ${r.file}</small></button></td><td>${escapeHTML(recordUEs(r).map(v=>'UE '+v).join(', ')||'Sin asignar')}</td><td>${r.discipline==='ARQ'?'Arquitectura':'Estructura'}</td><td>${r.version}</td><td>${percent(r.planned)}<div class="miniBar"><i style="width:${r.planned}%"></i></div></td><td>${percent(r.actual)}</td><td><span class="statusPill" style="--state:${STATES[r.status].color}">${swatch(r.status)}${STATES[r.status].label}</span></td><td>${r.start} / ${r.end}</td></tr>`).join('');
  $('rows').querySelectorAll('button').forEach(b=>b.onclick=()=>{const r=records.find(x=>x.id===Number(b.dataset.id));select(r);fit([r]);});
  $('empty').hidden=!!list.length;
  $('viewTitle').textContent=(f.sector||'E15 + I16 + E16')+(f.ue?' · '+(f.ue==='__unassigned__'?'Sin UE asignada':f.ue):'');
  $('detail').hidden=!selected;
- if(selected){const r=selected;$('detail').innerHTML=`<b>${r.section} · ${r.discipline} · ${r.code}</b><span class="statusPill" style="--state:${STATES[r.status].color}">${swatch(r.status)}${STATES[r.status].label}</span><p>UE · ${escapeHTML(r.ue||'Sin asignar')}</p><p>Planificado ${percent(r.planned)} / ejecutado ${percent(r.actual)} · demo</p><p>${r.converted.toLocaleString('es')} elementos convertidos en este paquete.</p><p>${r.source}</p>`;}
+ if(selected){const r=selected;$('detail').innerHTML=`<b>${r.section} · ${r.discipline} · ${r.code}</b><span class="statusPill" style="--state:${STATES[r.status].color}">${swatch(r.status)}${STATES[r.status].label}</span><p>UE · ${escapeHTML(recordUEs(r).map(v=>'UE '+v).join(', ')||'Sin asignar')}</p><p>Planificado ${percent(r.planned)} / ejecutado ${percent(r.actual)} · demo</p><p>${r.count.toLocaleString('es')} elementos de este grupo UE–modelo. Geometría aislada por propiedades IFC.</p><p>${r.source}</p>`;}
  $('context').disabled=!selected;$('clearSelection').disabled=!selected;applyMaterials();
 }
 $('legend').innerHTML=Object.entries(STATES).map(([k,s])=>`<span>${swatch(k)}${s.label}</span>`).join('');
@@ -75,12 +75,12 @@ new ResizeObserver(()=>{const {width,height}=host.getBoundingClientRect();render
 renderer.setAnimationLoop(()=>{controls.update();renderer.render(scene,camera);});
 async function load(){
  const response=await fetch('./ifc-placement-20260915-i16-e16.json');if(!response.ok)throw new Error('No se pudo leer la lista de modelos');const placement=await response.json();
- const ueResponse=await fetch('./bim-ue.json?v=20260916-ue');if(!ueResponse.ok)throw new Error('No se pudo leer la correspondencia UE');const ueMapping=await ueResponse.json();
- placement.models.forEach((definition,i)=>{const [start,end,actual]=DEMO[i];records.push({...definition,ue:normalizeUE(ueMapping.models[definition.file]),id:i,code:definition.source.split('-')[1],start,end,actual,...metrics({start,end,actual},$('cutoff').value)});});
+ const ueResponse=await fetch('./bim-ue-elements.json?v=20260916-elements');if(!ueResponse.ok)throw new Error('No se pudo leer el índice UE por elementos');const ueMapping=await ueResponse.json();
+ ueMapping.models.forEach((definition,i)=>{const [start,end,actual]=DEMO[i];for(const group of definition.groups)records.push({...definition,...group,ues:[...new Set(group.ues.map(normalizeUE).filter(Boolean))],id:records.length,code:definition.source.split('-')[1],start,end,actual,...metrics({start,end,actual},$('cutoff').value)});});
  for(const ue of ueOptions(records)){const option=document.createElement('option');option.value=ue;option.textContent=ue;$('ue').append(option);}
  $('sector').value='E16';render();
  const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);let complete=0;
- const results=await Promise.allSettled(records.map(async r=>{const gltf=await loader.loadAsync('./'+r.file);const group=gltf.scene;group.position.set(-placement.gisOrigin[0],-placement.streetDatum,placement.gisOrigin[1]);group.traverse(o=>{if(o.isMesh){o.userData.baseMaterial=o.material;o.userData.recordId=r.id;}});r.group=group;scene.add(group);complete++;$('load').textContent=`Cargando modelos… ${complete} / ${records.length}`;applyMaterials();}));
+ const results=await Promise.allSettled(records.map(async r=>{const gltf=await loader.loadAsync('./'+r.geometry);const group=gltf.scene;group.position.set(-placement.gisOrigin[0],-placement.streetDatum,placement.gisOrigin[1]);group.traverse(o=>{if(o.isMesh){o.userData.baseMaterial=o.material;o.userData.recordId=r.id;}});r.group=group;scene.add(group);complete++;$('load').textContent=`Cargando modelos… ${complete} / ${records.length}`;applyMaterials();}));
  const failed=results.filter(r=>r.status==='rejected');$('load').hidden=!failed.length;if(failed.length)$('load').textContent=`No se pudieron cargar ${failed.length} modelos. Recarga la página para reintentar.`;
  render();fit();
 }
