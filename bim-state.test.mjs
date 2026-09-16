@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {metrics,matches,STATES} from './bim-state.js';
+const r={start:'2026-09-01',end:'2026-09-30',actual:0};
+assert.equal(metrics(r,'2026-08-31').status,'pending');
+assert.equal(metrics(r,'2026-09-16').status,'late');
+assert.equal(metrics({...r,actual:80},'2026-09-16').status,'started');
+assert.equal(metrics({...r,actual:100},'2026-10-01').status,'done');
+assert.equal(metrics(r,'2026-10-01').planned,100);
+assert.equal(metrics(r,'2026-08-01').planned,0);
+assert.equal(STATES.pending.opacity,.12);
+const record={section:'E16',discipline:'EST',status:'late',source:'L1T1-1100-316.ifc'};
+assert.ok(matches(record,{sector:'E16',discipline:'EST',status:'late',search:'1100'}));
+assert.ok(!matches(record,{sector:'E15'}));
+assert.ok(!matches(record,{status:'done'}));
+console.log('10 assertions passed: schedule boundaries, priority, filters and transparency');
