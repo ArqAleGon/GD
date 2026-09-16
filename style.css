@@ -43,11 +43,11 @@ dialog.cctv{width:700px;max-width:94vw}#cctvCanvas{border:1px solid #617d9240;ba
 @media(max-width:700px){#renderCompareControls{top:58px;left:8px;right:8px;transform:none;max-width:none;overflow-x:auto;justify-content:flex-start}#renderCompareControls label{display:none}#renderCompareControls input{min-width:82px;width:24vw}}
 
 /* Cartographic model information stays as a slim tab until it is inspected. */
-#gisLegend{width:40px;height:176px;max-height:none;padding:0;overflow:hidden;cursor:default;transition:width .22s ease,height .22s ease,box-shadow .22s ease;background:#0b1825f2}
+#gisLegend{top:126px;right:20px;left:auto;bottom:auto;width:40px;height:176px;max-height:none;padding:0;overflow:hidden;cursor:default;transition:width .22s ease,height .22s ease,box-shadow .22s ease;background:#0b1825f2}
 #gisLegend:hover,#gisLegend:focus-visible{width:250px;height:min(70vh,590px);box-shadow:0 12px 38px #000b;outline:none}
 .gisLegendHandle{position:absolute;top:0;right:0;width:39px;height:100%;display:flex;align-items:center;justify-content:center;gap:9px;padding:10px 0;writing-mode:vertical-rl;transform:rotate(180deg);background:linear-gradient(180deg,#315b78f2,#14283af2);border-left:1px solid #6db8df66;color:#e8f6fd;font-size:11px;letter-spacing:.45px;white-space:nowrap}
 .gisLegendHandle b{font-weight:600}.gisLegendHandle span{color:#8edaff;font-size:12px}.gisLegendBody{width:210px;height:100%;overflow:auto;padding:15px 14px 17px;opacity:0;pointer-events:none;transition:opacity .12s linear;scrollbar-width:thin;scrollbar-color:#4c7088 transparent}
 #gisLegend:hover .gisLegendBody,#gisLegend:focus-visible .gisLegendBody{opacity:1;pointer-events:auto;transition-delay:.06s}
 @media(max-width:1050px){#gisLegend{width:38px}.gisLegendHandle{width:37px}.gisLegendBody{width:196px}#gisLegend:hover,#gisLegend:focus-visible{width:233px}}
-@media(max-width:700px){#gisLegend{width:38px;height:142px;max-height:none}.gisLegendHandle{width:37px}.gisLegendBody{width:calc(min(248px,100vw - 20px) - 38px);padding:11px 10px}#gisLegend:hover,#gisLegend:focus-visible{width:min(248px,calc(100vw - 20px));height:min(52vh,440px)}}
+@media(max-width:700px){#gisLegend{top:100px;right:8px;left:auto;bottom:auto;width:38px;height:142px;max-height:none}.gisLegendHandle{width:37px}.gisLegendBody{width:calc(min(248px,100vw - 20px) - 38px);padding:11px 10px}#gisLegend:hover,#gisLegend:focus-visible{width:min(248px,calc(100vw - 20px));height:min(52vh,440px)}}
 @media(hover:none){#gisLegend:focus,#gisLegend:focus-within{width:min(250px,calc(100vw - 20px));height:min(52vh,440px);outline:none}#gisLegend:focus .gisLegendBody,#gisLegend:focus-within .gisLegendBody{opacity:1;pointer-events:auto}}
