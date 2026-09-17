@@ -1,0 +1,58 @@
+{
+  "documents": [
+    {
+      "id": "doc1",
+      "name": "E15-2_08_2026.png",
+      "type": "Imagen",
+      "sector": "E15",
+      "url": "assets/documents/E15-2_08_2026.png",
+      "bytes": 1635043,
+      "description": "Registro visual de la estación E15"
+    },
+    {
+      "id": "doc2",
+      "name": "E15_08_2026.png",
+      "type": "Imagen",
+      "sector": "E15",
+      "url": "assets/documents/E15_08_2026.png",
+      "bytes": 1681088,
+      "description": "Registro visual de la estación E15"
+    },
+    {
+      "id": "doc3",
+      "name": "L1T1-0000-315-CON-ED-ARQ-EV-0001_V01.xlsx",
+      "type": "Excel",
+      "sector": "E15",
+      "url": "assets/documents/L1T1-0000-315-CON-ED-ARQ-EV-0001_V01.xlsx",
+      "bytes": 194121,
+      "description": "Libro de arquitectura · revisión V01"
+    },
+    {
+      "id": "doc4",
+      "name": "L1T1-0000-315-CON-ED-ARQ-IN-0008_VBB.pdf",
+      "type": "PDF",
+      "sector": "E15",
+      "url": "assets/documents/L1T1-0000-315-CON-ED-ARQ-IN-0008_VBB.pdf",
+      "bytes": 1551882,
+      "description": "Documento técnico de arquitectura · revisión VBB"
+    },
+    {
+      "id": "video-e15",
+      "name": "L1T1-PMO-DPY-VD-0355.MP4",
+      "type": "Video",
+      "sector": "E15",
+      "url": "assets/documents/obra-e15-20260831-web.mp4",
+      "description": "Registro de obra · 31 de agosto de 2026 · versión web del video completo",
+      "webVersion": true,
+      "bytes": 21282603
+    },
+    {
+      "id": "powerbi",
+      "name": "VCAD_Base_Original.pbix",
+      "type": "Power BI",
+      "sector": "",
+      "description": "Archivo de Power BI encontrado en la carpeta. El informe se abre en Power BI; puede solicitar una cuenta con permisos.",
+      "reportUrl": "https://app.powerbi.com/groups/me/reports/d001753f-9e3d-4ca3-81eb-31b0843e9a3e/82a5891d78588875aecc?ctid=d878e2d8-f29d-4fa3-8fa0-6c51395e8f47&openReportSource=ReportInvitation&experience=power-bi"
+    }
+  ]
+}

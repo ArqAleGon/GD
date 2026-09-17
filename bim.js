@@ -55,7 +55,7 @@ function render(){
  $('empty').hidden=!!list.length;
  $('viewTitle').textContent=(f.sector||'E15 + I16 + E16')+(f.ue?' · '+(f.ue==='__unassigned__'?'Sin UE asignada':f.ue):'');
  $('detail').hidden=!selected;
- if(selected){const r=selected;$('detail').innerHTML=`<b>${r.section} · ${r.discipline} · ${r.code}</b><span class="statusPill" style="--state:${STATES[r.status].color}">${swatch(r.status)}${STATES[r.status].label}</span><p>UE · ${escapeHTML(recordUEs(r).map(v=>'UE '+v).join(', ')||'Sin asignar')}</p><p>Planificado ${percent(r.planned)} / ejecutado ${percent(r.actual)} · demo</p><p>${r.count.toLocaleString('es')} elementos de este grupo UE–modelo. Geometría aislada por propiedades IFC.</p><p>${r.source}</p>`;}
+ if(selected){const r=selected;$('detail').innerHTML=`<b>${r.section} · ${r.discipline} · ${r.code}</b><span class="statusPill" style="--state:${STATES[r.status].color}">${swatch(r.status)}${STATES[r.status].label}</span><p>UE · ${escapeHTML(recordUEs(r).map(v=>'UE '+v).join(', ')||'Sin asignar')}</p><p>Planificado ${percent(r.planned)} / ejecutado ${percent(r.actual)} · demo</p><p>${r.count.toLocaleString('es')} elementos de este grupo UE–modelo. Geometría aislada por propiedades IFC.</p><p>${r.source}</p><a href="./documents.html?sector=${encodeURIComponent(r.section)}">Ver documentos de ${r.section}</a>`;}
  $('context').disabled=!selected;$('clearSelection').disabled=!selected;applyMaterials();
 }
 $('legend').innerHTML=Object.entries(STATES).map(([k,s])=>`<span>${swatch(k)}${s.label}</span>`).join('');
