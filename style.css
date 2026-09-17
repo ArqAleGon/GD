@@ -55,3 +55,15 @@ dialog.cctv{width:700px;max-width:94vw}#cctvCanvas{border:1px solid #617d9240;ba
 .bogotaLandmark{color:#ffe0ad!important;background:#1b2c35ed!important;border:1px solid #a88c5b!important;border-radius:5px;font-size:11px!important;padding:5px 8px!important;z-index:3}.cityStreetLabel{color:#8badae!important;background:#102128b0!important;font-size:9px!important;letter-spacing:.7px;pointer-events:none;border:0!important}
 
 .render-comparing #sceneLabels,.render-comparing #panels,.render-comparing #gisLegend{visibility:hidden;pointer-events:none}
+
+#progressOverlay{position:absolute;inset:0;z-index:3;pointer-events:none;transition:opacity .12s linear}
+#progressOverlay img{width:100%;height:100%;display:block;object-fit:cover;object-position:center}
+#progressOverlay[hidden],#progressDate[hidden]{display:none}
+#progressDate{position:absolute;right:22px;top:190px;z-index:6;padding:9px 13px;border:1px solid #e8c776;border-radius:5px;background:#10212ff2;color:#ffe5a4;font-size:12px;font-weight:600;pointer-events:none}
+#renderCompareControls{display:flex;flex-direction:column;align-items:stretch;gap:6px;width:620px;max-width:calc(100vw - 430px)}
+.compareModeRow,.compareBlendRow{display:flex;align-items:center;gap:8px}
+.compareModeRow select{flex:1;min-width:0;background:#182e40;color:#e4edf4;border:1px solid #719ab966;border-radius:4px;padding:6px;font-size:12px}
+.compareBlendRow input{flex:1;min-width:45px;width:auto!important}.compareBlendRow output{min-width:36px;font-size:11px;text-align:center}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media(max-width:1050px){#renderCompareControls{max-width:calc(100vw - 210px)}#progressDate{top:164px}}
+@media(max-width:700px){#renderCompareControls{width:auto;max-width:none;overflow:visible}.compareModeRow,.compareBlendRow{gap:4px}.compareModeRow select{font-size:11px}.compareBlendRow button{font-size:10px!important;padding:5px!important}#renderRefit{display:none}#progressDate{top:155px;right:8px;left:8px;text-align:center;font-size:11px}}

@@ -1,3 +1,4 @@
+import {COMPARISONS,comparisonLayers} from './e15-comparison.js';
 import {RENDER_E15_CAMERA,renderE15Fov} from './render-e15-camera.js';
 import {buildBogotaContext} from './bogota-context.js';
 import { localizeInterface } from './interface-language.js';
@@ -7,7 +8,7 @@ import * as THREE from 'three';
 import { OrbitControls } from './vendor/OrbitControls.js';
 
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
-const state={lang:'es',view:'network',geographic:false,seismic:true,volumes:true,renderCompare:false,renderImage:true,renderOpacity:.45,line:-1,labels:true,heat:false,explode:false,level:'all',rotate:false,paused:false,doors:false,power:true,alarm:false,people:true,tour:false,wire:false,panels:true,t:0};
+const state={lang:'es',view:'network',geographic:false,seismic:true,volumes:true,renderCompare:false,comparisonMode:'ifc-render',renderImage:true,renderOpacity:.45,line:-1,labels:true,heat:false,explode:false,level:'all',rotate:false,paused:false,doors:false,power:true,alarm:false,people:true,tour:false,wire:false,panels:true,t:0};
 const strings={
 reference:["Reference",'Referencia'],top:["Top",'Planta'],front:["Front",'Frente'],side:["Side",'Lateral'],simulation:["DEMO · SIMULATED OPERATION",'DEMO · OPERACIÓN SIMULADA'],hint:["Drag to orbit · Scroll to zoom · Click to inspect",'Arrastra para orbitar · Rueda para acercar · Clic para inspeccionar'],
 network:["Rail network",'Red ferroviaria'],events:["Operations",'Operación'],traffic:["Passenger flow",'Flujo de pasajeros'],dispatch:["Trains in service",'Trenes en circulación'],station:["3D station",'Estación 3D'],indoor:["Indoor walkthrough",'Recorrido interior'],security:["Cameras and security",'Cámaras y seguridad'],evacuation:["Emergencies",'Emergencias'],platform:["Platform and doors",'Andén y puertas'],equipment:["Equipment room",'Sala técnica'],railway:["Train tracking",'Seguimiento del tren'],maintenance:["Rail systems",'Sistemas ferroviarios'],
@@ -117,12 +118,20 @@ function updateRenderCompare(){
  if(!overlay||!controlsEl)return;
  $('#app').classList.toggle('render-comparing',active);
  if(urbanScene){urbanScene.seismic.visible=active?false:state.seismic;root.traverse(o=>{if(o.userData.renderComparisonHidden)o.visible=!active;});}
- controlsEl.hidden=!active;overlay.hidden=!(active&&state.renderImage);overlay.style.opacity=String(state.renderOpacity);
+ const layers=comparisonLayers(state.comparisonMode,state.renderOpacity);
+ controlsEl.hidden=!active;overlay.hidden=!active;overlay.style.opacity=String(layers.render);
+ const progress=$('#progressOverlay');progress.hidden=!active;progress.style.opacity=String(layers.progress);
+ $('#progressDate').hidden=!(active&&state.comparisonMode!=='ifc-render'&&layers.progress>0);
+ $('#progressDate').textContent=state.lang==='en'?'Construction status as of August 31, 2026':'Estado de la obra al 31 de agosto de 2026';
  controls.enabled=!active;$$('#cameraDock button').forEach(button=>button.disabled=active);
  const toggle=$('#renderImageToggle'),slider=$('#renderOpacity'),output=$('#renderOpacityValue');
- toggle.textContent=tr(state.renderImage?'hideRender':'showRender');toggle.setAttribute('aria-pressed',String(state.renderImage));
- slider.value=String(Math.round(state.renderOpacity*100));slider.disabled=!state.renderImage;slider.setAttribute('aria-label',tr('renderOpacity'));
- output.textContent=Math.round(state.renderOpacity*100)+' %';controlsEl.setAttribute('aria-label',tr('compareLabel'));controlsEl.title=tr('renderNote');$('#renderCompareTitle').textContent=tr('renderReference');$('#renderRefit').textContent=tr('renderSpot');$('#renderOpacityLabel').textContent=tr('imageLabel');$('#renderCompareClose').title=tr('closeCompare');$('#renderCompareClose').setAttribute('aria-label',tr('closeCompare'));
+ const mode=COMPARISONS[state.comparisonMode],names=state.lang==='en'?mode.en:[mode.from,mode.to];
+ toggle.textContent=names[0];toggle.setAttribute('aria-pressed',String(state.renderOpacity===0));
+ $('#comparisonEnd').textContent=names[1];$('#comparisonEnd').setAttribute('aria-pressed',String(state.renderOpacity===1));
+ $('#comparisonMode').value=state.comparisonMode;
+ for(const option of $('#comparisonMode').options){const m=COMPARISONS[option.value];option.textContent=(state.lang==='en'?m.en:[m.from,m.to]).join(' ↔ ');}
+ slider.value=String(Math.round(state.renderOpacity*100));slider.disabled=false;slider.setAttribute('aria-label',names.join(' ↔ '));slider.setAttribute('aria-valuetext',Math.round(state.renderOpacity*100)+' % '+names[1]);
+ output.textContent=Math.round(state.renderOpacity*100)+' %';controlsEl.setAttribute('aria-label',state.lang==='en'?'Compare E15':'Comparar E15');controlsEl.title=tr('renderNote');$('#renderCompareTitle').textContent=state.lang==='en'?'Compare E15':'Comparar E15';$('#renderRefit').textContent=state.lang==='en'?'Reset view':'Reencuadrar';$('#renderCompareClose').title=tr('closeCompare');$('#renderCompareClose').setAttribute('aria-label',tr('closeCompare'));
  scene.background.set(active?'#8cb4cb':(isUrban()?'#020406':['network','events','traffic','dispatch'].includes(state.view)?'#060b12':'#020406'));
  sunlight.intensity=active?3.8:(['network','events','traffic','dispatch','railway','maintenance'].includes(state.view)?1.4:2.8);fillLight.intensity=active?1.15:.6;renderer.toneMappingExposure=active?1.28:1.15;
 }
@@ -211,7 +220,10 @@ function moveUrbanCamera(dt){
  camera.position.add(movement);controls.target.add(movement);
 }
 $$('[data-camera]').forEach(b=>b.onclick=()=>{if(b.dataset.camera==='home'){home();return;}walk=false;state.tour=false;if(roof)roof.visible=false;controls.enabled=true;const target=controls.target.clone();const d=Math.max(camera.position.distanceTo(target),30);let p=b.dataset.camera==='top'?[target.x,.95*d+target.y,target.z+.01]:b.dataset.camera==='front'?[target.x,target.y+d*.16,target.z+d]:[target.x+d,target.y+d*.16,target.z];go(p,target.toArray());});$('#rotate').onclick=()=>{if(walk)home();state.rotate=!state.rotate;controls.autoRotate=state.rotate;$('#rotate').classList.toggle('active',state.rotate)};$('#zoomIn').onclick=()=>{if(walk){camera.position.add(new THREE.Vector3(0,0,-2).applyAxisAngle(new THREE.Vector3(0,1,0),walkYaw));clampWalk()}else camera.position.sub(controls.target).multiplyScalar(.82).add(controls.target)};$('#zoomOut').onclick=()=>{if(walk){camera.position.add(new THREE.Vector3(0,0,2).applyAxisAngle(new THREE.Vector3(0,1,0),walkYaw));clampWalk()}else camera.position.sub(controls.target).multiplyScalar(1.22).add(controls.target)};$('#panelToggle').onclick=()=>{state.panels=!state.panels;$('#app').classList.toggle('panelHidden',!state.panels);updatePanelToggle()};$('#language').onclick=()=>{state.lang=state.lang==='en'?'es':'en';uiTranslate()};$('#fullscreen').onclick=async()=>{try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();}catch{toast(state.lang==='en'?'This browser does not support fullscreen':'Este navegador no permite pantalla completa')}};
-$('#renderImageToggle').onclick=()=>{state.renderImage=!state.renderImage;updateRenderCompare();};
+$('#renderImageToggle').onclick=()=>{state.renderOpacity=0;updateRenderCompare();};
+$('#comparisonEnd').onclick=()=>{state.renderOpacity=1;updateRenderCompare();};
+$('#comparisonMode').onchange=e=>{state.comparisonMode=e.target.value;state.renderOpacity=.5;updateRenderCompare();};
+$('#progressOverlay img').onerror=()=>toast(state.lang==='en'?'Construction image could not be loaded. Reload to retry.':'No se pudo cargar la imagen de obra. Recarga para reintentar.');
 $('#renderOpacity').oninput=e=>{state.renderOpacity=+e.target.value/100;updateRenderCompare();};
 $('#renderRefit').onclick=()=>positionRenderSpot();
 $('#renderCompareClose').onclick=closeRenderCompare;
