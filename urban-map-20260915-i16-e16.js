@@ -89,7 +89,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
     const curve = new THREE.CurvePath();
     for (let i = 1; i < coords.length; i++) curve.add(new THREE.LineCurve3(point(coords[i - 1], .65), point(coords[i], .65)));
     const mesh = new THREE.Mesh(new THREE.TubeGeometry(curve, Math.max(100, coords.length * 2), .48, 6, false), new THREE.MeshBasicMaterial({color: '#ff334f'}));
-    mesh.renderOrder = 4;
+    mesh.renderOrder = 4; mesh.userData.renderComparisonHidden=true;
     root.add(mesh);
   }
   for (const station of data.stations) {

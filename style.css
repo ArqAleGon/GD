@@ -53,3 +53,5 @@ dialog.cctv{width:700px;max-width:94vw}#cctvCanvas{border:1px solid #617d9240;ba
 @media(hover:none){#gisLegend:focus,#gisLegend:focus-within{width:min(250px,calc(100vw - 20px));height:min(52vh,440px);outline:none}#gisLegend:focus .gisLegendBody,#gisLegend:focus-within .gisLegendBody{opacity:1;pointer-events:auto}}
 
 .bogotaLandmark{color:#ffe0ad!important;background:#1b2c35ed!important;border:1px solid #a88c5b!important;border-radius:5px;font-size:11px!important;padding:5px 8px!important;z-index:3}.cityStreetLabel{color:#8badae!important;background:#102128b0!important;font-size:9px!important;letter-spacing:.7px;pointer-events:none;border:0!important}
+
+.render-comparing #sceneLabels,.render-comparing #panels,.render-comparing #gisLegend{visibility:hidden;pointer-events:none}
