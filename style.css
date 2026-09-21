@@ -69,5 +69,5 @@ dialog.cctv{width:700px;max-width:94vw}#cctvCanvas{border:1px solid #617d9240;ba
 @media(max-width:1050px){#renderCompareControls{max-width:calc(100vw - 210px)}#progressDate{top:164px}}
 @media(max-width:700px){#renderCompareControls{width:auto;max-width:none;overflow:visible}.compareModeRow,.compareBlendRow{gap:4px}.compareModeRow select{font-size:11px}.compareBlendRow button{font-size:10px!important;padding:5px!important}#renderRefit{display:none}#progressDate{top:155px;right:8px;left:8px;text-align:center;font-size:11px}}
 
-.documentsLink{color:#bfe1f5;border:1px solid #46677f;border-radius:6px;padding:8px 12px;font-size:12px;text-decoration:none}@media(max-width:700px){.documentsLink{font-size:10px;padding:5px}.headActions{gap:2px}}
+.moduleLink,.documentsLink{color:#bfe1f5;border:1px solid #46677f;border-radius:6px;padding:8px 12px;font-size:12px;text-decoration:none}.moduleLink:hover,.documentsLink:hover{color:#fff;background:#28465d;border-color:#77bce6}@media(max-width:700px){.moduleLink,.documentsLink{font-size:10px;padding:5px}.headActions{gap:2px}}
 

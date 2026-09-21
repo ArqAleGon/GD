@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101b26">
+  <title>Gestión predial L1 | Asistente Digital</title>
+  <meta name="description" content="Mapa interactivo de gestión predial de la Línea 1 del Metro de Bogotá.">
+  <link rel="stylesheet" href="./predial.css?v=20260921">
+</head>
+<body>
+  <header class="siteHeader">
+    <a class="brand" href="./index.html">
+      <img src="./assets/logo-metro.jpg" alt="Metro de Bogotá">
+      <span><b>Asistente Digital</b><small>Empresa Metro de Bogotá</small></span>
+    </a>
+    <nav aria-label="Navegación de módulos">
+      <a class="active" href="./predial.html" aria-current="page">Predial</a>
+      <a href="./bim.html">Avance BIM ↗</a>
+      <a href="./documents.html">Documentos ↗</a>
+      <a href="./index.html">← Datos integrados</a>
+    </nav>
+  </header>
+
+  <main>
+    <aside class="filters">
+      <div class="eyebrow">GESTIÓN DEL CORREDOR</div>
+      <h1>Predial L1</h1>
+      <p class="muted">Base con corte al 18 de septiembre de 2026</p>
+
+      <label for="predialStatus">Estado de gestión</label>
+      <select id="predialStatus">
+        <option value="acquired" selected>Adquiridos / entregados</option>
+        <option value="">Todos los estados</option>
+        <option value="formalized">Formalizados</option>
+        <option value="offer">En oferta</option>
+        <option value="identified">Identificados</option>
+      </select>
+
+      <label for="locality">Localidad</label>
+      <select id="locality"><option value="">Todas las localidades</option></select>
+
+      <label for="segment">Estación o tramo</label>
+      <select id="segment"><option value="">Todos los tramos</option></select>
+
+      <label for="predialSearch">Buscar predio</label>
+      <input id="predialSearch" type="search" placeholder="ID, CHIP, dirección o barrio">
+
+      <button id="predialReset" class="secondary">Restablecer filtros</button>
+
+      <section class="sourceNote">
+        <b>Fuente integrada</b>
+        <span id="sourceName">Cargando base predial…</span>
+        <p>Se publican datos operativos del predio. Se excluyen nombres, documentos, teléfonos y valores financieros.</p>
+      </section>
+    </aside>
+
+    <section class="workspace">
+      <div class="heading">
+        <div><div class="eyebrow">LÍNEA 1 · BOGOTÁ</div><h2>Mapa interactivo de adquisición predial</h2></div>
+        <span id="resultCount" class="count"></span>
+      </div>
+
+      <section id="predialKpis" class="kpis" aria-label="Indicadores prediales"></section>
+
+      <div class="contentGrid">
+        <section class="mapCard" aria-label="Mapa predial interactivo">
+          <div class="mapHeading">
+            <div><b>Corredor L1</b><span>Selecciona un predio para consultar su ficha</span></div>
+            <div class="mapTools">
+              <button id="zoomIn" aria-label="Acercar">＋</button>
+              <button id="zoomOut" aria-label="Alejar">−</button>
+              <button id="resetView">Encuadrar</button>
+            </div>
+          </div>
+          <div class="mapViewport">
+            <svg id="predialMap" viewBox="780 90 570 440" role="img" aria-label="Mapa referencial de predios alrededor de la Línea 1">
+              <defs>
+                <pattern id="cityGrid" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(7)">
+                  <path d="M 26 0 L 0 0 0 26" fill="none" stroke="#314b5d" stroke-width="0.75" opacity="0.42"/>
+                </pattern>
+                <filter id="routeGlow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              </defs>
+              <rect x="300" y="40" width="1300" height="620" fill="#0b1822"/>
+              <rect x="300" y="40" width="1300" height="620" fill="url(#cityGrid)"/>
+              <g id="cityBase"></g>
+              <g id="routeLayer"></g>
+              <g id="parcelLayer"></g>
+            </svg>
+            <div id="mapTooltip" role="status" hidden></div>
+            <div class="mapLegend" id="mapLegend"></div>
+            <p class="geometryNote">Ubicación referencial por estación/tramo. La hoja “Coordenadas” del libro fuente no contiene geometrías; los polígonos no representan linderos catastrales.</p>
+          </div>
+        </section>
+
+        <aside class="dashboard" aria-label="Panel predial">
+          <section class="dashCard">
+            <div class="cardHeading"><h2>Estado de la selección</h2><span id="selectionLabel">Vista general</span></div>
+            <div id="statusChart" class="statusChart"></div>
+          </section>
+          <section class="dashCard">
+            <div class="cardHeading"><h2>Localidades</h2><span>Predios visibles</span></div>
+            <div id="localityChart" class="barChart"></div>
+          </section>
+          <section id="parcelDetail" class="dashCard parcelDetail">
+            <div class="emptyDetail"><b>Selecciona un predio</b><span>La ficha mostrará identificación, ubicación, áreas e hitos del proceso.</span></div>
+          </section>
+        </aside>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="./predial.js?v=20260921"></script>
+</body>
+</html>
+
