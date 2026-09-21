@@ -8,9 +8,9 @@ const phrases = {
   'Metro · red del esquema':'Metro · schematic network',
   'Cifras del documento suministrado. No indican red operativa ni cantidad de marcadores verificados.':'Figures from the supplied document. They do not describe the operating network or the number of verified markers.',
   'Selecciona una línea para ver sus códigos de estación. El esquema no aporta nombres propios para todas las estaciones.':'Select a line to see its station codes. The diagram does not provide names for every station.',
-  'Regional · corredor occidental del esquema':'Regional · western schematic corridor',
-  'Regional · corredor central del esquema':'Regional · central schematic corridor',
-  'Regional · ramal aeropuerto del esquema':'Regional · schematic airport branch',
+  'Regiotram · corredor occidental':'Regiotram · western corridor',
+  'Regiotram · corredor central':'Regiotram · central corridor',
+  'Regiotram · ramal aeropuerto':'Regiotram · airport branch',
   'Huellas de construcciones y ejes viales del proyecto QGIS, sin alturas.':'Building footprints and street centerlines from the QGIS project, without heights.',
   'Las estaciones y el trazado usan la misma referencia espacial.':'Stations and route use the same spatial reference.',
   '12 geometrías inválidas de construcción excluidas.':'12 invalid building geometries excluded.',
@@ -27,8 +27,8 @@ const phrases = {
   'Colores por categoría, no por nivel de riesgo.':'Colors indicate categories, not risk levels.',
   'Respuesta sísmica oculta.':'Seismic response hidden.',
   'Respuesta sísmica':'Seismic response',
-  'Cartografía local · EPSG:6247':'Local cartography · EPSG:6247',
-  'Ubicación esquemática, no georreferenciada':'Schematic location, not georeferenced',
+  'Datos integrados · EPSG:6247':'Integrated data · EPSG:6247',
+  'Contexto urbano interpretativo, no georreferenciado':'Interpretive urban context, not georeferenced',
   'Tren simulado · 6 coches':'Simulated train · 6 cars',
   'Red futura referencial':'Indicative future network',
   'Datos geográficos':'Geographic data',
@@ -90,3 +90,4 @@ function apply() {
 }
 const observer = new MutationObserver(apply);
 export function localizeInterface(lang) {language=lang;apply();}
+

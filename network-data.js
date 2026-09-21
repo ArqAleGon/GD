@@ -1028,7 +1028,7 @@ export const networkLines = [
   },
   {
     "id": "RF-A",
-    "name": "Regional · corredor occidental del esquema",
+    "name": "Regiotram · corredor occidental",
     "color": "#008cd1",
     "path": [
       [
@@ -1060,7 +1060,7 @@ export const networkLines = [
   },
   {
     "id": "RF-B",
-    "name": "Regional · corredor central del esquema",
+    "name": "Regiotram · corredor central",
     "color": "#008cd1",
     "path": [
       [
@@ -1128,7 +1128,7 @@ export const networkLines = [
   },
   {
     "id": "RF-C",
-    "name": "Regional · ramal aeropuerto del esquema",
+    "name": "Regiotram · ramal aeropuerto",
     "color": "#008cd1",
     "path": [
       [
@@ -1179,3 +1179,4 @@ export const networkLines = [
     "stations": []
   }
 ];
+
