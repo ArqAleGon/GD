@@ -93,8 +93,10 @@ function renderMap(list){
  list.forEach(record=>{const state=STATUS[record.status];const path=svg('path',{d:record.geometry,fill:state.color,'fill-opacity':state.opacity,class:`parcel ${record.status}${selected?.key===record.key?' selected':''}`,tabindex:0,role:'button','aria-label':`${record.lotCode||record.id}. ${state.label}`,'fill-rule':'evenodd'});path.addEventListener('pointerdown',event=>event.stopPropagation());path.addEventListener('click',event=>{event.stopPropagation();showDetail(record);});path.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();showDetail(record);}});path.addEventListener('pointermove',event=>showTooltip(event,record));path.addEventListener('pointerleave',()=>{$('mapTooltip').hidden=true;});layer.append(path);});
 }
 
+function clearSelection(){selected=null;$('selectionLabel').textContent='Vista general';$('parcelDetail').innerHTML='<div class="emptyDetail"><b>Selecciona un predio</b><span>La ficha mostrará la geometría SHP y los datos relacionados por LotCodigo.</span></div>';}
+
 function render(){
- const list=visibleRecords();if(selected&&!list.includes(selected)){selected=null;$('selectionLabel').textContent='Vista general';$('parcelDetail').innerHTML='<div class="emptyDetail"><b>Selecciona un predio</b><span>La ficha mostrará la geometría SHP y los datos relacionados por LotCodigo.</span></div>';}
+ const list=visibleRecords();if(selected&&!list.includes(selected))clearSelection();
  renderKpis(list);renderCharts(list);renderMap(list);
 }
 
@@ -109,7 +111,7 @@ function init(){
  $('mapLegend').innerHTML=Object.values(STATUS).map(state=>`<span class="legendItem"><i style="--state:${state.color}"></i>${state.short}</span>`).join('');
  setView(initialView);renderBase();render();
  for(const id of ['predialStatus','locality','segment'])$(id).addEventListener('change',render);$('predialSearch').addEventListener('input',render);
- $('predialReset').onclick=()=>{$('predialStatus').value='';$('locality').value='';$('segment').value='';$('predialSearch').value='';selected=null;setView(initialView);render();};
+ $('predialReset').onclick=()=>{$('predialStatus').value='';$('locality').value='';$('segment').value='';$('predialSearch').value='';clearSelection();setView(initialView);render();};
  $('zoomIn').onclick=()=>zoom(.78);$('zoomOut').onclick=()=>zoom(1.28);$('resetView').onclick=()=>setView(initialView);
  const map=$('predialMap');map.addEventListener('wheel',event=>{event.preventDefault();const rect=map.getBoundingClientRect(),x=view.x+(event.clientX-rect.left)/rect.width*view.w,y=view.y+(event.clientY-rect.top)/rect.height*view.h;zoom(event.deltaY>0?1.14:.87,x,y);},{passive:false});
  map.addEventListener('pointerdown',event=>{drag={x:event.clientX,y:event.clientY,view:{...view}};map.setPointerCapture(event.pointerId);map.classList.add('dragging');});map.addEventListener('pointermove',event=>{if(!drag)return;const rect=map.getBoundingClientRect();setView({...view,x:drag.view.x-(event.clientX-drag.x)/rect.width*drag.view.w,y:drag.view.y-(event.clientY-drag.y)/rect.height*drag.view.h,w:drag.view.w,h:drag.view.h});});map.addEventListener('pointerup',()=>{drag=null;map.classList.remove('dragging');});map.addEventListener('pointercancel',()=>{drag=null;map.classList.remove('dragging');});
