@@ -13,19 +13,21 @@ if(fullscreen&&!fullscreen.hasAttribute('data-scene-fullscreen-external'))fullsc
 });
 document.addEventListener('fullscreenchange',updateFullscreen);updateFullscreen();
 
-const control=document.createElement('aside');
-control.className='spatialControls';
-control.setAttribute('aria-label','Navegación espacial');
-control.innerHTML=`<div class="spatialTitle">ORIENTACIÓN</div><div class="navCube" data-cube="iso" aria-label="Cubo de navegación 3D"><span class="cubeFace cubeTop">PLANTA</span><span class="cubeFace cubeFront">FRENTE</span><span class="cubeFace cubeSide">LADO</span></div><div class="cubeActions" aria-label="Vistas del cubo"><button data-orientation="top">Planta</button><button data-orientation="front">Frente</button><button data-orientation="side">Lado</button><button data-orientation="home" title="Vista inicial">⌂</button></div><div class="compass" aria-label="Brújula, norte arriba"><b>N</b><span class="compassNeedle"></span><i>E</i><i>S</i><i>O</i></div>`;
-const mountSelector={bim:'.viewport',predial:'.mapViewport',documentos:'.workspace'}[current];
-(mountSelector?document.querySelector(mountSelector):document.body)?.append(control);
-const cube=control.querySelector('.navCube');
-const compass=control.querySelector('.compass');
-control.querySelectorAll('[data-orientation]').forEach(button=>button.addEventListener('click',()=>{
-  const view=button.dataset.orientation;
-  cube.dataset.cube=view;
-  compass.dataset.heading=view;
-  const linked=document.querySelector(`[data-camera="${view}"]`);
-  if(linked&&!control.contains(linked))linked.click();
-  else document.dispatchEvent(new CustomEvent('sceneorientation',{detail:{view,scene:current}}));
-}));
+if(current!=='documentos'){
+  const control=document.createElement('aside');
+  control.className='compassControl';
+  control.setAttribute('aria-label','Brújula de orientación, norte al frente');
+  control.innerHTML=`<div class="compassTitle">ORIENTACIÓN</div><div class="compass" aria-hidden="true"><b>N</b><span class="compassNeedle"></span><i>E</i><i>S</i><i>O</i></div><output class="compassHeading">000°</output>`;
+  const mountSelector={bim:'.viewport',predial:'.mapViewport'}[current];
+  (mountSelector?document.querySelector(mountSelector):document.body)?.append(control);
+  const needle=control.querySelector('.compassNeedle');
+  const output=control.querySelector('.compassHeading');
+  const setHeading=value=>{
+    const degrees=((Number(value)||0)%360+360)%360;
+    needle.style.transform=`rotate(${degrees.toFixed(2)}deg)`;
+    output.value=`${String(Math.round(degrees)%360).padStart(3,'0')}°`;
+    control.setAttribute('aria-label',`Brújula de orientación, norte a ${Math.round(degrees)} grados respecto de la vista`);
+  };
+  document.addEventListener('sceneheading',event=>setHeading(event.detail?.degrees));
+  setHeading(0);
+}

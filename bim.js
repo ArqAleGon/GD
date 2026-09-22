@@ -13,6 +13,8 @@ const camera=new THREE.PerspectiveCamera(40,1,.1,100000);
 const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:true});
 renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));renderer.outputColorSpace=THREE.SRGBColorSpace;
 const controls=new OrbitControls(camera,canvas);controls.enableDamping=true;controls.maxDistance=50000;
+const compassNorth=new THREE.Vector3(0,0,-1),compassVector=new THREE.Vector3(),compassQuaternion=new THREE.Quaternion();let lastCompassHeading=null;
+function updateSceneCompass(){compassVector.copy(compassNorth).applyQuaternion(compassQuaternion.copy(camera.quaternion).invert());const heading=(Math.atan2(compassVector.x,compassVector.y)*180/Math.PI+360)%360;if(lastCompassHeading===null||Math.abs(heading-lastCompassHeading)>.2){lastCompassHeading=heading;document.dispatchEvent(new CustomEvent('sceneheading',{detail:{degrees:heading}}));}}
 scene.add(new THREE.HemisphereLight(0xffffff,0x627381,2.3));
 const sun=new THREE.DirectionalLight(0xffffff,2);sun.position.set(60,100,40);scene.add(sun);
 const records=[];let selected=null,isolated=false,mode='iso';
@@ -111,14 +113,13 @@ $('reset').onclick=()=>{for(const id of ['sector','ue','discipline','status','se
 $('fit').onclick=()=>fit(isolated&&selected?[selected]:visibleRecords());
 $('top').onclick=()=>{mode='top';fit(isolated&&selected?[selected]:visibleRecords());};
 $('iso').onclick=()=>{mode='iso';fit(isolated&&selected?[selected]:visibleRecords());};
-document.addEventListener('sceneorientation',event=>{const view=event.detail?.view;if(!['home','top','front','side'].includes(view))return;mode=view==='home'?'iso':view;fit(isolated&&selected?[selected]:visibleRecords(),mode);});
 $('context').onclick=()=>{if(!selected)return;isolated=!isolated;$('context').setAttribute('aria-pressed',String(isolated));applyMaterials();fit(isolated?[selected]:visibleRecords());};
 $('clearSelection').onclick=()=>{select(null);fit();};
 const raycaster=new THREE.Raycaster();let down;
 canvas.addEventListener('pointerdown',e=>{down=[e.clientX,e.clientY];});
 canvas.addEventListener('pointerup',e=>{if(!down||Math.hypot(e.clientX-down[0],e.clientY-down[1])>5)return;const rect=canvas.getBoundingClientRect();raycaster.setFromCamera(new THREE.Vector2((e.clientX-rect.left)/rect.width*2-1,-(e.clientY-rect.top)/rect.height*2+1),camera);const roots=visibleRecords().filter(r=>r.group?.visible).map(r=>r.group);const hit=raycaster.intersectObjects(roots,true)[0];if(hit)select(records.find(r=>r.id===hit.object.userData.recordId));else select(null);});
 new ResizeObserver(()=>{const {width,height}=host.getBoundingClientRect();renderer.setSize(width,height,false);camera.aspect=width/height;camera.updateProjectionMatrix();}).observe(host);
-renderer.setAnimationLoop(()=>{controls.update();renderer.render(scene,camera);});
+renderer.setAnimationLoop(()=>{controls.update();updateSceneCompass();renderer.render(scene,camera);});
 async function load(){
  const response=await fetch('./ifc-placement-20260915-i16-e16.json');if(!response.ok)throw new Error('No se pudo leer la lista de modelos');const placement=await response.json();
  const ueResponse=await fetch('./bim-ue-elements.json?v=20260916-elements');if(!ueResponse.ok)throw new Error('No se pudo leer el índice UE por elementos');const ueMapping=await ueResponse.json();
