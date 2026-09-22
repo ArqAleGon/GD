@@ -9,7 +9,7 @@ const BASE_Y=-.38;
 export const cityPoint=([x,y],height=0)=>[(x-MAP_WIDTH/2)*WORLD_SCALE,height,(y-MAP_HEIGHT/2)*WORLD_SCALE];
 
 async function loadL1Buildings(){
- const urls=[1,2,3].map(part=>`./l1-buildings-${part}.json.gz?v=20260922-l1-100m`);
+ const urls=[1,2,3].map(part=>`./l1-buildings-${part}.json.gz?v=20260922-l1-100m-b`);
  const parts=await Promise.all(urls.map(async url=>{
   const response=await fetch(url);
   if(!response.ok)throw new Error('No se pudo cargar la edificación 3D de la L1');

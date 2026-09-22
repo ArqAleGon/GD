@@ -1,6 +1,6 @@
 import {COMPARISONS,comparisonLayers} from './e15-comparison.js';
 import {RENDER_E15_CAMERA,renderE15Fov} from './render-e15-camera.js';
-import {buildBogotaContext,cityPoint} from './bogota-context.js?v=20260922-l1-100m';
+import {buildBogotaContext,cityPoint} from './bogota-context.js?v=20260922-l1-100m-b';
 import { localizeInterface } from './interface-language.js';
 import { loadUrbanMap, buildUrbanMap } from './urban-map-20260915-i16-e16.js?v=20260917-render';
 import { networkLines } from './network-data.js?v=20260922-cadastre';
