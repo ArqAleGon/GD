@@ -1,6 +1,10 @@
 async function loadGzipJSON(url){const response=await fetch(url);if(!response.ok)throw new Error(`No se pudo cargar ${url}`);const stream=response.body.pipeThrough(new DecompressionStream('gzip'));return JSON.parse(await new Response(stream).text());}
-const predialPayload=await loadGzipJSON('./predial-data.json.gz?v=20260922-shp');
+const [predialPayload,mapBasePayload]=await Promise.all([
+ loadGzipJSON('./predial-data.json.gz?v=20260922-shp'),
+ loadGzipJSON('./predial-map-base.json.gz?v=20260922-mapbase')
+]);
 const PREDIAL_META=predialPayload.meta,PREDIAL_RECORDS=predialPayload.records;
+const MAP_BASE_META=mapBasePayload.meta,TERRITORIAL=mapBasePayload.territorial,L1_BASE=mapBasePayload.l1;
 
 const $=id=>document.getElementById(id);
 const NS='http://www.w3.org/2000/svg';
@@ -15,6 +19,7 @@ const mapWidth=PREDIAL_META.mapWidth||1200,mapHeight=PREDIAL_META.mapHeight||620
 const padding=26;
 const initialView={x:-padding,y:-padding,w:mapWidth+padding*2,h:mapHeight+padding*2};
 let view={...initialView},selected=null,drag=null;
+const layerState={cadastre:true,l1:true};
 
 const escapeHTML=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const svg=(tag,attrs={})=>{const node=document.createElementNS(NS,tag);Object.entries(attrs).forEach(([key,value])=>node.setAttribute(key,String(value)));return node;};
@@ -47,6 +52,47 @@ function renderBase(){
  north.append(svg('path',{d:'M0,23 L8,0 L16,23 L8,18 Z'}));
  const n=svg('text',{x:8,y:-6,'text-anchor':'middle'});n.textContent='N';north.append(n);base.append(north);
  const corridor=svg('text',{x:18,y:27,class:'mapTitle'});corridor.textContent='PREDIOS L1MB · GEOMETRÍA SHP WGS 84';base.append(corridor);
+}
+
+function appendPaths(layerId,paths,className,attributes={}){
+ const layer=$(layerId);layer.replaceChildren();
+ for(const pathData of paths||[]){
+  layer.append(svg('path',{d:pathData,class:className,...attributes}));
+ }
+}
+
+function renderReferenceLayers(){
+ const cadastre=$('cadastreImage');
+ cadastre.setAttribute('href',`./${MAP_BASE_META.cadastreImage}?v=20260922-mapbase`);
+ cadastre.setAttribute('width',mapWidth);cadastre.setAttribute('height',mapHeight);
+ appendPaths('viaductLayer',L1_BASE.viaduct.paths,'l1Viaduct',{'fill-rule':'evenodd'});
+ appendPaths('alignmentLayer',L1_BASE.alignment.paths,'l1Alignment');
+
+ const stations=$('stationLayer'),labels=$('stationLabelLayer');stations.replaceChildren();labels.replaceChildren();
+ for(const item of L1_BASE.stations.items||[]){
+  const station=svg('path',{d:item.path,class:'l1Station','fill-rule':'evenodd'});
+  const title=svg('title');title.textContent=`${item.code} · ${item.name}`;station.append(title);stations.append(station);
+  const label=svg('text',{x:item.center[0],y:item.center[1]-7,class:'l1StationLabel','text-anchor':'middle'});label.textContent=item.code;labels.append(label);
+ }
+
+ const patioRecords=PREDIAL_RECORDS.filter(record=>/^(PT|PATIO TALLER)$/i.test(record.group||record.station||''));
+ const patio=$('patioLayer');patio.replaceChildren();
+ let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity;
+ for(const record of patioRecords){
+  patio.append(svg('path',{d:record.geometry,class:'patioReference','fill-rule':'evenodd'}));
+  for(const match of record.geometry.matchAll(/(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)/g)){
+   const x=Number(match[1]),y=Number(match[2]);minX=Math.min(minX,x);minY=Math.min(minY,y);maxX=Math.max(maxX,x);maxY=Math.max(maxY,y);
+  }
+ }
+ if(Number.isFinite(minX)){
+  const label=svg('text',{x:(minX+maxX)/2,y:minY-8,class:'patioLabel','text-anchor':'middle'});label.textContent='PATIO TALLER';patio.append(label);
+ }
+}
+
+function setLayerVisibility(name,visible){
+ layerState[name]=visible;
+ const group=$(name==='cadastre'?'cadastreLayer':'l1Layer'),button=$(name==='cadastre'?'toggleCadastre':'toggleL1');
+ group.style.display=visible?'':'none';group.setAttribute('aria-hidden',String(!visible));button.setAttribute('aria-pressed',String(visible));button.classList.toggle('isOff',!visible);
 }
 
 function renderKpis(list){
@@ -106,12 +152,15 @@ function zoom(factor,cx=view.x+view.w/2,cy=view.y+view.h/2){const nextW=Math.max
 function init(){
  $('sourceName').textContent=`${PREDIAL_META.workbookSource} + ${PREDIAL_META.geometrySource}`;
  $('joinSummary').textContent=`Cruce ${PREDIAL_META.joinField}: ${fmtNumber(PREDIAL_META.matchedFeatureCount)} geometrías correlacionadas y ${fmtNumber(PREDIAL_META.unmatchedFeatureCount)} sin gestión de adquisición.`;
+ $('mapBaseSummary').textContent=`Referencia territorial MapaBaseBogota: ${fmtNumber(MAP_BASE_META.territorialFeatureCount)} elementos de lotes, construcciones, manzanas, sectores, vías y curvas de nivel; L1 con trazado, viaducto y ${fmtNumber(L1_BASE.stations.featureCount)} estaciones.`;
  for(const value of [...new Set(PREDIAL_RECORDS.map(record=>record.locality).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'))){const option=document.createElement('option');option.value=value;option.textContent=value;$('locality').append(option);}
  for(const value of [...new Set(PREDIAL_RECORDS.map(record=>record.group||record.station).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es',{numeric:true}))){const option=document.createElement('option');option.value=value;option.textContent=value;$('segment').append(option);}
  $('mapLegend').innerHTML=Object.values(STATUS).map(state=>`<span class="legendItem"><i style="--state:${state.color}"></i>${state.short}</span>`).join('');
- setView(initialView);renderBase();render();
+ setView(initialView);renderBase();renderReferenceLayers();render();
  for(const id of ['predialStatus','locality','segment'])$(id).addEventListener('change',render);$('predialSearch').addEventListener('input',render);
  $('predialReset').onclick=()=>{$('predialStatus').value='';$('locality').value='';$('segment').value='';$('predialSearch').value='';clearSelection();setView(initialView);render();};
+ $('toggleCadastre').onclick=()=>setLayerVisibility('cadastre',!layerState.cadastre);
+ $('toggleL1').onclick=()=>setLayerVisibility('l1',!layerState.l1);
  $('zoomIn').onclick=()=>zoom(.78);$('zoomOut').onclick=()=>zoom(1.28);$('resetView').onclick=()=>setView(initialView);
  const map=$('predialMap');map.addEventListener('wheel',event=>{event.preventDefault();const rect=map.getBoundingClientRect(),x=view.x+(event.clientX-rect.left)/rect.width*view.w,y=view.y+(event.clientY-rect.top)/rect.height*view.h;zoom(event.deltaY>0?1.14:.87,x,y);},{passive:false});
  map.addEventListener('pointerdown',event=>{drag={x:event.clientX,y:event.clientY,view:{...view}};map.setPointerCapture(event.pointerId);map.classList.add('dragging');});map.addEventListener('pointermove',event=>{if(!drag)return;const rect=map.getBoundingClientRect();setView({...view,x:drag.view.x-(event.clientX-drag.x)/rect.width*drag.view.w,y:drag.view.y-(event.clientY-drag.y)/rect.height*drag.view.h,w:drag.view.w,h:drag.view.h});});map.addEventListener('pointerup',()=>{drag=null;map.classList.remove('dragging');});map.addEventListener('pointercancel',()=>{drag=null;map.classList.remove('dragging');});

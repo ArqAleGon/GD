@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#101b26">
   <title>Gestión predial L1 | Asistente Digital</title>
   <meta name="description" content="Mapa interactivo de gestión predial de la Línea 1 del Metro de Bogotá.">
-  <link rel="stylesheet" href="./predial.css?v=20260922-shp">
+  <link rel="stylesheet" href="./predial.css?v=20260922-mapbase">
 </head>
 <body>
   <header class="siteHeader">
@@ -53,6 +53,7 @@
         <b>Fuente integrada</b>
         <span id="sourceName">Cargando base predial…</span>
         <p id="joinSummary"></p>
+        <p id="mapBaseSummary"></p>
         <p>Se publican datos operativos del predio. Se excluyen nombres, documentos, teléfonos y valores financieros.</p>
       </section>
     </aside>
@@ -68,21 +69,33 @@
       <div class="contentGrid">
         <section class="mapCard" aria-label="Mapa predial interactivo">
           <div class="mapHeading">
-            <div><b>Geometría predial SHP</b><span>Selecciona un polígono para consultar la relación predial</span></div>
+            <div><b>Gestión predial sobre base territorial</b><span>Selecciona un predio o controla las capas de referencia</span></div>
             <div class="mapTools">
+              <button id="toggleCadastre" class="layerToggle" aria-pressed="true" title="Encender o apagar la base catastral">Base catastral</button>
+              <button id="toggleL1" class="layerToggle l1Toggle" aria-pressed="true" title="Encender o apagar viaducto, trazado, estaciones y Patio Taller">Trazado L1</button>
               <button id="zoomIn" aria-label="Acercar">＋</button>
               <button id="zoomOut" aria-label="Alejar">−</button>
               <button id="resetView">Encuadrar</button>
             </div>
           </div>
           <div class="mapViewport">
-            <svg id="predialMap" viewBox="-26 -26 1252 665" role="img" aria-label="Polígonos del archivo SHP predial de la Línea 1">
+            <svg id="predialMap" viewBox="-26 -26 1252 665" role="img" aria-label="Mapa territorial y predial de la Línea 1">
               <g id="geoGrid"></g>
+              <g id="cadastreLayer" aria-label="Base catastral de Bogotá">
+                <image id="cadastreImage" x="0" y="0" width="1200" height="613.39" preserveAspectRatio="none"></image>
+              </g>
+              <g id="l1Layer" aria-label="Infraestructura de la Línea 1">
+                <g id="viaductLayer"></g>
+                <g id="alignmentLayer"></g>
+                <g id="patioLayer"></g>
+                <g id="stationLayer"></g>
+                <g id="stationLabelLayer"></g>
+              </g>
               <g id="parcelLayer"></g>
             </svg>
             <div id="mapTooltip" role="status" hidden></div>
             <div class="mapLegend" id="mapLegend"></div>
-            <p class="geometryNote">Geometría tomada directamente de PREDIOS_L1MB_ABRIL2026.shp · WGS 84. La gestión se relaciona por LotCodigo = LOTCODIGO.</p>
+            <p class="geometryNote">Predios: PREDIOS_L1MB_ABRIL2026.shp · Base territorial: MapaBaseBogota · WGS 84. Gestión relacionada por LotCodigo = LOTCODIGO.</p>
           </div>
         </section>
 
@@ -102,7 +115,7 @@
       </div>
     </section>
   </main>
-  <script type="module" src="./predial.js?v=20260922-shp2"></script>
+  <script type="module" src="./predial.js?v=20260922-mapbase"></script>
 </body>
 </html>
 
