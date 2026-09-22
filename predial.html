@@ -7,18 +7,20 @@
   <title>Gestión predial L1 | Asistente Digital</title>
   <meta name="description" content="Mapa interactivo de gestión predial de la Línea 1 del Metro de Bogotá.">
   <link rel="stylesheet" href="./predial.css?v=20260922-mapbase">
+  <link rel="stylesheet" href="./scene-controls.css?v=20260922">
 </head>
-<body>
+<body data-scene="predial">
   <header class="siteHeader">
     <a class="brand" href="./index.html">
       <img src="./assets/logo-metro.jpg" alt="Metro de Bogotá">
       <span><b>Asistente Digital</b><small>Empresa Metro de Bogotá</small></span>
     </a>
-    <nav aria-label="Navegación de módulos">
+    <nav class="sceneNav" aria-label="Navegación de módulos">
+      <a class="homeScene" href="./index.html">⌂ Inicio</a>
       <a class="active" href="./predial.html" aria-current="page">Predial</a>
       <a href="./bim.html">Avance BIM ↗</a>
       <a href="./documents.html">Documentos ↗</a>
-      <a href="./index.html">← Datos integrados</a>
+      <button data-scene-fullscreen title="Ampliar a página completa" aria-label="Ampliar a página completa">⛶ <span data-fullscreen-label>Pantalla completa</span></button>
     </nav>
   </header>
 
@@ -115,7 +117,7 @@
       </div>
     </section>
   </main>
-  <script type="module" src="./predial.js?v=20260922-mapbase"></script>
+  <script type="module" src="./predial.js?v=20260922-controls"></script>
+  <script type="module" src="./scene-controls.js?v=20260922"></script>
 </body>
 </html>
-

@@ -41,7 +41,8 @@ function fit(list=visibleRecords(),direction=mode){
  const center=bounds.getCenter(new THREE.Vector3()),size=bounds.getSize(new THREE.Vector3());
  const radius=Math.max(size.length()/2,2),distance=radius/Math.sin(THREE.MathUtils.degToRad(camera.fov/2))*1.28/Math.min(camera.aspect,1);
  controls.target.copy(center);camera.up.set(0,1,0);
- const dir=direction==='top'?new THREE.Vector3(0,1,.001):new THREE.Vector3(.9,.65,1).normalize();
+ const directions={top:new THREE.Vector3(0,1,.001),front:new THREE.Vector3(0,.12,1),side:new THREE.Vector3(1,.12,0),iso:new THREE.Vector3(.9,.65,1)};
+ const dir=(directions[direction]||directions.iso).normalize();
  camera.position.copy(center).addScaledVector(dir,distance);camera.near=Math.max(.02,distance/20000);camera.far=Math.max(10000,distance*10);camera.updateProjectionMatrix();controls.update();
 }
 function applyMaterials(){
@@ -110,6 +111,7 @@ $('reset').onclick=()=>{for(const id of ['sector','ue','discipline','status','se
 $('fit').onclick=()=>fit(isolated&&selected?[selected]:visibleRecords());
 $('top').onclick=()=>{mode='top';fit(isolated&&selected?[selected]:visibleRecords());};
 $('iso').onclick=()=>{mode='iso';fit(isolated&&selected?[selected]:visibleRecords());};
+document.addEventListener('sceneorientation',event=>{const view=event.detail?.view;if(!['home','top','front','side'].includes(view))return;mode=view==='home'?'iso':view;fit(isolated&&selected?[selected]:visibleRecords(),mode);});
 $('context').onclick=()=>{if(!selected)return;isolated=!isolated;$('context').setAttribute('aria-pressed',String(isolated));applyMaterials();fit(isolated?[selected]:visibleRecords());};
 $('clearSelection').onclick=()=>{select(null);fit();};
 const raycaster=new THREE.Raycaster();let down;
@@ -129,4 +131,3 @@ async function load(){
  render();fit();
 }
 load().catch(error=>{$('load').hidden=false;$('load').textContent='No se pudieron cargar los modelos. Recarga para reintentar.';console.error(error);});
-
