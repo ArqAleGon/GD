@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#101b26">
   <title>Gestión predial L1 | Asistente Digital</title>
   <meta name="description" content="Mapa interactivo de gestión predial de la Línea 1 del Metro de Bogotá.">
-  <link rel="stylesheet" href="./predial.css?v=20260921">
+  <link rel="stylesheet" href="./predial.css?v=20260922-shp">
 </head>
 <body>
   <header class="siteHeader">
@@ -26,15 +26,16 @@
     <aside class="filters">
       <div class="eyebrow">GESTIÓN DEL CORREDOR</div>
       <h1>Predial L1</h1>
-      <p class="muted">Base con corte al 18 de septiembre de 2026</p>
+      <p class="muted">Gestión con corte al 18 de septiembre de 2026 · Geometría SHP abril de 2026</p>
 
       <label for="predialStatus">Estado de gestión</label>
       <select id="predialStatus">
-        <option value="acquired" selected>Adquiridos / entregados</option>
-        <option value="">Todos los estados</option>
+        <option value="" selected>Todos los estados</option>
+        <option value="acquired">Adquiridos / entregados</option>
         <option value="formalized">Formalizados</option>
         <option value="offer">En oferta</option>
         <option value="identified">Identificados</option>
+        <option value="unmanaged">Sin gestión de adquisición</option>
       </select>
 
       <label for="locality">Localidad</label>
@@ -44,20 +45,21 @@
       <select id="segment"><option value="">Todos los tramos</option></select>
 
       <label for="predialSearch">Buscar predio</label>
-      <input id="predialSearch" type="search" placeholder="ID, CHIP, dirección o barrio">
+      <input id="predialSearch" type="search" placeholder="LotCodigo, ID o CHIP">
 
       <button id="predialReset" class="secondary">Restablecer filtros</button>
 
       <section class="sourceNote">
         <b>Fuente integrada</b>
         <span id="sourceName">Cargando base predial…</span>
+        <p id="joinSummary"></p>
         <p>Se publican datos operativos del predio. Se excluyen nombres, documentos, teléfonos y valores financieros.</p>
       </section>
     </aside>
 
     <section class="workspace">
       <div class="heading">
-        <div><div class="eyebrow">LÍNEA 1 · BOGOTÁ</div><h2>Mapa interactivo de adquisición predial</h2></div>
+        <div><div class="eyebrow">LÍNEA 1 · BOGOTÁ</div><h2>Mapa geográfico de adquisición predial</h2></div>
         <span id="resultCount" class="count"></span>
       </div>
 
@@ -66,7 +68,7 @@
       <div class="contentGrid">
         <section class="mapCard" aria-label="Mapa predial interactivo">
           <div class="mapHeading">
-            <div><b>Corredor L1</b><span>Selecciona un predio para consultar su ficha</span></div>
+            <div><b>Geometría predial SHP</b><span>Selecciona un polígono para consultar la relación predial</span></div>
             <div class="mapTools">
               <button id="zoomIn" aria-label="Acercar">＋</button>
               <button id="zoomOut" aria-label="Alejar">−</button>
@@ -74,22 +76,13 @@
             </div>
           </div>
           <div class="mapViewport">
-            <svg id="predialMap" viewBox="780 90 570 440" role="img" aria-label="Mapa referencial de predios alrededor de la Línea 1">
-              <defs>
-                <pattern id="cityGrid" width="26" height="26" patternUnits="userSpaceOnUse" patternTransform="rotate(7)">
-                  <path d="M 26 0 L 0 0 0 26" fill="none" stroke="#314b5d" stroke-width="0.75" opacity="0.42"/>
-                </pattern>
-                <filter id="routeGlow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
-              </defs>
-              <rect x="300" y="40" width="1300" height="620" fill="#0b1822"/>
-              <rect x="300" y="40" width="1300" height="620" fill="url(#cityGrid)"/>
-              <g id="cityBase"></g>
-              <g id="routeLayer"></g>
+            <svg id="predialMap" viewBox="-26 -26 1252 665" role="img" aria-label="Polígonos del archivo SHP predial de la Línea 1">
+              <g id="geoGrid"></g>
               <g id="parcelLayer"></g>
             </svg>
             <div id="mapTooltip" role="status" hidden></div>
             <div class="mapLegend" id="mapLegend"></div>
-            <p class="geometryNote">Ubicación referencial por estación/tramo. La hoja “Coordenadas” del libro fuente no contiene geometrías; los polígonos no representan linderos catastrales.</p>
+            <p class="geometryNote">Geometría tomada directamente de PREDIOS_L1MB_ABRIL2026.shp · WGS 84. La gestión se relaciona por LotCodigo = LOTCODIGO.</p>
           </div>
         </section>
 
@@ -99,17 +92,17 @@
             <div id="statusChart" class="statusChart"></div>
           </section>
           <section class="dashCard">
-            <div class="cardHeading"><h2>Localidades</h2><span>Predios visibles</span></div>
-            <div id="localityChart" class="barChart"></div>
+            <div class="cardHeading"><h2>Estaciones y tramos</h2><span>Geometrías visibles</span></div>
+            <div id="coverageChart" class="barChart"></div>
           </section>
           <section id="parcelDetail" class="dashCard parcelDetail">
-            <div class="emptyDetail"><b>Selecciona un predio</b><span>La ficha mostrará identificación, ubicación, áreas e hitos del proceso.</span></div>
+            <div class="emptyDetail"><b>Selecciona un predio</b><span>La ficha mostrará la geometría SHP y los datos relacionados por LotCodigo.</span></div>
           </section>
         </aside>
       </div>
     </section>
   </main>
-  <script type="module" src="./predial.js?v=20260921"></script>
+  <script type="module" src="./predial.js?v=20260922-shp"></script>
 </body>
 </html>
 
