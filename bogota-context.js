@@ -4,20 +4,25 @@ export const MAP_WIDTH=1200;
 export const MAP_HEIGHT=613.39;
 export const WORLD_SCALE=.32;
 const METRES_PER_MAP_UNIT=13.32;
-const HEIGHT_WORLD_PER_METRE=WORLD_SCALE/METRES_PER_MAP_UNIT*4.2;
+export const METRES_TO_WORLD=WORLD_SCALE/METRES_PER_MAP_UNIT;
+const HEIGHT_WORLD_PER_METRE=METRES_TO_WORLD;
 const BASE_Y=-.38;
 export const cityPoint=([x,y],height=0)=>[(x-MAP_WIDTH/2)*WORLD_SCALE,height,(y-MAP_HEIGHT/2)*WORLD_SCALE];
 
+async function loadCompressedJson(url,message){
+ const response=await fetch(url);
+ if(!response.ok)throw new Error(message);
+ const stream=response.body.pipeThrough(new DecompressionStream('gzip'));
+ return JSON.parse(await new Response(stream).text());
+}
+
 async function loadL1Buildings(){
  const urls=[1,2,3].map(part=>`./l1-buildings-${part}.json.gz?v=20260922-l1-100m-b`);
- const parts=await Promise.all(urls.map(async url=>{
-  const response=await fetch(url);
-  if(!response.ok)throw new Error('No se pudo cargar la edificación 3D de la L1');
-  const stream=response.body.pipeThrough(new DecompressionStream('gzip'));
-  return JSON.parse(await new Response(stream).text());
- }));
+ const parts=await Promise.all(urls.map(url=>loadCompressedJson(url,'No se pudo cargar la edificación 3D de la L1')));
  return {...parts[0],buildings:parts.flatMap(part=>part.buildings)};
 }
+
+const loadEasternHills=()=>loadCompressedJson('./eastern-hills.json.gz?v=20260922-cniv-1to1','No se pudo cargar el relieve de los Cerros Orientales');
 
 function mapPlane(width,height,material,y){
  const mesh=new THREE.Mesh(new THREE.PlaneGeometry(width,height),material);
@@ -34,7 +39,7 @@ function addFootprint(bucket,flat,heightM){
   points.push(new THREE.Vector2(x,z));
  }
  if(points.length<3)return;
- const top=BASE_Y+Math.max(.12,heightM*HEIGHT_WORLD_PER_METRE);
+ const top=BASE_Y+Math.max(METRES_TO_WORLD*.25,heightM*HEIGHT_WORLD_PER_METRE);
  const offset=bucket.positions.length/3;
  points.forEach(point=>bucket.positions.push(point.x,BASE_Y,point.y));
  points.forEach(point=>bucket.positions.push(point.x,top,point.y));
@@ -68,7 +73,7 @@ function addBuildingVolumes(group,data,addLabel,onInspect){
  const landmarkMesh=meshFromBucket(landmarks,landmarkMaterial,'Hitos urbanos · CONNPISOS × 3 m');
  group.add(volumeMesh,landmarkMesh);
  for(const item of data.landmarks){
-  const top=Math.max(1.45,BASE_Y+item.heightM*HEIGHT_WORLD_PER_METRE+1.15);
+  const top=Math.max(.45,BASE_Y+item.heightM*HEIGHT_WORLD_PER_METRE+.38);
   const marker=new THREE.Mesh(new THREE.RingGeometry(1.05,1.7,28),new THREE.MeshBasicMaterial({color:'#ffe59a',transparent:true,opacity:.88,side:THREE.DoubleSide,depthWrite:false}));
   marker.rotation.x=-Math.PI/2;marker.position.fromArray(cityPoint(item.anchor,BASE_Y+.08));marker.renderOrder=3;group.add(marker);
   const detail={...item,description:`${item.count.toLocaleString('es')} construcciones asociadas · máximo ${item.maxFloors.toLocaleString('es')} pisos · ${item.heightM.toLocaleString('es')} m según CONNPISOS × 3 m.`};
@@ -81,12 +86,51 @@ function addBuildingVolumes(group,data,addLabel,onInspect){
  return {volumeMesh,landmarkMesh};
 }
 
+function addEasternHills(group,data,addLabel){
+ const terrain=new THREE.Group();terrain.name='Cerros Orientales · CNiv.shp';group.add(terrain);
+ const {gridWidth:width,gridHeight:height,mapBounds,baseElevationM}=data.meta;
+ const [minX,minY,maxX,maxY]=mapBounds;
+ const positions=[],indices=[],colors=[];
+ const low=new THREE.Color('#0d242d'),middle=new THREE.Color('#263f36'),high=new THREE.Color('#566749');
+ const maxRelative=Math.max(1,data.meta.maxElevationM-baseElevationM);
+ for(let row=0;row<height;row++)for(let column=0;column<width;column++){
+  const mapX=minX+(maxX-minX)*column/(width-1),mapY=minY+(maxY-minY)*row/(height-1);
+  const elevation=data.heights[row*width+column],relative=Math.max(0,elevation-baseElevationM);
+  const point=cityPoint([mapX,mapY],BASE_Y+relative*METRES_TO_WORLD);
+  positions.push(...point);
+  const ratio=THREE.MathUtils.clamp(relative/maxRelative,0,1),color=ratio<.52?low.clone().lerp(middle,ratio/.52):middle.clone().lerp(high,(ratio-.52)/.48);
+  colors.push(color.r,color.g,color.b);
+ }
+ for(let row=0;row<height-1;row++)for(let column=0;column<width-1;column++){
+  const a=row*width+column,b=a+1,c=a+width,d=c+1;
+  indices.push(a,c,b,b,c,d);
+ }
+ const geometry=new THREE.BufferGeometry();
+ geometry.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));
+ geometry.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));
+ geometry.setIndex(indices);geometry.computeVertexNormals();geometry.computeBoundingSphere();
+ const surface=new THREE.Mesh(geometry,new THREE.MeshStandardMaterial({vertexColors:true,roughness:1,metalness:0,transparent:true,opacity:.86,side:THREE.DoubleSide}));
+ surface.name='Relieve 1:1 · Cerros Orientales';surface.receiveShadow=true;terrain.add(surface);
+ const contourMaterial=new THREE.LineBasicMaterial({color:'#a5bc8b',transparent:true,opacity:.18,depthWrite:false});
+ for(const [elevation,flat] of data.contours){
+  const points=[];
+  for(let index=0;index<flat.length;index+=2)points.push(new THREE.Vector3(...cityPoint([flat[index],flat[index+1]],BASE_Y+Math.max(0,elevation-baseElevationM)*METRES_TO_WORLD+.025)));
+  if(points.length>1){const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints(points),contourMaterial);line.renderOrder=2;terrain.add(line);}
+ }
+ const labelX=minX+(maxX-minX)*.12,centerY=(minY+maxY)/2;
+ const label=addLabel(cityPoint([labelX,centerY],BASE_Y+maxRelative*METRES_TO_WORLD+1),()=>`CERROS ORIENTALES · ${data.meta.minElevationM.toLocaleString('es')}–${data.meta.maxElevationM.toLocaleString('es')} m`,null,'cityStreetLabel hillsLabel');
+ label.landmark=true;label.offsetY=-10;
+ group.userData.terrain={group:terrain,surface,meta:data.meta};
+ document.dispatchEvent(new CustomEvent('terrainready',{detail:data.meta}));
+ return terrain;
+}
+
 export function buildBogotaContext(root,addLabel,onInspect){
  const group=new THREE.Group();group.name='Bogotá · base catastral y corredor 3D L1';root.add(group);
  const worldWidth=MAP_WIDTH*WORLD_SCALE,worldHeight=MAP_HEIGHT*WORLD_SCALE;
 
- const ground=mapPlane(worldWidth+12,worldHeight+28,new THREE.MeshStandardMaterial({color:'#09141c',roughness:1,metalness:0}),-.72);
- ground.position.z=-3;group.add(ground);
+ const ground=mapPlane(worldWidth+155,worldHeight+72,new THREE.MeshStandardMaterial({color:'#09141c',roughness:1,metalness:0}),-.72);
+ ground.position.x=71;ground.position.z=-3;group.add(ground);
 
  const texture=new THREE.TextureLoader().load('./predial-cadastre.webp?v=20260922-mapbase');
  texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=4;
@@ -104,6 +148,9 @@ export function buildBogotaContext(root,addLabel,onInspect){
  }
  group.userData.buildingsPromise=loadL1Buildings().then(data=>addBuildingVolumes(group,data,addLabel,onInspect)).catch(error=>{
   console.error(error);document.dispatchEvent(new CustomEvent('l1buildingserror',{detail:{message:error.message}}));return null;
+ });
+ group.userData.terrainPromise=loadEasternHills().then(data=>addEasternHills(group,data,addLabel)).catch(error=>{
+  console.error(error);document.dispatchEvent(new CustomEvent('terrainerror',{detail:{message:error.message}}));return null;
  });
  return group;
 }
