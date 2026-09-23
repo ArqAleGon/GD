@@ -1,6 +1,6 @@
 async function loadGzipJSON(url){const response=await fetch(url);if(!response.ok)throw new Error(`No se pudo cargar ${url}`);const stream=response.body.pipeThrough(new DecompressionStream('gzip'));return JSON.parse(await new Response(stream).text());}
 const [predialPayload,mapBasePayload]=await Promise.all([
- loadGzipJSON('./predial-data.json.gz?v=20260922-shp'),
+ loadGzipJSON('./predial-data.json.gz?v=20260923-stations'),
  loadGzipJSON('./predial-map-base.json.gz?v=20260922-mapbase')
 ]);
 const PREDIAL_META=predialPayload.meta,PREDIAL_RECORDS=predialPayload.records;
@@ -26,11 +26,12 @@ const svg=(tag,attrs={})=>{const node=document.createElementNS(NS,tag);Object.en
 const fmtNumber=(value,digits=0)=>Number(value||0).toLocaleString('es-CO',{minimumFractionDigits:digits,maximumFractionDigits:digits});
 const fmtDate=value=>{if(!value)return 'Pendiente';const date=new Date(value+'T12:00:00');return Number.isNaN(date.valueOf())?value:new Intl.DateTimeFormat('es-CO',{day:'2-digit',month:'short',year:'numeric'}).format(date);};
 const relationLabel=record=>record.matched?'Correlacionado por LotCodigo':'Sin correlación en la base predial';
+const recordSegments=record=>[...new Set([record.group,record.stationCode,record.station].filter(Boolean))];
 
 function filters(){return {status:$('predialStatus').value,locality:$('locality').value,segment:$('segment').value,search:$('predialSearch').value.trim().toLocaleLowerCase('es')};}
 function matches(record,filter){
- const haystack=[record.lotCode,record.id,record.chip,record.address,record.neighborhood,record.station,record.group,record.ue].join(' ').toLocaleLowerCase('es');
- return (!filter.status||record.status===filter.status)&&(!filter.locality||record.locality===filter.locality)&&(!filter.segment||(record.group||record.station)===filter.segment)&&(!filter.search||haystack.includes(filter.search));
+ const haystack=[record.lotCode,record.id,record.chip,record.address,record.neighborhood,record.stationCode,record.station,record.group,record.ue].join(' ').toLocaleLowerCase('es');
+ return (!filter.status||record.status===filter.status)&&(!filter.locality||record.locality===filter.locality)&&(!filter.segment||recordSegments(record).includes(filter.segment))&&(!filter.search||haystack.includes(filter.search));
 }
 const visibleRecords=()=>{const filter=filters();return PREDIAL_RECORDS.filter(record=>matches(record,filter));};
 
@@ -116,7 +117,7 @@ function statusGradient(counts,total){
 function renderCharts(list){
  const counts=Object.fromEntries(Object.keys(STATUS).map(key=>[key,list.filter(record=>record.status===key).length]));
  $('statusChart').innerHTML=`<div class="donut" style="background:${statusGradient(counts,list.length)}"><div><b>${fmtNumber(list.length)}</b><small>geometrías</small></div></div><div class="donutLegend">${Object.entries(STATUS).map(([key,state])=>`<div><i style="--state:${state.color}"></i><span>${state.short}</span><b>${fmtNumber(counts[key])}</b></div>`).join('')}</div>`;
- const groups=[...list.reduce((map,record)=>{const name=record.group||record.station||'Sin tramo registrado';return map.set(name,(map.get(name)||0)+1);},new Map())].sort((a,b)=>b[1]-a[1]||a[0].localeCompare(b[0],'es',{numeric:true})).slice(0,7),max=Math.max(1,...groups.map(group=>group[1]));
+ const groups=[...list.reduce((map,record)=>{const names=recordSegments(record);for(const name of names.length?names:['Sin tramo registrado'])map.set(name,(map.get(name)||0)+1);return map;},new Map())].sort((a,b)=>a[0].localeCompare(b[0],'es',{numeric:true})),max=Math.max(1,...groups.map(group=>group[1]));
  $('coverageChart').innerHTML=groups.length?groups.map(([name,count])=>`<div class="chartRow"><span>${escapeHTML(name)}</span><div class="chartTrack"><i style="width:${count/max*100}%"></i></div><b>${fmtNumber(count)}</b></div>`).join(''):'<div class="emptyDetail"><span>Sin datos para los filtros seleccionados.</span></div>';
 }
 
@@ -125,7 +126,7 @@ function showDetail(record){
  const state=STATUS[record.status],affectedArea=record.area||record.landArea||0;
  const milestones=[['Oferta',record.dates.offer],['Aceptación',record.dates.acceptance],['Promesa de compraventa',record.dates.promise],['Resolución de expropiación',record.dates.expropriation],['Entrega para demolición',record.dates.delivery],['Demolición',record.dates.demolition]];
  const process=record.matched?`<div class="milestones"><h4>Hitos del proceso</h4>${milestones.map(([label,date])=>`<div class="milestone ${date?'done':''}"><b>${label}</b><span>${fmtDate(date)}</span></div>`).join('')}</div>`:'<div class="unmanagedNotice"><b>Sin gestión de adquisición</b><span>No se encontró un LotCodigo correlacionado en la base predial suministrada.</span></div>';
- $('parcelDetail').innerHTML=`<div class="detailHead"><h3>${escapeHTML(record.id)}</h3><span class="statusPill" style="--state:${state.color}"><i></i>${state.label}</span></div><div class="joinState ${record.matched?'matched':'unmatched'}">${relationLabel(record)}</div><div class="detailGrid"><div class="detailMetric"><span>LotCodigo</span><b>${escapeHTML(record.lotCode||'Sin dato')}</b></div><div class="detailMetric"><span>CHIP</span><b>${escapeHTML(record.chip||'Sin dato')}</b></div><div class="detailMetric"><span>Estación / tramo</span><b>${escapeHTML(record.group||record.station||'Sin dato')}</b></div><div class="detailMetric"><span>Área geométrica SHP</span><b>${fmtNumber(record.shpArea)} m²</b></div><div class="detailMetric"><span>Área afectada</span><b>${record.matched?fmtNumber(affectedArea)+' m²':'Sin dato'}</b></div><div class="detailMetric"><span>Localidad</span><b>${escapeHTML(record.locality||'Sin dato')}</b></div><div class="detailMetric"><span>Barrio</span><b>${escapeHTML(record.neighborhood||'Sin dato')}</b></div><div class="detailMetric"><span>Afectación</span><b>${escapeHTML(record.affectation||'Sin dato')}</b></div></div><p class="address">${escapeHTML(record.address||'Dirección no registrada')} · ${escapeHTML(record.destination||'Destino no registrado')}</p>${process}`;
+ $('parcelDetail').innerHTML=`<div class="detailHead"><h3>${escapeHTML(record.id)}</h3><span class="statusPill" style="--state:${state.color}"><i></i>${state.label}</span></div><div class="joinState ${record.matched?'matched':'unmatched'}">${relationLabel(record)}</div><div class="detailGrid"><div class="detailMetric"><span>LotCodigo</span><b>${escapeHTML(record.lotCode||'Sin dato')}</b></div><div class="detailMetric"><span>CHIP</span><b>${escapeHTML(record.chip||'Sin dato')}</b></div><div class="detailMetric"><span>Estación / tramo</span><b>${escapeHTML(recordSegments(record).join(' · ')||'Sin dato')}</b></div><div class="detailMetric"><span>Área geométrica SHP</span><b>${fmtNumber(record.shpArea)} m²</b></div><div class="detailMetric"><span>Área afectada</span><b>${record.matched?fmtNumber(affectedArea)+' m²':'Sin dato'}</b></div><div class="detailMetric"><span>Localidad</span><b>${escapeHTML(record.locality||'Sin dato')}</b></div><div class="detailMetric"><span>Barrio</span><b>${escapeHTML(record.neighborhood||'Sin dato')}</b></div><div class="detailMetric"><span>Afectación</span><b>${escapeHTML(record.affectation||'Sin dato')}</b></div></div><p class="address">${escapeHTML(record.address||'Dirección no registrada')} · ${escapeHTML(record.destination||'Destino no registrado')}</p>${process}`;
  render();
 }
 
@@ -154,7 +155,7 @@ function init(){
  $('joinSummary').textContent=`Cruce ${PREDIAL_META.joinField}: ${fmtNumber(PREDIAL_META.matchedFeatureCount)} geometrías correlacionadas y ${fmtNumber(PREDIAL_META.unmatchedFeatureCount)} sin gestión de adquisición.`;
  $('mapBaseSummary').textContent=`Referencia territorial MapaBaseBogota: ${fmtNumber(MAP_BASE_META.territorialFeatureCount)} elementos de lotes, construcciones, manzanas, sectores, vías y curvas de nivel; L1 con trazado, viaducto y ${fmtNumber(L1_BASE.stations.featureCount)} estaciones.`;
  for(const value of [...new Set(PREDIAL_RECORDS.map(record=>record.locality).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'))){const option=document.createElement('option');option.value=value;option.textContent=value;$('locality').append(option);}
- for(const value of [...new Set(PREDIAL_RECORDS.map(record=>record.group||record.station).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es',{numeric:true}))){const option=document.createElement('option');option.value=value;option.textContent=value;$('segment').append(option);}
+ for(const value of PREDIAL_META.stationSegments||[...new Set(PREDIAL_RECORDS.flatMap(record=>recordSegments(record)))].sort((a,b)=>a.localeCompare(b,'es',{numeric:true}))){const option=document.createElement('option');option.value=value;option.textContent=value;$('segment').append(option);}
  $('mapLegend').innerHTML=Object.values(STATUS).map(state=>`<span class="legendItem"><i style="--state:${state.color}"></i>${state.short}</span>`).join('');
  setView(initialView);renderBase();renderReferenceLayers();render();
  for(const id of ['predialStatus','locality','segment'])$(id).addEventListener('change',render);$('predialSearch').addEventListener('input',render);

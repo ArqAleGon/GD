@@ -94,7 +94,7 @@ const ramalAeropuerto=asGeo([
 ]);
 
 export const networkLines=[
- {id:'L1',name:'Línea 1 · SHP',color:'#ed1234',path:l1Path,stations:l1Stations,geographic:true},
+ {id:'L1',name:'Línea 1 · SHP',color:'#ed1400',path:l1Path,stations:l1Stations,geographic:true},
  {id:'L2',name:'Línea 2 · corredor Calle 72',color:'#ffcd00',path:l2,stations:stationsAlong(l2,['E1','E2','E3','E4','E5','E6','E7','E8','E9','E10','E11']),reference:true},
  {id:'L3',name:'Línea 3 · corredor sur',color:'#b5de16',path:l3,stations:stationsAlong(l3,Array.from({length:18},(_,i)=>`E${i+1}`)),reference:true},
  {id:'L4',name:'Línea 4 · Av. Boyacá sur',color:'#9763c5',path:l4,stations:stationsAlong(l4,Array.from({length:10},(_,i)=>`E${i+20}`)),reference:true},
@@ -111,4 +111,3 @@ export const networkReference={
  stationSource:mapBase?.l1?.stations?.source||'ESTACIONES.shp',
  futureNote:'Corredores futuros de referencia ajustados a la base catastral; no sustituyen cartografía oficial de diseño.'
 };
-

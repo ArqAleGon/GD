@@ -12,15 +12,16 @@ async function loadGzipJSON(url){
   return JSON.parse(await new Response(stream).text());
 }
 
-export const P6=await loadGzipJSON('./primavera-data.json.gz?v=20260922-dashboard');
+export const P6=await loadGzipJSON('./primavera-data.json.gz?v=20260923-dashboard');
 export const P6_STATUS=STATUS;
 export const taskStatus=task=>task.actual>=99.5?'done':task.actual+.25<task.planned?'late':task.actual>0?'started':'pending';
 export const stationOptions=[...new Set(P6.tasks.flatMap(task=>task.stations||[]))].sort((a,b)=>a.localeCompare(b,'es',{numeric:true}));
 export const workFrontOptions=[...new Set(P6.tasks.map(task=>task.workFront).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es',{numeric:true}));
 export const ueOptions=[...new Set(P6.tasks.map(task=>task.ue).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es',{numeric:true}));
 
-export function filterP6({ue='',station='',workFront=''}){
-  return P6.tasks.filter(task=>(!ue||task.ue===ue)&&(!station||(task.stations||[]).includes(station))&&(!workFront||task.workFront===workFront));
+export function filterP6({ues=[],ue='',station='',workFront=''}){
+  const selectedUEs=Array.isArray(ues)&&ues.length?ues:ue?[ue]:[];
+  return P6.tasks.filter(task=>(!selectedUEs.length||selectedUEs.includes(task.ue))&&(!station||(task.stations||[]).includes(station))&&(!workFront||task.workFront===workFront));
 }
 
 export function summarizeP6(tasks){

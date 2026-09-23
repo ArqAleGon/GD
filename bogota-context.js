@@ -137,6 +137,15 @@ export function buildBogotaContext(root,addLabel,onInspect){
  const cadastral=mapPlane(worldWidth,worldHeight,new THREE.MeshBasicMaterial({map:texture,transparent:true,opacity:.78,depthWrite:false,toneMapped:false,side:THREE.DoubleSide}),-.5);
  cadastral.name='Base catastral · lotes, construcciones, manzanas, vías y curvas';group.add(cadastral);
 
+ const aerial=new THREE.Group();aerial.name='Ortoimagen urbana Bogotá 2025 · IDECA';
+ for(let row=0;row<2;row++)for(let col=0;col<3;col++){
+  const aerialTexture=new THREE.TextureLoader().load(`./assets/bogota-ortho-2025-${row}-${col}.webp?v=20260923-ideca`);
+  aerialTexture.colorSpace=THREE.SRGBColorSpace;aerialTexture.anisotropy=8;
+  const tile=mapPlane(worldWidth/3,worldHeight/2,new THREE.MeshBasicMaterial({map:aerialTexture,transparent:true,opacity:.9,depthWrite:false,toneMapped:false,side:THREE.DoubleSide}),-.475);
+  tile.position.x=(col-1)*worldWidth/3;tile.position.z=(row-.5)*worldHeight/2;tile.renderOrder=1;aerial.add(tile);
+ }
+ group.add(aerial);group.userData.aerial={mesh:aerial,source:'IDECA · Ortoimagen urbana Bogotá 2025 · CC BY 4.0'};
+
  const borderPoints=[[0,0],[MAP_WIDTH,0],[MAP_WIDTH,MAP_HEIGHT],[0,MAP_HEIGHT],[0,0]].map(point=>new THREE.Vector3(...cityPoint(point,-.38)));
  group.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(borderPoints),new THREE.LineBasicMaterial({color:'#5b8190',transparent:true,opacity:.75})));
 

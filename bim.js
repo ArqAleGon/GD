@@ -4,7 +4,7 @@ import {GLTFLoader} from './GLTFLoader.js';
 import {MeshoptDecoder} from './meshopt_decoder.module.js';
 import {STATES,DEMO,metrics,matches,normalizeUE,ueOptions,recordUEs} from './bim-state.js?v=20260916-elements';
 async function loadGzipJSON(url){const response=await fetch(url);if(!response.ok)throw new Error(`No se pudo cargar ${url}`);const stream=response.body.pipeThrough(new DecompressionStream('gzip'));return JSON.parse(await new Response(stream).text());}
-const primaveraPayload=await loadGzipJSON('./primavera-data.json.gz?v=20260921');
+const primaveraPayload=await loadGzipJSON('./primavera-data.json.gz?v=20260923');
 const PRIMAVERA_META=primaveraPayload.meta,PRIMAVERA_TASKS=primaveraPayload.tasks;
 const $=id=>document.getElementById(id);
 const canvas=$('model'),host=canvas.parentElement;
