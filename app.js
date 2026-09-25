@@ -230,7 +230,7 @@ async function loadIfcSection(section,focus=true){
  const activeScene=urbanScene;toast(state.lang==='en'?`Loading ${section}…`:`Cargando ${section}…`);
  try{
   const box=await activeScene.ensureIfcSection(section);if(urbanScene!==activeScene||!isUrban())return null;
-  if(focus){const c=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3());const distance=Math.max(size.z,size.x/Math.max(camera.aspect,.3),size.y*2)*1.5;go([c.x+distance*.24,c.y+distance*.52,c.z+distance*.72],[c.x,c.y+size.y*.12,c.z]);}
+  if(focus){const c=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3());const focusPadding=section==='PT111'?2.6:1.5;const distance=Math.max(size.z,size.x/Math.max(camera.aspect,.3),size.y*2)*focusPadding;go([c.x+distance*.24,c.y+distance*.52,c.z+distance*.72],[c.x,c.y+size.y*.12,c.z]);}
   toast(state.lang==='en'?`${section} loaded on demand`:`${section} cargado bajo demanda`);return box;
  }catch(error){toast(error?.code==='no-geometry'?(state.lang==='en'?'Source IFC contains no geometry':'El IFC fuente no contiene geometría'):(state.lang==='en'?'Model unavailable':'Modelo no disponible'));return null;}
 }
