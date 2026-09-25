@@ -3,7 +3,7 @@ import {GLTFLoader} from './GLTFLoader.js';
 import {MeshoptDecoder} from './meshopt_decoder.module.js';
 
 const scale = 0.06;
-const assetRevision = '20260925-patio-transform';
+const assetRevision = '20260925-patio-lazy-112b';
 const point = (p, height = 0) => new THREE.Vector3(p[0] * scale, height, -p[1] * scale);
 
 export async function loadUrbanMap() {
@@ -16,13 +16,12 @@ export async function loadUrbanMap() {
     read('map.json'), read('buildings.bin', true), read('roads.bin', true), read('volumes.json'), read('volumes.bin', true), read('volume-footprints.bin', true), read('parcels.bin', true),
     fetch('./ifc-placement-20260915-i16-e16.json?v='+assetRevision).then(r=>{if(!r.ok)throw new Error('IFC placement unavailable');return r.json()})
   ]);
-  const loader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
-  const modelDefs=placement.models||[
+  const ifcLoader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
+  const ifcModelDefs=placement.models||[
     {file:'e15-architecture-web.glb',section:'E15',label:'IFC · E15 · ARQ + EST'},
     {file:'e15-1100.glb',section:'E15',label:'IFC · E15 · ARQ + EST'}
   ];
-  const ifcModels=await Promise.all(modelDefs.map(async definition=>({definition,scene:(await loader.loadAsync('./'+definition.file+'?v='+assetRevision)).scene})));
-  return {ifcModels, placement, data, volumesData, volumes: new Float32Array(volumes), volumeFootprints: new Float32Array(volumeFootprints), parcels: new Float32Array(parcels), buildings: new Float32Array(buildings), roads: new Float32Array(roads)};
+  return {ifcLoader, ifcModelDefs, placement, data, volumesData, volumes: new Float32Array(volumes), volumeFootprints: new Float32Array(volumeFootprints), parcels: new Float32Array(parcels), buildings: new Float32Array(buildings), roads: new Float32Array(roads)};
 }
 
 function segments(group, coords, color, height) {
@@ -104,29 +103,43 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
     const label = addLabel(point(road.center, .4).toArray(), () => road.name, null, 'roadLabel');
     label.geographic = true;
   }
-  // The IFCs share the project coordinate system. Section groups preserve the
-  // alignment inside E15, I16 and E16 without altering any source asset.
+  // IFC-derived GLBs are loaded only when the user asks for a section. This
+  // keeps the territorial scene light while preserving the validated ordinary
+  // transforms and the shared project coordinates of every source model.
   const placement=assets.placement;
-  const ifcGroup=new THREE.Group();ifcGroup.name='IFC E15–I16–E16 · Patio Taller 102–106';root.add(ifcGroup);
-  const sections=new Map();
-  for(const asset of assets.ifcModels){
-    const definition=asset.definition;
+  const ifcGroup=new THREE.Group();ifcGroup.name='IFC E15–I16–E16 · Patio Taller 102–112';root.add(ifcGroup);
+  const sections=new Map(),ifcSections={};
+  for(const definition of assets.ifcModelDefs){
     if(!sections.has(definition.section)){
-      const section=new THREE.Group();section.name='IFC '+definition.section;section.scale.setScalar(scale);section.position.y=placement.streetHeightInScene??.24;ifcGroup.add(section);sections.set(definition.section,{group:section,label:definition.label||('IFC · '+definition.section)});
+      const section=new THREE.Group();section.name='IFC '+definition.section;section.scale.setScalar(scale);section.position.y=placement.streetHeightInScene??.24;ifcGroup.add(section);sections.set(definition.section,{group:section,label:definition.label||('IFC · '+definition.section),definitions:[],bounds:null,promise:null,labelObject:null});
     }
-    const model=asset.scene.clone(true);
-    model.traverse(o=>{if(o.isMesh){o.geometry=o.geometry.clone();o.material=Array.isArray(o.material)?o.material.map(m=>m.clone()):o.material.clone();}});
-    model.position.set(-placement.gisOrigin[0],-(definition.streetDatum??placement.streetDatum),placement.gisOrigin[1]);
-    sections.get(definition.section).group.add(model);
+    sections.get(definition.section).definitions.push(definition);
   }
-  ifcGroup.updateMatrixWorld(true);
-  const ifcBounds=new THREE.Box3().setFromObject(ifcGroup,true);
-  const ifcSections={};
-  for(const [sectionName,entry] of sections){
-    const sectionBounds=new THREE.Box3().setFromObject(entry.group,true);ifcSections[sectionName]=sectionBounds;
-    const sectionCenter=sectionBounds.getCenter(new THREE.Vector3());
-    const ifcLabel=addLabel([sectionCenter.x,sectionBounds.max.y+.6,sectionCenter.z],()=>entry.label,null,'pilotLabel');ifcLabel.geographic=true;
-  }
+  const ifcBounds=new THREE.Box3();
+  const ensureIfcSection=async sectionName=>{
+    const entry=sections.get(sectionName);
+    if(!entry){const error=new Error('Modelo no disponible');error.code='unavailable';throw error;}
+    if(entry.bounds)return entry.bounds;
+    if(entry.promise)return entry.promise;
+    const available=entry.definitions.filter(definition=>definition.file&&definition.status!=='no-geometry');
+    if(!available.length){const error=new Error('El IFC fuente no contiene geometría');error.code='no-geometry';throw error;}
+    entry.promise=(async()=>{
+      const loaded=await Promise.all(available.map(async definition=>({definition,scene:(await assets.ifcLoader.loadAsync('./'+definition.file+'?v='+assetRevision)).scene})));
+      for(const asset of loaded){
+        const model=asset.scene;
+        model.position.set(-placement.gisOrigin[0],-(asset.definition.streetDatum??placement.streetDatum),placement.gisOrigin[1]);
+        entry.group.add(model);
+      }
+      entry.group.updateMatrixWorld(true);
+      const sectionBounds=new THREE.Box3().setFromObject(entry.group,true);
+      if(sectionBounds.isEmpty()){const error=new Error('El modelo convertido no contiene geometría visible');error.code='no-geometry';throw error;}
+      entry.bounds=sectionBounds;ifcSections[sectionName]=sectionBounds;ifcBounds.union(sectionBounds);
+      const sectionCenter=sectionBounds.getCenter(new THREE.Vector3());
+      entry.labelObject=addLabel([sectionCenter.x,sectionBounds.max.y+.6,sectionCenter.z],()=>entry.label,null,'pilotLabel');entry.labelObject.geographic=true;
+      return sectionBounds;
+    })().catch(error=>{entry.promise=null;throw error;});
+    return entry.promise;
+  };
   const bounds = geometry => {
     const box = new THREE.Box3();
     const visit = c => typeof c[0] === 'number' ? box.expandByPoint(point(c)) : c.forEach(visit);
@@ -136,5 +149,5 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
   const all = bounds(data.pilot);
   data.zones.forEach(z => all.union(bounds(z.geometry)));
   all.union(bounds(assets.volumesData.corridor));
-  return {seismic, volumes, ifcBounds, ifcSections, pilotBounds: bounds(data.pilot).union(bounds(assets.volumesData.corridor)), fullBounds: all};
+  return {seismic, volumes, ifcBounds, ifcSections, ensureIfcSection, sectionDefinitions:sections, pilotBounds: bounds(data.pilot).union(bounds(assets.volumesData.corridor)), fullBounds: all};
 }
