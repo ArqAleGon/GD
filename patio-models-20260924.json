@@ -57,9 +57,9 @@
       "productCount": 17754,
       "elementCount": 17724,
       "converted": 17686,
-      "bytes": 1248860,
+      "bytes": 16632880,
       "loadedAt": "24/09/2026",
-      "conversionSeconds": 194.0,
+      "conversionSeconds": 425.9,
       "streetDatum": 2541.5
     },
     {
@@ -72,9 +72,9 @@
       "productCount": 2951,
       "elementCount": 2924,
       "converted": 2918,
-      "bytes": 529832,
+      "bytes": 1172080,
       "loadedAt": "24/09/2026",
-      "conversionSeconds": 33.8,
+      "conversionSeconds": 36.2,
       "streetDatum": 2541.5
     },
     {
@@ -87,9 +87,9 @@
       "productCount": 357,
       "elementCount": 353,
       "converted": 351,
-      "bytes": 798756,
+      "bytes": 1172100,
       "loadedAt": "24/09/2026",
-      "conversionSeconds": 254.9,
+      "conversionSeconds": 334.2,
       "streetDatum": 2541.5
     },
     {
@@ -102,9 +102,9 @@
       "productCount": 67,
       "elementCount": 63,
       "converted": 62,
-      "bytes": 16172,
+      "bytes": 16928,
       "loadedAt": "24/09/2026",
-      "conversionSeconds": 0.6,
+      "conversionSeconds": 0.9,
       "streetDatum": 2541.5
     }
   ]

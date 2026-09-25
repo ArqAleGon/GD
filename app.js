@@ -3,7 +3,7 @@ import {RENDER_E15_CAMERA,renderE15Fov} from './render-e15-camera.js';
 import {buildBogotaContext,cityPoint,METRES_TO_WORLD} from './bogota-context.js?v=20260923-aerial';
 import {roadLabels} from './road-labels.js?v=20260922-roads';
 import { localizeInterface } from './interface-language.js';
-import { loadUrbanMap, buildUrbanMap } from './urban-map-20260915-i16-e16.js?v=20260924-patio';
+import { loadUrbanMap, buildUrbanMap } from './urban-map-20260915-i16-e16.js?v=20260925-patio-transform';
 import { networkLines } from './network-data.js?v=20260923-l1';
 import {P6,P6_STATUS,stationOptions as p6Stations,workFrontOptions as p6WorkFronts,ueOptions as p6UEs,filterP6,summarizeP6,groupP6} from './p6-dashboard.js?v=20260923-multiue';
 import * as THREE from 'three';
