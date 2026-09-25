@@ -19,7 +19,6 @@
       "status": "ready"
     },
     {
-      "file": "assets/models/pt-103-caseta-control-0001-v00.glb",
       "source": "L1T1-1542-103-CON-ED-ARQ-MO-0001_V00.ifc",
       "section": "PT103",
       "label": "IFC · 103 · Caseta de Control",
@@ -27,15 +26,30 @@
       "version": "V00",
       "productCount": 428,
       "elementCount": 424,
-      "converted": 416,
-      "bytes": 138772,
+      "converted": 377,
+      "bytes": 299568,
       "loadedAt": "24/09/2026",
-      "conversionSeconds": 8.1,
+      "conversionSeconds": 5.4,
       "streetDatum": 2541.5,
-      "status": "ready"
+      "status": "ready-hq",
+      "files": [
+        {
+          "file": "assets/models/pt-103-caseta-control-hq-p01-v00.glb",
+          "bytes": 175432,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-103-caseta-control-hq-p01-v00-p02.glb",
+          "bytes": 124136,
+          "elements": 27
+        }
+      ],
+      "omittedFurnishingElements": 8,
+      "omittedOpeningElements": 31,
+      "unrenderableElements": 8,
+      "styleMap": "pt-hq-element-types.json"
     },
     {
-      "file": "assets/models/pt-103-caseta-control-0002-v00.glb",
       "source": "L1T1-1542-103-CON-ED-ARQ-MO-0002_V00.ifc",
       "section": "PT103",
       "label": "IFC · 103 · Caseta de Control",
@@ -43,12 +57,23 @@
       "version": "V00",
       "productCount": 71,
       "elementCount": 67,
-      "converted": 66,
-      "bytes": 57308,
+      "converted": 46,
+      "bytes": 111556,
       "loadedAt": "24/09/2026",
-      "conversionSeconds": 4.7,
+      "conversionSeconds": 3.2,
       "streetDatum": 2541.5,
-      "status": "ready"
+      "status": "ready-hq",
+      "files": [
+        {
+          "file": "assets/models/pt-103-caseta-control-hq-p02-v00.glb",
+          "bytes": 111556,
+          "elements": 46
+        }
+      ],
+      "omittedFurnishingElements": 4,
+      "omittedOpeningElements": 16,
+      "unrenderableElements": 1,
+      "styleMap": "pt-hq-element-types.json"
     },
     {
       "file": "assets/models/pt-104-cocheras-v00.glb",
@@ -67,7 +92,6 @@
       "status": "ready"
     },
     {
-      "file": "assets/models/pt-105-locales-tecnicos-v00.glb",
       "source": "L1T1-1542-105-CON-ED-ARQ-MO-0001_V00.ifc",
       "section": "PT105",
       "label": "IFC · 105 · Locales Técnicos",
@@ -75,12 +99,58 @@
       "version": "V00",
       "productCount": 2951,
       "elementCount": 2924,
-      "converted": 2918,
-      "bytes": 1172080,
+      "converted": 2479,
+      "bytes": 1845108,
       "loadedAt": "24/09/2026",
-      "conversionSeconds": 36.2,
+      "conversionSeconds": 26.6,
       "streetDatum": 2541.5,
-      "status": "ready"
+      "status": "ready-hq",
+      "files": [
+        {
+          "file": "assets/models/pt-105-locales-tecnicos-hq.glb",
+          "bytes": 698228,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-105-locales-tecnicos-hq-p02.glb",
+          "bytes": 108092,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-105-locales-tecnicos-hq-p03.glb",
+          "bytes": 251012,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-105-locales-tecnicos-hq-p04.glb",
+          "bytes": 131720,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-105-locales-tecnicos-hq-p05.glb",
+          "bytes": 127444,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-105-locales-tecnicos-hq-p06.glb",
+          "bytes": 246764,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-105-locales-tecnicos-hq-p07.glb",
+          "bytes": 264664,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-105-locales-tecnicos-hq-p08.glb",
+          "bytes": 17184,
+          "elements": 29
+        }
+      ],
+      "omittedFurnishingElements": 106,
+      "omittedOpeningElements": 333,
+      "unrenderableElements": 6,
+      "styleMap": "pt-hq-element-types.json"
     },
     {
       "file": "assets/models/pt-106-maquina-lavado-0001-v00.glb",
@@ -131,23 +201,117 @@
       "status": "ready"
     },
     {
-      "file": "assets/models/pt-108-mantenimiento-mayor-v00.glb",
       "source": "L1T1-1542-108-CON-ED-ARQ-MO-0001_V00.ifc",
       "section": "PT108",
       "label": "IFC · 108 · Mantenimiento Mayor",
       "discipline": "ARQ",
       "version": "V00",
-      "converted": 23411,
-      "bytes": 15787876,
+      "converted": 6069,
+      "bytes": 4268616,
       "loadedAt": "25/09/2026",
       "streetDatum": 2541.5,
-      "status": "ready",
+      "status": "ready-hq",
       "productCount": 23482,
       "elementCount": 23470,
-      "conversionSeconds": 468.0
+      "conversionSeconds": 86.3,
+      "files": [
+        {
+          "file": "assets/models/pt-108-mantenimiento-mayor-hq.glb",
+          "bytes": 150856,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-108-mantenimiento-mayor-hq-p02.glb",
+          "bytes": 58896,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-108-mantenimiento-mayor-hq-p03.glb",
+          "bytes": 276780,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-108-mantenimiento-mayor-hq-p04.glb",
+          "bytes": 218164,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-108-mantenimiento-mayor-hq-p05.glb",
+          "bytes": 163736,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-108-mantenimiento-mayor-hq-p06.glb",
+          "bytes": 181384,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-108-mantenimiento-mayor-hq-p07.glb",
+          "bytes": 116448,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-108-mantenimiento-mayor-hq-p08.glb",
+          "bytes": 91304,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-108-mantenimiento-mayor-hq-p09.glb",
+          "bytes": 56936,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-108-mantenimiento-mayor-hq-p10.glb",
+          "bytes": 329964,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-108-mantenimiento-mayor-hq-p11.glb",
+          "bytes": 377420,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-108-mantenimiento-mayor-hq-p12.glb",
+          "bytes": 691200,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-108-mantenimiento-mayor-hq-p13.glb",
+          "bytes": 226908,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-108-mantenimiento-mayor-hq-p14.glb",
+          "bytes": 90092,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-108-mantenimiento-mayor-hq-p15.glb",
+          "bytes": 110072,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-108-mantenimiento-mayor-hq-p16.glb",
+          "bytes": 57908,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-108-mantenimiento-mayor-hq-p17.glb",
+          "bytes": 190408,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-108-mantenimiento-mayor-hq-p18.glb",
+          "bytes": 880140,
+          "elements": 119
+        }
+      ],
+      "omittedFurnishingElements": 17000,
+      "omittedOpeningElements": 343,
+      "unrenderableElements": 58,
+      "styleMap": "pt-hq-element-types.json"
     },
     {
-      "file": "assets/models/pt-109-tanque-0001-v00.glb",
       "source": "L1T1-1542-109-CON-ED-ARQ-MO-0001_V00.ifc",
       "section": "PT109",
       "label": "IFC · 109 · Tanque",
@@ -157,13 +321,38 @@
       "elementCount": 1338,
       "loadedAt": "25/09/2026",
       "streetDatum": 2541.5,
-      "converted": 1323,
-      "bytes": 194808,
-      "conversionSeconds": 16.7,
-      "status": "ready"
+      "converted": 1275,
+      "bytes": 869580,
+      "conversionSeconds": 16.8,
+      "status": "ready-hq",
+      "files": [
+        {
+          "file": "assets/models/pt-109-tanque-hq-p01-v00.glb",
+          "bytes": 243216,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-109-tanque-hq-p01-v00-p02.glb",
+          "bytes": 62036,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-109-tanque-hq-p01-v00-p03.glb",
+          "bytes": 100564,
+          "elements": 350
+        },
+        {
+          "file": "assets/models/pt-109-tanque-hq-p01-v00-p04.glb",
+          "bytes": 463764,
+          "elements": 225
+        }
+      ],
+      "omittedFurnishingElements": 5,
+      "omittedOpeningElements": 43,
+      "unrenderableElements": 15,
+      "styleMap": "pt-hq-element-types.json"
     },
     {
-      "file": "assets/models/pt-109-tanque-0002-v00.glb",
       "source": "L1T1-1542-109-CON-ED-ARQ-MO-0002_V00.ifc",
       "section": "PT109",
       "label": "IFC · 109 · Tanque",
@@ -173,10 +362,21 @@
       "elementCount": 355,
       "loadedAt": "25/09/2026",
       "streetDatum": 2541.5,
-      "converted": 350,
-      "bytes": 80404,
+      "converted": 335,
+      "bytes": 350444,
       "conversionSeconds": 7.7,
-      "status": "ready"
+      "status": "ready-hq",
+      "files": [
+        {
+          "file": "assets/models/pt-109-tanque-hq-p02-v00.glb",
+          "bytes": 350444,
+          "elements": 335
+        }
+      ],
+      "omittedFurnishingElements": 0,
+      "omittedOpeningElements": 15,
+      "unrenderableElements": 5,
+      "styleMap": "pt-hq-element-types.json"
     },
     {
       "file": null,
@@ -238,7 +438,6 @@
       "omittedOpeningElements": 79
     },
     {
-      "file": "assets/models/pt-112-torno-foso-v00.glb",
       "source": "L1T1-1542-112-CON-ED-ARQ-MO-0001_V00.ifc",
       "section": "PT112",
       "label": "IFC · 112 · Torno en Foso",
@@ -248,10 +447,21 @@
       "elementCount": 2462,
       "loadedAt": "25/09/2026",
       "streetDatum": 2541.5,
-      "converted": 2456,
-      "bytes": 18124100,
-      "conversionSeconds": 189.3,
-      "status": "ready"
+      "converted": 283,
+      "bytes": 490596,
+      "conversionSeconds": 10.4,
+      "status": "ready-hq",
+      "files": [
+        {
+          "file": "assets/models/pt-112-torno-foso-hq.glb",
+          "bytes": 490596,
+          "elements": 283
+        }
+      ],
+      "omittedFurnishingElements": 2108,
+      "omittedOpeningElements": 65,
+      "unrenderableElements": 6,
+      "styleMap": "pt-hq-element-types.json"
     }
   ]
 }

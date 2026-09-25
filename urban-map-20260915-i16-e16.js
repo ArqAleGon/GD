@@ -3,7 +3,7 @@ import {GLTFLoader} from './GLTFLoader.js';
 import {MeshoptDecoder} from './meshopt_decoder.module.js';
 
 const scale = 0.06;
-const assetRevision = '20260925-patio-complete-112h';
+const assetRevision = '20260925-patio-hq-facade-113a';
 const point = (p, height = 0) => new THREE.Vector3(p[0] * scale, height, -p[1] * scale);
 
 export async function loadUrbanMap() {
@@ -12,17 +12,17 @@ export async function loadUrbanMap() {
     if (!response.ok) throw new Error('No se pudo cargar la cartografía: ' + name);
     return binary ? response.arrayBuffer() : response.json();
   };
-  const [data, buildings, roads, volumesData, volumes, volumeFootprints, parcels, placement, pt111Types] = await Promise.all([
+  const [data, buildings, roads, volumesData, volumes, volumeFootprints, parcels, placement, ptHqTypes] = await Promise.all([
     read('map.json'), read('buildings.bin', true), read('roads.bin', true), read('volumes.json'), read('volumes.bin', true), read('volume-footprints.bin', true), read('parcels.bin', true),
     fetch('./ifc-placement-20260915-i16-e16.json?v='+assetRevision).then(r=>{if(!r.ok)throw new Error('IFC placement unavailable');return r.json()}),
-    fetch('./pt111-element-types.json?v='+assetRevision).then(r=>{if(!r.ok)throw new Error('PT111 type map unavailable');return r.json()})
+    fetch('./pt-hq-element-types.json?v='+assetRevision).then(r=>{if(!r.ok)throw new Error('Patio high-fidelity type map unavailable');return r.json()})
   ]);
   const ifcLoader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
   const ifcModelDefs=placement.models||[
     {file:'e15-architecture-web.glb',section:'E15',label:'IFC · E15 · ARQ + EST'},
     {file:'e15-1100.glb',section:'E15',label:'IFC · E15 · ARQ + EST'}
   ];
-  return {ifcLoader, ifcModelDefs, placement, pt111Types, data, volumesData, volumes: new Float32Array(volumes), volumeFootprints: new Float32Array(volumeFootprints), parcels: new Float32Array(parcels), buildings: new Float32Array(buildings), roads: new Float32Array(roads)};
+  return {ifcLoader, ifcModelDefs, placement, ptHqTypes, data, volumesData, volumes: new Float32Array(volumes), volumeFootprints: new Float32Array(volumeFootprints), parcels: new Float32Array(parcels), buildings: new Float32Array(buildings), roads: new Float32Array(roads)};
 }
 
 function segments(group, coords, color, height) {
@@ -116,7 +116,8 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
     }
     sections.get(definition.section).definitions.push(definition);
   }
-  const pt111MaterialSpecs={
+  const ptHqSections=new Set(['PT103','PT105','PT108','PT109','PT111','PT112']);
+  const ptHqMaterialSpecs={
     IfcMember:['#445767',.72,.24,1],IfcBeam:['#687b89',.68,.18,1],IfcPlate:['#aeb9bf',.74,.08,1],
     IfcWallStandardCase:['#dce4e5',.82,.04,1],IfcWall:['#d5dfe1',.82,.04,1],IfcSlab:['#c7d1d3',.86,.03,1],
     IfcRoof:['#c1ccd0',.72,.08,1],IfcWindow:['#76abc0',.28,.16,.38],IfcCurtainWall:['#5f93a6',.32,.15,.44],
@@ -124,19 +125,19 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
     IfcStair:['#9ba9af',.76,.08,1],IfcCovering:['#bbc6c8',.82,.03,1],IfcBuildingElementProxy:['#87969b',.76,.08,1],
     IfcFlowTerminal:['#697b83',.64,.18,1]
   };
-  const pt111Materials=new Map();
+  const ptHqMaterials=new Map();
   const materialForType=type=>{
-    if(!pt111MaterialSpecs[type])return null;
-    if(!pt111Materials.has(type)){
-      const [color,roughness,metalness,opacity]=pt111MaterialSpecs[type];
-      pt111Materials.set(type,new THREE.MeshBasicMaterial({color,opacity,transparent:opacity<1,depthWrite:opacity>=1,side:THREE.DoubleSide,toneMapped:false}));
+    if(!ptHqMaterialSpecs[type])return null;
+    if(!ptHqMaterials.has(type)){
+      const [color,roughness,metalness,opacity]=ptHqMaterialSpecs[type];
+      ptHqMaterials.set(type,new THREE.MeshBasicMaterial({color,opacity,transparent:opacity<1,depthWrite:opacity>=1,side:THREE.DoubleSide,toneMapped:false}));
     }
-    return pt111Materials.get(type);
+    return ptHqMaterials.get(type);
   };
-  const stylePt111=model=>model.traverse(object=>{
+  const stylePtHq=model=>model.traverse(object=>{
     if(!object.isMesh)return;
     let node=object,type=null;
-    while(node&&node!==model){if(node.name&&assets.pt111Types[node.name]){type=assets.pt111Types[node.name];break;}node=node.parent;}
+    while(node&&node!==model){if(node.name&&assets.ptHqTypes[node.name]){type=assets.ptHqTypes[node.name];break;}node=node.parent;}
     if(type==='IfcOpeningElement'){object.visible=false;return;}
     const material=materialForType(type)||materialForType('IfcBuildingElementProxy');object.material=material;if(material.transparent)object.renderOrder=4;
   });
@@ -152,7 +153,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
       const loaded=await Promise.all(available.map(async definition=>({definition,scene:(await assets.ifcLoader.loadAsync('./'+definition.file+'?v='+assetRevision)).scene})));
       for(const asset of loaded){
         const model=asset.scene;
-        if(sectionName==='PT111')stylePt111(model);
+        if(ptHqSections.has(sectionName))stylePtHq(model);
         model.position.set(-placement.gisOrigin[0],-(asset.definition.streetDatum??placement.streetDatum),placement.gisOrigin[1]);
         entry.group.add(model);
       }
