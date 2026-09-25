@@ -79,11 +79,86 @@
       "converted": 4832,
       "missing": 0,
       "label": "IFC · E16 · ARQ + EST"
+    },
+    {
+      "file": "assets/models/pt-102-admin-v00.glb",
+      "source": "L1T1-1542-102-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "PT102",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 12523,
+      "label": "IFC · 102 · Administración",
+      "streetDatum": 2541.5
+    },
+    {
+      "file": "assets/models/pt-103-caseta-control-0001-v00.glb",
+      "source": "L1T1-1542-103-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "PT103",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 416,
+      "label": "IFC · 103 · Caseta de Control",
+      "streetDatum": 2541.5
+    },
+    {
+      "file": "assets/models/pt-103-caseta-control-0002-v00.glb",
+      "source": "L1T1-1542-103-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "PT103",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 66,
+      "label": "IFC · 103 · Caseta de Control",
+      "streetDatum": 2541.5
+    },
+    {
+      "file": "assets/models/pt-104-cocheras-v00.glb",
+      "source": "L1T1-1542-104-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "PT104",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 17686,
+      "label": "IFC · 104 · Cocheras",
+      "streetDatum": 2541.5
+    },
+    {
+      "file": "assets/models/pt-105-locales-tecnicos-v00.glb",
+      "source": "L1T1-1542-105-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "PT105",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 2918,
+      "label": "IFC · 105 · Locales Técnicos",
+      "streetDatum": 2541.5
+    },
+    {
+      "file": "assets/models/pt-106-maquina-lavado-0001-v00.glb",
+      "source": "L1T1-1542-106-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "PT106",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 351,
+      "label": "IFC · 106 · Máquina de Lavado",
+      "streetDatum": 2541.5
+    },
+    {
+      "file": "assets/models/pt-106-maquina-lavado-0002-v00.glb",
+      "source": "L1T1-1542-106-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "PT106",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 62,
+      "label": "IFC · 106 · Máquina de Lavado",
+      "streetDatum": 2541.5
     }
   ],
   "placement": "Shared IFC coordinates aligned to the EPSG:6247 GIS origin; common street datum inferred from E15 and pending survey validation",
-  "gisOrigin": [101509.32564429587, 106566.17298935403],
+  "gisOrigin": [
+    101509.32564429587,
+    106566.17298935403
+  ],
   "streetDatum": 2561.1997,
   "streetHeightInScene": 0.24,
-  "scale": 0.06
+  "scale": 0.06,
+  "patioStreetDatum": 2541.5,
+  "patioDescription": "Modelos 102–106 del Patio Taller en coordenadas compartidas de proyecto; datum visual común derivado de la base geométrica."
 }

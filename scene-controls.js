@@ -44,6 +44,14 @@ const aerial=sourceFile('bogota-ortho-2025-[mosaicos].webp','Fuente: IDECA/UAECD
 const e15Ifc=sourceFile('e15-architecture-web.glb / e15-1100.glb','Conversión web de modelos IFC E15 · ARQ + EST','16/09/2026');
 const i16Ifc=sourceFile('i16-est-1100-web.glb / i16-est-1150-web.glb','Conversión web de modelos IFC I16 · EST','16/09/2026');
 const e16Ifc=sourceFile('e16-arq-0000-web.glb / e16-est-*.glb','Conversión web de modelos IFC E16 · ARQ + EST','16/09/2026');
+const patio102=sourceFile('L1T1-1542-102-CON-ED-ARQ-MO-0001_V00.ifc','Patio Taller · 102 Administración · ARQ V00','24/09/2026');
+const patio103a=sourceFile('L1T1-1542-103-CON-ED-ARQ-MO-0001_V00.ifc','Patio Taller · 103 Caseta de Control · ARQ V00','24/09/2026');
+const patio103b=sourceFile('L1T1-1542-103-CON-ED-ARQ-MO-0002_V00.ifc','Patio Taller · 103 Caseta de Control · ARQ V00','24/09/2026');
+const patio104=sourceFile('L1T1-1542-104-CON-ED-ARQ-MO-0001_V00.ifc','Patio Taller · 104 Cocheras · ARQ V00','24/09/2026');
+const patio105=sourceFile('L1T1-1542-105-CON-ED-ARQ-MO-0001_V00.ifc','Patio Taller · 105 Locales Técnicos · ARQ V00','24/09/2026');
+const patio106a=sourceFile('L1T1-1542-106-CON-ED-ARQ-MO-0001_V00.ifc','Patio Taller · 106 Máquina de Lavado · ARQ V00','24/09/2026');
+const patio106b=sourceFile('L1T1-1542-106-CON-ED-ARQ-MO-0002_V00.ifc','Patio Taller · 106 Máquina de Lavado · ARQ V00','24/09/2026');
+const patioIfc=[patio102,patio103a,patio103b,patio104,patio105,patio106a,patio106b];
 const renderE15=sourceFile('render-e15-20260917.png','Render hiperrealista suministrado para E15','17/09/2026');
 const progressE15=sourceFile('e15-obra-20260831.png','Estado real de la obra al 31/08/2026','17/09/2026');
 const documentSources=[
@@ -61,7 +69,7 @@ const sourceProfiles={
 };
 const viewTitles={network:'Inicio · Red ferroviaria',events:'Inicio · Operación',traffic:'Inicio · Flujo de pasajeros',dispatch:'Inicio · Trenes en circulación',station:'Estación 3D',indoor:'Recorrido interior',security:'Cámaras y seguridad',evacuation:'Emergencias',platform:'Andén y puertas',equipment:'Sala técnica',railway:'Seguimiento del tren',maintenance:'Sistemas ferroviarios',urban:'Datos Integrados'};
 function inicioProfile(view){
- if(view==='urban')return{title:viewTitles[view],note:'Integración geográfica e IFC. Las vistas comparativas emplean el render y el registro de obra suministrados.',items:[e15Ifc,i16Ifc,e16Ifc,mapBase,renderE15,progressE15]};
+ if(view==='urban')return{title:viewTitles[view],note:'Integración geográfica e IFC de E15–E16 y del Patio Taller 102–106. Las vistas comparativas emplean el render y el registro de obra suministrados.',items:[e15Ifc,i16Ifc,e16Ifc,...patioIfc,mapBase,renderE15,progressE15]};
  if(['station','indoor','security','evacuation','platform','equipment'].includes(view))return{title:viewTitles[view],note:'La geometría procede de los modelos IFC; equipos, personas, alarmas y cámaras representan funciones de demostración.',items:[e15Ifc,i16Ifc,e16Ifc,p6]};
  if(['railway','maintenance'].includes(view))return{title:viewTitles[view],note:'La geometría ferroviaria se apoya en el contexto L1; movimiento, operación y mantenimiento son simulados.',items:[p6,mapBase,buildings]};
  return{title:viewTitles[view]||viewTitles.network,note:'Fuentes activas de la escena territorial y de los indicadores Primavera P6.',items:[p6,mapBase,buildings,hills,roads,aerial]};

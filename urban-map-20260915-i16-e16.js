@@ -3,7 +3,7 @@ import {GLTFLoader} from './GLTFLoader.js';
 import {MeshoptDecoder} from './meshopt_decoder.module.js';
 
 const scale = 0.06;
-const assetRevision = '20260915-i16-e16';
+const assetRevision = '20260924-patio';
 const point = (p, height = 0) => new THREE.Vector3(p[0] * scale, height, -p[1] * scale);
 
 export async function loadUrbanMap() {
@@ -14,7 +14,7 @@ export async function loadUrbanMap() {
   };
   const [data, buildings, roads, volumesData, volumes, volumeFootprints, parcels, placement] = await Promise.all([
     read('map.json'), read('buildings.bin', true), read('roads.bin', true), read('volumes.json'), read('volumes.bin', true), read('volume-footprints.bin', true), read('parcels.bin', true),
-    fetch('./ifc-placement-20260915-i16-e16.json').then(r=>{if(!r.ok)throw new Error('IFC placement unavailable');return r.json()})
+    fetch('./ifc-placement-20260915-i16-e16.json?v='+assetRevision).then(r=>{if(!r.ok)throw new Error('IFC placement unavailable');return r.json()})
   ]);
   const loader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
   const modelDefs=placement.models||[
@@ -107,7 +107,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
   // The IFCs share the project coordinate system. Section groups preserve the
   // alignment inside E15, I16 and E16 without altering any source asset.
   const placement=assets.placement;
-  const ifcGroup=new THREE.Group();ifcGroup.name='IFC E15–I16–E16';root.add(ifcGroup);
+  const ifcGroup=new THREE.Group();ifcGroup.name='IFC E15–I16–E16 · Patio Taller 102–106';root.add(ifcGroup);
   const sections=new Map();
   for(const asset of assets.ifcModels){
     const definition=asset.definition;
