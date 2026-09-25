@@ -205,27 +205,37 @@
       "elementCount": 3411,
       "loadedAt": "25/09/2026",
       "streetDatum": 2541.5,
-      "converted": 2813,
-      "bytes": 730140,
+      "converted": 2735,
+      "bytes": 1517728,
       "conversionSeconds": 678.0,
-      "status": "ready-shell",
+      "status": "ready-hq",
       "files": [
-        "assets/models/pt-111-puesto-mando-shell-p01-v00.glb",
-        "assets/models/pt-111-puesto-mando-shell-p02-v00.glb",
-        "assets/models/pt-111-puesto-mando-shell-p03-v00.glb",
-        "assets/models/pt-111-puesto-mando-shell-p04-v00.glb",
-        "assets/models/pt-111-puesto-mando-shell-p05-v00.glb"
+        "assets/models/pt-111-puesto-mando-hq-p01-v00.glb",
+        "assets/models/pt-111-puesto-mando-hq-p02-v00.glb",
+        "assets/models/pt-111-puesto-mando-hq-p03-v00.glb",
+        "assets/models/pt-111-puesto-mando-hq-p04-v00.glb",
+        "assets/models/pt-111-puesto-mando-hq-p05-v00.glb",
+        "assets/models/pt-111-puesto-mando-hq-p06-v00.glb",
+        "assets/models/pt-111-puesto-mando-hq-p07-v00.glb",
+        "assets/models/pt-111-puesto-mando-hq-p08-v00.glb"
       ],
       "fileBytes": [
-        111776,
-        110148,
-        131320,
-        226968,
-        149928
+        92004,
+        91744,
+        119732,
+        155424,
+        240816,
+        240772,
+        294704,
+        282532
       ],
-      "omittedElements": 598,
-      "omittedType": "IfcFurnishingElement",
-      "note": "Recurso territorial: envolvente y elementos constructivos. Se omite mobiliario interior repetitivo; el IFC fuente se conserva completo."
+      "omittedElements": 676,
+      "omittedFurnishingElements": 550,
+      "unrenderableElements": 47,
+      "omittedType": "IfcFurnishingElement + IfcOpeningElement",
+      "styleMap": "pt111-element-types.json",
+      "note": "Conversión de alta fidelidad con nodos y materiales preservados. Se excluyen 550 elementos de mobiliario interior, 79 sólidos de apertura y 47 elementos fuente sin geometría web representable; el IFC fuente se conserva completo.",
+      "omittedOpeningElements": 79
     },
     {
       "file": "assets/models/pt-112-torno-foso-v00.glb",

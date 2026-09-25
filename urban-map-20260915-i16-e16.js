@@ -3,7 +3,7 @@ import {GLTFLoader} from './GLTFLoader.js';
 import {MeshoptDecoder} from './meshopt_decoder.module.js';
 
 const scale = 0.06;
-const assetRevision = '20260925-patio-lazy-112b';
+const assetRevision = '20260925-patio-complete-112h';
 const point = (p, height = 0) => new THREE.Vector3(p[0] * scale, height, -p[1] * scale);
 
 export async function loadUrbanMap() {
@@ -12,16 +12,17 @@ export async function loadUrbanMap() {
     if (!response.ok) throw new Error('No se pudo cargar la cartografía: ' + name);
     return binary ? response.arrayBuffer() : response.json();
   };
-  const [data, buildings, roads, volumesData, volumes, volumeFootprints, parcels, placement] = await Promise.all([
+  const [data, buildings, roads, volumesData, volumes, volumeFootprints, parcels, placement, pt111Types] = await Promise.all([
     read('map.json'), read('buildings.bin', true), read('roads.bin', true), read('volumes.json'), read('volumes.bin', true), read('volume-footprints.bin', true), read('parcels.bin', true),
-    fetch('./ifc-placement-20260915-i16-e16.json?v='+assetRevision).then(r=>{if(!r.ok)throw new Error('IFC placement unavailable');return r.json()})
+    fetch('./ifc-placement-20260915-i16-e16.json?v='+assetRevision).then(r=>{if(!r.ok)throw new Error('IFC placement unavailable');return r.json()}),
+    fetch('./pt111-element-types.json?v='+assetRevision).then(r=>{if(!r.ok)throw new Error('PT111 type map unavailable');return r.json()})
   ]);
   const ifcLoader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
   const ifcModelDefs=placement.models||[
     {file:'e15-architecture-web.glb',section:'E15',label:'IFC · E15 · ARQ + EST'},
     {file:'e15-1100.glb',section:'E15',label:'IFC · E15 · ARQ + EST'}
   ];
-  return {ifcLoader, ifcModelDefs, placement, data, volumesData, volumes: new Float32Array(volumes), volumeFootprints: new Float32Array(volumeFootprints), parcels: new Float32Array(parcels), buildings: new Float32Array(buildings), roads: new Float32Array(roads)};
+  return {ifcLoader, ifcModelDefs, placement, pt111Types, data, volumesData, volumes: new Float32Array(volumes), volumeFootprints: new Float32Array(volumeFootprints), parcels: new Float32Array(parcels), buildings: new Float32Array(buildings), roads: new Float32Array(roads)};
 }
 
 function segments(group, coords, color, height) {
@@ -115,6 +116,30 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
     }
     sections.get(definition.section).definitions.push(definition);
   }
+  const pt111MaterialSpecs={
+    IfcMember:['#445767',.72,.24,1],IfcBeam:['#687b89',.68,.18,1],IfcPlate:['#aeb9bf',.74,.08,1],
+    IfcWallStandardCase:['#dce4e5',.82,.04,1],IfcWall:['#d5dfe1',.82,.04,1],IfcSlab:['#c7d1d3',.86,.03,1],
+    IfcRoof:['#c1ccd0',.72,.08,1],IfcWindow:['#76abc0',.28,.16,.38],IfcCurtainWall:['#5f93a6',.32,.15,.44],
+    IfcDoor:['#715743',.72,.06,1],IfcRailing:['#465b69',.58,.28,1],IfcStairFlight:['#9ba9af',.76,.08,1],
+    IfcStair:['#9ba9af',.76,.08,1],IfcCovering:['#bbc6c8',.82,.03,1],IfcBuildingElementProxy:['#87969b',.76,.08,1],
+    IfcFlowTerminal:['#697b83',.64,.18,1]
+  };
+  const pt111Materials=new Map();
+  const materialForType=type=>{
+    if(!pt111MaterialSpecs[type])return null;
+    if(!pt111Materials.has(type)){
+      const [color,roughness,metalness,opacity]=pt111MaterialSpecs[type];
+      pt111Materials.set(type,new THREE.MeshBasicMaterial({color,opacity,transparent:opacity<1,depthWrite:opacity>=1,side:THREE.DoubleSide,toneMapped:false}));
+    }
+    return pt111Materials.get(type);
+  };
+  const stylePt111=model=>model.traverse(object=>{
+    if(!object.isMesh)return;
+    let node=object,type=null;
+    while(node&&node!==model){if(node.name&&assets.pt111Types[node.name]){type=assets.pt111Types[node.name];break;}node=node.parent;}
+    if(type==='IfcOpeningElement'){object.visible=false;return;}
+    const material=materialForType(type)||materialForType('IfcBuildingElementProxy');object.material=material;if(material.transparent)object.renderOrder=4;
+  });
   const ifcBounds=new THREE.Box3();
   const ensureIfcSection=async sectionName=>{
     const entry=sections.get(sectionName);
@@ -127,6 +152,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
       const loaded=await Promise.all(available.map(async definition=>({definition,scene:(await assets.ifcLoader.loadAsync('./'+definition.file+'?v='+assetRevision)).scene})));
       for(const asset of loaded){
         const model=asset.scene;
+        if(sectionName==='PT111')stylePt111(model);
         model.position.set(-placement.gisOrigin[0],-(asset.definition.streetDatum??placement.streetDatum),placement.gisOrigin[1]);
         entry.group.add(model);
       }
@@ -135,10 +161,13 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
       if(sectionBounds.isEmpty()){const error=new Error('El modelo convertido no contiene geometría visible');error.code='no-geometry';throw error;}
       entry.bounds=sectionBounds;ifcSections[sectionName]=sectionBounds;ifcBounds.union(sectionBounds);
       const sectionCenter=sectionBounds.getCenter(new THREE.Vector3());
-      entry.labelObject=addLabel([sectionCenter.x,sectionBounds.max.y+.6,sectionCenter.z],()=>entry.label,null,'pilotLabel');entry.labelObject.geographic=true;
+      entry.labelObject=addLabel([sectionCenter.x,sectionBounds.max.y+.6,sectionCenter.z],()=>entry.label,null,'pilotLabel');entry.labelObject.geographic=true;entry.labelObject.ifcSection=sectionName;
       return sectionBounds;
     })().catch(error=>{entry.promise=null;throw error;});
     return entry.promise;
+  };
+  const setIfcSectionVisibility=sectionName=>{
+    for(const [name,entry] of sections){const visible=!sectionName||name===sectionName;entry.group.visible=visible;if(entry.labelObject)entry.labelObject.filterVisible=visible;}
   };
   const bounds = geometry => {
     const box = new THREE.Box3();
@@ -149,5 +178,5 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
   const all = bounds(data.pilot);
   data.zones.forEach(z => all.union(bounds(z.geometry)));
   all.union(bounds(assets.volumesData.corridor));
-  return {seismic, volumes, ifcBounds, ifcSections, ensureIfcSection, sectionDefinitions:sections, pilotBounds: bounds(data.pilot).union(bounds(assets.volumesData.corridor)), fullBounds: all};
+  return {seismic, volumes, ifcBounds, ifcSections, ensureIfcSection, setIfcSectionVisibility, sectionDefinitions:sections, pilotBounds: bounds(data.pilot).union(bounds(assets.volumesData.corridor)), fullBounds: all};
 }
