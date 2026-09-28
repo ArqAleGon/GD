@@ -30,7 +30,21 @@ const relationLabel=record=>record.matched?'Correlacionado por CHIP':'Sin correl
 const recordSegments=record=>[...new Set([record.group,record.stationCode,record.station].filter(Boolean))];
 const recordDocuments=record=>(record.documentIds||[]).map(id=>DOCUMENTS_BY_ID.get(id)).filter(Boolean);
 const normalizeChip=value=>String(value||'').toUpperCase().replace(/[^A-Z0-9]/g,'');
-const validTokenUrl=value=>{try{const url=new URL(String(value||''));return ['http:','https:'].includes(url.protocol)?url.href:'';}catch{return '';}};
+const UNAVAILABLE_DOCUMENT_HOSTS=new Set(['almacenamientoemb.blob.core.windows.net']);
+const tokenUrl=value=>{try{const url=new URL(String(value||''));const host=url.hostname.toLowerCase();if(url.protocol!=='https:'||!host.endsWith('.blob.core.windows.net'))return{url:'',unavailable:false};return{url:url.href,unavailable:UNAVAILABLE_DOCUMENT_HOSTS.has(host)};}catch{return{url:'',unavailable:false};}};
+async function copyText(value){
+ const field=document.createElement('textarea');field.value=value;field.readOnly=true;field.className='clipboardFallback';document.body.append(field);field.select();
+ try{if(document.execCommand('copy'))return true;}catch{}finally{field.remove();}
+ if(!navigator.clipboard?.writeText)return false;
+ const attempt=navigator.clipboard.writeText(value).then(()=>true,()=>false);
+ return Promise.race([attempt,new Promise(resolve=>setTimeout(()=>resolve(false),1200))]);
+}
+async function copyDocumentLink(document,button){
+ if(!document?.url||document.linkUnavailable)return;
+ const original=button.textContent;button.disabled=true;
+ try{const copied=await copyText(document.url);button.textContent=copied?'Vínculo copiado':'No se pudo copiar';const status=button.closest('.documentAccess')?.querySelector('.documentAccessStatus');if(status)status.textContent=copied?'Vínculo copiado. Pégalo en Edge o Chrome fuera del visor embebido.':'El navegador bloqueó el portapapeles. Intenta de nuevo o usa el visor documental.';}
+ finally{setTimeout(()=>{button.disabled=false;button.textContent=original;},2400);}
+}
 async function waitLibrary(name){for(let index=0;index<100;index++){if(window[name])return window[name];await new Promise(resolve=>setTimeout(resolve,100));}throw new Error('No se pudo cargar el lector de Excel. Recarga la página.');}
 
 async function enablePredialLinks(file){
@@ -40,9 +54,9 @@ async function enablePredialLinks(file){
   if(!sheet)throw new Error('No se encontró la hoja Documentos_Identificacion_Predi.');
   const rows=X.utils.sheet_to_json(sheet,{header:1,raw:false,defval:''}),headers=rows[0].map(value=>String(value).trim()),positions=Object.fromEntries(headers.map((name,index)=>[name,index]));
   for(const required of ['Documentos_Identificacion_PredioId','enlace_web_token','chip'])if(!(required in positions))throw new Error(`Falta la columna ${required}.`);
-  let enabled=0;
-  rows.slice(1).forEach((row,index)=>{const rowNo=index+2,sourceId=String(row[positions.Documentos_Identificacion_PredioId]||'').trim(),id=`predial-doc-${sourceId||rowNo}-${rowNo}`,document=DOCUMENTS_BY_ID.get(id),url=validTokenUrl(row[positions.enlace_web_token]),chip=normalizeChip(row[positions.chip]);if(document&&url&&document.chip===chip){document.url=url;enabled++;}});
-  status.textContent=`${fmtNumber(enabled)} vínculos habilitados solo durante esta sesión.`;
+  let enabled=0,unavailable=0;
+  rows.slice(1).forEach((row,index)=>{const rowNo=index+2,sourceId=String(row[positions.Documentos_Identificacion_PredioId]||'').trim(),id=`predial-doc-${sourceId||rowNo}-${rowNo}`,document=DOCUMENTS_BY_ID.get(id),link=tokenUrl(row[positions.enlace_web_token]),chip=normalizeChip(row[positions.chip]);if(document&&link.url&&document.chip===chip){document.url=link.url;document.linkUnavailable=link.unavailable;if(link.unavailable)unavailable++;else enabled++;}});
+  status.textContent=`${fmtNumber(enabled)} vínculos habilitados; ${fmtNumber(unavailable)} no disponibles en el origen. La apertura segura copia el enlace para usarlo fuera del visor.`;
   if(selected)showDetail(selected);else render();
  }catch(error){status.textContent=error.message||'No se pudieron habilitar los vínculos.';}
 }
@@ -171,7 +185,7 @@ function showDetail(record){
  const documents=recordDocuments(record);
  const milestones=[['Oferta',record.dates.offer],['Aceptación',record.dates.acceptance],['Promesa de compraventa',record.dates.promise],['Resolución de expropiación',record.dates.expropriation],['Entrega para demolición',record.dates.delivery],['Demolición',record.dates.demolition]];
  const process=record.matched?`<div class="milestones"><h4>Hitos del proceso</h4>${milestones.map(([label,date])=>`<div class="milestone ${date?'done':''}"><b>${label}</b><span>${fmtDate(date)}</span></div>`).join('')}</div>`:'<div class="unmanagedNotice"><b>Sin gestión de adquisición</b><span>No se encontró un CHIP correlacionado en la plantilla predial suministrada.</span></div>';
- const documentAccess=documents.length?`<section class="documentAccess"><h4>Documentos del predio <span>${documents.length}</span></h4>${documents.map(document=>document.url?`<a href="${escapeHTML(document.url)}" target="_blank" rel="noopener noreferrer"><b>${escapeHTML(document.name)}</b><small>${document.created?`Creado ${fmtDate(document.created)}`:'Abrir vínculo documental'}</small></a>`:`<div class="documentLocked"><b>${escapeHTML(document.name)}</b><small>Selecciona el Excel de vínculos para habilitar el acceso en esta sesión.</small></div>`).join('')}<a class="catalogLink" href="./documents.html?sector=Predial&amp;chip=${encodeURIComponent(record.chip)}" target="_blank" rel="noopener">Ver este CHIP en el visor documental</a></section>`:'<section class="documentAccess empty"><h4>Documentos del predio</h4><p>No hay vínculos asociados a este CHIP.</p></section>';
+ const documentAccess=documents.length?`<section class="documentAccess"><h4>Documentos del predio <span>${documents.length}</span></h4>${documents.map(document=>document.linkUnavailable?`<div class="documentLocked unavailable"><b>${escapeHTML(document.name)}</b><small>El contenedor de origen no está disponible.</small></div>`:document.url?`<button type="button" class="documentLinkButton" data-document-id="${escapeHTML(document.id)}"><b>${escapeHTML(document.name)}</b><small>${document.created?`Creado ${fmtDate(document.created)} · `:''}Copiar vínculo seguro</small></button>`:`<div class="documentLocked"><b>${escapeHTML(document.name)}</b><small>Selecciona el Excel de vínculos para habilitar el acceso en esta sesión.</small></div>`).join('')}<p class="documentAccessStatus" role="status">Para evitar que el navegador embebido se bloquee, copia el vínculo y ábrelo en Edge o Chrome fuera del mockup.</p><a class="catalogLink" href="./documents.html?sector=Predial&amp;chip=${encodeURIComponent(record.chip)}">Ver este CHIP en el visor documental</a></section>`:'<section class="documentAccess empty"><h4>Documentos del predio</h4><p>No hay vínculos asociados a este CHIP.</p></section>';
  $('parcelDetail').innerHTML=`<div class="detailHead"><h3>${escapeHTML(record.id)}</h3><span class="statusPill" style="--state:${state.color}"><i></i>${state.label}</span></div><div class="joinState ${record.matched?'matched':'unmatched'}">${relationLabel(record)}</div><div class="detailGrid"><div class="detailMetric"><span>LotCodigo SHP</span><b>${escapeHTML(record.lotCode||'Sin dato')}</b></div><div class="detailMetric"><span>CHIP</span><b>${escapeHTML(record.chip||'Sin dato')}</b></div><div class="detailMetric"><span>Estación / tramo</span><b>${escapeHTML(recordSegments(record).join(' · ')||'Sin dato')}</b></div><div class="detailMetric"><span>Área geométrica SHP</span><b>${fmtNumber(record.shpArea)} m²</b></div><div class="detailMetric"><span>Área afectada</span><b>${record.matched?fmtNumber(affectedArea)+' m²':'Sin dato'}</b></div><div class="detailMetric"><span>Localidad</span><b>${escapeHTML(record.locality||'Sin dato')}</b></div><div class="detailMetric"><span>Barrio</span><b>${escapeHTML(record.neighborhood||'Sin dato')}</b></div><div class="detailMetric"><span>Afectación</span><b>${escapeHTML(record.affectation||'Sin dato')}</b></div></div><p class="address">${escapeHTML(record.address||'Dirección no registrada')} · ${escapeHTML(record.destination||'Destino no registrado')}</p>${documentAccess}${process}`;
  render();
 }
@@ -206,6 +220,7 @@ function init(){
  setView(initialView);renderBase();renderReferenceLayers();render();
  for(const id of ['predialStatus','locality','segment','documentStatus'])$(id).addEventListener('change',render);$('predialSearch').addEventListener('input',render);
  $('predialLinkFile').addEventListener('change',event=>{const file=event.target.files?.[0];if(file)enablePredialLinks(file);});
+  $('parcelDetail').addEventListener('click',event=>{const button=event.target.closest('.documentLinkButton');if(!button)return;copyDocumentLink(DOCUMENTS_BY_ID.get(button.dataset.documentId),button);});
  $('predialReset').onclick=()=>{$('predialStatus').value='';$('locality').value='';$('segment').value='';$('documentStatus').value='';$('predialSearch').value='';clearSelection();setView(initialView);render();};
  $('toggleCadastre').onclick=()=>setLayerVisibility('cadastre',!layerState.cadastre);
  $('toggleL1').onclick=()=>setLayerVisibility('l1',!layerState.l1);
