@@ -1,9 +1,10 @@
 async function loadGzipJSON(url){const response=await fetch(url);if(!response.ok)throw new Error(`No se pudo cargar ${url}`);const stream=response.body.pipeThrough(new DecompressionStream('gzip'));return JSON.parse(await new Response(stream).text());}
 const [predialPayload,mapBasePayload]=await Promise.all([
- loadGzipJSON('./predial-data.json.gz?v=20260923-stations'),
+ loadGzipJSON('./predial-data.json.gz?v=20260928-chip-docs'),
  loadGzipJSON('./predial-map-base.json.gz?v=20260922-mapbase')
 ]);
-const PREDIAL_META=predialPayload.meta,PREDIAL_RECORDS=predialPayload.records;
+const PREDIAL_META=predialPayload.meta,PREDIAL_RECORDS=predialPayload.records,PREDIAL_DOCUMENTS=predialPayload.documents||[];
+const DOCUMENTS_BY_ID=new Map(PREDIAL_DOCUMENTS.map(document=>[document.id,document]));
 const MAP_BASE_META=mapBasePayload.meta,TERRITORIAL=mapBasePayload.territorial,L1_BASE=mapBasePayload.l1;
 
 const $=id=>document.getElementById(id);
@@ -25,15 +26,43 @@ const escapeHTML=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;'
 const svg=(tag,attrs={})=>{const node=document.createElementNS(NS,tag);Object.entries(attrs).forEach(([key,value])=>node.setAttribute(key,String(value)));return node;};
 const fmtNumber=(value,digits=0)=>Number(value||0).toLocaleString('es-CO',{minimumFractionDigits:digits,maximumFractionDigits:digits});
 const fmtDate=value=>{if(!value)return 'Pendiente';const date=new Date(value+'T12:00:00');return Number.isNaN(date.valueOf())?value:new Intl.DateTimeFormat('es-CO',{day:'2-digit',month:'short',year:'numeric'}).format(date);};
-const relationLabel=record=>record.matched?'Correlacionado por LotCodigo':'Sin correlación en la base predial';
+const relationLabel=record=>record.matched?'Correlacionado por CHIP':'Sin correlación por CHIP en la base predial';
 const recordSegments=record=>[...new Set([record.group,record.stationCode,record.station].filter(Boolean))];
+const recordDocuments=record=>(record.documentIds||[]).map(id=>DOCUMENTS_BY_ID.get(id)).filter(Boolean);
+const normalizeChip=value=>String(value||'').toUpperCase().replace(/[^A-Z0-9]/g,'');
+const validTokenUrl=value=>{try{const url=new URL(String(value||''));return ['http:','https:'].includes(url.protocol)?url.href:'';}catch{return '';}};
+async function waitLibrary(name){for(let index=0;index<100;index++){if(window[name])return window[name];await new Promise(resolve=>setTimeout(resolve,100));}throw new Error('No se pudo cargar el lector de Excel. Recarga la página.');}
 
-function filters(){return {status:$('predialStatus').value,locality:$('locality').value,segment:$('segment').value,search:$('predialSearch').value.trim().toLocaleLowerCase('es')};}
+async function enablePredialLinks(file){
+ const status=$('predialLinkStatus');status.textContent='Leyendo vínculos en este navegador…';
+ try{
+  const X=await waitLibrary('XLSX'),workbook=X.read(await file.arrayBuffer(),{type:'array',cellDates:true}),sheet=workbook.Sheets['Documentos_Identificacion_Predi'];
+  if(!sheet)throw new Error('No se encontró la hoja Documentos_Identificacion_Predi.');
+  const rows=X.utils.sheet_to_json(sheet,{header:1,raw:false,defval:''}),headers=rows[0].map(value=>String(value).trim()),positions=Object.fromEntries(headers.map((name,index)=>[name,index]));
+  for(const required of ['Documentos_Identificacion_PredioId','enlace_web_token','chip'])if(!(required in positions))throw new Error(`Falta la columna ${required}.`);
+  let enabled=0;
+  rows.slice(1).forEach((row,index)=>{const rowNo=index+2,sourceId=String(row[positions.Documentos_Identificacion_PredioId]||'').trim(),id=`predial-doc-${sourceId||rowNo}-${rowNo}`,document=DOCUMENTS_BY_ID.get(id),url=validTokenUrl(row[positions.enlace_web_token]),chip=normalizeChip(row[positions.chip]);if(document&&url&&document.chip===chip){document.url=url;enabled++;}});
+  status.textContent=`${fmtNumber(enabled)} vínculos habilitados solo durante esta sesión.`;
+  if(selected)showDetail(selected);else render();
+ }catch(error){status.textContent=error.message||'No se pudieron habilitar los vínculos.';}
+}
+
+function filters(){return {status:$('predialStatus').value,locality:$('locality').value,segment:$('segment').value,documents:$('documentStatus').value,search:$('predialSearch').value.trim().toLocaleLowerCase('es')};}
 function matches(record,filter){
- const haystack=[record.lotCode,record.id,record.chip,record.address,record.neighborhood,record.stationCode,record.station,record.group,record.ue].join(' ').toLocaleLowerCase('es');
- return (!filter.status||record.status===filter.status)&&(!filter.locality||record.locality===filter.locality)&&(!filter.segment||recordSegments(record).includes(filter.segment))&&(!filter.search||haystack.includes(filter.search));
+ const documents=recordDocuments(record),haystack=[record.lotCode,record.id,record.chip,record.address,record.neighborhood,record.stationCode,record.station,record.group,record.ue].join(' ').toLocaleLowerCase('es');
+ const documentMatch=!filter.documents||(filter.documents==='with'?documents.length>0:documents.length===0);
+ return documentMatch&&(!filter.status||record.status===filter.status)&&(!filter.locality||record.locality===filter.locality)&&(!filter.segment||recordSegments(record).includes(filter.segment))&&(!filter.search||haystack.includes(filter.search));
 }
 const visibleRecords=()=>{const filter=filters();return PREDIAL_RECORDS.filter(record=>matches(record,filter));};
+
+function focusRecord(record){
+ showDetail(record);
+ const points=[...record.geometry.matchAll(/(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)/g)].map(match=>[Number(match[1]),Number(match[2])]);
+ if(!points.length)return;
+ const xs=points.map(point=>point[0]),ys=points.map(point=>point[1]),cx=(Math.min(...xs)+Math.max(...xs))/2,cy=(Math.min(...ys)+Math.max(...ys))/2;
+ const width=Math.max(75,(Math.max(...xs)-Math.min(...xs))*4),height=width*initialView.h/initialView.w;
+ setView({x:cx-width/2,y:cy-height/2,w:width,h:height});
+}
 
 function renderBase(){
  const base=$('geoGrid');base.replaceChildren();
@@ -121,17 +150,34 @@ function renderCharts(list){
  $('coverageChart').innerHTML=groups.length?groups.map(([name,count])=>`<div class="chartRow"><span>${escapeHTML(name)}</span><div class="chartTrack"><i style="width:${count/max*100}%"></i></div><b>${fmtNumber(count)}</b></div>`).join(''):'<div class="emptyDetail"><span>Sin datos para los filtros seleccionados.</span></div>';
 }
 
+function renderSearchResults(list){
+ const panel=$('predialResults'),active=Boolean(filters().search||filters().documents);
+ panel.hidden=!active;if(!active)return;
+ const visible=list.slice(0,20);panel.replaceChildren();
+ const heading=document.createElement('p');heading.className='resultSummary';heading.textContent=`${fmtNumber(list.length)} predios · selecciona para ubicar`;panel.append(heading);
+ for(const record of visible){
+  const button=document.createElement('button');button.type='button';button.className='parcelResult';
+  const title=document.createElement('b');title.textContent=record.id||record.lotCode||record.chip;
+  const meta=document.createElement('span');meta.textContent=`CHIP ${record.chip||'sin dato'} · ${recordDocuments(record).length} documento(s)`;
+  const address=document.createElement('small');address.textContent=record.address||record.station||'Sin dirección registrada';
+  button.append(title,meta,address);button.addEventListener('click',()=>focusRecord(record));panel.append(button);
+ }
+ if(list.length>visible.length){const more=document.createElement('p');more.className='resultSummary';more.textContent=`Se muestran 20 de ${fmtNumber(list.length)}. Refina la búsqueda para ubicar el predio.`;panel.append(more);}
+}
+
 function showDetail(record){
  selected=record;$('selectionLabel').textContent='Predio seleccionado';
  const state=STATUS[record.status],affectedArea=record.area||record.landArea||0;
+ const documents=recordDocuments(record);
  const milestones=[['Oferta',record.dates.offer],['Aceptación',record.dates.acceptance],['Promesa de compraventa',record.dates.promise],['Resolución de expropiación',record.dates.expropriation],['Entrega para demolición',record.dates.delivery],['Demolición',record.dates.demolition]];
- const process=record.matched?`<div class="milestones"><h4>Hitos del proceso</h4>${milestones.map(([label,date])=>`<div class="milestone ${date?'done':''}"><b>${label}</b><span>${fmtDate(date)}</span></div>`).join('')}</div>`:'<div class="unmanagedNotice"><b>Sin gestión de adquisición</b><span>No se encontró un LotCodigo correlacionado en la base predial suministrada.</span></div>';
- $('parcelDetail').innerHTML=`<div class="detailHead"><h3>${escapeHTML(record.id)}</h3><span class="statusPill" style="--state:${state.color}"><i></i>${state.label}</span></div><div class="joinState ${record.matched?'matched':'unmatched'}">${relationLabel(record)}</div><div class="detailGrid"><div class="detailMetric"><span>LotCodigo</span><b>${escapeHTML(record.lotCode||'Sin dato')}</b></div><div class="detailMetric"><span>CHIP</span><b>${escapeHTML(record.chip||'Sin dato')}</b></div><div class="detailMetric"><span>Estación / tramo</span><b>${escapeHTML(recordSegments(record).join(' · ')||'Sin dato')}</b></div><div class="detailMetric"><span>Área geométrica SHP</span><b>${fmtNumber(record.shpArea)} m²</b></div><div class="detailMetric"><span>Área afectada</span><b>${record.matched?fmtNumber(affectedArea)+' m²':'Sin dato'}</b></div><div class="detailMetric"><span>Localidad</span><b>${escapeHTML(record.locality||'Sin dato')}</b></div><div class="detailMetric"><span>Barrio</span><b>${escapeHTML(record.neighborhood||'Sin dato')}</b></div><div class="detailMetric"><span>Afectación</span><b>${escapeHTML(record.affectation||'Sin dato')}</b></div></div><p class="address">${escapeHTML(record.address||'Dirección no registrada')} · ${escapeHTML(record.destination||'Destino no registrado')}</p>${process}`;
+ const process=record.matched?`<div class="milestones"><h4>Hitos del proceso</h4>${milestones.map(([label,date])=>`<div class="milestone ${date?'done':''}"><b>${label}</b><span>${fmtDate(date)}</span></div>`).join('')}</div>`:'<div class="unmanagedNotice"><b>Sin gestión de adquisición</b><span>No se encontró un CHIP correlacionado en la plantilla predial suministrada.</span></div>';
+ const documentAccess=documents.length?`<section class="documentAccess"><h4>Documentos del predio <span>${documents.length}</span></h4>${documents.map(document=>document.url?`<a href="${escapeHTML(document.url)}" target="_blank" rel="noopener noreferrer"><b>${escapeHTML(document.name)}</b><small>${document.created?`Creado ${fmtDate(document.created)}`:'Abrir vínculo documental'}</small></a>`:`<div class="documentLocked"><b>${escapeHTML(document.name)}</b><small>Selecciona el Excel de vínculos para habilitar el acceso en esta sesión.</small></div>`).join('')}<a class="catalogLink" href="./documents.html?sector=Predial&amp;chip=${encodeURIComponent(record.chip)}" target="_blank" rel="noopener">Ver este CHIP en el visor documental</a></section>`:'<section class="documentAccess empty"><h4>Documentos del predio</h4><p>No hay vínculos asociados a este CHIP.</p></section>';
+ $('parcelDetail').innerHTML=`<div class="detailHead"><h3>${escapeHTML(record.id)}</h3><span class="statusPill" style="--state:${state.color}"><i></i>${state.label}</span></div><div class="joinState ${record.matched?'matched':'unmatched'}">${relationLabel(record)}</div><div class="detailGrid"><div class="detailMetric"><span>LotCodigo SHP</span><b>${escapeHTML(record.lotCode||'Sin dato')}</b></div><div class="detailMetric"><span>CHIP</span><b>${escapeHTML(record.chip||'Sin dato')}</b></div><div class="detailMetric"><span>Estación / tramo</span><b>${escapeHTML(recordSegments(record).join(' · ')||'Sin dato')}</b></div><div class="detailMetric"><span>Área geométrica SHP</span><b>${fmtNumber(record.shpArea)} m²</b></div><div class="detailMetric"><span>Área afectada</span><b>${record.matched?fmtNumber(affectedArea)+' m²':'Sin dato'}</b></div><div class="detailMetric"><span>Localidad</span><b>${escapeHTML(record.locality||'Sin dato')}</b></div><div class="detailMetric"><span>Barrio</span><b>${escapeHTML(record.neighborhood||'Sin dato')}</b></div><div class="detailMetric"><span>Afectación</span><b>${escapeHTML(record.affectation||'Sin dato')}</b></div></div><p class="address">${escapeHTML(record.address||'Dirección no registrada')} · ${escapeHTML(record.destination||'Destino no registrado')}</p>${documentAccess}${process}`;
  render();
 }
 
 function showTooltip(event,record){
- const tip=$('mapTooltip'),state=STATUS[record.status];tip.innerHTML=`<b>${escapeHTML(record.lotCode||record.id)}</b><span>${escapeHTML(record.id)}</span><span>${state.label} · ${escapeHTML(record.group||record.station||'Tramo sin dato')}</span>`;tip.hidden=false;
+ const tip=$('mapTooltip'),state=STATUS[record.status],documents=recordDocuments(record);tip.innerHTML=`<b>${escapeHTML(record.lotCode||record.id)}</b><span>CHIP ${escapeHTML(record.chip||'sin dato')}</span><span>${state.label} · ${escapeHTML(record.group||record.station||'Tramo sin dato')}</span>${documents.length?`<span>${documents.length} documento(s) disponible(s)</span>`:''}`;tip.hidden=false;
  const rect=$('predialMap').parentElement.getBoundingClientRect();tip.style.left=Math.min(event.clientX-rect.left+12,rect.width-245)+'px';tip.style.top=Math.max(8,event.clientY-rect.top-12)+'px';
 }
 
@@ -140,29 +186,32 @@ function renderMap(list){
  list.forEach(record=>{const state=STATUS[record.status];const path=svg('path',{d:record.geometry,fill:state.color,'fill-opacity':state.opacity,class:`parcel ${record.status}${selected?.key===record.key?' selected':''}`,tabindex:0,role:'button','aria-label':`${record.lotCode||record.id}. ${state.label}`,'fill-rule':'evenodd'});path.addEventListener('pointerdown',event=>event.stopPropagation());path.addEventListener('click',event=>{event.stopPropagation();showDetail(record);});path.addEventListener('keydown',event=>{if(event.key==='Enter'||event.key===' '){event.preventDefault();showDetail(record);}});path.addEventListener('pointermove',event=>showTooltip(event,record));path.addEventListener('pointerleave',()=>{$('mapTooltip').hidden=true;});layer.append(path);});
 }
 
-function clearSelection(){selected=null;$('selectionLabel').textContent='Vista general';$('parcelDetail').innerHTML='<div class="emptyDetail"><b>Selecciona un predio</b><span>La ficha mostrará la geometría SHP y los datos relacionados por LotCodigo.</span></div>';}
+function clearSelection(){selected=null;$('selectionLabel').textContent='Vista general';$('parcelDetail').innerHTML='<div class="emptyDetail"><b>Selecciona un predio</b><span>La ficha mostrará la geometría SHP, la gestión y los documentos relacionados por CHIP.</span></div>';}
 
 function render(){
  const list=visibleRecords();if(selected&&!list.includes(selected))clearSelection();
- renderKpis(list);renderCharts(list);renderMap(list);
+ renderKpis(list);renderCharts(list);renderMap(list);renderSearchResults(list);
 }
 
 function setView(next){view={...next};$('predialMap').setAttribute('viewBox',`${view.x} ${view.y} ${view.w} ${view.h}`);}
 function zoom(factor,cx=view.x+view.w/2,cy=view.y+view.h/2){const nextW=Math.max(85,Math.min(mapWidth+padding*2,view.w*factor)),nextH=nextW*view.h/view.w;setView({x:cx-(cx-view.x)*nextW/view.w,y:cy-(cy-view.y)*nextH/view.h,w:nextW,h:nextH});}
 
 function init(){
- $('sourceName').textContent=`${PREDIAL_META.workbookSource} + ${PREDIAL_META.geometrySource}`;
- $('joinSummary').textContent=`Cruce ${PREDIAL_META.joinField}: ${fmtNumber(PREDIAL_META.matchedFeatureCount)} geometrías correlacionadas y ${fmtNumber(PREDIAL_META.unmatchedFeatureCount)} sin gestión de adquisición.`;
+ $('sourceName').textContent=`${PREDIAL_META.workbookSource} + ${PREDIAL_META.geometrySource} + ${PREDIAL_META.documentSource}`;
+ $('joinSummary').textContent=`Cruce por ${PREDIAL_META.joinField}: ${fmtNumber(PREDIAL_META.matchedFeatureCount)} geometrías correlacionadas, ${fmtNumber(PREDIAL_META.unmatchedFeatureCount)} sin gestión y ${fmtNumber(PREDIAL_META.documentCount)} vínculos documentales (${fmtNumber(PREDIAL_META.documentWithChipCount)} con CHIP).`;
  $('mapBaseSummary').textContent=`Referencia territorial MapaBaseBogota: ${fmtNumber(MAP_BASE_META.territorialFeatureCount)} elementos de lotes, construcciones, manzanas, sectores, vías y curvas de nivel; L1 con trazado, viaducto y ${fmtNumber(L1_BASE.stations.featureCount)} estaciones.`;
  for(const value of [...new Set(PREDIAL_RECORDS.map(record=>record.locality).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'))){const option=document.createElement('option');option.value=value;option.textContent=value;$('locality').append(option);}
  for(const value of PREDIAL_META.stationSegments||[...new Set(PREDIAL_RECORDS.flatMap(record=>recordSegments(record)))].sort((a,b)=>a.localeCompare(b,'es',{numeric:true}))){const option=document.createElement('option');option.value=value;option.textContent=value;$('segment').append(option);}
  $('mapLegend').innerHTML=Object.values(STATUS).map(state=>`<span class="legendItem"><i style="--state:${state.color}"></i>${state.short}</span>`).join('');
  setView(initialView);renderBase();renderReferenceLayers();render();
- for(const id of ['predialStatus','locality','segment'])$(id).addEventListener('change',render);$('predialSearch').addEventListener('input',render);
- $('predialReset').onclick=()=>{$('predialStatus').value='';$('locality').value='';$('segment').value='';$('predialSearch').value='';clearSelection();setView(initialView);render();};
+ for(const id of ['predialStatus','locality','segment','documentStatus'])$(id).addEventListener('change',render);$('predialSearch').addEventListener('input',render);
+ $('predialLinkFile').addEventListener('change',event=>{const file=event.target.files?.[0];if(file)enablePredialLinks(file);});
+ $('predialReset').onclick=()=>{$('predialStatus').value='';$('locality').value='';$('segment').value='';$('documentStatus').value='';$('predialSearch').value='';clearSelection();setView(initialView);render();};
  $('toggleCadastre').onclick=()=>setLayerVisibility('cadastre',!layerState.cadastre);
  $('toggleL1').onclick=()=>setLayerVisibility('l1',!layerState.l1);
  $('zoomIn').onclick=()=>zoom(.78);$('zoomOut').onclick=()=>zoom(1.28);$('resetView').onclick=()=>setView(initialView);
+ const query=new URLSearchParams(location.search),requestedChip=(query.get('chip')||'').toUpperCase().replace(/[^A-Z0-9]/g,'');
+ if(requestedChip){$('predialSearch').value=requestedChip;render();const requested=PREDIAL_RECORDS.find(record=>record.chip===requestedChip);if(requested)focusRecord(requested);}
  const map=$('predialMap');map.addEventListener('wheel',event=>{event.preventDefault();const rect=map.getBoundingClientRect(),x=view.x+(event.clientX-rect.left)/rect.width*view.w,y=view.y+(event.clientY-rect.top)/rect.height*view.h;zoom(event.deltaY>0?1.14:.87,x,y);},{passive:false});
  map.addEventListener('pointerdown',event=>{drag={x:event.clientX,y:event.clientY,view:{...view}};map.setPointerCapture(event.pointerId);map.classList.add('dragging');});map.addEventListener('pointermove',event=>{if(!drag)return;const rect=map.getBoundingClientRect();setView({...view,x:drag.view.x-(event.clientX-drag.x)/rect.width*drag.view.w,y:drag.view.y-(event.clientY-drag.y)/rect.height*drag.view.h,w:drag.view.w,h:drag.view.h});});map.addEventListener('pointerup',()=>{drag=null;map.classList.remove('dragging');});map.addEventListener('pointercancel',()=>{drag=null;map.classList.remove('dragging');});
 }

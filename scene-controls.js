@@ -36,6 +36,7 @@ const sourceFile=(file,detail,loaded)=>({file,detail,loaded});
 const p6=sourceFile('Archivo Base Corte 31082026.xlsx','Programa Primavera P6 · corte 31/08/2026','21/09/2026');
 const predialBook=sourceFile('20260918_Plantilla_Tabla_Final_PREDIOS.xlsx','Información de gestión y estaciones/tramos','21/09/2026');
 const predialShape=sourceFile('PREDIOS_L1MB_ABRIL2026.shp','Geometría predial de la Línea 1','21/09/2026');
+const predialDocuments=sourceFile('1. Documentos_Identificacion_Predio.xlsx','907 referencias documentales remapeadas por CHIP; los tokens se leen localmente y no se publican','28/09/2026');
 const mapBase=sourceFile('MapaBaseBogota/*.shp','Base catastral y referencia territorial de Bogotá','22/09/2026');
 const buildings=sourceFile('CONSTRUC.shp','Edificaciones hasta 100 m a cada lado de la L1 · CONNPISOS × 3 m','22/09/2026');
 const hills=sourceFile('CNiv.shp','Curvas de nivel de los Cerros Orientales','22/09/2026');
@@ -70,9 +71,9 @@ const documentSources=[
  sourceFile('VCAD_Base_Original.pbix','Informe Power BI · acceso sujeto a permisos del informe','17/09/2026')
 ];
 const sourceProfiles={
- predial:{title:'Predial L1',note:'Cruce LotCodigo = LOTCODIGO y capas territoriales de referencia.',items:[predialBook,predialShape,mapBase]},
+ predial:{title:'Predial L1',note:'Cruce principal por CHIP entre gestión, geometría y vínculos documentales.',items:[predialBook,predialShape,predialDocuments,mapBase]},
  bim:{title:'Avance BIM',note:'Geometría IFC vinculada por UE con el programa Primavera P6.',items:[e15Ifc,i16Ifc,e16Ifc,p6]},
- documentos:{title:'Visor documental',note:'Catálogo público incorporado desde la carpeta Documental.',items:documentSources}
+ documentos:{title:'Visor documental',note:'Catálogo público y vínculos de identificación predial remapeados por CHIP.',items:[...documentSources,predialDocuments]}
 };
 const viewTitles={network:'Inicio · Red ferroviaria',events:'Inicio · Operación',traffic:'Inicio · Flujo de pasajeros',dispatch:'Inicio · Trenes en circulación',station:'Estación 3D',indoor:'Recorrido interior',security:'Cámaras y seguridad',evacuation:'Emergencias',platform:'Andén y puertas',equipment:'Sala técnica',railway:'Seguimiento del tren',maintenance:'Sistemas ferroviarios',urban:'Datos Integrados'};
 function inicioProfile(view){

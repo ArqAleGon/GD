@@ -6,8 +6,9 @@
   <meta name="theme-color" content="#101b26">
   <title>Gestión predial L1 | Asistente Digital EMB</title>
   <meta name="description" content="Mapa interactivo de gestión predial de la Línea 1 del Metro de Bogotá.">
-  <link rel="stylesheet" href="./predial.css?v=20260923-stations">
+  <link rel="stylesheet" href="./predial.css?v=20260928-chip-docs">
   <link rel="stylesheet" href="./scene-controls.css?v=20260923-sources">
+  <script defer src="./vendor/xlsx-0.20.3.min.js"></script>
 </head>
 <body data-scene="predial">
   <header class="siteHeader">
@@ -47,16 +48,28 @@
       <select id="segment"><option value="">Todos los tramos</option></select>
 
       <label for="predialSearch">Buscar predio</label>
-      <input id="predialSearch" type="search" placeholder="LotCodigo, ID o CHIP">
+      <input id="predialSearch" type="search" placeholder="CHIP, LotCodigo, ID o dirección">
+
+      <label for="documentStatus">Vínculo documental</label>
+      <select id="documentStatus">
+        <option value="" selected>Todos los predios</option>
+        <option value="with">Con documentos</option>
+        <option value="without">Sin documentos</option>
+      </select>
 
       <button id="predialReset" class="secondary">Restablecer filtros</button>
+      <label class="tokenLoader">Habilitar vínculos documentales
+        <input id="predialLinkFile" type="file" accept=".xlsx">
+        <small id="predialLinkStatus">Selecciona 1. Documentos_Identificacion_Predio.xlsx. El archivo se procesa localmente y no se publica.</small>
+      </label>
+      <section id="predialResults" class="predialResults" aria-label="Resultados de búsqueda" hidden></section>
 
       <section class="sourceNote">
         <b>Fuente integrada</b>
         <span id="sourceName">Cargando base predial…</span>
         <p id="joinSummary"></p>
         <p id="mapBaseSummary"></p>
-        <p>Se publican datos operativos del predio. Se excluyen nombres, documentos, teléfonos y valores financieros.</p>
+        <p>Se publica el catálogo por CHIP. Los tokens se habilitan localmente desde el Excel y no se almacenan en el sitio.</p>
       </section>
     </aside>
 
@@ -97,7 +110,7 @@
             </svg>
             <div id="mapTooltip" role="status" hidden></div>
             <div class="mapLegend" id="mapLegend"></div>
-            <p class="geometryNote">Predios: PREDIOS_L1MB_ABRIL2026.shp · Base territorial: MapaBaseBogota · WGS 84. Gestión relacionada por LotCodigo = LOTCODIGO.</p>
+            <p class="geometryNote">Predios: PREDIOS_L1MB_ABRIL2026.shp · Base territorial: MapaBaseBogota · WGS 84. Gestión y documentos remapeados por CHIP.</p>
           </div>
         </section>
 
@@ -111,13 +124,13 @@
             <div id="coverageChart" class="barChart"></div>
           </section>
           <section id="parcelDetail" class="dashCard parcelDetail">
-            <div class="emptyDetail"><b>Selecciona un predio</b><span>La ficha mostrará la geometría SHP y los datos relacionados por LotCodigo.</span></div>
+            <div class="emptyDetail"><b>Selecciona un predio</b><span>La ficha mostrará la geometría SHP, la gestión y los documentos relacionados por CHIP.</span></div>
           </section>
         </aside>
       </div>
     </section>
   </main>
-  <script type="module" src="./predial.js?v=20260923-stations"></script>
-  <script type="module" src="./scene-controls.js?v=20260923-sources"></script>
+  <script type="module" src="./predial.js?v=20260928-chip-docs"></script>
+  <script type="module" src="./scene-controls.js?v=20260928-chip-docs"></script>
 </body>
 </html>
