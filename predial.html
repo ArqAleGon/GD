@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#101b26">
   <title>Gestión predial L1 | Asistente Digital EMB</title>
   <meta name="description" content="Mapa interactivo de gestión predial de la Línea 1 del Metro de Bogotá.">
-  <link rel="stylesheet" href="./predial.css?v=20260928-safe-docs-v2">
+  <link rel="stylesheet" href="./predial.css?v=20260929-embedded-docs-v2">
   <link rel="stylesheet" href="./scene-controls.css?v=20260923-sources">
   <script defer src="./vendor/xlsx-0.20.3.min.js"></script>
 </head>
@@ -130,7 +130,13 @@
       </div>
     </section>
   </main>
-  <script type="module" src="./predial.js?v=20260928-safe-docs-v2"></script>
-  <script type="module" src="./scene-controls.js?v=20260928-safe-docs-v2"></script>
+  <dialog id="predialDocumentDialog" class="predialDocumentDialog" aria-labelledby="predialDocumentTitle">
+    <div class="predialDocumentShell">
+      <header><div><span>VISOR DOCUMENTAL PREDIAL</span><b id="predialDocumentTitle">Documento</b></div><button id="closePredialDocument" type="button" aria-label="Cerrar visor documental">Cerrar ×</button></header>
+      <iframe id="predialDocumentFrame" title="Visor integrado del documento predial" loading="eager"></iframe>
+    </div>
+  </dialog>
+  <script type="module" src="./predial.js?v=20260929-embedded-docs-v2"></script>
+  <script type="module" src="./scene-controls.js?v=20260929-embedded-docs-v2"></script>
 </body>
 </html>
