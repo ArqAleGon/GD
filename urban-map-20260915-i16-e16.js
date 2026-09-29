@@ -167,11 +167,23 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
     })().catch(error=>{entry.promise=null;throw error;});
     return entry.promise;
   };
-  const ghostMaterial=new THREE.MeshBasicMaterial({color:'#a8cfdd',transparent:true,opacity:.14,depthWrite:false,side:THREE.DoubleSide,toneMapped:false});
+  const ghostMaterial=new THREE.MeshBasicMaterial({color:'#a8cfdd',transparent:true,opacity:.12,depthWrite:false,side:THREE.DoubleSide,toneMapped:false});
+  const ghostEdgeMaterial=new THREE.LineBasicMaterial({color:'#bcecff',transparent:true,opacity:.38,depthWrite:false,toneMapped:false});
   let focusedSection=null;
+  const ensureGhostProxy=entry=>{
+    if(entry.ghostProxy)return entry.ghostProxy;
+    const proxy=new THREE.Group();proxy.name=`${entry.group.name||'BIM'}-ghost-proxy`;proxy.visible=false;
+    for(const model of entry.group.children){
+      const modelBounds=new THREE.Box3().setFromObject(model,true);if(modelBounds.isEmpty())continue;
+      const size=modelBounds.getSize(new THREE.Vector3()),center=modelBounds.getCenter(new THREE.Vector3());
+      const geometry=new THREE.BoxGeometry(Math.max(size.x,.05),Math.max(size.y,.05),Math.max(size.z,.05));
+      const shell=new THREE.Mesh(geometry,ghostMaterial);shell.position.copy(center);shell.renderOrder=1;
+      const edges=new THREE.LineSegments(new THREE.EdgesGeometry(geometry),ghostEdgeMaterial);edges.renderOrder=2;shell.add(edges);proxy.add(shell);
+    }
+    root.add(proxy);entry.ghostProxy=proxy;return proxy;
+  };
   const applySectionAppearance=(name,entry)=>{
-    const ghosted=Boolean(focusedSection&&name!==focusedSection);entry.group.visible=true;
-    entry.group.traverse(object=>{if(!object.isMesh)return;if(!Object.prototype.hasOwnProperty.call(object.userData,'bimOriginalMaterial')){object.userData.bimOriginalMaterial=object.material;object.userData.bimOriginalRenderOrder=object.renderOrder;}object.material=ghosted?ghostMaterial:object.userData.bimOriginalMaterial;object.renderOrder=ghosted?1:object.userData.bimOriginalRenderOrder;});
+    const ghosted=Boolean(focusedSection&&name!==focusedSection),proxy=ensureGhostProxy(entry);entry.group.visible=!ghosted;proxy.visible=ghosted;
     if(entry.labelObject){entry.labelObject.filterVisible=true;entry.labelObject.el?.classList.toggle('ifcGhostLabel',ghosted);}
   };
   const setIfcSectionVisibility=sectionName=>{focusedSection=sectionName||null;for(const [name,entry] of sections)applySectionAppearance(name,entry);};
