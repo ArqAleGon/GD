@@ -1,9 +1,9 @@
 async function loadGzipJSON(url){const response=await fetch(url);if(!response.ok)throw new Error(`No se pudo cargar ${url}`);const stream=response.body.pipeThrough(new DecompressionStream('gzip'));return JSON.parse(await new Response(stream).text());}
 const [predialPayload,mapBasePayload]=await Promise.all([
- loadGzipJSON('./predial-data.json.gz?v=20260928-chip-docs'),
+ loadGzipJSON('./predial-data.json.gz?v=20260929-complete-map-v1'),
  loadGzipJSON('./predial-map-base.json.gz?v=20260922-mapbase')
 ]);
-const PREDIAL_META=predialPayload.meta,PREDIAL_RECORDS=predialPayload.records,PREDIAL_DOCUMENTS=predialPayload.documents||[];
+const PREDIAL_META=predialPayload.meta,PREDIAL_RECORDS=predialPayload.records,PREDIAL_SOURCE_ONLY=predialPayload.sourceOnlyRecords||[],PREDIAL_ALL_RECORDS=[...PREDIAL_RECORDS,...PREDIAL_SOURCE_ONLY],PREDIAL_DOCUMENTS=predialPayload.documents||[];
 const DOCUMENTS_BY_ID=new Map(PREDIAL_DOCUMENTS.map(document=>[document.id,document]));
 const MAP_BASE_META=mapBasePayload.meta,TERRITORIAL=mapBasePayload.territorial,L1_BASE=mapBasePayload.l1;
 
@@ -26,10 +26,11 @@ const escapeHTML=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;'
 const svg=(tag,attrs={})=>{const node=document.createElementNS(NS,tag);Object.entries(attrs).forEach(([key,value])=>node.setAttribute(key,String(value)));return node;};
 const fmtNumber=(value,digits=0)=>Number(value||0).toLocaleString('es-CO',{minimumFractionDigits:digits,maximumFractionDigits:digits});
 const fmtDate=value=>{if(!value)return 'Pendiente';const date=new Date(value+'T12:00:00');return Number.isNaN(date.valueOf())?value:new Intl.DateTimeFormat('es-CO',{day:'2-digit',month:'short',year:'numeric'}).format(date);};
-const relationLabel=record=>record.matched?'Correlacionado por CHIP':'Sin correlación por CHIP en la base predial';
+const relationLabel=record=>record.matchMethod==='chip'?'Correlacionado por CHIP':record.matchMethod==='lotCode'?'Correlacionado por LotCodigo; se conserva el CHIP del SHP':record.matchMethod==='sourceOnly'?'Registro de plantilla sin geometría en el SHP':'Sin correlación en la plantilla predial';
 const recordSegments=record=>[...new Set([record.group,record.stationCode,record.station].filter(Boolean))];
 const recordDocuments=record=>(record.documentIds||[]).map(id=>DOCUMENTS_BY_ID.get(id)).filter(Boolean);
 const normalizeChip=value=>String(value||'').toUpperCase().replace(/[^A-Z0-9]/g,'');
+const documentChip=(chip,name)=>normalizeChip(chip)||normalizeChip(String(name||'').match(/^\s*(AAA[0-9A-Z]{8})\b/i)?.[1]);
 const UNAVAILABLE_DOCUMENT_HOSTS=new Set(['almacenamientoemb.blob.core.windows.net']);
 const PREDIAL_LINK_SESSION_KEY='gd-predial-document-links-v1';
 const tokenUrl=value=>{try{const url=new URL(String(value||''));const host=url.hostname.toLowerCase();if(url.protocol!=='https:'||!host.endsWith('.blob.core.windows.net'))return{url:'',unavailable:false};return{url:url.href,unavailable:UNAVAILABLE_DOCUMENT_HOSTS.has(host)};}catch{return{url:'',unavailable:false};}};
@@ -52,9 +53,9 @@ async function enablePredialLinks(file){
   const X=await waitLibrary('XLSX'),workbook=X.read(await file.arrayBuffer(),{type:'array',cellDates:true}),sheet=workbook.Sheets['Documentos_Identificacion_Predi'];
   if(!sheet)throw new Error('No se encontró la hoja Documentos_Identificacion_Predi.');
   const rows=X.utils.sheet_to_json(sheet,{header:1,raw:false,defval:''}),headers=rows[0].map(value=>String(value).trim()),positions=Object.fromEntries(headers.map((name,index)=>[name,index]));
-  for(const required of ['Documentos_Identificacion_PredioId','enlace_web_token','chip'])if(!(required in positions))throw new Error(`Falta la columna ${required}.`);
+  for(const required of ['Documentos_Identificacion_PredioId','Nombre','enlace_web_token','chip'])if(!(required in positions))throw new Error(`Falta la columna ${required}.`);
   let enabled=0,unavailable=0;
-  rows.slice(1).forEach((row,index)=>{const rowNo=index+2,sourceId=String(row[positions.Documentos_Identificacion_PredioId]||'').trim(),id=`predial-doc-${sourceId||rowNo}-${rowNo}`,document=DOCUMENTS_BY_ID.get(id),link=tokenUrl(row[positions.enlace_web_token]),chip=normalizeChip(row[positions.chip]);if(document&&link.url&&document.chip===chip){document.url=link.url;document.linkUnavailable=link.unavailable;if(link.unavailable)unavailable++;else enabled++;}});
+  rows.slice(1).forEach((row,index)=>{const rowNo=index+2,sourceId=String(row[positions.Documentos_Identificacion_PredioId]||'').trim(),id=`predial-doc-${sourceId||rowNo}-${rowNo}`,document=DOCUMENTS_BY_ID.get(id),link=tokenUrl(row[positions.enlace_web_token]),chip=documentChip(row[positions.chip],row[positions.Nombre]);if(document&&link.url&&document.chip===chip){document.url=link.url;document.linkUnavailable=link.unavailable;if(link.unavailable)unavailable++;else enabled++;}});
   persistPredialLinks();
   status.textContent=`${fmtNumber(enabled)} vínculos disponibles en el visor integrado; ${fmtNumber(unavailable)} no disponibles en el origen.`;
   if(selected)showDetail(selected);else render();
@@ -63,11 +64,12 @@ async function enablePredialLinks(file){
 
 function filters(){return {status:$('predialStatus').value,locality:$('locality').value,segment:$('segment').value,documents:$('documentStatus').value,search:$('predialSearch').value.trim().toLocaleLowerCase('es')};}
 function matches(record,filter){
- const documents=recordDocuments(record),haystack=[record.lotCode,record.id,record.chip,record.address,record.neighborhood,record.stationCode,record.station,record.group,record.ue].join(' ').toLocaleLowerCase('es');
+ const documents=recordDocuments(record),haystack=[record.lotCode,record.id,record.chip,record.sourceChip,...(record.chipAliases||[]),record.address,record.neighborhood,record.stationCode,record.station,record.group,record.ue].join(' ').toLocaleLowerCase('es');
  const documentMatch=!filter.documents||(filter.documents==='with'?documents.length>0:documents.length===0);
  return documentMatch&&(!filter.status||record.status===filter.status)&&(!filter.locality||record.locality===filter.locality)&&(!filter.segment||recordSegments(record).includes(filter.segment))&&(!filter.search||haystack.includes(filter.search));
 }
 const visibleRecords=()=>{const filter=filters();return PREDIAL_RECORDS.filter(record=>matches(record,filter));};
+const visibleSearchRecords=()=>{const filter=filters();return PREDIAL_ALL_RECORDS.filter(record=>matches(record,filter));};
 
 function focusRecord(record){
  showDetail(record);
@@ -168,11 +170,11 @@ function renderSearchResults(list){
  const panel=$('predialResults'),active=Boolean(filters().search||filters().documents);
  panel.hidden=!active;if(!active)return;
  const visible=list.slice(0,20);panel.replaceChildren();
- const heading=document.createElement('p');heading.className='resultSummary';heading.textContent=`${fmtNumber(list.length)} predios · selecciona para ubicar`;panel.append(heading);
+ const heading=document.createElement('p');heading.className='resultSummary';heading.textContent=`${fmtNumber(list.length)} predios · selecciona para revisar`;panel.append(heading);
  for(const record of visible){
   const button=document.createElement('button');button.type='button';button.className='parcelResult';
   const title=document.createElement('b');title.textContent=record.id||record.lotCode||record.chip;
-  const meta=document.createElement('span');meta.textContent=`CHIP ${record.chip||'sin dato'} · ${recordDocuments(record).length} documento(s)`;
+  const meta=document.createElement('span');meta.textContent=`CHIP ${record.chip||'sin dato'} · ${recordDocuments(record).length} documento(s)${record.hasGeometry?'':' · sin geometría SHP'}`;
   const address=document.createElement('small');address.textContent=record.address||record.station||'Sin dirección registrada';
   button.append(title,meta,address);button.addEventListener('click',()=>focusRecord(record));panel.append(button);
  }
@@ -184,9 +186,10 @@ function showDetail(record){
  const state=STATUS[record.status],affectedArea=record.area||record.landArea||0;
  const documents=recordDocuments(record);
  const milestones=[['Oferta',record.dates.offer],['Aceptación',record.dates.acceptance],['Promesa de compraventa',record.dates.promise],['Resolución de expropiación',record.dates.expropriation],['Entrega para demolición',record.dates.delivery],['Demolición',record.dates.demolition]];
- const process=record.matched?`<div class="milestones"><h4>Hitos del proceso</h4>${milestones.map(([label,date])=>`<div class="milestone ${date?'done':''}"><b>${label}</b><span>${fmtDate(date)}</span></div>`).join('')}</div>`:'<div class="unmanagedNotice"><b>Sin gestión de adquisición</b><span>No se encontró un CHIP correlacionado en la plantilla predial suministrada.</span></div>';
- const documentAccess=documents.length?`<section class="documentAccess"><h4>Documentos del predio <span>${documents.length}</span></h4>${documents.map(document=>document.linkUnavailable?`<div class="documentLocked unavailable"><b>${escapeHTML(document.name)}</b><small>El contenedor de origen no está disponible.</small></div>`:document.url?`<button type="button" class="documentLinkButton" data-document-id="${escapeHTML(document.id)}"><b>${escapeHTML(document.name)}</b><small>${document.created?`Creado ${fmtDate(document.created)} · `:''}Abrir en el visor integrado</small></button>`:`<div class="documentLocked"><b>${escapeHTML(document.name)}</b><small>Selecciona el Excel de vínculos para habilitar el acceso en esta sesión.</small></div>`).join('')}<p class="documentAccessStatus" role="status">Los PDF se cargan por bloques dentro del mockup y conservan la escena predial en segundo plano.</p><a class="catalogLink" href="./documents.html?sector=Predial&amp;chip=${encodeURIComponent(record.chip)}">Ver este CHIP en el visor documental</a></section>`:'<section class="documentAccess empty"><h4>Documentos del predio</h4><p>No hay vínculos asociados a este CHIP.</p></section>';
- $('parcelDetail').innerHTML=`<div class="detailHead"><h3>${escapeHTML(record.id)}</h3><span class="statusPill" style="--state:${state.color}"><i></i>${state.label}</span></div><div class="joinState ${record.matched?'matched':'unmatched'}">${relationLabel(record)}</div><div class="detailGrid"><div class="detailMetric"><span>LotCodigo SHP</span><b>${escapeHTML(record.lotCode||'Sin dato')}</b></div><div class="detailMetric"><span>CHIP</span><b>${escapeHTML(record.chip||'Sin dato')}</b></div><div class="detailMetric"><span>Estación / tramo</span><b>${escapeHTML(recordSegments(record).join(' · ')||'Sin dato')}</b></div><div class="detailMetric"><span>Área geométrica SHP</span><b>${fmtNumber(record.shpArea)} m²</b></div><div class="detailMetric"><span>Área afectada</span><b>${record.matched?fmtNumber(affectedArea)+' m²':'Sin dato'}</b></div><div class="detailMetric"><span>Localidad</span><b>${escapeHTML(record.locality||'Sin dato')}</b></div><div class="detailMetric"><span>Barrio</span><b>${escapeHTML(record.neighborhood||'Sin dato')}</b></div><div class="detailMetric"><span>Afectación</span><b>${escapeHTML(record.affectation||'Sin dato')}</b></div></div><p class="address">${escapeHTML(record.address||'Dirección no registrada')} · ${escapeHTML(record.destination||'Destino no registrado')}</p>${documentAccess}${process}`;
+ const process=record.matched?`<div class="milestones"><h4>Hitos del proceso</h4>${milestones.map(([label,date])=>`<div class="milestone ${date?'done':''}"><b>${label}</b><span>${fmtDate(date)}</span></div>`).join('')}</div>`:'<div class="unmanagedNotice"><b>Sin gestión de adquisición</b><span>No se encontró correspondencia por CHIP ni por LotCodigo en la plantilla predial suministrada.</span></div>';
+ const catalogChip=record.sourceChip||record.chip;
+ const documentAccess=documents.length?`<section class="documentAccess"><h4>Documentos del predio <span>${documents.length}</span></h4>${documents.map(document=>document.linkUnavailable?`<div class="documentLocked unavailable"><b>${escapeHTML(document.name)}</b><small>El contenedor de origen no está disponible.</small></div>`:document.url?`<button type="button" class="documentLinkButton" data-document-id="${escapeHTML(document.id)}"><b>${escapeHTML(document.name)}</b><small>${document.created?`Creado ${fmtDate(document.created)} · `:''}Abrir en el visor integrado</small></button>`:`<div class="documentLocked"><b>${escapeHTML(document.name)}</b><small>Selecciona el Excel de vínculos para habilitar el acceso en esta sesión.</small></div>`).join('')}<p class="documentAccessStatus" role="status">Los PDF se cargan por bloques dentro del mockup y conservan la escena predial en segundo plano.</p><a class="catalogLink" href="./documents.html?sector=Predial&amp;chip=${encodeURIComponent(catalogChip)}">Ver este CHIP en el visor documental</a></section>`:'<section class="documentAccess empty"><h4>Documentos del predio</h4><p>No hay vínculos asociados a este CHIP.</p></section>';
+ $('parcelDetail').innerHTML=`<div class="detailHead"><h3>${escapeHTML(record.id)}</h3><span class="statusPill" style="--state:${state.color}"><i></i>${state.label}</span></div><div class="joinState ${record.matched?'matched':'unmatched'}">${relationLabel(record)}</div><div class="detailGrid"><div class="detailMetric"><span>${record.hasGeometry?'LotCodigo SHP':'LotCodigo plantilla'}</span><b>${escapeHTML(record.lotCode||'Sin dato')}</b></div><div class="detailMetric"><span>CHIP ${record.hasGeometry?'SHP':''}</span><b>${escapeHTML(record.chip||'Sin dato')}</b></div>${record.sourceChip&&record.sourceChip!==record.chip?`<div class="detailMetric"><span>CHIP plantilla</span><b>${escapeHTML(record.sourceChip)}</b></div>`:''}<div class="detailMetric"><span>Estación / tramo</span><b>${escapeHTML(recordSegments(record).join(' · ')||'Sin dato')}</b></div><div class="detailMetric"><span>Área geométrica SHP</span><b>${record.hasGeometry?fmtNumber(record.shpArea)+' m²':'Sin geometría SHP'}</b></div><div class="detailMetric"><span>Área afectada</span><b>${record.matched?fmtNumber(affectedArea)+' m²':'Sin dato'}</b></div><div class="detailMetric"><span>Localidad</span><b>${escapeHTML(record.locality||'Sin dato')}</b></div><div class="detailMetric"><span>Barrio</span><b>${escapeHTML(record.neighborhood||'Sin dato')}</b></div><div class="detailMetric"><span>Afectación</span><b>${escapeHTML(record.affectation||'Sin dato')}</b></div></div><p class="address">${escapeHTML(record.address||'Dirección no registrada')} · ${escapeHTML(record.destination||'Destino no registrado')}</p>${documentAccess}${process}`;
  render();
 }
 
@@ -203,8 +206,8 @@ function renderMap(list){
 function clearSelection(){selected=null;$('selectionLabel').textContent='Vista general';$('parcelDetail').innerHTML='<div class="emptyDetail"><b>Selecciona un predio</b><span>La ficha mostrará la geometría SHP, la gestión y los documentos relacionados por CHIP.</span></div>';}
 
 function render(){
- const list=visibleRecords();if(selected&&!list.includes(selected))clearSelection();
- renderKpis(list);renderCharts(list);renderMap(list);renderSearchResults(list);
+ const filter=filters(),list=visibleRecords(),searchList=PREDIAL_ALL_RECORDS.filter(record=>matches(record,filter));if(selected&&!matches(selected,filter))clearSelection();
+ renderKpis(list);renderCharts(list);renderMap(list);renderSearchResults(searchList);
 }
 
 function setView(next){view={...next};$('predialMap').setAttribute('viewBox',`${view.x} ${view.y} ${view.w} ${view.h}`);}
@@ -212,7 +215,7 @@ function zoom(factor,cx=view.x+view.w/2,cy=view.y+view.h/2){const nextW=Math.max
 
 function init(){
  $('sourceName').textContent=`${PREDIAL_META.workbookSource} + ${PREDIAL_META.geometrySource} + ${PREDIAL_META.documentSource}`;
- $('joinSummary').textContent=`Cruce por ${PREDIAL_META.joinField}: ${fmtNumber(PREDIAL_META.matchedFeatureCount)} geometrías correlacionadas, ${fmtNumber(PREDIAL_META.unmatchedFeatureCount)} sin gestión y ${fmtNumber(PREDIAL_META.documentCount)} vínculos documentales (${fmtNumber(PREDIAL_META.documentWithChipCount)} con CHIP).`;
+ $('joinSummary').textContent=`Cobertura completa: ${fmtNumber(PREDIAL_META.shpFeatureCount)} geometrías SHP representadas; ${fmtNumber(PREDIAL_META.exactChipMatchedFeatureCount)} cruces por CHIP, ${fmtNumber(PREDIAL_META.lotCodeMatchedFeatureCount)} recuperados por LotCodigo, ${fmtNumber(PREDIAL_META.unmatchedFeatureCount)} sin gestión y ${fmtNumber(PREDIAL_META.sourceOnlyRecordCount)} registros de plantilla sin geometría SHP. ${fmtNumber(PREDIAL_META.documentCount)} vínculos documentales (${fmtNumber(PREDIAL_META.documentWithChipCount)} con CHIP).`;
  $('mapBaseSummary').textContent=`Referencia territorial MapaBaseBogota: ${fmtNumber(MAP_BASE_META.territorialFeatureCount)} elementos de lotes, construcciones, manzanas, sectores, vías y curvas de nivel; L1 con trazado, viaducto y ${fmtNumber(L1_BASE.stations.featureCount)} estaciones.`;
  for(const value of [...new Set(PREDIAL_RECORDS.map(record=>record.locality).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'))){const option=document.createElement('option');option.value=value;option.textContent=value;$('locality').append(option);}
  for(const value of PREDIAL_META.stationSegments||[...new Set(PREDIAL_RECORDS.flatMap(record=>recordSegments(record)))].sort((a,b)=>a.localeCompare(b,'es',{numeric:true}))){const option=document.createElement('option');option.value=value;option.textContent=value;$('segment').append(option);}
@@ -228,7 +231,7 @@ function init(){
  $('toggleL1').onclick=()=>setLayerVisibility('l1',!layerState.l1);
  $('zoomIn').onclick=()=>zoom(.78);$('zoomOut').onclick=()=>zoom(1.28);$('resetView').onclick=()=>setView(initialView);
  const query=new URLSearchParams(location.search),requestedChip=(query.get('chip')||'').toUpperCase().replace(/[^A-Z0-9]/g,'');
- if(requestedChip){$('predialSearch').value=requestedChip;render();const requested=PREDIAL_RECORDS.find(record=>record.chip===requestedChip);if(requested)focusRecord(requested);}
+ if(requestedChip){$('predialSearch').value=requestedChip;render();const requested=PREDIAL_ALL_RECORDS.find(record=>(record.chipAliases||[record.chip]).includes(requestedChip));if(requested)focusRecord(requested);}
  const map=$('predialMap');map.addEventListener('wheel',event=>{event.preventDefault();const rect=map.getBoundingClientRect(),x=view.x+(event.clientX-rect.left)/rect.width*view.w,y=view.y+(event.clientY-rect.top)/rect.height*view.h;zoom(event.deltaY>0?1.14:.87,x,y);},{passive:false});
  map.addEventListener('pointerdown',event=>{drag={x:event.clientX,y:event.clientY,view:{...view}};map.setPointerCapture(event.pointerId);map.classList.add('dragging');});map.addEventListener('pointermove',event=>{if(!drag)return;const rect=map.getBoundingClientRect();setView({...view,x:drag.view.x-(event.clientX-drag.x)/rect.width*drag.view.w,y:drag.view.y-(event.clientY-drag.y)/rect.height*drag.view.h,w:drag.view.w,h:drag.view.h});});map.addEventListener('pointerup',()=>{drag=null;map.classList.remove('dragging');});map.addEventListener('pointercancel',()=>{drag=null;map.classList.remove('dragging');});
 }
