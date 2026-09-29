@@ -44,6 +44,7 @@ function polygonParts(geometry) {
 }
 
 function polygons(group, geometry, color, height, opacity = 1) {
+  const meshes=[];
   for (const rings of polygonParts(geometry)) {
     const shape = new THREE.Shape(rings[0].map(p => new THREE.Vector2(p[0] * scale, p[1] * scale)));
     shape.holes = rings.slice(1).map(r => new THREE.Path(r.map(p => new THREE.Vector2(p[0] * scale, p[1] * scale))));
@@ -53,8 +54,9 @@ function polygons(group, geometry, color, height, opacity = 1) {
     mesh.rotation.x = -Math.PI / 2;
     mesh.position.y = height;
     mesh.renderOrder = opacity < 1 ? 1 : 2;
-    group.add(mesh);
+    group.add(mesh);meshes.push(mesh);
   }
+  return meshes;
 }
 
 function outline(group, geometry, color, height) {
@@ -67,6 +69,7 @@ function outline(group, geometry, color, height) {
 
 export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVisible, volumesVisible = true) {
   const {data} = assets;
+  const progressPickables=[];
   const seismic = new THREE.Group();
   seismic.name = 'Respuesta sísmica';
   seismic.visible = seismicVisible;
@@ -93,8 +96,12 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
     root.add(mesh);
   }
   for (const station of data.stations) {
-    polygons(root, station.geometry, '#fff1bc', .85);
+    const stationMeshes=polygons(root, station.geometry, '#fff1bc', .85);
     outline(root, station.geometry, '#ffffff', .9);
+    for(const mesh of stationMeshes){
+      mesh.userData.progressObject={id:`station:${station.code}`,title:station.name,kind:'Estación',section:'Línea 1',parameters:{'Código':station.code,'Nombre':station.name,'Sistema de referencia':'EPSG:6247'}};
+      progressPickables.push(mesh);
+    }
     const label = addLabel(point(station.center, 1.5).toArray(), () => station.name,
       () => inspectStation({...station, kind: 'station', line: 0, geographic: true}), 'pilotLabel');
     label.geographic = true;
@@ -112,7 +119,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
   const sections=new Map(),ifcSections={};
   for(const definition of assets.ifcModelDefs){
     if(!sections.has(definition.section)){
-      const section=new THREE.Group();section.name='IFC '+definition.section;section.scale.setScalar(scale);section.position.y=placement.streetHeightInScene??.24;ifcGroup.add(section);sections.set(definition.section,{group:section,label:definition.label||('IFC · '+definition.section),definitions:[],bounds:null,promise:null,labelObject:null});
+      const section=new THREE.Group();section.name='IFC '+definition.section;section.scale.setScalar(scale);section.position.y=placement.streetHeightInScene??.24;ifcGroup.add(section);sections.set(definition.section,{group:section,label:definition.label||('IFC · '+definition.section),definitions:[],bounds:null,promise:null,labelObject:null,elementCount:0,progressProxy:null});
     }
     sections.get(definition.section).definitions.push(definition);
   }
@@ -138,9 +145,28 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
     if(!object.isMesh)return;
     let node=object,type=null;
     while(node&&node!==model){if(node.name&&assets.ptHqTypes[node.name]){type=assets.ptHqTypes[node.name];break;}node=node.parent;}
+    object.userData.ifcType=type||'IfcBuildingElementProxy';
     if(type==='IfcOpeningElement'){object.visible=false;return;}
     const material=materialForType(type)||materialForType('IfcBuildingElementProxy');object.material=material;if(material.transparent)object.renderOrder=4;
   });
+  const markIfcProgressObjects=(model,definition,sectionName,entry)=>{
+    let index=0;
+    model.traverse(object=>{
+      if(!object.isMesh||!object.visible)return;
+      index++;
+      let node=object,ifcType=object.userData.ifcType||'';
+      while(!ifcType&&node&&node!==model){if(node.name&&assets.ptHqTypes[node.name])ifcType=assets.ptHqTypes[node.name];node=node.parent;}
+      const elementName=object.name||`Elemento ${String(index).padStart(4,'0')}`;
+      object.userData.progressObject={
+        id:`ifc:${sectionName}:${definition.file}:${index}`,
+        title:`${sectionName} · ${elementName}`,
+        kind:'Elemento IFC',
+        section:sectionName,
+        parameters:{'Sección BIM':sectionName,'Archivo fuente':definition.file,'Elemento':elementName,'Clase IFC':ifcType||'No identificada','Vértices':object.geometry?.getAttribute('position')?.count||0}
+      };
+      entry.elementCount++;
+    });
+  };
   const ifcBounds=new THREE.Box3();
   const ensureIfcSection=async sectionName=>{
     const entry=sections.get(sectionName);
@@ -155,6 +181,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
         const model=asset.scene;
         if(ptHqSections.has(sectionName))stylePtHq(model);
         model.position.set(-placement.gisOrigin[0],-(asset.definition.streetDatum??placement.streetDatum),placement.gisOrigin[1]);
+        markIfcProgressObjects(model,asset.definition,sectionName,entry);
         entry.group.add(model);
       }
       entry.group.updateMatrixWorld(true);
@@ -162,6 +189,9 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
       if(sectionBounds.isEmpty()){const error=new Error('El modelo convertido no contiene geometría visible');error.code='no-geometry';throw error;}
       entry.bounds=sectionBounds;ifcSections[sectionName]=sectionBounds;ifcBounds.union(sectionBounds);
       const sectionCenter=sectionBounds.getCenter(new THREE.Vector3());
+      const sectionSize=sectionBounds.getSize(new THREE.Vector3());
+      const proxy=new THREE.Mesh(new THREE.BoxGeometry(Math.max(sectionSize.x,.1),Math.max(sectionSize.y,.1),Math.max(sectionSize.z,.1)),new THREE.MeshBasicMaterial({transparent:true,opacity:0,depthWrite:false,colorWrite:false}));
+      proxy.position.copy(sectionCenter);proxy.name='Selección '+sectionName;proxy.userData.progressObject={id:`ifc-section:${sectionName}`,title:entry.label,kind:'Modelo IFC',section:sectionName,parameters:{'Sección BIM':sectionName,'Archivos fuente':available.map(definition=>definition.file).join(', '),'Elementos 3D':entry.elementCount,'Sistema de referencia':'EPSG:6247','Ancho aproximado':`${sectionSize.x.toFixed(1)} m`,'Largo aproximado':`${sectionSize.z.toFixed(1)} m`,'Altura aproximada':`${sectionSize.y.toFixed(1)} m`}};root.add(proxy);entry.progressProxy=proxy;progressPickables.push(proxy);
       entry.labelObject=addLabel([sectionCenter.x,sectionBounds.max.y+.6,sectionCenter.z],()=>entry.label,null,'pilotLabel');entry.labelObject.geographic=true;entry.labelObject.ifcSection=sectionName;applySectionAppearance(sectionName,entry);
       return sectionBounds;
     })().catch(error=>{entry.promise=null;throw error;});
@@ -192,5 +222,5 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
   const all = bounds(data.pilot);
   data.zones.forEach(z => all.union(bounds(z.geometry)));
   all.union(bounds(assets.volumesData.corridor));
-  return {seismic, volumes, ifcBounds, ifcSections, ensureIfcSection, setIfcSectionVisibility, sectionDefinitions:sections, pilotBounds: bounds(data.pilot).union(bounds(assets.volumesData.corridor)), fullBounds: all};
+  return {seismic, volumes, ifcBounds, ifcSections, progressPickables, ensureIfcSection, setIfcSectionVisibility, sectionDefinitions:sections, pilotBounds: bounds(data.pilot).union(bounds(assets.volumesData.corridor)), fullBounds: all};
 }
