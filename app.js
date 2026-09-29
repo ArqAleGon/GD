@@ -59,7 +59,99 @@ function bindP6Panels(){
 function renderPanels(){let a='',b='';const view=state.view,network=['network','events','traffic','dispatch'].includes(view);if(network){
  const dashboard=p6Panels();a=dashboard.a;b=dashboard.b;
 }else if(view==='equipment'){
-a=panel('systemTitle',`<div class="metric"><small>UPS</small><b>${state.power?'220':'0'}</b><small>V</small></div>${area(2)}${statsn=1;n<181;n++){const q=curve.getPointAt(n/181);cyl(g,q.x,NETWORK_GROUND_Y+pierHeight/2,q.z,metres(.75),pierHeight,'#7b878a',{roughness:.95});box(g,q.x,NETWORK_GROUND_Y+metres(.25),q.z,metres(2.8),metres(.5),metres(2.8),'#596569');}
+a=panel('systemTitle',`<div class="metric"><small>UPS</small><b>${state.power?'220':'0'}</b><small>V</small></div>${area(2)}${stats([[tr('temperature'),'24.6°'],[tr('humidity'),'45%'],['PUE','1.42']])}`)+panel('stationTitle',table(6,'device'));
+b=panel('workTitle',area(5,'#8ac7c2'))+panel('runTitle',`<div class="ringWrap"><b>${state.power?'98':'0'}</b><small>% ${state.lang==='en'?'Load':'Carga'}</small></div>`)+panel('faultTitle',`<div class="event"><i class="dot ${state.power?'':'red'}"></i> UPS-01 <span style="margin-left:auto">${state.power?'ONLINE':'OFFLINE'}</span></div>${table(3,'device')}`);
+}else if(view==='railway'||view==='maintenance'){
+a=panel('vehicleGroup',`<div class="sub">CRH · G102 / 01</div>${trainDiagram()}${stats([[tr('speed'),'<span id="speedValue">72</span>'],[state.lang==='en'?'Cars':'Coches',6],[state.lang==='en'?'Passengers':'Pasajeros',458]])}${area(4)}`,'flex:1.15')+panel('systemTitle',table(5,'device'));
+b=panel('runTitle',`<div class="gauge"><div><b id="trainSpeed">72</b><small> km/h</small></div></div>${area(7)}`)+panel('stationTitle',`${stats([['DC','1.5kV'],['A','342'],['°C','26']])}${bars([50,56,54,53,57,52,55])}`)+panel('faultTitle',table(3,'device'));
+}else{
+a=panel('stationTitle',`<div class="ringWrap"><b>${state.alarm?'1':'254'}</b><small>${state.alarm?'ALARM':tr('normal')}</small></div>${stats([['CCTV','50'],['AFC','24'],['FAS','32']])}`)+panel('flowTitle',`<div class="metric"><small>${tr('riders')}</small><b>4,462</b></div>${area(1)}${bars([35,73,58,44,65,41,32])}`,'flex:1.5');
+b=panel('systemTitle',`${trainDiagram()}${table(3,'device')}`)+panel('faultTitle',`<div class="event"><i class="dot ${state.alarm?'red':''}"></i>${state.alarm?'FAS-01 · ALARM':tr('normal')}${state.alarm?'<button data-action="ack">'+tr('ack')+'</button>':''}</div>${table(3,'device')}`)+panel('statsTitle',`<div class="ringWrap" style="width:78px;height:78px"><b>98</b><small>%</small></div>${stats([['IN','254'],['OUT','232'],['AFC','24']])}`);
+if(view==='security'||view==='evacuation'){a=panel('security',`<div class="metric"><small>CCTV</small><b>50</b><small>ONLINE</small></div>${[1,2,3,4].map(n=>`<div class="event"><i class="dot"></i> CAM-0${n}<button data-cctv="${n-1}">${state.lang==='en'?'View':'Ver'}</button></div>`).join('')}`)+panel('faultTitle',`<div class="event"><i class="dot ${state.alarm?'red':''}"></i>${state.alarm?'FAS-01 · ALARM':tr('normal')}</div>${state.alarm?'<div class="event">'+(state.lang==='en'?'Concourse · Evacuating':'Vestíbulo · Evacuación')+'<button data-action="ack">'+tr('ack')+'</button></div>':''}${table(5,'device')}`);}
+}
+if(isUrban()){a=panel('netTitle',`<div class="metric"><small>Sector E15–E16</small><b>3,51</b><small>km de L1 disponibles</small></div><p class="sourceNote">${volumeSummary()}</p>`)+a;b=panel('systemTitle',`<p class="sourceNote">La capa sísmica se transformó de EPSG:3857 a EPSG:6247. Se conserva su extensión completa.<br>El fondo urbano cubre el sector E15–E16; fuera de ese ámbito no hay cartografía urbana incorporada.<br>El archivo de L1 contiene un tramo, no la línea completa.</p>`)+b;}
+const p6View=network;$('#panels').innerHTML=`<div class="dashboardSource ${p6View?'p6Source':''}">${p6View?`PRIMAVERA P6 · ${P6.meta.activityCount.toLocaleString('es-CO')} ACTIVIDADES · DATOS POR UE`:(state.lang==='en'?'SIMULATED DATA · No live telemetry connected':'DATOS SIMULADOS · Sin telemetría real conectada')}</div><div class="panelCol">${a}</div><div class="panelCol">${b}</div>`;if(p6View)bindP6Panels();$$('[data-action]').forEach(e=>e.onclick=()=>action(e.dataset.action));$$('[data-cctv]').forEach(e=>e.onclick=()=>openCCTV(+e.dataset.cctv));}
+function button(key,active=false,extra=''){return `<button data-tool="${key}" class="${active?'active':''}" ${extra}>${tr(key)}</button>`}
+function networkModeButton(key,active,swatch){return `<button data-tool="${key}" class="networkModeBtn ${active?'active':''}" aria-pressed="${active}"><i class="lineSwatch ${swatch}"></i>${tr(key)}</button>`}
+const bimModelTools=['patioOverview','ifcE15','ifcI16','ifcE16','ifc102','ifc103','ifc104','ifc105','ifc106','ifc107','ifc108','ifc109','ifc110','ifc111','ifc112'];
+function bimModelMenu(){return `<details class="bimModelMenu"><summary class="bimMenuToggle" data-bim-menu aria-haspopup="menu"><span aria-hidden="true">☰</span>${tr('modelMenu')}<i aria-hidden="true">⌄</i></summary><div class="bimModelMenuPanel" role="menu" aria-label="${tr('modelMenu')}">${bimModelTools.map(key=>button(key,key==='patioOverview'?!activeIfcFocus:ifcToolSections[key]===activeIfcFocus,`aria-pressed="${key==='patioOverview'?!activeIfcFocus:ifcToolSections[key]===activeIfcFocus}"`)).join('')}</div></details>`;}
+function renderToolbar(){let s='';if(['network','events','traffic','dispatch','urban'].includes(state.view)){s=(isUrban()?button('schematic')+bimModelMenu()+button('pov',povMode,`aria-pressed="${povMode}"`)+button('renderSpot',state.renderCompare,`aria-pressed="${state.renderCompare}"`)+button('seismic',state.seismic,`aria-pressed="${state.seismic}"`)+button('volumes',state.volumes,`aria-pressed="${state.volumes}"`)+button('home')+button('fullSeismic')+button('labels',state.labels,`aria-pressed="${state.labels}"`):networkModeButton('lineOne',state.line===0,'lineOneSwatch')+networkModeButton('futureLines',state.line===-1,'futureSwatch')+button('labels',state.labels,`aria-pressed="${state.labels}"`)+button('aerial',state.aerial,`aria-pressed="${state.aerial}"`))}else if(state.view==='equipment'){s=button('home')+button('power',state.power)+button('wire',state.wire)+button('alarm',state.alarm)}else if(state.view==='railway'||state.view==='maintenance'){s=button('home')+button('follow',following)+button('doors',state.doors)+button('wire',state.wire)+button(state.paused?'play':'pause')+button('power',state.power)}else if(state.view==='indoor'){s=button('tour',state.tour)+[0,1,2,3].map(n=>`<button data-cctv="${n}">CAM 0${n+1}</button>`).join('')+button('exit')}else{s=button('floorAll',state.level==='all')+button('floorUpper',state.level==='upper')+button('floorLower',state.level==='lower')+button('explode',state.explode)+button('people',state.people)+button('tour',state.tour)+button('alarm',state.alarm)+button('doors',state.doors)}$('#toolbar').innerHTML=s;$$('[data-tool]').forEach(b=>b.onclick=async()=>{const tool=b.dataset.tool,wrapper=b.closest('.bimModelMenu');wrapper?.removeAttribute('open');$('#app').dataset.lastTool=tool;delete $('#app').dataset.toolError;try{await action(tool)}catch(error){console.error(error);$('#app').dataset.toolError=error?.message||String(error);toast(state.lang==='en'?'The requested action could not be completed':'No se pudo completar la acción solicitada')}});$$('[data-cctv]').forEach(b=>b.onclick=()=>cameraView(+b.dataset.cctv));}
+
+// Escena y geometría WebGL reconstruida; no se usan fotogramas como fondo 3D.
+const canvas=$('#world');let renderer;
+try{renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false,powerPreference:'high-performance'});}catch(e){$('#loader').innerHTML='<p>WebGL no está disponible en este navegador.</p><small>Abre la aplicación con aceleración gráfica habilitada.</small>';throw e;}
+renderer.setPixelRatio(Math.min(devicePixelRatio,1.6));renderer.setSize(innerWidth,innerHeight);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.15;
+const scene=new THREE.Scene();scene.background=new THREE.Color('#030609');
+const camera=new THREE.PerspectiveCamera(44,innerWidth/innerHeight,.15,2200);
+const controls=new OrbitControls(camera,canvas);controls.enableDamping=true;controls.dampingFactor=.065;controls.maxPolarAngle=Math.PI*.49;controls.minDistance=5;controls.maxDistance=650;controls.enablePan=true;controls.autoRotateSpeed=.4;
+scene.add(new THREE.HemisphereLight(0xc7e1f3,0x31343a,2));const sunlight=new THREE.DirectionalLight(0xe3edf5,2.8);sunlight.position.set(-40,100,30);scene.add(sunlight);const fillLight=new THREE.DirectionalLight(0x77a9dd,.6);fillLight.position.set(40,30,-50);scene.add(fillLight);
+let root=new THREE.Group();scene.add(root);let labels=[],pickables=[],animatedTrains=[],persons=[],doors=[],levelUpper,levelLower,roof,evacGroup,heatGroup,aerialLayer,routeGroups=[],racks=[],following=false,tween=null,walk=false,walkYaw=0,walkPitch=0,walkDrag=null,flyTime=0,povMode=false,povYaw=0,povPitch=0,povPivotDistance=8;
+const cube=new THREE.BoxGeometry(1,1,1), cylinder=new THREE.CylinderGeometry(1,1,1,12),sphere=new THREE.SphereGeometry(1,10,8),mats=new Map();
+function mat(color,opts={}){const k=color+JSON.stringify(opts);if(!mats.has(k))mats.set(k,new THREE.MeshStandardMaterial({color,roughness:.72,metalness:.15,...opts}));return mats.get(k)}
+function box(g,x,y,z,w,h,d,color,opts={}){const m=new THREE.Mesh(cube,mat(color,opts));m.position.set(x,y,z);m.scale.set(w,h,d);g.add(m);return m;}
+function cyl(g,x,y,z,r,h,color,opts={}){const m=new THREE.Mesh(cylinder,mat(color,opts));m.position.set(x,y,z);m.scale.set(r,h,r);g.add(m);return m;}
+function ball(g,x,y,z,r,color,opts={}){const m=new THREE.Mesh(sphere,mat(color,opts));m.position.set(x,y,z);m.scale.setScalar(r);g.add(m);return m;}
+function wireBox(m,color='#647887',opacity=.25){const eg=new THREE.EdgesGeometry(cube);const e=new THREE.LineSegments(eg,new THREE.LineBasicMaterial({color,transparent:true,opacity}));m.add(e);return m;}
+function path(g,pts,color,width=.14){const curve=new THREE.CatmullRomCurve3(pts.map(p=>new THREE.Vector3(...p)),false,'centripetal');const geom=new THREE.TubeGeometry(curve,Math.max(16,pts.length*10),width,5,false);const mesh=new THREE.Mesh(geom,mat(color,{emissive:color,emissiveIntensity:.3}));g.add(mesh);return {curve,mesh};}
+function straight(g,pts,color,opacity=1){const geo=new THREE.BufferGeometry().setFromPoints(pts.map(p=>new THREE.Vector3(...p)));const l=new THREE.Line(geo,new THREE.LineBasicMaterial({color,transparent:opacity<1,opacity}));g.add(l);return l;}
+function register(mesh,data){mesh.userData.info=data;pickables.push(mesh);return mesh;}
+function label(pos,text,fn,cls=''){const el=document.createElement('button');el.className='sceneLabel '+cls;el.innerHTML=text();el.onclick=e=>{e.stopPropagation();fn?.()};$('#sceneLabels').append(el);const l={pos:new THREE.Vector3(...pos),text,el};labels.push(l);return l;}
+let seed=1741;function rnd(){seed=(seed*16807)%2147483647;return(seed-1)/2147483646;}
+function clearScene(){scene.remove(root);root.traverse(o=>{if(o.geometry&&!['BoxGeometry','CylinderGeometry','SphereGeometry'].includes(o.geometry.type))o.geometry.dispose();if(o.material?.isLineBasicMaterial)o.material.dispose();});root=new THREE.Group();scene.add(root);labels.forEach(l=>l.el.remove());labels=[];pickables=[];animatedTrains=[];persons=[];doors=[];routeGroups=[];racks=[];levelUpper=levelLower=roof=evacGroup=heatGroup=aerialLayer=null;$('#selection').hidden=true;$('#aerialCredit').hidden=true;seed=1741;}
+function city(g,size=400,count=1150,night=false){box(g,0,-1.5,0,size,2,size,night?'#080f1b':'#0c141d');const geometry=new THREE.BoxGeometry(1,1,1),material=mat(night?'#152337':'#17202b');const inst=new THREE.InstancedMesh(geometry,material,count);const dummy=new THREE.Object3D();for(let i=0;i<count;i++){let x=(rnd()-.5)*size*.92,z=(rnd()-.5)*size*.92;const riverX=-60+Math.sin(z*.012)*15;if(Math.abs(x-riverX)<13){x+=35}let h=1+rnd()*6;if(night)h*=1.8;dummy.position.set(x,h/2-.5,z);dummy.scale.set(2+rnd()*6,h,2+rnd()*5);dummy.rotation.set(0,0,0);dummy.updateMatrix();inst.setMatrixAt(i,dummy.matrix);}g.add(inst);
+for(let i=-size/2;i<size/2;i+=13){straight(g,[[i,.01,-size/2],[i,.01,size/2]],night?'#22374d':'#202d3a',.45);straight(g,[[-size/2,.01,i],[size/2,.01,i]],night?'#22374d':'#202d3a',.45)}
+const shape=new THREE.Shape();for(let z=-size/2;z<=size/2;z+=10){let x=-60+Math.sin(z*.012)*15;if(z===-size/2)shape.moveTo(x-12,z);else shape.lineTo(x-12,z);}for(let z=size/2;z>=-size/2;z-=10)shape.lineTo(-60+Math.sin(z*.012)*15+10,z);shape.closePath();const river=new THREE.Mesh(new THREE.ShapeGeometry(shape),mat('#051321',{roughness:.2,metalness:.5}));river.rotation.x=-Math.PI/2;river.position.y=.2;g.add(river);}
+const NETWORK_GROUND_Y=-.38,metres=value=>value*METRES_TO_WORLD;
+function alignToRoute(mesh,tangent){mesh.rotation.y=-Math.atan2(tangent.z,tangent.x);return mesh;}
+function closestRouteTangent(route,point){
+ let best=Infinity,tangent=new THREE.Vector3(1,0,0);
+ for(let index=1;index<route.length;index++){
+  const a=route[index-1],b=route[index],dx=b[0]-a[0],dy=b[1]-a[1],length=dx*dx+dy*dy;if(!length)continue;
+  const progress=THREE.MathUtils.clamp(((point[0]-a[0])*dx+(point[1]-a[1])*dy)/length,0,1),x=a[0]+dx*progress,y=a[1]+dy*progress,distance=(point[0]-x)**2+(point[1]-y)**2;
+  if(distance<best){best=distance;tangent.set(dx,0,dy).normalize();}
+ }
+ return tangent;
+}
+function metroTrainBadge(id){
+ const canvas=document.createElement('canvas');canvas.width=512;canvas.height=128;const context=canvas.getContext('2d');
+ context.fillStyle='#071019e8';context.fillRect(0,0,512,128);context.strokeStyle='#ed1400';context.lineWidth=8;context.strokeRect(4,4,504,120);context.fillStyle='#ffffff';context.font='700 58px Arial';context.textAlign='center';context.textBaseline='middle';context.fillText(`Tren ${id}`,256,66);
+ const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;
+ const badge=new THREE.Sprite(new THREE.SpriteMaterial({map:texture,transparent:true,depthTest:false,depthWrite:false}));badge.scale.set(5.4,1.35,1);badge.position.y=2.55;badge.renderOrder=26;return badge;
+}
+function makeNetworkMetroTrain(id){
+ const train=new THREE.Group();train.name=`Tren Metro de Bogotá ${id}`;const cars=6,carLength=1.95,gap=.11,total=cars*carLength+(cars-1)*gap;
+ for(let index=0;index<cars;index++){
+  const car=new THREE.Group();car.position.x=-total/2+carLength/2+index*(carLength+gap);train.add(car);
+  const body=box(car,0,.75,0,carLength,.94,1.68,'#ed1400',{metalness:.34,roughness:.38});register(body,{kind:'train',id,line:0});
+  box(car,0,1.18,0,carLength*.96,.44,1.62,'#e9edef',{metalness:.58,roughness:.28});
+  box(car,0,1.46,0,carLength*.86,.14,1.42,'#7c8589',{metalness:.52,roughness:.35});
+  for(const side of [-1,1]){
+   box(car,0,.56,side*.855,carLength*.96,.065,.04,'#f2c400',{emissive:'#b98f00',emissiveIntensity:.45});
+   for(const x of [-.58,0,.58])box(car,x,1.18,side*.835,.4,.28,.04,'#07131e',{metalness:.72,roughness:.16});
+   box(car,0,.91,side*.86,.32,.49,.03,'#cfd5d7',{metalness:.58,roughness:.28});
+  }
+  for(const wheelX of [-.62,.62])for(const side of [-1,1]){const wheel=cyl(car,wheelX,.24,side*.6,.18,.14,'#151a1d',{metalness:.72,roughness:.42});wheel.rotation.x=Math.PI/2;}
+  if(index===0||index===cars-1){const end=index===0?-1:1;box(car,end*(carLength/2+.012),1.08,0,.04,.65,1.32,'#08131b',{metalness:.28,roughness:.2});for(const side of [-1,1])box(car,end*(carLength/2+.034),.68,side*.46,.03,.14,.22,'#fff7d0',{emissive:'#fff0a2',emissiveIntensity:2});}
+ }
+ train.add(metroTrainBadge(id));return train;
+}
+function buildSchematicNetwork(){
+ const bogotaContext=buildBogotaContext(root,label,item=>{const pos=cityPoint(item.anchor);go([pos[0]+metres(520),Math.max(9,pos[1]+metres(420)),pos[2]+metres(720)],pos);$('#modalContent').innerHTML=`<h2>${item.name}</h2><p>${item.description}</p><p>Altura métrica a escala 1:1: CONNPISOS × 3 m.</p>`;$('#modal').showModal();});aerialLayer=bogotaContext.userData.aerial?.mesh||null;if(aerialLayer)aerialLayer.visible=state.aerial;$('#aerialCredit').hidden=!state.aerial;heatGroup=new THREE.Group();root.add(heatGroup);
+ roadLabels.forEach((road,index)=>{
+  const pos=cityPoint(road.xy,NETWORK_GROUND_Y+metres(3.2));
+  const l=label(pos,()=>`<span>${road.name}</span><small>${road.routeCode}</small>`,null,'roadLabel');
+  l.road=true;l.offsetY=index%2?-5:-16;
+ });
+ networkLines.forEach((line,i)=>{
+  const g=new THREE.Group();root.add(g);routeGroups.push(g);
+  const routeHeight=NETWORK_GROUND_Y+metres(i===0?14.2:5.5),world=([x,y],h=routeHeight)=>new THREE.Vector3(...cityPoint([x,y],h));
+  const lineCurve=h=>{const c=new THREE.CurvePath();line.path.forEach((p,j)=>{if(j)c.add(new THREE.LineCurve3(world(line.path[j-1],h),world(p,h)))});return c;};
+  const curve=lineCurve(routeHeight);
+  if(i===0){
+   const deckY=NETWORK_GROUND_Y+metres(12.4),deckThickness=metres(1.25),deckWidth=metres(10.8);
+   line.path.forEach((point,index)=>{if(!index)return;const a=world(line.path[index-1],deckY),b=world(point,deckY),mid=a.clone().add(b).multiplyScalar(.5),length=Math.hypot(b.x-a.x,b.z-a.z),tangent=b.clone().sub(a);const slab=box(g,mid.x,deckY,mid.z,length,deckThickness,deckWidth,'#8b9698',{roughness:.92});alignToRoute(slab,tangent);});
+   const pierTop=deckY-deckThickness/2,pierHeight=pierTop-NETWORK_GROUND_Y;
+   for(let n=1;n<181;n++){const q=curve.getPointAt(n/181);cyl(g,q.x,NETWORK_GROUND_Y+pierHeight/2,q.z,metres(.75),pierHeight,'#7b878a',{roughness:.95});box(g,q.x,NETWORK_GROUND_Y+metres(.25),q.z,metres(2.8),metres(.5),metres(2.8),'#596569');}
    const rail=new THREE.Mesh(new THREE.TubeGeometry(lineCurve(NETWORK_GROUND_Y+metres(13.25)),Math.max(96,line.path.length*12),metres(.18),5,false),mat('#e8eef0',{metalness:.72,roughness:.22}));g.add(rail);
   }
   if(i===0){
