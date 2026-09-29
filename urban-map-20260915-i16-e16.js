@@ -88,7 +88,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
   for (const coords of routePoints) {
     const curve = new THREE.CurvePath();
     for (let i = 1; i < coords.length; i++) curve.add(new THREE.LineCurve3(point(coords[i - 1], .65), point(coords[i], .65)));
-    const mesh = new THREE.Mesh(new THREE.TubeGeometry(curve, Math.max(100, coords.length * 2), .48, 6, false), new THREE.MeshBasicMaterial({color: '#ff334f'}));
+    const mesh = new THREE.Mesh(new THREE.TubeGeometry(curve, Math.max(100, coords.length * 2), .48, 6, false), new THREE.MeshBasicMaterial({color: '#ed1400'}));
     mesh.renderOrder = 4; mesh.userData.renderComparisonHidden=true;
     root.add(mesh);
   }
@@ -162,14 +162,19 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, seismicVis
       if(sectionBounds.isEmpty()){const error=new Error('El modelo convertido no contiene geometría visible');error.code='no-geometry';throw error;}
       entry.bounds=sectionBounds;ifcSections[sectionName]=sectionBounds;ifcBounds.union(sectionBounds);
       const sectionCenter=sectionBounds.getCenter(new THREE.Vector3());
-      entry.labelObject=addLabel([sectionCenter.x,sectionBounds.max.y+.6,sectionCenter.z],()=>entry.label,null,'pilotLabel');entry.labelObject.geographic=true;entry.labelObject.ifcSection=sectionName;
+      entry.labelObject=addLabel([sectionCenter.x,sectionBounds.max.y+.6,sectionCenter.z],()=>entry.label,null,'pilotLabel');entry.labelObject.geographic=true;entry.labelObject.ifcSection=sectionName;applySectionAppearance(sectionName,entry);
       return sectionBounds;
     })().catch(error=>{entry.promise=null;throw error;});
     return entry.promise;
   };
-  const setIfcSectionVisibility=sectionName=>{
-    for(const [name,entry] of sections){const visible=!sectionName||name===sectionName;entry.group.visible=visible;if(entry.labelObject)entry.labelObject.filterVisible=visible;}
+  const ghostMaterial=new THREE.MeshBasicMaterial({color:'#a8cfdd',transparent:true,opacity:.14,depthWrite:false,side:THREE.DoubleSide,toneMapped:false});
+  let focusedSection=null;
+  const applySectionAppearance=(name,entry)=>{
+    const ghosted=Boolean(focusedSection&&name!==focusedSection);entry.group.visible=true;
+    entry.group.traverse(object=>{if(!object.isMesh)return;if(!Object.prototype.hasOwnProperty.call(object.userData,'bimOriginalMaterial')){object.userData.bimOriginalMaterial=object.material;object.userData.bimOriginalRenderOrder=object.renderOrder;}object.material=ghosted?ghostMaterial:object.userData.bimOriginalMaterial;object.renderOrder=ghosted?1:object.userData.bimOriginalRenderOrder;});
+    if(entry.labelObject){entry.labelObject.filterVisible=true;entry.labelObject.el?.classList.toggle('ifcGhostLabel',ghosted);}
   };
+  const setIfcSectionVisibility=sectionName=>{focusedSection=sectionName||null;for(const [name,entry] of sections)applySectionAppearance(name,entry);};
   const bounds = geometry => {
     const box = new THREE.Box3();
     const visit = c => typeof c[0] === 'number' ? box.expandByPoint(point(c)) : c.forEach(visit);

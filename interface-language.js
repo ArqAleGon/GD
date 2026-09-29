@@ -27,7 +27,7 @@ const phrases = {
   'Colores por categoría, no por nivel de riesgo.':'Colors indicate categories, not risk levels.',
   'Respuesta sísmica oculta.':'Seismic response hidden.',
   'Respuesta sísmica':'Seismic response',
-  'Datos integrados · EPSG:6247':'Integrated data · EPSG:6247',
+  'Modelos BIM Integrados · EPSG:6247':'Integrated BIM Models · EPSG:6247',
   'Contexto urbano interpretativo, no georreferenciado':'Interpretive urban context, not georeferenced',
   'Tren simulado · 6 coches':'Simulated train · 6 cars',
   'Red futura referencial':'Indicative future network',
@@ -90,4 +90,3 @@ function apply() {
 }
 const observer = new MutationObserver(apply);
 export function localizeInterface(lang) {language=lang;apply();}
-
