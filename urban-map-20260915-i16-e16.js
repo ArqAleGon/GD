@@ -192,7 +192,8 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
       const sectionSize=sectionBounds.getSize(new THREE.Vector3());
       const proxy=new THREE.Mesh(new THREE.BoxGeometry(Math.max(sectionSize.x,.1),Math.max(sectionSize.y,.1),Math.max(sectionSize.z,.1)),new THREE.MeshBasicMaterial({transparent:true,opacity:0,depthWrite:false,colorWrite:false}));
       proxy.position.copy(sectionCenter);proxy.name='Selección '+sectionName;proxy.userData.progressObject={id:`ifc-section:${sectionName}`,title:entry.label,kind:'Modelo IFC',section:sectionName,parameters:{'Sección BIM':sectionName,'Archivos fuente':available.map(definition=>definition.file).join(', '),'Elementos 3D':entry.elementCount,'Sistema de referencia':'EPSG:6247','Ancho aproximado':`${sectionSize.x.toFixed(1)} m`,'Largo aproximado':`${sectionSize.z.toFixed(1)} m`,'Altura aproximada':`${sectionSize.y.toFixed(1)} m`}};root.add(proxy);entry.progressProxy=proxy;progressPickables.push(proxy);
-      entry.labelObject=addLabel([sectionCenter.x,sectionBounds.max.y+.6,sectionCenter.z],()=>`<span class="bimSpotDot" aria-hidden="true">◎</span>${entry.label}`,event=>activateProgressObject?.({...proxy.userData.progressObject,mesh:proxy},event),'pilotLabel bimProgressSpot');entry.labelObject.geographic=true;entry.labelObject.ifcSection=sectionName;entry.labelObject.el.title='Consultar o registrar avance del edificio';applySectionAppearance(sectionName,entry);
+      entry.labelObject=addLabel([sectionCenter.x,sectionBounds.max.y+.6,sectionCenter.z],()=>`<span class="bimSpotDot" aria-hidden="true">◎</span>${entry.label}`,event=>activateProgressObject?.({...proxy.userData.progressObject,mesh:proxy},event),'pilotLabel bimProgressSpot');entry.labelObject.geographic=true;entry.labelObject.ifcSection=sectionName;entry.labelObject.el.title='Consultar o registrar avance del edificio';
+      entry.registerLabelObject=addLabel([sectionCenter.x,sectionBounds.max.y+.6,sectionCenter.z],()=>'<span aria-hidden="true">＋</span> Registro',()=>{location.href=`./model-register.html?section=${encodeURIComponent(sectionName)}`;},'pilotLabel bimRegisterSpot');entry.registerLabelObject.geographic=true;entry.registerLabelObject.ifcSection=sectionName;entry.registerLabelObject.offsetY=31;entry.registerLabelObject.el.title=`Abrir escena de registro de ${sectionName}`;applySectionAppearance(sectionName,entry);
       return sectionBounds;
     })().catch(error=>{entry.promise=null;throw error;});
     return entry.promise;
@@ -210,7 +211,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
       object.material=ghosted?ghostMaterial:object.userData.bimOriginalMaterial;
       object.renderOrder=ghosted?1:object.userData.bimOriginalRenderOrder;
     });
-    if(entry.labelObject){entry.labelObject.filterVisible=true;entry.labelObject.el?.classList.toggle('ifcGhostLabel',ghosted);}
+    if(entry.labelObject){entry.labelObject.filterVisible=true;entry.labelObject.el?.classList.toggle('ifcGhostLabel',ghosted);}if(entry.registerLabelObject){entry.registerLabelObject.filterVisible=true;entry.registerLabelObject.el?.classList.toggle('ifcGhostLabel',ghosted);}
   };
   const setIfcSectionVisibility=sectionName=>{focusedSection=sectionName||null;for(const [name,entry] of sections)applySectionAppearance(name,entry);};
   const pickProgressElement=raycaster=>{
@@ -245,3 +246,4 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
   all.union(bounds(assets.volumesData.corridor));
   return {seismic, volumes, ifcBounds, ifcSections, progressPickables, pickProgressElement, ensureIfcSection, setIfcSectionVisibility, sectionDefinitions:sections, pilotBounds: bounds(data.pilot).union(bounds(assets.volumesData.corridor)), fullBounds: all};
 }
+

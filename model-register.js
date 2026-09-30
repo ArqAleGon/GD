@@ -1,0 +1,141 @@
+import * as THREE from 'three';
+import {OrbitControls} from './vendor/OrbitControls.js';
+import {GLTFLoader} from './GLTFLoader.js';
+import {MeshoptDecoder} from './meshopt_decoder.module.js';
+import {appendProgressRecord,loadProgressRecords,summarizeProgress} from './object-progress.js?v=20260930-registration-v1';
+import {elementFromMetadata,matchesRegistrationFilters,recordsForRegistrationElement,registrationTarget} from './bim-registration-state.js?v=20260930-registration-v1';
+
+const $=id=>document.getElementById(id);
+const safe=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
+const query=new URLSearchParams(location.search);
+const section=(query.get('section')||'PT108').toUpperCase();
+const typeLabels={IfcWall:'Muro',IfcWallStandardCase:'Muro',IfcSlab:'Losa / piso',IfcWindow:'Ventana',IfcDoor:'Puerta',IfcColumn:'Columna',IfcBeam:'Viga',IfcMember:'Elemento estructural',IfcPlate:'Placa',IfcRoof:'Cubierta',IfcCovering:'Revestimiento',IfcCurtainWall:'Muro cortina',IfcRailing:'Baranda',IfcStair:'Escalera',IfcStairFlight:'Tramo de escalera',IfcFlowTerminal:'Luminaria / terminal',IfcFlowSegment:'Segmento de instalación',IfcElementAssembly:'Conjunto',IfcBuildingElementProxy:'Elemento arquitectónico'};
+const typeLabel=type=>typeLabels[type]||String(type||'Elemento IFC').replace(/^Ifc/,'');
+const filters={id:'',activityId:'',executionUnit:'',ifcType:'',level:''};
+let activities=[],activityById=new Map(),manifestEntry=null,elementPayload=null,elements=[],meshPickables=[],selectedElement=null,progressRecords=loadProgressRecords(),highlight=null,isolate=false,toastTimer;
+
+async function loadGzipJSON(url){
+  const response=await fetch(url);if(!response.ok)throw new Error(`No se pudo cargar ${url}`);
+  const stream=response.body.pipeThrough(new DecompressionStream('gzip'));
+  return JSON.parse(await new Response(stream).text());
+}
+
+function toast(message){$('toast').textContent=message;$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),2600);}
+function option(value,label=value){return `<option value="${safe(value)}">${safe(label)}</option>`;}
+function unique(values){return [...new Set(values.filter(value=>value&&value!=='Sin UE'&&value!=='Sin nivel'))].sort((a,b)=>String(a).localeCompare(String(b),'es',{numeric:true}));}
+function bogotaToday(){return new Intl.DateTimeFormat('en-CA',{timeZone:'America/Bogota',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());}
+
+const canvas=$('modelCanvas');
+const renderer=new THREE.WebGLRenderer({canvas,antialias:true,powerPreference:'high-performance'});
+renderer.setPixelRatio(Math.min(devicePixelRatio,1.7));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.08;
+const scene=new THREE.Scene();scene.background=new THREE.Color('#061019');
+const camera=new THREE.PerspectiveCamera(42,1,.05,20000);camera.position.set(22,18,24);
+const controls=new OrbitControls(camera,canvas);controls.enableDamping=true;controls.dampingFactor=.08;controls.screenSpacePanning=true;controls.minDistance=.2;controls.maxDistance=12000;
+scene.add(new THREE.HemisphereLight('#cdeaff','#392f28',2.2));const sun=new THREE.DirectionalLight('#fff2df',3.6);sun.position.set(30,60,42);scene.add(sun);const fill=new THREE.DirectionalLight('#7fc8ff',1.1);fill.position.set(-45,25,-35);scene.add(fill);
+const modelRoot=new THREE.Group();scene.add(modelRoot);
+const materialCache=new Map();
+const materialSpecs={IfcMember:['#5a7182',.7,.15,1],IfcBeam:['#708593',.68,.12,1],IfcPlate:['#b7c3c8',.72,.07,1],IfcWallStandardCase:['#dce5e7',.8,.03,1],IfcWall:['#d8e2e4',.8,.03,1],IfcSlab:['#c5d0d3',.84,.03,1],IfcRoof:['#bdcbd1',.72,.08,1],IfcWindow:['#6fa7bd',.25,.12,.38],IfcCurtainWall:['#6296aa',.3,.12,.42],IfcDoor:['#765b45',.7,.04,1],IfcRailing:['#455d6c',.55,.23,1],IfcStairFlight:['#9eacb2',.76,.06,1],IfcStair:['#9eacb2',.76,.06,1],IfcCovering:['#bdc8ca',.8,.03,1],IfcFlowTerminal:['#697e88',.62,.14,1],IfcBuildingElementProxy:['#879aa2',.75,.05,1]};
+function materialFor(type){
+  const key=materialSpecs[type]?type:'IfcBuildingElementProxy';if(materialCache.has(key))return materialCache.get(key);
+  const [color,,,opacity]=materialSpecs[key];const material=new THREE.MeshBasicMaterial({color,transparent:opacity<1,opacity,depthWrite:opacity>=1,side:THREE.DoubleSide,toneMapped:false});materialCache.set(key,material);return material;
+}
+
+function guidFor(object){let node=object;while(node&&node!==modelRoot){if(elementPayload?.elements?.[node.name])return node.name;node=node.parent;}return object.name||'';}
+function addLoadedScene(assetScene){
+  modelRoot.add(assetScene);
+  const byGuid=new Map(elements.map(element=>[element.guid,element]));
+  assetScene.traverse(object=>{
+    if(!object.isMesh)return;
+    const guid=guidFor(object);const raw=elementPayload.elements[guid]||{t:'IfcBuildingElementProxy',u:'Sin UE',l:'Sin nivel',n:object.name,i:guid,f:manifestEntry.sources?.[0]||'',s:section};
+    let element=byGuid.get(guid);
+    if(!element){element=elementFromMetadata(guid,raw,activities);element.progressObjectId=`ifc-element:${element.section}:${element.source}:${element.guid}`;element.meshes=[];elements.push(element);byGuid.set(guid,element);}
+    element.meshes.push(object);object.userData.registrationElement=element;object.material=materialFor(element.ifcType);if(object.material.transparent)object.renderOrder=4;
+    if(!object.geometry.boundingBox)object.geometry.computeBoundingBox();meshPickables.push(object);
+  });
+}
+
+function setSelectOptions(){
+  const units=unique(elements.map(element=>element.executionUnit));
+  const types=unique(elements.map(element=>element.ifcType));
+  const levels=unique(elements.map(element=>element.level));
+  const activityIds=unique(elements.flatMap(element=>element.activityIds));
+  $('filterUE').innerHTML=option('','Todas las UE')+units.map(value=>option(value,`UE ${value}`)).join('');
+  $('filterType').innerHTML=option('','Todos los tipos')+types.map(value=>option(value,`${typeLabel(value)} · ${value}`)).join('');
+  $('filterLevel').innerHTML=option('','Todos los niveles')+levels.map(value=>option(value)).join('');
+  $('filterActivity').innerHTML=option('','Todos los ActivityID')+activityIds.map(value=>option(value,`${value} · ${activityById.get(value)?.name||''}`)).join('');
+}
+
+function applyFilters(){
+  let visible=0;
+  for(const element of elements){const show=isolate?element===selectedElement:matchesRegistrationFilters(element,filters);element.visible=show;if(show)visible++;for(const mesh of element.meshes)mesh.visible=show;}
+  $('visibleCount').textContent=visible.toLocaleString('es-CO');$('isolateSelected').classList.toggle('active',isolate);$('isolateSelected').textContent=isolate?'Restablecer aislamiento':'Aislar selección';
+  if(selectedElement&&!selectedElement.visible&&!isolate)clearHighlight();else if(selectedElement)highlightElement(selectedElement);
+}
+
+function clearHighlight(){if(highlight){scene.remove(highlight);highlight.geometry?.dispose?.();highlight.material?.dispose?.();highlight=null;}}
+function elementBounds(element){const box=new THREE.Box3();for(const mesh of element.meshes)if(mesh.visible)box.expandByObject(mesh,true);return box;}
+function highlightElement(element){clearHighlight();const box=elementBounds(element);if(box.isEmpty())return;highlight=new THREE.Box3Helper(box,0xffcf54);highlight.material.depthTest=false;highlight.renderOrder=999;scene.add(highlight);}
+function selectElement(element){selectedElement=element;isolate=false;highlightElement(element);$('isolateSelected').disabled=false;renderConsult();}
+
+function historyHtml(records){
+  if(!records.length)return '<p class="emptyHistory">Este elemento todavía no tiene registros directos ni registros heredados por ActivityID o UE.</p>';
+  return `<div class="history">${records.map(record=>`<article><strong>${safe(record.progress)} %</strong><span><b>${safe(record.userName)}</b><small>${safe(new Date(record.date+'T12:00:00').toLocaleDateString('es-CO'))} · ${safe(record.kind)}${record.scopeValue?` · ${safe(record.scopeValue)}`:''}</small></span></article>`).join('')}</div>`;
+}
+function inspectorHead(element){return `<header class="inspectorHead"><span>ELEMENTO IFC SELECCIONADO</span><h2>${safe(typeLabel(element.ifcType))} · ${safe(element.guid)}</h2><p>${safe(section)} · ${safe(element.level)}</p></header>`;}
+function actionBar(active){return `<div class="inspectorActions"><button data-inspector="consult" class="${active==='consult'?'active':''}">Consultar</button><button data-inspector="register" class="${active==='register'?'active':''}">Registrar</button></div>`;}
+function bindInspectorActions(){document.querySelectorAll('[data-inspector]').forEach(button=>button.onclick=()=>button.dataset.inspector==='consult'?renderConsult():renderScopeChooser());}
+function renderConsult(){
+  if(!selectedElement)return;const element=selectedElement,records=recordsForRegistrationElement(progressRecords,element);
+  const activitiesText=element.activityIds.length?element.activityIds.map(id=>`${id} · ${activityById.get(id)?.name||''}`).join(' | '):'Sin ActivityID vinculado por UE';
+  $('inspector').innerHTML=inspectorHead(element)+`<div class="inspectorBody">${actionBar('consult')}<table class="parameterTable"><tbody><tr><th>ID</th><td>${safe(element.id)}</td></tr><tr><th>GlobalId</th><td>${safe(element.guid)}</td></tr><tr><th>ActivityID</th><td>${safe(activitiesText)}</td></tr><tr><th>ExecutionUnit</th><td>${safe(element.executionUnit)}</td></tr><tr><th>Tipo de elemento</th><td>${safe(typeLabel(element.ifcType))} · ${safe(element.ifcType)}</td></tr><tr><th>Level</th><td>${safe(element.level)}</td></tr><tr><th>Nombre IFC</th><td>${safe(element.name)}</td></tr><tr><th>Archivo fuente</th><td>${safe(element.source)}</td></tr></tbody></table><h3 class="historyTitle">Historial · ${records.length}</h3>${historyHtml(records)}</div>`;
+  bindInspectorActions();
+}
+function renderScopeChooser(){
+  if(!selectedElement)return;const element=selectedElement,hasActivity=element.activityIds.length>0,hasUE=element.executionUnit&&element.executionUnit!=='Sin UE';
+  $('inspector').innerHTML=inspectorHead(element)+`<div class="inspectorBody">${actionBar('register')}<p class="scopeIntro">Selecciona el alcance de la nueva entrada. El registro quedará disponible para consulta posterior y actualizará los indicadores de avance.</p><div class="scopeButtons"><button data-scope="element"><b>1. Por elemento</b><small>Solo ${safe(element.guid)}</small></button><button data-scope="activity" ${hasActivity?'':'disabled'}><b>2. Por ActivityID</b><small>${hasActivity?`${element.activityIds.length} actividades vinculadas mediante UE ${safe(element.executionUnit)}`:'Sin ActivityID vinculado'}</small></button><button data-scope="ue" ${hasUE?'':'disabled'}><b>3. Por UE</b><small>${hasUE?`UE ${safe(element.executionUnit)}`:'Elemento sin UE asignada'}</small></button></div></div>`;
+  bindInspectorActions();document.querySelectorAll('[data-scope]').forEach(button=>button.onclick=()=>renderRegisterForm(button.dataset.scope));
+}
+function renderRegisterForm(scopeType){
+  const element=selectedElement;if(!element)return;const activitiesOptions=element.activityIds.map(id=>option(id,`${id} · ${activityById.get(id)?.name||''}`)).join('');
+  const selector=scopeType==='activity'?`<label>ActivityID<select name="scopeValue" required>${option('','Selecciona una actividad')}${activitiesOptions}</select></label>`:scopeType==='ue'?`<input type="hidden" name="scopeValue" value="${safe(element.executionUnit)}"><div class="scopeBadge">UE ${safe(element.executionUnit)}</div>`:`<input type="hidden" name="scopeValue" value="${safe(element.guid)}"><div class="scopeBadge">Elemento ${safe(element.guid)}</div>`;
+  $('inspector').innerHTML=inspectorHead(element)+`<div class="inspectorBody">${actionBar('register')}<form id="registrationForm" class="registerForm">${selector}<label>Nombre de usuario<input name="userName" required maxlength="100" autocomplete="name" placeholder="Responsable del registro"></label><label>Fecha<input name="date" type="date" required value="${bogotaToday()}"></label><label>Porcentaje de avance<input name="progress" type="number" min="0" max="100" step="0.01" required placeholder="0–100"></label><p id="formError" class="formError" role="alert"></p><p class="storageNote">Los registros se conservan localmente en este navegador y no modifican el IFC ni el archivo Primavera P6.</p><div class="formActions"><button type="button" id="scopeBack">Atrás</button><button class="primary" type="submit">Guardar registro</button></div></form></div>`;
+  bindInspectorActions();$('scopeBack').onclick=renderScopeChooser;$('registrationForm').onsubmit=event=>{event.preventDefault();const data=new FormData(event.currentTarget);try{const target=registrationTarget(element,scopeType,data.get('scopeValue'));const result=appendProgressRecord(localStorage,{...target,userName:data.get('userName'),date:data.get('date'),progress:data.get('progress')});progressRecords=result.records;updateKpis();toast(`Avance de ${result.record.progress} % registrado para ${target.objectTitle}`);renderConsult();}catch(error){$('formError').textContent=error?.message||'No fue posible guardar el registro.';}};
+}
+
+function updateKpis(){const relevant=progressRecords.filter(record=>record.section===section),summary=summarizeProgress(relevant),units=unique(elements.map(element=>element.executionUnit));$('kpiElements').textContent=elements.length.toLocaleString('es-CO');$('kpiUE').textContent=units.length.toLocaleString('es-CO');$('kpiRecords').textContent=relevant.length.toLocaleString('es-CO');$('kpiProgress').textContent=summary.objects?`${Math.round(summary.average)} %`:'—';}
+function resize(){const rect=canvas.getBoundingClientRect();renderer.setSize(Math.max(1,rect.width),Math.max(1,rect.height),false);camera.aspect=rect.width/Math.max(1,rect.height);camera.updateProjectionMatrix();}
+new ResizeObserver(resize).observe(canvas);
+function fitModel(direction='iso'){const box=isolate&&selectedElement?elementBounds(selectedElement):new THREE.Box3().setFromObject(modelRoot,true);if(box.isEmpty())return;const center=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3()),radius=Math.max(size.length()*.55,2),distance=radius/Math.tan(THREE.MathUtils.degToRad(camera.fov*.5))*1.15;const dir=direction==='top'?new THREE.Vector3(.001,1,.001):direction==='front'?new THREE.Vector3(0,.12,1):new THREE.Vector3(.72,.52,1);dir.normalize();camera.position.copy(center).addScaledVector(dir,distance);controls.target.copy(center);controls.update();camera.near=Math.max(.02,distance/5000);camera.far=Math.max(2000,distance*20);camera.updateProjectionMatrix();}
+
+let pointerDown=null;const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();
+function elementAt(event){const rect=canvas.getBoundingClientRect();pointer.set((event.clientX-rect.left)/rect.width*2-1,-(event.clientY-rect.top)/rect.height*2+1);raycaster.setFromCamera(pointer,camera);return raycaster.intersectObjects(meshPickables.filter(mesh=>mesh.visible),false)[0]?.object?.userData?.registrationElement||null;}
+canvas.addEventListener('pointerdown',event=>{pointerDown={x:event.clientX,y:event.clientY,button:event.button};});
+canvas.addEventListener('pointerup',event=>{if(!pointerDown||Math.hypot(event.clientX-pointerDown.x,event.clientY-pointerDown.y)>6)return;const element=elementAt(event);if(element)selectElement(element);pointerDown=null;});
+canvas.addEventListener('contextmenu',event=>{event.preventDefault();const element=elementAt(event);if(element)selectElement(element);});
+
+function bindFilters(){
+  $('filterId').addEventListener('input',event=>{filters.id=event.target.value;isolate=false;applyFilters();});
+  for(const [id,key] of [['filterActivity','activityId'],['filterUE','executionUnit'],['filterType','ifcType'],['filterLevel','level']])$(id).addEventListener('change',event=>{filters[key]=event.target.value;isolate=false;applyFilters();});
+  $('resetFilters').onclick=()=>{Object.assign(filters,{id:'',activityId:'',executionUnit:'',ifcType:'',level:''});$('filterId').value='';for(const id of ['filterActivity','filterUE','filterType','filterLevel'])$(id).value='';isolate=false;applyFilters();fitModel();};
+  $('isolateSelected').onclick=()=>{if(!selectedElement)return;isolate=!isolate;applyFilters();if(isolate)fitModel();};
+  $('fitModel').onclick=()=>fitModel();$('topView').onclick=()=>fitModel('top');$('frontView').onclick=()=>fitModel('front');
+}
+
+async function init(){
+  try{
+    const [manifest,primavera]=await Promise.all([fetch('./bim-registration-models.json?v=20260930').then(response=>{if(!response.ok)throw new Error('No se encontró el catálogo de modelos de registro.');return response.json();}),loadGzipJSON('./primavera-data.json.gz?v=20260923')]);
+    manifestEntry=manifest.sections?.[section];activities=primavera.tasks||[];activityById=new Map(activities.map(task=>[String(task.id),task]));
+    if(!manifestEntry)throw new Error(`El modelo ${section} no está disponible.`);if(manifestEntry.status==='no-geometry'||!manifestEntry.files?.length)throw new Error(`El IFC ${section} no contiene geometría web para procesar.`);
+    elementPayload=await loadGzipJSON(`./${manifestEntry.data}?v=20260930`);
+    $('headerModel').textContent=`${section} · ${manifestEntry.label}`;$('modelName').textContent=`${section} · ${manifestEntry.label}`;$('sceneTitle').textContent=`Registro y consulta · ${manifestEntry.label}`;$('modelSource').textContent=(manifestEntry.sources||[]).join(' · ');document.title=`${section} · Registro BIM | Asistente Digital EMB`;
+    const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
+    for(let index=0;index<manifestEntry.files.length;index++){$('loadingDetail').textContent=`Parte ${index+1} de ${manifestEntry.files.length}`;const loaded=await loader.loadAsync(`./${manifestEntry.files[index]}?v=20260930-registration`);addLoadedScene(loaded.scene);}
+    if(!elements.length)throw new Error('El modelo cargó sin elementos seleccionables.');
+    const box=new THREE.Box3().setFromObject(modelRoot,true),center=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3());modelRoot.position.sub(center);modelRoot.updateMatrixWorld(true);
+    const floor=new THREE.GridHelper(Math.max(size.x,size.z)*1.4,24,'#496779','#233744');floor.position.y=-size.y*.5-.04;scene.add(floor);
+    setSelectOptions();applyFilters();updateKpis();bindFilters();resize();fitModel();$('loading').hidden=true;$('loadState').textContent=`${elements.length.toLocaleString('es-CO')} elementos · ${manifestEntry.files.length} archivo${manifestEntry.files.length===1?'':'s'} cargado${manifestEntry.files.length===1?'':'s'}`;
+  }catch(error){console.error(error);$('loading').innerHTML=`<b>No fue posible abrir el modelo</b><span>${safe(error?.message||error)}</span><a class="returnLink" href="./index.html?view=urban">Volver a Modelos BIM Integrados</a>`;$('loadState').textContent='Modelo no disponible';}
+}
+
+function frame(){requestAnimationFrame(frame);controls.update();renderer.render(scene,camera);}frame();init();
+

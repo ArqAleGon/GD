@@ -1,0 +1,205 @@
+{
+  "version": "2026-09-30",
+  "loadedAt": "30/09/2026",
+  "sections": {
+    "PT102": {
+      "section": "PT102",
+      "label": "Administración",
+      "files": [
+        "assets/models/registration/pt102-l1t1-1542-102-con-ed-arq-mo-0001-r01.glb",
+        "assets/models/registration/pt102-l1t1-1542-102-con-ed-arq-mo-0001-r02.glb",
+        "assets/models/registration/pt102-l1t1-1542-102-con-ed-arq-mo-0001-r03.glb",
+        "assets/models/registration/pt102-l1t1-1542-102-con-ed-arq-mo-0001-r04.glb",
+        "assets/models/registration/pt102-l1t1-1542-102-con-ed-arq-mo-0001-r05.glb",
+        "assets/models/registration/pt102-l1t1-1542-102-con-ed-arq-mo-0001-r06.glb",
+        "assets/models/registration/pt102-l1t1-1542-102-con-ed-arq-mo-0001-r07.glb",
+        "assets/models/registration/pt102-l1t1-1542-102-con-ed-arq-mo-0001-r08.glb",
+        "assets/models/registration/pt102-l1t1-1542-102-con-ed-arq-mo-0001-r09.glb",
+        "assets/models/registration/pt102-l1t1-1542-102-con-ed-arq-mo-0001-r10.glb",
+        "assets/models/registration/pt102-l1t1-1542-102-con-ed-arq-mo-0001-r11.glb"
+      ],
+      "sources": [
+        "L1T1-1542-102-CON-ED-ARQ-MO-0001_V00.ifc"
+      ],
+      "elements": 11079,
+      "status": "ready",
+      "data": "bim-element-data-pt102.json.gz"
+    },
+    "PT103": {
+      "section": "PT103",
+      "label": "Caseta de Control",
+      "files": [
+        "assets/models/pt-103-caseta-control-hq-p01-v00.glb",
+        "assets/models/pt-103-caseta-control-hq-p01-v00-p02.glb",
+        "assets/models/pt-103-caseta-control-hq-p02-v00.glb"
+      ],
+      "sources": [
+        "L1T1-1542-103-CON-ED-ARQ-MO-0001_V00.ifc",
+        "L1T1-1542-103-CON-ED-ARQ-MO-0002_V00.ifc"
+      ],
+      "elements": 432,
+      "status": "ready",
+      "data": "bim-element-data-pt103.json.gz"
+    },
+    "PT104": {
+      "section": "PT104",
+      "label": "Cocheras",
+      "files": [
+        "assets/models/registration/pt104-l1t1-1542-104-con-ed-arq-mo-0001-r01.glb",
+        "assets/models/registration/pt104-l1t1-1542-104-con-ed-arq-mo-0001-r02.glb",
+        "assets/models/registration/pt104-l1t1-1542-104-con-ed-arq-mo-0001-r03.glb",
+        "assets/models/registration/pt104-l1t1-1542-104-con-ed-arq-mo-0001-r04.glb"
+      ],
+      "sources": [
+        "L1T1-1542-104-CON-ED-ARQ-MO-0001_V00.ifc"
+      ],
+      "elements": 3813,
+      "status": "ready",
+      "data": "bim-element-data-pt104.json.gz"
+    },
+    "PT105": {
+      "section": "PT105",
+      "label": "Locales Técnicos",
+      "files": [
+        "assets/models/pt-105-locales-tecnicos-hq.glb",
+        "assets/models/pt-105-locales-tecnicos-hq-p02.glb",
+        "assets/models/pt-105-locales-tecnicos-hq-p03.glb",
+        "assets/models/pt-105-locales-tecnicos-hq-p04.glb",
+        "assets/models/pt-105-locales-tecnicos-hq-p05.glb",
+        "assets/models/pt-105-locales-tecnicos-hq-p06.glb",
+        "assets/models/pt-105-locales-tecnicos-hq-p07.glb",
+        "assets/models/pt-105-locales-tecnicos-hq-p08.glb"
+      ],
+      "sources": [
+        "L1T1-1542-105-CON-ED-ARQ-MO-0001_V00.ifc"
+      ],
+      "elements": 2485,
+      "status": "ready",
+      "data": "bim-element-data-pt105.json.gz"
+    },
+    "PT106": {
+      "section": "PT106",
+      "label": "Máquina de Lavado",
+      "files": [
+        "assets/models/registration/pt106-l1t1-1542-106-con-ed-arq-mo-0001-r01.glb",
+        "assets/models/registration/pt106-l1t1-1542-106-con-ed-arq-mo-0002-r01.glb"
+      ],
+      "sources": [
+        "L1T1-1542-106-CON-ED-ARQ-MO-0001_V00.ifc",
+        "L1T1-1542-106-CON-ED-ARQ-MO-0002_V00.ifc"
+      ],
+      "elements": 380,
+      "status": "ready",
+      "data": "bim-element-data-pt106.json.gz"
+    },
+    "PT107": {
+      "section": "PT107",
+      "label": "Edificio de Mantenimiento",
+      "files": [
+        "assets/models/registration/pt107-l1t1-1542-107-con-ed-arq-mo-0001-r01.glb",
+        "assets/models/registration/pt107-l1t1-1542-107-con-ed-arq-mo-0001-r02.glb",
+        "assets/models/registration/pt107-l1t1-1542-107-con-ed-arq-mo-0001-r03.glb",
+        "assets/models/registration/pt107-l1t1-1542-107-con-ed-arq-mo-0001-r04.glb",
+        "assets/models/registration/pt107-l1t1-1542-107-con-ed-arq-mo-0001-r05.glb"
+      ],
+      "sources": [
+        "L1T1-1542-107-CON-ED-ARQ-MO-0001_V00.ifc"
+      ],
+      "elements": 4254,
+      "status": "ready",
+      "data": "bim-element-data-pt107.json.gz"
+    },
+    "PT108": {
+      "section": "PT108",
+      "label": "Mantenimiento Mayor",
+      "files": [
+        "assets/models/pt-108-mantenimiento-mayor-hq.glb",
+        "assets/models/pt-108-mantenimiento-mayor-hq-p02.glb",
+        "assets/models/pt-108-mantenimiento-mayor-hq-p03.glb",
+        "assets/models/pt-108-mantenimiento-mayor-hq-p04.glb",
+        "assets/models/pt-108-mantenimiento-mayor-hq-p05.glb",
+        "assets/models/pt-108-mantenimiento-mayor-hq-p06.glb",
+        "assets/models/pt-108-mantenimiento-mayor-hq-p07.glb",
+        "assets/models/pt-108-mantenimiento-mayor-hq-p08.glb",
+        "assets/models/pt-108-mantenimiento-mayor-hq-p09.glb",
+        "assets/models/pt-108-mantenimiento-mayor-hq-p10.glb",
+        "assets/models/pt-108-mantenimiento-mayor-hq-p11.glb",
+        "assets/models/pt-108-mantenimiento-mayor-hq-p12.glb",
+        "assets/models/pt-108-mantenimiento-mayor-hq-p13.glb",
+        "assets/models/pt-108-mantenimiento-mayor-hq-p14.glb",
+        "assets/models/pt-108-mantenimiento-mayor-hq-p15.glb",
+        "assets/models/pt-108-mantenimiento-mayor-hq-p16.glb",
+        "assets/models/pt-108-mantenimiento-mayor-hq-p17.glb",
+        "assets/models/pt-108-mantenimiento-mayor-hq-p18.glb"
+      ],
+      "sources": [
+        "L1T1-1542-108-CON-ED-ARQ-MO-0001_V00.ifc"
+      ],
+      "elements": 6127,
+      "status": "ready",
+      "data": "bim-element-data-pt108.json.gz"
+    },
+    "PT109": {
+      "section": "PT109",
+      "label": "Tanque",
+      "files": [
+        "assets/models/pt-109-tanque-hq-p01-v00.glb",
+        "assets/models/pt-109-tanque-hq-p01-v00-p02.glb",
+        "assets/models/pt-109-tanque-hq-p01-v00-p03.glb",
+        "assets/models/pt-109-tanque-hq-p01-v00-p04.glb",
+        "assets/models/pt-109-tanque-hq-p02-v00.glb"
+      ],
+      "sources": [
+        "L1T1-1542-109-CON-ED-ARQ-MO-0001_V00.ifc",
+        "L1T1-1542-109-CON-ED-ARQ-MO-0002_V00.ifc"
+      ],
+      "elements": 1630,
+      "status": "ready",
+      "data": "bim-element-data-pt109.json.gz"
+    },
+    "PT110": {
+      "section": "PT110",
+      "label": "PTAR",
+      "files": [],
+      "sources": [
+        "L1T1-1542-110-CON-ED-ARQ-MO-0001_V00.ifc"
+      ],
+      "elements": 0,
+      "status": "no-geometry",
+      "data": "bim-element-data-pt110.json.gz"
+    },
+    "PT111": {
+      "section": "PT111",
+      "label": "Puesto de Mando",
+      "files": [
+        "assets/models/pt-111-puesto-mando-hq-p01-v00.glb",
+        "assets/models/pt-111-puesto-mando-hq-p02-v00.glb",
+        "assets/models/pt-111-puesto-mando-hq-p03-v00.glb",
+        "assets/models/pt-111-puesto-mando-hq-p04-v00.glb",
+        "assets/models/pt-111-puesto-mando-hq-p05-v00.glb",
+        "assets/models/pt-111-puesto-mando-hq-p06-v00.glb",
+        "assets/models/pt-111-puesto-mando-hq-p07-v00.glb",
+        "assets/models/pt-111-puesto-mando-hq-p08-v00.glb"
+      ],
+      "sources": [
+        "L1T1-1542-111-CON-ED-ARQ-MO-0001_V00.ifc"
+      ],
+      "elements": 2782,
+      "status": "ready",
+      "data": "bim-element-data-pt111.json.gz"
+    },
+    "PT112": {
+      "section": "PT112",
+      "label": "Torno en Foso",
+      "files": [
+        "assets/models/pt-112-torno-foso-hq.glb"
+      ],
+      "sources": [
+        "L1T1-1542-112-CON-ED-ARQ-MO-0001_V00.ifc"
+      ],
+      "elements": 289,
+      "status": "ready",
+      "data": "bim-element-data-pt112.json.gz"
+    }
+  }
+}

@@ -20,7 +20,12 @@ export function createProgressRecord(input,now=new Date()){
     userName,
     date,
     progress:Math.round(progress*100)/100,
-    createdAt
+    createdAt,
+    scopeType:clean(input.scopeType)||'element',
+    scopeValue:clean(input.scopeValue),
+    activityId:clean(input.activityId),
+    executionUnit:clean(input.executionUnit),
+    elementId:clean(input.elementId)
   };
 }
 
@@ -65,3 +70,4 @@ export function summarizeProgress(records){
   const recent=[...records].sort((a,b)=>recordOrder(b,a)).slice(0,6);
   return {totalRecords:records.length,objects,average,completed,inProgress,notStarted,sections,recent};
 }
+

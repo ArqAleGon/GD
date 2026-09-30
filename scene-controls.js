@@ -73,6 +73,7 @@ const documentSources=[
 const sourceProfiles={
  predial:{title:'Predial L1',note:'Cruce principal por CHIP entre gestión, geometría y vínculos documentales.',items:[predialBook,predialShape,predialDocuments,mapBase]},
  bim:{title:'Avance BIM',note:'Geometría IFC vinculada por UE con el programa Primavera P6.',items:[e15Ifc,i16Ifc,e16Ifc,p6]},
+ registro:{title:'Registro BIM',note:'La escena carga un solo edificio y vincula sus elementos IFC con UE y actividades Primavera P6.',items:[...patioIfc,p6]},
  documentos:{title:'Visor documental',note:'Catálogo público y vínculos de identificación predial remapeados por CHIP.',items:[...documentSources,predialDocuments]}
 };
 const viewTitles={network:'Inicio · Red ferroviaria',events:'Inicio · Operación',traffic:'Inicio · Flujo de pasajeros',dispatch:'Inicio · Trenes en circulación',station:'Estación 3D',indoor:'Recorrido interior',security:'Cámaras y seguridad',evacuation:'Emergencias',platform:'Andén y puertas',equipment:'Sala técnica',railway:'Seguimiento del tren',maintenance:'Sistemas ferroviarios',urban:'Modelos BIM Integrados'};
@@ -105,3 +106,4 @@ sourcePanel.querySelector('header button').addEventListener('click',()=>setSourc
 document.addEventListener('mockupscenechange',event=>{activeSourceView=event.detail?.view||activeSourceView;if(!sourcePanel.hidden)renderSourcePanel();});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!sourcePanel.hidden)setSourcePanel(false);});
 renderSourcePanel();
+

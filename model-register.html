@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101b26">
+  <title>Registro BIM | Asistente Digital EMB</title>
+  <meta name="description" content="Consulta y registro de avance por elemento IFC, ActivityID y unidad de ejecución.">
+  <link rel="stylesheet" href="./model-register.css?v=20260930-register-v1">
+  <link rel="stylesheet" href="./scene-controls.css?v=20260930-register-v1">
+  <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
+</head>
+<body data-scene="registro">
+  <header class="siteHeader">
+    <a class="brand" href="./index.html"><img src="./assets/logo-metro.jpg" alt="Metro de Bogotá"><span><b>Asistente Digital</b><small>Empresa Metro de Bogotá</small></span></a>
+    <div class="activeModule"><span>REGISTRO BIM</span><b id="headerModel">Cargando modelo…</b></div>
+    <nav class="sceneNav" aria-label="Navegación de módulos">
+      <a class="homeScene" href="./index.html">⌂ Inicio</a>
+      <a href="./predial.html">Predial ↗</a>
+      <a href="./bim.html">Avance BIM ↗</a>
+      <a href="./documents.html">Documentos ↗</a>
+      <button data-scene-fullscreen title="Ampliar a página completa" aria-label="Ampliar a página completa">⛶ <span data-fullscreen-label>Pantalla completa</span></button>
+    </nav>
+  </header>
+  <main>
+    <aside class="filters" aria-label="Filtros del modelo BIM activo">
+      <div class="eyebrow">AISLAMIENTO DE ELEMENTOS</div>
+      <h1 id="modelName">Modelo BIM</h1>
+      <p id="modelSource" class="muted">Leyendo fuente IFC…</p>
+      <label>ID del elemento<input id="filterId" type="search" placeholder="GlobalId, ID o nombre"></label>
+      <label>ActivityID<select id="filterActivity"><option value="">Todos los ActivityID</option></select></label>
+      <label>UE · Unidad de ejecución<select id="filterUE"><option value="">Todas las UE</option></select></label>
+      <label>Tipo de elemento<select id="filterType"><option value="">Todos los tipos</option></select></label>
+      <label>Level · Nivel<select id="filterLevel"><option value="">Todos los niveles</option></select></label>
+      <button id="resetFilters" class="secondary">Restablecer filtros</button>
+      <section class="filterStatus"><b id="visibleCount">—</b><span>elementos visibles</span><small>Los cinco filtros se combinan entre sí.</small></section>
+      <a class="returnLink" href="./index.html?view=urban">← Volver a Modelos BIM Integrados</a>
+    </aside>
+    <section class="workspace">
+      <div class="heading">
+        <div><div class="eyebrow">MODELO ACTIVO · CARGA EXCLUSIVA</div><h2 id="sceneTitle">Procesamiento del modelo BIM</h2></div>
+        <div class="modelState"><span class="live"></span><b id="loadState">Preparando visor…</b></div>
+      </div>
+      <section class="kpis" aria-label="Indicadores del registro BIM">
+        <article><span>Elementos cargados</span><b id="kpiElements">—</b></article>
+        <article><span>UE del modelo</span><b id="kpiUE">—</b></article>
+        <article><span>Registros de avance</span><b id="kpiRecords">—</b></article>
+        <article><span>Avance registrado</span><b id="kpiProgress">—</b></article>
+      </section>
+      <section class="viewerCard">
+        <canvas id="modelCanvas" aria-label="Modelo BIM activo: haz clic sobre un elemento para consultar o registrar"></canvas>
+        <div class="viewTools" aria-label="Controles de vista">
+          <button id="fitModel">Encuadrar</button><button id="topView">Planta</button><button id="frontView">Frente</button><button id="isolateSelected" disabled>Aislar selección</button>
+        </div>
+        <div class="viewerHint">Clic: seleccionar elemento · Arrastrar: orbitar · Rueda: acercar</div>
+        <div id="loading" class="loading"><i></i><b>Cargando únicamente el modelo solicitado</b><span id="loadingDetail">Preparando datos IFC…</span></div>
+      </section>
+      <aside id="inspector" class="inspector" aria-live="polite">
+        <div class="inspectorEmpty"><span>◎</span><b>Selecciona un elemento</b><p>El panel permanecerá abierto para consultar parámetros o registrar avances sucesivos.</p></div>
+      </aside>
+    </section>
+  </main>
+  <div id="toast" role="status"></div>
+  <script type="module" src="./model-register.js?v=20260930-register-v1"></script>
+  <script type="module" src="./scene-controls.js?v=20260930-register-v1"></script>
+</body>
+</html>
+
