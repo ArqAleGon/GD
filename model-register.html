@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#101b26">
   <title>Registro BIM | Asistente Digital EMB</title>
   <meta name="description" content="Consulta y registro de avance por elemento IFC, ActivityID y unidad de ejecución.">
-  <link rel="stylesheet" href="./model-register.css?v=20260930-dashboard-v1">
+  <link rel="stylesheet" href="./model-register.css?v=20260930-activity-weight-v1">
   <link rel="stylesheet" href="./scene-controls.css?v=20260930-register-v1">
   <script type="importmap">{"imports":{"three":"./vendor/three.module.js"}}</script>
 </head>
@@ -35,6 +35,7 @@
       <label>Level · Nivel<select id="filterLevel"><option value="">Todos los niveles</option></select></label>
       <button id="resetFilters" class="secondary">Restablecer filtros</button>
       <section class="filterStatus"><b id="visibleCount">—</b><span>elementos visibles</span><small>Los cinco filtros se combinan únicamente dentro de este modelo.</small></section>
+      <section id="typeFilterSummary" class="typeFilterSummary" hidden aria-live="polite"></section>
       <a class="returnLink" href="./index.html?view=urban">← Volver a Modelos BIM Integrados</a>
     </aside>
     <section class="workspace">
@@ -73,7 +74,7 @@
     </section>
   </main>
   <div id="toast" role="status"></div>
-  <script type="module" src="./model-register.js?v=20260930-dashboard-v1"></script>
+  <script type="module" src="./model-register.js?v=20260930-activity-weight-v1"></script>
   <script type="module" src="./scene-controls.js?v=20260930-register-v1"></script>
 </body>
 </html>

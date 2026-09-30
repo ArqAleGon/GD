@@ -1,6 +1,6 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import {activitySummaries,buildingSummary,deviationTone,elementRegisteredProgress,groupElementProgress} from './bim-progress-dashboard.js';
+import {activitySummaries,buildingSummary,deviationTone,elementRegisteredProgress,groupElementProgress,weightedElementProgress} from './bim-progress-dashboard.js';
 
 const elements=[
   {guid:'A',section:'PT102',source:'a.ifc',executionUnit:'31',activityIds:['ACT-1'],level:'L1',ifcType:'IfcWall'},
@@ -24,9 +24,9 @@ test('keeps element progress and groups inside the active building',()=>{
 test('compares model records with the linked Primavera activity',()=>{
   const activity=activitySummaries('PT102',elements.slice(0,2),records,tasks)[0];
   assert.equal(activity.id,'ACT-1');
-  assert.equal(activity.registered,50);
+  assert.equal(activity.registered,45);
   assert.equal(activity.primavera,60);
-  assert.equal(activity.deviation,-10);
+  assert.equal(activity.deviation,-15);
   assert.equal(deviationTone(activity.deviation),'negative');
 });
 
@@ -36,4 +36,19 @@ test('building summary excludes records and P6 tasks from other buildings',()=>{
   assert.equal(summary.primavera,60);
   assert.equal(summary.deviation,-15);
   assert.equal(summary.records,2);
+});
+
+test('one completed element is weighted against the whole building',()=>{
+  const building=Array.from({length:1000},(_,index)=>({guid:String(index),section:'PT102',source:'a.ifc',executionUnit:'31',activityIds:[],assignedActivityId:'',level:'L1',ifcType:'IfcWindow'}));
+  const one=[{objectId:'ifc-element:PT102:a.ifc:0',section:'PT102',scopeType:'element',elementId:'0',progress:100,date:'2026-09-30',createdAt:'2026-09-30T12:00:00Z'}];
+  assert.equal(weightedElementProgress(building,one).progress,.1);
+  assert.equal(buildingSummary('PT102',building,one,tasks).registered,.1);
+});
+
+test('group progress includes unregistered elements in its denominator',()=>{
+  const group=[...elements.slice(0,2),{guid:'D',section:'PT102',source:'a.ifc',executionUnit:'31',activityIds:['ACT-1'],assignedActivityId:'ACT-1',level:'L1',ifcType:'IfcWall'}];
+  const walls=groupElementProgress(group,records,'ifcType').find(item=>item.name==='IfcWall');
+  assert.equal(walls.count,2);
+  assert.equal(walls.registered,2);
+  assert.equal(walls.progress,45);
 });

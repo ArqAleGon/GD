@@ -32,22 +32,24 @@ export function weightedTaskActual(tasks){
   return tasks.reduce((sum,task)=>sum+(Number(task.actual)||0)*(Number(task.hours)||1),0)/total;
 }
 
+export function weightedElementProgress(elements,records){
+  let registered=0,total=0;
+  for(const element of elements){const progress=elementRegisteredProgress(element,records);if(progress!=null){registered++;total+=Number(progress)||0;}}
+  return {count:elements.length,registered,progress:registered&&elements.length?total/elements.length:null};
+}
+
 export function buildingSummary(section,elements,records,tasks){
-  const current=latestPerTarget(records.filter(record=>record.section===section));
-  const registered=average(current.map(record=>Number(record.progress)));
+  const scoped=records.filter(record=>record.section===section),elementProgress=weightedElementProgress(elements,scoped),registered=elementProgress.progress;
   const primavera=weightedTaskActual(linkedTasks(elements,tasks));
-  return {registered,primavera,deviation:registered==null||primavera==null?null:registered-primavera,records:records.filter(record=>record.section===section).length,targets:current.length};
+  return {registered,primavera,deviation:registered==null||primavera==null?null:registered-primavera,records:scoped.length,targets:elementProgress.registered,totalElements:elements.length};
 }
 
 export function activitySummaries(section,elements,records,tasks){
   const scoped=records.filter(record=>record.section===section),result=[];
   for(const task of linkedTasks(elements,tasks)){
     const taskId=clean(task.id),taskElements=elements.filter(element=>element.activityIds.includes(taskId));
-    const activityRecords=latestPerTarget(scoped.filter(record=>record.scopeType==='activity'&&clean(record.scopeValue)===taskId));
-    const ueRecords=latestPerTarget(scoped.filter(record=>record.scopeType==='ue'&&clean(record.scopeValue)===clean(task.ue)));
-    const chosen=activityRecords.length?activityRecords:ueRecords;
-    const registered=average(chosen.map(record=>Number(record.progress))),primavera=Number(task.actual)||0;
-    result.push({id:taskId,name:clean(task.name),ue:clean(task.ue),registered,primavera,deviation:registered==null?null:registered-primavera,planned:Number(task.planned)||0,hours:Number(task.hours)||0,elementCount:taskElements.length});
+    const elementProgress=weightedElementProgress(taskElements,scoped),registered=elementProgress.progress,primavera=Number(task.actual)||0;
+    result.push({id:taskId,name:clean(task.name),ue:clean(task.ue),registered,primavera,deviation:registered==null?null:registered-primavera,planned:Number(task.planned)||0,hours:Number(task.hours)||0,elementCount:taskElements.length,registeredElements:elementProgress.registered});
   }
   return result.sort((a,b)=>{
     const aMissing=a.deviation==null,bMissing=b.deviation==null;if(aMissing!==bMissing)return aMissing?1:-1;
@@ -57,8 +59,8 @@ export function activitySummaries(section,elements,records,tasks){
 
 export function groupElementProgress(elements,records,key){
   const groups=new Map();
-  for(const element of elements){const name=clean(element[key])||'Sin dato';const group=groups.get(name)||{name,count:0,registered:0,total:0};const progress=elementRegisteredProgress(element,records);group.count++;if(progress!=null){group.registered++;group.total+=progress;}groups.set(name,group);}
-  return [...groups.values()].map(group=>({...group,progress:group.registered?group.total/group.registered:null})).sort((a,b)=>(b.registered>0)-(a.registered>0)||(b.progress||0)-(a.progress||0)||a.name.localeCompare(b.name,'es',{numeric:true}));
+  for(const element of elements){const raw=key==='activityId'?element.assignedActivityId:element[key],name=clean(raw)||(key==='activityId'?'Sin ActivityID asignada':'Sin dato');const group=groups.get(name)||{name,count:0,registered:0,total:0};const progress=elementRegisteredProgress(element,records);group.count++;if(progress!=null){group.registered++;group.total+=progress;}groups.set(name,group);}
+  return [...groups.values()].map(group=>({...group,progress:group.registered?group.total/group.count:null})).sort((a,b)=>(b.registered>0)-(a.registered>0)||(b.progress||0)-(a.progress||0)||a.name.localeCompare(b.name,'es',{numeric:true}));
 }
 
 export function deviationTone(value){if(value==null)return'none';if(value<=-5)return'negative';if(value>=5)return'positive';return'aligned';}
