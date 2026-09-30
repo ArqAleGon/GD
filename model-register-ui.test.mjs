@@ -17,8 +17,15 @@ assert.match(register,/ActivityID/);
 assert.match(register,/UE · Unidad de ejecución/);
 assert.match(register,/Tipo de elemento/);
 assert.match(register,/Level · Nivel/);
+assert.match(register,/Avance por actividad/);
+assert.match(register,/Avance por nivel/);
+assert.match(register,/Avance por tipo de elemento/);
+assert.match(register,/Desviación vs Primavera/);
+assert.match(register,/Alcance exclusivo del edificio activo/);
+assert.match(register,/selectionMarker/);
 assert.match(registerJs,/scopeType==='activity'/);
 assert.match(registerJs,/scopeType==='ue'/);
+assert.match(registerJs,/element\.section===section/);
+assert.match(registerJs,/activitySummaries/);
 assert.match(index,/register-scenes-v1/);
-console.log('Header navigation, collapsed menu, BIM filters and three registration scopes verified');
-
+console.log('Header navigation, active-model filters, progress dashboards and registration scopes verified');
