@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import {GLTFLoader} from './GLTFLoader.js';
 import {MeshoptDecoder} from './meshopt_decoder.module.js';
 import {createIfcProgressObject} from './ifc-progress.js?v=20260929-element-progress-v1';
+import {rankedBoundHits,sectionPickCandidates} from './ifc-picking.js?v=20260930-element-picking-v1';
 
 const scale = 0.06;
 const assetRevision = '20260925-patio-hq-facade-113a';
@@ -219,23 +220,19 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
       const point=raycaster.ray.intersectBox(entry.bounds,intersectionPoint);
       if(point)candidates.push({name,entry,distance:point.distanceTo(raycaster.ray.origin)});
     }
-    candidates.sort((a,b)=>(b.name===focusedSection)-(a.name===focusedSection)||a.distance-b.distance);
-    let nearest=null;
-    for(const candidate of candidates.slice(0,4)){
+    let nearest=null,nearestBox=null;
+    for(const candidate of sectionPickCandidates(candidates,focusedSection)){
       if(nearest&&candidate.distance>nearest.distance)break;
-      const boxHits=[];
-      for(const item of candidate.entry.elementBounds){
-        const point=raycaster.ray.intersectBox(item.bounds,intersectionPoint);
-        if(point)boxHits.push({mesh:item.mesh,distance:point.distanceTo(raycaster.ray.origin)});
-      }
-      boxHits.sort((a,b)=>a.distance-b.distance);
+      const boxHits=rankedBoundHits(raycaster.ray,candidate.entry.elementBounds,intersectionPoint);
+      if(boxHits[0]&&(!nearestBox||boxHits[0].distance<nearestBox.distance))nearestBox=boxHits[0];
       for(const boxHit of boxHits){
         if(nearest&&boxHit.distance>nearest.distance)break;
         const hit=raycaster.intersectObject(boxHit.mesh,false)[0];
         if(hit&&(!nearest||hit.distance<nearest.distance))nearest=hit;
       }
     }
-    return nearest?{...nearest.object.userData.progressObject,mesh:nearest.object}:null;
+    const mesh=nearest?.object||nearestBox?.mesh;
+    return mesh?{...mesh.userData.progressObject,mesh}:null;
   };
   const bounds = geometry => {
     const box = new THREE.Box3();
