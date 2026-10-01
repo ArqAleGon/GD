@@ -49,9 +49,9 @@ function mapToLonLat(x,y){
  return [lon,lat];
 }
 
-function nativeOrthoUrl(minX,minY,maxX,maxY){
+function nativeOrthoUrl(minX,minY,maxX,maxY,width=1024,height=1024){
  const [west,north]=mapToLonLat(minX,minY),[east,south]=mapToLonLat(maxX,maxY);
- const params=new URLSearchParams({SERVICE:'WMS',VERSION:'1.3.0',REQUEST:'GetMap',LAYERS:NATIVE_ORTHO_LAYER,STYLES:'',CRS:'CRS:84',BBOX:[west,south,east,north].join(','),WIDTH:'1024',HEIGHT:'1024',FORMAT:'image/jpeg',BGCOLOR:'0x020406'});
+ const params=new URLSearchParams({SERVICE:'WMS',VERSION:'1.3.0',REQUEST:'GetMap',LAYERS:NATIVE_ORTHO_LAYER,STYLES:'',CRS:'CRS:84',BBOX:[west,south,east,north].join(','),WIDTH:String(width),HEIGHT:String(height),FORMAT:'image/jpeg',BGCOLOR:'0x020406'});
  return `${NATIVE_ORTHO_URL}?${params}`;
 }
 
@@ -76,9 +76,12 @@ function addCssAerial(group){
    corridor.add(object);
   }
  }).catch(error=>console.error(error));
+ corridor.visible=false;
  const detailHost=new THREE.Group();detailHost.name='WMS original · LOD dinamico';cssGroup.add(detailHost);
- let key='',pending=null,active=null,requestToken=0,lastUpdate=0,enabled=true;
+ let pending=null,active=null,activeMeta=null,pendingMeta=null,requestToken=0,lastUpdate=0,enabled=true;
  const removeTileGroup=tileGroup=>{if(!tileGroup)return;tileGroup.traverse(object=>{if(object.isCSS3DObject)object.element.remove();});detailHost.remove(tileGroup);};
+ const showLocalBackdrop=()=>{fallback.visible=true;corridor.visible=false;};
+ const showNativeDetail=()=>{fallback.visible=true;corridor.visible=false;};
  const setVisible=value=>{enabled=Boolean(value);cssGroup.visible=enabled;};
  const update=(camera,target)=>{
   if(!enabled||!camera||!target)return;
@@ -86,33 +89,26 @@ function addCssAerial(group){
   const distance=Math.max(.2,camera.position.distanceTo(target));
   const visibleHeight=2*distance*Math.tan(THREE.MathUtils.degToRad(camera.fov*.5));
   const visibleWidth=visibleHeight*camera.aspect;
-  const wantedMetres=Math.max(51.2,Math.max(visibleHeight,visibleWidth)*METRES_PER_MAP_UNIT/WORLD_SCALE*.46);
-  const level=THREE.MathUtils.clamp(Math.ceil(Math.log2(wantedMetres/51.2)),0,8);
-  if(level>5){
-   const overviewKey='overview';if(key===overviewKey)return;key=overviewKey;requestToken++;
-   if(pending){removeTileGroup(pending);pending=null;}if(active){removeTileGroup(active);active=null;}return;
-  }
-  const spanMetres=51.2*2**level,spanMap=spanMetres/METRES_PER_MAP_UNIT;
+  const wantedMetres=Math.max(102.4,Math.max(visibleHeight,visibleWidth)*METRES_PER_MAP_UNIT/WORLD_SCALE*1.4);
+  const level=THREE.MathUtils.clamp(Math.ceil(Math.log2(wantedMetres/102.4)),0,8);
+  const spanMetres=102.4*2**level,spanMap=spanMetres/METRES_PER_MAP_UNIT;
   const targetMapX=target.x/WORLD_SCALE+MAP_WIDTH/2,targetMapY=target.z/WORLD_SCALE+MAP_HEIGHT/2;
-  const centerCol=Math.floor(targetMapX/spanMap),centerRow=Math.floor(targetMapY/spanMap);
-  const nextKey=`${level}:${centerCol}:${centerRow}`;if(nextKey===key)return;key=nextKey;
+  const current=activeMeta?.level===level?activeMeta:(pendingMeta?.level===level?pendingMeta:null);
+  if(current&&Math.hypot(targetMapX-current.x,targetMapY-current.y)<spanMap*.12)return;
   const token=++requestToken;if(pending){removeTileGroup(pending);pending=null;}
-  const next=new THREE.Group();next.name=`WMS LOD ${level}`;detailHost.add(next);pending=next;
-  let loaded=0,failed=0;
-  const settle=()=>{
+  const next=new THREE.Group();next.name=`WMS LOD ${level} · imagen unica`;next.visible=false;detailHost.add(next);pending=next;
+  pendingMeta={level,x:targetMapX,y:targetMapY,spanMap};
+  const minX=targetMapX-spanMap/2,minY=targetMapY-spanMap/2,maxX=minX+spanMap,maxY=minY+spanMap;
+  const {object,image}=cssImagePlane(nativeOrthoUrl(minX,minY,maxX,maxY,2048,2048),2048,2048,spanMap*WORLD_SCALE,spanMap*WORLD_SCALE,(minX+maxX)/2*WORLD_SCALE-MAP_WIDTH/2*WORLD_SCALE,(minY+maxY)/2*WORLD_SCALE-MAP_HEIGHT/2*WORLD_SCALE,'nativeAerialTile nativeAerialComposite');
+  image.style.opacity='0';
+  image.onload=()=>{
    if(token!==requestToken)return;
-   if(loaded>=5||(loaded+failed===9&&loaded>0)){
-    if(active&&active!==next)removeTileGroup(active);
-    active=next;pending=null;
-    document.dispatchEvent(new CustomEvent('nativeaerialready',{detail:{level,groundSampleDistanceM:spanMetres/1024,tileCount:loaded}}));
-   }
+   if(active&&active!==next)removeTileGroup(active);
+   active=next;activeMeta=pendingMeta;pending=null;pendingMeta=null;next.visible=true;image.style.opacity='1';showNativeDetail();
+   document.dispatchEvent(new CustomEvent('nativeaerialready',{detail:{level,groundSampleDistanceM:spanMetres/2048,tileCount:1}}));
   };
-  for(let row=-1;row<=1;row++)for(let col=-1;col<=1;col++){
-   const minX=(centerCol+col)*spanMap,minY=(centerRow+row)*spanMap,maxX=minX+spanMap,maxY=minY+spanMap;
-   const {object,image}=cssImagePlane(nativeOrthoUrl(minX,minY,maxX,maxY),1024,1024,spanMap*WORLD_SCALE,spanMap*WORLD_SCALE,(minX+maxX)/2*WORLD_SCALE-MAP_WIDTH/2*WORLD_SCALE,(minY+maxY)/2*WORLD_SCALE-MAP_HEIGHT/2*WORLD_SCALE,'nativeAerialTile');
-   image.style.opacity='0';image.style.transition='opacity .18s linear';image.onload=()=>{if(token!==requestToken)return;loaded++;image.style.opacity='.99';settle();};image.onerror=()=>{if(token!==requestToken)return;failed++;settle();};
-   next.add(object);
-  }
+  image.onerror=()=>{if(token!==requestToken)return;removeTileGroup(next);pending=null;pendingMeta=null;if(!active)showLocalBackdrop();};
+  next.add(object);
  };
  return {group:cssGroup,setVisible,update};
 }
