@@ -1,4 +1,5 @@
 import * as THREE from 'three';
+import {CSS3DObject} from './vendor/CSS3DRenderer.js';
 
 export const MAP_WIDTH=1200;
 export const MAP_HEIGHT=613.39;
@@ -7,6 +8,11 @@ const METRES_PER_MAP_UNIT=13.32;
 export const METRES_TO_WORLD=WORLD_SCALE/METRES_PER_MAP_UNIT;
 const HEIGHT_WORLD_PER_METRE=METRES_TO_WORLD;
 const BASE_Y=-.38;
+const VIEW_BBOX=[-74.204367469,4.591299523,-74.06038065,4.664899642];
+const EXPANDED_MAP_WIDTH=1560;
+const EXPANDED_MAP_HEIGHT=1560;
+const NATIVE_ORTHO_URL='https://serviciosgis.catastrobogota.gov.co/image/services/imagenesfunciones/orthourbana2025funcion/ImageServer/WMSServer';
+const NATIVE_ORTHO_LAYER='orthourbana2025funcion:ColorBalance';
 export const cityPoint=([x,y],height=0)=>[(x-MAP_WIDTH/2)*WORLD_SCALE,height,(y-MAP_HEIGHT/2)*WORLD_SCALE];
 
 async function loadCompressedJson(url,message){
@@ -27,6 +33,88 @@ const loadEasternHills=()=>loadCompressedJson('./eastern-hills.json.gz?v=2026092
 function mapPlane(width,height,material,y){
  const mesh=new THREE.Mesh(new THREE.PlaneGeometry(width,height),material);
  mesh.rotation.x=-Math.PI/2;mesh.position.y=y;mesh.renderOrder=0;return mesh;
+}
+
+function cssImagePlane(source,pixelWidth,pixelHeight,worldWidth,worldHeight,x,z,className=''){
+ const image=document.createElement('img');image.src=source;image.alt='';image.draggable=false;image.decoding='async';
+ image.width=pixelWidth;image.height=pixelHeight;image.className=className;
+ image.style.cssText=`display:block;width:${pixelWidth}px;height:${pixelHeight}px;object-fit:fill;pointer-events:none;user-select:none`;
+ const object=new CSS3DObject(image);object.position.set(x,-.485,z);object.rotation.x=Math.PI/2;
+ object.scale.set(worldWidth/pixelWidth,worldHeight/pixelHeight,1);return {object,image};
+}
+
+function mapToLonLat(x,y){
+ const lon=VIEW_BBOX[0]+x/MAP_WIDTH*(VIEW_BBOX[2]-VIEW_BBOX[0]);
+ const lat=VIEW_BBOX[3]-y/MAP_HEIGHT*(VIEW_BBOX[3]-VIEW_BBOX[1]);
+ return [lon,lat];
+}
+
+function nativeOrthoUrl(minX,minY,maxX,maxY){
+ const [west,north]=mapToLonLat(minX,minY),[east,south]=mapToLonLat(maxX,maxY);
+ const params=new URLSearchParams({SERVICE:'WMS',VERSION:'1.3.0',REQUEST:'GetMap',LAYERS:NATIVE_ORTHO_LAYER,STYLES:'',CRS:'CRS:84',BBOX:[west,south,east,north].join(','),WIDTH:'1024',HEIGHT:'1024',FORMAT:'image/jpeg',BGCOLOR:'0x020406'});
+ return `${NATIVE_ORTHO_URL}?${params}`;
+}
+
+function addCssAerial(group){
+ const cssGroup=new THREE.Group();cssGroup.name='Ortoimagen urbana 2025 · detalle WMS adaptable';group.add(cssGroup);
+ const context=new THREE.Group();context.name='Contexto SHP ampliado';cssGroup.add(context);
+ for(let row=0;row<2;row++)for(let col=0;col<2;col++){
+  const {object}=cssImagePlane(`./assets/predial-cadastre-${row}-${col}.webp?v=20261001-expanded-mapbase`,1170,1170,EXPANDED_MAP_WIDTH*WORLD_SCALE/2,EXPANDED_MAP_HEIGHT*WORLD_SCALE/2,(col-.5)*EXPANDED_MAP_WIDTH*WORLD_SCALE/2,(row-.5)*EXPANDED_MAP_HEIGHT*WORLD_SCALE/2,'nativeAerialTile aerialTerritorialContext');
+  object.position.y=-.495;context.add(object);
+ }
+ const fallback=new THREE.Group();fallback.name='Respaldo ortofotografico local';cssGroup.add(fallback);
+ const worldWidth=MAP_WIDTH*WORLD_SCALE,worldHeight=MAP_HEIGHT*WORLD_SCALE;
+ for(let row=0;row<2;row++)for(let col=0;col<3;col++){
+  const pixelHeight=row?613:614;
+  const {object}=cssImagePlane(`./assets/bogota-ortho-2025-${row}-${col}.webp?v=20260923-ideca`,800,pixelHeight,worldWidth/3,worldHeight/2,(col-1)*worldWidth/3,(row-.5)*worldHeight/2,'nativeAerialTile fallbackAerialTile');
+  fallback.add(object);
+ }
+ const corridor=new THREE.Group();corridor.name='Franja L1 · respaldo local de alta resolucion';cssGroup.add(corridor);
+ fetch('./bogota-ortho-2025-l1.json?v=20261001-l1-hires-v2').then(response=>response.ok?response.json():Promise.reject(new Error('No se pudo cargar el manifiesto de ortoimagen L1'))).then(manifest=>{
+  for(const item of manifest.tiles){
+   const {object}=cssImagePlane(`${item.file}?v=20261001-l1-hires-v2`,1024,1024,item.width*WORLD_SCALE,item.height*WORLD_SCALE,(item.x+item.width/2-MAP_WIDTH/2)*WORLD_SCALE,(item.y+item.height/2-MAP_HEIGHT/2)*WORLD_SCALE,'nativeAerialTile corridorAerialTile');
+   corridor.add(object);
+  }
+ }).catch(error=>console.error(error));
+ const detailHost=new THREE.Group();detailHost.name='WMS original · LOD dinamico';cssGroup.add(detailHost);
+ let key='',pending=null,active=null,requestToken=0,lastUpdate=0,enabled=true;
+ const removeTileGroup=tileGroup=>{if(!tileGroup)return;tileGroup.traverse(object=>{if(object.isCSS3DObject)object.element.remove();});detailHost.remove(tileGroup);};
+ const setVisible=value=>{enabled=Boolean(value);cssGroup.visible=enabled;};
+ const update=(camera,target)=>{
+  if(!enabled||!camera||!target)return;
+  const now=performance.now();if(now-lastUpdate<240)return;lastUpdate=now;
+  const distance=Math.max(.2,camera.position.distanceTo(target));
+  const visibleHeight=2*distance*Math.tan(THREE.MathUtils.degToRad(camera.fov*.5));
+  const visibleWidth=visibleHeight*camera.aspect;
+  const wantedMetres=Math.max(51.2,Math.max(visibleHeight,visibleWidth)*METRES_PER_MAP_UNIT/WORLD_SCALE*.46);
+  const level=THREE.MathUtils.clamp(Math.ceil(Math.log2(wantedMetres/51.2)),0,8);
+  if(level>5){
+   const overviewKey='overview';if(key===overviewKey)return;key=overviewKey;requestToken++;
+   if(pending){removeTileGroup(pending);pending=null;}if(active){removeTileGroup(active);active=null;}return;
+  }
+  const spanMetres=51.2*2**level,spanMap=spanMetres/METRES_PER_MAP_UNIT;
+  const targetMapX=target.x/WORLD_SCALE+MAP_WIDTH/2,targetMapY=target.z/WORLD_SCALE+MAP_HEIGHT/2;
+  const centerCol=Math.floor(targetMapX/spanMap),centerRow=Math.floor(targetMapY/spanMap);
+  const nextKey=`${level}:${centerCol}:${centerRow}`;if(nextKey===key)return;key=nextKey;
+  const token=++requestToken;if(pending){removeTileGroup(pending);pending=null;}
+  const next=new THREE.Group();next.name=`WMS LOD ${level}`;detailHost.add(next);pending=next;
+  let loaded=0,failed=0;
+  const settle=()=>{
+   if(token!==requestToken)return;
+   if(loaded>=5||(loaded+failed===9&&loaded>0)){
+    if(active&&active!==next)removeTileGroup(active);
+    active=next;pending=null;
+    document.dispatchEvent(new CustomEvent('nativeaerialready',{detail:{level,groundSampleDistanceM:spanMetres/1024,tileCount:loaded}}));
+   }
+  };
+  for(let row=-1;row<=1;row++)for(let col=-1;col<=1;col++){
+   const minX=(centerCol+col)*spanMap,minY=(centerRow+row)*spanMap,maxX=minX+spanMap,maxY=minY+spanMap;
+   const {object,image}=cssImagePlane(nativeOrthoUrl(minX,minY,maxX,maxY),1024,1024,spanMap*WORLD_SCALE,spanMap*WORLD_SCALE,(minX+maxX)/2*WORLD_SCALE-MAP_WIDTH/2*WORLD_SCALE,(minY+maxY)/2*WORLD_SCALE-MAP_HEIGHT/2*WORLD_SCALE,'nativeAerialTile');
+   image.style.opacity='0';image.style.transition='opacity .18s linear';image.onload=()=>{if(token!==requestToken)return;loaded++;image.style.opacity='.99';settle();};image.onerror=()=>{if(token!==requestToken)return;failed++;settle();};
+   next.add(object);
+  }
+ };
+ return {group:cssGroup,setVisible,update};
 }
 
 function geometryBucket(){return {positions:[],indices:[]};}
@@ -118,42 +206,20 @@ export function buildBogotaContext(root,addLabel,onInspect){
  const group=new THREE.Group();group.name='Bogotá · base catastral y corredor 3D L1';root.add(group);
  const worldWidth=MAP_WIDTH*WORLD_SCALE,worldHeight=MAP_HEIGHT*WORLD_SCALE;
 
- const ground=mapPlane(worldWidth+155,worldHeight+72,new THREE.MeshStandardMaterial({color:'#09141c',roughness:1,metalness:0}),-.72);
- ground.position.x=71;ground.position.z=-3;group.add(ground);
+ const ground=mapPlane(EXPANDED_MAP_WIDTH*WORLD_SCALE,EXPANDED_MAP_HEIGHT*WORLD_SCALE,new THREE.MeshStandardMaterial({color:'#09141c',roughness:1,metalness:0}),-.72);group.add(ground);
 
- const texture=new THREE.TextureLoader().load('./predial-cadastre.webp?v=20260922-mapbase');
- texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=4;
- const cadastral=mapPlane(worldWidth,worldHeight,new THREE.MeshBasicMaterial({map:texture,transparent:true,opacity:.78,depthWrite:false,toneMapped:false,side:THREE.DoubleSide}),-.5);
- cadastral.name='Base catastral · lotes, construcciones, manzanas, vías y curvas';group.add(cadastral);
-
- const aerial=new THREE.Group();aerial.name='Ortoimagen urbana Bogotá 2025 · IDECA';
- for(let row=0;row<2;row++)for(let col=0;col<3;col++){
-  const aerialTexture=new THREE.TextureLoader().load(`./assets/bogota-ortho-2025-${row}-${col}.webp?v=20260923-ideca`);
-  aerialTexture.colorSpace=THREE.SRGBColorSpace;aerialTexture.anisotropy=8;
-  const tile=mapPlane(worldWidth/3,worldHeight/2,new THREE.MeshBasicMaterial({map:aerialTexture,transparent:true,opacity:.9,depthWrite:false,toneMapped:false,side:THREE.DoubleSide}),-.475);
-  tile.position.x=(col-1)*worldWidth/3;tile.position.z=(row-.5)*worldHeight/2;tile.renderOrder=1;aerial.add(tile);
+ const cadastral=new THREE.Group();cadastral.name='Base catastral · lotes, construcciones, manzanas, vías y curvas';group.add(cadastral);
+ for(let row=0;row<2;row++)for(let col=0;col<2;col++){
+  const texture=new THREE.TextureLoader().load(`./assets/predial-cadastre-${row}-${col}.webp?v=20261001-expanded-mapbase`);texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=8;
+  const tile=mapPlane(EXPANDED_MAP_WIDTH*WORLD_SCALE/2,EXPANDED_MAP_HEIGHT*WORLD_SCALE/2,new THREE.MeshBasicMaterial({map:texture,transparent:true,opacity:.82,depthWrite:false,toneMapped:false,side:THREE.DoubleSide}),-.5);
+  tile.position.x=(col-.5)*EXPANDED_MAP_WIDTH*WORLD_SCALE/2;tile.position.z=(row-.5)*EXPANDED_MAP_HEIGHT*WORLD_SCALE/2;cadastral.add(tile);
  }
- const highDetail=new THREE.Group();highDetail.name='Detalle ortofotográfico · corredor L1 ±1 km';aerial.add(highDetail);
- fetch('./bogota-ortho-2025-l1.json?v=20261001-l1-hires-v2').then(response=>{
-  if(!response.ok)throw new Error('No se pudo cargar el manifiesto de ortoimagen detallada');
-  return response.json();
- }).then(manifest=>{
-  for(const item of manifest.tiles){
-   const detailTexture=new THREE.TextureLoader().load(`${item.file}?v=20261001-l1-hires-v2`);
-   detailTexture.colorSpace=THREE.SRGBColorSpace;detailTexture.anisotropy=16;
-   const material=new THREE.MeshBasicMaterial({map:detailTexture,transparent:true,opacity:.98,alphaTest:.015,depthWrite:false,toneMapped:false,side:THREE.DoubleSide});
-   const tile=mapPlane(item.width*WORLD_SCALE,item.height*WORLD_SCALE,material,-.463);
-   tile.position.x=(item.x+item.width/2-MAP_WIDTH/2)*WORLD_SCALE;
-   tile.position.z=(item.y+item.height/2-MAP_HEIGHT/2)*WORLD_SCALE;
-   tile.renderOrder=2;highDetail.add(tile);
-  }
-  group.userData.aerial.meta=manifest.meta;
-  document.dispatchEvent(new CustomEvent('aerialdetailready',{detail:manifest.meta}));
- }).catch(error=>console.error(error));
- group.add(aerial);group.userData.aerial={mesh:aerial,detail:highDetail,source:'UAECD / IDECA · Ortofotomosaico urbano Bogotá 2025 · WMS · CC BY 4.0'};
 
- const borderPoints=[[0,0],[MAP_WIDTH,0],[MAP_WIDTH,MAP_HEIGHT],[0,MAP_HEIGHT],[0,0]].map(point=>new THREE.Vector3(...cityPoint(point,-.38)));
- group.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(borderPoints),new THREE.LineBasicMaterial({color:'#5b8190',transparent:true,opacity:.75})));
+ const aerial=addCssAerial(group);
+ const setAerialVisible=value=>{aerial.setVisible(value);ground.visible=!value;cadastral.visible=!value;};
+ setAerialVisible(true);
+ group.userData.aerial={mesh:aerial.group,detail:aerial.group,update:aerial.update,setVisible:setAerialVisible,source:'UAECD / IDECA · Ortofotomosaico urbano Bogotá 2025 · WMS · GSD nativo 5 cm · CC BY 4.0'};
+ group.userData.cadastre={mesh:cadastral,ground,bounds:{mapWidth:EXPANDED_MAP_WIDTH,mapHeight:EXPANDED_MAP_HEIGHT,margin:.15}};
 
  group.userData.buildingsPromise=loadL1Buildings().then(data=>addBuildingVolumes(group,data,addLabel,onInspect)).catch(error=>{
   console.error(error);document.dispatchEvent(new CustomEvent('l1buildingserror',{detail:{message:error.message}}));return null;
