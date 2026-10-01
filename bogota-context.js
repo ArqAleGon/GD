@@ -61,29 +61,21 @@ function meshFromBucket(bucket,material,name){
 }
 
 function addBuildingVolumes(group,data,addLabel,onInspect){
- const regular=geometryBucket(),landmarks=geometryBucket();
+ const regular=geometryBucket();
+ const omittedLandmarks=new Set(['Universidad Nacional','Estadio El Campín','Estadio El Camp�n']);
  for(const record of data.buildings){
   const heightM=record[1],landmarkIndex=record[2],rings=record[4];
-  const bucket=landmarkIndex>=0?landmarks:regular;
-  for(const ring of rings)addFootprint(bucket,ring,heightM);
+  const landmark=landmarkIndex>=0?data.landmarks[landmarkIndex]:null;
+  if(landmark&&omittedLandmarks.has(landmark.name))continue;
+  for(const ring of rings)addFootprint(regular,ring,heightM);
  }
  const regularMaterial=new THREE.MeshStandardMaterial({color:'#7293a0',roughness:.82,metalness:.04,transparent:true,opacity:.68,side:THREE.DoubleSide});
- const landmarkMaterial=new THREE.MeshStandardMaterial({color:'#e1b94f',emissive:'#5a3d08',emissiveIntensity:.34,roughness:.58,metalness:.12,transparent:true,opacity:.94,side:THREE.DoubleSide});
  const volumeMesh=meshFromBucket(regular,regularMaterial,'Construcciones L1 · corredor 100 m');
- const landmarkMesh=meshFromBucket(landmarks,landmarkMaterial,'Hitos urbanos · CONNPISOS × 3 m');
- group.add(volumeMesh,landmarkMesh);
- for(const item of data.landmarks){
-  const top=Math.max(.45,BASE_Y+item.heightM*HEIGHT_WORLD_PER_METRE+.38);
-  const marker=new THREE.Mesh(new THREE.RingGeometry(1.05,1.7,28),new THREE.MeshBasicMaterial({color:'#ffe59a',transparent:true,opacity:.88,side:THREE.DoubleSide,depthWrite:false}));
-  marker.rotation.x=-Math.PI/2;marker.position.fromArray(cityPoint(item.anchor,BASE_Y+.08));marker.renderOrder=3;group.add(marker);
-  const detail={...item,description:`${item.count.toLocaleString('es')} construcciones asociadas · máximo ${item.maxFloors.toLocaleString('es')} pisos · ${item.heightM.toLocaleString('es')} m según CONNPISOS × 3 m.`};
-  const label=addLabel(cityPoint(item.anchor,top),()=>item.name,()=>onInspect?.(detail),'bogotaLandmark');
-  label.landmark=true;label.offsetY=-18;
- }
+ group.add(volumeMesh);
  group.userData.buildingMeta=data.meta;
- group.userData.buildingMeshes={volumes:volumeMesh,landmarks:landmarkMesh};
+ group.userData.buildingMeshes={volumes:volumeMesh,landmarks:null};
  document.dispatchEvent(new CustomEvent('l1buildingsready',{detail:{meta:data.meta,landmarks:data.landmarks}}));
- return {volumeMesh,landmarkMesh};
+ return {volumeMesh,landmarkMesh:null};
 }
 
 function addEasternHills(group,data,addLabel){
@@ -117,9 +109,6 @@ function addEasternHills(group,data,addLabel){
   for(let index=0;index<flat.length;index+=2)points.push(new THREE.Vector3(...cityPoint([flat[index],flat[index+1]],BASE_Y+Math.max(0,elevation-baseElevationM)*METRES_TO_WORLD+.025)));
   if(points.length>1){const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints(points),contourMaterial);line.renderOrder=2;terrain.add(line);}
  }
- const labelX=minX+(maxX-minX)*.12,centerY=(minY+maxY)/2;
- const label=addLabel(cityPoint([labelX,centerY],BASE_Y+maxRelative*METRES_TO_WORLD+1),()=>`CERROS ORIENTALES · ${data.meta.minElevationM.toLocaleString('es')}–${data.meta.maxElevationM.toLocaleString('es')} m`,null,'cityStreetLabel hillsLabel');
- label.landmark=true;label.offsetY=-10;
  group.userData.terrain={group:terrain,surface,meta:data.meta};
  document.dispatchEvent(new CustomEvent('terrainready',{detail:data.meta}));
  return terrain;
@@ -144,17 +133,28 @@ export function buildBogotaContext(root,addLabel,onInspect){
   const tile=mapPlane(worldWidth/3,worldHeight/2,new THREE.MeshBasicMaterial({map:aerialTexture,transparent:true,opacity:.9,depthWrite:false,toneMapped:false,side:THREE.DoubleSide}),-.475);
   tile.position.x=(col-1)*worldWidth/3;tile.position.z=(row-.5)*worldHeight/2;tile.renderOrder=1;aerial.add(tile);
  }
- group.add(aerial);group.userData.aerial={mesh:aerial,source:'IDECA · Ortoimagen urbana Bogotá 2025 · CC BY 4.0'};
+ const highDetail=new THREE.Group();highDetail.name='Detalle ortofotográfico · corredor L1 ±1 km';aerial.add(highDetail);
+ fetch('./bogota-ortho-2025-l1.json?v=20261001-l1-hires-v2').then(response=>{
+  if(!response.ok)throw new Error('No se pudo cargar el manifiesto de ortoimagen detallada');
+  return response.json();
+ }).then(manifest=>{
+  for(const item of manifest.tiles){
+   const detailTexture=new THREE.TextureLoader().load(`${item.file}?v=20261001-l1-hires-v2`);
+   detailTexture.colorSpace=THREE.SRGBColorSpace;detailTexture.anisotropy=16;
+   const material=new THREE.MeshBasicMaterial({map:detailTexture,transparent:true,opacity:.98,alphaTest:.015,depthWrite:false,toneMapped:false,side:THREE.DoubleSide});
+   const tile=mapPlane(item.width*WORLD_SCALE,item.height*WORLD_SCALE,material,-.463);
+   tile.position.x=(item.x+item.width/2-MAP_WIDTH/2)*WORLD_SCALE;
+   tile.position.z=(item.y+item.height/2-MAP_HEIGHT/2)*WORLD_SCALE;
+   tile.renderOrder=2;highDetail.add(tile);
+  }
+  group.userData.aerial.meta=manifest.meta;
+  document.dispatchEvent(new CustomEvent('aerialdetailready',{detail:manifest.meta}));
+ }).catch(error=>console.error(error));
+ group.add(aerial);group.userData.aerial={mesh:aerial,detail:highDetail,source:'UAECD / IDECA · Ortofotomosaico urbano Bogotá 2025 · WMS · CC BY 4.0'};
 
  const borderPoints=[[0,0],[MAP_WIDTH,0],[MAP_WIDTH,MAP_HEIGHT],[0,MAP_HEIGHT],[0,0]].map(point=>new THREE.Vector3(...cityPoint(point,-.38)));
  group.add(new THREE.Line(new THREE.BufferGeometry().setFromPoints(borderPoints),new THREE.LineBasicMaterial({color:'#5b8190',transparent:true,opacity:.75})));
 
- const areas=[
-  ['BOSA',[180,430]],['KENNEDY',[430,390]],['PUENTE ARANDA',[760,430]],['CENTRO',[1050,420]],['CHAPINERO',[1130,175]],['TEUSAQUILLO',[1010,275]],['BOGOTÁ · BASE CATASTRAL',[590,28]]
- ];
- for(const [name,xy] of areas){
-  const label=addLabel(cityPoint(xy,.9),()=>name,null,'cityStreetLabel');label.landmark=true;label.cityMinor=!name.includes('BASE CATASTRAL');
- }
  group.userData.buildingsPromise=loadL1Buildings().then(data=>addBuildingVolumes(group,data,addLabel,onInspect)).catch(error=>{
   console.error(error);document.dispatchEvent(new CustomEvent('l1buildingserror',{detail:{message:error.message}}));return null;
  });

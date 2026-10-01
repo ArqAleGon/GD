@@ -41,7 +41,7 @@ const mapBase=sourceFile('MapaBaseBogota/*.shp','Base catastral y referencia ter
 const buildings=sourceFile('CONSTRUC.shp','Edificaciones hasta 100 m a cada lado de la L1 · CONNPISOS × 3 m','22/09/2026');
 const hills=sourceFile('CNiv.shp','Curvas de nivel de los Cerros Orientales','22/09/2026');
 const roads=sourceFile('Malla_Vial_Integral_Bogota_D_C.shp','Nombres y códigos de las vías principales','22/09/2026');
-const aerial=sourceFile('bogota-ortho-2025-[mosaicos].webp','Fuente: IDECA/UAECD · Ortoimagen urbana Bogotá 2025 · fecha de imagen 31/08/2025 · CC BY 4.0','23/09/2026');
+const aerial=sourceFile('bogota-ortho-2025-[base + corredor L1].webp','Fuente: UAECD / IDECA · Ortofotomosaico urbano Bogotá 2025 · WMS ColorBalance · GSD nativo 5 cm · detalle web en franja de 1 km a cada lado de la L1 · fecha de imagen 31/08/2025 · CC BY 4.0','01/10/2026');
 const e15Ifc=sourceFile('e15-architecture-web.glb / e15-1100.glb','Conversión web de modelos IFC E15 · ARQ + EST','16/09/2026');
 const i16Ifc=sourceFile('i16-est-1100-web.glb / i16-est-1150-web.glb','Conversión web de modelos IFC I16 · EST','16/09/2026');
 const e16Ifc=sourceFile('e16-arq-0000-web.glb / e16-est-*.glb','Conversión web de modelos IFC E16 · ARQ + EST','16/09/2026');
@@ -81,7 +81,7 @@ function inicioProfile(view){
  if(view==='urban')return{title:viewTitles[view],note:'Integración geográfica e IFC de E15–E16 y del Patio Taller 102–112. El conjunto completo se carga al entrar en Modelos BIM Integrados y queda disponible durante la sesión; 110 PTAR no contiene geometría y 111 usa clasificación gráfica por tipo IFC.',items:[e15Ifc,i16Ifc,e16Ifc,...patioIfc,mapBase,renderE15,progressE15]};
  if(['station','indoor','security','evacuation','platform','equipment'].includes(view))return{title:viewTitles[view],note:'La geometría procede de los modelos IFC; equipos, personas, alarmas y cámaras representan funciones de demostración.',items:[e15Ifc,i16Ifc,e16Ifc,p6]};
  if(['railway','maintenance'].includes(view))return{title:viewTitles[view],note:'La geometría ferroviaria se apoya en el contexto L1; movimiento, operación y mantenimiento son simulados.',items:[p6,mapBase,buildings]};
- return{title:viewTitles[view]||viewTitles.network,note:'Fuentes activas de la escena territorial y de los indicadores Primavera P6.',items:[p6,mapBase,buildings,hills,roads,aerial]};
+ return{title:viewTitles[view]||viewTitles.network,note:'Fuentes activas de la escena territorial y de los indicadores Primavera P6.',items:[p6,mapBase,buildings,hills,aerial]};
 }
 let activeSourceView='network';
 const sourceToggle=document.createElement('button');
@@ -106,4 +106,3 @@ sourcePanel.querySelector('header button').addEventListener('click',()=>setSourc
 document.addEventListener('mockupscenechange',event=>{activeSourceView=event.detail?.view||activeSourceView;if(!sourcePanel.hidden)renderSourcePanel();});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!sourcePanel.hidden)setSourcePanel(false);});
 renderSourcePanel();
-
