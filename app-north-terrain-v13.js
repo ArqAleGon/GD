@@ -3,7 +3,7 @@ import {COMPARISONS,comparisonLayers} from './e15-comparison.js';
 import {RENDER_E15_CAMERA,renderE15Fov} from './render-e15-camera.js';
 import {buildBogotaContext,cityPoint,METRES_TO_WORLD} from './bogota-context.js?v=20261002-north-terrain-v13';
 import { localizeInterface } from './interface-language.js';
-import { loadUrbanMap, buildUrbanMap } from './urban-map-20260915-i16-e16.js?v=20261002-controls-v2';
+import { loadUrbanMap, buildUrbanMap } from './urban-map-20260915-i16-e16.js?v=20261002-label-standard';
 import { networkLines } from './network-data.js?v=20260923-l1';
 import {P6,P6_STATUS,stationOptions as p6Stations,workFrontOptions as p6WorkFronts,ueOptions as p6UEs,filterP6,summarizeP6,groupP6} from './p6-dashboard.js?v=20260923-multiue';
 import {OBJECT_PROGRESS_STORAGE_KEY,appendProgressRecord,loadProgressRecords,recordsForObject,summarizeProgress} from './object-progress.js?v=20260929-object-progress-v1';
@@ -369,7 +369,13 @@ function openObjectConsult(target=selectedProgressTarget){
  if(!target)return;selectedProgressTarget=target;hideObjectContextMenu(true);const records=recordsForObject(objectProgressRecords,target.id),latest=records[0];
  const history=records.length?`<div class="objectHistory">${records.map(record=>`<article><strong>${safe(record.progress)} %</strong><span><b>${safe(record.userName)}</b><small>${safe(new Date(record.date+'T12:00:00').toLocaleDateString('es-CO'))}</small></span></article>`).join('')}</div>`:'<p class="executionEmpty">Este objeto aún no tiene registros de avance.</p>';
  $('#modalContent').innerHTML=`<div class="objectDialogHead"><span>Consultar objeto</span><h2>${safe(target.title)}</h2><p>${safe(target.kind)} · ${safe(target.section)}</p></div><div class="objectConsultGrid"><section><h3>Parámetros del objeto</h3><table class="objectParameterTable"><tbody>${parameterRows(target)}</tbody></table></section><section><h3>Control de ejecución</h3><div class="objectProgressGauge ${latest?'':'empty'}" style="--progress:${(latest?.progress||0)*3.6}deg"><span><b>${safe(latest?.progress??'—')}</b><small>${latest?'%':'Sin dato'}</small></span></div><h3>Historial · ${records.length}</h3>${history}</section></div><p class="storageNotice">Los registros de esta versión se conservan localmente en este navegador. No modifican los archivos IFC ni los datos Primavera P6.</p><div class="formActions"><button id="consultRegister">Registrar avance</button></div>`;
- $('#consultRegister').onclick=()=>openObjectRegister(target);modalOpen();
+ $('#consultRegister').onclick=()=>openObjectRegister(target);
+ if(['E15','E16','I16'].includes(target.section)&&target.kind==='Modelo IFC'){
+  const isolateButton=document.createElement('button');isolateButton.id='consultIsolate';isolateButton.textContent='Vista aislada';
+  isolateButton.onclick=()=>{$('#modal').close();document.dispatchEvent(new CustomEvent('bimmodelaction',{detail:{section:target.section,action:'isolate'}}));};
+  $('#modalContent .formActions').append(isolateButton);
+ }
+ modalOpen();
 }
 function bogotaToday(){return new Intl.DateTimeFormat('en-CA',{timeZone:'America/Bogota',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());}
 function openObjectRegister(target=selectedProgressTarget){

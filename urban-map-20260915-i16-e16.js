@@ -123,7 +123,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
   const stationSections=new Set(['E15','E16','I16']);
   function createSectionLabel(sectionName,entry,position){
     const rail=stationSections.has(sectionName),name=rail?({E15:'Estación 15 · Calle 63',E16:'Estación 16 · Calle 72',I16:'Interestación E15–E16'}[sectionName]):entry.label.replace(/^IFC\s*·\s*/, '');
-    entry.labelObject=addLabel(position,()=>rail?`<span class="bimBuildingName">${name}</span><div class="bimStationActions"><button data-model-action="consult">Consultar</button><button data-model-action="register">Registrar</button><button data-model-action="isolate">Vista aislada</button></div>`:`<button class="bimBuildingName" title="Consultar ${name}">${name}</button><button class="bimRegisterInline" data-register-section="${sectionName}">+ Registrar</button>`,async event=>{
+    entry.labelObject=addLabel(position,()=>`<button class="bimBuildingName" data-model-action="consult" title="Consultar ${name}">${name}</button><button class="bimRegisterInline" ${rail?'data-model-action="register"':`data-register-section="${sectionName}"`}>+ Registrar</button>`,async event=>{
       if(event.target.closest('[data-register-section]')){location.href=`./model-register.html?section=${encodeURIComponent(sectionName)}`;return;}
       const action=event.target.closest('[data-model-action]')?.dataset.modelAction||'consult';
       if(rail){document.dispatchEvent(new CustomEvent('bimmodelaction',{detail:{section:sectionName,action}}));return;}

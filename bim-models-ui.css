@@ -13,11 +13,6 @@ body[data-scene="inicio"]:has(#app.urbanControls) .dataSourceToggle{left:calc(24
 body[data-scene="inicio"]:has(#app.urbanControls) .dataSourcePanel{left:auto;right:12px;top:auto;bottom:calc(68px + var(--scene-toolbar-height,80px));max-height:calc(100dvh - var(--scene-header) - var(--scene-toolbar-height,80px) - 90px)}
 body[data-scene="inicio"]:has(#app.urbanControls) .bimModelMenuPanel{left:auto;right:12px;top:auto;bottom:calc(68px + var(--scene-toolbar-height,80px));max-height:calc(100dvh - var(--scene-header) - var(--scene-toolbar-height,80px) - 90px);width:min(390px,calc(100vw - 24px))}
 body[data-scene="inicio"]:has(#app.urbanControls) #panels{bottom:calc(76px + max(var(--scene-pov-height,170px),var(--scene-toolbar-height,80px)))}
-.bimStationSpot.sceneLabel{height:72px!important;width:228px!important}
-.bimStationSpot .bimBuildingName{display:block;text-align:center;height:22px}
-.bimStationActions{display:flex;gap:3px}
-.bimStationActions button{flex:1;min-width:0;height:36px;padding:3px!important;border:1px solid #d7767b80!important;border-radius:3px;background:#59151d;line-height:13px!important;font-size:10px!important}
-.bimStationActions button:hover{background:#a51e28}
 @media(max-width:800px){
  body[data-scene="inicio"]:has(#app.urbanControls){--bim-movement-width:calc(57vw - 24px)}
  body[data-scene="inicio"]:has(#app.urbanControls) #povControls{flex-wrap:wrap;gap:5px;padding:6px}
