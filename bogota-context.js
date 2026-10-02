@@ -67,7 +67,7 @@ function addCssAerial(group){
  const detailHost=new THREE.Group();detailHost.name='WMS original · cobertura visible georreferenciada';cssGroup.add(detailHost);
  let pending=null,active=null,activeMeta=null,pendingMeta=null,requestToken=0,lastUpdate=0,enabled=true;
  const removeTileGroup=tileGroup=>{if(!tileGroup)return;tileGroup.traverse(object=>{if(object.isCSS3DObject)object.element.remove();});detailHost.remove(tileGroup);};
- const setVisible=value=>{enabled=Boolean(value);cssGroup.visible=enabled;};
+ const setVisible=value=>{enabled=Boolean(value);cssGroup.visible=true;context.visible=true;detailHost.visible=enabled;};
  const projected=new THREE.Vector3(),direction=new THREE.Vector3();
  const visibleMapBounds=(camera,target)=>{
   let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity,hits=0;
@@ -114,7 +114,7 @@ function addCssAerial(group){
   image.onerror=()=>{if(token!==requestToken)return;removeTileGroup(next);pending=null;pendingMeta=null;};
   next.add(object);
  };
- return {group:cssGroup,setVisible,update};
+ return {group:cssGroup,context,detailHost,setVisible,update};
 }
 
 function geometryBucket(){return {positions:[],indices:[]};}
@@ -208,19 +208,15 @@ export function buildBogotaContext(root,addLabel,onInspect){
 
  const ground=mapPlane(EXPANDED_MAP_WIDTH*WORLD_SCALE,EXPANDED_MAP_HEIGHT*WORLD_SCALE,new THREE.MeshStandardMaterial({color:'#09141c',roughness:1,metalness:0}),-.72);group.add(ground);
 
- const texture=new THREE.TextureLoader().load('./assets/predial-cadastre-expanded.webp?v=20261002-aerial-transparency-v4');texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=8;
- const cadastral=mapPlane(EXPANDED_MAP_WIDTH*WORLD_SCALE,EXPANDED_MAP_HEIGHT*WORLD_SCALE,new THREE.MeshBasicMaterial({map:texture,transparent:true,opacity:.82,depthWrite:false,toneMapped:false,side:THREE.DoubleSide}),-.5);
- cadastral.name='Base catastral · lotes, construcciones, manzanas, vías y curvas';group.add(cadastral);
-
  const aerial=addCssAerial(group);
  let aerialVisible=true;
  const setAerialVisible=value=>{
-  aerialVisible=Boolean(value);aerial.setVisible(aerialVisible);ground.visible=!aerialVisible;cadastral.visible=!aerialVisible;
+  aerialVisible=Boolean(value);aerial.setVisible(aerialVisible);ground.visible=false;
   const terrain=group.userData.terrain?.group;if(terrain)terrain.visible=!aerialVisible;
  };
  setAerialVisible(true);
  group.userData.aerial={mesh:aerial.group,detail:aerial.group,update:aerial.update,setVisible:setAerialVisible,source:'UAECD / IDECA · Ortofotomosaico urbano Bogotá 2025 · WMS · GSD nativo 5 cm · CC BY 4.0'};
- group.userData.cadastre={mesh:cadastral,ground,bounds:{mapWidth:EXPANDED_MAP_WIDTH,mapHeight:EXPANDED_MAP_HEIGHT,margin:.15}};
+ group.userData.cadastre={mesh:aerial.context,ground,bounds:{mapWidth:EXPANDED_MAP_WIDTH,mapHeight:EXPANDED_MAP_HEIGHT,margin:.15}};
 
  group.userData.buildingsPromise=loadL1Buildings().then(data=>addBuildingVolumes(group,data,addLabel,onInspect)).catch(error=>{
   console.error(error);document.dispatchEvent(new CustomEvent('l1buildingserror',{detail:{message:error.message}}));return null;
@@ -230,4 +226,3 @@ export function buildBogotaContext(root,addLabel,onInspect){
  });
  return group;
 }
-
