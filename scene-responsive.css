@@ -1,0 +1,146 @@
+/* Shared screen sizing; model coordinates and camera scale are not changed. */
+:root{--scene-header:76px;--scene-gap:clamp(8px,1vw,18px);--control-font:clamp(12px,.72vw,15px)}
+html,body{min-width:0!important;max-width:100%;margin:0}
+body>header,#app>header{height:auto;min-height:64px;padding:10px var(--scene-gap);gap:12px;box-sizing:border-box}
+.sceneNav,.headActions{gap:5px;min-width:0;flex-wrap:wrap}
+.sceneNav a,.sceneNav button,.headActions button,.headActions a,.headerModuleMenu>summary{font-size:var(--control-font);min-height:32px;box-sizing:border-box;display:inline-flex;align-items:center;justify-content:center;padding:6px 9px}
+.brand{flex-shrink:0}.brand b,h1{overflow-wrap:break-word}
+button,summary,input,select{touch-action:manipulation}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid #7edbff;outline-offset:2px}
+.compactSceneTools{display:none}
+body[data-scene]:not([data-scene="inicio"]) main{min-width:0;min-height:0}
+body[data-scene]:not([data-scene="inicio"]) .workspace{min-width:0}
+body[data-scene="bim"] main,body[data-scene="predial"] main{grid-template-columns:clamp(210px,18vw,270px) minmax(0,1fr)}
+body[data-scene="bim"] .filters,body[data-scene="predial"] .filters{padding:18px 14px;max-height:calc(100dvh - var(--scene-header));overflow:auto;position:sticky;top:var(--scene-header);align-self:start}
+body[data-scene="bim"] .workspace,body[data-scene="predial"] .workspace{padding:48px var(--scene-gap) 18px}
+body[data-scene="bim"] .viewport{height:clamp(300px,52dvh,920px)}
+body[data-scene="bim"] .viewTools,body[data-scene="predial"] .mapTools{display:flex;flex-wrap:wrap;gap:5px;max-width:100%}
+body[data-scene="predial"] .mapViewport{height:clamp(320px,60dvh,1100px);min-height:0;aspect-ratio:auto}
+body[data-scene="predial"] .contentGrid{grid-template-columns:minmax(0,1fr) clamp(250px,23vw,350px)}
+body[data-scene="predial"] .mapHeading{flex-wrap:wrap;gap:8px}
+body[data-scene="bim"] .dataSourceToggle,body[data-scene="predial"] .dataSourceToggle,body[data-scene="documentos"] .dataSourceToggle,body[data-scene="registro"] .dataSourceToggle{top:calc(var(--scene-header) + 8px);right:12px;left:auto}
+body[data-scene="bim"] .dataSourcePanel,body[data-scene="predial"] .dataSourcePanel,body[data-scene="documentos"] .dataSourcePanel,body[data-scene="registro"] .dataSourcePanel{top:calc(var(--scene-header) + 47px);right:12px;left:auto;max-width:calc(100vw - 24px);max-height:calc(100dvh - var(--scene-header) - 65px);overflow:auto}
+/* Main and integrated scenes: separate bottom camera, actions and POV controls. */
+body[data-scene="inicio"] #panelToggle{top:calc(var(--scene-header) + 8px);right:12px;min-height:32px}
+body[data-scene="inicio"] #panels{top:calc(var(--scene-header) + 48px);bottom:128px;right:12px;width:clamp(290px,31vw,530px);gap:8px}
+body[data-scene="inicio"] #panels .panel{min-height:140px;padding:clamp(9px,1vw,17px)}
+body[data-scene="inicio"] #toolbar{left:12px;right:12px;bottom:86px;max-width:none;transform:none;flex-wrap:nowrap;overflow-x:auto;width:max-content;max-width:calc(100% - 24px)}
+body[data-scene="inicio"] #toolbar button,body[data-scene="inicio"] #cameraDock button{min-height:32px;font-size:var(--control-font);padding:6px 9px}
+body[data-scene="inicio"] #cameraDock{bottom:44px;white-space:nowrap;max-width:calc(100vw - 24px);overflow:auto}
+body[data-scene="inicio"] #povControls{bottom:20px;left:50%;transform:translateX(-50%);max-width:calc(100vw - 24px);box-sizing:border-box}
+body[data-scene="inicio"]:has(#app.urbanControls) #toolbar{bottom:204px}
+body[data-scene="inicio"]:has(#app.urbanControls) #panels{bottom:258px}
+body[data-scene="inicio"] .bimModelMenuPanel{position:fixed;left:12px;top:calc(var(--scene-header) + 110px);bottom:258px;width:min(390px,calc(100vw - 24px));max-height:none;overflow:auto;box-sizing:border-box;z-index:45}
+body[data-scene="inicio"] .compassControl{top:calc(var(--scene-header) + 10px);left:108px}
+body[data-scene="inicio"] .dataSourceToggle{left:12px;bottom:128px;top:auto;max-width:190px}
+body[data-scene="inicio"] .dataSourcePanel{left:12px;bottom:168px;top:auto;max-height:calc(100dvh - var(--scene-header) - 165px)}
+body[data-scene="inicio"]:has(#app.urbanControls) .dataSourceToggle{bottom:248px}
+body[data-scene="inicio"]:has(#app.urbanControls) .dataSourcePanel{bottom:288px;max-height:calc(100dvh - var(--scene-header) - 305px)}
+body[data-scene="inicio"] #viewBadge{bottom:168px;max-width:190px}
+body[data-scene="inicio"]:has(#app.urbanControls) #viewBadge{display:none}
+/* Document catalogue and viewer always fit the available window. */
+body[data-scene="documentos"] main{height:calc(100dvh - var(--scene-header));grid-template-columns:clamp(240px,25vw,380px) minmax(0,1fr)}
+body[data-scene="documentos"] main>aside{min-height:0;max-height:none;overflow:auto}
+body[data-scene="documentos"] .workspace{padding-top:48px;min-height:0;height:100%;overflow:hidden}
+body[data-scene="documentos"] #viewer{min-height:0;flex:1;overflow:auto}
+body[data-scene="documentos"] #viewer iframe{min-height:0;height:100%}
+body[data-scene="documentos"] #tools{flex-wrap:wrap;max-height:110px;overflow:auto;flex-shrink:0}
+body[data-scene="documentos"].embedMode main{height:100dvh}
+body[data-scene="documentos"].embedMode .workspace{padding:14px;height:100dvh}
+/* Registration keeps the building in a dedicated, flexible viewing area. */
+body[data-scene="registro"] main{height:calc(100dvh - var(--scene-header));grid-template-columns:clamp(210px,16vw,270px) minmax(0,1fr)}
+body[data-scene="registro"] .workspace{padding:44px 12px 12px}
+body[data-scene="registro"] .heading{height:32px;min-width:0}
+body[data-scene="registro"] .heading h1{font-size:clamp(15px,1.2vw,21px)}
+body[data-scene="registro"] .kpis{height:56px;margin:8px 0;gap:6px}
+body[data-scene="registro"] .kpis article{padding:8px;min-width:0}
+body[data-scene="registro"] .kpis b{font-size:clamp(18px,1.4vw,28px)}
+body[data-scene="registro"] .viewerCard{top:146px;left:12px;right:340px;bottom:210px;min-height:0}
+body[data-scene="registro"] .inspector{top:146px;right:12px;bottom:12px;width:316px;overflow:auto}
+body[data-scene="registro"] .progressDashboard{left:12px;right:340px;bottom:12px;height:186px;min-height:0}
+body[data-scene="registro"] .dashboardCollapsed .viewerCard{bottom:64px}
+body[data-scene="registro"] .progressDashboard.collapsed{height:40px}
+body[data-scene="registro"] .compassControl{top:calc(var(--scene-header) + 8px);left:calc(clamp(210px,16vw,270px) + 12px);transform:scale(.68);transform-origin:top left}
+body[data-scene="registro"] .heading{padding-left:56px}
+body[data-scene="registro"] .viewTools{display:flex;flex-wrap:wrap;max-width:calc(100% - 20px);gap:4px}
+@media(max-width:1180px){
+ body>header,#app>header{flex-wrap:wrap;gap:6px 12px;min-height:64px}
+ .sceneNav,.headActions{margin-left:auto}
+ .brand b,#app h1{font-size:15px;letter-spacing:0}
+ #app .weather{display:none}
+ body[data-scene="registro"] .activeModule{display:none}
+ body[data-scene="predial"] .contentGrid{grid-template-columns:minmax(0,1fr)}
+ body[data-scene="predial"] .dashboard{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+}
+@media(max-width:1100px){
+ .compactSceneTools{position:fixed;z-index:41;display:flex;gap:6px;left:12px;top:calc(var(--scene-header) + 8px)}
+ .compactSceneTools button{min-height:32px;font:12px Arial;padding:6px 10px;background:#172e40;color:#edf7ff;border:1px solid #56829d;border-radius:5px}
+ body[data-scene]:not([data-scene="inicio"]) main{grid-template-columns:minmax(0,1fr)}
+ body[data-scene]:not([data-scene="inicio"]) main>aside{display:none;position:fixed;z-index:40;top:calc(var(--scene-header) + 48px);bottom:10px;left:10px;width:min(300px,calc(100vw - 20px));max-height:none;height:auto;overflow:auto;padding:16px;box-shadow:0 8px 28px #000b;background:#101c27;border:1px solid #49667a}
+ body[data-scene].filtersOpen main>aside{display:block}
+ body[data-scene="documentos"] main{display:grid}
+ body[data-scene="registro"] .viewerCard,body[data-scene="registro"] .progressDashboard{right:12px}
+ body[data-scene="registro"] .inspector{display:none;z-index:35;top:48px;right:12px;bottom:12px;width:min(350px,calc(100% - 24px));box-shadow:0 8px 28px #000c}
+ body[data-scene="registro"].inspectorOpen .inspector{display:block}
+ body[data-scene="registro"] .compassControl{left:auto;right:24px;top:calc(var(--scene-header) + 158px)}
+ body[data-scene="registro"] .heading{padding-left:0}
+ body[data-scene="registro"] .heading>#modelLoadStatus{max-width:38%;font-size:10px}
+ body[data-scene="inicio"] #panels{width:290px;display:block;overflow:auto;background:#061019eb;scrollbar-width:thin}
+ body[data-scene="inicio"] #panels .panelCol,body[data-scene="inicio"] #panels .panelCol+.panelCol{display:flex;overflow:visible;gap:8px;margin-bottom:8px}
+ body[data-scene="inicio"] #panels .dashboardSource{margin-bottom:8px}
+ .sceneNav a:nth-of-type(2),.siteHeader nav a:last-child{display:inline-flex}
+}
+@media(max-height:800px){
+ body[data-scene="registro"] .progressDashboard{height:142px}
+ body[data-scene="registro"] .viewerCard{bottom:166px}
+ body[data-scene="registro"] .dashboardGrid{max-height:98px;overflow:auto}
+ body[data-scene="inicio"] #povControls{gap:8px;padding:7px 9px}
+ body[data-scene="inicio"] .povPad{width:116px;height:116px}
+ body[data-scene="inicio"]:has(#app.urbanControls) #toolbar{bottom:176px}
+ body[data-scene="inicio"]:has(#app.urbanControls) #panels{bottom:226px}
+ body[data-scene="inicio"]:has(#app.urbanControls) .dataSourceToggle{bottom:220px}
+ body[data-scene="inicio"]:has(#app.urbanControls) .dataSourcePanel{bottom:260px}
+ body[data-scene="inicio"] .bimModelMenuPanel{bottom:220px;top:calc(var(--scene-header) + 100px)}
+}
+@media(max-width:760px){
+ body>header,#app>header{padding:6px 10px}
+ .sceneNav,.headActions{width:100%;justify-content:flex-start;overflow:visible}
+ .sceneNav a,.sceneNav button,.headActions a,.headActions button,.headerModuleMenu>summary{font-size:12px;padding:5px 7px}
+ .brand img{width:30px;height:30px}.brand small{font-size:9px}
+ body[data-scene="inicio"] #panels{width:min(285px,calc(100vw - 24px))}
+ body[data-scene="inicio"] #toolbar{left:12px;right:auto}
+ body[data-scene="inicio"] #povControls{left:12px;right:12px;transform:none;width:auto;justify-content:center;gap:7px}
+ body[data-scene="inicio"] #povControls .povStatus{max-width:90px}
+ body[data-scene="inicio"] #cameraDock{left:50%;right:auto;transform:translateX(-50%)}
+ body[data-scene="bim"] .heading,body[data-scene="predial"] .heading{flex-wrap:wrap}
+ body[data-scene="bim"] .kpis,body[data-scene="predial"] .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+ body[data-scene="registro"] .kpis{grid-template-columns:repeat(5,minmax(0,1fr))}
+ body[data-scene="registro"] .kpis article{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;padding:6px}
+ body[data-scene="registro"] .kpis article span{font-size:9px}
+ body[data-scene="registro"] .heading small{display:none}
+ body[data-scene="registro"] .compassControl{display:none}
+ body[data-scene="documentos"] .docHead{flex-wrap:wrap;flex-shrink:0}
+ .dataSourceToggle{font-size:11px;padding:6px 8px}
+}
+@media(min-width:2000px){
+ body[data-scene="registro"] .viewerCard{right:410px;bottom:270px}
+ body[data-scene="registro"] .inspector{width:386px}
+ body[data-scene="registro"] .progressDashboard{right:410px;height:246px}
+ body[data-scene="inicio"] #panels{width:530px}
+}
+
+body[data-scene="inicio"] #aerialCredit{bottom:4px;right:12px;max-width:65vw;max-height:34px;overflow:auto;font-size:9px;line-height:1.3}
+body[data-scene="inicio"] #app>footer{max-width:30vw;white-space:nowrap;overflow:hidden}
+body[data-scene] .dataSourceToggle{width:max-content}
+
+body[data-scene="inicio"] .bimModelMenuPanel button{white-space:normal!important;text-align:left;line-height:1.25;min-height:34px}
+body[data-scene="inicio"] .bimModelMenuPanel{transform:none;top:calc(var(--scene-header) + 110px)}
+body[data-scene="inicio"] .dataSourceToggle{bottom:calc(94px + var(--scene-toolbar-height,46px))}
+body[data-scene="inicio"] .dataSourcePanel{bottom:calc(134px + var(--scene-toolbar-height,46px))}
+body[data-scene="inicio"] #viewBadge{bottom:calc(134px + var(--scene-toolbar-height,46px))}
+body[data-scene="inicio"]:has(#app.urbanControls){--dock-bottom:calc(var(--scene-pov-height,170px) + 32px)}
+body[data-scene="inicio"]:has(#app.urbanControls) #toolbar{bottom:var(--dock-bottom)}
+body[data-scene="inicio"]:has(#app.urbanControls) .dataSourceToggle{bottom:calc(var(--dock-bottom) + var(--scene-toolbar-height,50px) + 8px)}
+body[data-scene="inicio"]:has(#app.urbanControls) #panels{bottom:calc(var(--dock-bottom) + var(--scene-toolbar-height,50px) + 12px)}
+body[data-scene="inicio"]:has(#app.urbanControls) .bimModelMenuPanel{bottom:calc(var(--dock-bottom) + var(--scene-toolbar-height,50px) + 50px)}
+body[data-scene="inicio"]:has(#app.urbanControls) .dataSourcePanel{bottom:calc(var(--dock-bottom) + var(--scene-toolbar-height,50px) + 48px)}

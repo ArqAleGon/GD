@@ -1,17 +1,6 @@
 const current=document.body.dataset.scene||'scene';
-const fullscreen=document.querySelector('[data-scene-fullscreen]');
-const updateFullscreen=()=>{
-  if(!fullscreen)return;
-  const active=!!document.fullscreenElement;
-  fullscreen.setAttribute('aria-pressed',String(active));
-  fullscreen.title=active?'Salir de pantalla completa':'Ampliar a página completa';
-  const label=fullscreen.querySelector('[data-fullscreen-label]');
-  if(label)label.textContent=active?'Salir':'Pantalla completa';
-};
-if(fullscreen&&!fullscreen.hasAttribute('data-scene-fullscreen-external'))fullscreen.addEventListener('click',async()=>{
-  try{if(document.fullscreenElement)await document.exitFullscreen();else await document.documentElement.requestFullscreen();}catch{}
-});
-document.addEventListener('fullscreenchange',updateFullscreen);updateFullscreen();
+import './scene-bridge.js?v=20261002-v1';
+
 
 if(current!=='documentos'){
   const control=document.createElement('aside');
