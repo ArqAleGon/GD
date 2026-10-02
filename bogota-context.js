@@ -205,12 +205,12 @@ export function buildBogotaContext(root,addLabel,onInspect){
  const group=new THREE.Group();group.name='Bogotá · base catastral y corredor 3D L1';root.add(group);
  const worldWidth=MAP_WIDTH*WORLD_SCALE,worldHeight=MAP_HEIGHT*WORLD_SCALE;
 
- const ground=mapPlane(EXPANDED_MAP_WIDTH*WORLD_SCALE,EXPANDED_MAP_HEIGHT*WORLD_SCALE,new THREE.MeshStandardMaterial({color:'#09141c',roughness:1,metalness:0}),-.72);group.add(ground);
+ const ground=new THREE.Group();ground.name='Plano de respaldo desactivado';ground.visible=false;group.add(ground);
 
  const aerial=addCssAerial(group);
  let aerialVisible=true;
  const setAerialVisible=value=>{
-  aerialVisible=Boolean(value);aerial.setVisible(aerialVisible);ground.visible=false;
+  aerialVisible=Boolean(value);aerial.setVisible(aerialVisible);
   const terrain=group.userData.terrain?.group;if(terrain)terrain.visible=!aerialVisible;
  };
  setAerialVisible(true);
