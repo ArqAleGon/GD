@@ -40,10 +40,13 @@ function mapPlane(width,height,material,y){
 }
 
 function cssImagePlane(source,pixelWidth,pixelHeight,worldWidth,worldHeight,x,z,className=''){
+ const frame=document.createElement('div');
+ frame.style.cssText=`width:${pixelWidth}px;height:${pixelHeight}px;overflow:hidden;pointer-events:none;user-select:none`;
  const image=document.createElement('img');image.src=source;image.alt='';image.draggable=false;image.decoding='async';
  image.width=pixelWidth;image.height=pixelHeight;image.className=className;
- image.style.cssText=`display:block;width:${pixelWidth}px;height:${pixelHeight}px;object-fit:fill;pointer-events:none;user-select:none`;
- const object=new CSS3DObject(image);object.position.set(x,-.485,z);object.rotation.x=Math.PI/2;
+ image.style.cssText=`display:block;width:${pixelWidth}px;height:${pixelHeight}px;object-fit:fill;transform:scaleY(-1);pointer-events:none;user-select:none`;
+ frame.append(image);
+ const object=new CSS3DObject(frame);object.position.set(x,-.485,z);object.rotation.x=Math.PI/2;
  object.scale.set(worldWidth/pixelWidth,worldHeight/pixelHeight,1);return {object,image};
 }
 
@@ -211,7 +214,7 @@ export function buildBogotaContext(root,addLabel,onInspect){
  let aerialVisible=true;
  const setAerialVisible=value=>{
   aerialVisible=Boolean(value);aerial.setVisible(aerialVisible);
-  const terrain=group.userData.terrain?.group;if(terrain)terrain.visible=!aerialVisible;
+  const terrain=group.userData.terrain?.group;if(terrain)terrain.visible=true;
  };
  setAerialVisible(true);
  group.userData.aerial={mesh:aerial.detailHost,detail:aerial.detailHost,update:aerial.update,setVisible:setAerialVisible,source:'UAECD / IDECA · Ortofotomosaico urbano Bogotá 2025 · WMS · GSD nativo 5 cm · CC BY 4.0'};
@@ -220,7 +223,7 @@ export function buildBogotaContext(root,addLabel,onInspect){
  group.userData.buildingsPromise=loadL1Buildings().then(data=>addBuildingVolumes(group,data,addLabel,onInspect)).catch(error=>{
   console.error(error);document.dispatchEvent(new CustomEvent('l1buildingserror',{detail:{message:error.message}}));return null;
  });
- group.userData.terrainPromise=loadEasternHills().then(data=>{const terrain=addEasternHills(group,data,addLabel);terrain.visible=!aerialVisible;return terrain;}).catch(error=>{
+ group.userData.terrainPromise=loadEasternHills().then(data=>{const terrain=addEasternHills(group,data,addLabel);terrain.visible=true;return terrain;}).catch(error=>{
   console.error(error);document.dispatchEvent(new CustomEvent('terrainerror',{detail:{message:error.message}}));return null;
  });
  return group;
