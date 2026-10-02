@@ -11,6 +11,10 @@ const BASE_Y=-.38;
 const VIEW_BBOX=[-74.204367469,4.591299523,-74.06038065,4.664899642];
 const EXPANDED_MAP_WIDTH=1560;
 const EXPANDED_MAP_HEIGHT=1560;
+const EXPANDED_MIN_X=(MAP_WIDTH-EXPANDED_MAP_WIDTH)/2;
+const EXPANDED_MAX_X=MAP_WIDTH-EXPANDED_MIN_X;
+const EXPANDED_MIN_Y=(MAP_HEIGHT-EXPANDED_MAP_HEIGHT)/2;
+const EXPANDED_MAX_Y=MAP_HEIGHT-EXPANDED_MIN_Y;
 const NATIVE_ORTHO_URL='https://serviciosgis.catastrobogota.gov.co/image/services/imagenesfunciones/orthourbana2025funcion/ImageServer/WMSServer';
 const NATIVE_ORTHO_LAYER='orthourbana2025funcion:ColorBalance';
 export const cityPoint=([x,y],height=0)=>[(x-MAP_WIDTH/2)*WORLD_SCALE,height,(y-MAP_HEIGHT/2)*WORLD_SCALE];
@@ -62,52 +66,54 @@ function addCssAerial(group){
   const {object}=cssImagePlane(`./assets/predial-cadastre-${row}-${col}.webp?v=20261001-expanded-mapbase`,1170,1170,EXPANDED_MAP_WIDTH*WORLD_SCALE/2,EXPANDED_MAP_HEIGHT*WORLD_SCALE/2,(col-.5)*EXPANDED_MAP_WIDTH*WORLD_SCALE/2,(row-.5)*EXPANDED_MAP_HEIGHT*WORLD_SCALE/2,'nativeAerialTile aerialTerritorialContext');
   object.position.y=-.495;context.add(object);
  }
- const fallback=new THREE.Group();fallback.name='Respaldo ortofotografico local';cssGroup.add(fallback);
- const worldWidth=MAP_WIDTH*WORLD_SCALE,worldHeight=MAP_HEIGHT*WORLD_SCALE;
- for(let row=0;row<2;row++)for(let col=0;col<3;col++){
-  const pixelHeight=row?613:614;
-  const {object}=cssImagePlane(`./assets/bogota-ortho-2025-${row}-${col}.webp?v=20260923-ideca`,800,pixelHeight,worldWidth/3,worldHeight/2,(col-1)*worldWidth/3,(row-.5)*worldHeight/2,'nativeAerialTile fallbackAerialTile');
-  fallback.add(object);
- }
- const corridor=new THREE.Group();corridor.name='Franja L1 · respaldo local de alta resolucion';cssGroup.add(corridor);
- fetch('./bogota-ortho-2025-l1.json?v=20261001-l1-hires-v2').then(response=>response.ok?response.json():Promise.reject(new Error('No se pudo cargar el manifiesto de ortoimagen L1'))).then(manifest=>{
-  for(const item of manifest.tiles){
-   const {object}=cssImagePlane(`${item.file}?v=20261001-l1-hires-v2`,1024,1024,item.width*WORLD_SCALE,item.height*WORLD_SCALE,(item.x+item.width/2-MAP_WIDTH/2)*WORLD_SCALE,(item.y+item.height/2-MAP_HEIGHT/2)*WORLD_SCALE,'nativeAerialTile corridorAerialTile');
-   corridor.add(object);
-  }
- }).catch(error=>console.error(error));
- corridor.visible=false;
- const detailHost=new THREE.Group();detailHost.name='WMS original · LOD dinamico';cssGroup.add(detailHost);
+ const detailHost=new THREE.Group();detailHost.name='WMS original · cobertura visible georreferenciada';cssGroup.add(detailHost);
  let pending=null,active=null,activeMeta=null,pendingMeta=null,requestToken=0,lastUpdate=0,enabled=true;
  const removeTileGroup=tileGroup=>{if(!tileGroup)return;tileGroup.traverse(object=>{if(object.isCSS3DObject)object.element.remove();});detailHost.remove(tileGroup);};
- const showLocalBackdrop=()=>{fallback.visible=true;corridor.visible=false;};
- const showNativeDetail=()=>{fallback.visible=true;corridor.visible=false;};
  const setVisible=value=>{enabled=Boolean(value);cssGroup.visible=enabled;};
+ const projected=new THREE.Vector3(),direction=new THREE.Vector3();
+ const visibleMapBounds=(camera,target)=>{
+  let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity,hits=0;
+  for(const ndcY of [-1,-.66,-.33,0,.33,.66,1])for(const ndcX of [-1,-.66,-.33,0,.33,.66,1]){
+   projected.set(ndcX,ndcY,.5).unproject(camera);direction.copy(projected).sub(camera.position).normalize();
+   if(direction.y>=-.00001)continue;
+   const distance=(-.485-camera.position.y)/direction.y;if(distance<=0||distance>camera.far)continue;
+   const mapX=(camera.position.x+direction.x*distance)/WORLD_SCALE+MAP_WIDTH/2;
+   const mapY=(camera.position.z+direction.z*distance)/WORLD_SCALE+MAP_HEIGHT/2;
+   minX=Math.min(minX,mapX);maxX=Math.max(maxX,mapX);minY=Math.min(minY,mapY);maxY=Math.max(maxY,mapY);hits++;
+  }
+  const targetX=target.x/WORLD_SCALE+MAP_WIDTH/2,targetY=target.z/WORLD_SCALE+MAP_HEIGHT/2;
+  if(!hits){const radius=Math.max(12,camera.position.distanceTo(target)/WORLD_SCALE);minX=targetX-radius;maxX=targetX+radius;minY=targetY-radius;maxY=targetY+radius;}
+  minX=THREE.MathUtils.clamp(minX,EXPANDED_MIN_X,EXPANDED_MAX_X);maxX=THREE.MathUtils.clamp(maxX,EXPANDED_MIN_X,EXPANDED_MAX_X);
+  minY=THREE.MathUtils.clamp(minY,EXPANDED_MIN_Y,EXPANDED_MAX_Y);maxY=THREE.MathUtils.clamp(maxY,EXPANDED_MIN_Y,EXPANDED_MAX_Y);
+  if(maxX-minX<2){minX=Math.max(EXPANDED_MIN_X,targetX-1);maxX=Math.min(EXPANDED_MAX_X,targetX+1);}
+  if(maxY-minY<2){minY=Math.max(EXPANDED_MIN_Y,targetY-1);maxY=Math.min(EXPANDED_MAX_Y,targetY+1);}
+  const view={minX,minY,maxX,maxY,width:maxX-minX,height:maxY-minY};
+  const marginX=Math.max(2,view.width*.16),marginY=Math.max(2,view.height*.16);
+  const request={minX:Math.max(EXPANDED_MIN_X,minX-marginX),minY:Math.max(EXPANDED_MIN_Y,minY-marginY),maxX:Math.min(EXPANDED_MAX_X,maxX+marginX),maxY:Math.min(EXPANDED_MAX_Y,maxY+marginY)};
+  request.width=request.maxX-request.minX;request.height=request.maxY-request.minY;return {view,request};
+ };
+ const contains=(outer,inner)=>outer&&outer.minX<=inner.minX&&outer.minY<=inner.minY&&outer.maxX>=inner.maxX&&outer.maxY>=inner.maxY;
  const update=(camera,target)=>{
   if(!enabled||!camera||!target)return;
   const now=performance.now();if(now-lastUpdate<240)return;lastUpdate=now;
-  const distance=Math.max(.2,camera.position.distanceTo(target));
-  const visibleHeight=2*distance*Math.tan(THREE.MathUtils.degToRad(camera.fov*.5));
-  const visibleWidth=visibleHeight*camera.aspect;
-  const wantedMetres=Math.max(102.4,Math.max(visibleHeight,visibleWidth)*METRES_PER_MAP_UNIT/WORLD_SCALE*1.4);
-  const level=THREE.MathUtils.clamp(Math.ceil(Math.log2(wantedMetres/102.4)),0,8);
-  const spanMetres=102.4*2**level,spanMap=spanMetres/METRES_PER_MAP_UNIT;
-  const targetMapX=target.x/WORLD_SCALE+MAP_WIDTH/2,targetMapY=target.z/WORLD_SCALE+MAP_HEIGHT/2;
-  const current=activeMeta?.level===level?activeMeta:(pendingMeta?.level===level?pendingMeta:null);
-  if(current&&Math.hypot(targetMapX-current.x,targetMapY-current.y)<spanMap*.12)return;
+  const {view,request}=visibleMapBounds(camera,target),current=pendingMeta||activeMeta;
+  if(contains(current,view)&&current.width<=request.width*1.55&&current.height<=request.height*1.55)return;
   const token=++requestToken;if(pending){removeTileGroup(pending);pending=null;}
-  const next=new THREE.Group();next.name=`WMS LOD ${level} · imagen unica`;next.visible=false;detailHost.add(next);pending=next;
-  pendingMeta={level,x:targetMapX,y:targetMapY,spanMap};
-  const minX=targetMapX-spanMap/2,minY=targetMapY-spanMap/2,maxX=minX+spanMap,maxY=minY+spanMap;
-  const {object,image}=cssImagePlane(nativeOrthoUrl(minX,minY,maxX,maxY,2048,2048),2048,2048,spanMap*WORLD_SCALE,spanMap*WORLD_SCALE,(minX+maxX)/2*WORLD_SCALE-MAP_WIDTH/2*WORLD_SCALE,(minY+maxY)/2*WORLD_SCALE-MAP_HEIGHT/2*WORLD_SCALE,'nativeAerialTile nativeAerialComposite');
+  const next=new THREE.Group();next.name='WMS · imagen unica del campo visible';next.visible=false;detailHost.add(next);pending=next;
+  const ratio=request.width/Math.max(request.height,.001);let pixelWidth,pixelHeight;
+  if(ratio>=1){pixelWidth=2048;pixelHeight=Math.max(256,Math.round(2048/ratio));}else{pixelHeight=2048;pixelWidth=Math.max(256,Math.round(2048*ratio));}
+  const nextMeta={...request,pixelWidth,pixelHeight};pendingMeta=nextMeta;
+  const {minX,minY,maxX,maxY}=request;
+  const {object,image}=cssImagePlane(nativeOrthoUrl(minX,minY,maxX,maxY,pixelWidth,pixelHeight),pixelWidth,pixelHeight,request.width*WORLD_SCALE,request.height*WORLD_SCALE,(minX+maxX)/2*WORLD_SCALE-MAP_WIDTH/2*WORLD_SCALE,(minY+maxY)/2*WORLD_SCALE-MAP_HEIGHT/2*WORLD_SCALE,'nativeAerialTile nativeAerialComposite');
   image.style.opacity='0';
   image.onload=()=>{
    if(token!==requestToken)return;
    if(active&&active!==next)removeTileGroup(active);
-   active=next;activeMeta=pendingMeta;pending=null;pendingMeta=null;next.visible=true;image.style.opacity='1';showNativeDetail();
-   document.dispatchEvent(new CustomEvent('nativeaerialready',{detail:{level,groundSampleDistanceM:spanMetres/2048,tileCount:1}}));
+   active=next;activeMeta=nextMeta;pending=null;pendingMeta=null;next.visible=true;image.style.opacity='1';
+   const groundSampleDistanceM=Math.max(request.width*METRES_PER_MAP_UNIT/pixelWidth,request.height*METRES_PER_MAP_UNIT/pixelHeight);
+   document.dispatchEvent(new CustomEvent('nativeaerialready',{detail:{groundSampleDistanceM,tileCount:1,bounds:[minX,minY,maxX,maxY]}}));
   };
-  image.onerror=()=>{if(token!==requestToken)return;removeTileGroup(next);pending=null;pendingMeta=null;if(!active)showLocalBackdrop();};
+  image.onerror=()=>{if(token!==requestToken)return;removeTileGroup(next);pending=null;pendingMeta=null;};
   next.add(object);
  };
  return {group:cssGroup,setVisible,update};
