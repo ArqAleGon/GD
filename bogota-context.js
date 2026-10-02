@@ -173,7 +173,7 @@ function addEasternHills(group,data,addLabel){
  const {gridWidth:width,gridHeight:height,mapBounds,baseElevationM}=data.meta;
  const [minX,minY,maxX,maxY]=mapBounds;
  const positions=[],indices=[],colors=[];
- const low=new THREE.Color('#0d242d'),middle=new THREE.Color('#263f36'),high=new THREE.Color('#566749');
+ const low=new THREE.Color('#183944'),middle=new THREE.Color('#42604c'),high=new THREE.Color('#98a878');
  const maxRelative=Math.max(1,data.meta.maxElevationM-baseElevationM);
  for(let row=0;row<height;row++)for(let column=0;column<width;column++){
   const mapX=minX+(maxX-minX)*column/(width-1),mapY=minY+(maxY-minY)*row/(height-1);
@@ -191,9 +191,9 @@ function addEasternHills(group,data,addLabel){
  geometry.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));
  geometry.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));
  geometry.setIndex(indices);geometry.computeVertexNormals();geometry.computeBoundingSphere();
- const surface=new THREE.Mesh(geometry,new THREE.MeshStandardMaterial({vertexColors:true,roughness:1,metalness:0,transparent:true,opacity:.86,side:THREE.DoubleSide}));
+ const surface=new THREE.Mesh(geometry,new THREE.MeshStandardMaterial({vertexColors:true,roughness:1,metalness:0,side:THREE.DoubleSide}));
  surface.name='Relieve 1:1 · Cerros Orientales';surface.receiveShadow=true;terrain.add(surface);
- const contourMaterial=new THREE.LineBasicMaterial({color:'#a5bc8b',transparent:true,opacity:.18,depthWrite:false});
+ const contourMaterial=new THREE.LineBasicMaterial({color:'#d3e6b8',transparent:true,opacity:.55,depthWrite:false});
  for(const [elevation,flat] of data.contours){
   const points=[];
   for(let index=0;index<flat.length;index+=2)points.push(new THREE.Vector3(...cityPoint([flat[index],flat[index+1]],BASE_Y+Math.max(0,elevation-baseElevationM)*METRES_TO_WORLD+.025)));
@@ -214,7 +214,6 @@ export function buildBogotaContext(root,addLabel,onInspect){
  let aerialVisible=true;
  const setAerialVisible=value=>{
   aerialVisible=Boolean(value);aerial.setVisible(aerialVisible);
-  const terrain=group.userData.terrain?.group;if(terrain)terrain.visible=true;
  };
  setAerialVisible(true);
  group.userData.aerial={mesh:aerial.detailHost,detail:aerial.detailHost,update:aerial.update,setVisible:setAerialVisible,source:'UAECD / IDECA · Ortofotomosaico urbano Bogotá 2025 · WMS · GSD nativo 5 cm · CC BY 4.0'};
@@ -223,7 +222,7 @@ export function buildBogotaContext(root,addLabel,onInspect){
  group.userData.buildingsPromise=loadL1Buildings().then(data=>addBuildingVolumes(group,data,addLabel,onInspect)).catch(error=>{
   console.error(error);document.dispatchEvent(new CustomEvent('l1buildingserror',{detail:{message:error.message}}));return null;
  });
- group.userData.terrainPromise=loadEasternHills().then(data=>{const terrain=addEasternHills(group,data,addLabel);terrain.visible=true;return terrain;}).catch(error=>{
+ group.userData.terrainPromise=loadEasternHills().then(data=>{const terrain=addEasternHills(root,data,addLabel);terrain.visible=true;return terrain;}).catch(error=>{
   console.error(error);document.dispatchEvent(new CustomEvent('terrainerror',{detail:{message:error.message}}));return null;
  });
  return group;
