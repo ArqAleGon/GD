@@ -61,7 +61,7 @@ function nativeOrthoUrl(minX,minY,maxX,maxY,width=1024,height=1024){
 
 function addCssAerial(group){
  const context=new THREE.Group();context.name='Contexto SHP ampliado';group.add(context);
- const {object:contextPlane}=cssImagePlane('./assets/predial-cadastre-expanded.webp?v=20261002-verified-complete-v8',2340,2340,EXPANDED_MAP_WIDTH*WORLD_SCALE,EXPANDED_MAP_HEIGHT*WORLD_SCALE,0,0,'nativeAerialTile aerialTerritorialContext');
+ const {object:contextPlane}=cssImagePlane('./assets/predial-cadastre-expanded-v9.webp',2340,2340,EXPANDED_MAP_WIDTH*WORLD_SCALE,EXPANDED_MAP_HEIGHT*WORLD_SCALE,0,0,'nativeAerialTile aerialTerritorialContext');
  contextPlane.position.y=-.495;context.add(contextPlane);
  const detailHost=new THREE.Group();detailHost.name='Ortoimagen urbana 2025 · detalle WMS adaptable';group.add(detailHost);
  let pending=null,active=null,activeMeta=null,pendingMeta=null,requestToken=0,lastUpdate=0,enabled=true;
