@@ -2,7 +2,8 @@ import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
 import {GLTFLoader} from './GLTFLoader.js';
 import {MeshoptDecoder} from './meshopt_decoder.module.js';
-import {STATES,DEMO,metrics,matches,normalizeUE,ueOptions,recordUEs} from './bim-state.js?v=20260916-elements';
+import {STATES as BASE_STATES,metrics,matches,normalizeUE,ueOptions,recordUEs} from './bim-state.js?v=20260916-elements';
+const STATES={...BASE_STATES,unknown:{label:'Sin datos de avance',color:'#8fa4b2',opacity:.35}};
 async function loadGzipJSON(url){const response=await fetch(url);if(!response.ok)throw new Error(`No se pudo cargar ${url}`);const stream=response.body.pipeThrough(new DecompressionStream('gzip'));return JSON.parse(await new Response(stream).text());}
 const primaveraPayload=await loadGzipJSON('./primavera-data.json.gz?v=20260923');
 const PRIMAVERA_META=primaveraPayload.meta,PRIMAVERA_TASKS=primaveraPayload.tasks;
@@ -23,7 +24,7 @@ const escapeHTML=value=>String(value).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&
 const filters=()=>({ue:$('ue').value,sector:$('sector').value,discipline:$('discipline').value,status:$('status').value,search:$('search').value.trim()});
 const visibleRecords=()=>records.filter(r=>matches(r,filters()));
 const swatch=k=>`<i class="swatch ${k}" style="--state:${STATES[k].color}"></i>`;
-const percent=x=>Math.round(x)+' %';
+const percent=x=>Number.isFinite(x)?Math.round(x)+' %':'Sin registro';
 const taskStatus=task=>task.actual>=99.5?'done':task.actual+.25<task.planned?'late':task.actual>0?'started':'pending';
 const scheduleByUE=new Map();
 for(const task of PRIMAVERA_TASKS){if(!scheduleByUE.has(task.ue))scheduleByUE.set(task.ue,[]);scheduleByUE.get(task.ue).push(task);}
@@ -34,6 +35,7 @@ function scheduleFor(record){
  return {tasks,start:tasks.reduce((min,task)=>task.start<min?task.start:min,tasks[0].start),end:tasks.reduce((max,task)=>task.finish>max?task.finish:max,tasks[0].finish),planned:tasks.reduce((sum,task)=>sum+task.planned*weight(task),0)/total,actual:tasks.reduce((sum,task)=>sum+task.actual*weight(task),0)/total};
 }
 function recordMetrics(record,cutoff){
+ if(!record.schedule)return {planned:null,actual:null,status:'unknown'};
  if(record.schedule&&cutoff===PRIMAVERA_META.cutoff){const planned=record.schedule.planned,actual=record.actual;return {planned,status:actual>=99.5?'done':actual+.25<planned?'late':actual>0?'started':'pending'};}
  return metrics(record,cutoff);
 }
@@ -92,10 +94,10 @@ function render(){
  $('ueNote').textContent=`${ueOptions(list).length} UE en la selección. ${missing.toLocaleString('es')} elementos sin UE válida. Unidades extraídas de los IFC; pueden aparecer en varios modelos.`;
  $('kpis').innerHTML=Object.entries(STATES).map(([key,s])=>`<button class="kpi" data-state="${key}" aria-pressed="${f.status===key}" style="--state:${s.color}"><span>${s.label}</span><b>${base.filter(r=>r.status===key).reduce((n,r)=>n+r.count,0).toLocaleString('es')}<small>elementos</small></b></button>`).join('');
  $('kpis').querySelectorAll('button').forEach(b=>b.onclick=()=>{$('status').value=f.status===b.dataset.state?'':b.dataset.state;render();fit();});
- const avg=key=>list.length?list.reduce((sum,r)=>sum+r[key],0)/list.length:0;
+ const avg=key=>{const valid=list.filter(r=>Number.isFinite(r[key]));const count=valid.reduce((n,r)=>n+r.count,0);return count?valid.reduce((n,r)=>n+r[key]*r.count,0)/count:null;};
  $('planned').textContent=list.length?percent(avg('planned')):'—';$('actual').textContent=list.length?percent(avg('actual')):'—';
- $('plannedBar').style.width=avg('planned')+'%';$('actualBar').style.width=avg('actual')+'%';
- $('rows').innerHTML=list.map(r=>`<tr class="${selected===r?'selected':''}"><td><button class="modelButton" data-id="${r.id}" aria-pressed="${selected===r}">${r.section} · ${r.code}<small>${r.count.toLocaleString('es')} elementos · ${r.file}</small></button></td><td>${escapeHTML(recordUEs(r).map(v=>'UE '+v).join(', ')||'Sin asignar')}</td><td>${r.discipline==='ARQ'?'Arquitectura':'Estructura'}</td><td>${r.version}</td><td>${percent(r.planned)}<div class="miniBar"><i style="width:${r.planned}%"></i></div></td><td>${percent(r.actual)}</td><td><span class="statusPill" style="--state:${STATES[r.status].color}">${swatch(r.status)}${STATES[r.status].label}</span></td><td>${r.start} / ${r.end}</td></tr>`).join('');
+ $('plannedBar').style.width=(avg('planned')||0)+'%';$('actualBar').style.width=(avg('actual')||0)+'%';
+ $('rows').innerHTML=list.map(r=>`<tr class="${selected===r?'selected':''}"><td><button class="modelButton" data-id="${r.id}" aria-pressed="${selected===r}">${r.section} · ${r.code}<small>${r.count.toLocaleString('es')} elementos · ${r.file}</small></button></td><td>${escapeHTML(recordUEs(r).map(v=>'UE '+v).join(', ')||'Sin asignar')}</td><td>${r.discipline==='ARQ'?'Arquitectura':'Estructura'}</td><td>${r.version}</td><td>${percent(r.planned)}<div class="miniBar"><i style="width:${r.planned||0}%"></i></div></td><td>${percent(r.actual)}</td><td><span class="statusPill" style="--state:${STATES[r.status].color}">${swatch(r.status)}${STATES[r.status].label}</span></td><td>${r.start||'—'} / ${r.end||'—'}</td></tr>`).join('');
  $('rows').querySelectorAll('button').forEach(b=>b.onclick=()=>{const r=records.find(x=>x.id===Number(b.dataset.id));select(r);fit([r]);});
  $('empty').hidden=!!list.length;
  $('viewTitle').textContent=(f.sector||'E15 + I16 + E16')+(f.ue?' · '+(f.ue==='__unassigned__'?'Sin UE asignada':f.ue):'');
@@ -103,6 +105,7 @@ function render(){
  if(selected){const r=selected;$('detail').innerHTML=`<b>${r.section} · ${r.discipline} · ${r.code}</b><span class="statusPill" style="--state:${STATES[r.status].color}">${swatch(r.status)}${STATES[r.status].label}</span><p>UE · ${escapeHTML(recordUEs(r).map(v=>'UE '+v).join(', ')||'Sin asignar')}</p><p>Planificado ${percent(r.planned)} / ejecutado ${percent(r.actual)}${r.schedule?' · Primavera P6':''}</p><p>${r.count.toLocaleString('es')} elementos de este grupo UE–modelo. Geometría aislada por propiedades IFC.</p><p>${r.source}</p><a href="./documents.html?sector=${encodeURIComponent(r.section)}">Ver documentos de ${r.section}</a>`;}
  $('context').disabled=!selected;$('clearSelection').disabled=!selected;applyMaterials();renderGantt();
 }
+$('status').add(new Option('Sin datos de avance','unknown'));
 $('legend').innerHTML=Object.entries(STATES).map(([k,s])=>`<span>${swatch(k)}${s.label}</span>`).join('');
 $('ganttLegend').innerHTML=Object.entries(STATES).map(([k,s])=>`<span><i style="--state:${s.color}"></i>${s.label}</span>`).join('');
 for(const id of ['sector','ue','discipline','status','cutoff'])$(id).onchange=()=>{render();fit();};
@@ -123,7 +126,7 @@ renderer.setAnimationLoop(()=>{controls.update();updateSceneCompass();renderer.r
 async function load(){
  const response=await fetch('./ifc-placement-20260915-i16-e16.json');if(!response.ok)throw new Error('No se pudo leer la lista de modelos');const placement=await response.json();
  const ueResponse=await fetch('./bim-ue-elements.json?v=20260916-elements');if(!ueResponse.ok)throw new Error('No se pudo leer el índice UE por elementos');const ueMapping=await ueResponse.json();
- ueMapping.models.forEach((definition,i)=>{const [fallbackStart,fallbackEnd,fallbackActual]=DEMO[i];for(const group of definition.groups){const record={...definition,...group,ues:[...new Set(group.ues.map(normalizeUE).filter(Boolean))],id:records.length,code:definition.source.split('-')[1],start:fallbackStart,end:fallbackEnd,actual:fallbackActual};record.schedule=scheduleFor(record);if(record.schedule)Object.assign(record,{start:record.schedule.start,end:record.schedule.end,actual:record.schedule.actual});Object.assign(record,recordMetrics(record,$('cutoff').value));records.push(record);}});
+ ueMapping.models.forEach(definition=>{for(const group of definition.groups){const record={...definition,...group,ues:[...new Set(group.ues.map(normalizeUE).filter(Boolean))],id:records.length,code:definition.source.split('-')[1],start:null,end:null,actual:null};record.schedule=scheduleFor(record);if(record.schedule)Object.assign(record,{start:record.schedule.start,end:record.schedule.end,actual:record.schedule.actual});Object.assign(record,recordMetrics(record,$('cutoff').value));records.push(record);}});
  for(const ue of ueOptions(records)){const option=document.createElement('option');option.value=ue;option.textContent=ue;$('ue').append(option);}
  $('sector').value='E16';render();
  const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);let complete=0;

@@ -1,3 +1,4 @@
+import {loadBimUrbanContext,buildBimUrbanContext} from './bim-urban-context.js';
 import * as THREE from 'three';
 import {GLTFLoader} from './GLTFLoader.js';
 import {MeshoptDecoder} from './meshopt_decoder.module.js';
@@ -14,17 +15,18 @@ export async function loadUrbanMap() {
     if (!response.ok) throw new Error('No se pudo cargar la cartografía: ' + name);
     return binary ? response.arrayBuffer() : response.json();
   };
-  const [data, buildings, roads, volumesData, volumes, volumeFootprints, parcels, placement, ptHqTypes] = await Promise.all([
+  const [data, buildings, roads, volumesData, volumes, volumeFootprints, parcels, placement, ptHqTypes, urbanContext] = await Promise.all([
     read('map.json'), read('buildings.bin', true), read('roads.bin', true), read('volumes.json'), read('volumes.bin', true), read('volume-footprints.bin', true), read('parcels.bin', true),
     fetch('./ifc-placement-20260915-i16-e16.json?v='+assetRevision).then(r=>{if(!r.ok)throw new Error('IFC placement unavailable');return r.json()}),
-    fetch('./pt-hq-element-types.json?v='+assetRevision).then(r=>{if(!r.ok)throw new Error('Patio high-fidelity type map unavailable');return r.json()})
+    fetch('./pt-hq-element-types.json?v='+assetRevision).then(r=>{if(!r.ok)throw new Error('Patio high-fidelity type map unavailable');return r.json()}),
+    loadBimUrbanContext()
   ]);
   const ifcLoader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
   const ifcModelDefs=placement.models||[
     {file:'e15-architecture-web.glb',section:'E15',label:'IFC · E15 · ARQ + EST'},
     {file:'e15-1100.glb',section:'E15',label:'IFC · E15 · ARQ + EST'}
   ];
-  return {ifcLoader, ifcModelDefs, placement, ptHqTypes, data, volumesData, volumes: new Float32Array(volumes), volumeFootprints: new Float32Array(volumeFootprints), parcels: new Float32Array(parcels), buildings: new Float32Array(buildings), roads: new Float32Array(roads)};
+  return {urbanContext, ifcLoader, ifcModelDefs, placement, ptHqTypes, data, volumesData, volumes: new Float32Array(volumes), volumeFootprints: new Float32Array(volumeFootprints), parcels: new Float32Array(parcels), buildings: new Float32Array(buildings), roads: new Float32Array(roads)};
 }
 
 function segments(group, coords, color, height) {
@@ -80,13 +82,9 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
   segments(root, assets.buildings, '#344c60', 0.18);
   segments(root, assets.roads, '#839eaf', 0.24);
   const volumes = new THREE.Group(); volumes.visible = volumesVisible; root.add(volumes);
-  const volumeGeometry = new THREE.BufferGeometry();
-  volumeGeometry.setAttribute('position', new THREE.BufferAttribute(assets.volumes, 3));
-  volumeGeometry.computeVertexNormals(); volumeGeometry.computeBoundingSphere();
-  volumes.add(new THREE.Mesh(volumeGeometry, new THREE.MeshStandardMaterial({color:'#567c90',roughness:.9,side:THREE.DoubleSide})));
-  segments(root, assets.volumeFootprints, '#527b8c', .21);
+  const urbanBounds=buildBimUrbanContext(volumes,assets.urbanContext,assets.placement.gisOrigin);
   segments(root, assets.parcels, '#d4ad74', .28);
-  outline(root, assets.volumesData.corridor, '#ffcb66', .36);
+
 
   outline(root, data.pilot, '#32d4bd', 0.32);
   const routePoints = data.route.type === 'LineString' ? [data.route.coordinates] : data.route.coordinates;
@@ -192,8 +190,11 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
       const sectionSize=sectionBounds.getSize(new THREE.Vector3());
       const proxy=new THREE.Mesh(new THREE.BoxGeometry(Math.max(sectionSize.x,.1),Math.max(sectionSize.y,.1),Math.max(sectionSize.z,.1)),new THREE.MeshBasicMaterial({transparent:true,opacity:0,depthWrite:false,colorWrite:false}));
       proxy.position.copy(sectionCenter);proxy.name='Selección '+sectionName;proxy.userData.progressObject={id:`ifc-section:${sectionName}`,title:entry.label,kind:'Modelo IFC',section:sectionName,parameters:{'Sección BIM':sectionName,'Archivos fuente':available.map(definition=>definition.file).join(', '),'Elementos 3D':entry.elementCount,'Sistema de referencia':'EPSG:6247','Ancho aproximado':`${sectionSize.x.toFixed(1)} m`,'Largo aproximado':`${sectionSize.z.toFixed(1)} m`,'Altura aproximada':`${sectionSize.y.toFixed(1)} m`}};root.add(proxy);entry.progressProxy=proxy;progressPickables.push(proxy);
-      entry.labelObject=addLabel([sectionCenter.x,sectionBounds.max.y+.6,sectionCenter.z],()=>`<span class="bimSpotDot" aria-hidden="true">◎</span>${entry.label}`,event=>activateProgressObject?.({...proxy.userData.progressObject,mesh:proxy},event),'pilotLabel bimProgressSpot');entry.labelObject.geographic=true;entry.labelObject.ifcSection=sectionName;entry.labelObject.el.title='Consultar o registrar avance del edificio';
-      entry.registerLabelObject=addLabel([sectionCenter.x,sectionBounds.max.y+.6,sectionCenter.z],()=>'<span aria-hidden="true">＋</span> Registro',()=>{location.href=`./model-register.html?section=${encodeURIComponent(sectionName)}`;},'pilotLabel bimRegisterSpot');entry.registerLabelObject.geographic=true;entry.registerLabelObject.ifcSection=sectionName;entry.registerLabelObject.offsetY=31;entry.registerLabelObject.el.title=`Abrir escena de registro de ${sectionName}`;applySectionAppearance(sectionName,entry);
+      const labelText=entry.label.replace(/^IFC\s*·\s*/, '');
+      entry.labelObject=addLabel([sectionCenter.x,sectionBounds.max.y+.6,sectionCenter.z],()=>`<button class="bimBuildingName" title="Consultar ${labelText}">${labelText}</button><button class="bimRegisterInline" data-register-section="${sectionName}">+ Registrar</button>`,event=>{
+        if(event.target.closest('[data-register-section]'))location.href=`./model-register.html?section=${encodeURIComponent(sectionName)}`;
+        else activateProgressObject?.({...proxy.userData.progressObject,mesh:proxy},event);
+      },'pilotLabel bimProgressSpot');entry.labelObject.geographic=true;entry.labelObject.ifcSection=sectionName;applySectionAppearance(sectionName,entry);
       return sectionBounds;
     })().catch(error=>{entry.promise=null;throw error;});
     return entry.promise;
@@ -211,7 +212,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
       object.material=ghosted?ghostMaterial:object.userData.bimOriginalMaterial;
       object.renderOrder=ghosted?1:object.userData.bimOriginalRenderOrder;
     });
-    if(entry.labelObject){entry.labelObject.filterVisible=true;entry.labelObject.el?.classList.toggle('ifcGhostLabel',ghosted);}if(entry.registerLabelObject){entry.registerLabelObject.filterVisible=true;entry.registerLabelObject.el?.classList.toggle('ifcGhostLabel',ghosted);}
+    if(entry.labelObject){entry.labelObject.filterVisible=true;entry.labelObject.el?.classList.toggle('ifcGhostLabel',ghosted);}
   };
   const setIfcSectionVisibility=sectionName=>{focusedSection=sectionName||null;for(const [name,entry] of sections)applySectionAppearance(name,entry);};
   const pickProgressElement=raycaster=>{
@@ -243,7 +244,6 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
   };
   const all = bounds(data.pilot);
   data.zones.forEach(z => all.union(bounds(z.geometry)));
-  all.union(bounds(assets.volumesData.corridor));
+  all.union(urbanBounds);
   return {seismic, volumes, ifcBounds, ifcSections, progressPickables, pickProgressElement, ensureIfcSection, setIfcSectionVisibility, sectionDefinitions:sections, pilotBounds: bounds(data.pilot).union(bounds(assets.volumesData.corridor)), fullBounds: all};
 }
-
