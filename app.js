@@ -1,6 +1,6 @@
 import {COMPARISONS,comparisonLayers} from './e15-comparison.js';
 import {RENDER_E15_CAMERA,renderE15Fov} from './render-e15-camera.js';
-import {buildBogotaContext,cityPoint,METRES_TO_WORLD} from './bogota-context.js?v=20261002-ortho-georef-v5';
+import {buildBogotaContext,cityPoint,METRES_TO_WORLD} from './bogota-context.js?v=20261002-continuous-mapbase-v2';
 import { localizeInterface } from './interface-language.js';
 import { loadUrbanMap, buildUrbanMap } from './urban-map-20260915-i16-e16.js?v=20260930-register-scenes-v1';
 import { networkLines } from './network-data.js?v=20260923-l1';
@@ -430,3 +430,4 @@ function renderCCTV(){if(!cctvRenderer||!$('#modal').open||performance.now()-cct
 $('#modal').addEventListener('close',()=>{$('#modal').classList.remove('cctv');if(cctvRenderer){cctvRenderer.dispose();cctvRenderer.forceContextLoss();cctvRenderer=null;cctvCamera=null;}});
 const urbanLoad=loadUrbanMap().then(assets=>{urbanAssets=assets;}).catch(()=>{urbanAssets=null;});
 setView(new URLSearchParams(location.search).get('view')==='urban'?'urban':'network');uiTranslate();frame();$('#loader').style.opacity='0';setTimeout(()=>$('#loader').remove(),550);
+

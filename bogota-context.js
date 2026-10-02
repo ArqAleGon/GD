@@ -62,10 +62,8 @@ function nativeOrthoUrl(minX,minY,maxX,maxY,width=1024,height=1024){
 function addCssAerial(group){
  const cssGroup=new THREE.Group();cssGroup.name='Ortoimagen urbana 2025 · detalle WMS adaptable';group.add(cssGroup);
  const context=new THREE.Group();context.name='Contexto SHP ampliado';cssGroup.add(context);
- for(let row=0;row<2;row++)for(let col=0;col<2;col++){
-  const {object}=cssImagePlane(`./assets/predial-cadastre-${row}-${col}.webp?v=20261001-expanded-mapbase`,1170,1170,EXPANDED_MAP_WIDTH*WORLD_SCALE/2,EXPANDED_MAP_HEIGHT*WORLD_SCALE/2,(col-.5)*EXPANDED_MAP_WIDTH*WORLD_SCALE/2,(row-.5)*EXPANDED_MAP_HEIGHT*WORLD_SCALE/2,'nativeAerialTile aerialTerritorialContext');
-  object.position.y=-.495;context.add(object);
- }
+ const {object:contextPlane}=cssImagePlane('./assets/predial-cadastre-expanded.webp?v=20261002-continuous-mapbase-v2',2340,2340,EXPANDED_MAP_WIDTH*WORLD_SCALE,EXPANDED_MAP_HEIGHT*WORLD_SCALE,0,0,'nativeAerialTile aerialTerritorialContext');
+ contextPlane.position.y=-.495;context.add(contextPlane);
  const detailHost=new THREE.Group();detailHost.name='WMS original · cobertura visible georreferenciada';cssGroup.add(detailHost);
  let pending=null,active=null,activeMeta=null,pendingMeta=null,requestToken=0,lastUpdate=0,enabled=true;
  const removeTileGroup=tileGroup=>{if(!tileGroup)return;tileGroup.traverse(object=>{if(object.isCSS3DObject)object.element.remove();});detailHost.remove(tileGroup);};
@@ -210,12 +208,9 @@ export function buildBogotaContext(root,addLabel,onInspect){
 
  const ground=mapPlane(EXPANDED_MAP_WIDTH*WORLD_SCALE,EXPANDED_MAP_HEIGHT*WORLD_SCALE,new THREE.MeshStandardMaterial({color:'#09141c',roughness:1,metalness:0}),-.72);group.add(ground);
 
- const cadastral=new THREE.Group();cadastral.name='Base catastral · lotes, construcciones, manzanas, vías y curvas';group.add(cadastral);
- for(let row=0;row<2;row++)for(let col=0;col<2;col++){
-  const texture=new THREE.TextureLoader().load(`./assets/predial-cadastre-${row}-${col}.webp?v=20261001-expanded-mapbase`);texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=8;
-  const tile=mapPlane(EXPANDED_MAP_WIDTH*WORLD_SCALE/2,EXPANDED_MAP_HEIGHT*WORLD_SCALE/2,new THREE.MeshBasicMaterial({map:texture,transparent:true,opacity:.82,depthWrite:false,toneMapped:false,side:THREE.DoubleSide}),-.5);
-  tile.position.x=(col-.5)*EXPANDED_MAP_WIDTH*WORLD_SCALE/2;tile.position.z=(row-.5)*EXPANDED_MAP_HEIGHT*WORLD_SCALE/2;cadastral.add(tile);
- }
+ const texture=new THREE.TextureLoader().load('./assets/predial-cadastre-expanded.webp?v=20261002-continuous-mapbase-v2');texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=8;
+ const cadastral=mapPlane(EXPANDED_MAP_WIDTH*WORLD_SCALE,EXPANDED_MAP_HEIGHT*WORLD_SCALE,new THREE.MeshBasicMaterial({map:texture,transparent:true,opacity:.82,depthWrite:false,toneMapped:false,side:THREE.DoubleSide}),-.5);
+ cadastral.name='Base catastral · lotes, construcciones, manzanas, vías y curvas';group.add(cadastral);
 
  const aerial=addCssAerial(group);
  const setAerialVisible=value=>{aerial.setVisible(value);ground.visible=!value;cadastral.visible=!value;};
@@ -231,3 +226,4 @@ export function buildBogotaContext(root,addLabel,onInspect){
  });
  return group;
 }
+
