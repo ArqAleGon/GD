@@ -60,14 +60,13 @@ function nativeOrthoUrl(minX,minY,maxX,maxY,width=1024,height=1024){
 }
 
 function addCssAerial(group){
- const cssGroup=new THREE.Group();cssGroup.name='Ortoimagen urbana 2025 · detalle WMS adaptable';group.add(cssGroup);
- const context=new THREE.Group();context.name='Contexto SHP ampliado';cssGroup.add(context);
+ const context=new THREE.Group();context.name='Contexto SHP ampliado';group.add(context);
  const {object:contextPlane}=cssImagePlane('./assets/predial-cadastre-expanded.webp?v=20261002-aerial-transparency-v4',2340,2340,EXPANDED_MAP_WIDTH*WORLD_SCALE,EXPANDED_MAP_HEIGHT*WORLD_SCALE,0,0,'nativeAerialTile aerialTerritorialContext');
  contextPlane.position.y=-.495;context.add(contextPlane);
- const detailHost=new THREE.Group();detailHost.name='WMS original · cobertura visible georreferenciada';cssGroup.add(detailHost);
+ const detailHost=new THREE.Group();detailHost.name='Ortoimagen urbana 2025 · detalle WMS adaptable';group.add(detailHost);
  let pending=null,active=null,activeMeta=null,pendingMeta=null,requestToken=0,lastUpdate=0,enabled=true;
  const removeTileGroup=tileGroup=>{if(!tileGroup)return;tileGroup.traverse(object=>{if(object.isCSS3DObject)object.element.remove();});detailHost.remove(tileGroup);};
- const setVisible=value=>{enabled=Boolean(value);cssGroup.visible=true;context.visible=true;detailHost.visible=enabled;};
+ const setVisible=value=>{enabled=Boolean(value);context.visible=true;detailHost.visible=enabled;};
  const projected=new THREE.Vector3(),direction=new THREE.Vector3();
  const visibleMapBounds=(camera,target)=>{
   let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity,hits=0;
@@ -114,7 +113,7 @@ function addCssAerial(group){
   image.onerror=()=>{if(token!==requestToken)return;removeTileGroup(next);pending=null;pendingMeta=null;};
   next.add(object);
  };
- return {group:cssGroup,context,detailHost,setVisible,update};
+ return {group:detailHost,context,detailHost,setVisible,update};
 }
 
 function geometryBucket(){return {positions:[],indices:[]};}
@@ -215,7 +214,7 @@ export function buildBogotaContext(root,addLabel,onInspect){
   const terrain=group.userData.terrain?.group;if(terrain)terrain.visible=!aerialVisible;
  };
  setAerialVisible(true);
- group.userData.aerial={mesh:aerial.group,detail:aerial.group,update:aerial.update,setVisible:setAerialVisible,source:'UAECD / IDECA · Ortofotomosaico urbano Bogotá 2025 · WMS · GSD nativo 5 cm · CC BY 4.0'};
+ group.userData.aerial={mesh:aerial.detailHost,detail:aerial.detailHost,update:aerial.update,setVisible:setAerialVisible,source:'UAECD / IDECA · Ortofotomosaico urbano Bogotá 2025 · WMS · GSD nativo 5 cm · CC BY 4.0'};
  group.userData.cadastre={mesh:aerial.context,ground,bounds:{mapWidth:EXPANDED_MAP_WIDTH,mapHeight:EXPANDED_MAP_HEIGHT,margin:.15}};
 
  group.userData.buildingsPromise=loadL1Buildings().then(data=>addBuildingVolumes(group,data,addLabel,onInspect)).catch(error=>{
