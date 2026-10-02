@@ -4,3 +4,23 @@
 .bimProgressSpot .bimRegisterInline{color:#fff;background:#59151d;border-top:1px solid #ffffff40;height:21px;border-radius:2px}
 .bimProgressSpot .bimRegisterInline:hover,.bimProgressSpot button:focus-visible{background:#a51e28;outline:1px solid white}
 #app.noDataDashboards #panels,#app.noDataDashboards #panelToggle{display:none!important}
+/* BIM controls share the lower band: movement left, tools and sources right. */
+body[data-scene="inicio"]:has(#app.urbanControls){--bim-movement-width:clamp(350px,44vw,490px)}
+body[data-scene="inicio"]:has(#app.urbanControls) #povControls{left:12px;right:auto;bottom:20px;transform:none;width:var(--bim-movement-width);max-width:none;justify-content:center;box-sizing:border-box}
+body[data-scene="inicio"]:has(#app.urbanControls) #toolbar{left:calc(24px + var(--bim-movement-width));right:12px;bottom:20px;width:auto;max-width:none;display:flex;flex-wrap:wrap;overflow:visible;gap:5px;justify-content:flex-start;box-sizing:border-box}
+body[data-scene="inicio"]:has(#app.urbanControls) #toolbar>button{flex:1 1 120px;white-space:normal}
+body[data-scene="inicio"]:has(#app.urbanControls) .dataSourceToggle{left:calc(24px + var(--bim-movement-width));right:auto;top:auto;bottom:calc(28px + var(--scene-toolbar-height,80px))}
+body[data-scene="inicio"]:has(#app.urbanControls) .dataSourcePanel{left:auto;right:12px;top:auto;bottom:calc(68px + var(--scene-toolbar-height,80px));max-height:calc(100dvh - var(--scene-header) - var(--scene-toolbar-height,80px) - 90px)}
+body[data-scene="inicio"]:has(#app.urbanControls) .bimModelMenuPanel{left:auto;right:12px;top:auto;bottom:calc(68px + var(--scene-toolbar-height,80px));max-height:calc(100dvh - var(--scene-header) - var(--scene-toolbar-height,80px) - 90px);width:min(390px,calc(100vw - 24px))}
+body[data-scene="inicio"]:has(#app.urbanControls) #panels{bottom:calc(76px + max(var(--scene-pov-height,170px),var(--scene-toolbar-height,80px)))}
+.bimStationSpot.sceneLabel{height:72px!important;width:228px!important}
+.bimStationSpot .bimBuildingName{display:block;text-align:center;height:22px}
+.bimStationActions{display:flex;gap:3px}
+.bimStationActions button{flex:1;min-width:0;height:36px;padding:3px!important;border:1px solid #d7767b80!important;border-radius:3px;background:#59151d;line-height:13px!important;font-size:10px!important}
+.bimStationActions button:hover{background:#a51e28}
+@media(max-width:800px){
+ body[data-scene="inicio"]:has(#app.urbanControls){--bim-movement-width:calc(57vw - 24px)}
+ body[data-scene="inicio"]:has(#app.urbanControls) #povControls{flex-wrap:wrap;gap:5px;padding:6px}
+ body[data-scene="inicio"]:has(#app.urbanControls) #povControls .povStatus{display:none}
+ body[data-scene="inicio"]:has(#app.urbanControls) #toolbar>button{flex-basis:90px;font-size:10px;padding:4px}
+}
