@@ -62,7 +62,7 @@ function nativeOrthoUrl(minX,minY,maxX,maxY,width=1024,height=1024){
 function addCssAerial(group){
  const cssGroup=new THREE.Group();cssGroup.name='Ortoimagen urbana 2025 · detalle WMS adaptable';group.add(cssGroup);
  const context=new THREE.Group();context.name='Contexto SHP ampliado';cssGroup.add(context);
- const {object:contextPlane}=cssImagePlane('./assets/predial-cadastre-expanded.webp?v=20261002-continuous-mapbase-v2',2340,2340,EXPANDED_MAP_WIDTH*WORLD_SCALE,EXPANDED_MAP_HEIGHT*WORLD_SCALE,0,0,'nativeAerialTile aerialTerritorialContext');
+ const {object:contextPlane}=cssImagePlane('./assets/predial-cadastre-expanded.webp?v=20261002-aerial-transparency-v4',2340,2340,EXPANDED_MAP_WIDTH*WORLD_SCALE,EXPANDED_MAP_HEIGHT*WORLD_SCALE,0,0,'nativeAerialTile aerialTerritorialContext');
  contextPlane.position.y=-.495;context.add(contextPlane);
  const detailHost=new THREE.Group();detailHost.name='WMS original · cobertura visible georreferenciada';cssGroup.add(detailHost);
  let pending=null,active=null,activeMeta=null,pendingMeta=null,requestToken=0,lastUpdate=0,enabled=true;
@@ -208,7 +208,7 @@ export function buildBogotaContext(root,addLabel,onInspect){
 
  const ground=mapPlane(EXPANDED_MAP_WIDTH*WORLD_SCALE,EXPANDED_MAP_HEIGHT*WORLD_SCALE,new THREE.MeshStandardMaterial({color:'#09141c',roughness:1,metalness:0}),-.72);group.add(ground);
 
- const texture=new THREE.TextureLoader().load('./assets/predial-cadastre-expanded.webp?v=20261002-continuous-mapbase-v2');texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=8;
+ const texture=new THREE.TextureLoader().load('./assets/predial-cadastre-expanded.webp?v=20261002-aerial-transparency-v4');texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=8;
  const cadastral=mapPlane(EXPANDED_MAP_WIDTH*WORLD_SCALE,EXPANDED_MAP_HEIGHT*WORLD_SCALE,new THREE.MeshBasicMaterial({map:texture,transparent:true,opacity:.82,depthWrite:false,toneMapped:false,side:THREE.DoubleSide}),-.5);
  cadastral.name='Base catastral · lotes, construcciones, manzanas, vías y curvas';group.add(cadastral);
 
