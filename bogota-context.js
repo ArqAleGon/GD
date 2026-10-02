@@ -55,7 +55,7 @@ function mapToLonLat(x,y){
 
 function nativeOrthoUrl(minX,minY,maxX,maxY,width=1024,height=1024){
  const [west,north]=mapToLonLat(minX,minY),[east,south]=mapToLonLat(maxX,maxY);
- const params=new URLSearchParams({SERVICE:'WMS',VERSION:'1.3.0',REQUEST:'GetMap',LAYERS:NATIVE_ORTHO_LAYER,STYLES:'',CRS:'CRS:84',BBOX:[west,south,east,north].join(','),WIDTH:String(width),HEIGHT:String(height),FORMAT:'image/jpeg',BGCOLOR:'0x020406'});
+ const params=new URLSearchParams({SERVICE:'WMS',VERSION:'1.3.0',REQUEST:'GetMap',LAYERS:NATIVE_ORTHO_LAYER,STYLES:'',CRS:'CRS:84',BBOX:[west,south,east,north].join(','),WIDTH:String(width),HEIGHT:String(height),FORMAT:'image/png',TRANSPARENT:'TRUE'});
  return `${NATIVE_ORTHO_URL}?${params}`;
 }
 
@@ -213,7 +213,11 @@ export function buildBogotaContext(root,addLabel,onInspect){
  cadastral.name='Base catastral · lotes, construcciones, manzanas, vías y curvas';group.add(cadastral);
 
  const aerial=addCssAerial(group);
- const setAerialVisible=value=>{aerial.setVisible(value);ground.visible=!value;cadastral.visible=!value;};
+ let aerialVisible=true;
+ const setAerialVisible=value=>{
+  aerialVisible=Boolean(value);aerial.setVisible(aerialVisible);ground.visible=!aerialVisible;cadastral.visible=!aerialVisible;
+  const terrain=group.userData.terrain?.group;if(terrain)terrain.visible=!aerialVisible;
+ };
  setAerialVisible(true);
  group.userData.aerial={mesh:aerial.group,detail:aerial.group,update:aerial.update,setVisible:setAerialVisible,source:'UAECD / IDECA · Ortofotomosaico urbano Bogotá 2025 · WMS · GSD nativo 5 cm · CC BY 4.0'};
  group.userData.cadastre={mesh:cadastral,ground,bounds:{mapWidth:EXPANDED_MAP_WIDTH,mapHeight:EXPANDED_MAP_HEIGHT,margin:.15}};
@@ -221,7 +225,7 @@ export function buildBogotaContext(root,addLabel,onInspect){
  group.userData.buildingsPromise=loadL1Buildings().then(data=>addBuildingVolumes(group,data,addLabel,onInspect)).catch(error=>{
   console.error(error);document.dispatchEvent(new CustomEvent('l1buildingserror',{detail:{message:error.message}}));return null;
  });
- group.userData.terrainPromise=loadEasternHills().then(data=>addEasternHills(group,data,addLabel)).catch(error=>{
+ group.userData.terrainPromise=loadEasternHills().then(data=>{const terrain=addEasternHills(group,data,addLabel);terrain.visible=!aerialVisible;return terrain;}).catch(error=>{
   console.error(error);document.dispatchEvent(new CustomEvent('terrainerror',{detail:{message:error.message}}));return null;
  });
  return group;
