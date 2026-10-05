@@ -223,7 +223,7 @@ function render(){
  renderKpis(list);renderCharts(list);renderMap(list);renderSearchResults(searchList);
 }
 
-function setView(next){view={...next};$('predialMap').setAttribute('viewBox',`${view.x} ${view.y} ${view.w} ${view.h}`);}
+function setView(next){view={...next};$('predialMap').setAttribute('viewBox',`${view.x} ${view.y} ${view.w} ${view.h}`);$('stationLabelLayer').style.setProperty('--station-label-scale',String(view.w/initialView.w));}
 function zoom(factor,cx=view.x+view.w/2,cy=view.y+view.h/2){const nextW=Math.max(85,Math.min(mapWidth+padding*2,view.w*factor)),nextH=nextW*view.h/view.w;setView({x:cx-(cx-view.x)*nextW/view.w,y:cy-(cy-view.y)*nextH/view.h,w:nextW,h:nextH});}
 
 function init(){

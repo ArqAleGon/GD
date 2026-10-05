@@ -25,3 +25,5 @@
 .stationOpacity input{width:80px;accent-color:#d68cff}
 .stationOpacity output{min-width:32px;font-variant-numeric:tabular-nums}
 .mapLegend .stationFootprintSwatch{background:#d68cff59;border:1px solid #e7b4ff}
+
+#stationLabelLayer .l1StationLabel{font-size:calc(6.8px * var(--station-label-scale,1));stroke-width:calc(2.7px * var(--station-label-scale,1))}

@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#101b26">
   <title>Gestión predial L1 | Metro Digital</title>
   <meta name="description" content="Mapa interactivo de gestión predial de la Línea 1 del Metro de Bogotá.">
-  <link rel="stylesheet" href="./predial.css?v=20261005-station-footprints-v1">
+  <link rel="stylesheet" href="./predial.css?v=20261005-station-footprints-v2">
   <link rel="stylesheet" href="./scene-controls.css?v=20260929-bim-pov-v5">
   <script defer src="./vendor/xlsx-0.20.3.min.js"></script>
 <link rel="stylesheet" href="./scene-responsive.css?v=20261002-layout-v1">
@@ -89,7 +89,7 @@
             <div><b>Gestión predial sobre base territorial</b><span>Selecciona un predio o controla las capas de referencia</span></div>
             <div class="mapTools">
               <button id="toggleCadastre" class="layerToggle" aria-pressed="true" title="Encender o apagar la base catastral">Base catastral</button>
-              <button id="toggleL1" class="layerToggle l1Toggle" aria-pressed="true" title="Encender o apagar viaducto, trazado, estaciones y Patio Taller">Trazado L1</button>
+              <button id="toggleL1" class="layerToggle l1Toggle" aria-pressed="true" title="Encender o apagar viaducto, trazado y Patio Taller">Trazado L1</button>
               <button id="toggleStationFootprints" class="layerToggle stationFootprintToggle" aria-pressed="true" aria-controls="stationFootprintLayer" title="Mostrar u ocultar las huellas de las 16 estaciones">Huellas estaciones</button>
               <label class="stationOpacity" for="stationFootprintOpacity">Opacidad <input id="stationFootprintOpacity" type="range" min="10" max="80" step="5" value="35"><output id="stationFootprintOpacityValue" for="stationFootprintOpacity">35 %</output></label>
               <button id="zoomIn" aria-label="Acercar">＋</button>
@@ -141,7 +141,7 @@
       <iframe id="predialDocumentFrame" title="Visor integrado del documento predial" loading="eager"></iframe>
     </div>
   </dialog>
-  <script type="module" src="./predial.js?v=20261005-station-footprints-v1"></script>
+  <script type="module" src="./predial.js?v=20261005-station-footprints-v2"></script>
   <script type="module" src="./scene-controls.js?layout=20261002-v1&v=20260929-bim-pov-v5"></script>
 </body>
 </html>
