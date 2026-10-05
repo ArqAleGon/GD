@@ -344,7 +344,7 @@ let isolatedBimSection=null,isolatedReturnView=null;
 function canRegisterIsolatedObject(target){return Boolean(isolatedBimSection&&target?.section===isolatedBimSection&&target.kind!=='Modelo IFC'&&target.mesh);}
 function captureIsolationView(){return {position:camera.position.clone(),target:controls.target.clone(),quaternion:camera.quaternion.clone(),fov:camera.fov,zoom:camera.zoom,focus:activeIfcFocus};}
 function returnFromIsolation(){const saved=isolatedReturnView;if(!saved)return;restoreBimContext();activeIfcFocus=saved.focus;applyIfcFocus(urbanScene,saved.focus);tween=null;setPovMode(false,false);camera.position.copy(saved.position);controls.target.copy(saved.target);camera.quaternion.copy(saved.quaternion);camera.fov=saved.fov;camera.zoom=saved.zoom;camera.updateProjectionMatrix();controls.update();isolatedReturnView=null;clearProgressHighlight();renderToolbar();}
-function restoreBimContext(){urbanScene?.isolateSection(null);isolatedBimSection=null;}
+function restoreBimContext(){urbanScene?.isolateSection(null);isolatedBimSection=null;isolatedReturnView=null;hideObjectContextMenu();}
 document.addEventListener('bimmodelaction',async event=>{
  const {section,action:requested}=event.detail,activeScene=urbanScene;if(!activeScene)return;
  try{
