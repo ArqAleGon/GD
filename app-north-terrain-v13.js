@@ -157,8 +157,8 @@ function buildSchematicNetwork(){
    const rail=new THREE.Mesh(new THREE.TubeGeometry(lineCurve(NETWORK_GROUND_Y+metres(13.25)),Math.max(96,line.path.length*12),metres(.18),5,false),mat('#e8eef0',{metalness:.72,roughness:.22}));g.add(rail);
   }
   if(i===0){
-   const halo=new THREE.Mesh(new THREE.TubeGeometry(curve,Math.max(96,line.path.length*10),.44,10,false),new THREE.MeshBasicMaterial({color:line.color,transparent:true,opacity:.46,depthTest:false,depthWrite:false}));halo.renderOrder=20;g.add(halo);
-   const tube=new THREE.Mesh(new THREE.TubeGeometry(curve,Math.max(96,line.path.length*10),.21,10,false),new THREE.MeshBasicMaterial({color:line.color,transparent:true,opacity:1,depthTest:false,depthWrite:false}));tube.renderOrder=21;g.add(tube);
+   const halo=new THREE.Mesh(new THREE.TubeGeometry(curve,Math.max(96,line.path.length*10),.22,10,false),new THREE.MeshBasicMaterial({color:line.color,transparent:true,opacity:.46,depthTest:false,depthWrite:false}));halo.renderOrder=20;g.add(halo);
+   const tube=new THREE.Mesh(new THREE.TubeGeometry(curve,Math.max(96,line.path.length*10),.105,10,false),new THREE.MeshBasicMaterial({color:line.color,transparent:true,opacity:1,depthTest:false,depthWrite:false}));tube.renderOrder=21;g.add(tube);
   }else{
     const halo=new THREE.Mesh(new THREE.TubeGeometry(curve,Math.max(80,line.path.length*8),.78,8,false),new THREE.MeshBasicMaterial({color:line.color,transparent:true,opacity:.28,depthTest:false,depthWrite:false}));halo.renderOrder=18;g.add(halo);
     const core=new THREE.Mesh(new THREE.TubeGeometry(curve,Math.max(80,line.path.length*8),.24,8,false),new THREE.MeshBasicMaterial({color:line.color,transparent:true,opacity:1,depthTest:false,depthWrite:false}));core.renderOrder=19;g.add(core);
