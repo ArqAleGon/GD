@@ -30,7 +30,7 @@
     fresh.title = 'Metro Digital · escena activa';
     fresh.allow = 'fullscreen';
     fresh.allowFullscreen = true;
-    next.source.searchParams.set('brand', '20261005-shared-header-v1');
+    next.source.searchParams.set('brand', '20261005-viaduct-half-width');
     fresh.src = next.source.href;
     fresh.addEventListener('load', () => {
       status.hidden = true;
