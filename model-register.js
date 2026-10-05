@@ -31,7 +31,7 @@ const renderer=new THREE.WebGLRenderer({canvas,antialias:true,powerPreference:'h
 renderer.setPixelRatio(Math.min(devicePixelRatio,1.7));renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.08;
 const scene=new THREE.Scene();scene.background=new THREE.Color('#061019');
 const camera=new THREE.PerspectiveCamera(42,1,.05,20000);camera.position.set(22,18,24);
-const controls=new OrbitControls(camera,canvas);controls.enableDamping=true;controls.dampingFactor=.08;controls.screenSpacePanning=true;controls.minDistance=.2;controls.maxDistance=12000;
+const controls=new OrbitControls(camera,canvas);controls.enableDamping=false;controls.screenSpacePanning=true;controls.minDistance=.2;controls.maxDistance=12000;
 scene.add(new THREE.HemisphereLight('#cdeaff','#392f28',2.2));const sun=new THREE.DirectionalLight('#fff2df',3.6);sun.position.set(30,60,42);scene.add(sun);const fill=new THREE.DirectionalLight('#7fc8ff',1.1);fill.position.set(-45,25,-35);scene.add(fill);
 const modelRoot=new THREE.Group();scene.add(modelRoot);
 const materialCache=new Map();
