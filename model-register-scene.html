@@ -39,7 +39,7 @@
       <section id="typeFilterSummary" class="typeFilterSummary" hidden aria-live="polite"></section>
       <a class="returnLink" href="./index.html?view=urban">← Volver a Modelos BIM Integrados</a>
     </aside>
-    <section class="workspace">
+    <section class="workspace dashboardCollapsed">
       <div class="heading">
         <div><div class="eyebrow">MODELO ACTIVO · CARGA EXCLUSIVA</div><h2 id="sceneTitle">Procesamiento del modelo BIM</h2></div>
         <div class="modelState"><span class="live"></span><b id="loadState">Preparando visor…</b></div>
@@ -60,8 +60,8 @@
         <div class="viewerHint">Clic: seleccionar elemento · Arrastrar: orbitar · Rueda: acercar</div>
         <div id="loading" class="loading"><i></i><b>Cargando únicamente el modelo solicitado</b><span id="loadingDetail">Preparando datos IFC…</span></div>
       </section>
-      <section id="progressDashboard" class="progressDashboard" aria-label="Tableros de avance del edificio activo">
-        <header><div><span>CONTROL DE EJECUCIÓN DEL EDIFICIO ACTIVO</span><h2>Avance BIM registrado y Primavera P6</h2></div><button id="toggleDashboard" aria-expanded="true">Ocultar tableros</button></header>
+      <section id="progressDashboard" class="progressDashboard collapsed" aria-label="Tableros de avance del edificio activo">
+        <header><div><span>CONTROL DE EJECUCIÓN DEL EDIFICIO ACTIVO</span><h2>Avance BIM registrado y Primavera P6</h2></div><button id="toggleDashboard" aria-expanded="false">Mostrar dashboards</button></header>
         <div class="dashboardGrid">
           <article class="dashboardCard buildingCard"><h3>Avance del edificio</h3><div id="buildingDashboard" class="dashboardContent"><p>Cargando indicadores…</p></div></article>
           <article class="dashboardCard activityCard"><h3>Avance por actividad</h3><div id="activityDashboard" class="dashboardRows"><p>Cargando actividades…</p></div></article>
@@ -75,7 +75,7 @@
     </section>
   </main>
   <div id="toast" role="status"></div>
-  <script type="module" src="./model-register.js?v=20260930-activity-weight-v1"></script>
-  <script type="module" src="./scene-controls.js?v=20261005-shared-header-v1"></script>
+  <script type="module" src="./model-register.js?v=20261005-bim-flow-v3"></script>
+  <script type="module" src="./scene-controls.js?v=20261005-bim-flow-v3"></script>
 </body>
 </html>

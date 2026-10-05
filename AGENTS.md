@@ -13,3 +13,5 @@ For every existing or newly added 3D building model, clicking its name label mus
 BIM/Modelos and individual model viewers must stop orbiting and panning immediately when pointer input ends. Disable OrbitControls damping for these views; retain explicit camera navigation and user-enabled automatic rotation. Verify a new model has one external registration action and no residual orbit motion.
 
 In every isolated BIM model view, hide Spot · Render E15, Respuesta sísmica, Volúmenes de edificaciones, Vista inicial and Restablecer entorno from the toolbar. Apply this shared rule to all existing and future model sections.
+
+Dashboards start hidden in every scene and model viewer; show them only via Mostrar dashboards. BIM entry keeps the full-scene framing and never automatically fits the depot. Isolated model toolbars provide Volver, restoring the exact latest pre-isolation camera position, target, field of view and prior model focus. Registrar and Registrar avance are allowed only for a selected IFC element inside the isolated model, never on general building or model-label menus. Apply these rules to every future model.

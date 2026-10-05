@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./scene-controls.css?v=20260929-bim-pov-v5">
   <script defer src="./vendor/xlsx-0.20.3.min.js"></script>
 <link rel="stylesheet" href="./scene-responsive.css?v=20261002-layout-v1">
-<link rel="stylesheet" href="./metro-brand.css?v=20261005-metro-digital"></head>
+<link rel="stylesheet" href="./metro-brand.css?v=20261005-metro-digital"><style>.dashboard[hidden]{display:none!important}.contentGrid:has(.dashboard[hidden]){grid-template-columns:minmax(0,1fr)}#predialDashboardToggle{margin-bottom:12px}</style></head>
 <body data-scene="predial">
   <header class="siteHeader">
     <a class="brand" href="./index.html">
@@ -84,7 +84,7 @@
 
       <section id="predialKpis" class="kpis" aria-label="Indicadores prediales"></section>
 
-      <div class="contentGrid">
+      <button id="predialDashboardToggle" type="button" aria-expanded="false">Mostrar dashboards</button><div class="contentGrid">
         <section class="mapCard" aria-label="Mapa predial interactivo">
           <div class="mapHeading">
             <div><b>Gestión predial sobre base territorial</b><span>Selecciona un predio o controla las capas de referencia</span></div>
@@ -120,7 +120,7 @@
           </div>
         </section>
 
-        <aside class="dashboard" aria-label="Panel predial">
+        <aside class="dashboard" hidden aria-label="Panel predial">
           <section class="dashCard">
             <div class="cardHeading"><h2>Estado de la selección</h2><span id="selectionLabel">Vista general</span></div>
             <div id="statusChart" class="statusChart"></div>
@@ -143,6 +143,6 @@
     </div>
   </dialog>
   <script type="module" src="./predial.js?v=20261005-station-footprints-v2"></script>
-  <script type="module" src="./scene-controls.js?v=20261005-shared-header-v1"></script>
+  <script type="module" src="./scene-controls.js?v=20261005-bim-flow-v3"></script>
 </body>
 </html>

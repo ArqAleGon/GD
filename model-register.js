@@ -13,7 +13,7 @@ const section=(query.get('section')||'PT108').toUpperCase();
 const typeLabels={IfcWall:'Muro',IfcWallStandardCase:'Muro',IfcSlab:'Losa / piso',IfcWindow:'Ventana',IfcDoor:'Puerta',IfcColumn:'Columna',IfcBeam:'Viga',IfcMember:'Elemento estructural',IfcPlate:'Placa',IfcRoof:'Cubierta',IfcCovering:'Revestimiento',IfcCurtainWall:'Muro cortina',IfcRailing:'Baranda',IfcStair:'Escalera',IfcStairFlight:'Tramo de escalera',IfcFlowTerminal:'Luminaria / terminal',IfcFlowSegment:'Segmento de instalación',IfcElementAssembly:'Conjunto',IfcBuildingElementProxy:'Elemento arquitectónico'};
 const typeLabel=type=>typeLabels[type]||String(type||'Elemento IFC').replace(/^Ifc/,'');
 const filters={id:'',activityId:'',executionUnit:'',ifcType:'',level:''};
-let activities=[],activityById=new Map(),primaveraMeta={},manifestEntry=null,elementPayload=null,elements=[],meshPickables=[],selectedElement=null,progressRecords=loadProgressRecords(),highlight=null,isolate=false,dashboardOpen=true,toastTimer;
+let activities=[],activityById=new Map(),primaveraMeta={},manifestEntry=null,elementPayload=null,elements=[],meshPickables=[],selectedElement=null,progressRecords=loadProgressRecords(),highlight=null,isolate=false,dashboardOpen=false,toastTimer;
 
 async function loadGzipJSON(url){
   const response=await fetch(url);if(!response.ok)throw new Error(`No se pudo cargar ${url}`);
@@ -174,7 +174,7 @@ function bindFilters(){
   $('resetFilters').onclick=()=>{Object.assign(filters,{id:'',activityId:'',executionUnit:'',ifcType:'',level:''});$('filterId').value='';for(const id of ['filterActivity','filterUE','filterType','filterLevel'])$(id).value='';isolate=false;applyFilters();fitModel();};
   $('isolateSelected').onclick=()=>{if(!selectedElement)return;isolate=!isolate;applyFilters();if(isolate)fitModel();};
   $('fitModel').onclick=()=>fitModel();$('topView').onclick=()=>fitModel('top');$('frontView').onclick=()=>fitModel('front');
-  $('toggleDashboard').onclick=()=>{dashboardOpen=!dashboardOpen;$('progressDashboard').classList.toggle('collapsed',!dashboardOpen);document.querySelector('.workspace').classList.toggle('dashboardCollapsed',!dashboardOpen);$('toggleDashboard').textContent=dashboardOpen?'Ocultar tableros':'Mostrar tableros';$('toggleDashboard').setAttribute('aria-expanded',String(dashboardOpen));resize();};
+  $('toggleDashboard').onclick=()=>{dashboardOpen=!dashboardOpen;$('progressDashboard').classList.toggle('collapsed',!dashboardOpen);document.querySelector('.workspace').classList.toggle('dashboardCollapsed',!dashboardOpen);$('toggleDashboard').textContent=dashboardOpen?'Ocultar dashboards':'Mostrar dashboards';$('toggleDashboard').setAttribute('aria-expanded',String(dashboardOpen));resize();};
 }
 
 window.addEventListener('storage',event=>{if(event.key==='emb-gd-object-progress-v1'){progressRecords=loadProgressRecords();applyActivityAssignments(elements,progressRecords);updateKpis();if(selectedElement)renderConsult();}});

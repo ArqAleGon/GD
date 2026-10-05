@@ -96,3 +96,5 @@ sourcePanel.querySelector('header button').addEventListener('click',()=>setSourc
 document.addEventListener('mockupscenechange',event=>{activeSourceView=event.detail?.view||activeSourceView;if(!sourcePanel.hidden)renderSourcePanel();});
 document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!sourcePanel.hidden)setSourcePanel(false);});
 renderSourcePanel();
+
+const predialDashboard=document.querySelector('.dashboard');const predialDashboardToggle=document.getElementById('predialDashboardToggle');if(predialDashboard&&predialDashboardToggle){predialDashboardToggle.onclick=()=>{predialDashboard.hidden=!predialDashboard.hidden;predialDashboardToggle.textContent=predialDashboard.hidden?'Mostrar dashboards':'Ocultar dashboards';predialDashboardToggle.setAttribute('aria-expanded',String(!predialDashboard.hidden));};}
