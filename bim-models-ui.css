@@ -1,8 +1,7 @@
-.bimProgressSpot.sceneLabel{width:190px!important;height:52px!important;box-sizing:border-box;white-space:normal!important;padding:4px 7px!important;transform:translate(-50%,-100%) scale(var(--label-scale,1))!important;transform-origin:bottom center;font-size:11px!important;line-height:16px!important;border-radius:5px!important;display:flex;box-shadow:0 2px 8px #0009;pointer-events:auto}
+.bimProgressSpot.sceneLabel{width:190px!important;height:30px!important;box-sizing:border-box;white-space:normal!important;padding:4px 7px!important;transform:translate(-50%,-100%) scale(var(--label-scale,1))!important;transform-origin:bottom center;font-size:11px!important;line-height:16px!important;border-radius:5px!important;display:flex;box-shadow:0 2px 8px #0009;pointer-events:auto}
 .bimProgressSpot button{display:block;width:100%;padding:0;border:0;background:transparent;color:inherit;font:inherit;cursor:pointer}
 .bimProgressSpot .bimBuildingName{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600;height:20px}
-.bimProgressSpot .bimRegisterInline{color:#fff;background:#59151d;border-top:1px solid #ffffff40;height:21px;border-radius:2px}
-.bimProgressSpot .bimRegisterInline:hover,.bimProgressSpot button:focus-visible{background:#a51e28;outline:1px solid white}
+.bimProgressSpot button:focus-visible{background:#a51e28;outline:1px solid white}
 #app.noDataDashboards #panels,#app.noDataDashboards #panelToggle{display:none!important}
 /* BIM controls share the lower band: movement left, tools and sources right. */
 body[data-scene="inicio"]:has(#app.urbanControls){--bim-movement-width:clamp(350px,44vw,490px)}
