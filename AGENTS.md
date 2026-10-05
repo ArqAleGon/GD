@@ -15,3 +15,7 @@ BIM/Modelos and individual model viewers must stop orbiting and panning immediat
 In every isolated BIM model view, hide Spot · Render E15, Respuesta sísmica, Volúmenes de edificaciones, Vista inicial and Restablecer entorno from the toolbar. Apply this shared rule to all existing and future model sections.
 
 Dashboards start hidden in every scene and model viewer; show them only via Mostrar dashboards. BIM entry keeps the full-scene framing and never automatically fits the depot. Isolated model toolbars provide Volver, restoring the exact latest pre-isolation camera position, target, field of view and prior model focus. Registrar and Registrar avance are allowed only for a selected IFC element inside the isolated model, never on general building or model-label menus. Apply these rules to every future model.
+
+## IFC instance identity
+
+Consultation and progress registration operate on an individual IFC element instance inside a building: wall, railing, floor/slab, column, beam, etc. Use the selected instance's persistent IFC GlobalId or stable element ID together with its model/source identity. Do not use the whole building, model section, IFC type, or all geometrically similar objects as the registration target. Each instance has its own parameters, progress and history; selecting another instance must not reuse the previous target. A building-label dialog is model metadata and navigation only, never an element progress record. Apply this rule to every existing and future model.
