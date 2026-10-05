@@ -125,8 +125,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
     const rail=stationSections.has(sectionName),name=rail?({E15:'Estación 15 · Calle 63',E16:'Estación 16 · Calle 72',I16:'Interestación E15–E16'}[sectionName]):entry.label.replace(/^IFC\s*·\s*/, '');
     entry.labelObject=addLabel(position,()=>`<button class="bimBuildingName" data-model-action="consult" title="Consultar ${name}">${name}</button>`,async event=>{
       const action=event.target.closest('[data-model-action]')?.dataset.modelAction||'consult';
-      if(rail){document.dispatchEvent(new CustomEvent('bimmodelaction',{detail:{section:sectionName,action}}));return;}
-      activateProgressObject?.({...entry.progressProxy.userData.progressObject,mesh:entry.progressProxy},event);
+      document.dispatchEvent(new CustomEvent('bimmodelaction',{detail:{section:sectionName,action}}));
     },'pilotLabel bimProgressSpot'+(rail?' bimStationSpot':''));
     entry.labelObject.geographic=true;entry.labelObject.ifcSection=sectionName;
   }

@@ -30,7 +30,7 @@
     fresh.title = 'Metro Digital · escena activa';
     fresh.allow = 'fullscreen';
     fresh.allowFullscreen = true;
-    next.source.searchParams.set('brand', '20261005-bim-interaction-v2');
+    next.source.searchParams.set('brand', '20261005-model-dialog');
     fresh.src = next.source.href;
     fresh.addEventListener('load', () => {
       status.hidden = true;
