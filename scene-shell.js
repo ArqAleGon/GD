@@ -30,7 +30,7 @@
     fresh.title = 'Metro Digital · escena activa';
     fresh.allow = 'fullscreen';
     fresh.allowFullscreen = true;
-    next.source.searchParams.set('brand', '20261005-ortho-recovery');
+    next.source.searchParams.set('brand', '20261005-ortho-recovery-v2');
     fresh.src = next.source.href;
     fresh.addEventListener('load', () => {
       status.hidden = true;

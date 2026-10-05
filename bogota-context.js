@@ -117,8 +117,15 @@ function addCssAerial(group){
   const {minX,minY,maxX,maxY}=request;
   const {object,image}=cssImagePlane(nativeOrthoUrl(minX,minY,maxX,maxY,pixelWidth,pixelHeight),pixelWidth,pixelHeight,request.width*WORLD_SCALE,request.height*WORLD_SCALE,(minX+maxX)/2*WORLD_SCALE-MAP_WIDTH/2*WORLD_SCALE,(minY+maxY)/2*WORLD_SCALE-MAP_HEIGHT/2*WORLD_SCALE,'nativeAerialTile nativeAerialComposite');
   image.style.opacity='0';
+  const fail=()=>{
+   if(token!==requestToken)return;
+   clearTimeout(timeout);image.onload=null;image.onerror=null;removeTileGroup(next);pending=null;pendingMeta=null;retryAfter=performance.now()+30000;
+   report((cachedReady?'Respaldo local ≈ 2 m/píxel':'Base catastral')+' · servicio de detalle sin respuesta');
+  };
+  const timeout=setTimeout(fail,20000);
   image.onload=()=>{
    if(token!==requestToken)return;
+   clearTimeout(timeout);
    if(active&&active!==next)removeTileGroup(active);
    active=next;activeMeta=nextMeta;pending=null;pendingMeta=null;next.visible=true;image.style.opacity='1';
    const groundSampleDistanceM=Math.max(request.width*METRES_PER_MAP_UNIT/pixelWidth,request.height*METRES_PER_MAP_UNIT/pixelHeight);
