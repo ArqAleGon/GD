@@ -8,6 +8,8 @@ Keep Metro Digital in Gotham HTF Regular using metro-brand.css. Preserve existin
 
 ## BIM model interaction
 
-For every existing or newly added 3D building model, clicking its name label must open the shared object consultation dialog directly via bimmodelaction. Load its IFC section first so parameters, source files, element count, dimensions and registration history belong to that building. Every IFC model section must provide Registrar avance and Vista aislada in the dialog. Isolation hides the surrounding models and provides Restablecer entorno. Labels contain only the name, with no inline Registrar button. Reuse createSectionLabel, the shared consultation/registration dialog and isolateSection for future models; never restrict these actions to a hard-coded station whitelist.
+For every existing or newly added 3D building model, clicking its name label must open the shared object consultation dialog directly via bimmodelaction. Load its IFC section first so parameters, source files, element count, dimensions and registration history belong to that building. Every IFC model section must provide Registrar avance and Vista aislada in the dialog. Isolation hides the surrounding models. Labels contain only the name, with no inline Registrar button. Reuse createSectionLabel, the shared consultation/registration dialog and isolateSection for future models; never restrict these actions to a hard-coded station whitelist.
 
 BIM/Modelos and individual model viewers must stop orbiting and panning immediately when pointer input ends. Disable OrbitControls damping for these views; retain explicit camera navigation and user-enabled automatic rotation. Verify a new model has one external registration action and no residual orbit motion.
+
+In every isolated BIM model view, hide Respuesta sísmica, Volúmenes de edificaciones, Vista inicial and Restablecer entorno from the toolbar. Apply this shared rule to all existing and future model sections.
