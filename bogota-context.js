@@ -67,9 +67,19 @@ function addCssAerial(group){
  const {object:contextPlane}=cssImagePlane('./assets/predial-cadastre-expanded-v9.webp',2340,2340,EXPANDED_MAP_WIDTH*WORLD_SCALE,EXPANDED_MAP_HEIGHT*WORLD_SCALE,0,0,'nativeAerialTile aerialTerritorialContext');
  contextPlane.position.y=-.495;context.add(contextPlane);
  const detailHost=new THREE.Group();detailHost.name='Ortoimagen urbana 2025 · detalle WMS adaptable';group.add(detailHost);
- let pending=null,active=null,activeMeta=null,pendingMeta=null,requestToken=0,lastUpdate=0,enabled=true;
+ const cached=new THREE.Group();cached.name='Ortofotografía 2025 · respaldo local';group.add(cached);
+ const report=message=>{const credit=document.getElementById('aerialCredit');if(credit)credit.textContent='UAECD / IDECA · Bogotá 2025 · GSD de origen: 5 cm · '+message+' · CC BY 4.0';};
+ let cachedReady=0;
+ fetch('./bogota-ortho-2025-l1.json').then(response=>{if(!response.ok)throw new Error('Ortofotografía local no disponible');return response.json();}).then(data=>{
+  for(const tile of data.tiles){
+   const {object,image}=cssImagePlane(tile.file,data.meta.tileSizePx,data.meta.tileSizePx,tile.width*WORLD_SCALE,tile.height*WORLD_SCALE,(tile.x+tile.width/2-MAP_WIDTH/2)*WORLD_SCALE,(tile.y+tile.height/2-MAP_HEIGHT/2)*WORLD_SCALE,'nativeAerialTile aerialCachedOrtho');
+   object.position.y=-.49;cached.add(object);
+   image.onload=()=>{cachedReady++;if(!active)report('Respaldo local ≈ 2 m/píxel · esperando detalle del servicio');};
+  }
+ }).catch(error=>report(error.message));
+ let pending=null,active=null,activeMeta=null,pendingMeta=null,requestToken=0,lastUpdate=0,retryAfter=0,enabled=true;
  const removeTileGroup=tileGroup=>{if(!tileGroup)return;tileGroup.traverse(object=>{if(object.isCSS3DObject)object.element.remove();});detailHost.remove(tileGroup);};
- const setVisible=value=>{enabled=Boolean(value);context.visible=true;detailHost.visible=enabled;};
+ const setVisible=value=>{enabled=Boolean(value);context.visible=true;detailHost.visible=enabled;cached.visible=enabled;};
  const projected=new THREE.Vector3(),direction=new THREE.Vector3();
  const visibleMapBounds=(camera,target)=>{
   let minX=Infinity,minY=Infinity,maxX=-Infinity,maxY=-Infinity,hits=0;
@@ -95,13 +105,14 @@ function addCssAerial(group){
  const contains=(outer,inner)=>outer&&outer.minX<=inner.minX&&outer.minY<=inner.minY&&outer.maxX>=inner.maxX&&outer.maxY>=inner.maxY;
  const update=(camera,target)=>{
   if(!enabled||!camera||!target)return;
-  const now=performance.now();if(now-lastUpdate<240)return;lastUpdate=now;
+  const now=performance.now();if(now-lastUpdate<240||now<retryAfter||pending)return;lastUpdate=now;
   const {view,request}=visibleMapBounds(camera,target),current=pendingMeta||activeMeta;
   if(contains(current,view)&&current.width<=request.width*1.55&&current.height<=request.height*1.55)return;
   const token=++requestToken;if(pending){removeTileGroup(pending);pending=null;}
   const next=new THREE.Group();next.name='WMS · imagen unica del campo visible';next.visible=false;detailHost.add(next);pending=next;
   const ratio=request.width/Math.max(request.height,.001);let pixelWidth,pixelHeight;
-  if(ratio>=1){pixelWidth=2048;pixelHeight=Math.max(256,Math.round(2048/ratio));}else{pixelHeight=2048;pixelWidth=Math.max(256,Math.round(2048*ratio));}
+  const longestPixels=Math.min(4096,Math.max(2048,Math.ceil(Math.max(request.width,request.height)*METRES_PER_MAP_UNIT/.05)));
+  if(ratio>=1){pixelWidth=longestPixels;pixelHeight=Math.max(256,Math.round(longestPixels/ratio));}else{pixelHeight=longestPixels;pixelWidth=Math.max(256,Math.round(longestPixels*ratio));}
   const nextMeta={...request,pixelWidth,pixelHeight};pendingMeta=nextMeta;
   const {minX,minY,maxX,maxY}=request;
   const {object,image}=cssImagePlane(nativeOrthoUrl(minX,minY,maxX,maxY,pixelWidth,pixelHeight),pixelWidth,pixelHeight,request.width*WORLD_SCALE,request.height*WORLD_SCALE,(minX+maxX)/2*WORLD_SCALE-MAP_WIDTH/2*WORLD_SCALE,(minY+maxY)/2*WORLD_SCALE-MAP_HEIGHT/2*WORLD_SCALE,'nativeAerialTile nativeAerialComposite');
@@ -111,9 +122,10 @@ function addCssAerial(group){
    if(active&&active!==next)removeTileGroup(active);
    active=next;activeMeta=nextMeta;pending=null;pendingMeta=null;next.visible=true;image.style.opacity='1';
    const groundSampleDistanceM=Math.max(request.width*METRES_PER_MAP_UNIT/pixelWidth,request.height*METRES_PER_MAP_UNIT/pixelHeight);
+   report('Resolución visible: '+(groundSampleDistanceM*100).toFixed(1)+' cm/píxel');
    document.dispatchEvent(new CustomEvent('nativeaerialready',{detail:{groundSampleDistanceM,tileCount:1,bounds:[minX,minY,maxX,maxY]}}));
   };
-  image.onerror=()=>{if(token!==requestToken)return;removeTileGroup(next);pending=null;pendingMeta=null;};
+  image.onerror=fail;
   next.add(object);
  };
  return {group:detailHost,context,detailHost,setVisible,update};
