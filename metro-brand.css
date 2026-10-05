@@ -1,0 +1,14 @@
+/* Shared project identity across all five scenes. */
+@font-face {
+  font-family: "Gotham HTF";
+  src: url("./assets/fonts/gotham-htf-regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+body[data-scene] .brand h1,
+body[data-scene] .brand b {
+  font-family: "Gotham HTF", Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}

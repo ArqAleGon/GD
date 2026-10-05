@@ -27,7 +27,7 @@
     status.hidden = false;
     const fresh = document.createElement('iframe');
     fresh.id = 'sceneFrame';
-    fresh.title = 'Asistente Digital EMB · escena activa';
+    fresh.title = 'Metro Digital · escena activa';
     fresh.allow = 'fullscreen';
     fresh.allowFullscreen = true;
     fresh.src = next.source.href;
