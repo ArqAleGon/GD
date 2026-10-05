@@ -15,3 +15,13 @@
 .tokenLoader{display:block;margin-top:13px;padding:10px;border:1px dashed #4f7890;border-radius:7px;background:#122531;color:#cce1ed!important}.tokenLoader input{font-size:9px;padding:6px!important;margin:7px 0 0!important}.tokenLoader small{display:block;color:#8fa8b8;font-size:8px;line-height:1.45;margin-top:6px}.documentLocked{display:block;border:1px dashed #405868;border-radius:6px;background:#101d26;padding:9px 10px;margin:6px 0;color:#b8c8d2}.documentLocked.unavailable{border-color:#80634e;background:#2a211c;color:#e7c8ad}.documentLocked b,.documentLocked small{display:block;overflow-wrap:anywhere}.documentLocked b{font-size:10px}.documentLocked small{font-size:8px;line-height:1.45;color:#8097a6;margin-top:4px}.documentLocked.unavailable small{color:#c9a88f}
 .predialDocumentDialog{width:min(1180px,94vw);height:min(820px,92vh);padding:0;border:1px solid #50758a;border-radius:10px;background:#081119;color:#dce8f0;box-shadow:0 26px 80px #000c}.predialDocumentDialog::backdrop{background:#02070bd9;backdrop-filter:blur(3px)}.predialDocumentShell{height:100%;display:grid;grid-template-rows:auto 1fr}.predialDocumentShell>header{height:auto;min-height:58px;padding:10px 14px;display:flex;align-items:center;justify-content:space-between;gap:16px;background:#162834;border-bottom:1px solid #355164}.predialDocumentShell>header span,.predialDocumentShell>header b{display:block}.predialDocumentShell>header span{font-size:8px;letter-spacing:1.5px;color:#79badf}.predialDocumentShell>header b{font-size:13px;margin-top:4px;overflow-wrap:anywhere}.predialDocumentShell>header button{white-space:nowrap}.predialDocumentShell iframe{width:100%;height:100%;border:0;background:#081119}
 .barChart{max-height:285px;overflow-y:auto;padding-right:5px;scrollbar-width:thin;scrollbar-color:#426579 #101c27}
+
+/* Station occupation polygons remain above parcels without intercepting selection. */
+.stationFootprint{fill:#d68cff;fill-opacity:var(--station-footprint-opacity,.35);stroke:#e7b4ff;stroke-width:1.6;vector-effect:non-scaling-stroke;pointer-events:none}
+#stationLabelLayer{pointer-events:none}
+.mapTools .stationFootprintToggle{border-color:#b079cc;color:#efd6ff}
+.mapTools .stationFootprintToggle:before{background:#d68cff;box-shadow:0 0 8px #d68cff80}
+.stationOpacity{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:#d5e7ed}
+.stationOpacity input{width:80px;accent-color:#d68cff}
+.stationOpacity output{min-width:32px;font-variant-numeric:tabular-nums}
+.mapLegend .stationFootprintSwatch{background:#d68cff59;border:1px solid #e7b4ff}

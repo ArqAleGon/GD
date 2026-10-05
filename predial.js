@@ -20,7 +20,7 @@ const mapWidth=PREDIAL_META.mapWidth||1200,mapHeight=PREDIAL_META.mapHeight||620
 const padding=26;
 const initialView={x:-padding,y:-padding,w:mapWidth+padding*2,h:mapHeight+padding*2};
 let view={...initialView},selected=null,drag=null;
-const layerState={cadastre:true,l1:true};
+const layerState={cadastre:true,l1:true,stations:true};
 
 const escapeHTML=value=>String(value??'').replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]));
 const svg=(tag,attrs={})=>{const node=document.createElementNS(NS,tag);Object.entries(attrs).forEach(([key,value])=>node.setAttribute(key,String(value)));return node;};
@@ -114,10 +114,11 @@ function renderReferenceLayers(){
  appendPaths('viaductLayer',L1_BASE.viaduct.paths,'l1Viaduct',{'fill-rule':'evenodd'});
  appendPaths('alignmentLayer',L1_BASE.alignment.paths,'l1Alignment');
 
- const stations=$('stationLayer'),labels=$('stationLabelLayer');stations.replaceChildren();labels.replaceChildren();
+ const stations=$('stationFootprintLayer'),labels=$('stationLabelLayer');stations.replaceChildren();labels.replaceChildren();
+ $('stationLayer').replaceChildren();
  for(const item of L1_BASE.stations.items||[]){
-  const station=svg('path',{d:item.path,class:'l1Station','fill-rule':'evenodd'});
-  const title=svg('title');title.textContent=`${item.code} · ${item.name}`;station.append(title);stations.append(station);
+  const station=svg('path',{d:item.path,class:'stationFootprint','fill-rule':'evenodd'});
+  const title=svg('title');title.textContent=`Huella de ocupación · ${item.code} · ${item.name}`;station.append(title);stations.append(station);
   const label=svg('text',{x:item.center[0],y:item.center[1]-7,class:'l1StationLabel','text-anchor':'middle'});label.textContent=item.code;labels.append(label);
  }
 
@@ -137,8 +138,20 @@ function renderReferenceLayers(){
 
 function setLayerVisibility(name,visible){
  layerState[name]=visible;
- const group=$(name==='cadastre'?'cadastreLayer':'l1Layer'),button=$(name==='cadastre'?'toggleCadastre':'toggleL1');
+ const layerIds={cadastre:['cadastreLayer','toggleCadastre'],l1:['l1Layer','toggleL1'],stations:['stationFootprintLayer','toggleStationFootprints']};
+ const [groupId,buttonId]=layerIds[name],group=$(groupId),button=$(buttonId);
  group.style.display=visible?'':'none';group.setAttribute('aria-hidden',String(!visible));button.setAttribute('aria-pressed',String(visible));button.classList.toggle('isOff',!visible);
+ if(name==='stations'){
+  $('stationLabelLayer').style.display=visible?'':'none';
+  $('stationFootprintLegend').hidden=!visible;
+  $('stationFootprintOpacity').disabled=!visible;
+ }
+}
+
+function setStationFootprintOpacity(value){
+ const opacity=Math.max(10,Math.min(80,Number(value)||35));
+ $('stationFootprintLayer').style.setProperty('--station-footprint-opacity',String(opacity/100));
+ $('stationFootprintOpacityValue').textContent=opacity+' %';
 }
 
 function renderKpis(list){
@@ -219,8 +232,8 @@ function init(){
  $('mapBaseSummary').textContent=`Referencia territorial MapaBaseBogota: ${fmtNumber(MAP_BASE_META.territorialFeatureCount)} elementos de lotes, construcciones, manzanas, sectores, vías y curvas de nivel; L1 con trazado, viaducto y ${fmtNumber(L1_BASE.stations.featureCount)} estaciones.`;
  for(const value of [...new Set(PREDIAL_RECORDS.map(record=>record.locality).filter(Boolean))].sort((a,b)=>a.localeCompare(b,'es'))){const option=document.createElement('option');option.value=value;option.textContent=value;$('locality').append(option);}
  for(const value of PREDIAL_META.stationSegments||[...new Set(PREDIAL_RECORDS.flatMap(record=>recordSegments(record)))].sort((a,b)=>a.localeCompare(b,'es',{numeric:true}))){const option=document.createElement('option');option.value=value;option.textContent=value;$('segment').append(option);}
- $('mapLegend').innerHTML=Object.values(STATUS).map(state=>`<span class="legendItem"><i style="--state:${state.color}"></i>${state.short}</span>`).join('');
- setView(initialView);renderBase();renderReferenceLayers();render();
+ $('mapLegend').innerHTML=Object.values(STATUS).map(state=>`<span class="legendItem"><i style="--state:${state.color}"></i>${state.short}</span>`).join('')+'<span id="stationFootprintLegend" class="legendItem"><i class="stationFootprintSwatch"></i>Huella de estación</span>';
+ setView(initialView);renderBase();renderReferenceLayers();setStationFootprintOpacity($('stationFootprintOpacity').value);render();
  for(const id of ['predialStatus','locality','segment','documentStatus'])$(id).addEventListener('change',render);$('predialSearch').addEventListener('input',render);
  $('predialLinkFile').addEventListener('change',event=>{const file=event.target.files?.[0];if(file)enablePredialLinks(file);});
   $('parcelDetail').addEventListener('click',event=>{const button=event.target.closest('.documentLinkButton');if(!button)return;openDocumentViewer(DOCUMENTS_BY_ID.get(button.dataset.documentId));});
@@ -229,6 +242,8 @@ function init(){
  $('predialReset').onclick=()=>{$('predialStatus').value='';$('locality').value='';$('segment').value='';$('documentStatus').value='';$('predialSearch').value='';clearSelection();setView(initialView);render();};
  $('toggleCadastre').onclick=()=>setLayerVisibility('cadastre',!layerState.cadastre);
  $('toggleL1').onclick=()=>setLayerVisibility('l1',!layerState.l1);
+ $('toggleStationFootprints').onclick=()=>setLayerVisibility('stations',!layerState.stations);
+ $('stationFootprintOpacity').addEventListener('input',event=>setStationFootprintOpacity(event.target.value));
  $('zoomIn').onclick=()=>zoom(.78);$('zoomOut').onclick=()=>zoom(1.28);$('resetView').onclick=()=>setView(initialView);
  const query=new URLSearchParams(location.search),requestedChip=(query.get('chip')||'').toUpperCase().replace(/[^A-Z0-9]/g,'');
  if(requestedChip){$('predialSearch').value=requestedChip;render();const requested=PREDIAL_ALL_RECORDS.find(record=>(record.chipAliases||[record.chip]).includes(requestedChip));if(requested)focusRecord(requested);}
