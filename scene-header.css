@@ -1,0 +1,24 @@
+/* Predial uses the same menu order, sizing and dropdown layout as Inicio. */
+body[data-scene]:not([data-scene="inicio"]) .siteHeader{gap:18px;background:linear-gradient(90deg,#222c36eb,#1b252edd 65%,#0f1720ec);border-bottom:1px solid #9ecff31c;box-shadow:0 8px 30px #0006}
+body[data-scene]:not([data-scene="inicio"]) .headActions{display:flex;align-items:center;margin-left:auto;gap:5px}
+body[data-scene]:not([data-scene="inicio"]) .headActions>.moduleLink,
+body[data-scene]:not([data-scene="inicio"]) .headerModuleMenu>summary{color:#bfe1f5;border:1px solid #46677f;border-radius:6px;font-size:var(--control-font);min-height:32px;padding:6px 9px;text-decoration:none;cursor:pointer;white-space:nowrap;box-sizing:border-box}
+body[data-scene]:not([data-scene="inicio"]) .headerModuleMenu{position:relative;z-index:30}
+body[data-scene]:not([data-scene="inicio"]) .headerModuleMenu>summary{list-style:none;display:inline-flex;align-items:center;justify-content:center}
+body[data-scene]:not([data-scene="inicio"]) .headerModuleMenu>summary::-webkit-details-marker{display:none}
+body[data-scene]:not([data-scene="inicio"]) .headerModuleMenu>summary:after{content:'⌄';margin-left:7px;color:#83bada}
+body[data-scene]:not([data-scene="inicio"]) .headerModuleMenu[open]>summary,
+body[data-scene]:not([data-scene="inicio"]) .headerModuleMenu>summary:hover,
+body[data-scene]:not([data-scene="inicio"]) .headActions>.moduleLink:hover{color:#fff;background:#28465d;border-color:#77bce6}
+body[data-scene]:not([data-scene="inicio"]) .headerModulePanel{position:absolute;top:calc(100% + 7px);left:0;display:grid;min-width:170px;padding:6px;border:1px solid #52758b;border-radius:6px;background:#0b1925f5;box-shadow:0 15px 35px #000b}
+body[data-scene]:not([data-scene="inicio"]) .headerModulePanel a{padding:9px 10px;border:0;border-radius:4px;color:#c8deea;text-decoration:none;font-size:11px;white-space:nowrap;display:block}
+body[data-scene]:not([data-scene="inicio"]) .headerModulePanel a:hover,
+body[data-scene]:not([data-scene="inicio"]) .headerModulePanel a.active{background:#28465d;color:#fff}
+body[data-scene]:not([data-scene="inicio"]) .headActions>button{padding:6px 9px;color:#9aaebd;font-size:var(--control-font);min-height:32px;border:1px solid transparent;background:transparent;border-radius:0}
+body[data-scene]:not([data-scene="inicio"]) .headActions>button:hover{color:#fff;background:#3c719c40;border-color:#65a9d353}
+.sceneHeaderDialog{width:min(620px,90vw);max-height:80vh;overflow:auto;background:#101c27;color:#dbe7ef;border:1px solid #52758b;border-radius:8px;padding:24px}
+.sceneHeaderDialog::backdrop{background:#02070bbd}
+.sceneHeaderDialog p,.sceneHeaderDialog li{font-size:13px;line-height:1.6}
+.sceneHeaderDialog .dialogClose{float:right}
+@media(max-width:760px){body[data-scene]:not([data-scene="inicio"]) .headActions{width:100%;margin-left:0;justify-content:flex-start;flex-wrap:wrap}body[data-scene]:not([data-scene="inicio"]) .headerModulePanel{left:auto;right:0;min-width:145px}body[data-scene]:not([data-scene="inicio"]) .headActions>button,body[data-scene]:not([data-scene="inicio"]) .headerModuleMenu>summary,body[data-scene]:not([data-scene="inicio"]) .headActions>.moduleLink{font-size:12px;padding:5px 7px}}
+@media(max-width:700px){body[data-scene]:not([data-scene="inicio"]) .headActions #reference,body[data-scene]:not([data-scene="inicio"]) .headActions #help{display:none}}
