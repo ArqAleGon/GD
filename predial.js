@@ -129,7 +129,9 @@ function renderReferenceLayers(){
    const title=svg('title');title.textContent=`Huella de ocupación · ${item.code} · ${item.name} · ${part.name||part.role} · ${override?.source||'ESTACIONES.shp'}`;station.append(title);stations.append(station);
   }
   const center=override?.center?footprintToMap(override.center):item.center;
-  const label=svg('text',{x:center[0],y:center[1]-7,class:'l1StationLabel','text-anchor':'middle'});label.textContent=item.code;labels.append(label);
+  const central=parts.find(part=>part.role==='nave-central');
+  const anchorY=central?.coordinates?Math.min(...central.coordinates.map(point=>footprintToMap(point)[1])):center[1];
+  const label=svg('text',{x:center[0],y:anchorY-12,'data-anchor-y':anchorY,class:'l1StationLabel','text-anchor':'middle'});label.textContent=item.code;labels.append(label);
  }
 
  const patioRecords=PREDIAL_RECORDS.filter(record=>/^(PT|PATIO TALLER)$/i.test(record.group||record.station||''));
@@ -233,8 +235,8 @@ function render(){
  renderKpis(list);renderCharts(list);renderMap(list);renderSearchResults(searchList);
 }
 
-function setView(next){view={...next};$('predialMap').setAttribute('viewBox',`${view.x} ${view.y} ${view.w} ${view.h}`);$('stationLabelLayer').style.setProperty('--station-label-scale',String(view.w/initialView.w));}
-function zoom(factor,cx=view.x+view.w/2,cy=view.y+view.h/2){const nextW=Math.max(85,Math.min(mapWidth+padding*2,view.w*factor)),nextH=nextW*view.h/view.w;setView({x:cx-(cx-view.x)*nextW/view.w,y:cy-(cy-view.y)*nextH/view.h,w:nextW,h:nextH});}
+function setView(next){view={...next};$('predialMap').setAttribute('viewBox',`${view.x} ${view.y} ${view.w} ${view.h}`);const labelScale=view.w/initialView.w;$('stationLabelLayer').style.setProperty('--station-label-scale',String(labelScale));for(const label of $('stationLabelLayer').querySelectorAll('[data-anchor-y]'))label.setAttribute('y',Number(label.dataset.anchorY)-12*labelScale);}
+function zoom(factor,cx=view.x+view.w/2,cy=view.y+view.h/2){const nextW=Math.max(2,Math.min(mapWidth+padding*2,view.w*factor)),nextH=nextW*view.h/view.w;setView({x:cx-(cx-view.x)*nextW/view.w,y:cy-(cy-view.y)*nextH/view.h,w:nextW,h:nextH});}
 
 function init(){
  $('sourceName').textContent=`${PREDIAL_META.workbookSource} + ${PREDIAL_META.geometrySource} + ${PREDIAL_META.documentSource}`;
