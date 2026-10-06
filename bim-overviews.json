@@ -351,5 +351,24 @@
     "triangles": 668365,
     "bytes": 3053660,
     "displayGridMeters": 0.5
+  },
+  "I01": {
+    "file": "assets/models/stations/i01-overview.glb.gz",
+    "bounds": {
+      "min": [
+        87142.28079079256,
+        2476.099998474121,
+        -105622.716057649
+      ],
+      "max": [
+        88877.28458935875,
+        2559.309654330907,
+        -104969.42069106524
+      ]
+    },
+    "sourceTriangles": 14338339,
+    "triangles": 451774,
+    "bytes": 2049128,
+    "displayGridMeters": 0.5
   }
 }

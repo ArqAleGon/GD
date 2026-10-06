@@ -1,10 +1,11 @@
 """Generate display-only contextual meshes; original IFC parts remain the selection source."""
-import pathlib,json,gzip,struct,collections,numpy as np
+import pathlib,json,gzip,struct,collections,sys,numpy as np
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 placement=json.loads((ROOT/'ifc-placement-20260915-i16-e16.json').read_text('utf-8'))
 sections=sorted({m['section'] for m in placement['models'] if m.get('instanceIdentity')=='ifc-globalid'})
 manifest=json.loads((ROOT/'bim-overviews.json').read_text('utf-8')) if (ROOT/'bim-overviews.json').exists() else {}
 for section in sections:
+ if len(sys.argv)>1 and section not in sys.argv[1:]:continue
  reportPath=ROOT/f'assets/models/stations/{section.lower()}-conversion.json'
  if not reportPath.exists():continue
  report=json.loads(reportPath.read_text('utf-8'))
