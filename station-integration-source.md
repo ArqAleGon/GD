@@ -42,8 +42,18 @@ Las disciplinas comparten datum de 2.550 m. El centro del conjunto está dentro 
 
 Se verificaron consulta del modelo, selección y consulta individual de un muro, registro reservado al elemento y Volver. En Gestión se probaron separación, nivel de andén, alarma, cámara fija sobre el piso real, cuatro spots y recorrido interior con joysticks.
 
+## E05
+
+Se integraron 0000 (93.640 instancias), 1150 (66) y 1200 (4.325): 98.031 instancias en 161 partes. Los archivos, índices, coordenadas e identidad por fuente + GlobalId pasaron validación; no quedan instancias representadas pendientes ni ejes fuera del edificio.
+
+El muro 4175924, GlobalId `3CYIH4IO1B2hVlBDo4GIs$`, tiene el Body vacío después de sus cortes nativos. Se preservó su Axis original, sin restaurar un sólido eliminado por el IFC. El centro del conjunto queda dentro de las huellas CAD y a 2,05 m del centro de la nave.
+
+Las disciplinas comparten datum de 2.550 m. Gestión usa niveles nativos, con acceso 2.554,55 m, vestíbulo/intermedio 2.561,15 m, TOR 2.568,75 m, plataforma 2.569,89 m y cubiertas. El tren usa la nave CAD y el TOR nativo.
+
+Se verificaron consulta general, selección y consulta individual de una losa, registro exclusivo por elemento y Volver. En Gestión se probaron niveles separados, andén, alarma, cámara fija dentro del modelo, cuatro spots y recorrido interior con joysticks.
+
 ## Procedimiento para próximas estaciones
 
 Cada estación debe completar BIM y Gestión antes de publicarse: modelo real, niveles nativos, separación, alarmas, cámaras 360 de posición fija, spots y recorrido interior. La agrupación del render conserva las instancias IFC originales para consulta y registro individual.
 
-E05–E14 pendientes de conversión y publicación individual. En E09/E10 falta 1150; en E11/E12 faltan 1150 y 1200 en la carpeta de origen revisada. Los archivos con códigos distintos de 0000, 1150 y 1200 están fuera del alcance solicitado.
+E06–E14 pendientes de conversión y publicación individual. En E09/E10 falta 1150; en E11/E12 faltan 1150 y 1200 en la carpeta de origen revisada. Los archivos con códigos distintos de 0000, 1150 y 1200 están fuera del alcance solicitado.
