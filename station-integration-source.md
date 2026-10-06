@@ -22,8 +22,20 @@ Una viga solo contiene un eje situado fuera del edificio en el IFC original. Se 
 
 Gestión de E02 incorpora accesos/cimentación, vestíbulo, andén, cubierta inferior y cubierta a partir de sus IfcBuildingStorey. Se verificaron separación, alarma, CAM con spots espaciales y recorrido interior con joysticks. E15 conserva sus controles anteriores.
 
+## E03
+
+Se integraron únicamente arquitectura 0000 (85.111 instancias), estructura 1150 (66) y estructura 1200 (3.605): 88.782 identificadores únicos en 176 partes GLB comprimidas (72,76 MB). No quedan instancias representadas pendientes. Los índices, coordenadas finitas y las identidades por fuente + GlobalId se verificaron en todos los archivos.
+
+El cuerpo del muro IFC 3022632, GlobalId `03N8P$SCT3Txk367jg6n_J`, queda completamente eliminado por sus dos vacíos nativos. Se verificó con las entidades originales y se conservó su representación Axis, su ubicación y su identidad; no se fabricó un cuerpo sólido. No hay ejes fuera de la envolvente del edificio.
+
+Las tres disciplinas comparten el datum de arquitectura de 2.550 m. El centro del conjunto queda dentro de las huellas CAD y a 3,52 m del centro de la nave. Gestión usa las cotas nativas de acceso 2.547,75 m, vestíbulo/intermedio 2.555,35 m, TOR 2.562,95 m, plataforma 2.564,09 m y cubiertas. El tren usa el eje de la nave CAD y el TOR nativo; se excluyen señales y barandas al buscar geometría de riel.
+
+Se comprobaron consulta general, selección de una losa individual, formulario de registro reservado a esa instancia, vista aislada y Volver.
+
+Gestión de E03 se verificó con el modelo real sin contexto, niveles y separación, andén, alarma, cámara interior CAM-01, cuatro spots espaciales y recorrido interior con joysticks. La cámara se ubicó sobre el piso real del andén.
+
 ## Procedimiento para próximas estaciones
 
 Cada estación debe completar BIM y Gestión antes de publicarse: modelo real, niveles nativos, separación, alarmas, cámaras 360 de posición fija, spots y recorrido interior. La agrupación del render conserva las instancias IFC originales para consulta y registro individual.
 
-E03–E14 pendientes de conversión y publicación individual. En E09/E10 falta 1150; en E11/E12 faltan 1150 y 1200 en la carpeta de origen revisada. Los archivos con códigos distintos de 0000, 1150 y 1200 están fuera del alcance solicitado.
+E04–E14 pendientes de conversión y publicación individual. En E09/E10 falta 1150; en E11/E12 faltan 1150 y 1200 en la carpeta de origen revisada. Los archivos con códigos distintos de 0000, 1150 y 1200 están fuera del alcance solicitado.
