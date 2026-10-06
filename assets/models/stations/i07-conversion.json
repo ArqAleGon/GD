@@ -1,0 +1,4823 @@
+{
+  "section": "I07",
+  "models": [
+    {
+      "source": "L1T1-1100-207-CON-ED-EST-MO-0001_V01.ifc",
+      "code": "1100",
+      "status": "converted",
+      "sourceBytes": 65569220,
+      "converted": 1968,
+      "missing": [],
+      "bounds": {
+        "min": [
+          93102.28510884455,
+          2507.2099990844727,
+          -102420.86653379479
+        ],
+        "max": [
+          94296.67805659884,
+          2571.149999999555,
+          -101433.57916174666
+        ]
+      },
+      "siteElevation": 2550.0,
+      "storeys": [
+        {
+          "id": "07FpRkHErBTgNHSA0jAjrf",
+          "name": "STR_LEVEL BASE _0.00",
+          "elevation": 0.0,
+          "source": "L1T1-1100-207-CON-ED-EST-MO-0001_V01.ifc"
+        },
+        {
+          "id": "07FpRkHErBTgNHSA0jAjwe",
+          "name": "STR_PL_00_BASEMENT_",
+          "elevation": 2550.0,
+          "source": "L1T1-1100-207-CON-ED-EST-MO-0001_V01.ifc"
+        }
+      ],
+      "types": {
+        "IfcSlab": 1189,
+        "IfcColumn": 51,
+        "IfcBuildingElementProxy": 728
+      },
+      "parts": [
+        {
+          "file": "assets/models/stations/i07-1100-p001.glb.gz",
+          "rawFile": "assets/models/stations/i07-1100-p001.glb",
+          "bytes": 679561,
+          "rawBytes": 1883032,
+          "instances": 353
+        },
+        {
+          "file": "assets/models/stations/i07-1100-p002.glb.gz",
+          "rawFile": "assets/models/stations/i07-1100-p002.glb",
+          "bytes": 823339,
+          "rawBytes": 1547040,
+          "instances": 29
+        },
+        {
+          "file": "assets/models/stations/i07-1100-p003.glb.gz",
+          "rawFile": "assets/models/stations/i07-1100-p003.glb",
+          "bytes": 447993,
+          "rawBytes": 1608452,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/i07-1100-p004.glb.gz",
+          "rawFile": "assets/models/stations/i07-1100-p004.glb",
+          "bytes": 391309,
+          "rawBytes": 1744644,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/i07-1100-p005.glb.gz",
+          "rawFile": "assets/models/stations/i07-1100-p005.glb",
+          "bytes": 104910,
+          "rawBytes": 515456,
+          "instances": 186
+        }
+      ],
+      "seconds": 11,
+      "emptySourceRepresentations": [
+        {
+          "id": 152,
+          "guid": "26CXC_g3PBTBGK3PziX7Jh",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3589958",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 300,
+          "guid": "26CXC_g3PBTBGK3PziX7Ja",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3589961",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 401,
+          "guid": "26CXC_g3PBTBGK3PziX7Jd",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3589962",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 466,
+          "guid": "26CXC_g3PBTBGK3PziX7JW",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3589965",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 531,
+          "guid": "26CXC_g3PBTBGK3PziX7JZ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3589966",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 596,
+          "guid": "26CXC_g3PBTBGK3PziX7JY",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3589967",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 661,
+          "guid": "26CXC_g3PBTBGK3PziX7Jz",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3589968",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 726,
+          "guid": "26CXC_g3PBTBGK3PziX7Jy",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3589969",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 791,
+          "guid": "26CXC_g3PBTBGK3PziX7J$",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3589970",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1124,
+          "guid": "26CXC_g3PBTBGK3PziX7J1",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3589996",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1216,
+          "guid": "26CXC_g3PBTBGK3PziX7J2",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3589999",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1281,
+          "guid": "26CXC_g3PBTBGK3PziX7JT",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590000",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1346,
+          "guid": "26CXC_g3PBTBGK3PziX7JU",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590003",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1411,
+          "guid": "26CXC_g3PBTBGK3PziX7JP",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590004",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1476,
+          "guid": "26CXC_g3PBTBGK3PziX7JO",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590005",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1541,
+          "guid": "26CXC_g3PBTBGK3PziX7JR",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590006",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1606,
+          "guid": "26CXC_g3PBTBGK3PziX7JQ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590007",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1671,
+          "guid": "26CXC_g3PBTBGK3PziX7JL",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590008",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1938,
+          "guid": "26CXC_g3PBTBGK3PziX7Gd",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590026",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 2028,
+          "guid": "26CXC_g3PBTBGK3PziX7GW",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590029",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 2093,
+          "guid": "26CXC_g3PBTBGK3PziX7GZ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590030",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 2158,
+          "guid": "26CXC_g3PBTBGK3PziX7Gy",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590033",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 2223,
+          "guid": "26CXC_g3PBTBGK3PziX7G$",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590034",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 2288,
+          "guid": "26CXC_g3PBTBGK3PziX7G_",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590035",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 2353,
+          "guid": "26CXC_g3PBTBGK3PziX7Gv",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590036",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 2418,
+          "guid": "26CXC_g3PBTBGK3PziX7Gu",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590037",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 2483,
+          "guid": "26CXC_g3PBTBGK3PziX7Gx",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590038",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 2734,
+          "guid": "26CXC_g3PBTBGK3PziX7HS",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-ECCENTRIC:STR_SFR_PIER-ECCENTRIC:3590129",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 2850,
+          "guid": "26CXC_g3PBTBGK3PziX7HV",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590130",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 2915,
+          "guid": "26CXC_g3PBTBGK3PziX7HU",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590131",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 2980,
+          "guid": "26CXC_g3PBTBGK3PziX7HP",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590132",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 3045,
+          "guid": "26CXC_g3PBTBGK3PziX7HO",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590133",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 3110,
+          "guid": "26CXC_g3PBTBGK3PziX7HR",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590134",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 3175,
+          "guid": "26CXC_g3PBTBGK3PziX7HQ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590135",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 20969,
+          "guid": "26CXC_g3PBTBGK3PziX7kd",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-ECCENTRIC:STR_SFR_PIER-ECCENTRIC:3590154",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 21056,
+          "guid": "26CXC_g3PBTBGK3PziX7kc",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590155",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 21121,
+          "guid": "26CXC_g3PBTBGK3PziX7kX",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590156",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 21186,
+          "guid": "26CXC_g3PBTBGK3PziX7kW",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590157",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 21251,
+          "guid": "26CXC_g3PBTBGK3PziX7kZ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590158",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 21316,
+          "guid": "26CXC_g3PBTBGK3PziX7kY",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590159",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 21381,
+          "guid": "26CXC_g3PBTBGK3PziX7kz",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590160",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 39310,
+          "guid": "26CXC_g3PBTBGK3PziX7kn",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590172",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 39400,
+          "guid": "26CXC_g3PBTBGK3PziX7ko",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590175",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 39465,
+          "guid": "26CXC_g3PBTBGK3PziX7kD",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590176",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 39530,
+          "guid": "26CXC_g3PBTBGK3PziX7kE",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590179",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 39595,
+          "guid": "26CXC_g3PBTBGK3PziX7k9",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590180",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 39660,
+          "guid": "26CXC_g3PBTBGK3PziX7k8",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590181",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 39725,
+          "guid": "26CXC_g3PBTBGK3PziX7kB",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590182",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 39790,
+          "guid": "26CXC_g3PBTBGK3PziX7kA",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590183",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 39855,
+          "guid": "26CXC_g3PBTBGK3PziX7k5",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590184",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 40106,
+          "guid": "26CXC_g3PBTBGK3PziX7kN",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590202",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 40196,
+          "guid": "26CXC_g3PBTBGK3PziX7kG",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590205",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 40261,
+          "guid": "26CXC_g3PBTBGK3PziX7kJ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590206",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 40326,
+          "guid": "26CXC_g3PBTBGK3PziX7li",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590209",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 40391,
+          "guid": "26CXC_g3PBTBGK3PziX7ll",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590210",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 40456,
+          "guid": "26CXC_g3PBTBGK3PziX7lk",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590211",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 40521,
+          "guid": "26CXC_g3PBTBGK3PziX7lf",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590212",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 40586,
+          "guid": "26CXC_g3PBTBGK3PziX7le",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590213",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 40651,
+          "guid": "26CXC_g3PBTBGK3PziX7lh",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590214",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 40902,
+          "guid": "26CXC_g3PBTBGK3PziX7lr",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590232",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 40994,
+          "guid": "26CXC_g3PBTBGK3PziX7lD",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590240",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 41059,
+          "guid": "26CXC_g3PBTBGK3PziX7lF",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590242",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 41124,
+          "guid": "26CXC_g3PBTBGK3PziX7lE",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590243",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 41189,
+          "guid": "26CXC_g3PBTBGK3PziX7l9",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590244",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 41440,
+          "guid": "26CXC_g3PBTBGK3PziX7lR",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590262",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 41529,
+          "guid": "26CXC_g3PBTBGK3PziX7lJ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590270",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 41594,
+          "guid": "26CXC_g3PBTBGK3PziX7ij",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590272",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 41659,
+          "guid": "26CXC_g3PBTBGK3PziX7ii",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590273",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 41724,
+          "guid": "26CXC_g3PBTBGK3PziX7il",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590274",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 41991,
+          "guid": "26CXC_g3PBTBGK3PziX7iv",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590292",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 42081,
+          "guid": "26CXC_g3PBTBGK3PziX7iw",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590295",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 42146,
+          "guid": "26CXC_g3PBTBGK3PziX7ir",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590296",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 42211,
+          "guid": "26CXC_g3PBTBGK3PziX7is",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590299",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 42276,
+          "guid": "26CXC_g3PBTBGK3PziX7in",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590300",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 42341,
+          "guid": "26CXC_g3PBTBGK3PziX7im",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590301",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 42406,
+          "guid": "26CXC_g3PBTBGK3PziX7ip",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590302",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 42471,
+          "guid": "26CXC_g3PBTBGK3PziX7io",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590303",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 42536,
+          "guid": "26CXC_g3PBTBGK3PziX7iD",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590304",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 42803,
+          "guid": "26CXC_g3PBTBGK3PziX7iV",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590322",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 42893,
+          "guid": "26CXC_g3PBTBGK3PziX7iO",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590325",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 42958,
+          "guid": "26CXC_g3PBTBGK3PziX7iR",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590326",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 43023,
+          "guid": "26CXC_g3PBTBGK3PziX7iK",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590329",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 43088,
+          "guid": "26CXC_g3PBTBGK3PziX7iN",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590330",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 43153,
+          "guid": "26CXC_g3PBTBGK3PziX7iM",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590331",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 43218,
+          "guid": "26CXC_g3PBTBGK3PziX7iH",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590332",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 43283,
+          "guid": "26CXC_g3PBTBGK3PziX7iG",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590333",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 43348,
+          "guid": "26CXC_g3PBTBGK3PziX7iJ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590334",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 43615,
+          "guid": "26CXC_g3PBTBGK3PziX7jz",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-ECCENTRIC:STR_SFR_PIER-ECCENTRIC:3590352",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 43702,
+          "guid": "26CXC_g3PBTBGK3PziX7j_",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590355",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 43767,
+          "guid": "26CXC_g3PBTBGK3PziX7jv",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590356",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 43832,
+          "guid": "26CXC_g3PBTBGK3PziX7jw",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590359",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 43897,
+          "guid": "26CXC_g3PBTBGK3PziX7jr",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590360",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 43962,
+          "guid": "26CXC_g3PBTBGK3PziX7jq",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590361",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 44027,
+          "guid": "26CXC_g3PBTBGK3PziX7jt",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590362",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 44092,
+          "guid": "26CXC_g3PBTBGK3PziX7js",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590363",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 44157,
+          "guid": "26CXC_g3PBTBGK3PziX7jn",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590364",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 44222,
+          "guid": "26CXC_g3PBTBGK3PziX7j3",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590382",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 44312,
+          "guid": "26CXC_g3PBTBGK3PziX7jS",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590385",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 44377,
+          "guid": "26CXC_g3PBTBGK3PziX7jV",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590386",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 44442,
+          "guid": "26CXC_g3PBTBGK3PziX7jO",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590389",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 44507,
+          "guid": "26CXC_g3PBTBGK3PziX7jR",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590390",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 44572,
+          "guid": "26CXC_g3PBTBGK3PziX7jQ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590391",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 44637,
+          "guid": "26CXC_g3PBTBGK3PziX7jL",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590392",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 44702,
+          "guid": "26CXC_g3PBTBGK3PziX7jK",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590393",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 44767,
+          "guid": "26CXC_g3PBTBGK3PziX7jN",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590394",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 45034,
+          "guid": "26CXC_g3PBTBGK3PziX7gX",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590412",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 45124,
+          "guid": "26CXC_g3PBTBGK3PziX7gY",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590415",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 45189,
+          "guid": "26CXC_g3PBTBGK3PziX7gz",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590416",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 45254,
+          "guid": "26CXC_g3PBTBGK3PziX7g_",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590419",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 45319,
+          "guid": "26CXC_g3PBTBGK3PziX7gv",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590420",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 45384,
+          "guid": "26CXC_g3PBTBGK3PziX7gu",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590421",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 45449,
+          "guid": "26CXC_g3PBTBGK3PziX7gx",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590422",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 45514,
+          "guid": "26CXC_g3PBTBGK3PziX7gw",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590423",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 45579,
+          "guid": "26CXC_g3PBTBGK3PziX7gr",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590424",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 45846,
+          "guid": "26CXC_g3PBTBGK3PziX7g7",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590442",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 45936,
+          "guid": "26CXC_g3PBTBGK3PziX7g0",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590445",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 46001,
+          "guid": "26CXC_g3PBTBGK3PziX7g3",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590446",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 46066,
+          "guid": "26CXC_g3PBTBGK3PziX7gS",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590449",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 46131,
+          "guid": "26CXC_g3PBTBGK3PziX7gV",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590450",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 46196,
+          "guid": "26CXC_g3PBTBGK3PziX7gU",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590451",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 46261,
+          "guid": "26CXC_g3PBTBGK3PziX7gP",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590452",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 46326,
+          "guid": "26CXC_g3PBTBGK3PziX7gO",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590453",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 46391,
+          "guid": "26CXC_g3PBTBGK3PziX7gR",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590454",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 46658,
+          "guid": "26CXC_g3PBTBGK3PziX7hb",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590472",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 46748,
+          "guid": "26CXC_g3PBTBGK3PziX7hc",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590475",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 46813,
+          "guid": "26CXC_g3PBTBGK3PziX7hX",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590476",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 46878,
+          "guid": "26CXC_g3PBTBGK3PziX7hY",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590479",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 46943,
+          "guid": "26CXC_g3PBTBGK3PziX7hz",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590480",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 47008,
+          "guid": "26CXC_g3PBTBGK3PziX7hy",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590481",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 47073,
+          "guid": "26CXC_g3PBTBGK3PziX7h$",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590482",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 47138,
+          "guid": "26CXC_g3PBTBGK3PziX7h_",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590483",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 47203,
+          "guid": "26CXC_g3PBTBGK3PziX7hv",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590484",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 47470,
+          "guid": "26CXC_g3PBTBGK3PziX7hB",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590502",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 47560,
+          "guid": "26CXC_g3PBTBGK3PziX7h4",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590505",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 47625,
+          "guid": "26CXC_g3PBTBGK3PziX7h7",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590506",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 47690,
+          "guid": "26CXC_g3PBTBGK3PziX7h0",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590509",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 47755,
+          "guid": "26CXC_g3PBTBGK3PziX7h3",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590510",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 47820,
+          "guid": "26CXC_g3PBTBGK3PziX7h2",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590511",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 47885,
+          "guid": "26CXC_g3PBTBGK3PziX7hT",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590512",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 47950,
+          "guid": "26CXC_g3PBTBGK3PziX7hS",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590513",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 48015,
+          "guid": "26CXC_g3PBTBGK3PziX7hV",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590514",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 48282,
+          "guid": "26CXC_g3PBTBGK3PziX7ef",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590532",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 48372,
+          "guid": "26CXC_g3PBTBGK3PziX7eg",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590535",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 48437,
+          "guid": "26CXC_g3PBTBGK3PziX7eb",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590536",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 48502,
+          "guid": "26CXC_g3PBTBGK3PziX7ec",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590539",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 48567,
+          "guid": "26CXC_g3PBTBGK3PziX7eX",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590540",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 48632,
+          "guid": "26CXC_g3PBTBGK3PziX7eW",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590541",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 48697,
+          "guid": "26CXC_g3PBTBGK3PziX7eZ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590542",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 48762,
+          "guid": "26CXC_g3PBTBGK3PziX7eY",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590543",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 48827,
+          "guid": "26CXC_g3PBTBGK3PziX7ez",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590544",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 49094,
+          "guid": "26CXC_g3PBTBGK3PziX7eF",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590562",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 49184,
+          "guid": "26CXC_g3PBTBGK3PziX7e8",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590565",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 49249,
+          "guid": "26CXC_g3PBTBGK3PziX7eB",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590566",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 49314,
+          "guid": "26CXC_g3PBTBGK3PziX7e4",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590569",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 49379,
+          "guid": "26CXC_g3PBTBGK3PziX7e7",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590570",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 49444,
+          "guid": "26CXC_g3PBTBGK3PziX7e6",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590571",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 49509,
+          "guid": "26CXC_g3PBTBGK3PziX7e1",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590572",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 49574,
+          "guid": "26CXC_g3PBTBGK3PziX7e0",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590573",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 49639,
+          "guid": "26CXC_g3PBTBGK3PziX7e3",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590574",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 49906,
+          "guid": "26CXC_g3PBTBGK3PziX7fj",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590592",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 49996,
+          "guid": "26CXC_g3PBTBGK3PziX7fk",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590595",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 50061,
+          "guid": "26CXC_g3PBTBGK3PziX7ff",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590596",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 50126,
+          "guid": "26CXC_g3PBTBGK3PziX7fg",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590599",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 50191,
+          "guid": "26CXC_g3PBTBGK3PziX7fb",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590600",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 50256,
+          "guid": "26CXC_g3PBTBGK3PziX7fa",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590601",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 50321,
+          "guid": "26CXC_g3PBTBGK3PziX7fd",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590602",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 50386,
+          "guid": "26CXC_g3PBTBGK3PziX7fc",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590603",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 50451,
+          "guid": "26CXC_g3PBTBGK3PziX7fX",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590604",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 50718,
+          "guid": "26CXC_g3PBTBGK3PziX7fp",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590622",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 50808,
+          "guid": "26CXC_g3PBTBGK3PziX7fC",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590625",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 50873,
+          "guid": "26CXC_g3PBTBGK3PziX7fF",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590626",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 50938,
+          "guid": "26CXC_g3PBTBGK3PziX7f8",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590629",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 51003,
+          "guid": "26CXC_g3PBTBGK3PziX7fB",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590630",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 51068,
+          "guid": "26CXC_g3PBTBGK3PziX7fA",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590631",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 51133,
+          "guid": "26CXC_g3PBTBGK3PziX7f5",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590632",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 51198,
+          "guid": "26CXC_g3PBTBGK3PziX7f4",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590633",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 51263,
+          "guid": "26CXC_g3PBTBGK3PziX7f7",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590634",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 51530,
+          "guid": "26CXC_g3PBTBGK3PziX7fH",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590652",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 51620,
+          "guid": "26CXC_g3PBTBGK3PziX7fI",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590655",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 51685,
+          "guid": "26CXC_g3PBTBGK3PziX7cj",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590656",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 51750,
+          "guid": "26CXC_g3PBTBGK3PziX7ck",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590659",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 51815,
+          "guid": "26CXC_g3PBTBGK3PziX7cf",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590660",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 51880,
+          "guid": "26CXC_g3PBTBGK3PziX7ce",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590661",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 51945,
+          "guid": "26CXC_g3PBTBGK3PziX7ch",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590662",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 52010,
+          "guid": "26CXC_g3PBTBGK3PziX7cg",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590663",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 52075,
+          "guid": "26CXC_g3PBTBGK3PziX7cb",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590664",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 52342,
+          "guid": "26CXC_g3PBTBGK3PziX7ct",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590682",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 52432,
+          "guid": "26CXC_g3PBTBGK3PziX7cm",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590685",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 52497,
+          "guid": "26CXC_g3PBTBGK3PziX7cp",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590686",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 52562,
+          "guid": "26CXC_g3PBTBGK3PziX7cC",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590689",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 52627,
+          "guid": "26CXC_g3PBTBGK3PziX7cF",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590690",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 52692,
+          "guid": "26CXC_g3PBTBGK3PziX7cE",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590691",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 52757,
+          "guid": "26CXC_g3PBTBGK3PziX7c9",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590692",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 52822,
+          "guid": "26CXC_g3PBTBGK3PziX7c8",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590693",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 52887,
+          "guid": "26CXC_g3PBTBGK3PziX7cB",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590694",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 53154,
+          "guid": "26CXC_g3PBTBGK3PziX7cL",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590712",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 53244,
+          "guid": "26CXC_g3PBTBGK3PziX7cM",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590715",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 53309,
+          "guid": "26CXC_g3PBTBGK3PziX7cH",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590716",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 53374,
+          "guid": "26CXC_g3PBTBGK3PziX7cI",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590719",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 53439,
+          "guid": "26CXC_g3PBTBGK3PziX7dj",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590720",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 53504,
+          "guid": "26CXC_g3PBTBGK3PziX7di",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590721",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 53569,
+          "guid": "26CXC_g3PBTBGK3PziX7dl",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590722",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 53634,
+          "guid": "26CXC_g3PBTBGK3PziX7dk",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590723",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 53699,
+          "guid": "26CXC_g3PBTBGK3PziX7df",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590724",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 53966,
+          "guid": "26CXC_g3PBTBGK3PziX7dx",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590742",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 54056,
+          "guid": "26CXC_g3PBTBGK3PziX7dq",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590745",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 54121,
+          "guid": "26CXC_g3PBTBGK3PziX7dt",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590746",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 54186,
+          "guid": "26CXC_g3PBTBGK3PziX7dm",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590749",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 54251,
+          "guid": "26CXC_g3PBTBGK3PziX7dp",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590750",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 54316,
+          "guid": "26CXC_g3PBTBGK3PziX7do",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590751",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 54381,
+          "guid": "26CXC_g3PBTBGK3PziX7dD",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590752",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 54446,
+          "guid": "26CXC_g3PBTBGK3PziX7dC",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590753",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 54511,
+          "guid": "26CXC_g3PBTBGK3PziX7dF",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590754",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 54778,
+          "guid": "26CXC_g3PBTBGK3PziX7dP",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590772",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 54868,
+          "guid": "26CXC_g3PBTBGK3PziX7dQ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590775",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 54933,
+          "guid": "26CXC_g3PBTBGK3PziX7dL",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590776",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 54998,
+          "guid": "26CXC_g3PBTBGK3PziX7dM",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590779",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 55063,
+          "guid": "26CXC_g3PBTBGK3PziX7dH",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590780",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 55128,
+          "guid": "26CXC_g3PBTBGK3PziX7dG",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590781",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 55193,
+          "guid": "26CXC_g3PBTBGK3PziX7dJ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590782",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 55258,
+          "guid": "26CXC_g3PBTBGK3PziX7dI",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590783",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 55323,
+          "guid": "26CXC_g3PBTBGK3PziX7aj",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590784",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 55590,
+          "guid": "26CXC_g3PBTBGK3PziX7a$",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590802",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 55680,
+          "guid": "26CXC_g3PBTBGK3PziX7au",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590805",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 55745,
+          "guid": "26CXC_g3PBTBGK3PziX7ax",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590806",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 55810,
+          "guid": "26CXC_g3PBTBGK3PziX7aq",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590809",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 55875,
+          "guid": "26CXC_g3PBTBGK3PziX7at",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590810",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 55940,
+          "guid": "26CXC_g3PBTBGK3PziX7as",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590811",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 56005,
+          "guid": "26CXC_g3PBTBGK3PziX7an",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590812",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 56070,
+          "guid": "26CXC_g3PBTBGK3PziX7am",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590813",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 56135,
+          "guid": "26CXC_g3PBTBGK3PziX7ap",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590814",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 56402,
+          "guid": "26CXC_g3PBTBGK3PziX7aT",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590832",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 56492,
+          "guid": "26CXC_g3PBTBGK3PziX7aU",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590835",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 56557,
+          "guid": "26CXC_g3PBTBGK3PziX7aP",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590836",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 56622,
+          "guid": "26CXC_g3PBTBGK3PziX7aQ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590839",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 56687,
+          "guid": "26CXC_g3PBTBGK3PziX7aL",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590840",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 56752,
+          "guid": "26CXC_g3PBTBGK3PziX7aK",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590841",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 56817,
+          "guid": "26CXC_g3PBTBGK3PziX7aN",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590842",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 56882,
+          "guid": "26CXC_g3PBTBGK3PziX7aM",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590843",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 56947,
+          "guid": "26CXC_g3PBTBGK3PziX7aH",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590844",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 57214,
+          "guid": "26CXC_g3PBTBGK3PziX7bZ",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590862",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 57304,
+          "guid": "26CXC_g3PBTBGK3PziX7by",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590865",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 57369,
+          "guid": "26CXC_g3PBTBGK3PziX7b$",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590866",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 57434,
+          "guid": "26CXC_g3PBTBGK3PziX7bu",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590869",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 57499,
+          "guid": "26CXC_g3PBTBGK3PziX7bx",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590870",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 57564,
+          "guid": "26CXC_g3PBTBGK3PziX7bw",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590871",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 57629,
+          "guid": "26CXC_g3PBTBGK3PziX7br",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590872",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 57694,
+          "guid": "26CXC_g3PBTBGK3PziX7bq",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590873",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 57759,
+          "guid": "26CXC_g3PBTBGK3PziX7bt",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590874",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 58026,
+          "guid": "26CXC_g3PBTBGK3PziX7b1",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590892",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 58116,
+          "guid": "26CXC_g3PBTBGK3PziX7b2",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590895",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 58181,
+          "guid": "26CXC_g3PBTBGK3PziX7bT",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590896",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 58246,
+          "guid": "26CXC_g3PBTBGK3PziX7bU",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590899",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 58311,
+          "guid": "26CXC_g3PBTBGK3PziX7bP",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590900",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 58376,
+          "guid": "26CXC_g3PBTBGK3PziX7bO",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590901",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 58441,
+          "guid": "26CXC_g3PBTBGK3PziX7bR",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590902",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 58506,
+          "guid": "26CXC_g3PBTBGK3PziX7bQ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590903",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 58571,
+          "guid": "26CXC_g3PBTBGK3PziX7bL",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590904",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 58838,
+          "guid": "26CXC_g3PBTBGK3PziX7Yd",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590922",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 58928,
+          "guid": "26CXC_g3PBTBGK3PziX7YW",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590925",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 58993,
+          "guid": "26CXC_g3PBTBGK3PziX7YZ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590926",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 59058,
+          "guid": "26CXC_g3PBTBGK3PziX7Yy",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590929",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 59123,
+          "guid": "26CXC_g3PBTBGK3PziX7Y$",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590930",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 59188,
+          "guid": "26CXC_g3PBTBGK3PziX7Y_",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590931",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 59253,
+          "guid": "26CXC_g3PBTBGK3PziX7Yv",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590932",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 59318,
+          "guid": "26CXC_g3PBTBGK3PziX7Yu",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590933",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 59383,
+          "guid": "26CXC_g3PBTBGK3PziX7Yx",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590934",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 59650,
+          "guid": "26CXC_g3PBTBGK3PziX7Y5",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590952",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 59740,
+          "guid": "26CXC_g3PBTBGK3PziX7Y6",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590955",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 59805,
+          "guid": "26CXC_g3PBTBGK3PziX7Y1",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590956",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 59870,
+          "guid": "26CXC_g3PBTBGK3PziX7Y2",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590959",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 59935,
+          "guid": "26CXC_g3PBTBGK3PziX7YT",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590960",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 60000,
+          "guid": "26CXC_g3PBTBGK3PziX7YS",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590961",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 60065,
+          "guid": "26CXC_g3PBTBGK3PziX7YV",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590962",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 60130,
+          "guid": "26CXC_g3PBTBGK3PziX7YU",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590963",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 60195,
+          "guid": "26CXC_g3PBTBGK3PziX7YP",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590964",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 60462,
+          "guid": "26CXC_g3PBTBGK3PziX7Zh",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3590982",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 60552,
+          "guid": "26CXC_g3PBTBGK3PziX7ZW",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590989",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 60617,
+          "guid": "26CXC_g3PBTBGK3PziX7ZZ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590990",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 60682,
+          "guid": "26CXC_g3PBTBGK3PziX7ZY",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590991",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 60747,
+          "guid": "26CXC_g3PBTBGK3PziX7Zz",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590992",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 60812,
+          "guid": "26CXC_g3PBTBGK3PziX7Zy",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590993",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 60877,
+          "guid": "26CXC_g3PBTBGK3PziX7Z$",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3590994",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 61144,
+          "guid": "26CXC_g3PBTBGK3PziX7Z9",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3591012",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 61234,
+          "guid": "26CXC_g3PBTBGK3PziX7Z6",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591019",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 61299,
+          "guid": "26CXC_g3PBTBGK3PziX7Z1",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591020",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 61364,
+          "guid": "26CXC_g3PBTBGK3PziX7Z0",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591021",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 61429,
+          "guid": "26CXC_g3PBTBGK3PziX7Z3",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591022",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 61494,
+          "guid": "26CXC_g3PBTBGK3PziX7Z2",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591023",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 61559,
+          "guid": "26CXC_g3PBTBGK3PziX7ZT",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591024",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 61826,
+          "guid": "26CXC_g3PBTBGK3PziX7Wl",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3591042",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 61916,
+          "guid": "26CXC_g3PBTBGK3PziX7We",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591045",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 61981,
+          "guid": "26CXC_g3PBTBGK3PziX7Wh",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591046",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 62046,
+          "guid": "26CXC_g3PBTBGK3PziX7Wa",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591049",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 62111,
+          "guid": "26CXC_g3PBTBGK3PziX7Wd",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591050",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 62176,
+          "guid": "26CXC_g3PBTBGK3PziX7Wc",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591051",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 62241,
+          "guid": "26CXC_g3PBTBGK3PziX7WX",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591052",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 62306,
+          "guid": "26CXC_g3PBTBGK3PziX7WW",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591053",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 62371,
+          "guid": "26CXC_g3PBTBGK3PziX7WZ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591054",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 62638,
+          "guid": "26CXC_g3PBTBGK3PziX7WD",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC-SPECIAL:STR_SFR_PIER-CONCENTRIC_SPECIAL:3591072",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 62853,
+          "guid": "26CXC_g3PBTBGK3PziX7WJ",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC-SPECIAL:STR_SFR_PIER-CONCENTRIC_SPECIAL:3591102",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 63044,
+          "guid": "26CXC_g3PBTBGK3PziX7Xn",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3591132",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 63133,
+          "guid": "26CXC_g3PBTBGK3PziX7X9",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591140",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 63198,
+          "guid": "26CXC_g3PBTBGK3PziX7XB",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591142",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 63263,
+          "guid": "26CXC_g3PBTBGK3PziX7XA",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591143",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 63328,
+          "guid": "26CXC_g3PBTBGK3PziX7X5",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591144",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 63595,
+          "guid": "26CXC_g3PBTBGK3PziX7XN",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3591162",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 63684,
+          "guid": "26CXC_g3PBTBGK3PziX7_l",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591170",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 63749,
+          "guid": "26CXC_g3PBTBGK3PziX7_f",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591172",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 63814,
+          "guid": "26CXC_g3PBTBGK3PziX7_e",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591173",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 63879,
+          "guid": "26CXC_g3PBTBGK3PziX7_h",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591174",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 64146,
+          "guid": "26CXC_g3PBTBGK3PziX7$V",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3591282",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 64235,
+          "guid": "26CXC_g3PBTBGK3PziX7$N",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591290",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 64300,
+          "guid": "26CXC_g3PBTBGK3PziX7$H",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591292",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 64365,
+          "guid": "26CXC_g3PBTBGK3PziX7$G",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591293",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 64430,
+          "guid": "26CXC_g3PBTBGK3PziX7$J",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591294",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 64697,
+          "guid": "26CXC_g3PBTBGK3PziX7yz",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:3591312",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 64786,
+          "guid": "26CXC_g3PBTBGK3PziX7yr",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591320",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 64851,
+          "guid": "26CXC_g3PBTBGK3PziX7yt",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591322",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 64916,
+          "guid": "26CXC_g3PBTBGK3PziX7ys",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591323",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 64981,
+          "guid": "26CXC_g3PBTBGK3PziX7yn",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3591324",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 90625,
+          "guid": "0rN2Ek3jT9bfnXa33uB3ow",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC-SPECIAL:STR_SFR_PIER-CONCENTRIC_SPECIAL:3655162",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 106025,
+          "guid": "2sN3dutCrANgS3PSxSKkC8",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC-SPECIAL:STR_SFR_PIER-CONCENTRIC_SPECIAL:3765081",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 121304,
+          "guid": "2sN3dutCrANgS3PSxSKkCD",
+          "type": "IfcSlab",
+          "name": "STR_SFR_FOOTING-T1:STR_SFR_FOOTING:3765084",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 121509,
+          "guid": "2sN3dutCrANgS3PSxSKkCE",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3765087",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 121575,
+          "guid": "2sN3dutCrANgS3PSxSKkCn",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3765088",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 121641,
+          "guid": "2sN3dutCrANgS3PSxSKkCm",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3765089",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 121707,
+          "guid": "2sN3dutCrANgS3PSxSKkCp",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3765090",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 671618,
+          "guid": "1azMfUIfz6_BFyx_5K_8dj",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-ECCENTRIC-FOUNDATION:STR_SFR_PIER-ECCENTRIC-FOUNDATION:3946433",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 671866,
+          "guid": "1azMfUIfz6_BFyx_5K_8de",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3946436",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 671934,
+          "guid": "1azMfUIfz6_BFyx_5K_8df",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3946437",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 672000,
+          "guid": "1azMfUIfz6_BFyx_5K_8dg",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:3946438",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 672379,
+          "guid": "3kHbsSNyr9y8OMwW3ukcVi",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-POSTENSIONED-BEAM-FOUNDATION:STR_SFR_PIER-POSTENSIONED-BEAM-FOUNDATION:4036260",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 672494,
+          "guid": "3kHbsSNyr9y8OMwW3ukcVd",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4036269",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 672560,
+          "guid": "3kHbsSNyr9y8OMwW3ukcVX",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4036271",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 672626,
+          "guid": "3kHbsSNyr9y8OMwW3ukcVW",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4036272",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 672692,
+          "guid": "3kHbsSNyr9y8OMwW3ukcVZ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4036273",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 672858,
+          "guid": "32ymZgxnb0avAuwa5Vbe$x",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-ECCENTRIC-SPECIAL:STR_SFR_PIER-ECCENTRIC-SPECIAL:4069269",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 690525,
+          "guid": "32ymZgxnb0avAuwa5Vbe$T",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-POSTENSIONED-BEAM-SPECIAL:STR_SFR_PIER-POSTENSIONED-BEAM-SPECIAL:4069299",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 693485,
+          "guid": "35oXtH4Xn8yRnUdRsV$fQ4",
+          "type": "IfcSlab",
+          "name": "STR_SFR_FOOTING-T1:STR_SFR_FOOTING:4088639",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 693666,
+          "guid": "35oXtH4Xn8yRnUdRsV$fRv",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4088642",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 693732,
+          "guid": "35oXtH4Xn8yRnUdRsV$fRu",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4088643",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 693798,
+          "guid": "35oXtH4Xn8yRnUdRsV$fR$",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4088644",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 693864,
+          "guid": "35oXtH4Xn8yRnUdRsV$fR_",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4088645",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 693930,
+          "guid": "35oXtH4Xn8yRnUdRsV$Z3_",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-ECCENTRIC-SPECIAL:STR_SFR_PIER-ECCENTRIC-SPECIAL:4113733",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 711527,
+          "guid": "0Unvy58jDCp8C1EuPAwQqm",
+          "type": "IfcSlab",
+          "name": "STR_SFR_FOOTING-T1:STR_SFR_FOOTING:4114676",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 711708,
+          "guid": "0Unvy58jDCp8C1EuPAwQqp",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4114679",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 711774,
+          "guid": "0Unvy58jDCp8C1EuPAwQqy",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4114680",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 711840,
+          "guid": "0Unvy58jDCp8C1EuPAwQqz",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4114681",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 711906,
+          "guid": "0Unvy58jDCp8C1EuPAwQq_",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4114682",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 711972,
+          "guid": "1Be3HihAX2EhT2K5V5ypb$",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-ECCENTRIC-SPECIAL:STR_SFR_PIER-ECCENTRIC-SPECIAL:4117676",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 729511,
+          "guid": "3llfuHgQb0G8GLgzlcg6Ec",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC-T1-FOUNDATION:STR_SFR_PIER-CONCENTRIC-T1-FOUNDATION:4188604",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 729751,
+          "guid": "3llfuHgQb0G8GLgzlcg6EX",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4188607",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 729817,
+          "guid": "3llfuHgQb0G8GLgzlcg6EY",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4188608",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 729883,
+          "guid": "3llfuHgQb0G8GLgzlcg6EZ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4188609",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 730240,
+          "guid": "3llfuHgQb0G8GLgzlcg1ub",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-POSTENSIONED-BEAM-FOUNDATION:STR_SFR_PIER-POSTENSIONED-BEAM-FOUNDATION:4204649",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 730325,
+          "guid": "3llfuHgQb0G8GLgzlcg1uk",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4204658",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 730391,
+          "guid": "3llfuHgQb0G8GLgzlcg1ue",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4204660",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 730457,
+          "guid": "3llfuHgQb0G8GLgzlcg1uf",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4204661",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 730523,
+          "guid": "3llfuHgQb0G8GLgzlcg1ug",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4204662",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 730689,
+          "guid": "01GC8N2ZPFJwLymkoTV$ez",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-POSTENSIONED-BEAM-FOUNDATION:STR_SFR_PIER-POSTENSIONED-BEAM-FOUNDATION:4213224",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 730775,
+          "guid": "01GC8N2ZPFJwLymkoTV$ea",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4213233",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 730841,
+          "guid": "01GC8N2ZPFJwLymkoTV$ec",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4213235",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 730907,
+          "guid": "01GC8N2ZPFJwLymkoTV$eX",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4213236",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 730973,
+          "guid": "01GC8N2ZPFJwLymkoTV$eW",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4213237",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 731139,
+          "guid": "01GC8N2ZPFJwLymkoTV$dM",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-POSTENSIONED-BEAM-SPECIAL:STR_SFR_PIER-POSTENSIONED-BEAM-SPECIAL:4213251",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 734310,
+          "guid": "1IpQim0hXBwhjRYdqXZM1F",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4355917",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 734375,
+          "guid": "1IpQim0hXBwhjRYdqXZM1C",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4355918",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 734440,
+          "guid": "1IpQim0hXBwhjRYdqXZM1D",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4355919",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 734505,
+          "guid": "1IpQim0hXBwhjRYdqXZM1I",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4355920",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 734570,
+          "guid": "1IpQim0hXBwhjRYdqXZM1J",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4355921",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 734635,
+          "guid": "1IpQim0hXBwhjRYdqXZM1G",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4355922",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 734700,
+          "guid": "1IpQim0hXBwhjRYdqXZM1H",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4355923",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 734765,
+          "guid": "1IpQim0hXBwhjRYdqXZM1M",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4355924",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 735622,
+          "guid": "1IpQim0hXBwhjRYdqXZMqs",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4356660",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 735687,
+          "guid": "1IpQim0hXBwhjRYdqXZMqt",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4356661",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 735752,
+          "guid": "1IpQim0hXBwhjRYdqXZMqq",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4356662",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 735817,
+          "guid": "1IpQim0hXBwhjRYdqXZMqr",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4356663",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 735882,
+          "guid": "1IpQim0hXBwhjRYdqXZMqw",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4356664",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 735947,
+          "guid": "1IpQim0hXBwhjRYdqXZMqx",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4356665",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 736012,
+          "guid": "1IpQim0hXBwhjRYdqXZMqu",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4356666",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 736077,
+          "guid": "1IpQim0hXBwhjRYdqXZMqv",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4356667",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 736934,
+          "guid": "1IpQim0hXBwhjRYdqXZMkI",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357264",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 736999,
+          "guid": "1IpQim0hXBwhjRYdqXZMkJ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357265",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 737064,
+          "guid": "1IpQim0hXBwhjRYdqXZMkG",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357266",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 737129,
+          "guid": "1IpQim0hXBwhjRYdqXZMkH",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357267",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 737194,
+          "guid": "1IpQim0hXBwhjRYdqXZMkM",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357268",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 737259,
+          "guid": "1IpQim0hXBwhjRYdqXZMkN",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357269",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 737324,
+          "guid": "1IpQim0hXBwhjRYdqXZMkK",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357270",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 737389,
+          "guid": "1IpQim0hXBwhjRYdqXZMkL",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357271",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 738246,
+          "guid": "1IpQim0hXBwhjRYdqXZMeb",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357415",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 738311,
+          "guid": "1IpQim0hXBwhjRYdqXZMeg",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357416",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 738376,
+          "guid": "1IpQim0hXBwhjRYdqXZMeh",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357417",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 738441,
+          "guid": "1IpQim0hXBwhjRYdqXZMee",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357418",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 738506,
+          "guid": "1IpQim0hXBwhjRYdqXZMef",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357419",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 738571,
+          "guid": "1IpQim0hXBwhjRYdqXZMek",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357420",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 738636,
+          "guid": "1IpQim0hXBwhjRYdqXZMel",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357421",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 738701,
+          "guid": "1IpQim0hXBwhjRYdqXZMei",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357422",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 739558,
+          "guid": "1IpQim0hXBwhjRYdqXZMh0",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357570",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 739623,
+          "guid": "1IpQim0hXBwhjRYdqXZMh1",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357571",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 739688,
+          "guid": "1IpQim0hXBwhjRYdqXZMh6",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357572",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 739753,
+          "guid": "1IpQim0hXBwhjRYdqXZMh7",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357573",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 740214,
+          "guid": "1IpQim0hXBwhjRYdqXZMbN",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357717",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 740279,
+          "guid": "1IpQim0hXBwhjRYdqXZMbK",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357718",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 740344,
+          "guid": "1IpQim0hXBwhjRYdqXZMbL",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357719",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 740409,
+          "guid": "1IpQim0hXBwhjRYdqXZMbQ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357720",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 740474,
+          "guid": "1IpQim0hXBwhjRYdqXZMbR",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357721",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 740539,
+          "guid": "1IpQim0hXBwhjRYdqXZMbO",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357722",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 740604,
+          "guid": "1IpQim0hXBwhjRYdqXZMbP",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357723",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 740669,
+          "guid": "1IpQim0hXBwhjRYdqXZMbU",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357724",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 741526,
+          "guid": "1IpQim0hXBwhjRYdqXZMdk",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357868",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 741591,
+          "guid": "1IpQim0hXBwhjRYdqXZMdl",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357869",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 741656,
+          "guid": "1IpQim0hXBwhjRYdqXZMdi",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357870",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 741721,
+          "guid": "1IpQim0hXBwhjRYdqXZMdj",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357871",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 741786,
+          "guid": "1IpQim0hXBwhjRYdqXZMdo",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357872",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 741851,
+          "guid": "1IpQim0hXBwhjRYdqXZMdp",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357873",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 741916,
+          "guid": "1IpQim0hXBwhjRYdqXZMdm",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357874",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 741981,
+          "guid": "1IpQim0hXBwhjRYdqXZMdn",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4357875",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 742838,
+          "guid": "1IpQim0hXBwhjRYdqXZMY1",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358019",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 742903,
+          "guid": "1IpQim0hXBwhjRYdqXZMY6",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358020",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 742968,
+          "guid": "1IpQim0hXBwhjRYdqXZMY7",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358021",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 743033,
+          "guid": "1IpQim0hXBwhjRYdqXZMY4",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358022",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 743098,
+          "guid": "1IpQim0hXBwhjRYdqXZMY5",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358023",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 743163,
+          "guid": "1IpQim0hXBwhjRYdqXZMYA",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358024",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 743228,
+          "guid": "1IpQim0hXBwhjRYdqXZMYB",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358025",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 743293,
+          "guid": "1IpQim0hXBwhjRYdqXZMY8",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358026",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 744150,
+          "guid": "1IpQim0hXBwhjRYdqXZPSO",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358170",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 744215,
+          "guid": "1IpQim0hXBwhjRYdqXZPSP",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358171",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 744280,
+          "guid": "1IpQim0hXBwhjRYdqXZPSU",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358172",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 744345,
+          "guid": "1IpQim0hXBwhjRYdqXZPSV",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358173",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 744410,
+          "guid": "1IpQim0hXBwhjRYdqXZPSS",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358174",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 744475,
+          "guid": "1IpQim0hXBwhjRYdqXZPST",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358175",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 744540,
+          "guid": "1IpQim0hXBwhjRYdqXZPSY",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358176",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 744605,
+          "guid": "1IpQim0hXBwhjRYdqXZPSZ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358177",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 745462,
+          "guid": "1IpQim0hXBwhjRYdqXZPUp",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358321",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 745527,
+          "guid": "1IpQim0hXBwhjRYdqXZPUm",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358322",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 745592,
+          "guid": "1IpQim0hXBwhjRYdqXZPUn",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358323",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 745657,
+          "guid": "1IpQim0hXBwhjRYdqXZPUs",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358324",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 745722,
+          "guid": "1IpQim0hXBwhjRYdqXZPUt",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358325",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 745787,
+          "guid": "1IpQim0hXBwhjRYdqXZPUq",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358326",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 745852,
+          "guid": "1IpQim0hXBwhjRYdqXZPUr",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358327",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 745917,
+          "guid": "1IpQim0hXBwhjRYdqXZPUw",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358328",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 746774,
+          "guid": "1IpQim0hXBwhjRYdqXZPPA",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358472",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 746839,
+          "guid": "1IpQim0hXBwhjRYdqXZPPB",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358473",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 746904,
+          "guid": "1IpQim0hXBwhjRYdqXZPP8",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358474",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 746969,
+          "guid": "1IpQim0hXBwhjRYdqXZPP9",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358475",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 747034,
+          "guid": "1IpQim0hXBwhjRYdqXZPPE",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358476",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 747099,
+          "guid": "1IpQim0hXBwhjRYdqXZPPF",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358477",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 747164,
+          "guid": "1IpQim0hXBwhjRYdqXZPPC",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358478",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 747229,
+          "guid": "1IpQim0hXBwhjRYdqXZPPD",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358479",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 748086,
+          "guid": "1IpQim0hXBwhjRYdqXZPRT",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358623",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 748151,
+          "guid": "1IpQim0hXBwhjRYdqXZPRY",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358624",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 748216,
+          "guid": "1IpQim0hXBwhjRYdqXZPRZ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358625",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 748281,
+          "guid": "1IpQim0hXBwhjRYdqXZPRW",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358626",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 748346,
+          "guid": "1IpQim0hXBwhjRYdqXZPRX",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358627",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 748411,
+          "guid": "1IpQim0hXBwhjRYdqXZPRc",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358628",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 748476,
+          "guid": "1IpQim0hXBwhjRYdqXZPRd",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358629",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 748541,
+          "guid": "1IpQim0hXBwhjRYdqXZPRa",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358630",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 749398,
+          "guid": "1IpQim0hXBwhjRYdqXZPLq",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358774",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 749463,
+          "guid": "1IpQim0hXBwhjRYdqXZPLr",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358775",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 749528,
+          "guid": "1IpQim0hXBwhjRYdqXZPLw",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358776",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 749593,
+          "guid": "1IpQim0hXBwhjRYdqXZPLx",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358777",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 749658,
+          "guid": "1IpQim0hXBwhjRYdqXZPLu",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358778",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 749723,
+          "guid": "1IpQim0hXBwhjRYdqXZPLv",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358779",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 749788,
+          "guid": "1IpQim0hXBwhjRYdqXZPL_",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358780",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 749853,
+          "guid": "1IpQim0hXBwhjRYdqXZPL$",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4358781",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 750710,
+          "guid": "1IpQim0hXBwhjRYdqXZPF0",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359362",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 750775,
+          "guid": "1IpQim0hXBwhjRYdqXZPF1",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359363",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 750840,
+          "guid": "1IpQim0hXBwhjRYdqXZPF6",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359364",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 750905,
+          "guid": "1IpQim0hXBwhjRYdqXZPF7",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359365",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 750970,
+          "guid": "1IpQim0hXBwhjRYdqXZPF4",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359366",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 751035,
+          "guid": "1IpQim0hXBwhjRYdqXZPF5",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359367",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 751100,
+          "guid": "1IpQim0hXBwhjRYdqXZPFA",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359368",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 751165,
+          "guid": "1IpQim0hXBwhjRYdqXZPFB",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359369",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 752022,
+          "guid": "1IpQim0hXBwhjRYdqXZP9R",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359513",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 752087,
+          "guid": "1IpQim0hXBwhjRYdqXZP9O",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359514",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 752152,
+          "guid": "1IpQim0hXBwhjRYdqXZP9P",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359515",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 752217,
+          "guid": "1IpQim0hXBwhjRYdqXZP9U",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359516",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 752282,
+          "guid": "1IpQim0hXBwhjRYdqXZP9V",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359517",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 752347,
+          "guid": "1IpQim0hXBwhjRYdqXZP9S",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359518",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 752412,
+          "guid": "1IpQim0hXBwhjRYdqXZP9T",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359519",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 752477,
+          "guid": "1IpQim0hXBwhjRYdqXZP9Y",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359520",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 753334,
+          "guid": "1IpQim0hXBwhjRYdqXZPBo",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359664",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 753399,
+          "guid": "1IpQim0hXBwhjRYdqXZPBp",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359665",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 753464,
+          "guid": "1IpQim0hXBwhjRYdqXZPBm",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359666",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 753529,
+          "guid": "1IpQim0hXBwhjRYdqXZPBn",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359667",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 753594,
+          "guid": "1IpQim0hXBwhjRYdqXZPBs",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359668",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 753659,
+          "guid": "1IpQim0hXBwhjRYdqXZPBt",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359669",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 753724,
+          "guid": "1IpQim0hXBwhjRYdqXZPBq",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359670",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 753789,
+          "guid": "1IpQim0hXBwhjRYdqXZPBr",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359671",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 754646,
+          "guid": "1IpQim0hXBwhjRYdqXZP65",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359815",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 754711,
+          "guid": "1IpQim0hXBwhjRYdqXZP6A",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359816",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 754776,
+          "guid": "1IpQim0hXBwhjRYdqXZP6B",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359817",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 754841,
+          "guid": "1IpQim0hXBwhjRYdqXZP68",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359818",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 754906,
+          "guid": "1IpQim0hXBwhjRYdqXZP69",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359819",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 754971,
+          "guid": "1IpQim0hXBwhjRYdqXZP6E",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359820",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 755036,
+          "guid": "1IpQim0hXBwhjRYdqXZP6F",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359821",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 755101,
+          "guid": "1IpQim0hXBwhjRYdqXZP6C",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359822",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 755958,
+          "guid": "1IpQim0hXBwhjRYdqXZP0S",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359966",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 756023,
+          "guid": "1IpQim0hXBwhjRYdqXZP0T",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359967",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 756088,
+          "guid": "1IpQim0hXBwhjRYdqXZP0Y",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359968",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 756153,
+          "guid": "1IpQim0hXBwhjRYdqXZP0Z",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359969",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 756218,
+          "guid": "1IpQim0hXBwhjRYdqXZP0W",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359970",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 756283,
+          "guid": "1IpQim0hXBwhjRYdqXZP0X",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359971",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 756348,
+          "guid": "1IpQim0hXBwhjRYdqXZP0c",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359972",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 756413,
+          "guid": "1IpQim0hXBwhjRYdqXZP0d",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4359973",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 757270,
+          "guid": "1IpQim0hXBwhjRYdqXZP2t",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360117",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 757335,
+          "guid": "1IpQim0hXBwhjRYdqXZP2q",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360118",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 757400,
+          "guid": "1IpQim0hXBwhjRYdqXZP2r",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360119",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 757465,
+          "guid": "1IpQim0hXBwhjRYdqXZP2w",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360120",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 757530,
+          "guid": "1IpQim0hXBwhjRYdqXZP2x",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360121",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 757595,
+          "guid": "1IpQim0hXBwhjRYdqXZP2u",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360122",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 757660,
+          "guid": "1IpQim0hXBwhjRYdqXZP2v",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360123",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 757725,
+          "guid": "1IpQim0hXBwhjRYdqXZP2_",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360124",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 758582,
+          "guid": "1IpQim0hXBwhjRYdqXZPzE",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360268",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 758647,
+          "guid": "1IpQim0hXBwhjRYdqXZPzF",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360269",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 758712,
+          "guid": "1IpQim0hXBwhjRYdqXZPzC",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360270",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 758777,
+          "guid": "1IpQim0hXBwhjRYdqXZPzD",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360271",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 758842,
+          "guid": "1IpQim0hXBwhjRYdqXZPzI",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360272",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 758907,
+          "guid": "1IpQim0hXBwhjRYdqXZPzJ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360273",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 758972,
+          "guid": "1IpQim0hXBwhjRYdqXZPzG",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360274",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 759037,
+          "guid": "1IpQim0hXBwhjRYdqXZPzH",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360275",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 759894,
+          "guid": "1IpQim0hXBwhjRYdqXZP$X",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360419",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 759959,
+          "guid": "1IpQim0hXBwhjRYdqXZP$c",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360420",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 760024,
+          "guid": "1IpQim0hXBwhjRYdqXZP$d",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360421",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 760089,
+          "guid": "1IpQim0hXBwhjRYdqXZP$a",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360422",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 760154,
+          "guid": "1IpQim0hXBwhjRYdqXZP$b",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360423",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 760219,
+          "guid": "1IpQim0hXBwhjRYdqXZP$g",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360424",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 760284,
+          "guid": "1IpQim0hXBwhjRYdqXZP$h",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360425",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 760349,
+          "guid": "1IpQim0hXBwhjRYdqXZP$e",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360426",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 761206,
+          "guid": "1IpQim0hXBwhjRYdqXZPvu",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360570",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 761271,
+          "guid": "1IpQim0hXBwhjRYdqXZPvv",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360571",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 761336,
+          "guid": "1IpQim0hXBwhjRYdqXZPv_",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360572",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 761401,
+          "guid": "1IpQim0hXBwhjRYdqXZPv$",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360573",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 761466,
+          "guid": "1IpQim0hXBwhjRYdqXZPvy",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360574",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 761531,
+          "guid": "1IpQim0hXBwhjRYdqXZPvz",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360575",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 761596,
+          "guid": "1IpQim0hXBwhjRYdqXZPw2",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360576",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 761661,
+          "guid": "1IpQim0hXBwhjRYdqXZPw3",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4360577",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 762518,
+          "guid": "1IpQim0hXBwhjRYdqXZPmj",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4361007",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 762583,
+          "guid": "1IpQim0hXBwhjRYdqXZPmo",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4361008",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 762648,
+          "guid": "1IpQim0hXBwhjRYdqXZPmp",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4361009",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 762713,
+          "guid": "1IpQim0hXBwhjRYdqXZPmm",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4361010",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 762778,
+          "guid": "1IpQim0hXBwhjRYdqXZPmn",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4361011",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 762843,
+          "guid": "1IpQim0hXBwhjRYdqXZPms",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4361012",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 762908,
+          "guid": "1IpQim0hXBwhjRYdqXZPmt",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4361013",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 762973,
+          "guid": "1IpQim0hXBwhjRYdqXZPmq",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4361014",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 763830,
+          "guid": "29gIiFFhTAIxEC0PNho9sm",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4977243",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 763895,
+          "guid": "29gIiFFhTAIxEC0PNho9st",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4977244",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 763960,
+          "guid": "29gIiFFhTAIxEC0PNho9ss",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4977245",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 764025,
+          "guid": "29gIiFFhTAIxEC0PNho9sr",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:4977246",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 973773,
+          "guid": "19Njl_HVfEDxBD0YctVI2p",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6250543",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 973838,
+          "guid": "19Njl_HVfEDxBD0YctVI2i",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6250544",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 973903,
+          "guid": "19Njl_HVfEDxBD0YctVI2j",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6250545",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 973968,
+          "guid": "19Njl_HVfEDxBD0YctVI2k",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6250546",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 974825,
+          "guid": "19Njl_HVfEDxBD0YctVI1u",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6250724",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 974890,
+          "guid": "19Njl_HVfEDxBD0YctVI1v",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6250725",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 974955,
+          "guid": "19Njl_HVfEDxBD0YctVI1w",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6250726",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 975020,
+          "guid": "19Njl_HVfEDxBD0YctVI1x",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6250727",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 975877,
+          "guid": "19Njl_HVfEDxBD0YctVIFo",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6251374",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 975942,
+          "guid": "19Njl_HVfEDxBD0YctVIFp",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6251375",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 976007,
+          "guid": "19Njl_HVfEDxBD0YctVIFi",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6251376",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 976072,
+          "guid": "19Njl_HVfEDxBD0YctVIFj",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6251377",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 976929,
+          "guid": "19Njl_HVfEDxBD0YctVIn9",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6253781",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 976994,
+          "guid": "19Njl_HVfEDxBD0YctVInA",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6253782",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 977059,
+          "guid": "19Njl_HVfEDxBD0YctVInB",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6253783",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 977124,
+          "guid": "19Njl_HVfEDxBD0YctVIn4",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6253784",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 977981,
+          "guid": "19Njl_HVfEDxBD0YctVIqL",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6253961",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 978046,
+          "guid": "19Njl_HVfEDxBD0YctVIqM",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6253962",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 978111,
+          "guid": "19Njl_HVfEDxBD0YctVIqN",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6253963",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 978176,
+          "guid": "19Njl_HVfEDxBD0YctVIqG",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6253964",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 979033,
+          "guid": "19Njl_HVfEDxBD0YctVIwX",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6254141",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 979098,
+          "guid": "19Njl_HVfEDxBD0YctVIwY",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6254142",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 979163,
+          "guid": "19Njl_HVfEDxBD0YctVIwZ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6254143",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 979228,
+          "guid": "19Njl_HVfEDxBD0YctVIxS",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6254144",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 995304,
+          "guid": "1Ke$yCWnrF8vH7xj12BEvI",
+          "type": "IfcSlab",
+          "name": "STR_SFR_FOOTING-T1:STR_SFR_FOOTING:6335689",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 995485,
+          "guid": "1Ke$yCWnrF8vH7xj12BEvN",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6335692",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 995551,
+          "guid": "1Ke$yCWnrF8vH7xj12BEvM",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6335693",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 995617,
+          "guid": "1Ke$yCWnrF8vH7xj12BEvL",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6335694",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 995683,
+          "guid": "1Ke$yCWnrF8vH7xj12BEvK",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6335695",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1010986,
+          "guid": "1Ke$yCWnrF8vH7xj12BEoi",
+          "type": "IfcSlab",
+          "name": "STR_SFR_FOOTING-T1:STR_SFR_FOOTING:6336055",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1011167,
+          "guid": "1Ke$yCWnrF8vH7xj12BEoX",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6336058",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1011233,
+          "guid": "1Ke$yCWnrF8vH7xj12BEoW",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6336059",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1011299,
+          "guid": "1Ke$yCWnrF8vH7xj12BEod",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6336060",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1011365,
+          "guid": "1Ke$yCWnrF8vH7xj12BEoc",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6336061",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1011431,
+          "guid": "1Ke$yCWnrF8vH7xj12BEpA",
+          "type": "IfcSlab",
+          "name": "STR_SFR_FOOTING-T1:STR_SFR_FOOTING:6336081",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1011613,
+          "guid": "1Ke$yCWnrF8vH7xj12BEpF",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6336084",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1011679,
+          "guid": "1Ke$yCWnrF8vH7xj12BEpE",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6336085",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1011745,
+          "guid": "1Ke$yCWnrF8vH7xj12BEpD",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6336086",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1011811,
+          "guid": "1Ke$yCWnrF8vH7xj12BEpC",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6336087",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1011877,
+          "guid": "07vF6wL616Z9eUp8Hg$mTV",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6363252",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1011943,
+          "guid": "07vF6wL616Z9eUp8Hg$mTU",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6363253",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1012009,
+          "guid": "07vF6wL616Z9eUp8Hg$mV4",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6363375",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1012075,
+          "guid": "07vF6wL616Z9eUp8Hg$mVR",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6363376",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1012141,
+          "guid": "07vF6wL616Z9eUp8Hg$mP1",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6363498",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1012207,
+          "guid": "07vF6wL616Z9eUp8Hg$mP0",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6363499",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1012273,
+          "guid": "07vF6wL616Z9eUp8Hg$oQO",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6371763",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1012339,
+          "guid": "07vF6wL616Z9eUp8Hg$oQV",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6371764",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1012405,
+          "guid": "07vF6wL616Z9eUp8Hg$oKX",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6371850",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1012471,
+          "guid": "07vF6wL616Z9eUp8Hg$oKW",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6371851",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1012537,
+          "guid": "2UOdnn3PL3ewcQw28JSial",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-CONCENTRIC:STR_SFR_PIER-CONCENTRIC:6389774",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1032074,
+          "guid": "1is6awDD1Ci8vdYf6fJFX1",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6450646",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1032140,
+          "guid": "1is6awDD1Ci8vdYf6fJFX0",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6450647",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1032206,
+          "guid": "1is6awDD1Ci8vdYf6fJ3f7",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6467536",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1032271,
+          "guid": "1is6awDD1Ci8vdYf6fJ3f5",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6467538",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1032336,
+          "guid": "1is6awDD1Ci8vdYf6fJ3f4",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6467539",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1032401,
+          "guid": "1is6awDD1Ci8vdYf6fJ3f3",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6467540",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1032466,
+          "guid": "1is6awDD1Ci8vdYf6fJ3f2",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6467541",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1032531,
+          "guid": "1is6awDD1Ci8vdYf6fJ3f1",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6467542",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1033784,
+          "guid": "1is6awDD1Ci8vdYf6fJ2KS",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6467723",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1033849,
+          "guid": "1is6awDD1Ci8vdYf6fJ2KQ",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6467725",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1033914,
+          "guid": "1is6awDD1Ci8vdYf6fJ2KP",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6467726",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1033979,
+          "guid": "1is6awDD1Ci8vdYf6fJ2KO",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6467727",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1034044,
+          "guid": "1is6awDD1Ci8vdYf6fJ2K7",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6467728",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1034109,
+          "guid": "1is6awDD1Ci8vdYf6fJ2K6",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6467729",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1035362,
+          "guid": "1is6awDD1Ci8vdYf6fJR24",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6497555",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1035427,
+          "guid": "1is6awDD1Ci8vdYf6fJR22",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6497557",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1035492,
+          "guid": "1is6awDD1Ci8vdYf6fJR21",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6497558",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1035557,
+          "guid": "1is6awDD1Ci8vdYf6fJR20",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6497559",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1035622,
+          "guid": "1is6awDD1Ci8vdYf6fJR2F",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6497560",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1035687,
+          "guid": "1is6awDD1Ci8vdYf6fJR2E",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6497561",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1036940,
+          "guid": "1is6awDD1Ci8vdYf6fJR0c",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6497713",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1037005,
+          "guid": "1is6awDD1Ci8vdYf6fJR0a",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6497715",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1037070,
+          "guid": "1is6awDD1Ci8vdYf6fJR0Z",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6497716",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1037135,
+          "guid": "1is6awDD1Ci8vdYf6fJR0Y",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6497717",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1037200,
+          "guid": "1is6awDD1Ci8vdYf6fJR0X",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6497718",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1037265,
+          "guid": "1is6awDD1Ci8vdYf6fJR0W",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6497719",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1038518,
+          "guid": "1is6awDD1Ci8vdYf6fJSCz",
+          "type": "IfcSlab",
+          "name": "STR_SFR_PIER-POSTENSIONED-BEAM-FOUNDATION:STR_SFR_PIER-POSTENSIONED-BEAM-FOUNDATION:6510250",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1038604,
+          "guid": "1is6awDD1Ci8vdYf6fJSCx",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6510252",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1038670,
+          "guid": "1is6awDD1Ci8vdYf6fJSCw",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6510253",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1038736,
+          "guid": "1is6awDD1Ci8vdYf6fJSCv",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6510254",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1038802,
+          "guid": "1is6awDD1Ci8vdYf6fJSCu",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6510255",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1038968,
+          "guid": "1is6awDD1Ci8vdYf6fJSD4",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6510291",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        },
+        {
+          "id": 1039034,
+          "guid": "1is6awDD1Ci8vdYf6fJSD3",
+          "type": "IfcSlab",
+          "name": "STR_SFN_PILE:STR_SFN_PILE:6510292",
+          "reason": "Native IFC ProductDefinitionShape has an empty Representations list."
+        }
+      ],
+      "bodyBounds": {
+        "min": [
+          93102.28510884455,
+          2507.2099990844727,
+          -102420.86653379479
+        ],
+        "max": [
+          94296.67805659884,
+          2571.149999999555,
+          -101433.57916174666
+        ]
+      },
+      "axisReferences": []
+    },
+    {
+      "source": "L1T1-1150-207-CON-ED-EST-MO-0001_V00.ifc",
+      "code": "1150",
+      "status": "converted",
+      "sourceBytes": 691186514,
+      "converted": 5525,
+      "missing": [],
+      "bounds": {
+        "min": [
+          93063.25879008403,
+          2567.0594364959716,
+          -102436.25317793764
+        ],
+        "max": [
+          94311.48898757744,
+          2574.5096543335817,
+          -101418.99722907171
+        ]
+      },
+      "siteElevation": 2550.0,
+      "storeys": [],
+      "types": {
+        "IfcBuildingElementProxy": 5525
+      },
+      "parts": [
+        {
+          "file": "assets/models/stations/i07-1150-p001.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p001.glb",
+          "bytes": 1041935,
+          "rawBytes": 1554752,
+          "instances": 54
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p002.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p002.glb",
+          "bytes": 1107604,
+          "rawBytes": 1577624,
+          "instances": 74
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p003.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p003.glb",
+          "bytes": 1058643,
+          "rawBytes": 1696808,
+          "instances": 271
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p004.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p004.glb",
+          "bytes": 1112737,
+          "rawBytes": 1572640,
+          "instances": 68
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p005.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p005.glb",
+          "bytes": 1084679,
+          "rawBytes": 1572472,
+          "instances": 58
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p006.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p006.glb",
+          "bytes": 1086307,
+          "rawBytes": 1552424,
+          "instances": 54
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p007.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p007.glb",
+          "bytes": 1208336,
+          "rawBytes": 1677000,
+          "instances": 27
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p008.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p008.glb",
+          "bytes": 1358838,
+          "rawBytes": 1624320,
+          "instances": 17
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p009.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p009.glb",
+          "bytes": 1239216,
+          "rawBytes": 1566508,
+          "instances": 8
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p010.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p010.glb",
+          "bytes": 1345056,
+          "rawBytes": 1614920,
+          "instances": 12
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p011.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p011.glb",
+          "bytes": 1332893,
+          "rawBytes": 1601740,
+          "instances": 7
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p012.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p012.glb",
+          "bytes": 1361842,
+          "rawBytes": 1706884,
+          "instances": 6
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p013.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p013.glb",
+          "bytes": 1368182,
+          "rawBytes": 1629564,
+          "instances": 17
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p014.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p014.glb",
+          "bytes": 1217823,
+          "rawBytes": 1542036,
+          "instances": 8
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p015.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p015.glb",
+          "bytes": 1312057,
+          "rawBytes": 1570124,
+          "instances": 12
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p016.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p016.glb",
+          "bytes": 1342286,
+          "rawBytes": 1613676,
+          "instances": 7
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p017.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p017.glb",
+          "bytes": 999111,
+          "rawBytes": 1570212,
+          "instances": 50
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p018.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p018.glb",
+          "bytes": 873637,
+          "rawBytes": 1574240,
+          "instances": 60
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p019.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p019.glb",
+          "bytes": 961664,
+          "rawBytes": 1577172,
+          "instances": 84
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p020.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p020.glb",
+          "bytes": 941536,
+          "rawBytes": 1534684,
+          "instances": 23
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p021.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p021.glb",
+          "bytes": 950531,
+          "rawBytes": 1550784,
+          "instances": 41
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p022.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p022.glb",
+          "bytes": 818995,
+          "rawBytes": 1827064,
+          "instances": 559
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p023.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p023.glb",
+          "bytes": 850459,
+          "rawBytes": 1610264,
+          "instances": 125
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p024.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p024.glb",
+          "bytes": 878418,
+          "rawBytes": 1556224,
+          "instances": 57
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p025.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p025.glb",
+          "bytes": 897014,
+          "rawBytes": 1577772,
+          "instances": 76
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p026.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p026.glb",
+          "bytes": 698371,
+          "rawBytes": 1882792,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p027.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p027.glb",
+          "bytes": 50903,
+          "rawBytes": 378876,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p028.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p028.glb",
+          "bytes": 45091,
+          "rawBytes": 380652,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p029.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p029.glb",
+          "bytes": 861462,
+          "rawBytes": 1821876,
+          "instances": 519
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p030.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p030.glb",
+          "bytes": 885285,
+          "rawBytes": 1606924,
+          "instances": 120
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p031.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p031.glb",
+          "bytes": 864676,
+          "rawBytes": 1692456,
+          "instances": 318
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p032.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p032.glb",
+          "bytes": 871957,
+          "rawBytes": 1720928,
+          "instances": 319
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p033.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p033.glb",
+          "bytes": 857467,
+          "rawBytes": 1605792,
+          "instances": 125
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p034.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p034.glb",
+          "bytes": 878940,
+          "rawBytes": 1585684,
+          "instances": 78
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p035.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p035.glb",
+          "bytes": 871907,
+          "rawBytes": 1586912,
+          "instances": 74
+        },
+        {
+          "file": "assets/models/stations/i07-1150-p036.glb.gz",
+          "rawFile": "assets/models/stations/i07-1150-p036.glb",
+          "bytes": 340503,
+          "rawBytes": 1066020,
+          "instances": 97
+        }
+      ],
+      "seconds": 158,
+      "bodyBounds": {
+        "min": [
+          93063.25879008403,
+          2567.0594364959716,
+          -102436.25317793764
+        ],
+        "max": [
+          94311.48898757744,
+          2574.5096543335817,
+          -101418.99722907171
+        ]
+      },
+      "axisReferences": []
+    }
+  ],
+  "status": "converted"
+}
