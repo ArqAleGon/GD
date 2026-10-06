@@ -2,7 +2,7 @@ async function loadGzipJSON(url){const response=await fetch(url);if(!response.ok
 const [predialPayload,mapBasePayload,stationFootprints]=await Promise.all([
  loadGzipJSON('./predial-data.json.gz?v=20260929-complete-map-v1'),
  loadGzipJSON('./predial-map-base.json.gz?v=20260922-mapbase'),
- fetch('./predial-station-footprints.json?v=20261006-all-cad-footprints').then(response=>{if(!response.ok)throw new Error('No se pudieron cargar las huellas CAD');return response.json();})
+ fetch('./predial-station-footprints.json?v=20261006-e02-access02').then(response=>{if(!response.ok)throw new Error('No se pudieron cargar las huellas CAD');return response.json();})
 ]);
 const PREDIAL_META=predialPayload.meta,PREDIAL_RECORDS=predialPayload.records,PREDIAL_SOURCE_ONLY=predialPayload.sourceOnlyRecords||[],PREDIAL_ALL_RECORDS=[...PREDIAL_RECORDS,...PREDIAL_SOURCE_ONLY],PREDIAL_DOCUMENTS=predialPayload.documents||[];
 const DOCUMENTS_BY_ID=new Map(PREDIAL_DOCUMENTS.map(document=>[document.id,document]));
@@ -126,7 +126,7 @@ function renderReferenceLayers(){
   const parts=override?.parts||[{role:'nave-central',path:item.path}];
   for(const [index,part] of parts.entries()){
    const station=svg('path',{d:part.path||footprintPath(part.coordinates),'data-station':item.code,'data-part':part.role,'data-part-index':index,'data-source':override?.source||'ESTACIONES.shp',class:'stationFootprint','fill-rule':'evenodd'});
-   const title=svg('title');title.textContent=`Huella de ocupación · ${item.code} · ${item.name} · ${part.role} · ${override?.source||'ESTACIONES.shp'}`;station.append(title);stations.append(station);
+   const title=svg('title');title.textContent=`Huella de ocupación · ${item.code} · ${item.name} · ${part.name||part.role} · ${override?.source||'ESTACIONES.shp'}`;station.append(title);stations.append(station);
   }
   const center=override?.center?footprintToMap(override.center):item.center;
   const label=svg('text',{x:center[0],y:center[1]-7,class:'l1StationLabel','text-anchor':'middle'});label.textContent=item.code;labels.append(label);
