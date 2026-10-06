@@ -579,5 +579,24 @@
     "triangles": 368995,
     "bytes": 1644345,
     "displayGridMeters": 0.5
+  },
+  "I08": {
+    "file": "assets/models/stations/i08-overview.glb.gz",
+    "bounds": {
+      "min": [
+        94409.35496082575,
+        2519.409912109375,
+        -101322.8387533898
+      ],
+      "max": [
+        95077.861429987,
+        2574.509654190439,
+        -100742.7379436565
+      ]
+    },
+    "sourceTriangles": 6299384,
+    "triangles": 187929,
+    "bytes": 840794,
+    "displayGridMeters": 0.5
   }
 }
