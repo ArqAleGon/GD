@@ -427,5 +427,24 @@
     "triangles": 637253,
     "bytes": 2907260,
     "displayGridMeters": 0.5
+  },
+  "E12": {
+    "file": "assets/models/stations/e12-overview.glb.gz",
+    "bounds": {
+      "min": [
+        99578.09697999817,
+        2580.1,
+        -100819.56546162577
+      ],
+      "max": [
+        99770.83366504207,
+        2627.7999999999997,
+        -100625.36863988246
+      ]
+    },
+    "sourceTriangles": 11838102,
+    "triangles": 597650,
+    "bytes": 2794582,
+    "displayGridMeters": 0.5
   }
 }
