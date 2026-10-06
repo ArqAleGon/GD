@@ -1,4 +1,4 @@
-import {loadMetroTrainModel,createMetroTrainCar} from './metro-train-model.js?v=20261005-train-obj';
+import {loadMetroTrainModel,createMetroTrainCar} from './metro-train-model.js?v=20261005-train-obj-v2';
 import {arrangeBimLabels} from './bim-label-layout.js?v=20261002-controls-v2';
 import {COMPARISONS,comparisonLayers} from './e15-comparison.js';
 import {RENDER_E15_CAMERA,renderE15Fov} from './render-e15-camera.js';

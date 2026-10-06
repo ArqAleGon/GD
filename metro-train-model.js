@@ -1,5 +1,5 @@
 import * as THREE from 'three';
-import {GLTFLoader} from './vendor/GLTFLoader.js';
+import {GLTFLoader} from './vendor/GLTFLoader.js?v=r170';
 
 let template,loading;
 export function loadMetroTrainModel(){
