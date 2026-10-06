@@ -19,3 +19,7 @@ Dashboards start hidden in every scene and model viewer; show them only via Most
 ## IFC instance identity
 
 Consultation and progress registration operate on an individual IFC element instance inside a building: wall, railing, floor/slab, column, beam, etc. Use the selected instance's persistent IFC GlobalId or stable element ID together with its model/source identity. Do not use the whole building, model section, IFC type, or all geometrically similar objects as the registration target. Each instance has its own parameters, progress and history; selecting another instance must not reuse the previous target. A building-label dialog is model metadata and navigation only, never an element progress record. Apply this rule to every existing and future model.
+
+## Train assets
+
+Inicio and Seguimiento del tren share metro-train-model.js and assets/models/metro-train.glb.gz, converted from the supplied Tren.obj/Tren.mtl with embedded Metro logos. Preserve the red, white/gray, charcoal and yellow livery, per-car picking, existing routes and camera-follow controls, pause/play and sliding door animation. Share template geometries across clones and never dispose them when switching scenes. Future train replacements must retain these behaviors.
