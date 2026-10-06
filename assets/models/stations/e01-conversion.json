@@ -1182,7 +1182,57 @@
         }
       ],
       "seconds": 272,
-      "referenceAxes": 1
+      "referenceAxes": 1,
+      "storeys": [
+        {
+          "id": "1i3V7fKqb7WAiLwHaThzCn",
+          "name": "ARC_PL_00",
+          "elevation": 2535.1000000000013,
+          "source": "L1T1-0000-301-CON-ED-ARQ-MO-0001_VCC.ifc"
+        },
+        {
+          "id": "1i3V7fKqb7WAiLwHaTh2hu",
+          "name": "ARC_PL_01",
+          "elevation": 2540.8999999999996,
+          "source": "L1T1-0000-301-CON-ED-ARQ-MO-0001_VCC.ifc"
+        },
+        {
+          "id": "1i3V7fKqb7WAiLwHaThzJ2",
+          "name": "ARC_PL_02",
+          "elevation": 2548.5000000000005,
+          "source": "L1T1-0000-301-CON-ED-ARQ-MO-0001_VCC.ifc"
+        },
+        {
+          "id": "1i3V7fKqb7WAiLwHaThzI$",
+          "name": "ARC_PL_02.1",
+          "elevation": 2554.9700000000007,
+          "source": "L1T1-0000-301-CON-ED-ARQ-MO-0001_VCC.ifc"
+        },
+        {
+          "id": "1i3V7fKqb7WAiLwHaTXeVH",
+          "name": "ARC_PL_02.2",
+          "elevation": 2557.0999999999995,
+          "source": "L1T1-0000-301-CON-ED-ARQ-MO-0001_VCC.ifc"
+        },
+        {
+          "id": "1i3V7fKqb7WAiLwHaThzIR",
+          "name": "ARC_PL_03",
+          "elevation": 2558.24,
+          "source": "L1T1-0000-301-CON-ED-ARQ-MO-0001_VCC.ifc"
+        },
+        {
+          "id": "1i3V7fKqb7WAiLwHaThzDr",
+          "name": "ARC_PL_04.1",
+          "elevation": 2566.445170646981,
+          "source": "L1T1-0000-301-CON-ED-ARQ-MO-0001_VCC.ifc"
+        },
+        {
+          "id": "1i3V7fKqb7WAiLwHaTddq1",
+          "name": "ARC_PL_00_SP",
+          "elevation": 2500.0,
+          "source": "L1T1-0000-301-CON-ED-ARQ-MO-0001_VCC.ifc"
+        }
+      ]
     }
   ],
   "status": "converted",

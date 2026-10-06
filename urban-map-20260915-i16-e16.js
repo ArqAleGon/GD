@@ -1,3 +1,4 @@
+import {batchIfcRenderGeometry} from './ifc-render-batches.js?v=20261005-station-management';
 import {loadBimUrbanContext,buildBimUrbanContext} from './bim-urban-context.js';
 import * as THREE from 'three';
 import {GLTFLoader} from './GLTFLoader.js';
@@ -6,7 +7,7 @@ import {createIfcProgressObject} from './ifc-progress.js?v=20260929-element-prog
 import {rankedBoundHits,sectionPickCandidates} from './ifc-picking.js?v=20260930-element-picking-v1';
 
 const scale = 0.06;
-const assetRevision = '20261005-stations-e01';
+const assetRevision = '20261005-stations-e02-management3';
 const point = (p, height = 0) => new THREE.Vector3(p[0] * scale, height, -p[1] * scale);
 
 export async function loadUrbanMap() {
@@ -121,7 +122,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
   for(const definition of assets.ifcModelDefs){
     if(modelOnlySection&&definition.section!==modelOnlySection)continue;
     if(!sections.has(definition.section)){
-      const section=new THREE.Group();section.name='IFC '+definition.section;section.scale.setScalar(scale);section.position.y=placement.streetHeightInScene??.24;ifcGroup.add(section);sections.set(definition.section,{group:section,label:definition.label||('IFC · '+definition.section),definitions:[],bounds:null,promise:null,labelObject:null,elementCount:0,elementPickables:[],elementBounds:[],progressProxy:null});
+      const section=new THREE.Group();section.name='IFC '+definition.section;section.scale.setScalar(scale);section.position.y=placement.streetHeightInScene??.24;ifcGroup.add(section);sections.set(definition.section,{group:section,label:definition.label||('IFC · '+definition.section),definitions:[],levelDefinitions:placement.stationLevels?.[definition.section]||[],streetDatum:definition.streetDatum??placement.streetDatum,bounds:null,promise:null,labelObject:null,elementCount:0,elementPickables:[],elementBounds:[],progressProxy:null});
     }
     sections.get(definition.section).definitions.push(definition);
   }
@@ -206,52 +207,6 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
   const ifcBounds=new THREE.Box3();
   // Draw repeated geometry in one GPU call; retain original meshes for
   // source-qualified instance picking and per-element bounds.
-  function instanceRepeatedGeometry(model){
-    model.updateMatrixWorld(true);
-    const groups=new Map(),singles=new Map(),inverse=model.matrixWorld.clone().invert();
-    model.traverse(mesh=>{
-      if(!mesh.isMesh||!mesh.visible||Array.isArray(mesh.material))return;
-      const key=mesh.geometry.uuid+':'+mesh.material.uuid;
-      if(!groups.has(key))groups.set(key,[]);groups.get(key).push(mesh);
-    });
-    for(const meshes of groups.values()){
-      if(meshes.length<3){
-        for(const mesh of meshes){if(!singles.has(mesh.material.uuid))singles.set(mesh.material.uuid,[]);singles.get(mesh.material.uuid).push(mesh);}
-        continue;
-      }
-      const draw=new THREE.InstancedMesh(meshes[0].geometry,meshes[0].material,meshes.length);
-      draw.name='Representación instanciada IFC';draw.userData.ifcRenderBatch=true;
-      for(let i=0;i<meshes.length;i++){
-        draw.setMatrixAt(i,new THREE.Matrix4().multiplyMatrices(inverse,meshes[i].matrixWorld));
-        meshes[i].visible=false;
-      }
-      draw.instanceMatrix.needsUpdate=true;model.add(draw);
-    }
-    // Combine distinct draw geometry by material within each small web part.
-    // Original IFC meshes remain independent selection targets with their IDs.
-    for(const meshes of singles.values()){
-      if(meshes.length<2)continue;
-      const center=new THREE.Vector3().setFromMatrixPosition(new THREE.Matrix4().multiplyMatrices(inverse,meshes[0].matrixWorld));
-      const vertexCount=meshes.reduce((n,m)=>n+m.geometry.attributes.position.count,0);
-      const indexCount=meshes.reduce((n,m)=>n+(m.geometry.index?.count??m.geometry.attributes.position.count),0);
-      const positions=new Float32Array(vertexCount*3),normals=new Float32Array(vertexCount*3),indices=new Uint32Array(indexCount);
-      const v=new THREE.Vector3(),normalMatrix=new THREE.Matrix3();let vertexOffset=0,indexOffset=0;
-      for(const mesh of meshes){
-        const geometry=mesh.geometry,p=geometry.attributes.position,n=geometry.attributes.normal;
-        if(!n)geometry.computeVertexNormals();
-        const matrix=new THREE.Matrix4().multiplyMatrices(inverse,mesh.matrixWorld);normalMatrix.getNormalMatrix(matrix);
-        for(let i=0;i<p.count;i++){
-          v.fromBufferAttribute(p,i).applyMatrix4(matrix).sub(center).toArray(positions,(vertexOffset+i)*3);
-          v.fromBufferAttribute(geometry.attributes.normal,i).applyNormalMatrix(normalMatrix).toArray(normals,(vertexOffset+i)*3);
-        }
-        const index=geometry.index,count=index?.count??p.count;
-        for(let i=0;i<count;i++)indices[indexOffset+i]=vertexOffset+(index?index.getX(i):i);
-        vertexOffset+=p.count;indexOffset+=count;mesh.visible=false;
-      }
-      const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(positions,3));geometry.setAttribute('normal',new THREE.BufferAttribute(normals,3));geometry.setIndex(new THREE.BufferAttribute(indices,1));
-      const draw=new THREE.Mesh(geometry,meshes[0].material);draw.position.copy(center);draw.name='Representación agrupada IFC';draw.userData.ifcRenderBatch=true;model.add(draw);
-    }
-  }
   const ensureIfcSection=async sectionName=>{
     const entry=sections.get(sectionName);
     if(!entry){const error=new Error('Modelo no disponible');error.code='unavailable';throw error;}
@@ -279,7 +234,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
         if(ptHqSections.has(sectionName))stylePtHq(model);
         model.position.set(-placement.gisOrigin[0],-(asset.definition.streetDatum??placement.streetDatum),placement.gisOrigin[1]);
         markIfcProgressObjects(model,asset.definition,sectionName,entry);
-        if(asset.definition.instanceIdentity==='ifc-globalid')instanceRepeatedGeometry(model);
+        if(!modelOnlySection&&asset.definition.instanceIdentity==='ifc-globalid')batchIfcRenderGeometry(model);
         entry.group.add(model);
       }
       entry.group.updateMatrixWorld(true);
@@ -305,7 +260,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
         entry.elementPickables=entry.elementBounds.map(item=>item.mesh);
       }else sectionBounds.setFromObject(entry.group,true);
       if(sectionBounds.isEmpty()){const error=new Error('El modelo convertido no contiene geometría visible');error.code='no-geometry';throw error;}
-      if(instanceSources)entry.group.traverse(object=>{object.matrixAutoUpdate=false;object.matrixWorldAutoUpdate=false;});
+      if(instanceSources&&!modelOnlySection)entry.group.traverse(object=>{object.matrixAutoUpdate=false;object.matrixWorldAutoUpdate=false;});
       entry.bounds=sectionBounds;ifcSections[sectionName]=sectionBounds;ifcBounds.union(sectionBounds);
       const sectionCenter=sectionBounds.getCenter(new THREE.Vector3());
       const sectionSize=sectionBounds.getSize(new THREE.Vector3());

@@ -10,4 +10,20 @@ Los modelos mantienen transformaciones originales, EPSG:6247 y elevación de ref
 
 Se verificaron los GLB comprimidos, índices, coordenadas finitas, identificación por GlobalId + archivo fuente y conteos. En la prueba visual se validaron la etiqueta, consulta del modelo, vista aislada sin contexto, consulta individual de una losa, registro reservado al elemento y Volver. La geometría se agrupa por material para dibujar; las instancias originales siguen siendo objetivos independientes de selección y registro.
 
-E02–E14 pendientes de conversión y publicación individual. Los archivos con códigos distintos de 0000, 1150 y 1200 están fuera del alcance solicitado.
+Gestión de E01 usa el mismo IFC, sin contexto urbano ni aerofotografía. Sus cotas nativas definen accesos/cimentación, vestíbulo, andén y cubierta. Se comprobaron separación, alarma, cámaras con spots y recorrido interior con joysticks.
+
+## E02
+
+Se integraron exclusivamente arquitectura 0000 (78.209 instancias) y estructuras 1150 (88) y 1200 (8.020): 86.317 identificadores únicos en 156 partes GLB comprimidas. Se verificaron archivos, índices, coordenadas e identidad por archivo fuente + GlobalId; no quedaron instancias representadas pendientes de conversión.
+
+Los tres archivos usan coordenadas absolutas compartidas y una única referencia de visualización de 2.552,28 m, tomada del sitio de arquitectura. Las referencias de sitio de los archivos estructurales son diferentes y no se restan por separado. El centro del conjunto está a 2,42 m de las huellas CAD; la envolvente incluye la nave y sus accesos asimétricos.
+
+Una viga solo contiene un eje situado fuera del edificio en el IFC original. Se conserva en la conversión y el reporte, pero se excluye de renderizado, selección espacial y encuadre. No se trasladó ni se fabricó un sólido.
+
+Gestión de E02 incorpora accesos/cimentación, vestíbulo, andén, cubierta inferior y cubierta a partir de sus IfcBuildingStorey. Se verificaron separación, alarma, CAM con spots espaciales y recorrido interior con joysticks. E15 conserva sus controles anteriores.
+
+## Procedimiento para próximas estaciones
+
+Cada estación debe completar BIM y Gestión antes de publicarse: modelo real, niveles nativos, separación, alarmas, cámaras 360 de posición fija, spots y recorrido interior. La agrupación del render conserva las instancias IFC originales para consulta y registro individual.
+
+E03–E14 pendientes de conversión y publicación individual. En E09/E10 falta 1150; en E11/E12 faltan 1150 y 1200 en la carpeta de origen revisada. Los archivos con códigos distintos de 0000, 1150 y 1200 están fuera del alcance solicitado.
