@@ -33,16 +33,32 @@ export function createStationModelControls(root,entry,code,originalBounds){
  function setLevel(level,explode){selected=level;exploded=explode;for(let i=0;i<bands.length;i++){
   const band=bands[i];band.group.visible=selected==='all'||selected===band.key;band.offset=exploded?i*.9:0;band.group.position.y=band.offset;
   band.planes[0].constant=-(band.min+band.offset);band.planes[1].constant=band.max+band.offset;
- }const band=bands.find(b=>b.key===(selected==='all'?'upper':selected));alarm.position.y=Math.max(height(e.vestibule),band.min+.05)+band.offset;root.updateMatrixWorld(true);}
+ }const band=bands.find(b=>b.key===(selected==='all'?'upper':selected));alarm.position.y=Math.max(height(e.vestibule),band.min+.05)+band.offset;root.updateMatrixWorld(true);if(cameraMarkers.visible)refreshCameras();}
  function visibleBounds(){const box=new THREE.Box3();for(const band of bands)if(band.group.visible){box.expandByPoint(new THREE.Vector3(originalBounds.min.x,Math.max(originalBounds.min.y,band.min)+band.offset,originalBounds.min.z));box.expandByPoint(new THREE.Vector3(originalBounds.max.x,Math.min(originalBounds.max.y,band.max)+band.offset,originalBounds.max.z));}return box;}
- function cameraPose(index){const band=bands.find(b=>b.key===(selected==='all'?'upper':selected));const floor={upper:e.vestibule,lower:e.platform,high:e.upper,roof:e.roof,base:0}[band.key],y=height(floor+1.6)+band.offset;
+ function defaultCameraPose(index){const band=bands.find(b=>b.key===(selected==='all'?'upper':selected));const floor={upper:e.vestibule,lower:e.platform,high:e.upper,roof:e.roof,base:0}[band.key],y=height(floor+1.6)+band.offset;
   const narrow=selected==='lower',x=center.x+(index%2?1:-1)*size.x*(narrow&&longZ?.035:.28),z=center.z+(index<2?-1:1)*size.z*(narrow&&!longZ?.035:.28);
   return {position:new THREE.Vector3(x,y,z),target:new THREE.Vector3(center.x,y-.03,center.z)};
  }
+
+ const cameraOverrides=new Map(),cameraMarkers=new THREE.Group();cameraMarkers.name='Posición espacial de cámaras';cameraMarkers.visible=false;root.add(cameraMarkers);
+ const markerItems=Array.from({length:4},(_,index)=>{
+  const group=new THREE.Group(),material=new THREE.MeshBasicMaterial({color:'#45d8ff',depthTest:false,toneMapped:false});
+  const spot=new THREE.Mesh(new THREE.SphereGeometry(.055,12,8),material);spot.renderOrder=40;group.add(spot);
+  const ring=new THREE.Mesh(new THREE.TorusGeometry(.1,.012,6,24),material);ring.rotation.x=Math.PI/2;ring.renderOrder=40;group.add(ring);
+  const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(),new THREE.Vector3(0,0,.45)]),new THREE.LineBasicMaterial({color:'#45d8ff',depthTest:false}));line.renderOrder=40;group.add(line);
+  cameraMarkers.add(group);return {group,material,line,index};
+ });
+ let activeCamera=0;
+ const levelKey=()=>selected==='all'?'upper':selected;
+ function cameraPose(index){const band=bands.find(b=>b.key===levelKey()),saved=cameraOverrides.get(levelKey()+':'+index);return saved?{position:saved.position.clone().add(new THREE.Vector3(0,band.offset,0)),target:saved.target.clone().add(new THREE.Vector3(0,band.offset,0))}:defaultCameraPose(index);}
+ function refreshCameras(){for(const item of markerItems){const pose=cameraPose(item.index);item.group.position.copy(pose.position);item.material.color.set(item.index===activeCamera?'#ffd36c':'#45d8ff');const direction=pose.target.clone().sub(pose.position).normalize().multiplyScalar(.45),position=item.line.geometry.attributes.position;position.setXYZ(1,direction.x,direction.y,direction.z);position.needsUpdate=true;}}
+ function activateCamera(index){activeCamera=index;cameraMarkers.visible=true;refreshCameras();}
+ function setCameraPose(index,position,target){const offset=bands.find(b=>b.key===levelKey()).offset;cameraOverrides.set(levelKey()+':'+index,{position:position.clone().sub(new THREE.Vector3(0,offset,0)),target:target.clone().sub(new THREE.Vector3(0,offset,0))});refreshCameras();}
+ function resetCamera(index){cameraOverrides.delete(levelKey()+':'+index);refreshCameras();return cameraPose(index);}
  function pick(raycaster){const hits=raycaster.intersectObjects(pickables.filter(mesh=>mesh.parent.visible),false);for(const hit of hits){const band=hit.object.userData.stationBand;if(hit.point.y<band.min+band.offset-.0001||hit.point.y>band.max+band.offset+.0001)continue;return {...hit.object.userData.progressObject,mesh:hit.object};}return null;}
  function tourPose(time){const b=visibleBounds(),c=b.getCenter(new THREE.Vector3()),s=b.getSize(new THREE.Vector3()),r=Math.max(s.x,s.z)*.95;return {position:new THREE.Vector3(c.x+Math.cos(time*.12)*r,c.y+s.y*.65+1,c.z+Math.sin(time*.12)*r),target:c};}
  function update(time){if(alarm.visible)alarmMaterial.opacity=.13+.09*(.5+.5*Math.sin(time*5));}
- function dispose(){for(const mesh of pickables)for(const material of [].concat(mesh.material))material.dispose();alarm.traverse(object=>{object.geometry?.dispose();});alarmMaterial.dispose();green.dispose();}
- setLevel('all',false);return {setLevel,visibleBounds,cameraPose,pick,tourPose,update,dispose,setAlarm:active=>{alarm.visible=active;}};
+ function dispose(){cameraMarkers.traverse(object=>{object.geometry?.dispose();if(object.material)object.material.dispose();});for(const mesh of pickables)for(const material of [].concat(mesh.material))material.dispose();alarm.traverse(object=>{object.geometry?.dispose();});alarmMaterial.dispose();green.dispose();}
+ setLevel('all',false);return {setLevel,visibleBounds,cameraPose,activateCamera,setCameraPose,resetCamera,pick,tourPose,update,dispose,setAlarm:active=>{alarm.visible=active;}};
 }
 
