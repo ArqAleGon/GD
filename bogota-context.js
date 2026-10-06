@@ -16,6 +16,8 @@ const EXPANDED_MAX_X=MAP_WIDTH-EXPANDED_MIN_X;
 const EXPANDED_MIN_Y=(MAP_HEIGHT-EXPANDED_MAP_HEIGHT)/2;
 const EXPANDED_MAX_Y=MAP_HEIGHT-EXPANDED_MIN_Y;
 const NATIVE_ORTHO_URL='https://serviciosgis.catastrobogota.gov.co/image/services/imagenesfunciones/orthourbana2025funcion/ImageServer/WMSServer';
+// Official Mapas Bogotá proxy: direct Catastro connections currently time out.
+const NATIVE_ORTHO_PROXY='https://catalogopmb.catastrobogota.gov.co/PMBWeb/proxy.jsp?';
 const NATIVE_ORTHO_LAYER='orthourbana2025funcion:ColorBalance';
 export const cityPoint=([x,y],height=0)=>[(x-MAP_WIDTH/2)*WORLD_SCALE,height,(y-MAP_HEIGHT/2)*WORLD_SCALE];
 
@@ -59,7 +61,7 @@ function mapToLonLat(x,y){
 function nativeOrthoUrl(minX,minY,maxX,maxY,width=1024,height=1024){
  const [west,north]=mapToLonLat(minX,minY),[east,south]=mapToLonLat(maxX,maxY);
  const params=new URLSearchParams({SERVICE:'WMS',VERSION:'1.3.0',REQUEST:'GetMap',LAYERS:NATIVE_ORTHO_LAYER,STYLES:'',CRS:'CRS:84',BBOX:[west,south,east,north].join(','),WIDTH:String(width),HEIGHT:String(height),FORMAT:'image/png',TRANSPARENT:'TRUE'});
- return `${NATIVE_ORTHO_URL}?${params}`;
+ return `${NATIVE_ORTHO_PROXY}${NATIVE_ORTHO_URL}?${params}`;
 }
 
 function addCssAerial(group){
@@ -235,7 +237,7 @@ export function buildBogotaContext(root,addLabel,onInspect){
   aerialVisible=Boolean(value);aerial.setVisible(aerialVisible);
  };
  setAerialVisible(true);
- group.userData.aerial={mesh:aerial.detailHost,detail:aerial.detailHost,update:aerial.update,setVisible:setAerialVisible,source:'UAECD / IDECA · Ortofotomosaico urbano Bogotá 2025 · WMS · GSD nativo 5 cm · CC BY 4.0'};
+ group.userData.aerial={mesh:aerial.detailHost,detail:aerial.detailHost,update:aerial.update,setVisible:setAerialVisible,source:'UAECD / IDECA · Ortofotomosaico urbano Bogotá 2025 · WMS vía proxy oficial Mapas Bogotá · GSD nativo 5 cm · CC BY 4.0'};
  group.userData.cadastre={mesh:aerial.context,ground,bounds:{mapWidth:EXPANDED_MAP_WIDTH,mapHeight:EXPANDED_MAP_HEIGHT,margin:.15}};
 
  group.userData.buildingsPromise=loadL1Buildings().then(data=>addBuildingVolumes(group,data,addLabel,onInspect)).catch(error=>{

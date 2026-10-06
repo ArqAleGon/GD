@@ -30,7 +30,7 @@
     fresh.title = 'Metro Digital · escena activa';
     fresh.allow = 'fullscreen';
     fresh.allowFullscreen = true;
-    next.source.searchParams.set('brand', '20261006-camera-360');
+    next.source.searchParams.set('brand', '20261006-ortho-5cm');
     fresh.src = next.source.href;
     fresh.addEventListener('load', () => {
       status.hidden = true;
