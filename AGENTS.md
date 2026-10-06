@@ -27,3 +27,5 @@ Inicio and Seguimiento del tren share metro-train-model.js and assets/models/met
 ## Station and train tracking
 
 Tracking scenes must remove both WebGL urban context and CSS3D aerial imagery on entry. E15 and E16 use their real IFC sections via model-only loading; do not substitute the generic procedural station for an available model. Preserve individual element identity. Initial/top/front/side camera actions disable active train following so the animation cannot overwrite the chosen framing. Inicio uses one leading train car scaled uniformly to four times its prior size (+300%); tracking keeps the six-car train.
+
+Station model-only views retain level filtering, separated floors, alarms and four camera views. Use station-model-controls.js to operate on the actual IFC geometry and measured elevations; preserve element IDs across level display copies. These controls must remain available when replacing station models. The train asset cab faces local -X: align that front with route velocity, including reverse-direction services and tracking motion.
