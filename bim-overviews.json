@@ -484,5 +484,24 @@
     "triangles": 216104,
     "bytes": 985333,
     "displayGridMeters": 0.5
+  },
+  "I03": {
+    "file": "assets/models/stations/i03-overview.glb.gz",
+    "bounds": {
+      "min": [
+        89560.31361209253,
+        2506.5380859375,
+        -103675.56610377066
+      ],
+      "max": [
+        90069.07359398121,
+        2565.1596541208023,
+        -102939.60217735532
+      ]
+    },
+    "sourceTriangles": 6657386,
+    "triangles": 218935,
+    "bytes": 998127,
+    "displayGridMeters": 0.5
   }
 }
