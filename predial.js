@@ -1,11 +1,20 @@
 async function loadGzipJSON(url){const response=await fetch(url);if(!response.ok)throw new Error(`No se pudo cargar ${url}`);const stream=response.body.pipeThrough(new DecompressionStream('gzip'));return JSON.parse(await new Response(stream).text());}
-const [predialPayload,mapBasePayload]=await Promise.all([
+const [predialPayload,mapBasePayload,e01Footprint]=await Promise.all([
  loadGzipJSON('./predial-data.json.gz?v=20260929-complete-map-v1'),
- loadGzipJSON('./predial-map-base.json.gz?v=20260922-mapbase')
+ loadGzipJSON('./predial-map-base.json.gz?v=20260922-mapbase'),
+ fetch('./predial-e01-footprint.json?v=20261006-e01-dwg').then(response=>{if(!response.ok)throw new Error('No se pudo cargar la huella E01');return response.json();})
 ]);
 const PREDIAL_META=predialPayload.meta,PREDIAL_RECORDS=predialPayload.records,PREDIAL_SOURCE_ONLY=predialPayload.sourceOnlyRecords||[],PREDIAL_ALL_RECORDS=[...PREDIAL_RECORDS,...PREDIAL_SOURCE_ONLY],PREDIAL_DOCUMENTS=predialPayload.documents||[];
 const DOCUMENTS_BY_ID=new Map(PREDIAL_DOCUMENTS.map(document=>[document.id,document]));
 const MAP_BASE_META=mapBasePayload.meta,TERRITORIAL=mapBasePayload.territorial,L1_BASE=mapBasePayload.l1;
+const station01=L1_BASE.stations.items.find(item=>item.code===e01Footprint.station);
+if(station01){
+ const [west,south,east,north]=MAP_BASE_META.bbox;
+ const toMap=([longitude,latitude])=>[(longitude-west)/(east-west)*MAP_BASE_META.mapWidth,(north-latitude)/(north-south)*MAP_BASE_META.mapHeight];
+ station01.path=e01Footprint.coordinates.map((point,index)=>{const [x,y]=toMap(point);return `${index?'L':'M'}${x.toFixed(4)},${y.toFixed(4)}`;}).join('')+'Z';
+ station01.center=toMap(e01Footprint.center);station01.source=e01Footprint.source;
+}
+
 
 const $=id=>document.getElementById(id);
 const NS='http://www.w3.org/2000/svg';
@@ -117,8 +126,8 @@ function renderReferenceLayers(){
  const stations=$('stationFootprintLayer'),labels=$('stationLabelLayer');stations.replaceChildren();labels.replaceChildren();
  $('stationLayer').replaceChildren();
  for(const item of L1_BASE.stations.items||[]){
-  const station=svg('path',{d:item.path,class:'stationFootprint','fill-rule':'evenodd'});
-  const title=svg('title');title.textContent=`Huella de ocupación · ${item.code} · ${item.name}`;station.append(title);stations.append(station);
+  const station=svg('path',{d:item.path,'data-station':item.code,'data-source':item.source||'ESTACIONES.shp',class:'stationFootprint','fill-rule':'evenodd'});
+  const title=svg('title');title.textContent=`Huella de ocupación · ${item.code} · ${item.name}${item.source?' · '+item.source:''}`;station.append(title);stations.append(station);
   const label=svg('text',{x:item.center[0],y:item.center[1]-7,class:'l1StationLabel','text-anchor':'middle'});label.textContent=item.code;labels.append(label);
  }
 
