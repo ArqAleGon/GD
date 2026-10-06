@@ -60,8 +60,18 @@ El datum común de las disciplinas es 2.550,36 m, tomado de arquitectura. El cen
 
 Se verificaron consulta general, selección de un muro cortina individual (GlobalId 1omjeC5Zr10fXjAwHK$ZYw), formulario de registro exclusivo para esa instancia y Volver. Gestión pasó pruebas de separación, andén, alarma, cámara fija sobre el piso nativo, cuatro spots y recorrido interior con joysticks. El encuadre compartido usa las ocho esquinas de la envolvente y el campo de visión para evitar recortes, incluida la separación de niveles.
 
+## E07
+
+Se integraron únicamente 0000 (72.399 instancias), 1150 (66) y 1200 (6.317): 78.782 instancias en 166 partes. Pasaron validación los archivos, índices, coordenadas e identidad por fuente + GlobalId; no quedan instancias representadas pendientes ni ejes fuera del edificio.
+
+El muro 17624123, GlobalId `0CDVmelMH9W8jAOftP2Iko`, tiene Body vacío después de sus cortes nativos; se preservó su Axis original. Las disciplinas comparten datum de 2.550 m. El centro del conjunto está a 4,87 m de las huellas CAD y a 26,47 m del centro de la nave, con accesos asimétricos.
+
+Gestión usa los niveles nativos de acceso, vestíbulo/intermedio 2.564,40 m, TOR 2.572,30 m, andén 2.573,44 m y cubiertas. El tren usa el eje CAD propio y el TOR.
+
+Se verificaron consulta general, losa individual GlobalId `130pGJbR1A78zGjkuITwhY`, registro reservado a esa instancia, aislamiento y Volver. Gestión pasó separación, andén, alarma, cámara fija sobre el piso real, cuatro spots y recorrido interior con joysticks.
+
 ## Procedimiento para próximas estaciones
 
 Cada estación debe completar BIM y Gestión antes de publicarse: modelo real, niveles nativos, separación, alarmas, cámaras 360 de posición fija, spots y recorrido interior. La agrupación del render conserva las instancias IFC originales para consulta y registro individual.
 
-E07–E14 pendientes de conversión y publicación individual. En E09/E10 falta 1150; en E11/E12 faltan 1150 y 1200 en la carpeta de origen revisada. Los archivos con códigos distintos de 0000, 1150 y 1200 están fuera del alcance solicitado.
+E08–E14 pendientes de conversión y publicación individual. En E09/E10 falta 1150; en E11/E12 faltan 1150 y 1200 en la carpeta de origen revisada. Los archivos con códigos distintos de 0000, 1150 y 1200 están fuera del alcance solicitado.

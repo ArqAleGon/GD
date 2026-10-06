@@ -7,7 +7,7 @@ import {createIfcProgressObject} from './ifc-progress.js?v=20260929-element-prog
 import {rankedBoundHits,sectionPickCandidates} from './ifc-picking.js?v=20260930-element-picking-v1';
 
 const scale = 0.06;
-const assetRevision = '20261005-stations-e06';
+const assetRevision = '20261005-stations-e07';
 const point = (p, height = 0) => new THREE.Vector3(p[0] * scale, height, -p[1] * scale);
 
 export async function loadUrbanMap() {

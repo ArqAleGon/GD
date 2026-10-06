@@ -15293,6 +15293,2662 @@
         102460.09867146933
       ],
       "streetDatum": 2550.36
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p001.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p002.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 202,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p003.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 280,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p004.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 37,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p005.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p006.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 622,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p007.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p008.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p009.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p010.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p011.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p012.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 131,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p013.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 279,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p014.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 264,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p015.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 403,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p016.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 253,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p017.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 6,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p018.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 113,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p019.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 162,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p020.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p021.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p022.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p023.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p024.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p025.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p026.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p027.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p028.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p029.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p030.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p031.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p032.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 232,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p033.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 35,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p034.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 46,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p035.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 39,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p036.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 40,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p037.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 39,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p038.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 38,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p039.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 34,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p040.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 36,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p041.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 35,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p042.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 35,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p043.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p044.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p045.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p046.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p047.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p048.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p049.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p050.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p051.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p052.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p053.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p054.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p055.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p056.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p057.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p058.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p059.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p060.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p061.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p062.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p063.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p064.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p065.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p066.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p067.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p068.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p069.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p070.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p071.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p072.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p073.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p074.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p075.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p076.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p077.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p078.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p079.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p080.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p081.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p082.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p083.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p084.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p085.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p086.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p087.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p088.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p089.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p090.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p091.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p092.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p093.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p094.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p095.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p096.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p097.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 149,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p098.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 23,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p099.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p100.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 621,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p101.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 377,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p102.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 40,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p103.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 453,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p104.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 619,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p105.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 270,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p106.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p107.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p108.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p109.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 444,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p110.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 7,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p111.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 464,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p112.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p113.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p114.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 480,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p115.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p116.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p117.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p118.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p119.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p120.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p121.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p122.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p123.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p124.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p125.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p126.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p127.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p128.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 433,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p129.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 9,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p130.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 11,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p131.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 17,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p132.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 40,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p133.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 49,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p134.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 11,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p135.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 13,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p136.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 34,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p137.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 18,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p138.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 10,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p139.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 10,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p140.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 14,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p141.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 21,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-0000-p142.glb.gz",
+      "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 1,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1150-p001.glb.gz",
+      "source": "L1T1-1150-307-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V00",
+      "converted": 42,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1150-p002.glb.gz",
+      "source": "L1T1-1150-307-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V00",
+      "converted": 14,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1150-p003.glb.gz",
+      "source": "L1T1-1150-307-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V00",
+      "converted": 10,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p001.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 391,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p002.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 119,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p003.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 190,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p004.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 120,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p005.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 122,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p006.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 100,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p007.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 656,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p008.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 47,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p009.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 93,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p010.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 90,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p011.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 82,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p012.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 191,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p013.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p014.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 612,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p015.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 21,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p016.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 28,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p017.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 280,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p018.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p019.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p020.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 700,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
+    },
+    {
+      "file": "assets/models/stations/e07-1200-p021.glb.gz",
+      "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 375,
+      "label": "IFC · E07 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        94358.57166269525,
+        101343.90363218375
+      ],
+      "streetDatum": 2550.0
     }
   ],
   "placement": "Shared IFC coordinates aligned to the EPSG:6247 GIS origin; common street datum inferred from E15 and pending survey validation",
@@ -15305,7 +17961,7 @@
   "scale": 0.06,
   "patioStreetDatum": 2541.5,
   "patioDescription": "Modelos 102–112 del Patio Taller en coordenadas compartidas de proyecto; datum visual común 2541,5 m. El conjunto se descarga al entrar en Datos Integrados y se conserva durante la sesión. El IFC 110 PTAR no contiene elementos geométricos. El recurso web 111 conserva nodos y materiales, excluye sólidos de apertura y se clasifica gráficamente por tipo IFC.",
-  "assetRevision": "20261005-stations-e06",
+  "assetRevision": "20261005-stations-e07",
   "stationLevels": {
     "E01": [
       {
@@ -15834,6 +18490,86 @@
         "elevation": 2555.5000000000014,
         "source": "L1T1-0000-306-CON-ED-ARQ-MO-0001_V00.ifc"
       }
+    ],
+    "E07": [
+      {
+        "id": "2SCB_wEvLD9uWO8$uQSWQR",
+        "name": "ARQ_PL_00_SÓTANO",
+        "elevation": 2550.3499999999985,
+        "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc"
+      },
+      {
+        "id": "15fgZNBKz3MREX1EAH9S8Z",
+        "name": "ARQ_PL_00.1_SÓTANO_BRT",
+        "elevation": 2550.929999999999,
+        "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc"
+      },
+      {
+        "id": "1x646Tlv53nuhqn6PxnMdM",
+        "name": "ARQ_PL_00.1_ACCESO",
+        "elevation": 2556.349999999999,
+        "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc"
+      },
+      {
+        "id": "2ztUvJA0P7rR0kRlHYTH8C",
+        "name": "ARQ_PL_00.2_ACCESO",
+        "elevation": 2556.499999999999,
+        "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc"
+      },
+      {
+        "id": "2wMhkE2lvCZhMhyMi37VY_",
+        "name": "ARQ_PL_00.3_ACCESO",
+        "elevation": 2556.599999999999,
+        "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc"
+      },
+      {
+        "id": "2ztUvJA0P7rR0kRlHYTH9K",
+        "name": "ARQ_PL_00.4_ACCESO",
+        "elevation": 2556.749999999999,
+        "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc"
+      },
+      {
+        "id": "2$$nrowlz5pRYHTy8bRROI",
+        "name": "ARQ_PL_01_ACCESO",
+        "elevation": 2557.0499999999993,
+        "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc"
+      },
+      {
+        "id": "2SCB_wEvLD9uWO8$uQSW5e",
+        "name": "ARQ_PL_02_INTERMEDIO",
+        "elevation": 2564.3999999999987,
+        "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc"
+      },
+      {
+        "id": "2SCB_wEvLD9uWO8$uQSW4L",
+        "name": "ARQ_PL_02.1_TOR",
+        "elevation": 2572.299999999999,
+        "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc"
+      },
+      {
+        "id": "2SCB_wEvLD9uWO8$uQSW4n",
+        "name": "ARQ_PL_03_PLATAFORMA",
+        "elevation": 2573.4399999999987,
+        "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc"
+      },
+      {
+        "id": "1x646Tlv53nuhqn6PxnMh3",
+        "name": "ARQ_PL_04_CUB_EDIFICACIONES",
+        "elevation": 2580.0399999999986,
+        "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc"
+      },
+      {
+        "id": "2SCB_wEvLD9uWO8$uQSWRV",
+        "name": "ARQ_PL_04.1",
+        "elevation": 2582.607870313606,
+        "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc"
+      },
+      {
+        "id": "2MUCfAL3n9hgdm4gRSOuqC",
+        "name": "ARQ_PL_05_CUB_NVC",
+        "elevation": 2582.7479237814027,
+        "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc"
+      }
     ]
   },
   "stationTracks": {
@@ -15913,6 +18649,19 @@
       ],
       "source": "E6.dwg",
       "sourceBlock": "L1T1-1270-306-CON-ED-ARQ-MO-0002_rvt-1-ARC_PL_06_GENERAL_LOCATION_1000",
+      "reference": "Georeferenced CAD central hall axis; track elevation from native IFC"
+    },
+    "E07": {
+      "center": [
+        94358.76593329253,
+        101370.37179094227
+      ],
+      "direction": [
+        -0.734095884964958,
+        0.6790458244312493
+      ],
+      "source": "E7.dwg",
+      "sourceBlock": "L1T1-1270-307-CON-ED-ARQ-MO-0002_rvt-1-ARC_PL_06_GENERAL_LOCATION_1000",
       "reference": "Georeferenced CAD central hall axis; track elevation from native IFC"
     }
   }
