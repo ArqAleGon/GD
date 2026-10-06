@@ -9,6 +9,7 @@ export function loadMetroTrainModel(){
   const stream=response.body.pipeThrough(new DecompressionStream('gzip'));
   const data=await new Response(stream).arrayBuffer();
   template=(await new GLTFLoader().parseAsync(data,new URL('./',location.href).href)).scene;
+  const painted=new Set();template.traverse(object=>{if(!object.isMesh)return;for(const material of [].concat(object.material)){if(painted.has(material))continue;painted.add(material);if(!material.map)material.color.convertSRGBToLinear();}});
   return template;
  })();
  return loading;
