@@ -1,4 +1,4 @@
-import {createStationModelControls} from './station-model-controls.js?v=20261006-level-controls';
+import {createStationModelControls} from './station-model-controls.js?v=20261006-level-controls-v3';
 import {loadMetroTrainModel,createMetroTrainCar} from './metro-train-model.js?v=20261005-train-obj-v3';
 import {arrangeBimLabels} from './bim-label-layout.js?v=20261002-controls-v2';
 import {COMPARISONS,comparisonLayers} from './e15-comparison.js';

@@ -35,8 +35,8 @@ export function createStationModelControls(root,entry,code,originalBounds){
   band.planes[0].constant=-(band.min+band.offset);band.planes[1].constant=band.max+band.offset;
  }const band=bands.find(b=>b.key===(selected==='all'?'upper':selected));alarm.position.y=Math.max(height(e.vestibule),band.min+.05)+band.offset;root.updateMatrixWorld(true);}
  function visibleBounds(){const box=new THREE.Box3();for(const band of bands)if(band.group.visible){box.expandByPoint(new THREE.Vector3(originalBounds.min.x,Math.max(originalBounds.min.y,band.min)+band.offset,originalBounds.min.z));box.expandByPoint(new THREE.Vector3(originalBounds.max.x,Math.min(originalBounds.max.y,band.max)+band.offset,originalBounds.max.z));}return box;}
- function cameraPose(index){const band=bands.find(b=>b.key===(selected==='all'?'upper':selected));const y=Math.max(height(e.vestibule),band.min+.1)+band.offset+.1;
-  const x=center.x+(index%2?1:-1)*size.x*.28,z=center.z+(index<2?-1:1)*size.z*.28;
+ function cameraPose(index){const band=bands.find(b=>b.key===(selected==='all'?'upper':selected));const floor={upper:e.vestibule,lower:e.platform,high:e.upper,roof:e.roof,base:0}[band.key],y=height(floor+1.6)+band.offset;
+  const narrow=selected==='lower',x=center.x+(index%2?1:-1)*size.x*(narrow&&longZ?.035:.28),z=center.z+(index<2?-1:1)*size.z*(narrow&&!longZ?.035:.28);
   return {position:new THREE.Vector3(x,y,z),target:new THREE.Vector3(center.x,y-.03,center.z)};
  }
  function pick(raycaster){const hits=raycaster.intersectObjects(pickables.filter(mesh=>mesh.parent.visible),false);for(const hit of hits){const band=hit.object.userData.stationBand;if(hit.point.y<band.min+band.offset-.0001||hit.point.y>band.max+band.offset+.0001)continue;return {...hit.object.userData.progressObject,mesh:hit.object};}return null;}
