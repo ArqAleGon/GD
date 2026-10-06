@@ -3,7 +3,7 @@ import {loadMetroTrainModel,createMetroTrainCar} from './metro-train-model.js?v=
 import {arrangeBimLabels} from './bim-label-layout.js?v=20261002-controls-v2';
 import {COMPARISONS,comparisonLayers} from './e15-comparison.js';
 import {RENDER_E15_CAMERA,renderE15Fov} from './render-e15-camera.js';
-import {buildBogotaContext,cityPoint,METRES_TO_WORLD} from './bogota-context.js?v=20261006-ortho-5cm';
+import {buildBogotaContext,cityPoint,METRES_TO_WORLD} from './bogota-context.js?v=20261006-ortho-5cm-tiles';
 import { localizeInterface } from './interface-language.js';
 import { loadUrbanMap, buildUrbanMap } from './urban-map-20260915-i16-e16.js?v=20261006-station-tracking';
 import { networkLines } from './network-data.js?v=20260923-l1';

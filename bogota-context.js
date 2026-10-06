@@ -113,29 +113,41 @@ function addCssAerial(group){
   const token=++requestToken;if(pending){removeTileGroup(pending);pending=null;}
   const next=new THREE.Group();next.name='WMS · imagen unica del campo visible';next.visible=false;detailHost.add(next);pending=next;
   const ratio=request.width/Math.max(request.height,.001);let pixelWidth,pixelHeight;
-  const longestPixels=Math.min(4096,Math.max(2048,Math.ceil(Math.max(request.width,request.height)*METRES_PER_MAP_UNIT/.05)));
+  const longestPixels=Math.min(Math.max(request.width,request.height)*METRES_PER_MAP_UNIT>300?2048:4096,Math.max(2048,Math.ceil(Math.max(request.width,request.height)*METRES_PER_MAP_UNIT/.05)));
   if(ratio>=1){pixelWidth=longestPixels;pixelHeight=Math.max(256,Math.round(longestPixels/ratio));}else{pixelHeight=longestPixels;pixelWidth=Math.max(256,Math.round(longestPixels*ratio));}
   const nextMeta={...request,pixelWidth,pixelHeight};pendingMeta=nextMeta;
   const {minX,minY,maxX,maxY}=request;
-  const {object,image}=cssImagePlane(nativeOrthoUrl(minX,minY,maxX,maxY,pixelWidth,pixelHeight),pixelWidth,pixelHeight,request.width*WORLD_SCALE,request.height*WORLD_SCALE,(minX+maxX)/2*WORLD_SCALE-MAP_WIDTH/2*WORLD_SCALE,(minY+maxY)/2*WORLD_SCALE-MAP_HEIGHT/2*WORLD_SCALE,'nativeAerialTile nativeAerialComposite');
-  image.style.opacity='0';
+  // Small tiles avoid the transfer/timeouts of a single 4096px PNG.
+  const columns=Math.ceil(pixelWidth/1024),rows=Math.ceil(pixelHeight/1024),jobs=[];let completed=0,inFlight=0,failed=false;
   const fail=()=>{
-   if(token!==requestToken)return;
-   clearTimeout(timeout);image.onload=null;image.onerror=null;removeTileGroup(next);pending=null;pendingMeta=null;retryAfter=performance.now()+30000;
-   report((cachedReady?'Respaldo local ≈ 2 m/píxel':'Base catastral')+' · servicio de detalle sin respuesta');
+   if(token!==requestToken||failed)return;failed=true;clearTimeout(timeout);removeTileGroup(next);pending=null;pendingMeta=null;retryAfter=performance.now()+15000;
+   report((cachedReady?'Respaldo local ≈ 2 m/píxel':'Base catastral')+' · detalle temporalmente no disponible');
   };
-  const timeout=setTimeout(fail,20000);
-  image.onload=()=>{
-   if(token!==requestToken)return;
-   clearTimeout(timeout);
+  const finish=()=>{
+   if(token!==requestToken||failed)return;clearTimeout(timeout);
    if(active&&active!==next)removeTileGroup(active);
-   active=next;activeMeta=nextMeta;pending=null;pendingMeta=null;next.visible=true;image.style.opacity='1';
+   active=next;activeMeta=nextMeta;pending=null;pendingMeta=null;next.visible=true;
    const groundSampleDistanceM=Math.max(request.width*METRES_PER_MAP_UNIT/pixelWidth,request.height*METRES_PER_MAP_UNIT/pixelHeight);
-   report('Resolución visible: '+(groundSampleDistanceM*100).toFixed(1)+' cm/píxel');
-   document.dispatchEvent(new CustomEvent('nativeaerialready',{detail:{groundSampleDistanceM,tileCount:1,bounds:[minX,minY,maxX,maxY]}}));
+   report('Resolución visible: '+(Math.max(.05,groundSampleDistanceM)*100).toFixed(1)+' cm/píxel');
+   document.dispatchEvent(new CustomEvent('nativeaerialready',{detail:{groundSampleDistanceM:Math.max(.05,groundSampleDistanceM),tileCount:jobs.length,bounds:[minX,minY,maxX,maxY]}}));
   };
-  image.onerror=fail;
-  next.add(object);
+  const timeout=setTimeout(fail,60000);
+  for(let row=0;row<rows;row++)for(let col=0;col<columns;col++){
+   const px=col*1024,py=row*1024,w=Math.min(1024,pixelWidth-px),h=Math.min(1024,pixelHeight-py);
+   const x0=minX+request.width*px/pixelWidth,y0=minY+request.height*py/pixelHeight,x1=minX+request.width*(px+w)/pixelWidth,y1=minY+request.height*(py+h)/pixelHeight;
+   jobs.push({x0,y0,x1,y1,w,h});
+  }
+  const queue=jobs.slice();
+  const pump=()=>{
+   if(failed||token!==requestToken)return;
+   while(inFlight<4&&queue.length){
+    const {x0,y0,x1,y1,w,h}=queue.shift();inFlight++;
+    const {object,image}=cssImagePlane(nativeOrthoUrl(x0,y0,x1,y1,w,h),w,h,(x1-x0)*WORLD_SCALE,(y1-y0)*WORLD_SCALE,(x0+x1)/2*WORLD_SCALE-MAP_WIDTH/2*WORLD_SCALE,(y0+y1)/2*WORLD_SCALE-MAP_HEIGHT/2*WORLD_SCALE,'nativeAerialTile nativeAerialComposite');
+    image.onload=()=>{if(failed||token!==requestToken)return;inFlight--;completed++;if(completed===jobs.length)finish();else pump();};
+    image.onerror=fail;next.add(object);
+   }
+  };
+  pump();
  };
  return {group:detailHost,context,detailHost,setVisible,update};
 }
