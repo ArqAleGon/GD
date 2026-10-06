@@ -58,3 +58,5 @@ Every integrated station must also update its Gestión de estaciones and trackin
 Use one common vertical display datum for all disciplines of a station, taken from its architecture site reference. Individual IFC site elevations can differ while geometry uses shared absolute coordinates; subtracting each discipline's different elevation misaligns architecture and structure.
 
 Stations outside the original E15/E16 pilot must position tracked trains on their own CAD central-hall axis, never on the nearest segment of the pilot route. Read rail height from actual IFC rail elements, excluding handrails/railings, then native TOR or the station's coded PL_02.2 level. Native IFC names are in progress metadata; mesh names can contain only GlobalIds.
+
+Fit BIM sections using all eight body-bound corners projected onto the intended camera direction, vertical field of view, zoom and viewport aspect ratio. Keep a visible margin; longest-axis distance heuristics can crop long stations such as E06. Preserve the exact prior camera for Volver.

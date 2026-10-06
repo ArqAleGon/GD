@@ -1,0 +1,1037 @@
+{
+  "section": "E06",
+  "models": [
+    {
+      "source": "L1T1-0000-306-CON-ED-ARQ-MO-0001_V00.ifc",
+      "code": "0000",
+      "status": "converted",
+      "sourceBytes": 675410729,
+      "converted": 49168,
+      "missing": [],
+      "bounds": {
+        "min": [
+          92915.45015074177,
+          2548.9500000000003,
+          -102507.0039399885
+        ],
+        "max": [
+          93075.65343909989,
+          2583.840000000001,
+          -102413.19340295016
+        ]
+      },
+      "siteElevation": 2550.36,
+      "storeys": [
+        {
+          "id": "0BXQ6nGx53X9KRoVyG5XNG",
+          "name": "ARQ_PL_00_SÓTANO",
+          "elevation": 2549.700000000001,
+          "source": "L1T1-0000-306-CON-ED-ARQ-MO-0001_V00.ifc"
+        },
+        {
+          "id": "0BXQ6nGx53X9KRoVyG5X8Z",
+          "name": "ARQ_PL_02_INTERMEDIO",
+          "elevation": 2563.1000000000026,
+          "source": "L1T1-0000-306-CON-ED-ARQ-MO-0001_V00.ifc"
+        },
+        {
+          "id": "0BXQ6nGx53X9KRoVyG7mTs",
+          "name": "ARQ_PL_02.1_PLACA_VIGA_CAJÓN",
+          "elevation": 2569.320000000001,
+          "source": "L1T1-0000-306-CON-ED-ARQ-MO-0001_V00.ifc"
+        },
+        {
+          "id": "0BXQ6nGx53X9KRoVyG5X9U",
+          "name": "ARQ_PL_02.2_TOR",
+          "elevation": 2571.4500000000025,
+          "source": "L1T1-0000-306-CON-ED-ARQ-MO-0001_V00.ifc"
+        },
+        {
+          "id": "0BXQ6nGx53X9KRoVyG5X9w",
+          "name": "ARQ_PL_03_PLATAFORMA",
+          "elevation": 2572.5900000000024,
+          "source": "L1T1-0000-306-CON-ED-ARQ-MO-0001_V00.ifc"
+        },
+        {
+          "id": "0BXQ6nGx53X9KRoVyG5XMK",
+          "name": "ARQ_PL_04.1_CUB_NVC",
+          "elevation": 2580.845251059934,
+          "source": "L1T1-0000-306-CON-ED-ARQ-MO-0001_V00.ifc"
+        },
+        {
+          "id": "0BXQ6nGx53X9KRoVyGTtTw",
+          "name": "ARQ_PL_05_CUB_NVC",
+          "elevation": 2582.0334956240436,
+          "source": "L1T1-0000-306-CON-ED-ARQ-MO-0001_V00.ifc"
+        },
+        {
+          "id": "0BXQ6nGx53X9KRoVyG5UmP",
+          "name": "ARQ_PL_01_ACCESO",
+          "elevation": 2555.5000000000014,
+          "source": "L1T1-0000-306-CON-ED-ARQ-MO-0001_V00.ifc"
+        }
+      ],
+      "types": {
+        "IfcWallStandardCase": 2179,
+        "IfcWall": 208,
+        "IfcPlate": 11122,
+        "IfcMember": 23999,
+        "IfcDoor": 252,
+        "IfcSlab": 1213,
+        "IfcBuildingElementProxy": 1593,
+        "IfcFlowTerminal": 177,
+        "IfcFurnishingElement": 808,
+        "IfcStairFlight": 149,
+        "IfcCovering": 119,
+        "IfcRoof": 8,
+        "IfcColumn": 805,
+        "IfcWindow": 80,
+        "IfcBeam": 707,
+        "IfcFlowSegment": 4,
+        "IfcCurtainWall": 5538,
+        "IfcRailing": 207
+      },
+      "parts": [
+        {
+          "file": "assets/models/stations/e06-0000-p001.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p001.glb",
+          "bytes": 281254,
+          "rawBytes": 1219480,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p002.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p002.glb",
+          "bytes": 742643,
+          "rawBytes": 1993836,
+          "instances": 440
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p003.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p003.glb",
+          "bytes": 233494,
+          "rawBytes": 842084,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p004.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p004.glb",
+          "bytes": 580011,
+          "rawBytes": 1569440,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p005.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p005.glb",
+          "bytes": 756762,
+          "rawBytes": 1810796,
+          "instances": 361
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p006.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p006.glb",
+          "bytes": 806029,
+          "rawBytes": 2083144,
+          "instances": 552
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p007.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p007.glb",
+          "bytes": 1006448,
+          "rawBytes": 1677512,
+          "instances": 230
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p008.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p008.glb",
+          "bytes": 772645,
+          "rawBytes": 1491816,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p009.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p009.glb",
+          "bytes": 22821,
+          "rawBytes": 377088,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p010.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p010.glb",
+          "bytes": 20012,
+          "rawBytes": 391772,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p011.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p011.glb",
+          "bytes": 25390,
+          "rawBytes": 362684,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p012.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p012.glb",
+          "bytes": 23911,
+          "rawBytes": 386488,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p013.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p013.glb",
+          "bytes": 19817,
+          "rawBytes": 386740,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p014.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p014.glb",
+          "bytes": 23926,
+          "rawBytes": 387840,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p015.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p015.glb",
+          "bytes": 26972,
+          "rawBytes": 386352,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p016.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p016.glb",
+          "bytes": 23618,
+          "rawBytes": 381852,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p017.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p017.glb",
+          "bytes": 17954,
+          "rawBytes": 387392,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p018.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p018.glb",
+          "bytes": 23564,
+          "rawBytes": 487992,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p019.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p019.glb",
+          "bytes": 25910,
+          "rawBytes": 355524,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p020.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p020.glb",
+          "bytes": 25951,
+          "rawBytes": 355452,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p021.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p021.glb",
+          "bytes": 25883,
+          "rawBytes": 355480,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p022.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p022.glb",
+          "bytes": 21390,
+          "rawBytes": 355752,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p023.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p023.glb",
+          "bytes": 24235,
+          "rawBytes": 355672,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p024.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p024.glb",
+          "bytes": 24790,
+          "rawBytes": 356768,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p025.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p025.glb",
+          "bytes": 25947,
+          "rawBytes": 356828,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p026.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p026.glb",
+          "bytes": 25847,
+          "rawBytes": 356912,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p027.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p027.glb",
+          "bytes": 20276,
+          "rawBytes": 356544,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p028.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p028.glb",
+          "bytes": 25125,
+          "rawBytes": 356884,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p029.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p029.glb",
+          "bytes": 24392,
+          "rawBytes": 407688,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p030.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p030.glb",
+          "bytes": 24169,
+          "rawBytes": 417460,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p031.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p031.glb",
+          "bytes": 17164,
+          "rawBytes": 356720,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p032.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p032.glb",
+          "bytes": 16724,
+          "rawBytes": 355396,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p033.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p033.glb",
+          "bytes": 65828,
+          "rawBytes": 1032372,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p034.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p034.glb",
+          "bytes": 137143,
+          "rawBytes": 1805048,
+          "instances": 334
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p035.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p035.glb",
+          "bytes": 82777,
+          "rawBytes": 1420756,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p036.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p036.glb",
+          "bytes": 100542,
+          "rawBytes": 772496,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p037.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p037.glb",
+          "bytes": 320267,
+          "rawBytes": 1352672,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p038.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p038.glb",
+          "bytes": 31638,
+          "rawBytes": 444184,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p039.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p039.glb",
+          "bytes": 288787,
+          "rawBytes": 961172,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p040.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p040.glb",
+          "bytes": 29088,
+          "rawBytes": 450780,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p041.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p041.glb",
+          "bytes": 32785,
+          "rawBytes": 637936,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p042.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p042.glb",
+          "bytes": 44228,
+          "rawBytes": 522648,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p043.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p043.glb",
+          "bytes": 33683,
+          "rawBytes": 398620,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p044.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p044.glb",
+          "bytes": 32796,
+          "rawBytes": 399212,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p045.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p045.glb",
+          "bytes": 895241,
+          "rawBytes": 1790860,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p046.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p046.glb",
+          "bytes": 34908,
+          "rawBytes": 420032,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p047.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p047.glb",
+          "bytes": 37636,
+          "rawBytes": 449892,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p048.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p048.glb",
+          "bytes": 244845,
+          "rawBytes": 1334924,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p049.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p049.glb",
+          "bytes": 114344,
+          "rawBytes": 695236,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p050.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p050.glb",
+          "bytes": 800941,
+          "rawBytes": 2021396,
+          "instances": 564
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p051.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p051.glb",
+          "bytes": 677510,
+          "rawBytes": 1995404,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p052.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p052.glb",
+          "bytes": 594651,
+          "rawBytes": 1974248,
+          "instances": 454
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p053.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p053.glb",
+          "bytes": 756554,
+          "rawBytes": 1589260,
+          "instances": 77
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p054.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p054.glb",
+          "bytes": 788956,
+          "rawBytes": 1700524,
+          "instances": 169
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p055.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p055.glb",
+          "bytes": 592732,
+          "rawBytes": 1964992,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p056.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p056.glb",
+          "bytes": 163649,
+          "rawBytes": 1023548,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p057.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p057.glb",
+          "bytes": 432909,
+          "rawBytes": 1886524,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p058.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p058.glb",
+          "bytes": 344088,
+          "rawBytes": 1329100,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p059.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p059.glb",
+          "bytes": 83708,
+          "rawBytes": 527656,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p060.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p060.glb",
+          "bytes": 29341,
+          "rawBytes": 386548,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p061.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p061.glb",
+          "bytes": 29312,
+          "rawBytes": 398588,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p062.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p062.glb",
+          "bytes": 27820,
+          "rawBytes": 401080,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p063.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p063.glb",
+          "bytes": 28584,
+          "rawBytes": 371660,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p064.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p064.glb",
+          "bytes": 30556,
+          "rawBytes": 407720,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p065.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p065.glb",
+          "bytes": 43892,
+          "rawBytes": 527304,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p066.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p066.glb",
+          "bytes": 294117,
+          "rawBytes": 1178756,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p067.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p067.glb",
+          "bytes": 292667,
+          "rawBytes": 1343876,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p068.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p068.glb",
+          "bytes": 205422,
+          "rawBytes": 1037648,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p069.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p069.glb",
+          "bytes": 255033,
+          "rawBytes": 1253432,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p070.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p070.glb",
+          "bytes": 308907,
+          "rawBytes": 1538944,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p071.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p071.glb",
+          "bytes": 422414,
+          "rawBytes": 1670096,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p072.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p072.glb",
+          "bytes": 387399,
+          "rawBytes": 1351428,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p073.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p073.glb",
+          "bytes": 332723,
+          "rawBytes": 1456088,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p074.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p074.glb",
+          "bytes": 196650,
+          "rawBytes": 1057132,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p075.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p075.glb",
+          "bytes": 743728,
+          "rawBytes": 1821092,
+          "instances": 286
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p076.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p076.glb",
+          "bytes": 801705,
+          "rawBytes": 1666368,
+          "instances": 13
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p077.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p077.glb",
+          "bytes": 534329,
+          "rawBytes": 1556716,
+          "instances": 43
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p078.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p078.glb",
+          "bytes": 473378,
+          "rawBytes": 1576512,
+          "instances": 59
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p079.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p079.glb",
+          "bytes": 786650,
+          "rawBytes": 1728628,
+          "instances": 25
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p080.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p080.glb",
+          "bytes": 837717,
+          "rawBytes": 1671476,
+          "instances": 10
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p081.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p081.glb",
+          "bytes": 810944,
+          "rawBytes": 1634592,
+          "instances": 15
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p082.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p082.glb",
+          "bytes": 752713,
+          "rawBytes": 1529464,
+          "instances": 21
+        },
+        {
+          "file": "assets/models/stations/e06-0000-p083.glb.gz",
+          "rawFile": "assets/models/stations/e06-0000-p083.glb",
+          "bytes": 237248,
+          "rawBytes": 635516,
+          "instances": 15
+        }
+      ],
+      "seconds": 107,
+      "allRepresentationBounds": {
+        "min": [
+          92915.45015074177,
+          2548.9500000000003,
+          -102507.0039399885
+        ],
+        "max": [
+          93075.65343909989,
+          2583.840000000001,
+          -102413.19340295016
+        ]
+      }
+    },
+    {
+      "source": "L1T1-1150-306-CON-ED-EST-MO-0001_V00.ifc",
+      "code": "1150",
+      "status": "converted",
+      "sourceBytes": 53268365,
+      "converted": 99,
+      "missing": [],
+      "bounds": {
+        "min": [
+          92924.57236140297,
+          2569.7199999962068,
+          -102492.69138299672
+        ],
+        "max": [
+          93066.62165538697,
+          2572.0400009155273,
+          -102427.46762290856
+        ]
+      },
+      "siteElevation": 2550.0,
+      "storeys": [],
+      "types": {
+        "IfcBuildingElementProxy": 99
+      },
+      "parts": [
+        {
+          "file": "assets/models/stations/e06-1150-p001.glb.gz",
+          "rawFile": "assets/models/stations/e06-1150-p001.glb",
+          "bytes": 868338,
+          "rawBytes": 1517156,
+          "instances": 16
+        },
+        {
+          "file": "assets/models/stations/e06-1150-p002.glb.gz",
+          "rawFile": "assets/models/stations/e06-1150-p002.glb",
+          "bytes": 132804,
+          "rawBytes": 276000,
+          "instances": 47
+        },
+        {
+          "file": "assets/models/stations/e06-1150-p003.glb.gz",
+          "rawFile": "assets/models/stations/e06-1150-p003.glb",
+          "bytes": 775583,
+          "rawBytes": 1576792,
+          "instances": 14
+        },
+        {
+          "file": "assets/models/stations/e06-1150-p004.glb.gz",
+          "rawFile": "assets/models/stations/e06-1150-p004.glb",
+          "bytes": 775942,
+          "rawBytes": 1579620,
+          "instances": 14
+        },
+        {
+          "file": "assets/models/stations/e06-1150-p005.glb.gz",
+          "rawFile": "assets/models/stations/e06-1150-p005.glb",
+          "bytes": 452172,
+          "rawBytes": 915824,
+          "instances": 8
+        }
+      ],
+      "seconds": 146,
+      "allRepresentationBounds": {
+        "min": [
+          92924.57236140297,
+          2569.7199999962068,
+          -102492.69138299672
+        ],
+        "max": [
+          93066.62165538697,
+          2572.0400009155273,
+          -102427.46762290856
+        ]
+      }
+    },
+    {
+      "source": "L1T1-1200-306-CON-ED-EST-MO-0001_V01.ifc",
+      "code": "1200",
+      "status": "converted",
+      "sourceBytes": 289890285,
+      "converted": 8349,
+      "missing": [],
+      "bounds": {
+        "min": [
+          92916.15096002803,
+          2554.2,
+          -102506.97850987062
+        ],
+        "max": [
+          93074.95049808314,
+          2581.9841692459477,
+          -102413.21839232938
+        ]
+      },
+      "siteElevation": 2551.5,
+      "storeys": [
+        {
+          "id": "1WLt3xwJ53Qh9YxZMOkBSG",
+          "name": "STR_PL_00_BASEMENT",
+          "elevation": 2549.6999999999985,
+          "source": "L1T1-1200-306-CON-ED-EST-MO-0001_V01.ifc"
+        },
+        {
+          "id": "1WLt3xwJ53Qh9YxZMOkBSa",
+          "name": "STR_PL_01_ACCESS",
+          "elevation": 2555.5,
+          "source": "L1T1-1200-306-CON-ED-EST-MO-0001_V01.ifc"
+        },
+        {
+          "id": "1WLt3xwJ53Qh9YxZMOkBSS",
+          "name": "STR_PL_02_INTERMEDIATE",
+          "elevation": 2563.099999999999,
+          "source": "L1T1-1200-306-CON-ED-EST-MO-0001_V01.ifc"
+        },
+        {
+          "id": "1WLt3xwJ53Qh9YxZMOkBSU",
+          "name": "STR_PL_03_UNDER-PLATFORM",
+          "elevation": 2569.3199999999997,
+          "source": "L1T1-1200-306-CON-ED-EST-MO-0001_V01.ifc"
+        },
+        {
+          "id": "1WLt3xwJ53Qh9YxZMOkBST",
+          "name": "STR_PL_04_PLATFORM",
+          "elevation": 2572.59,
+          "source": "L1T1-1200-306-CON-ED-EST-MO-0001_V01.ifc"
+        },
+        {
+          "id": "1WLt3xwJ53Qh9YxZMOkBSV",
+          "name": "STR_PL_05_ROOF",
+          "elevation": 2578.149999999999,
+          "source": "L1T1-1200-306-CON-ED-EST-MO-0001_V01.ifc"
+        },
+        {
+          "id": "1WLt3xwJ53Qh9YxZMOjDrD",
+          "name": "STR_PL_06_ROOF-STRAPS",
+          "elevation": 2580.845251059932,
+          "source": "L1T1-1200-306-CON-ED-EST-MO-0001_V01.ifc"
+        }
+      ],
+      "types": {
+        "IfcColumn": 841,
+        "IfcBeam": 6831,
+        "IfcBuildingElementProxy": 403,
+        "IfcStairFlight": 146,
+        "IfcSlab": 114,
+        "IfcWallStandardCase": 14
+      },
+      "parts": [
+        {
+          "file": "assets/models/stations/e06-1200-p001.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p001.glb",
+          "bytes": 340597,
+          "rawBytes": 1581524,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p002.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p002.glb",
+          "bytes": 940475,
+          "rawBytes": 1798808,
+          "instances": 290
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p003.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p003.glb",
+          "bytes": 983606,
+          "rawBytes": 1643128,
+          "instances": 130
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p004.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p004.glb",
+          "bytes": 983891,
+          "rawBytes": 1641580,
+          "instances": 126
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p005.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p005.glb",
+          "bytes": 987699,
+          "rawBytes": 1640752,
+          "instances": 124
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p006.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p006.glb",
+          "bytes": 987712,
+          "rawBytes": 1644588,
+          "instances": 127
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p007.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p007.glb",
+          "bytes": 980506,
+          "rawBytes": 1640864,
+          "instances": 131
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p008.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p008.glb",
+          "bytes": 1080543,
+          "rawBytes": 1597920,
+          "instances": 87
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p009.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p009.glb",
+          "bytes": 906404,
+          "rawBytes": 2119024,
+          "instances": 589
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p010.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p010.glb",
+          "bytes": 882893,
+          "rawBytes": 2207700,
+          "instances": 664
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p011.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p011.glb",
+          "bytes": 987688,
+          "rawBytes": 1615788,
+          "instances": 95
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p012.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p012.glb",
+          "bytes": 1076538,
+          "rawBytes": 1599036,
+          "instances": 91
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p013.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p013.glb",
+          "bytes": 1042234,
+          "rawBytes": 1601180,
+          "instances": 94
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p014.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p014.glb",
+          "bytes": 1054841,
+          "rawBytes": 1604540,
+          "instances": 82
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p015.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p015.glb",
+          "bytes": 851115,
+          "rawBytes": 1666804,
+          "instances": 169
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p016.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p016.glb",
+          "bytes": 951868,
+          "rawBytes": 1641520,
+          "instances": 131
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p017.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p017.glb",
+          "bytes": 800474,
+          "rawBytes": 1952852,
+          "instances": 430
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p018.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p018.glb",
+          "bytes": 588457,
+          "rawBytes": 1883252,
+          "instances": 410
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p019.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p019.glb",
+          "bytes": 221102,
+          "rawBytes": 1485748,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p020.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p020.glb",
+          "bytes": 83671,
+          "rawBytes": 1280684,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p021.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p021.glb",
+          "bytes": 125284,
+          "rawBytes": 1262744,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p022.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p022.glb",
+          "bytes": 246306,
+          "rawBytes": 1208440,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p023.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p023.glb",
+          "bytes": 113021,
+          "rawBytes": 1229032,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/e06-1200-p024.glb.gz",
+          "rawFile": "assets/models/stations/e06-1200-p024.glb",
+          "bytes": 78126,
+          "rawBytes": 664540,
+          "instances": 379
+        }
+      ],
+      "seconds": 53,
+      "allRepresentationBounds": {
+        "min": [
+          92916.15096002803,
+          2554.2,
+          -102506.97850987062
+        ],
+        "max": [
+          93074.95049808314,
+          2581.9841692459477,
+          -102413.21839232938
+        ]
+      }
+    }
+  ],
+  "status": "converted",
+  "sourceAxisOutliers": [],
+  "validation": {
+    "missingRepresentedInstances": 0,
+    "sourceAxisOutliers": 0,
+    "centerDistanceToCadFootprintMeters": 0.0,
+    "centerDistanceToCentralHallMeters": 0.102,
+    "scope": "0000 + 1150 + 1200",
+    "bodyEnvelopeSizeMeters": [
+      160.20328835811233,
+      34.89000000000078,
+      93.81053703834186
+    ]
+  }
+}

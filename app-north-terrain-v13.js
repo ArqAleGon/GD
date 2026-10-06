@@ -5,7 +5,7 @@ import {COMPARISONS,comparisonLayers} from './e15-comparison.js';
 import {RENDER_E15_CAMERA,renderE15Fov} from './render-e15-camera.js';
 import {buildBogotaContext,cityPoint,METRES_TO_WORLD} from './bogota-context.js?v=20261006-ortho-5cm-tiles';
 import { localizeInterface } from './interface-language.js';
-import { loadUrbanMap, buildUrbanMap } from './urban-map-20260915-i16-e16.js?v=20261005-stations-e05';
+import { loadUrbanMap, buildUrbanMap } from './urban-map-20260915-i16-e16.js?v=20261005-stations-e06';
 import { networkLines } from './network-data.js?v=20260923-l1';
 import {P6,P6_STATUS,stationOptions as p6Stations,workFrontOptions as p6WorkFronts,ueOptions as p6UEs,filterP6,summarizeP6,groupP6} from './p6-dashboard.js?v=20260923-multiue';
 import {OBJECT_PROGRESS_STORAGE_KEY,appendProgressRecord,loadProgressRecords,recordsForObject,summarizeProgress} from './object-progress.js?v=20260929-object-progress-v1';
@@ -29,7 +29,8 @@ strings.ifcE02=['IFC E02','IFC E02'];
 strings.ifcE03=['IFC E03','IFC E03'];
 strings.ifcE04=['IFC E04','IFC E04'];
 strings.ifcE05=['IFC E05','IFC E05'];
-const ifcToolSections={ifcE05:'E05',ifcE04:'E04',ifcE03:'E03',ifcE02:'E02',ifcE01:'E01',ifcE15:'E15',ifcI16:'I16',ifcE16:'E16',ifc102:'PT102',ifc103:'PT103',ifc104:'PT104',ifc105:'PT105',ifc106:'PT106',ifc107:'PT107',ifc108:'PT108',ifc109:'PT109',ifc110:'PT110',ifc111:'PT111',ifc112:'PT112'};
+strings.ifcE06=['IFC E06','IFC E06'];
+const ifcToolSections={ifcE06:'E06',ifcE05:'E05',ifcE04:'E04',ifcE03:'E03',ifcE02:'E02',ifcE01:'E01',ifcE15:'E15',ifcI16:'I16',ifcE16:'E16',ifc102:'PT102',ifc103:'PT103',ifc104:'PT104',ifc105:'PT105',ifc106:'PT106',ifc107:'PT107',ifc108:'PT108',ifc109:'PT109',ifc110:'PT110',ifc111:'PT111',ifc112:'PT112'};
 const trackedStationCodes=[...new Set(Object.values(ifcToolSections).filter(code=>/^E\d{2}$/.test(code)))].sort();
 const trackedStationName=code=>({E15:'E15 · Calle 63',E16:'E16 · Calle 72'}[code]||networkLines[0].stations.find(station=>station.code===code)?.name||code);
 const stationSelectorOptions=()=>trackedStationCodes.map(code=>`<option value="${code}" ${activeStation.code===code?'selected':''}>${safe(trackedStationName(code))}</option>`).join('');
@@ -84,7 +85,7 @@ function renderPanels(){
 }
 function button(key,active=false,extra=''){return `<button data-tool="${key}" class="${active?'active':''}" ${extra}>${tr(key)}</button>`}
 function networkModeButton(key,active,swatch){return `<button data-tool="${key}" class="networkModeBtn ${active?'active':''}" aria-pressed="${active}"><i class="lineSwatch ${swatch}"></i>${tr(key)}</button>`}
-const bimModelTools=['patioOverview','ifcE01','ifcE02','ifcE03','ifcE04','ifcE05','ifcE15','ifcE16','ifcI16','ifc102','ifc103','ifc104','ifc105','ifc106','ifc107','ifc108','ifc109','ifc110','ifc111','ifc112'];
+const bimModelTools=['patioOverview','ifcE01','ifcE02','ifcE03','ifcE04','ifcE05','ifcE06','ifcE15','ifcE16','ifcI16','ifc102','ifc103','ifc104','ifc105','ifc106','ifc107','ifc108','ifc109','ifc110','ifc111','ifc112'];
 function bimModelMenu(){return `<details class="bimModelMenu"><summary class="bimMenuToggle" data-bim-menu aria-haspopup="menu"><span aria-hidden="true">☰</span>${tr('modelMenu')}<i aria-hidden="true">⌄</i></summary><div class="bimModelMenuPanel" role="menu" aria-label="${tr('modelMenu')}">${bimModelTools.map(key=>button(key,key==='patioOverview'?!activeIfcFocus:ifcToolSections[key]===activeIfcFocus,`aria-pressed="${key==='patioOverview'?!activeIfcFocus:ifcToolSections[key]===activeIfcFocus}"`)).join('')}</div></details>`;}
 function renderToolbar(){let s='';if(hasRealStation()&&stationViews.has(state.view)){s=button('floorAll',state.level==='all')+button('floorUpper',state.level==='upper')+button('floorLower',state.level==='lower')+'<button data-tool="floorBase" '+(state.level==='base'?'class="active"':'')+'>Accesos y cimentación</button>'+(stationControls?.levelKeys.includes('high')?'<button data-tool="floorHigh" '+(state.level==='high'?'class="active"':'')+'>'+safe(stationControls.levelLabels.high)+'</button>':'')+'<button data-tool="floorRoof" '+(state.level==='roof'?'class="active"':'')+'>Cubierta</button>'+button('explode',state.explode)+button('alarm',state.alarm)+[0,1,2,3].map(n=>`<button data-cctv="${n}">CAM 0${n+1}</button>`).join('')+button('tour',state.tour)+button('home')+button('wire',state.wire);}else if(['network','events','traffic','dispatch','urban'].includes(state.view)){s=(isUrban()?bimModelMenu()+(isolatedBimSection?'':button('renderSpot',state.renderCompare,`aria-pressed="${state.renderCompare}"`))+(isolatedBimSection?'':button('seismic',state.seismic,`aria-pressed="${state.seismic}"`)+button('volumes',state.volumes,`aria-pressed="${state.volumes}"`))+button('labels',state.labels,`aria-pressed="${state.labels}"`)+(isolatedBimSection?'<button data-tool="returnFromIsolation">Volver</button>':button('fullSeismic')):networkModeButton('lineOne',state.line===0,'lineOneSwatch')+networkModeButton('futureLines',state.line===-1,'futureSwatch')+button('aerial',state.aerial,`aria-pressed="${state.aerial}"`))}else if(state.view==='equipment'){s=button('home')+button('power',state.power)+button('wire',state.wire)+button('alarm',state.alarm)}else if(state.view==='railway'||state.view==='maintenance'){s=button('home')+button('follow',following)+button('doors',state.doors)+button('wire',state.wire)+button(state.paused?'play':'pause')+button('power',state.power)}else if(state.view==='indoor'){s=button('tour',state.tour)+[0,1,2,3].map(n=>`<button data-cctv="${n}">CAM 0${n+1}</button>`).join('')+button('exit')}else{s=button('floorAll',state.level==='all')+button('floorUpper',state.level==='upper')+button('floorLower',state.level==='lower')+button('explode',state.explode)+button('people',state.people)+button('tour',state.tour)+button('alarm',state.alarm)+button('doors',state.doors)}if(trackingViews.has(state.view))s='<label class="stationModelSelector">Estación <select id="trackingStation" aria-label="Estación de seguimiento">'+stationSelectorOptions()+'</select></label>'+s;$('#toolbar').innerHTML=s;$('#trackingStation')?.addEventListener('change',event=>{const code=event.target.value;activeStation={line:0,code,name:trackedStationName(code)};setView(state.view);});$$('[data-tool]').forEach(b=>b.onclick=async()=>{const tool=b.dataset.tool,wrapper=b.closest('.bimModelMenu');wrapper?.removeAttribute('open');$('#app').dataset.lastTool=tool;delete $('#app').dataset.toolError;try{await action(tool)}catch(error){console.error(error);$('#app').dataset.toolError=error?.message||String(error);toast(state.lang==='en'?'The requested action could not be completed':'No se pudo completar la acción solicitada')}});$$('[data-cctv]').forEach(b=>b.onclick=()=>cameraView(+b.dataset.cctv));}
 
@@ -184,7 +185,18 @@ const stationViews=new Set(['station','indoor','security','evacuation','platform
 const trackingViews=new Set([...stationViews,'railway','maintenance']);
 function hasRealStation(){return trackingViews.has(state.view)&&trackedStationCodes.includes(activeStation.code);}
 function stopTrainCamera(){following=false;state.tour=false;controls.autoRotate=false;state.rotate=false;renderToolbar();}
-function fitStationModel(instant=false){if(!stationModelBounds)return;const bounds=stationControls?.visibleBounds()||stationModelBounds,c=bounds.getCenter(new THREE.Vector3()),s=bounds.getSize(new THREE.Vector3());const d=Math.max(s.x/Math.max(camera.aspect,.4),s.z,s.y*1.8)*1.65;go([c.x+d*.65,c.y+d*.65,c.z+d*.8],c.toArray(),instant);}
+function fitBodyBounds(box,direction,targetBias=0,margin=1.15,instant=false){
+ const target=box.getCenter(new THREE.Vector3());target.y+=box.getSize(new THREE.Vector3()).y*targetBias;
+ direction.normalize();const right=new THREE.Vector3(direction.z,0,-direction.x).normalize(),up=new THREE.Vector3().crossVectors(direction,right);
+ const tanV=Math.tan(THREE.MathUtils.degToRad(camera.fov)*.5)/camera.zoom,tanH=tanV*Math.max(camera.aspect,.3);
+ let distance=0;
+ for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z]){
+  const offset=new THREE.Vector3(x,y,z).sub(target);
+  distance=Math.max(distance,offset.dot(direction)+Math.max(Math.abs(offset.dot(right))/tanH,Math.abs(offset.dot(up))/tanV));
+ }
+ go(target.clone().addScaledVector(direction,distance*margin).toArray(),target.toArray(),instant);
+}
+function fitStationModel(instant=false){if(!stationModelBounds)return;fitBodyBounds(stationControls?.visibleBounds()||stationModelBounds,new THREE.Vector3(.65,.65,.8),0,1.15,instant);}
 function isUrban(){return state.view==='urban'}
 function buildNetwork(){
  if(isUrban()){
@@ -239,7 +251,7 @@ async function loadIfcSection(section,focus=true){
  const activeScene=urbanScene,previousFocus=activeIfcFocus;activeIfcFocus=section;toast(state.lang==='en'?`Loading ${section}…`:`Cargando ${section}…`);
  try{
   const box=await activeScene.ensureIfcSection(section);if(urbanScene!==activeScene||!isUrban())return null;if(trackedStationCodes.includes(section))activeStation={line:0,code:section,name:trackedStationName(section)};if(focus&&povMode)setPovMode(false,false);applyIfcFocus(activeScene,section);
-  if(focus){const c=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3());const padding=section==='PT111'?1.9:1.55;const distance=Math.max(size.z,size.x/Math.max(camera.aspect,.3),size.y*2)*padding;go([c.x+distance*.24,c.y+distance*.52,c.z+distance*.72],[c.x,c.y+size.y*.12,c.z]);}
+  if(focus)fitBodyBounds(box,new THREE.Vector3(.24,.52,.72),.12,section==='PT111'?1.25:1.15);
   toast(state.lang==='en'?`${section} loaded on demand`:`${section} cargado bajo demanda`);return box;
  }catch(error){activeIfcFocus=previousFocus;applyIfcFocus(activeScene,previousFocus);toast(error?.code==='no-geometry'?(state.lang==='en'?'Source IFC contains no geometry':'El IFC fuente no contiene geometría'):(state.lang==='en'?'Model unavailable':'Modelo no disponible'));return null;}
 }

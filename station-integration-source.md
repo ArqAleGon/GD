@@ -52,8 +52,16 @@ Las disciplinas comparten datum de 2.550 m. Gestión usa niveles nativos, con ac
 
 Se verificaron consulta general, selección y consulta individual de una losa, registro exclusivo por elemento y Volver. En Gestión se probaron niveles separados, andén, alarma, cámara fija dentro del modelo, cuatro spots y recorrido interior con joysticks.
 
+## E06
+
+Se integraron únicamente 0000 (49.168 instancias), 1150 (99) y 1200 (8.349): 57.616 instancias en 112 partes. Se validaron archivos, índices, coordenadas e identidad por fuente + GlobalId; no quedan instancias representadas pendientes ni ejes fuera del edificio.
+
+El datum común de las disciplinas es 2.550,36 m, tomado de arquitectura. El centro del conjunto está dentro de las huellas CAD y a 0,10 m del centro de la nave. Gestión utiliza las cotas nativas de acceso 2.555,50 m, vestíbulo/intermedio 2.563,10 m, TOR 2.571,45 m, andén 2.572,59 m y cubiertas. El tren usa el eje CAD propio y el TOR.
+
+Se verificaron consulta general, selección de un muro cortina individual (GlobalId 1omjeC5Zr10fXjAwHK$ZYw), formulario de registro exclusivo para esa instancia y Volver. Gestión pasó pruebas de separación, andén, alarma, cámara fija sobre el piso nativo, cuatro spots y recorrido interior con joysticks. El encuadre compartido usa las ocho esquinas de la envolvente y el campo de visión para evitar recortes, incluida la separación de niveles.
+
 ## Procedimiento para próximas estaciones
 
 Cada estación debe completar BIM y Gestión antes de publicarse: modelo real, niveles nativos, separación, alarmas, cámaras 360 de posición fija, spots y recorrido interior. La agrupación del render conserva las instancias IFC originales para consulta y registro individual.
 
-E06–E14 pendientes de conversión y publicación individual. En E09/E10 falta 1150; en E11/E12 faltan 1150 y 1200 en la carpeta de origen revisada. Los archivos con códigos distintos de 0000, 1150 y 1200 están fuera del alcance solicitado.
+E07–E14 pendientes de conversión y publicación individual. En E09/E10 falta 1150; en E11/E12 faltan 1150 y 1200 en la carpeta de origen revisada. Los archivos con códigos distintos de 0000, 1150 y 1200 están fuera del alcance solicitado.
