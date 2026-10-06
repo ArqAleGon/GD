@@ -17,13 +17,13 @@
 .barChart{max-height:285px;overflow-y:auto;padding-right:5px;scrollbar-width:thin;scrollbar-color:#426579 #101c27}
 
 /* Station occupation polygons remain above parcels without intercepting selection. */
-.stationFootprint{fill:#d68cff;fill-opacity:var(--station-footprint-opacity,.35);stroke:#e7b4ff;stroke-width:1.6;vector-effect:non-scaling-stroke;pointer-events:none}
+.stationFootprint{fill:#ff9f43;fill-opacity:var(--station-footprint-opacity,.35);stroke:#ffd1a1;stroke-width:1.6;vector-effect:non-scaling-stroke;pointer-events:none}
 #stationLabelLayer{pointer-events:none}
-.mapTools .stationFootprintToggle{border-color:#b079cc;color:#efd6ff}
-.mapTools .stationFootprintToggle:before{background:#d68cff;box-shadow:0 0 8px #d68cff80}
+.mapTools .stationFootprintToggle{border-color:#c78342;color:#ffe1c2}
+.mapTools .stationFootprintToggle:before{background:#ff9f43;box-shadow:0 0 8px #ff9f4380}
 .stationOpacity{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:#d5e7ed}
-.stationOpacity input{width:80px;accent-color:#d68cff}
+.stationOpacity input{width:80px;accent-color:#ff9f43}
 .stationOpacity output{min-width:32px;font-variant-numeric:tabular-nums}
-.mapLegend .stationFootprintSwatch{background:#d68cff59;border:1px solid #e7b4ff}
+.mapLegend .stationFootprintSwatch{background:#ff9f4359;border:1px solid #ffd1a1}
 
 #stationLabelLayer .l1StationLabel{font-size:calc(6.8px * var(--station-label-scale,1));stroke-width:calc(2.7px * var(--station-label-scale,1))}
