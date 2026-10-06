@@ -10,7 +10,7 @@ for section in sections:
  if not reportPath.exists():continue
  report=json.loads(reportPath.read_text('utf-8'))
  if report['status']!='converted':continue
- low=np.min([m.get('bodyBounds',m['bounds'])['min'] for m in report['models']],axis=0);high=np.max([m.get('bodyBounds',m['bounds'])['max'] for m in report['models']],axis=0);origin=(low+high)/2
+ low=np.min([m.get('displayBounds',m.get('bodyBounds',m['bounds']))['min'] for m in report['models']],axis=0);high=np.max([m.get('displayBounds',m.get('bodyBounds',m['bounds']))['max'] for m in report['models']],axis=0);origin=(low+high)/2
  groups=collections.defaultdict(list);sourceTriangles=0
  for model in report['models']:
   for part in model['parts']:
@@ -21,6 +21,7 @@ for section in sections:
    for node in g['nodes']:
     if node['extras'].get('ifcRepresentation')=='Axis':continue
     matrix=np.array(node['matrix']).reshape(4,4).T
+    if model.get('displayTransform'):matrix=np.array(model['displayTransform']).reshape(4,4).T@matrix
     for prim in g['meshes'][node['mesh']]['primitives']:
      if prim.get('mode',4)!=4:continue
      vertices=accessor(prim['attributes']['POSITION']).astype(float)@matrix[:3,:3].T+matrix[:3,3]-origin

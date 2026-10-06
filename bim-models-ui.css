@@ -32,5 +32,17 @@ body[data-scene="inicio"]:has(#app.urbanControls:not(.povMode)) .dataSourceToggl
 body[data-scene="inicio"]:has(#app.urbanControls) :is(button,summary):focus-visible{outline:2px solid #8ed6ff;outline-offset:3px}
 body[data-scene="inicio"]:has(#app.urbanControls) .bimModelMenuPanel{display:block!important;max-height:min(420px,calc(100dvh - 210px));overflow-y:auto}
 .bimModelMenuPanel>button{width:100%}
+.bimTypeMenu>summary{cursor:pointer;padding:8px 14px;min-height:40px;box-sizing:border-box;background:#142b3b;border:1px solid #52738b;border-radius:3px;list-style:none;display:flex;align-items:center}
+.bimTypePanel{position:fixed;right:12px;bottom:calc(28px + var(--scene-toolbar-height,64px));width:min(390px,calc(100vw - 24px));max-height:calc(100dvh - var(--scene-header,78px) - var(--scene-toolbar-height,64px) - 60px);overflow:auto;box-sizing:border-box;background:#0d1d29f5;border:1px solid #52738b;border-radius:5px;box-shadow:0 8px 24px #0008;padding:12px;text-align:left;color:#d9edf7}
+.bimTypePanel header{position:static!important;display:grid!important;gap:6px!important;padding:0 0 10px!important;background:none!important;height:auto!important;border-bottom:1px solid #345064}
+.bimTypePanel header span{font-size:13px}.bimTypeActions{display:flex;gap:6px;margin:10px 0}.bimTypeActions button{flex:1;font-size:12px;padding:6px}
+.bimTypeRow{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:8px;align-items:center;min-height:48px;border-bottom:1px solid #263e50}
+.bimTypeRow label{display:flex;align-items:center;gap:8px;cursor:pointer;min-width:0}.bimTypeRow input{width:16px;height:16px;flex-shrink:0;accent-color:#8ed6ff}
+.bimTypeRow label span{display:grid;min-width:0}.bimTypeRow b{font-size:12px;white-space:normal}.bimTypeRow small{font-size:10px;color:#9ac8e0;overflow-wrap:anywhere}.bimTypeRow strong{font-size:12px;font-variant-numeric:tabular-nums;white-space:nowrap}.bimTypeRow button{font-size:11px;padding:4px 6px;min-height:30px}
+.bimTypePanel p{font-size:11px;color:#9ac8e0;line-height:1.5;margin-bottom:0}
+.bimTypePanel{display:flex;flex-direction:column;overflow:hidden}
+.bimTypePanel header,.bimTypeActions,.bimTypePanel p{flex-shrink:0}
+.bimTypeRows{overflow:auto;min-height:0;flex:1}
+body:has(#app.urbanControls.povMode) .bimTypePanel{bottom:calc(76px + max(var(--scene-pov-height,170px),var(--scene-toolbar-height,80px)));max-height:calc(100dvh - var(--scene-header,78px) - max(var(--scene-pov-height,170px),var(--scene-toolbar-height,80px)) - 100px)}
 .bimMenuGroup{align-items:start;grid-auto-rows:min-content}
 .bimMenuGroup>button{width:100%;min-height:38px;white-space:normal!important}

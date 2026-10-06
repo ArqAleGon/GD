@@ -1,4 +1,5 @@
-import {batchIfcRenderGeometry} from './ifc-render-batches.js?v=20261006-bim-overview-ux';
+import {batchIfcRenderGeometry} from './ifc-render-batches.js?v=20261006-isolated-types';
+import {buildIfcTypeInventory,applyIfcTypeFilter,summarizeIfcTypes} from './ifc-type-filters.js?v=20261006-isolated-types';
 import {loadBimUrbanContext,buildBimUrbanContext} from './bim-urban-context.js';
 import * as THREE from 'three';
 import {GLTFLoader} from './GLTFLoader.js';
@@ -7,7 +8,7 @@ import {createIfcProgressObject} from './ifc-progress.js?v=20260929-element-prog
 import {rankedBoundHits,sectionPickCandidates} from './ifc-picking.js?v=20260930-element-picking-v1';
 
 const scale = 0.06;
-const assetRevision = '20261005-stations-i09';
+const assetRevision = '20261005-stations-i10';
 const point = (p, height = 0) => new THREE.Vector3(p[0] * scale, height, -p[1] * scale);
 
 export async function loadUrbanMap() {
@@ -16,19 +17,20 @@ export async function loadUrbanMap() {
     if (!response.ok) throw new Error('No se pudo cargar la cartografía: ' + name);
     return binary ? response.arrayBuffer() : response.json();
   };
-  const [data, buildings, roads, volumesData, volumes, volumeFootprints, parcels, placement, ptHqTypes, urbanContext, overviews] = await Promise.all([
+  const [data, buildings, roads, volumesData, volumes, volumeFootprints, parcels, placement, ptHqTypes, urbanContext, overviews, legacyTypes] = await Promise.all([
     read('map.json'), read('buildings.bin', true), read('roads.bin', true), read('volumes.json'), read('volumes.bin', true), read('volume-footprints.bin', true), read('parcels.bin', true),
     fetch('./ifc-placement-20260915-i16-e16.json?v='+assetRevision).then(r=>{if(!r.ok)throw new Error('IFC placement unavailable');return r.json()}),
     fetch('./pt-hq-element-types.json?v='+assetRevision).then(r=>{if(!r.ok)throw new Error('Patio high-fidelity type map unavailable');return r.json()}),
     loadBimUrbanContext(),
-    fetch('./bim-overviews.json?v='+assetRevision).then(r=>r.ok?r.json():{}).catch(()=>({}))
+    fetch('./bim-overviews.json?v='+assetRevision).then(r=>r.ok?r.json():{}).catch(()=>({})),
+    fetch('./ifc-legacy-types.json?v='+assetRevision).then(r=>{if(!r.ok)throw new Error('IFC source types unavailable');return r.json()})
   ]);
   const ifcLoader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
   const ifcModelDefs=placement.models||[
     {file:'e15-architecture-web.glb',section:'E15',label:'IFC · E15 · ARQ + EST'},
     {file:'e15-1100.glb',section:'E15',label:'IFC · E15 · ARQ + EST'}
   ];
-  return {overviews, urbanContext, ifcLoader, ifcModelDefs, placement, ptHqTypes, data, volumesData, volumes: new Float32Array(volumes), volumeFootprints: new Float32Array(volumeFootprints), parcels: new Float32Array(parcels), buildings: new Float32Array(buildings), roads: new Float32Array(roads)};
+  return {legacyTypes, overviews, urbanContext, ifcLoader, ifcModelDefs, placement, ptHqTypes, data, volumesData, volumes: new Float32Array(volumes), volumeFootprints: new Float32Array(volumeFootprints), parcels: new Float32Array(parcels), buildings: new Float32Array(buildings), roads: new Float32Array(roads)};
 }
 
 function segments(group, coords, color, height) {
@@ -147,6 +149,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
   if(sections.has('I16')&&stationCenters.length===2)createSectionLabel('I16',sections.get('I16'),point([(stationCenters[0][0]+stationCenters[1][0])/2,(stationCenters[0][1]+stationCenters[1][1])/2],2).toArray());
   const savedVisibility=new Map();let isolatedSection=null;
   function isolateSection(name){
+    if(isolatedSection){const previous=sections.get(isolatedSection);if(previous?.typeInventory)applyIfcTypeFilter(previous);}
     for(const [object,visible] of savedVisibility)object.visible=visible;savedVisibility.clear();isolatedSection=name||null;
     if(name){
       for(const object of root.children){if(object===ifcGroup)continue;savedVisibility.set(object,object.visible);object.visible=false;}
@@ -188,12 +191,14 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
       if((!object.isMesh&&!object.isLine)||!object.visible)return;
       index++;
       let node=object,ifcType=object.userData.ifcType||'',ifcId='';
-      while(node&&node!==model){if(node.name&&assets.ptHqTypes[node.name]){ifcType=ifcType||assets.ptHqTypes[node.name];ifcId=ifcId||node.name;}node=node.parent;}
+      while(node&&node!==model){if(node.name&&assets.ptHqTypes[node.name]){ifcType=ifcType||assets.ptHqTypes[node.name];ifcId=ifcId||node.name;}else if(/^[0-3][A-Za-z0-9_$]{21}$/.test(node.name||'')){ifcId=ifcId||node.name;ifcType=ifcType||assets.legacyTypes[definition.source+':'+node.name]?.type||'UnknownIfcType';}node=node.parent;}
       const elementName=object.name||`Elemento ${String(index).padStart(4,'0')}`;
       let metadata=object;
       while(metadata&&metadata!==model&&!metadata.userData.ifcGlobalId)metadata=metadata.parent;
       const instance=metadata?.userData.ifcGlobalId?metadata.userData:null;
       if(instance){ifcId=instance.ifcGlobalId;ifcType=instance.ifcType;object.userData.ifcType=ifcType;}
+      object.userData.ifcGroupedGeometry=!instance&&!ifcId;
+      object.userData.ifcType=object.userData.ifcGroupedGeometry?'GroupedGeometry':ifcType||'IfcBuildingElementProxy';
       object.userData.progressObject=createIfcProgressObject({sectionName,definition,ifcType,ifcId,elementName,index,vertexCount:object.geometry?.getAttribute('position')?.count||0});
       if(instance){
         object.userData.progressObject.id=`ifc-element:${sectionName}:${definition.source}:${ifcId}`;
@@ -201,8 +206,13 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
         object.userData.progressObject.parameters['ID numérico IFC']=instance.ifcExpressId;
         if(instance.ifcRepresentation==='Axis')object.userData.progressObject.parameters['Representación fuente']='Eje de referencia; el IFC no contiene un sólido Body para esta instancia';
         const instanceKey=definition.source+':'+ifcId;
+        object.userData.ifcInstanceKey=instanceKey;
         if(!instances.has(instanceKey)){instances.add(instanceKey);entry.elementCount++;}
-      }else entry.elementCount++;
+      }else{
+        const instanceKey=ifcId?`${definition.source||definition.file}:${ifcId}`:object.userData.progressObject.id;
+        object.userData.ifcInstanceKey=instanceKey;
+        if(!object.userData.ifcGroupedGeometry&&!instances.has(instanceKey)){instances.add(instanceKey);entry.elementCount++;}
+      }
       entry.elementPickables.push(object);
     });
   };
@@ -235,7 +245,8 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
       for(const asset of loaded){
         const model=asset.scene;
         if(ptHqSections.has(sectionName))stylePtHq(model);
-        model.position.set(-placement.gisOrigin[0],-(asset.definition.streetDatum??placement.streetDatum),placement.gisOrigin[1]);
+        if(asset.definition.displayTransform)model.applyMatrix4(new THREE.Matrix4().fromArray(asset.definition.displayTransform));
+        model.position.add(new THREE.Vector3(-placement.gisOrigin[0],-(asset.definition.streetDatum??placement.streetDatum),placement.gisOrigin[1]));
         markIfcProgressObjects(model,asset.definition,sectionName,entry);
         if(!modelOnlySection)batchIfcRenderGeometry(model);
         entry.group.add(model);
@@ -243,6 +254,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
       if(disposed){for(const asset of loaded)disposeObject(asset.scene);throw new Error('Scene closed');}
       if(entry.overview){entry.group.remove(entry.overview);disposeObject(entry.overview);entry.overview=null;}
       entry.group.updateMatrixWorld(true);
+      entry.typeInventory=buildIfcTypeInventory(entry.elementPickables);
       entry.elementBounds=entry.elementPickables.map(mesh=>{
         if(!mesh.geometry.boundingBox)mesh.geometry.computeBoundingBox();
         const bounds=mesh.geometry.boundingBox.clone().applyMatrix4(mesh.matrixWorld);
@@ -270,7 +282,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
       const sectionCenter=sectionBounds.getCenter(new THREE.Vector3());
       const sectionSize=sectionBounds.getSize(new THREE.Vector3());
       const proxy=new THREE.Mesh(new THREE.BoxGeometry(Math.max(sectionSize.x,.1),Math.max(sectionSize.y,.1),Math.max(sectionSize.z,.1)),new THREE.MeshBasicMaterial({transparent:true,opacity:0,depthWrite:false,colorWrite:false}));
-      proxy.position.copy(sectionCenter);proxy.name='Selección '+sectionName;proxy.userData.progressObject={id:`ifc-section:${sectionName}`,title:entry.label,kind:'Modelo IFC',section:sectionName,parameters:{'Sección BIM':sectionName,'Archivos fuente':[...new Set(available.map(definition=>definition.source||definition.file))].join(', '),'Partes web':available.length,'Instancias IFC':entry.elementCount,...(entry.excludedAxisCount?{'Ejes fuera del edificio':`${entry.excludedAxisCount} referencias del IFC fuente excluidas de la vista`}:{}),'Sistema de referencia':'EPSG:6247','Ancho aproximado':`${(sectionSize.x/scale).toFixed(1)} m`,'Largo aproximado':`${(sectionSize.z/scale).toFixed(1)} m`,'Altura aproximada':`${(sectionSize.y/scale).toFixed(1)} m`}};root.add(proxy);entry.progressProxy=proxy;progressPickables.push(proxy);
+      proxy.position.copy(sectionCenter);proxy.name='Selección '+sectionName;proxy.userData.progressObject={id:`ifc-section:${sectionName}`,title:entry.label,kind:'Modelo IFC',section:sectionName,parameters:{'Sección BIM':sectionName,'Archivos fuente':[...new Set(available.map(definition=>definition.source||definition.file))].join(', '),'Partes web':available.length,'Instancias IFC':entry.elementCount,...(entry.typeInventory.some(instance=>instance.grouped)?{'Geometría agrupada':'Contiene grupos sin identidad IFC individual; no se cuentan como instancias ni permiten registro'}:{}),...(entry.excludedAxisCount?{'Ejes fuera del edificio':`${entry.excludedAxisCount} referencias del IFC fuente excluidas de la vista`}:{}),'Sistema de referencia':'EPSG:6247','Ancho aproximado':`${(sectionSize.x/scale).toFixed(1)} m`,'Largo aproximado':`${(sectionSize.z/scale).toFixed(1)} m`,'Altura aproximada':`${(sectionSize.y/scale).toFixed(1)} m`}};root.add(proxy);entry.progressProxy=proxy;progressPickables.push(proxy);
       if(entry.labelObject)entry.labelObject.pos.set(sectionCenter.x,sectionBounds.max.y+.6,sectionCenter.z);
       else createSectionLabel(sectionName,entry,[sectionCenter.x,sectionBounds.max.y+.6,sectionCenter.z]);
       applySectionAppearance(sectionName,entry);
@@ -318,7 +330,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
     let nearest=null,nearestBox=null;
     for(const candidate of sectionPickCandidates(candidates,focusedSection)){
       if(nearest&&candidate.distance>nearest.distance)break;
-      const boxHits=rankedBoundHits(raycaster.ray,candidate.entry.elementBounds,intersectionPoint);
+      const boxHits=rankedBoundHits(raycaster.ray,candidate.entry.elementBounds.filter(item=>!item.mesh.userData.ifcTypeHidden&&!item.mesh.userData.ifcGroupedGeometry),intersectionPoint);
       if(boxHits[0]&&(!nearestBox||boxHits[0].distance<nearestBox.distance))nearestBox=boxHits[0];
       for(const boxHit of boxHits){
         if(nearest&&boxHit.distance>nearest.distance)break;
@@ -345,6 +357,8 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
     if(preview)for(const corner of [preview.bounds.min,preview.bounds.max])overviewBounds.expandByPoint(new THREE.Vector3((corner[0]-placement.gisOrigin[0])*scale,(corner[1]-entry.streetDatum)*scale+.24,(corner[2]+placement.gisOrigin[1])*scale));
   }
   if(overviewBounds.isEmpty())overviewBounds.copy(all);else overviewBounds.expandByScalar(12);
-  return {disposePending:()=>{disposed=true;},ensureOverview,overviewBounds,isolateSection, seismic, volumes, ifcBounds, ifcSections, progressPickables, pickProgressElement, ensureIfcSection, setIfcSectionVisibility, sectionDefinitions:sections, pilotBounds: bounds(data.pilot).union(bounds(assets.volumesData.corridor)), fullBounds: all};
+  const getIfcTypeSummary=name=>{const entry=sections.get(name);return entry?.typeInventory?summarizeIfcTypes(entry.typeInventory,entry.enabledIfcTypes):null;};
+  const filterIfcTypes=(name,types)=>{const entry=sections.get(name);if(name!==isolatedSection||!entry?.typeInventory)return null;return applyIfcTypeFilter(entry,types===null?null:new Set(types));};
+  return {disposePending:()=>{disposed=true;},getIfcTypeSummary,filterIfcTypes,ensureOverview,overviewBounds,isolateSection, seismic, volumes, ifcBounds, ifcSections, progressPickables, pickProgressElement, ensureIfcSection, setIfcSectionVisibility, sectionDefinitions:sections, pilotBounds: bounds(data.pilot).union(bounds(assets.volumesData.corridor)), fullBounds: all};
 }
 

@@ -7,19 +7,19 @@ export function batchIfcRenderGeometry(model){
       if(!mesh.isMesh||!mesh.visible||Array.isArray(mesh.material))return;
       // Texture/custom attribute meshes retain their original draw path.
       if(Object.values(mesh.material).some(value=>value?.isTexture)||mesh.isSkinnedMesh||mesh.morphTargetInfluences||Object.keys(mesh.geometry.attributes).some(name=>!['position','normal','uv'].includes(name)))return;
-      const key=mesh.geometry.uuid+':'+mesh.material.uuid;
+      const key=(mesh.userData.ifcType||'IfcBuildingElementProxy')+':'+mesh.geometry.uuid+':'+mesh.material.uuid;
       if(!groups.has(key))groups.set(key,[]);groups.get(key).push(mesh);
     });
     for(const meshes of groups.values()){
       if(meshes.length<3){
-        for(const mesh of meshes){if(!singles.has(mesh.material.uuid))singles.set(mesh.material.uuid,[]);singles.get(mesh.material.uuid).push(mesh);}
+        for(const mesh of meshes){const key=(mesh.userData.ifcType||'IfcBuildingElementProxy')+':'+mesh.material.uuid;if(!singles.has(key))singles.set(key,[]);singles.get(key).push(mesh);}
         continue;
       }
       const draw=new THREE.InstancedMesh(meshes[0].geometry,meshes[0].material,meshes.length);
-      draw.name='Representación instanciada IFC';draw.userData.ifcRenderBatch=true;
+      draw.name='Representación instanciada IFC';draw.userData.ifcRenderBatch=true;draw.userData.ifcType=meshes[0].userData.ifcType||'IfcBuildingElementProxy';
       for(let i=0;i<meshes.length;i++){
         draw.setMatrixAt(i,new THREE.Matrix4().multiplyMatrices(inverse,meshes[i].matrixWorld));
-        meshes[i].visible=false;
+        meshes[i].userData.ifcBatchedOriginal=true;meshes[i].visible=false;
       }
       draw.instanceMatrix.needsUpdate=true;model.add(draw);
     }
@@ -42,9 +42,9 @@ export function batchIfcRenderGeometry(model){
         }
         const index=geometry.index,count=index?.count??p.count;
         for(let i=0;i<count;i++)indices[indexOffset+i]=vertexOffset+(index?index.getX(i):i);
-        vertexOffset+=p.count;indexOffset+=count;mesh.visible=false;
+        vertexOffset+=p.count;indexOffset+=count;mesh.userData.ifcBatchedOriginal=true;mesh.visible=false;
       }
       const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(positions,3));geometry.setAttribute('normal',new THREE.BufferAttribute(normals,3));geometry.setIndex(new THREE.BufferAttribute(indices,1));
-      const draw=new THREE.Mesh(geometry,meshes[0].material);draw.position.copy(center);draw.name='Representación agrupada IFC';draw.userData.ifcRenderBatch=true;model.add(draw);
+      const draw=new THREE.Mesh(geometry,meshes[0].material);draw.position.copy(center);draw.name='Representación agrupada IFC';draw.userData.ifcRenderBatch=true;draw.userData.ifcType=meshes[0].userData.ifcType||'IfcBuildingElementProxy';model.add(draw);
     }
   }

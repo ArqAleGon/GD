@@ -1,0 +1,1016 @@
+{
+  "method": "Unique (section, source filename, IFC GlobalId) instances; repeated nodes/material primitives are not additional quantities. Native IFC classes are retained.",
+  "sections": {
+    "E01": {
+      "instances": 66067,
+      "sources": [
+        {
+          "source": "L1T1-1150-301-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 88,
+          "types": {
+            "IfcBuildingElementProxy": 88
+          },
+          "renderNodes": 88,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1200-301-CON-ED-EST-MO-0001_V03.ifc",
+          "instances": 7713,
+          "types": {
+            "IfcBeam": 6571,
+            "IfcColumn": 804,
+            "IfcSlab": 122,
+            "IfcBuildingElementProxy": 79,
+            "IfcStairFlight": 117,
+            "IfcWallStandardCase": 20
+          },
+          "renderNodes": 7713,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-0000-301-CON-ED-ARQ-MO-0001_VCC.ifc",
+          "instances": 58266,
+          "types": {
+            "IfcWallStandardCase": 2330,
+            "IfcDoor": 346,
+            "IfcCovering": 60,
+            "IfcSlab": 510,
+            "IfcStairFlight": 104,
+            "IfcBuildingElementProxy": 13471,
+            "IfcFlowTerminal": 104,
+            "IfcWall": 253,
+            "IfcFurnishingElement": 921,
+            "IfcPlate": 9115,
+            "IfcMember": 21903,
+            "IfcBeam": 1272,
+            "IfcWindow": 1921,
+            "IfcRoof": 7,
+            "IfcColumn": 782,
+            "IfcCurtainWall": 4903,
+            "IfcRailing": 264
+          },
+          "renderNodes": 58302,
+          "repeatedInstanceNodes": 36
+        }
+      ]
+    },
+    "E02": {
+      "instances": 86317,
+      "sources": [
+        {
+          "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+          "instances": 78209,
+          "types": {
+            "IfcWallStandardCase": 2548,
+            "IfcStairFlight": 147,
+            "IfcSlab": 1538,
+            "IfcDoor": 268,
+            "IfcWall": 382,
+            "IfcBuildingElementProxy": 1985,
+            "IfcPlate": 19893,
+            "IfcMember": 42289,
+            "IfcFlowTerminal": 186,
+            "IfcCovering": 116,
+            "IfcFurnishingElement": 850,
+            "IfcRoof": 11,
+            "IfcBeam": 1125,
+            "IfcColumn": 817,
+            "IfcWindow": 88,
+            "IfcFlowSegment": 4,
+            "IfcCurtainWall": 5693,
+            "IfcRailing": 269
+          },
+          "renderNodes": 78209,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-302-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 88,
+          "types": {
+            "IfcBuildingElementProxy": 88
+          },
+          "renderNodes": 88,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+          "instances": 8020,
+          "types": {
+            "IfcColumn": 877,
+            "IfcBeam": 6765,
+            "IfcSlab": 127,
+            "IfcBuildingElementProxy": 107,
+            "IfcStairFlight": 118,
+            "IfcWallStandardCase": 26
+          },
+          "renderNodes": 8020,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "E03": {
+      "instances": 88782,
+      "sources": [
+        {
+          "source": "L1T1-1150-303-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 66,
+          "types": {
+            "IfcBuildingElementProxy": 66
+          },
+          "renderNodes": 66,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1200-303-CON-ED-EST-MO-0001_V01.ifc",
+          "instances": 3605,
+          "types": {
+            "IfcSlab": 51,
+            "IfcColumn": 364,
+            "IfcBeam": 3069,
+            "IfcBuildingElementProxy": 121
+          },
+          "renderNodes": 3605,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-0000-303-CON-CN-ARQ-MO-0001_V01.ifc",
+          "instances": 85111,
+          "types": {
+            "IfcBeam": 1659,
+            "IfcWallStandardCase": 4205,
+            "IfcWall": 456,
+            "IfcSlab": 2275,
+            "IfcDoor": 463,
+            "IfcPlate": 20774,
+            "IfcMember": 46158,
+            "IfcStairFlight": 182,
+            "IfcBuildingElementProxy": 1797,
+            "IfcCovering": 415,
+            "IfcFurnishingElement": 1058,
+            "IfcFlowTerminal": 273,
+            "IfcRoof": 45,
+            "IfcWindow": 196,
+            "IfcColumn": 753,
+            "IfcCurtainWall": 4085,
+            "IfcRailing": 317
+          },
+          "renderNodes": 85111,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "E04": {
+      "instances": 94853,
+      "sources": [
+        {
+          "source": "L1T1-0000-304-CON-ED-ARQ-MO-0001_V00.ifc",
+          "instances": 90726,
+          "types": {
+            "IfcWallStandardCase": 4190,
+            "IfcWall": 357,
+            "IfcDoor": 441,
+            "IfcSlab": 1877,
+            "IfcRoof": 31,
+            "IfcPlate": 23033,
+            "IfcMember": 49928,
+            "IfcBuildingElementProxy": 2082,
+            "IfcStairFlight": 153,
+            "IfcFlowTerminal": 245,
+            "IfcFurnishingElement": 1028,
+            "IfcBeam": 1417,
+            "IfcCovering": 416,
+            "IfcColumn": 813,
+            "IfcWindow": 254,
+            "IfcCurtainWall": 4158,
+            "IfcRailing": 303
+          },
+          "renderNodes": 90726,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-304-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 66,
+          "types": {
+            "IfcBuildingElementProxy": 66
+          },
+          "renderNodes": 66,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1200-304-CON-ED-EST-MO-0001_V01.ifc",
+          "instances": 4061,
+          "types": {
+            "IfcSlab": 54,
+            "IfcBeam": 3547,
+            "IfcColumn": 344,
+            "IfcBuildingElementProxy": 116
+          },
+          "renderNodes": 4061,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "E05": {
+      "instances": 98031,
+      "sources": [
+        {
+          "source": "L1T1-0000-305-CON-ED-ARQ-MO-0001_V00.ifc",
+          "instances": 93640,
+          "types": {
+            "IfcSlab": 2290,
+            "IfcRoof": 36,
+            "IfcWall": 442,
+            "IfcBuildingElementProxy": 1847,
+            "IfcStairFlight": 151,
+            "IfcWallStandardCase": 4313,
+            "IfcDoor": 519,
+            "IfcPlate": 28172,
+            "IfcMember": 51059,
+            "IfcFlowTerminal": 314,
+            "IfcCovering": 460,
+            "IfcColumn": 876,
+            "IfcBeam": 1483,
+            "IfcFurnishingElement": 1105,
+            "IfcWindow": 249,
+            "IfcRailing": 324
+          },
+          "renderNodes": 93640,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-305-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 66,
+          "types": {
+            "IfcBuildingElementProxy": 66
+          },
+          "renderNodes": 66,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1200-305-CON-ED-EST-MO-0001_V01.ifc",
+          "instances": 4325,
+          "types": {
+            "IfcSlab": 54,
+            "IfcColumn": 352,
+            "IfcBeam": 3803,
+            "IfcBuildingElementProxy": 116
+          },
+          "renderNodes": 4325,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "E06": {
+      "instances": 57616,
+      "sources": [
+        {
+          "source": "L1T1-0000-306-CON-ED-ARQ-MO-0001_V00.ifc",
+          "instances": 49168,
+          "types": {
+            "IfcWallStandardCase": 2179,
+            "IfcWall": 208,
+            "IfcPlate": 11122,
+            "IfcMember": 23999,
+            "IfcDoor": 252,
+            "IfcSlab": 1213,
+            "IfcBuildingElementProxy": 1593,
+            "IfcFlowTerminal": 177,
+            "IfcFurnishingElement": 808,
+            "IfcStairFlight": 149,
+            "IfcCovering": 119,
+            "IfcRoof": 8,
+            "IfcColumn": 805,
+            "IfcWindow": 80,
+            "IfcBeam": 707,
+            "IfcFlowSegment": 4,
+            "IfcCurtainWall": 5538,
+            "IfcRailing": 207
+          },
+          "renderNodes": 49168,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-306-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 99,
+          "types": {
+            "IfcBuildingElementProxy": 99
+          },
+          "renderNodes": 99,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1200-306-CON-ED-EST-MO-0001_V01.ifc",
+          "instances": 8349,
+          "types": {
+            "IfcColumn": 841,
+            "IfcBeam": 6831,
+            "IfcBuildingElementProxy": 403,
+            "IfcStairFlight": 146,
+            "IfcSlab": 114,
+            "IfcWallStandardCase": 14
+          },
+          "renderNodes": 8349,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "E07": {
+      "instances": 78782,
+      "sources": [
+        {
+          "source": "L1T1-0000-307-CON-ED-ARQ-MO-0001_V00.ifc",
+          "instances": 72399,
+          "types": {
+            "IfcWall": 476,
+            "IfcPlate": 23421,
+            "IfcMember": 36554,
+            "IfcSlab": 1892,
+            "IfcWallStandardCase": 3759,
+            "IfcDoor": 467,
+            "IfcRoof": 18,
+            "IfcCovering": 333,
+            "IfcBuildingElementProxy": 1497,
+            "IfcFlowTerminal": 227,
+            "IfcBeam": 1359,
+            "IfcFurnishingElement": 1062,
+            "IfcStairFlight": 180,
+            "IfcColumn": 665,
+            "IfcWindow": 224,
+            "IfcFlowSegment": 2,
+            "IfcRailing": 263
+          },
+          "renderNodes": 72399,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-307-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 66,
+          "types": {
+            "IfcBuildingElementProxy": 66
+          },
+          "renderNodes": 66,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1200-307-CON-ED-EST-MO-0001_V01.ifc",
+          "instances": 6317,
+          "types": {
+            "IfcColumn": 629,
+            "IfcBeam": 5223,
+            "IfcBuildingElementProxy": 316,
+            "IfcStairFlight": 76,
+            "IfcSlab": 49,
+            "IfcWallStandardCase": 18,
+            "IfcWall": 6
+          },
+          "renderNodes": 6317,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "E08": {
+      "instances": 55290,
+      "sources": [
+        {
+          "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
+          "instances": 46978,
+          "types": {
+            "IfcWallStandardCase": 2344,
+            "IfcWall": 340,
+            "IfcSlab": 1179,
+            "IfcColumn": 1381,
+            "IfcDoor": 273,
+            "IfcBuildingElementProxy": 1554,
+            "IfcFurnishingElement": 774,
+            "IfcBeam": 783,
+            "IfcCovering": 140,
+            "IfcMember": 21515,
+            "IfcPlate": 11302,
+            "IfcWindow": 83,
+            "IfcCurtainWall": 4800,
+            "IfcFlowTerminal": 205,
+            "IfcStairFlight": 86,
+            "IfcRoof": 8,
+            "IfcFlowSegment": 4,
+            "IfcRailing": 207
+          },
+          "renderNodes": 46978,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-308-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 77,
+          "types": {
+            "IfcBuildingElementProxy": 77
+          },
+          "renderNodes": 77,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1200-308-CON-ED-EST-MO-0001_V01.ifc",
+          "instances": 8235,
+          "types": {
+            "IfcColumn": 806,
+            "IfcBeam": 6804,
+            "IfcBuildingElementProxy": 387,
+            "IfcStairFlight": 94,
+            "IfcSlab": 74,
+            "IfcWallStandardCase": 66,
+            "IfcWall": 4
+          },
+          "renderNodes": 8235,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "E09": {
+      "instances": 91756,
+      "sources": [
+        {
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "instances": 87226,
+          "types": {
+            "IfcSlab": 1983,
+            "IfcPlate": 25095,
+            "IfcMember": 48976,
+            "IfcRoof": 52,
+            "IfcWall": 703,
+            "IfcWallStandardCase": 3737,
+            "IfcDoor": 428,
+            "IfcBuildingElementProxy": 1536,
+            "IfcFlowTerminal": 237,
+            "IfcBeam": 1562,
+            "IfcStairFlight": 144,
+            "IfcFurnishingElement": 998,
+            "IfcWindow": 175,
+            "IfcColumn": 851,
+            "IfcCovering": 412,
+            "IfcRailing": 337
+          },
+          "renderNodes": 87226,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-309-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 55,
+          "types": {
+            "IfcBuildingElementProxy": 55
+          },
+          "renderNodes": 55,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1200-309-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 4475,
+          "types": {
+            "IfcBuildingElementProxy": 180,
+            "IfcBeam": 3929,
+            "IfcColumn": 366
+          },
+          "renderNodes": 4475,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "E10": {
+      "instances": 93824,
+      "sources": [
+        {
+          "source": "L1T1-0000-310-CON-ED-ARQ-MO-0001_V00.ifc",
+          "instances": 89620,
+          "types": {
+            "IfcWallStandardCase": 3988,
+            "IfcWall": 545,
+            "IfcPlate": 26815,
+            "IfcMember": 49208,
+            "IfcDoor": 482,
+            "IfcStairFlight": 138,
+            "IfcSlab": 2078,
+            "IfcRoof": 41,
+            "IfcBuildingElementProxy": 1740,
+            "IfcFlowTerminal": 276,
+            "IfcCovering": 406,
+            "IfcFurnishingElement": 1101,
+            "IfcBeam": 1519,
+            "IfcColumn": 784,
+            "IfcWindow": 216,
+            "IfcRailing": 283
+          },
+          "renderNodes": 89620,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-310-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 66,
+          "types": {
+            "IfcBuildingElementProxy": 66
+          },
+          "renderNodes": 66,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1200-310-CON-ED-EST-MO-0001_V01.ifc",
+          "instances": 4138,
+          "types": {
+            "IfcSlab": 54,
+            "IfcBuildingElementProxy": 92,
+            "IfcBeam": 3648,
+            "IfcColumn": 344
+          },
+          "renderNodes": 4138,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "E11": {
+      "instances": 94253,
+      "sources": [
+        {
+          "source": "L1T1-0000-311-CON-ED-ARQ-MO-0001_V00.ifc",
+          "instances": 89606,
+          "types": {
+            "IfcSlab": 2019,
+            "IfcRoof": 50,
+            "IfcStairFlight": 150,
+            "IfcWallStandardCase": 3715,
+            "IfcWall": 764,
+            "IfcDoor": 463,
+            "IfcPlate": 26889,
+            "IfcMember": 49030,
+            "IfcBuildingElementProxy": 1787,
+            "IfcFlowTerminal": 275,
+            "IfcCovering": 346,
+            "IfcBeam": 1415,
+            "IfcFurnishingElement": 1119,
+            "IfcColumn": 1032,
+            "IfcWindow": 190,
+            "IfcRailing": 362
+          },
+          "renderNodes": 89606,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-311-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 55,
+          "types": {
+            "IfcBuildingElementProxy": 55
+          },
+          "renderNodes": 55,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1200-311-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 4592,
+          "types": {
+            "IfcBuildingElementProxy": 177,
+            "IfcBeam": 4057,
+            "IfcColumn": 358
+          },
+          "renderNodes": 4592,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "E12": {
+      "instances": 96969,
+      "sources": [
+        {
+          "source": "L1T1-0000-312-CON-ED-ARQ-MO-0001_V01.ifc",
+          "instances": 92355,
+          "types": {
+            "IfcSlab": 2274,
+            "IfcWallStandardCase": 4249,
+            "IfcWall": 626,
+            "IfcStairFlight": 170,
+            "IfcBuildingElementProxy": 2200,
+            "IfcDoor": 487,
+            "IfcFlowTerminal": 252,
+            "IfcPlate": 26698,
+            "IfcMember": 50274,
+            "IfcBeam": 1496,
+            "IfcCovering": 486,
+            "IfcRoof": 45,
+            "IfcFurnishingElement": 1144,
+            "IfcColumn": 1304,
+            "IfcWindow": 251,
+            "IfcRailing": 399
+          },
+          "renderNodes": 92355,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-312-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 55,
+          "types": {
+            "IfcBuildingElementProxy": 55
+          },
+          "renderNodes": 55,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1200-312-CON-ED-EST-MO-0001_V02.ifc",
+          "instances": 4559,
+          "types": {
+            "IfcBeam": 4036,
+            "IfcColumn": 346,
+            "IfcBuildingElementProxy": 177
+          },
+          "renderNodes": 4559,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "E13": {
+      "instances": 115710,
+      "sources": [
+        {
+          "source": "L1T1-0000-313-CON-ED-ARQ-MO-0001_V00.ifc",
+          "instances": 111119,
+          "types": {
+            "IfcPlate": 33843,
+            "IfcMember": 61093,
+            "IfcRoof": 33,
+            "IfcSlab": 2178,
+            "IfcWall": 861,
+            "IfcWallStandardCase": 5315,
+            "IfcStairFlight": 216,
+            "IfcDoor": 565,
+            "IfcBuildingElementProxy": 1888,
+            "IfcFlowTerminal": 294,
+            "IfcBeam": 1274,
+            "IfcFurnishingElement": 1627,
+            "IfcColumn": 806,
+            "IfcCovering": 428,
+            "IfcWindow": 311,
+            "IfcRailing": 387
+          },
+          "renderNodes": 111119,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-313-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 66,
+          "types": {
+            "IfcBuildingElementProxy": 66
+          },
+          "renderNodes": 66,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1200-313-CON-ED-EST-MO-0001_V01.ifc",
+          "instances": 4525,
+          "types": {
+            "IfcSlab": 54,
+            "IfcBeam": 3975,
+            "IfcColumn": 352,
+            "IfcBuildingElementProxy": 144
+          },
+          "renderNodes": 4525,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "E14": {
+      "instances": 108431,
+      "sources": [
+        {
+          "source": "L1T1-0000-314-CON-ED-ARQ-MO-0001_VB1.ifc",
+          "instances": 103845,
+          "types": {
+            "IfcSlab": 2262,
+            "IfcPlate": 30067,
+            "IfcMember": 58491,
+            "IfcWallStandardCase": 4421,
+            "IfcDoor": 504,
+            "IfcStairFlight": 143,
+            "IfcWall": 686,
+            "IfcBuildingElementProxy": 2009,
+            "IfcFurnishingElement": 1199,
+            "IfcFlowTerminal": 306,
+            "IfcCovering": 516,
+            "IfcBeam": 1574,
+            "IfcRoof": 53,
+            "IfcColumn": 1042,
+            "IfcWindow": 209,
+            "IfcRailing": 363
+          },
+          "renderNodes": 103845,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-314-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 55,
+          "types": {
+            "IfcBuildingElementProxy": 55
+          },
+          "renderNodes": 55,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1200-314-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 4531,
+          "types": {
+            "IfcBuildingElementProxy": 181,
+            "IfcColumn": 358,
+            "IfcBeam": 3992
+          },
+          "renderNodes": 4531,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "I01": {
+      "instances": 10072,
+      "sources": [
+        {
+          "source": "L1T1-1100-201-CON-ED-EST-MO-0001_V01.ifc",
+          "instances": 2632,
+          "types": {
+            "IfcSlab": 1657,
+            "IfcColumn": 73,
+            "IfcBuildingElementProxy": 902
+          },
+          "renderNodes": 2632,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-201-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 7440,
+          "types": {
+            "IfcSlab": 114,
+            "IfcBuildingElementProxy": 7326
+          },
+          "renderNodes": 7440,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "I02": {
+      "instances": 5329,
+      "sources": [
+        {
+          "source": "L1T1-1100-202-CON-ED-EST-MO-0001_V01.ifc",
+          "instances": 1414,
+          "types": {
+            "IfcSlab": 907,
+            "IfcColumn": 33,
+            "IfcBuildingElementProxy": 474
+          },
+          "renderNodes": 1414,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-202-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 3915,
+          "types": {
+            "IfcBuildingElementProxy": 3915
+          },
+          "renderNodes": 3915,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "I03": {
+      "instances": 4334,
+      "sources": [
+        {
+          "source": "L1T1-1100-203-CON-ED-EST-MO-0001_V01.ifc",
+          "instances": 1272,
+          "types": {
+            "IfcSlab": 836,
+            "IfcColumn": 30,
+            "IfcBuildingElementProxy": 406
+          },
+          "renderNodes": 1272,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-203-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 3062,
+          "types": {
+            "IfcBuildingElementProxy": 3062
+          },
+          "renderNodes": 3062,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "I04": {
+      "instances": 4736,
+      "sources": [
+        {
+          "source": "L1T1-1100-204-CON-ED-EST-MO-0001_V01.ifc",
+          "instances": 1463,
+          "types": {
+            "IfcSlab": 979,
+            "IfcColumn": 34,
+            "IfcBuildingElementProxy": 450
+          },
+          "renderNodes": 1463,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-204-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 3273,
+          "types": {
+            "IfcBuildingElementProxy": 3273
+          },
+          "renderNodes": 3273,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "I05": {
+      "instances": 3909,
+      "sources": [
+        {
+          "source": "L1T1-1100-205-CON-ED-EST-MO-0001_V01.ifc",
+          "instances": 1052,
+          "types": {
+            "IfcSlab": 689,
+            "IfcColumn": 24,
+            "IfcBuildingElementProxy": 339
+          },
+          "renderNodes": 1052,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-205-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 2857,
+          "types": {
+            "IfcBuildingElementProxy": 2857
+          },
+          "renderNodes": 2857,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "I06": {
+      "instances": 5336,
+      "sources": [
+        {
+          "source": "L1T1-1100-206-CON-ED-EST-MO-0001_V01.ifc",
+          "instances": 1542,
+          "types": {
+            "IfcSlab": 996,
+            "IfcColumn": 36,
+            "IfcBuildingElementProxy": 510
+          },
+          "renderNodes": 1542,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-206-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 3794,
+          "types": {
+            "IfcBuildingElementProxy": 3794
+          },
+          "renderNodes": 3794,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "I07": {
+      "instances": 7493,
+      "sources": [
+        {
+          "source": "L1T1-1100-207-CON-ED-EST-MO-0001_V01.ifc",
+          "instances": 1968,
+          "types": {
+            "IfcSlab": 1189,
+            "IfcColumn": 51,
+            "IfcBuildingElementProxy": 728
+          },
+          "renderNodes": 1968,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-207-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 5525,
+          "types": {
+            "IfcBuildingElementProxy": 5525
+          },
+          "renderNodes": 5525,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "I08": {
+      "instances": 4044,
+      "sources": [
+        {
+          "source": "L1T1-1100-208-CON-ED-EST-MO-0001_V01.ifc",
+          "instances": 1067,
+          "types": {
+            "IfcSlab": 658,
+            "IfcColumn": 26,
+            "IfcBuildingElementProxy": 383
+          },
+          "renderNodes": 1067,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-208-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 2977,
+          "types": {
+            "IfcBuildingElementProxy": 2977
+          },
+          "renderNodes": 2977,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "I09": {
+      "instances": 5287,
+      "sources": [
+        {
+          "source": "L1T1-1100-209-CON-ED-EST-MO-0001_V01.ifc",
+          "instances": 1024,
+          "types": {
+            "IfcSlab": 940,
+            "IfcColumn": 45,
+            "IfcBuildingElementProxy": 39
+          },
+          "renderNodes": 1024,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-209-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 4263,
+          "types": {
+            "IfcBuildingElementProxy": 4263
+          },
+          "renderNodes": 4263,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    },
+    "I10": {
+      "instances": 7143,
+      "sources": [
+        {
+          "source": "L1T1-1100-210-CON-ED-EST-MO-0001_V02.ifc",
+          "instances": 1399,
+          "types": {
+            "IfcBuildingElementProxy": 576,
+            "IfcSlab": 779,
+            "IfcColumn": 44
+          },
+          "renderNodes": 1399,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-210-CON-ED-EST-MO-0001_VB2.ifc",
+          "instances": 5744,
+          "types": {
+            "IfcBuildingElementProxy": 5744
+          },
+          "renderNodes": 5744,
+          "repeatedInstanceNodes": 0
+        }
+      ]
+    }
+  },
+  "auditedAt": "2026-10-06T23:13:01.109811+00:00",
+  "uiValidation": {
+    "I10": {
+      "identifiedInstances": 7143,
+      "types": {
+        "IfcBuildingElementProxy": 6320,
+        "IfcColumn": 44,
+        "IfcSlab": 779
+      },
+      "columnsOnly": 44,
+      "hideAll": 0,
+      "hiddenSelectionBlocked": true,
+      "individualConsultationGuid": "2DdtEs99D1UxO6nuQ5U1TN"
+    },
+    "E01": {
+      "identifiedInstances": 66067,
+      "displayedInstances": 66030,
+      "sourceAxisReferencesSuppressed": 37,
+      "wallAndWallStandardCaseOnly": 2603
+    },
+    "PT103": {
+      "identifiedDisplayedInstances": 423,
+      "doorsOnly": 12,
+      "nativeOpeningsExcluded": 9
+    },
+    "E15": {
+      "identifiedInstances": 297,
+      "legacyMaterialGroups": 97,
+      "groupsExcludedFromIfcQuantitiesAndRegistration": true
+    },
+    "catalogSections": 37,
+    "dashboardsInitiallyHidden": true,
+    "sharedControls": [
+      "multi-type visibility",
+      "Solo",
+      "Mostrar todos",
+      "Ocultar todos",
+      "Volver",
+      "POV"
+    ],
+    "legacyLimit": "Merged legacy exports with no IFC instance identity cannot provide individual type quantities. Their grouped geometry is kept visible separately and is excluded from instance counts and registration."
+  }
+}
