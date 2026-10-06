@@ -598,5 +598,24 @@
     "triangles": 187929,
     "bytes": 840794,
     "displayGridMeters": 0.5
+  },
+  "I09": {
+    "file": "assets/models/stations/i09-overview.glb.gz",
+    "bounds": {
+      "min": [
+        95198.86468956021,
+        2510.7919921875,
+        -100670.0258742541
+      ],
+      "max": [
+        96241.77826328826,
+        2578.2096542710715,
+        -100016.668713348
+      ]
+    },
+    "sourceTriangles": 8601747,
+    "triangles": 260457,
+    "bytes": 1181452,
+    "displayGridMeters": 0.5
   }
 }
