@@ -108,8 +108,25 @@ export function createStationModelControls(root,entry,code,originalBounds){
  function resetCamera(index){cameraOverrides.delete(levelKey()+':'+index);refreshCameras();return cameraPose(index);}
  function pick(raycaster){const hits=raycaster.intersectObjects(pickables.filter(mesh=>mesh.userData.stationBand.group.visible),false);for(const hit of hits){const band=hit.object.userData.stationBand;if(hit.point.y<band.min+band.offset-.0001||hit.point.y>band.max+band.offset+.0001)continue;return {...hit.object.userData.progressObject,mesh:hit.object};}return null;}
  function tourPose(time){const b=visibleBounds(),c=b.getCenter(new THREE.Vector3()),s=b.getSize(new THREE.Vector3()),r=Math.max(s.x,s.z)*.95;return {position:new THREE.Vector3(c.x+Math.cos(time*.12)*r,c.y+s.y*.65+1,c.z+Math.sin(time*.12)*r),target:c};}
+ // Weighted schematic flow marks on the displayed concourse band. Source IFC
+ // meshes, native identity, camera poses and level clipping stay untouched.
+ const flowGroup=new THREE.Group();flowGroup.name='Flujos teóricos · trayectorias esquemáticas';flowGroup.visible=false;root.add(flowGroup);
+ const flowGeometry=new THREE.SphereGeometry(.045,6,4),flowMaterials=['#45d8ff','#ffd36c'].map(color=>new THREE.MeshBasicMaterial({color,depthTest:false,toneMapped:false}));
+ const flowMeshes=flowMaterials.map(material=>{const mesh=new THREE.InstancedMesh(flowGeometry,material,96);mesh.count=0;mesh.frustumCulled=false;mesh.renderOrder=35;mesh.userData.schematicFlow=true;flowGroup.add(mesh);return mesh;});
+ const flowMatrix=new THREE.Matrix4();
+ function setFlow(rates,time){
+  const band=bands.find(b=>b.key==='upper');flowGroup.visible=Boolean(rates&&rates.total>0&&band.group.visible);if(!flowGroup.visible)return;
+  const y=height(e.vestibule+.9)+band.offset,length=(longZ?size.z:size.x)*.7;
+  flowMeshes.forEach((mesh,lane)=>{
+   const rate=lane?rates.exits:rates.entries;mesh.count=rate>0?Math.min(96,Math.max(1,Math.round(rate/30))):0;
+   for(let i=0;i<mesh.count;i++){
+    const travel=((i/Math.max(1,mesh.count)+time*.08)%1-.5)*length*(lane?-1:1),side=(lane?1:-1)*.12;
+    flowMatrix.makeTranslation(center.x+(longZ?side:travel),y,center.z+(longZ?travel:side));mesh.setMatrixAt(i,flowMatrix);
+   }mesh.instanceMatrix.needsUpdate=true;
+  });
+ }
  function update(time){if(alarm.visible)alarmMaterial.opacity=.13+.09*(.5+.5*Math.sin(time*5));}
- function dispose(){cameraMarkers.traverse(object=>{object.geometry?.dispose();if(object.material)object.material.dispose();});for(const material of ownedMaterials)material.dispose();if(profile.native.length)for(const geometry of new Set(sources.map(mesh=>mesh.geometry)))geometry.dispose();alarm.traverse(object=>{object.geometry?.dispose();});alarmMaterial.dispose();green.dispose();}
- setLevel('all',false);return {levelKeys:keys,levelLabels:profile.levelLabels,nativeLevels:profile.native,setLevel,visibleBounds,cameraPose,activateCamera,setCameraPose,resetCamera,pick,tourPose,update,dispose,setAlarm:active=>{alarm.visible=active;}};
+ function dispose(){flowGeometry.dispose();flowMaterials.forEach(material=>material.dispose());cameraMarkers.traverse(object=>{object.geometry?.dispose();if(object.material)object.material.dispose();});for(const material of ownedMaterials)material.dispose();if(profile.native.length)for(const geometry of new Set(sources.map(mesh=>mesh.geometry)))geometry.dispose();alarm.traverse(object=>{object.geometry?.dispose();});alarmMaterial.dispose();green.dispose();}
+ setLevel('all',false);return {levelKeys:keys,levelLabels:profile.levelLabels,nativeLevels:profile.native,setLevel,visibleBounds,cameraPose,activateCamera,setCameraPose,resetCamera,pick,tourPose,update,dispose,setFlow,setAlarm:active=>{alarm.visible=active;}};
 }
 

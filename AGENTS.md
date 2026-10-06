@@ -1,5 +1,7 @@
 # Metro Digital scene conventions
 
+Gestión de estaciones groups shared controls in five accessible dropdowns: Niveles (all native station bands and separation), Cámaras (fixed 360 cameras and spatial spots), Visibilidad (initial view, automatic tour, transparency), Alarmas, and Simulaciones (Hora pico, Hora Valle, Evento, Fin de semana). Reuse station-management-ui.js and station-flow.js for every future station. Keep source geometry, level clipping and individual IFC registration intact. Only one dropdown opens at a time; Escape closes it. Flow profiles must disclose adjustable assumed timetable/demand/dwell, distinguish hypothetical from measured data, and never claim calibrated pedestrian routing or capacity. Weighted flow marks are schematic and follow concourse visibility/separation. Preserve these controls when integrating new models.
+
 All scenes must retain the same top header as Inicio: Inicio, BIM (Modelos, Avance), Documental (Predial, Documentos), language, Referencia, Ayuda, fullscreen.
 
 Use the shared scene-header.js and scene-header.css through scene-controls.js. Do not implement an independent menu for a new scene. Keep a body data-scene identifier, a top-level header with the Metro Digital brand and a navigation container, and load scene-controls.js. Add scene-specific active navigation and help to scene-header.js when needed.

@@ -1,2 +1,26 @@
 .stationModelSelector{display:inline-flex;align-items:center;gap:8px;padding:0 8px;color:#c5d9e4;font-size:12px}.stationModelSelector select{background:#132735;border:1px solid #426476;border-radius:3px;color:#edf4f8;padding:7px;max-width:190px}
 #app[data-station-model] #toolbar{flex-wrap:wrap;overflow:visible;align-items:center;}
+.stationMenu{position:relative;color:#d8e7ee;font-size:12px}
+.stationMenu>summary{list-style:none;cursor:pointer;padding:9px 13px;background:#142936;border:1px solid #426476;display:flex;gap:12px;align-items:center;min-height:34px;box-sizing:border-box}
+.stationMenu>summary::-webkit-details-marker{display:none}
+.stationMenu>summary:hover,.stationMenu[open]>summary{background:#244454;border-color:#83bbd2}
+.stationMenu>summary:focus-visible{outline:2px solid #ffd36c;outline-offset:2px}
+.stationMenuPanel{position:absolute;bottom:calc(100% + 8px);left:0;width:235px;max-height:min(65vh,540px);overflow:auto;box-sizing:border-box;padding:10px;background:#0c1b25;border:1px solid #496d81;border-radius:5px;box-shadow:0 8px 30px #0009;z-index:80;display:flex;flex-direction:column;gap:6px}
+.stationMenuPanel>button{text-align:left;min-height:36px;flex-shrink:0}
+.stationMenu[data-station-menu="simulations"] .stationMenuPanel{width:min(390px,calc(100vw - 30px));max-height:min(65vh,calc(100dvh - 220px),590px)}
+.flowScenarios{display:grid;grid-template-columns:1fr 1fr;gap:5px}
+.flowAssumption{font-size:10px;letter-spacing:.6px;color:#ffd36c;margin-top:5px}
+.stationMenuPanel p{margin:4px 0;font-size:11px;line-height:1.45;color:#aebfca}
+.flowInputs{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.flowInputs label{font-size:10px;display:flex;flex-direction:column;gap:3px}
+.flowInputs input{width:100%;box-sizing:border-box;background:#132a37;color:#edf4f8;border:1px solid #496b7c;border-radius:3px;padding:5px;min-height:30px}
+.flowPlayback{display:flex;gap:5px;align-items:center;justify-content:space-between;margin-top:5px}.flowPlayback output{font-variant-numeric:tabular-nums;color:#ffd36c;font-size:14px}
+.flowPlayback button{font-size:10px;padding:7px 8px}.flowPlayback button:disabled{opacity:.5;cursor:default}
+[data-flow-time]{width:100%;accent-color:#45d8ff;margin:5px 0}
+[data-flow-chart] svg{width:100%;display:block;background:#09151d}[data-flow-chart] text{font-size:10px;fill:#b4cbd7}
+.flowMetrics{display:grid;grid-template-columns:1fr 1fr;gap:6px}.flowMetrics>div{background:#142936;padding:7px;display:flex;flex-direction:column;gap:3px}.flowMetrics span{font-size:10px;color:#adbfca}.flowMetrics b{font-size:17px;font-variant-numeric:tabular-nums}
+.flowMethod{border-top:1px solid #344b5a;padding-top:7px;font-size:11px}.flowMethod summary{cursor:pointer;color:#c6dce6}.flowMethod a{color:#79d9f6}
+@media(max-width:760px){.stationMenuPanel{position:fixed;bottom:140px;left:12px;max-height:calc(100dvh - 235px);width:min(390px,calc(100vw - 24px))}.stationMenu[data-station-menu="simulations"] .stationMenuPanel{max-height:calc(100dvh - 235px)}.stationMenu>summary{padding:8px}.stationModelSelector{width:100%;padding:0}}
+#app.povMode .stationMenuPanel{max-height:calc(100dvh - 340px)}
+
+.stationMenu>summary.active{border-color:#6fa8c1;background:#244454}
