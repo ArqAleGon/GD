@@ -34,8 +34,16 @@ Se comprobaron consulta general, selección de una losa individual, formulario d
 
 Gestión de E03 se verificó con el modelo real sin contexto, niveles y separación, andén, alarma, cámara interior CAM-01, cuatro spots espaciales y recorrido interior con joysticks. La cámara se ubicó sobre el piso real del andén.
 
+## E04
+
+Se integraron exclusivamente 0000 (90.726 instancias), 1150 (66) y 1200 (4.061): 94.853 instancias en 154 partes comprimidas. No quedan instancias representadas pendientes ni ejes fuera del edificio. Se verificaron GLB, índices, coordenadas e identidad por fuente + GlobalId.
+
+Las disciplinas comparten datum de 2.550 m. El centro del conjunto está dentro de las huellas CAD, a 1,25 m del centro de la nave. Gestión toma las cotas IFC de acceso 2.555 m, vestíbulo/intermedio 2.561,60 m, TOR 2.569,20 m, andén 2.570,34 m y cubiertas nativas. El tren usa el eje de la nave CAD y el TOR.
+
+Se verificaron consulta del modelo, selección y consulta individual de un muro, registro reservado al elemento y Volver. En Gestión se probaron separación, nivel de andén, alarma, cámara fija sobre el piso real, cuatro spots y recorrido interior con joysticks.
+
 ## Procedimiento para próximas estaciones
 
 Cada estación debe completar BIM y Gestión antes de publicarse: modelo real, niveles nativos, separación, alarmas, cámaras 360 de posición fija, spots y recorrido interior. La agrupación del render conserva las instancias IFC originales para consulta y registro individual.
 
-E04–E14 pendientes de conversión y publicación individual. En E09/E10 falta 1150; en E11/E12 faltan 1150 y 1200 en la carpeta de origen revisada. Los archivos con códigos distintos de 0000, 1150 y 1200 están fuera del alcance solicitado.
+E05–E14 pendientes de conversión y publicación individual. En E09/E10 falta 1150; en E11/E12 faltan 1150 y 1200 en la carpeta de origen revisada. Los archivos con códigos distintos de 0000, 1150 y 1200 están fuera del alcance solicitado.
