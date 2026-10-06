@@ -30,7 +30,7 @@
     fresh.title = 'Metro Digital · escena activa';
     fresh.allow = 'fullscreen';
     fresh.allowFullscreen = true;
-    next.source.searchParams.set('brand', '20261005-train-obj-v3');
+    next.source.searchParams.set('brand', '20261006-station-tracking');
     fresh.src = next.source.href;
     fresh.addEventListener('load', () => {
       status.hidden = true;

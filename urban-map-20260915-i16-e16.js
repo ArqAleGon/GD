@@ -71,18 +71,21 @@ function outline(group, geometry, color, height) {
   segments(group, coords, color, height);
 }
 
-export function buildUrbanMap(root, assets, addLabel, inspectStation, activateProgressObject, seismicVisible, volumesVisible = true) {
+export function buildUrbanMap(root, assets, addLabel, inspectStation, activateProgressObject, seismicVisible, volumesVisible = true, modelOnlySection = null) {
   const {data} = assets;
   const progressPickables=[];
   const seismic = new THREE.Group();
   seismic.name = 'Respuesta sísmica';
   seismic.visible = seismicVisible;
   root.add(seismic);
+  const volumes=new THREE.Group();root.add(volumes);
+  let urbanBounds=new THREE.Box3();
+  if(!modelOnlySection){
   for (const zone of data.zones) polygons(seismic, zone.geometry, zone.color, 0.08, 0.68);
   segments(root, assets.buildings, '#344c60', 0.18);
   segments(root, assets.roads, '#839eaf', 0.24);
-  const volumes = new THREE.Group(); volumes.visible = volumesVisible; root.add(volumes);
-  const urbanBounds=buildBimUrbanContext(volumes,assets.urbanContext,assets.placement.gisOrigin);
+  volumes.visible = volumesVisible;
+  urbanBounds=buildBimUrbanContext(volumes,assets.urbanContext,assets.placement.gisOrigin);
   segments(root, assets.parcels, '#d4ad74', .28);
 
 
@@ -108,6 +111,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
     const label = addLabel(point(road.center, .4).toArray(), () => road.name, null, 'roadLabel');
     label.geographic = true;
   }
+  }
   // IFC-derived GLBs are loaded only when the user asks for a section. This
   // keeps the territorial scene light while preserving the validated ordinary
   // transforms and the shared project coordinates of every source model.
@@ -115,6 +119,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
   const ifcGroup=new THREE.Group();ifcGroup.name='IFC E15–I16–E16 · Patio Taller 102–112';root.add(ifcGroup);
   const sections=new Map(),ifcSections={};
   for(const definition of assets.ifcModelDefs){
+    if(modelOnlySection&&definition.section!==modelOnlySection)continue;
     if(!sections.has(definition.section)){
       const section=new THREE.Group();section.name='IFC '+definition.section;section.scale.setScalar(scale);section.position.y=placement.streetHeightInScene??.24;ifcGroup.add(section);sections.set(definition.section,{group:section,label:definition.label||('IFC · '+definition.section),definitions:[],bounds:null,promise:null,labelObject:null,elementCount:0,elementPickables:[],elementBounds:[],progressProxy:null});
     }

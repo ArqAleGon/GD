@@ -23,3 +23,7 @@ Consultation and progress registration operate on an individual IFC element inst
 ## Train assets
 
 Inicio and Seguimiento del tren share metro-train-model.js and assets/models/metro-train.glb.gz, converted from the supplied Tren.obj/Tren.mtl with embedded Metro logos. Preserve the red, white/gray, charcoal and yellow livery, per-car picking, existing routes and camera-follow controls, pause/play and sliding door animation. Share template geometries across clones and never dispose them when switching scenes. Future train replacements must retain these behaviors.
+
+## Station and train tracking
+
+Tracking scenes must remove both WebGL urban context and CSS3D aerial imagery on entry. E15 and E16 use their real IFC sections via model-only loading; do not substitute the generic procedural station for an available model. Preserve individual element identity. Initial/top/front/side camera actions disable active train following so the animation cannot overwrite the chosen framing. Inicio uses one leading train car scaled uniformly to four times its prior size (+300%); tracking keeps the six-car train.
