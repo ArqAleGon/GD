@@ -5,7 +5,7 @@ import {COMPARISONS,comparisonLayers} from './e15-comparison.js';
 import {RENDER_E15_CAMERA,renderE15Fov} from './render-e15-camera.js';
 import {buildBogotaContext,cityPoint,METRES_TO_WORLD} from './bogota-context.js?v=20261006-ortho-5cm-tiles';
 import { localizeInterface } from './interface-language.js';
-import { loadUrbanMap, buildUrbanMap } from './urban-map-20260915-i16-e16.js?v=20261005-stations-e13';
+import { loadUrbanMap, buildUrbanMap } from './urban-map-20260915-i16-e16.js?v=20261005-stations-i02';
 import { networkLines } from './network-data.js?v=20260923-l1';
 import {P6,P6_STATUS,stationOptions as p6Stations,workFrontOptions as p6WorkFronts,ueOptions as p6UEs,filterP6,summarizeP6,groupP6} from './p6-dashboard.js?v=20260923-multiue';
 import {OBJECT_PROGRESS_STORAGE_KEY,appendProgressRecord,loadProgressRecords,recordsForObject,summarizeProgress} from './object-progress.js?v=20260929-object-progress-v1';
@@ -39,7 +39,8 @@ strings.ifcE10=['IFC E10','IFC E10'];
 strings.ifcE11=['IFC E11','IFC E11'];
 strings.ifcE12=['IFC E12','IFC E12'];
 strings.ifcE13=['IFC E13','IFC E13'];
-const ifcToolSections={ifcE13:'E13',ifcE12:'E12',ifcE11:'E11',ifcE10:'E10',ifcE09:'E09',ifcI01:'I01',ifcE14:'E14',ifcE08:'E08',ifcE07:'E07',ifcE06:'E06',ifcE05:'E05',ifcE04:'E04',ifcE03:'E03',ifcE02:'E02',ifcE01:'E01',ifcE15:'E15',ifcI16:'I16',ifcE16:'E16',ifc102:'PT102',ifc103:'PT103',ifc104:'PT104',ifc105:'PT105',ifc106:'PT106',ifc107:'PT107',ifc108:'PT108',ifc109:'PT109',ifc110:'PT110',ifc111:'PT111',ifc112:'PT112'};
+strings.ifcI02=['IFC I02','IFC I02'];
+const ifcToolSections={ifcI02:'I02',ifcE13:'E13',ifcE12:'E12',ifcE11:'E11',ifcE10:'E10',ifcE09:'E09',ifcI01:'I01',ifcE14:'E14',ifcE08:'E08',ifcE07:'E07',ifcE06:'E06',ifcE05:'E05',ifcE04:'E04',ifcE03:'E03',ifcE02:'E02',ifcE01:'E01',ifcE15:'E15',ifcI16:'I16',ifcE16:'E16',ifc102:'PT102',ifc103:'PT103',ifc104:'PT104',ifc105:'PT105',ifc106:'PT106',ifc107:'PT107',ifc108:'PT108',ifc109:'PT109',ifc110:'PT110',ifc111:'PT111',ifc112:'PT112'};
 const trackedStationCodes=[...new Set(Object.values(ifcToolSections).filter(code=>/^E\d{2}$/.test(code)))].sort();
 const trackedStationName=code=>({E15:'E15 · Calle 63',E16:'E16 · Calle 72'}[code]||networkLines[0].stations.find(station=>station.code===code)?.name||code);
 const stationSelectorOptions=()=>trackedStationCodes.map(code=>`<option value="${code}" ${activeStation.code===code?'selected':''}>${safe(trackedStationName(code))}</option>`).join('');
@@ -94,7 +95,7 @@ function renderPanels(){
 }
 function button(key,active=false,extra=''){return `<button data-tool="${key}" class="${active?'active':''}" ${extra}>${tr(key)}</button>`}
 function networkModeButton(key,active,swatch){return `<button data-tool="${key}" class="networkModeBtn ${active?'active':''}" aria-pressed="${active}"><i class="lineSwatch ${swatch}"></i>${tr(key)}</button>`}
-const bimModelTools=['patioOverview','ifcE01','ifcE02','ifcE03','ifcE04','ifcE05','ifcE06','ifcE07','ifcE08','ifcE09','ifcE10','ifcE11','ifcE12','ifcE13','ifcE14','ifcE15','ifcE16','ifcI01','ifcI16','ifc102','ifc103','ifc104','ifc105','ifc106','ifc107','ifc108','ifc109','ifc110','ifc111','ifc112'];
+const bimModelTools=['patioOverview','ifcE01','ifcE02','ifcE03','ifcE04','ifcE05','ifcE06','ifcE07','ifcE08','ifcE09','ifcE10','ifcE11','ifcE12','ifcE13','ifcE14','ifcE15','ifcE16','ifcI02','ifcI01','ifcI16','ifc102','ifc103','ifc104','ifc105','ifc106','ifc107','ifc108','ifc109','ifc110','ifc111','ifc112'];
 function bimModelMenu(){
  const groups=[['Estaciones',key=>/^ifcE/.test(key)],['Interestaciones',key=>/^ifcI/.test(key)],['Patio Taller',key=>/^ifc[0-9]/.test(key)]];
  return `<details class="bimModelMenu"><summary class="bimMenuToggle" aria-haspopup="menu">☰ ${tr('modelMenu')}</summary><div class="bimModelMenuPanel" role="menu" aria-label="${tr('modelMenu')}">${button('patioOverview',!activeIfcFocus)}${groups.map(([name,accept])=>`<div class="bimMenuGroup"><strong>${name}</strong>${bimModelTools.filter(accept).map(key=>button(key,ifcToolSections[key]===activeIfcFocus,`aria-pressed="${ifcToolSections[key]===activeIfcFocus}"`)).join('')}</div>`).join('')}</div></details>`;

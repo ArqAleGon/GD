@@ -1,0 +1,221 @@
+{
+  "section": "I02",
+  "models": [
+    {
+      "source": "L1T1-1100-202-CON-ED-EST-MO-0001_V01.ifc",
+      "code": "1100",
+      "status": "converted",
+      "sourceBytes": 61578071,
+      "converted": 1414,
+      "missing": [],
+      "bounds": {
+        "min": [
+          88956.81183090185,
+          2500.694091796875,
+          -104807.34344657998
+        ],
+        "max": [
+          89480.24633362223,
+          2556.6499999995535,
+          -103838.65820910443
+        ]
+      },
+      "siteElevation": 2550.0,
+      "storeys": [
+        {
+          "id": "1Fr40gZLDESuFJ3$a8YXfB",
+          "name": "STR_LEVEL BASE _0.00",
+          "elevation": 0.0,
+          "source": "L1T1-1100-202-CON-ED-EST-MO-0001_V01.ifc"
+        },
+        {
+          "id": "1Fr40gZLDESuFJ3$a8Wqdy",
+          "name": "jdgjcfhj",
+          "elevation": 2536.6,
+          "source": "L1T1-1100-202-CON-ED-EST-MO-0001_V01.ifc"
+        },
+        {
+          "id": "1Fr40gZLDESuFJ3$a8YXcA",
+          "name": "STR_PL_00_BASEMENT_",
+          "elevation": 2550.0,
+          "source": "L1T1-1100-202-CON-ED-EST-MO-0001_V01.ifc"
+        }
+      ],
+      "types": {
+        "IfcSlab": 907,
+        "IfcColumn": 33,
+        "IfcBuildingElementProxy": 474
+      },
+      "parts": [
+        {
+          "file": "assets/models/stations/i02-1100-p001.glb.gz",
+          "rawFile": "assets/models/stations/i02-1100-p001.glb",
+          "bytes": 778773,
+          "rawBytes": 1820336,
+          "instances": 293
+        },
+        {
+          "file": "assets/models/stations/i02-1100-p002.glb.gz",
+          "rawFile": "assets/models/stations/i02-1100-p002.glb",
+          "bytes": 923562,
+          "rawBytes": 1530592,
+          "instances": 15
+        },
+        {
+          "file": "assets/models/stations/i02-1100-p003.glb.gz",
+          "rawFile": "assets/models/stations/i02-1100-p003.glb",
+          "bytes": 656502,
+          "rawBytes": 2012224,
+          "instances": 651
+        },
+        {
+          "file": "assets/models/stations/i02-1100-p004.glb.gz",
+          "rawFile": "assets/models/stations/i02-1100-p004.glb",
+          "bytes": 243631,
+          "rawBytes": 1110740,
+          "instances": 455
+        }
+      ],
+      "seconds": 9,
+      "bodyBounds": {
+        "min": [
+          88956.81183090185,
+          2500.694091796875,
+          -104807.34344657998
+        ],
+        "max": [
+          89480.24633362223,
+          2556.6499999995535,
+          -103838.65820910443
+        ]
+      },
+      "axisReferences": []
+    },
+    {
+      "source": "L1T1-1150-202-CON-ED-EST-MO-0001_V00.ifc",
+      "code": "1150",
+      "status": "converted",
+      "sourceBytes": 182514476,
+      "converted": 3915,
+      "missing": [],
+      "bounds": {
+        "min": [
+          88939.17912121804,
+          2553.91184717658,
+          -104841.38681392653
+        ],
+        "max": [
+          89498.46610771293,
+          2560.0096541797498,
+          -103803.51171402993
+        ]
+      },
+      "siteElevation": 2550.0,
+      "storeys": [],
+      "types": {
+        "IfcBuildingElementProxy": 3915
+      },
+      "parts": [
+        {
+          "file": "assets/models/stations/i02-1150-p001.glb.gz",
+          "rawFile": "assets/models/stations/i02-1150-p001.glb",
+          "bytes": 969373,
+          "rawBytes": 1633276,
+          "instances": 192
+        },
+        {
+          "file": "assets/models/stations/i02-1150-p002.glb.gz",
+          "rawFile": "assets/models/stations/i02-1150-p002.glb",
+          "bytes": 1026121,
+          "rawBytes": 1665888,
+          "instances": 211
+        },
+        {
+          "file": "assets/models/stations/i02-1150-p003.glb.gz",
+          "rawFile": "assets/models/stations/i02-1150-p003.glb",
+          "bytes": 693756,
+          "rawBytes": 1639632,
+          "instances": 136
+        },
+        {
+          "file": "assets/models/stations/i02-1150-p004.glb.gz",
+          "rawFile": "assets/models/stations/i02-1150-p004.glb",
+          "bytes": 887492,
+          "rawBytes": 1700984,
+          "instances": 297
+        },
+        {
+          "file": "assets/models/stations/i02-1150-p005.glb.gz",
+          "rawFile": "assets/models/stations/i02-1150-p005.glb",
+          "bytes": 566769,
+          "rawBytes": 1781448,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/i02-1150-p006.glb.gz",
+          "rawFile": "assets/models/stations/i02-1150-p006.glb",
+          "bytes": 37403,
+          "rawBytes": 380464,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/i02-1150-p007.glb.gz",
+          "rawFile": "assets/models/stations/i02-1150-p007.glb",
+          "bytes": 38332,
+          "rawBytes": 381652,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/i02-1150-p008.glb.gz",
+          "rawFile": "assets/models/stations/i02-1150-p008.glb",
+          "bytes": 694049,
+          "rawBytes": 1788128,
+          "instances": 428
+        },
+        {
+          "file": "assets/models/stations/i02-1150-p009.glb.gz",
+          "rawFile": "assets/models/stations/i02-1150-p009.glb",
+          "bytes": 860767,
+          "rawBytes": 1754124,
+          "instances": 391
+        },
+        {
+          "file": "assets/models/stations/i02-1150-p010.glb.gz",
+          "rawFile": "assets/models/stations/i02-1150-p010.glb",
+          "bytes": 935671,
+          "rawBytes": 1757248,
+          "instances": 122
+        },
+        {
+          "file": "assets/models/stations/i02-1150-p011.glb.gz",
+          "rawFile": "assets/models/stations/i02-1150-p011.glb",
+          "bytes": 1100159,
+          "rawBytes": 1549028,
+          "instances": 30
+        },
+        {
+          "file": "assets/models/stations/i02-1150-p012.glb.gz",
+          "rawFile": "assets/models/stations/i02-1150-p012.glb",
+          "bytes": 259062,
+          "rawBytes": 373436,
+          "instances": 8
+        }
+      ],
+      "seconds": 30,
+      "bodyBounds": {
+        "min": [
+          88939.17912121804,
+          2553.91184717658,
+          -104841.38681392653
+        ],
+        "max": [
+          89498.46610771293,
+          2560.0096541797498,
+          -103803.51171402993
+        ]
+      },
+      "axisReferences": []
+    }
+  ],
+  "status": "converted"
+}
