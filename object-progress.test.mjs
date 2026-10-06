@@ -25,3 +25,16 @@ assert.ok(storage.getItem(OBJECT_PROGRESS_STORAGE_KEY));
 assert.throws(()=>appendProgressRecord(storage,{objectId:'x',objectTitle:'X',userName:'',date:'2026-09-21',progress:20}),/nombre de usuario/);
 assert.throws(()=>appendProgressRecord(storage,{objectId:'x',objectTitle:'X',userName:'A',date:'2026-09-21',progress:120}),/entre 0 y 100/);
 console.log('Object progress persistence, history and execution summaries verified');
+
+const guid='2DdtEs99D1UxO6nuQ5U1TN',canonical=`ifc-element:PT103:source-a.ifc:${guid}`;
+const older=[{objectId:canonical+':1',date:'2026-10-01',createdAt:'2026-10-01T10:00:00Z',progress:20,section:'PT103'},
+ {objectId:canonical+':2',date:'2026-10-02',createdAt:'2026-10-02T10:00:00Z',progress:50,section:'PT103'},
+ {objectId:canonical.replace('source-a.ifc','source-b.ifc')+':1',date:'2026-10-03',createdAt:'2026-10-03T10:00:00Z',progress:100,section:'PT103'}];
+const saved=JSON.stringify(older);
+assert.equal(recordsForObject(older,canonical).length,2);
+assert.equal(recordsForObject(older,canonical)[0].progress,50);
+assert.equal(summarizeProgress(older).objects,2);
+assert.equal(summarizeProgress(older).average,75);
+assert.equal(JSON.stringify(older),saved);
+assert.equal(recordsForObject(older,canonical.replace('PT103','PT104')).length,0);
+console.log('Legacy IFC material keys resolve to one source-qualified instance without modifying history PASS');

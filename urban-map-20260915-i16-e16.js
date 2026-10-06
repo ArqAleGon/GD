@@ -5,6 +5,7 @@ import * as THREE from 'three';
 import {GLTFLoader} from './GLTFLoader.js';
 import {MeshoptDecoder} from './meshopt_decoder.module.js';
 import {createIfcProgressObject} from './ifc-progress.js?v=20260929-element-progress-v1';
+import {canonicalProgressObjectId} from './object-progress.js?v=20261006-ifc-instance-history';
 import {rankedBoundHits,sectionPickCandidates} from './ifc-picking.js?v=20260930-element-picking-v1';
 
 const scale = 0.06;
@@ -211,6 +212,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
       }else{
         const instanceKey=ifcId?`${definition.source||definition.file}:${ifcId}`:object.userData.progressObject.id;
         object.userData.ifcInstanceKey=instanceKey;
+        if(ifcId)object.userData.progressObject.id=canonicalProgressObjectId(object.userData.progressObject.id);
         if(!object.userData.ifcGroupedGeometry&&!instances.has(instanceKey)){instances.add(instanceKey);entry.elementCount++;}
       }
       entry.elementPickables.push(object);

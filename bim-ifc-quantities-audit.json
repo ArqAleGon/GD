@@ -1011,6 +1011,12 @@
       "Volver",
       "POV"
     ],
-    "legacyLimit": "Merged legacy exports with no IFC instance identity cannot provide individual type quantities. Their grouped geometry is kept visible separately and is excluded from instance counts and registration."
+    "legacyLimit": "Merged legacy exports with no IFC instance identity cannot provide individual type quantities. Their grouped geometry is kept visible separately and is excluded from instance counts and registration.",
+    "legacyProgress": {
+      "sourceQualifiedCanonicalKeys": true,
+      "historicalMaterialKeysRecognized": true,
+      "savedRecordsUnmodified": true,
+      "separateSourceAndSectionIdentities": true
+    }
   }
 }

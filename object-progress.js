@@ -3,6 +3,9 @@ export const OBJECT_PROGRESS_STORAGE_KEY='emb-gd-object-progress-v1';
 const clean=value=>String(value??'').trim();
 const validDate=value=>/^\d{4}-\d{2}-\d{2}$/.test(value)&&!Number.isNaN(Date.parse(value+'T12:00:00'));
 const recordOrder=(a,b)=>(a.date||'').localeCompare(b.date||'')||(a.createdAt||'').localeCompare(b.createdAt||'');
+// Older viewers appended a material-mesh index to genuine source-qualified IFC IDs.
+// Normalize comparisons only: retain the saved records and their original IDs.
+export const canonicalProgressObjectId=value=>clean(value).replace(/^(ifc-element:[^:]+:[^:]+:[0-3][A-Za-z0-9_$]{21}):\d+$/,'$1');
 
 export function createProgressRecord(input,now=new Date()){
   const objectId=clean(input.objectId),objectTitle=clean(input.objectTitle),userName=clean(input.userName),date=clean(input.date),progress=Number(input.progress);
@@ -45,14 +48,15 @@ export function appendProgressRecord(storage,input,now=new Date()){
 }
 
 export function recordsForObject(records,objectId){
-  return records.filter(record=>record.objectId===objectId).sort((a,b)=>recordOrder(b,a));
+  const id=canonicalProgressObjectId(objectId);
+  return records.filter(record=>canonicalProgressObjectId(record.objectId)===id).sort((a,b)=>recordOrder(b,a));
 }
 
 export function latestObjectRecords(records){
   const latest=new Map();
   for(const record of records){
-    const previous=latest.get(record.objectId);
-    if(!previous||recordOrder(record,previous)>0)latest.set(record.objectId,record);
+    const id=canonicalProgressObjectId(record.objectId),previous=latest.get(id);
+    if(!previous||recordOrder(record,previous)>0)latest.set(id,record);
   }
   return [...latest.values()];
 }
