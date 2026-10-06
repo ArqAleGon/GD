@@ -2,7 +2,7 @@ async function loadGzipJSON(url){const response=await fetch(url);if(!response.ok
 const [predialPayload,mapBasePayload,stationFootprints]=await Promise.all([
  loadGzipJSON('./predial-data.json.gz?v=20260929-complete-map-v1'),
  loadGzipJSON('./predial-map-base.json.gz?v=20260922-mapbase'),
- fetch('./predial-station-footprints.json?v=20261006-e02-access02').then(response=>{if(!response.ok)throw new Error('No se pudieron cargar las huellas CAD');return response.json();})
+ fetch('./predial-station-footprints.json?v=20261006-e13-three-footprints').then(response=>{if(!response.ok)throw new Error('No se pudieron cargar las huellas CAD');return response.json();})
 ]);
 const PREDIAL_META=predialPayload.meta,PREDIAL_RECORDS=predialPayload.records,PREDIAL_SOURCE_ONLY=predialPayload.sourceOnlyRecords||[],PREDIAL_ALL_RECORDS=[...PREDIAL_RECORDS,...PREDIAL_SOURCE_ONLY],PREDIAL_DOCUMENTS=predialPayload.documents||[];
 const DOCUMENTS_BY_ID=new Map(PREDIAL_DOCUMENTS.map(document=>[document.id,document]));
