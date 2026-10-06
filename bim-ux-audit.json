@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-06",
+  "scope": "BIM/Modelos: entrada, navegación, consulta y aislamiento; convenciones compartidas conservadas",
+  "method": "Auditoría heurística del código y de la interfaz visible, seguida de pruebas funcionales. No constituye un estudio con usuarios ni una medición de carga cognitiva.",
+  "findings": [
+    {
+      "priority": "alta",
+      "evidence": "La entrada invocaba únicamente la precarga de Patio Taller y usaba pilotBounds de E15-E16.",
+      "change": "Catálogo completo con carga progresiva automática; encuadre calculado con todos los límites disponibles antes de cargar geometría, sin desplazar después la cámara del usuario."
+    },
+    {
+      "priority": "alta",
+      "evidence": "Las nuevas estaciones tenían etiquetas y menú, pero su geometría solo se descargaba al consultarlas.",
+      "change": "Vistas contextuales derivadas de sus sólidos originales, visibles desde la entrada. Los IFC detallados conservan su consulta por instancia, materiales e identidad."
+    },
+    {
+      "priority": "alta",
+      "evidence": "No se distinguía una escena incompleta de una carga pendiente.",
+      "change": "Contador persistente de modelos visibles y códigos pendientes si hay fallos. Vista general reintenta las cargas fallidas."
+    },
+    {
+      "priority": "media",
+      "evidence": "Joysticks permanentes y acciones cartográficas/comparación competían con la navegación BIM.",
+      "change": "Navegación POV explícita; joysticks aparecen al activarla. Capas y comparación se agrupan en un desplegable. Modelos, etiquetas y vista general/Volver permanecen accesibles."
+    },
+    {
+      "priority": "media",
+      "evidence": "La lista de modelos mezclaba estaciones, interestación y edificios del Patio Taller.",
+      "change": "Agrupación por tipo de conjunto y conservación de los códigos IFC."
+    },
+    {
+      "priority": "media",
+      "evidence": "La consulta del modelo completo mostraba control de ejecución e historial vacío, aunque solo los elementos pueden registrar avances.",
+      "change": "Primero identificación, cantidad de instancias y dimensiones; datos técnicos y archivos fuente desplegables. La acción siguiente es Vista aislada. Los elementos mantienen su historial y registro individual."
+    },
+    {
+      "priority": "media",
+      "evidence": "Vista inicial activaba Respuesta sísmica como efecto secundario.",
+      "change": "Vista general recupera el conjunto sin modificar las capas elegidas."
+    },
+    {
+      "priority": "alta",
+      "evidence": "La vista global seguida de consultas detalladas retrasaba la interacción; una cámara CCTV dibujaba simultáneamente el visor de fondo.",
+      "change": "Agrupación de dibujo para modelos antiguos preservando objetos de selección y materiales texturados; suspensión del visor oculto tras un diálogo, mientras CCTV mantiene su propia imagen."
+    }
+  ],
+  "preserved": [
+    "Header compartido",
+    "Dashboards ocultos al inicio",
+    "IFC fuente y GlobalId por instancia",
+    "Registro solo en aislamiento",
+    "Volver restaura encuadre previo",
+    "Controles de Gestión de estaciones",
+    "Fuentes y datos técnicos accesibles"
+  ],
+  "overviewLimit": "Las nueve vistas contextuales nuevas usan una malla de visualización de 0,5 m derivada del IFC. No se emplean para medir, seleccionar instancias ni registrar avances; esas acciones usan el modelo detallado original.",
+  "validation": {
+    "local": [
+      "22/22 modelos disponibles al entrar sin aislamiento",
+      "9 mallas contextuales: índices, valores finitos, límites originales dentro de 0,25 m por eje y cobertura del catálogo",
+      "E01: consulta de modelo, aislamiento, instancia IfcCurtainWall 0DDXEEMpPAufyjKovZqgNq, formulario individual cancelado y Volver",
+      "POV explícito y capas conservadas al volver a Vista general",
+      "E14 Gestión: separación, CAM-01 y recorrido interior con joysticks",
+      "Prueba de render agrupado: límites, materiales texturados, identidad y raycast de instancias originales",
+      "Sintaxis JavaScript"
+    ],
+    "limits": "Prueba funcional por muestreo en escritorio. No es certificación WCAG ni estudio de usabilidad con participantes."
+  }
+}

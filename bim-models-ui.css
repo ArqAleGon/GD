@@ -2,6 +2,14 @@
 .bimProgressSpot button{display:block;width:100%;padding:0;border:0;background:transparent;color:inherit;font:inherit;cursor:pointer}
 .bimProgressSpot .bimBuildingName{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600;height:20px}
 .bimProgressSpot button:focus-visible{background:#a51e28;outline:1px solid white}
+#povControls[hidden],#bimLoadStatus[hidden]{display:none!important}
+#bimLoadStatus{position:absolute;right:12px;top:140px;z-index:20;max-width:280px;padding:8px 12px;border:1px solid #52738b;border-radius:5px;background:#0c1b27e8;color:#d9edf7;font-size:12px;pointer-events:none}
+.bimMenuGroup{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:10px}
+.bimMenuGroup>strong{grid-column:1/-1;color:#9ac8e0;font-size:12px;padding:5px 0}
+.bimContextMenu{position:relative}
+.bimContextMenu>summary{cursor:pointer;padding:10px 12px;border:1px solid #52738b;border-radius:3px;list-style:none;color:#d9edf7}
+.bimContextMenu>div{position:absolute;right:0;bottom:calc(100% + 8px);width:240px;padding:8px;display:grid;gap:6px;background:#0d1d29;border:1px solid #52738b;border-radius:5px;box-shadow:0 8px 24px #0008}
+.bimModelMetadata{margin:18px 0}.bimModelMetadata summary{cursor:pointer;padding:10px 0;color:#9ac8e0}.bimModelMetadata table{width:100%}
 #app.noDataDashboards #panels,#app.noDataDashboards #panelToggle{display:none!important}
 /* BIM controls share the lower band: movement left, tools and sources right. */
 body[data-scene="inicio"]:has(#app.urbanControls){--bim-movement-width:clamp(350px,44vw,490px)}
@@ -18,3 +26,7 @@ body[data-scene="inicio"]:has(#app.urbanControls) #panels{bottom:calc(76px + max
  body[data-scene="inicio"]:has(#app.urbanControls) #povControls .povStatus{display:none}
  body[data-scene="inicio"]:has(#app.urbanControls) #toolbar>button{flex-basis:90px;font-size:10px;padding:4px}
 }
+body[data-scene="inicio"]:has(#app.urbanControls:not(.povMode)) #toolbar{left:12px;right:12px;justify-content:center}
+body[data-scene="inicio"]:has(#app.urbanControls:not(.povMode)) #toolbar>button{flex:0 1 auto;min-height:40px;padding:8px 14px}
+body[data-scene="inicio"]:has(#app.urbanControls:not(.povMode)) .dataSourceToggle{left:12px}
+body[data-scene="inicio"]:has(#app.urbanControls) :is(button,summary):focus-visible{outline:2px solid #8ed6ff;outline-offset:3px}

@@ -5,6 +5,8 @@ export function batchIfcRenderGeometry(model){
     const groups=new Map(),singles=new Map(),inverse=model.matrixWorld.clone().invert();
     model.traverse(mesh=>{
       if(!mesh.isMesh||!mesh.visible||Array.isArray(mesh.material))return;
+      // Texture/custom attribute meshes retain their original draw path.
+      if(Object.values(mesh.material).some(value=>value?.isTexture)||mesh.isSkinnedMesh||mesh.morphTargetInfluences||Object.keys(mesh.geometry.attributes).some(name=>!['position','normal','uv'].includes(name)))return;
       const key=mesh.geometry.uuid+':'+mesh.material.uuid;
       if(!groups.has(key))groups.set(key,[]);groups.get(key).push(mesh);
     });

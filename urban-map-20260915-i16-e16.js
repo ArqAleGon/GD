@@ -1,4 +1,4 @@
-import {batchIfcRenderGeometry} from './ifc-render-batches.js?v=20261005-station-management';
+import {batchIfcRenderGeometry} from './ifc-render-batches.js?v=20261006-bim-overview-ux';
 import {loadBimUrbanContext,buildBimUrbanContext} from './bim-urban-context.js';
 import * as THREE from 'three';
 import {GLTFLoader} from './GLTFLoader.js';
@@ -7,7 +7,7 @@ import {createIfcProgressObject} from './ifc-progress.js?v=20260929-element-prog
 import {rankedBoundHits,sectionPickCandidates} from './ifc-picking.js?v=20260930-element-picking-v1';
 
 const scale = 0.06;
-const assetRevision = '20261005-stations-e14';
+const assetRevision = '20261006-bim-overview-ux';
 const point = (p, height = 0) => new THREE.Vector3(p[0] * scale, height, -p[1] * scale);
 
 export async function loadUrbanMap() {
@@ -16,18 +16,19 @@ export async function loadUrbanMap() {
     if (!response.ok) throw new Error('No se pudo cargar la cartografía: ' + name);
     return binary ? response.arrayBuffer() : response.json();
   };
-  const [data, buildings, roads, volumesData, volumes, volumeFootprints, parcels, placement, ptHqTypes, urbanContext] = await Promise.all([
+  const [data, buildings, roads, volumesData, volumes, volumeFootprints, parcels, placement, ptHqTypes, urbanContext, overviews] = await Promise.all([
     read('map.json'), read('buildings.bin', true), read('roads.bin', true), read('volumes.json'), read('volumes.bin', true), read('volume-footprints.bin', true), read('parcels.bin', true),
     fetch('./ifc-placement-20260915-i16-e16.json?v='+assetRevision).then(r=>{if(!r.ok)throw new Error('IFC placement unavailable');return r.json()}),
     fetch('./pt-hq-element-types.json?v='+assetRevision).then(r=>{if(!r.ok)throw new Error('Patio high-fidelity type map unavailable');return r.json()}),
-    loadBimUrbanContext()
+    loadBimUrbanContext(),
+    fetch('./bim-overviews.json?v='+assetRevision).then(r=>r.ok?r.json():{}).catch(()=>({}))
   ]);
   const ifcLoader = new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
   const ifcModelDefs=placement.models||[
     {file:'e15-architecture-web.glb',section:'E15',label:'IFC · E15 · ARQ + EST'},
     {file:'e15-1100.glb',section:'E15',label:'IFC · E15 · ARQ + EST'}
   ];
-  return {urbanContext, ifcLoader, ifcModelDefs, placement, ptHqTypes, data, volumesData, volumes: new Float32Array(volumes), volumeFootprints: new Float32Array(volumeFootprints), parcels: new Float32Array(parcels), buildings: new Float32Array(buildings), roads: new Float32Array(roads)};
+  return {overviews, urbanContext, ifcLoader, ifcModelDefs, placement, ptHqTypes, data, volumesData, volumes: new Float32Array(volumes), volumeFootprints: new Float32Array(volumeFootprints), parcels: new Float32Array(parcels), buildings: new Float32Array(buildings), roads: new Float32Array(roads)};
 }
 
 function segments(group, coords, color, height) {
@@ -118,7 +119,8 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
   // transforms and the shared project coordinates of every source model.
   const placement=assets.placement;
   const ifcGroup=new THREE.Group();ifcGroup.name='IFC E15–I16–E16 · Patio Taller 102–112';root.add(ifcGroup);
-  const sections=new Map(),ifcSections={};
+  const sections=new Map(),ifcSections={};let disposed=false;
+  const disposeObject=object=>object.traverse(node=>{node.geometry?.dispose();for(const material of [node.material].flat())material?.dispose();});
   for(const definition of assets.ifcModelDefs){
     if(modelOnlySection&&definition.section!==modelOnlySection)continue;
     if(!sections.has(definition.section)){
@@ -126,10 +128,10 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
     }
     sections.get(definition.section).definitions.push(definition);
   }
-  const stationSections=new Set([...sections.keys()].filter(name=>/^E\d{2}$/.test(name)).concat('I16'));
+  const stationSections=new Set([...sections.keys()].filter(name=>/^[EI]\d{2}$/.test(name)));
   function createSectionLabel(sectionName,entry,position){
     const station=data.stations.find(item=>item.code===sectionName);
-    const rail=stationSections.has(sectionName),name=rail?({E15:'Estación 15 · Calle 63',E16:'Estación 16 · Calle 72',I16:'Interestación E15–E16'}[sectionName]||station?.name||`Estación ${sectionName.slice(1)}`):entry.label.replace(/^IFC\s*·\s*/, '');
+    const rail=stationSections.has(sectionName),name=rail?({E15:'Estación 15 · Calle 63',E16:'Estación 16 · Calle 72',I16:'Interestación E15–E16'}[sectionName]||station?.name||`${sectionName.startsWith('I')?'Interestación':'Estación'} ${sectionName.slice(1)}`):entry.label.replace(/^IFC\s*·\s*/, '');
     entry.labelObject=addLabel(position,()=>`<button class="bimBuildingName" data-model-action="consult" title="Consultar ${name}">${name}</button>`,async event=>{
       const action=event.target.closest('[data-model-action]')?.dataset.modelAction||'consult';
       document.dispatchEvent(new CustomEvent('bimmodelaction',{detail:{section:sectionName,action}}));
@@ -217,7 +219,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
     entry.promise=(async()=>{
       const loaded=new Array(available.length);let nextAsset=0;
       await Promise.all(Array.from({length:Math.min(4,available.length)},async()=>{
-        while(nextAsset<available.length){
+        while(nextAsset<available.length&&!disposed){
           const index=nextAsset++,definition=available[index];
           const url='./'+definition.file+'?v='+assetRevision;
           let asset;
@@ -229,14 +231,17 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
           loaded[index]={definition,scene:asset.scene};
         }
       }));
+      if(disposed){for(const asset of loaded)if(asset)disposeObject(asset.scene);throw new Error('Scene closed');}
       for(const asset of loaded){
         const model=asset.scene;
         if(ptHqSections.has(sectionName))stylePtHq(model);
         model.position.set(-placement.gisOrigin[0],-(asset.definition.streetDatum??placement.streetDatum),placement.gisOrigin[1]);
         markIfcProgressObjects(model,asset.definition,sectionName,entry);
-        if(!modelOnlySection&&asset.definition.instanceIdentity==='ifc-globalid')batchIfcRenderGeometry(model);
+        if(!modelOnlySection)batchIfcRenderGeometry(model);
         entry.group.add(model);
       }
+      if(disposed){for(const asset of loaded)disposeObject(asset.scene);throw new Error('Scene closed');}
+      if(entry.overview){entry.group.remove(entry.overview);disposeObject(entry.overview);entry.overview=null;}
       entry.group.updateMatrixWorld(true);
       entry.elementBounds=entry.elementPickables.map(mesh=>{
         if(!mesh.geometry.boundingBox)mesh.geometry.computeBoundingBox();
@@ -260,7 +265,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
         entry.elementPickables=entry.elementBounds.map(item=>item.mesh);
       }else sectionBounds.setFromObject(entry.group,true);
       if(sectionBounds.isEmpty()){const error=new Error('El modelo convertido no contiene geometría visible');error.code='no-geometry';throw error;}
-      if(instanceSources&&!modelOnlySection)entry.group.traverse(object=>{object.matrixAutoUpdate=false;object.matrixWorldAutoUpdate=false;});
+      if(!modelOnlySection)entry.group.traverse(object=>{object.matrixAutoUpdate=false;object.matrixWorldAutoUpdate=false;});
       entry.bounds=sectionBounds;ifcSections[sectionName]=sectionBounds;ifcBounds.union(sectionBounds);
       const sectionCenter=sectionBounds.getCenter(new THREE.Vector3());
       const sectionSize=sectionBounds.getSize(new THREE.Vector3());
@@ -272,6 +277,19 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
       return sectionBounds;
     })().catch(error=>{entry.promise=null;throw error;});
     return entry.promise;
+  };
+  const ensureOverview=async sectionName=>{
+    const entry=sections.get(sectionName),definition=assets.overviews?.[sectionName];
+    if(disposed)throw new Error('Scene closed');
+    if(entry.bounds||entry.overview)return;
+    if(!definition?.file)return ensureIfcSection(sectionName);
+    const response=await fetch('./'+definition.file+'?v='+assetRevision);
+    if(!response.ok)throw new Error('No se pudo cargar '+sectionName);
+    const bytes=await new Response(response.body.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
+    const asset=await assets.ifcLoader.parseAsync(bytes,'./');
+    if(disposed||entry.bounds){disposeObject(asset.scene);return;}
+    asset.scene.position.set(-placement.gisOrigin[0],-entry.streetDatum,placement.gisOrigin[1]);
+    entry.overview=asset.scene;entry.group.add(asset.scene);applySectionAppearance(sectionName,entry);
   };
   const ghostMaterial=new THREE.MeshBasicMaterial({color:'#a8cfdd',transparent:true,opacity:.12,depthWrite:false,side:THREE.DoubleSide,toneMapped:false,wireframe:true});
   let focusedSection=null;
@@ -320,5 +338,13 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
   const all = bounds(data.pilot);
   data.zones.forEach(z => all.union(bounds(z.geometry)));
   all.union(urbanBounds);
-  return {isolateSection, seismic, volumes, ifcBounds, ifcSections, progressPickables, pickProgressElement, ensureIfcSection, setIfcSectionVisibility, sectionDefinitions:sections, pilotBounds: bounds(data.pilot).union(bounds(assets.volumesData.corridor)), fullBounds: all};
+  const overviewBounds=new THREE.Box3();
+  for(const [name,entry] of sections){
+    if(entry.labelObject)overviewBounds.expandByPoint(entry.labelObject.pos);
+    const preview=assets.overviews?.[name];
+    if(preview)for(const corner of [preview.bounds.min,preview.bounds.max])overviewBounds.expandByPoint(new THREE.Vector3((corner[0]-placement.gisOrigin[0])*scale,(corner[1]-entry.streetDatum)*scale+.24,(corner[2]+placement.gisOrigin[1])*scale));
+  }
+  if(overviewBounds.isEmpty())overviewBounds.copy(all);else overviewBounds.expandByScalar(12);
+  return {disposePending:()=>{disposed=true;},ensureOverview,overviewBounds,isolateSection, seismic, volumes, ifcBounds, ifcSections, progressPickables, pickProgressElement, ensureIfcSection, setIfcSectionVisibility, sectionDefinitions:sections, pilotBounds: bounds(data.pilot).union(bounds(assets.volumesData.corridor)), fullBounds: all};
 }
+
