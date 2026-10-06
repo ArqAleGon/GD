@@ -408,5 +408,24 @@
     "triangles": 523701,
     "bytes": 2466052,
     "displayGridMeters": 0.5
+  },
+  "E11": {
+    "file": "assets/models/stations/e11-overview.glb.gz",
+    "bounds": {
+      "min": [
+        98885.63411593823,
+        2566.9497000098213,
+        -99866.14531665745
+      ],
+      "max": [
+        99031.56142107699,
+        2602.5399999999977,
+        -99706.10905471582
+      ]
+    },
+    "sourceTriangles": 11831545,
+    "triangles": 637253,
+    "bytes": 2907260,
+    "displayGridMeters": 0.5
   }
 }
