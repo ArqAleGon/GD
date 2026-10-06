@@ -80,8 +80,18 @@ Se encontraron dos cuerpos de riel IFC cuya cota superior 2.571,593 m concuerda 
 
 Se verificaron consulta general, muro cortina individual GlobalId `3Xu$Dzph5Fw94mJ3JROJys`, registro reservado a esa instancia, aislamiento y Volver. Gestión pasó separación, andén, alarma, cámaras fijas con giro de encuadre, cuatro spots y recorrido interior con joysticks. CAM-01 inicia frente a un volumen interior del modelo; el giro permite inspeccionar el entorno desde la misma posición.
 
+## E14
+
+Se integraron únicamente 0000 (103.845 instancias), 1150 (55) y 1200 (4.531): 108.431 instancias en 214 partes. Se validaron archivos, índices, coordenadas e identidad por fuente + GlobalId; no quedan instancias representadas pendientes ni ejes fuera del edificio. Los demás códigos de la carpeta se excluyeron.
+
+El muro 2683845, GlobalId `2Cs0kuim95iAClkdktzzz2`, conserva su Axis porque los cortes nativos eliminan el Body. El centro del conjunto queda dentro de las huellas CAD y a 2,17 m del centro de la nave.
+
+Las disciplinas usan datum común 2.550 m. Gestión conserva las numerosas cotas de acceso originales y usa intermedio 2.581,03 m, TOR 2.588,63 m, plataforma 2.589,77 m y cubiertas nativas. El tren usa el eje CAD y el TOR de esta estación.
+
+Se verificaron consulta general, losa individual GlobalId `20eiKWweHANBTswzz1DrOw`, registro reservado a la instancia, aislamiento y Volver. Gestión pasó separación, andén, alarma, cámara fija sobre el piso real, cuatro spots y recorrido interior con joysticks.
+
 ## Procedimiento para próximas estaciones
 
 Cada estación debe completar BIM y Gestión antes de publicarse: modelo real, niveles nativos, separación, alarmas, cámaras 360 de posición fija, spots y recorrido interior. La agrupación del render conserva las instancias IFC originales para consulta y registro individual.
 
-E09–E14 pendientes de conversión y publicación individual. En E09/E10 falta 1150; en E11/E12 faltan 1150 y 1200 en la carpeta de origen revisada. Los archivos con códigos distintos de 0000, 1150 y 1200 están fuera del alcance solicitado.
+E09–E13 pendientes de conversión y publicación individual. E13: arquitectura no legible localmente porque el proveedor de archivos de nube no se está ejecutando. En E09/E10 falta 1150; en E11/E12 faltan 1150 y 1200 en la carpeta de origen revisada. Los archivos con códigos distintos de 0000, 1150 y 1200 están fuera del alcance solicitado.
