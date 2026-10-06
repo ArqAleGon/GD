@@ -1,1 +1,2 @@
 .stationModelSelector{display:inline-flex;align-items:center;gap:8px;padding:0 8px;color:#c5d9e4;font-size:12px}.stationModelSelector select{background:#132735;border:1px solid #426476;border-radius:3px;color:#edf4f8;padding:7px;max-width:190px}
+#app[data-station-model] #toolbar{flex-wrap:wrap;overflow:visible;align-items:center;}
