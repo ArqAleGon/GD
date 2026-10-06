@@ -362,7 +362,7 @@ async function buildTrackingStation(targetRoot,view,code){
   $('#app').dataset.stationModel=code;$('#aerialCredit').hidden=true;
   if(view==='railway'||view==='maintenance')buildStationTrain(targetRoot,code,bounds);
   fitStationModel(true);renderToolbar();updateBadge();
- }catch(error){if(root!==targetRoot)return;$('#app').dataset.stationModel='error';toast('Modelo IFC de '+code+' no disponible');}
+ }catch(error){if(root!==targetRoot)return;console.error('Station model '+code,error);$('#app').dataset.stationModel='error';$('#app').dataset.stationModelError=error?.message||String(error);toast('Modelo IFC de '+code+' no disponible');}
 }
 function buildStationTrain(targetRoot,code,bounds){
  const station=urbanAssets.data.stations.find(s=>s.code===code),center=bounds.getCenter(new THREE.Vector3());
@@ -414,7 +414,7 @@ function movePovCamera(dt){const pressed=name=>povInputs.has(name),analogMove=po
 $$('[data-pov-action]').forEach(button=>{const actionName=button.dataset.povAction;const release=()=>{povInputs.delete(actionName);button.classList.remove('pressed')};button.addEventListener('pointerdown',event=>{event.preventDefault();if(!povMode)setPovMode(true);povInputs.add(actionName);button.classList.add('pressed');button.setPointerCapture?.(event.pointerId)});button.addEventListener('pointerup',release);button.addEventListener('pointercancel',release);button.addEventListener('lostpointercapture',release);});
 $$('[data-pov-stick]').forEach(stick=>{const release=()=>{const value=povStickValues[stick.dataset.povStick];value.x=0;value.y=0;stick.style.setProperty('--stick-x','0px');stick.style.setProperty('--stick-y','0px');stick.classList.remove('pressed');delete $('#app').dataset.povStick;};stick.addEventListener('pointerdown',event=>{event.preventDefault();if(!povMode)setPovMode(true);stick.classList.add('pressed');stick.setPointerCapture?.(event.pointerId);updatePovStick(stick,event)});stick.addEventListener('pointermove',event=>{if(stick.hasPointerCapture?.(event.pointerId))updatePovStick(stick,event)});stick.addEventListener('pointerup',release);stick.addEventListener('pointercancel',release);stick.addEventListener('lostpointercapture',release);});
 $('#povExit').onclick=()=>setPovMode(!povMode);
-document.addEventListener('pointerdown',event=>{$('.bimModelMenu[open],.bimContextMenu[open]').forEach(menu=>{if(!menu.contains(event.target))menu.removeAttribute('open')})});
+document.addEventListener('pointerdown',event=>{$$('.bimModelMenu[open],.bimContextMenu[open]').forEach(menu=>{if(!menu.contains(event.target))menu.removeAttribute('open')})});
 const raycaster=new THREE.Raycaster(),pointer=new THREE.Vector2();let pointerDown=null;
 function visibleInScene(object){for(let current=object;current;current=current.parent)if(!current.visible)return false;return true;}
 function progressTargetAt(event){
