@@ -3,7 +3,7 @@
 .bimProgressSpot .bimBuildingName{white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:600;height:20px}
 .bimProgressSpot button:focus-visible{background:#a51e28;outline:1px solid white}
 #povControls[hidden],#bimLoadStatus[hidden]{display:none!important}
-#bimLoadStatus{position:absolute;right:12px;top:140px;z-index:20;max-width:280px;padding:8px 12px;border:1px solid #52738b;border-radius:5px;background:#0c1b27e8;color:#d9edf7;font-size:12px;pointer-events:none}
+#bimLoadStatus{position:absolute;right:12px;top:140px;z-index:5;max-width:280px;padding:8px 12px;border:1px solid #52738b;border-radius:5px;background:#0c1b27e8;color:#d9edf7;font-size:12px;pointer-events:none}
 .bimMenuGroup{display:grid;grid-template-columns:1fr 1fr;gap:4px;margin-top:10px}
 .bimMenuGroup>strong{grid-column:1/-1;color:#9ac8e0;font-size:12px;padding:5px 0}
 .bimContextMenu{position:relative}
@@ -30,3 +30,7 @@ body[data-scene="inicio"]:has(#app.urbanControls:not(.povMode)) #toolbar{left:12
 body[data-scene="inicio"]:has(#app.urbanControls:not(.povMode)) #toolbar>button{flex:0 1 auto;min-height:40px;padding:8px 14px}
 body[data-scene="inicio"]:has(#app.urbanControls:not(.povMode)) .dataSourceToggle{left:12px}
 body[data-scene="inicio"]:has(#app.urbanControls) :is(button,summary):focus-visible{outline:2px solid #8ed6ff;outline-offset:3px}
+body[data-scene="inicio"]:has(#app.urbanControls) .bimModelMenuPanel{display:block!important;max-height:min(420px,calc(100dvh - 210px));overflow-y:auto}
+.bimModelMenuPanel>button{width:100%}
+.bimMenuGroup{align-items:start;grid-auto-rows:min-content}
+.bimMenuGroup>button{width:100%;min-height:38px;white-space:normal!important}
