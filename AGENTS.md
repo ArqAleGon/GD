@@ -34,3 +34,6 @@ Station CAM views use a fixed optical center: drag rotates the viewing direction
 
 ## Native aerial photography
 Use the public Mapas Bogotá proxy (https://catalogopmb.catastrobogota.gov.co/PMBWeb/proxy.jsp?) for IDECA/UAECD orthourbana2025funcion WMS requests: the direct serviciosgis host times out while the official proxy is operational. Keep progressive detail at native 5 cm when zoomed in and retain local overview imagery for fallback. Distinguish native source GSD from the actual requested/displayed cm per pixel; never claim 2 m overview tiles are native 5 cm. Preserve CC BY 4.0 attribution and exclude aerial context from isolated station/train views.
+
+## Predial CAD footprints
+Use predial-station-footprints.json for individually traced central halls and access buildings from the user's E1–E16 DWGs. Keep stationFootprint styling and shared opacity/toggle controls. Georeference using legible native coordinate grids in EPSG:6247; preserve grid scale and internal rotations. Never replace missing coordinates or open boundaries with assumed station rectangles or invented access outlines. Retain original reference footprints for unresolved stations and document source coverage in predial-footprints-source.md. Future additions must identify each CAD source block and central/ascending/descending role when supported by source labels.
