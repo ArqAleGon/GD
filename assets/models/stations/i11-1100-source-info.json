@@ -1,0 +1,26 @@
+{
+  "source": "L1T1-1100-211-CON-ED-EST-MO-0001_V01.ifc",
+  "code": "1100",
+  "representedInstances": 1393,
+  "storeys": [
+    {
+      "id": "3MaPIzhHj5xRmOIYnpWs4E",
+      "name": "STR_LEVEL BASE _0.00",
+      "elevation": 0.0,
+      "source": "L1T1-1100-211-CON-ED-EST-MO-0001_V01.ifc"
+    },
+    {
+      "id": "3MaPIzhHj5xRmOIYnpWsBF",
+      "name": "STR_PL_00_BASEMENT_",
+      "elevation": 2550.0,
+      "source": "L1T1-1100-211-CON-ED-EST-MO-0001_V01.ifc"
+    },
+    {
+      "id": "3MaPIzhHj5xRmOIYnpX1_4",
+      "name": "STR_LEVEL BASE _0.01",
+      "elevation": 2564.159999999999,
+      "source": "L1T1-1100-211-CON-ED-EST-MO-0001_V01.ifc"
+    }
+  ],
+  "siteElevation": 2550.0
+}

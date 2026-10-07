@@ -1,0 +1,345 @@
+{
+  "section": "I11",
+  "models": [
+    {
+      "source": "L1T1-1100-211-CON-ED-EST-MO-0001_V01.ifc",
+      "code": "1100",
+      "status": "converted",
+      "sourceBytes": 63756550,
+      "converted": 1393,
+      "missing": [],
+      "bounds": {
+        "min": [
+          97933.0267111529,
+          2519.60107421875,
+          -99762.53378057953
+        ],
+        "max": [
+          98908.89476230589,
+          2588.4499999995523,
+          -99531.24094278194
+        ]
+      },
+      "siteElevation": 2550.0,
+      "storeys": [
+        {
+          "id": "3MaPIzhHj5xRmOIYnpWs4E",
+          "name": "STR_LEVEL BASE _0.00",
+          "elevation": 0.0,
+          "source": "L1T1-1100-211-CON-ED-EST-MO-0001_V01.ifc"
+        },
+        {
+          "id": "3MaPIzhHj5xRmOIYnpWsBF",
+          "name": "STR_PL_00_BASEMENT_",
+          "elevation": 2550.0,
+          "source": "L1T1-1100-211-CON-ED-EST-MO-0001_V01.ifc"
+        },
+        {
+          "id": "3MaPIzhHj5xRmOIYnpX1_4",
+          "name": "STR_LEVEL BASE _0.01",
+          "elevation": 2564.159999999999,
+          "source": "L1T1-1100-211-CON-ED-EST-MO-0001_V01.ifc"
+        }
+      ],
+      "types": {
+        "IfcSlab": 814,
+        "IfcColumn": 39,
+        "IfcBuildingElementProxy": 540
+      },
+      "parts": [
+        {
+          "file": "assets/models/stations/i11-1100-p001.glb.gz",
+          "rawFile": "assets/models/stations/i11-1100-p001.glb",
+          "bytes": 954600,
+          "rawBytes": 1658016,
+          "instances": 87
+        },
+        {
+          "file": "assets/models/stations/i11-1100-p002.glb.gz",
+          "rawFile": "assets/models/stations/i11-1100-p002.glb",
+          "bytes": 960668,
+          "rawBytes": 1600292,
+          "instances": 30
+        },
+        {
+          "file": "assets/models/stations/i11-1100-p003.glb.gz",
+          "rawFile": "assets/models/stations/i11-1100-p003.glb",
+          "bytes": 329116,
+          "rawBytes": 1445548,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/i11-1100-p004.glb.gz",
+          "rawFile": "assets/models/stations/i11-1100-p004.glb",
+          "bytes": 489345,
+          "rawBytes": 1676832,
+          "instances": 576
+        }
+      ],
+      "seconds": 14,
+      "bodyBounds": {
+        "min": [
+          97933.0267111529,
+          2519.60107421875,
+          -99762.53378057953
+        ],
+        "max": [
+          98908.89476230589,
+          2588.4499999995523,
+          -99531.24094278194
+        ]
+      },
+      "axisReferences": [],
+      "nativeSourceAudit": {
+        "sourceIdentitiesVerified": 1393,
+        "nativePlacementNodesVerified": 1393,
+        "units": "metres",
+        "originalGlbMatricesUnchanged": true
+      }
+    },
+    {
+      "source": "L1T1-1150-211-CON-ED-EST-MO-0001_V00.ifc",
+      "code": "1150",
+      "status": "converted",
+      "sourceBytes": 456241443,
+      "converted": 3843,
+      "missing": [],
+      "bounds": {
+        "min": [
+          97909.66071144836,
+          2580.1099999949183,
+          -99770.2737737813
+        ],
+        "max": [
+          98922.57541683604,
+          2593.1096543115377,
+          -99531.02094182819
+        ]
+      },
+      "siteElevation": 2550.0,
+      "storeys": [],
+      "types": {
+        "IfcBuildingElementProxy": 3843
+      },
+      "parts": [
+        {
+          "file": "assets/models/stations/i11-1150-p001.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p001.glb",
+          "bytes": 1045402,
+          "rawBytes": 1568756,
+          "instances": 79
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p002.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p002.glb",
+          "bytes": 1102634,
+          "rawBytes": 1616728,
+          "instances": 160
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p003.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p003.glb",
+          "bytes": 1109013,
+          "rawBytes": 1581172,
+          "instances": 68
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p004.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p004.glb",
+          "bytes": 1106023,
+          "rawBytes": 1590048,
+          "instances": 95
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p005.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p005.glb",
+          "bytes": 1370703,
+          "rawBytes": 1775548,
+          "instances": 32
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p006.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p006.glb",
+          "bytes": 1359343,
+          "rawBytes": 1615648,
+          "instances": 8
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p007.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p007.glb",
+          "bytes": 1436706,
+          "rawBytes": 1691540,
+          "instances": 8
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p008.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p008.glb",
+          "bytes": 1192995,
+          "rawBytes": 1514468,
+          "instances": 8
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p009.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p009.glb",
+          "bytes": 1435142,
+          "rawBytes": 1704612,
+          "instances": 16
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p010.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p010.glb",
+          "bytes": 1425369,
+          "rawBytes": 1686964,
+          "instances": 9
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p011.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p011.glb",
+          "bytes": 1342523,
+          "rawBytes": 1584680,
+          "instances": 7
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p012.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p012.glb",
+          "bytes": 710531,
+          "rawBytes": 1605060,
+          "instances": 86
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p013.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p013.glb",
+          "bytes": 880903,
+          "rawBytes": 1733092,
+          "instances": 384
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p014.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p014.glb",
+          "bytes": 910782,
+          "rawBytes": 1582772,
+          "instances": 65
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p015.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p015.glb",
+          "bytes": 980212,
+          "rawBytes": 1704444,
+          "instances": 198
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p016.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p016.glb",
+          "bytes": 961797,
+          "rawBytes": 1562140,
+          "instances": 23
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p017.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p017.glb",
+          "bytes": 796417,
+          "rawBytes": 1578656,
+          "instances": 76
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p018.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p018.glb",
+          "bytes": 51257,
+          "rawBytes": 413436,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p019.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p019.glb",
+          "bytes": 81571,
+          "rawBytes": 457744,
+          "instances": 700
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p020.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p020.glb",
+          "bytes": 719058,
+          "rawBytes": 1748628,
+          "instances": 374
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p021.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p021.glb",
+          "bytes": 889486,
+          "rawBytes": 1716920,
+          "instances": 355
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p022.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p022.glb",
+          "bytes": 930285,
+          "rawBytes": 1570336,
+          "instances": 74
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p023.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p023.glb",
+          "bytes": 954720,
+          "rawBytes": 1535832,
+          "instances": 24
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p024.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p024.glb",
+          "bytes": 981905,
+          "rawBytes": 1641144,
+          "instances": 184
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p025.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p025.glb",
+          "bytes": 968669,
+          "rawBytes": 1558344,
+          "instances": 25
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p026.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p026.glb",
+          "bytes": 962478,
+          "rawBytes": 1547892,
+          "instances": 24
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p027.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p027.glb",
+          "bytes": 867950,
+          "rawBytes": 1549260,
+          "instances": 48
+        },
+        {
+          "file": "assets/models/stations/i11-1150-p028.glb.gz",
+          "rawFile": "assets/models/stations/i11-1150-p028.glb",
+          "bytes": 6115,
+          "rawBytes": 64744,
+          "instances": 13
+        }
+      ],
+      "seconds": 111,
+      "bodyBounds": {
+        "min": [
+          97909.66071144836,
+          2580.1099999949183,
+          -99770.2737737813
+        ],
+        "max": [
+          98922.57541683604,
+          2593.1096543115377,
+          -99531.02094182819
+        ]
+      },
+      "axisReferences": [],
+      "nativeSourceAudit": {
+        "sourceIdentitiesVerified": 3843,
+        "nativePlacementNodesVerified": 3843,
+        "units": "metres",
+        "originalGlbMatricesUnchanged": true
+      }
+    }
+  ],
+  "status": "converted"
+}

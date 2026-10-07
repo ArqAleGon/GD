@@ -969,54 +969,31 @@
           "repeatedInstanceNodes": 0
         }
       ]
-    }
-  },
-  "auditedAt": "2026-10-06T23:13:01.109811+00:00",
-  "uiValidation": {
-    "I10": {
-      "identifiedInstances": 7143,
-      "types": {
-        "IfcBuildingElementProxy": 6320,
-        "IfcColumn": 44,
-        "IfcSlab": 779
-      },
-      "columnsOnly": 44,
-      "hideAll": 0,
-      "hiddenSelectionBlocked": true,
-      "individualConsultationGuid": "2DdtEs99D1UxO6nuQ5U1TN"
     },
-    "E01": {
-      "identifiedInstances": 66067,
-      "displayedInstances": 66030,
-      "sourceAxisReferencesSuppressed": 37,
-      "wallAndWallStandardCaseOnly": 2603
-    },
-    "PT103": {
-      "identifiedDisplayedInstances": 423,
-      "doorsOnly": 12,
-      "nativeOpeningsExcluded": 9
-    },
-    "E15": {
-      "identifiedInstances": 297,
-      "legacyMaterialGroups": 97,
-      "groupsExcludedFromIfcQuantitiesAndRegistration": true
-    },
-    "catalogSections": 37,
-    "dashboardsInitiallyHidden": true,
-    "sharedControls": [
-      "multi-type visibility",
-      "Solo",
-      "Mostrar todos",
-      "Ocultar todos",
-      "Volver",
-      "POV"
-    ],
-    "legacyLimit": "Merged legacy exports with no IFC instance identity cannot provide individual type quantities. Their grouped geometry is kept visible separately and is excluded from instance counts and registration.",
-    "legacyProgress": {
-      "sourceQualifiedCanonicalKeys": true,
-      "historicalMaterialKeysRecognized": true,
-      "savedRecordsUnmodified": true,
-      "separateSourceAndSectionIdentities": true
+    "I11": {
+      "instances": 5236,
+      "sources": [
+        {
+          "source": "L1T1-1100-211-CON-ED-EST-MO-0001_V01.ifc",
+          "instances": 1393,
+          "types": {
+            "IfcSlab": 814,
+            "IfcColumn": 39,
+            "IfcBuildingElementProxy": 540
+          },
+          "renderNodes": 1393,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-211-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 3843,
+          "types": {
+            "IfcBuildingElementProxy": 3843
+          },
+          "renderNodes": 3843,
+          "repeatedInstanceNodes": 0
+        }
+      ]
     }
   }
 }

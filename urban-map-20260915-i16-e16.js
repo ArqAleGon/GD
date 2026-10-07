@@ -9,7 +9,7 @@ import {canonicalProgressObjectId} from './object-progress.js?v=20261006-ifc-ins
 import {rankedBoundHits,sectionPickCandidates} from './ifc-picking.js?v=20260930-element-picking-v1';
 
 const scale = 0.06;
-const assetRevision = '20261005-stations-i10';
+const assetRevision = '20261005-stations-i11';
 const point = (p, height = 0) => new THREE.Vector3(p[0] * scale, height, -p[1] * scale);
 
 export async function loadUrbanMap() {

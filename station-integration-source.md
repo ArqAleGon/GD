@@ -95,3 +95,10 @@ Se verificaron consulta general, losa individual GlobalId `20eiKWweHANBTswzz1DrO
 Cada estación debe completar BIM y Gestión antes de publicarse: modelo real, niveles nativos, separación, alarmas, cámaras 360 de posición fija, spots y recorrido interior. La agrupación del render conserva las instancias IFC originales para consulta y registro individual.
 
 E09–E13 pendientes de conversión y publicación individual. E13: arquitectura no legible localmente porque el proveedor de archivos de nube no se está ejecutando. En E09/E10 falta 1150; en E11/E12 faltan 1150 y 1200 en la carpeta de origen revisada. Los archivos con códigos distintos de 0000, 1150 y 1200 están fuera del alcance solicitado.
+
+
+## I11
+
+Dos fuentes estructurales 1100 y 1150: 1100 (1393 instancias), 1150 (3843 instancias). Total 5.236 instancias IFC en 32 partes. Sin omisiones de representaciones nativas. Se verificaron IDs, GlobalIds, clase, nombres, unidades métricas y cada matriz de colocación contra los IFC originales. Ambas fuentes ya usan coordenadas compartidas; no requieren corrección de referencia espacial.
+
+La vista general dispone de una representación contextual derivada de los cuerpos reales; consulta y aislamiento cargan las partes originales. Se conservan filtros por tipología, conteos únicos por fuente, registro individual, Volver y POV. No se incorpora como estación a Gestión de estaciones.
