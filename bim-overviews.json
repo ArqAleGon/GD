@@ -655,5 +655,24 @@
     "triangles": 268448,
     "bytes": 1195409,
     "displayGridMeters": 0.5
+  },
+  "I12": {
+    "file": "assets/models/stations/i12-overview.glb.gz",
+    "bounds": {
+      "min": [
+        99009.92964215417,
+        2527.010009765625,
+        -100663.77165146067
+      ],
+      "max": [
+        99629.91951143477,
+        2605.8096543013826,
+        -99840.31697474806
+      ]
+    },
+    "sourceTriangles": 7728359,
+    "triangles": 229172,
+    "bytes": 1054960,
+    "displayGridMeters": 0.5
   }
 }

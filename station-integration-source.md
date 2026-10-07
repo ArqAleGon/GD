@@ -102,3 +102,10 @@ E09–E13 pendientes de conversión y publicación individual. E13: arquitectura
 Dos fuentes estructurales 1100 y 1150: 1100 (1393 instancias), 1150 (3843 instancias). Total 5.236 instancias IFC en 32 partes. Sin omisiones de representaciones nativas. Se verificaron IDs, GlobalIds, clase, nombres, unidades métricas y cada matriz de colocación contra los IFC originales. Ambas fuentes ya usan coordenadas compartidas; no requieren corrección de referencia espacial.
 
 La vista general dispone de una representación contextual derivada de los cuerpos reales; consulta y aislamiento cargan las partes originales. Se conservan filtros por tipología, conteos únicos por fuente, registro individual, Volver y POV. No se incorpora como estación a Gestión de estaciones.
+
+## I12 native integration
+
+Both structural sources (1100 and 1150) converted with original IFC identities, names, classes, metre units and every native element placement verified.
+- L1T1-1100-212-CON-ED-EST-MO-0001_VB2.ifc: 1,247 unique instances; 4 compressed geometry parts; zero represented omissions.
+- L1T1-1150-212-CON-ED-EST-MO-0001_V00.ifc: 3,431 unique instances; 24 compressed geometry parts; zero represented omissions.
+Consolidated count: 4,678 source-qualified IFC instances. Native spatial references audited independently; any recovered reference is applied only as an explicit display transform. Real Body overview appears on BIM entry; detailed original geometry loads on consultation. Shared typology filters, instance-only registration, Volver and POV controls remain available. Interestation is excluded from station management.
