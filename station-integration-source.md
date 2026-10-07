@@ -123,3 +123,10 @@ Both structural sources (1100 and 1150) converted with original IFC identities, 
 - L1T1-1100-214-CON-ED-EST-MO-0001_V04.ifc: 600 unique instances; 4 compressed geometry parts; zero represented omissions.
 - L1T1-1150-214-CON-ED-EST-MO-0001_V01.ifc: 6,884 unique instances; 89 compressed geometry parts; zero represented omissions.
 Consolidated count: 7,484 source-qualified IFC instances. Native spatial references audited independently; any recovered reference is applied only as an explicit display transform. Real Body overview appears on BIM entry; detailed original geometry loads on consultation. Shared typology filters, instance-only registration, Volver and POV controls remain available. Interestation is excluded from station management.
+
+## I15 native integration
+
+Both structural sources (1100 and 1150) converted with original IFC identities, names, classes, metre units and every native element placement verified.
+- L1T1-1100-215-CON-ED-EST-MO-0001_VB3.ifc: 1,489 unique instances; 5 compressed geometry parts; zero represented omissions.
+- L1T1-1150-215-CON-ED-EST-MO-0001_V00.ifc: 6,293 unique instances; 43 compressed geometry parts; zero represented omissions.
+Consolidated count: 7,782 source-qualified IFC instances. Native spatial references audited independently; any recovered reference is applied only as an explicit display transform. Real Body overview appears on BIM entry; detailed original geometry loads on consultation. Shared typology filters, instance-only registration, Volver and POV controls remain available. Interestation is excluded from station management.

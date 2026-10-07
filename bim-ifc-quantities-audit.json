@@ -1072,6 +1072,32 @@
           "repeatedInstanceNodes": 0
         }
       ]
+    },
+    "I15": {
+      "instances": 7782,
+      "sources": [
+        {
+          "source": "L1T1-1100-215-CON-ED-EST-MO-0001_VB3.ifc",
+          "instances": 1489,
+          "types": {
+            "IfcColumn": 68,
+            "IfcSlab": 557,
+            "IfcBuildingElementProxy": 851,
+            "IfcBeam": 13
+          },
+          "renderNodes": 1489,
+          "repeatedInstanceNodes": 0
+        },
+        {
+          "source": "L1T1-1150-215-CON-ED-EST-MO-0001_V00.ifc",
+          "instances": 6293,
+          "types": {
+            "IfcBuildingElementProxy": 6293
+          },
+          "renderNodes": 6293,
+          "repeatedInstanceNodes": 0
+        }
+      ]
     }
   }
 }

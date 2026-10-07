@@ -712,5 +712,24 @@
     "triangles": 411188,
     "bytes": 1931360,
     "displayGridMeters": 0.5
+  },
+  "I15": {
+    "file": "assets/models/stations/i15-overview.glb.gz",
+    "bounds": {
+      "min": [
+        101069.8640444612,
+        2515.48193359375,
+        -105736.30492919259
+      ],
+      "max": [
+        101404.92925962362,
+        2590.8396541402526,
+        -103905.20640549967
+      ]
+    },
+    "sourceTriangles": 13492273,
+    "triangles": 376936,
+    "bytes": 1819269,
+    "displayGridMeters": 0.5
   }
 }
