@@ -24,3 +24,5 @@
 #app.povMode .stationMenuPanel{max-height:calc(100dvh - 340px)}
 
 .stationMenu>summary.active{border-color:#6fa8c1;background:#244454}
+
+.flowParameters{font-size:11px}.flowParameters>summary{cursor:pointer;color:#c6dce6;padding:7px 0}.flowParameters .flowInputs{padding:6px 0}

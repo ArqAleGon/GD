@@ -1,5 +1,5 @@
-import {DEFAULT_FLOW,flowConfig,stationFlowAt} from './station-flow.js?v=20261006-station-menus-r2';
-import {stationMenu,stationSimulationContents,refreshStationFlowUi} from './station-management-ui.js?v=20261006-station-menus-r2';
+import {DEFAULT_FLOW,flowConfig,stationFlowAt,clockLabel} from './station-flow.js?v=20261006-station-menus-r2';
+import {stationMenu,stationSimulationContents,refreshStationFlowUi} from './station-management-ui.js?v=20261006-station-menus-r4';
 import {createStationModelControls} from './station-model-controls.js?v=20261006-station-menus-r2';
 import {loadMetroTrainModel,createMetroTrainCar} from './metro-train-model.js?v=20261005-train-obj-v3';
 import {arrangeBimLabels} from './bim-label-layout.js?v=20261002-controls-v2';
@@ -149,11 +149,14 @@ function bindStationManagementTools(){
  toolbar.onkeydown=event=>{if(event.key==='Escape'){const open=menus.find(m=>m.open);if(open){open.open=false;open.querySelector('summary').focus();}}};
  if(!menus.length)return;
  toolbar.querySelectorAll('[data-flow-scenario]').forEach(button=>button.onclick=()=>{stationFlow.scenario=button.dataset.flowScenario;stationFlow.playing=false;updateStationSimulation(0,state.t,true);});
- toolbar.querySelectorAll('[data-flow-config]').forEach(input=>input.onchange=()=>{
-  const key=input.dataset.flowConfig,value=input.type==='time'?input.value.split(':').reduce((total,n,i)=>total+Number(n)*(i===0?60:1),0):Number(input.value);
-  if(!Number.isFinite(value)||!input.value){input.value=stationFlow[key];return;}
-  stationFlow=flowConfig({...stationFlow,[key]:value,playing:false});
-  toolbar.querySelectorAll('[data-flow-config]').forEach(e=>e.value=e.type==='time'?String(Math.floor(stationFlow[e.dataset.flowConfig]/60)).padStart(2,'0')+':'+String(stationFlow[e.dataset.flowConfig]%60).padStart(2,'0'):stationFlow[e.dataset.flowConfig]);updateStationSimulation(0,state.t,true);
+ toolbar.querySelectorAll('[data-flow-config]').forEach(input=>{
+  const update=normalize=>{
+   const key=input.dataset.flowConfig,value=input.type==='time'?input.value.split(':').reduce((total,n,i)=>total+Number(n)*(i===0?60:1),0):Number(input.value);
+   if(Number.isFinite(value)&&input.value)stationFlow=flowConfig({...stationFlow,[key]:value,playing:false});
+   if(normalize)toolbar.querySelectorAll('[data-flow-config]').forEach(e=>e.value=e.type==='time'?clockLabel(stationFlow[e.dataset.flowConfig]):stationFlow[e.dataset.flowConfig]);
+   updateStationSimulation(0,state.t,true);
+  };
+  input.oninput=()=>update(false);input.onchange=()=>update(true);
  });
  toolbar.querySelector('[data-flow-time]').oninput=event=>{stationFlow.minute=Number(event.target.value);stationFlow.playing=false;updateStationSimulation(0,state.t,true);};
  toolbar.querySelector('[data-flow-play]').onclick=()=>{if(stationFlow.minute>=stationFlow.end)stationFlow.minute=stationFlow.start;stationFlow.playing=!stationFlow.playing;updateStationSimulation(0,state.t,true);};
