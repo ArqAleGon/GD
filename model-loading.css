@@ -9,3 +9,6 @@
 .model-loading button{background:#193346;color:#e7f0fa;border:1px solid #527c94;border-radius:5px;padding:8px 12px;cursor:pointer}
 .viewerCard .model-loading{position:absolute;inset:0;width:auto;border:0;border-radius:0}
 @media(max-width:600px){.model-loading{bottom:80px;gap:8px;padding:14px}.model-loading img{width:42px;height:42px}}
+
+/* Keep concurrent background/detail feedback readable in one visual slot. */
+.model-loading:has(~ .model-loading){visibility:hidden;pointer-events:none}
