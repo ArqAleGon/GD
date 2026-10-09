@@ -83,3 +83,6 @@ An IFC export can contain independent local element placement roots while its co
 Legacy assets exported with merged material geometry and no individual IFC IDs must be distinguished as Geometría agrupada. Do not count their material groups as IFC instances or allow per-element registration on them. Retain their geometry and offer an explicit group visibility row. Identify preserved legacy GlobalIds and recover native classes from source metadata when available; never infer an IFC class from color/material.
 
 Legacy source-qualified IFC progress IDs sometimes ended in a material-mesh index. Use canonicalProgressObjectId for those element keys, record lookups and summaries so all material primitives of one native GlobalId share one progress target. Normalize comparisons only; keep saved history and original record IDs unchanged, and never combine equal GUIDs from different source files or model sections.
+
+## 3D loading feedback
+Reuse model-loading.js and model-loading.css from the Seguimiento 4D loading instrument for all new 3D loaders. Show elapsed time and honest stages; percentages must reflect completed models/parts or measured bytes, never guessed time. Clear timers and busy state on completion or scene exit, and surface load failures with recovery actions. Preserve background overview framing and bounded concurrency.

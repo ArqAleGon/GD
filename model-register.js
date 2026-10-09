@@ -1,3 +1,4 @@
+import {modelLoading,loadingFrame} from './model-loading.js?v=20261009-clock';
 import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
 import {GLTFLoader} from './GLTFLoader.js';
@@ -180,6 +181,7 @@ function bindFilters(){
 window.addEventListener('storage',event=>{if(event.key==='emb-gd-object-progress-v1'){progressRecords=loadProgressRecords();applyActivityAssignments(elements,progressRecords);updateKpis();if(selectedElement)renderConsult();}});
 
 async function init(){
+  $('loading').hidden=true;const clock=modelLoading(canvas,section);await loadingFrame();
   try{
     const [manifest,primavera]=await Promise.all([fetch('./bim-registration-models.json?v=20260930').then(response=>{if(!response.ok)throw new Error('No se encontró el catálogo de modelos de registro.');return response.json();}),loadGzipJSON('./primavera-data.json.gz?v=20260923')]);
     manifestEntry=manifest.sections?.[section];activities=primavera.tasks||[];primaveraMeta=primavera.meta||{};activityById=new Map(activities.map(task=>[String(task.id),task]));
@@ -187,12 +189,13 @@ async function init(){
     elementPayload=await loadGzipJSON(`./${manifestEntry.data}?v=20260930`);
     $('headerModel').textContent=`${section} · ${manifestEntry.label}`;$('modelName').textContent=`${section} · ${manifestEntry.label}`;$('sceneTitle').textContent=`Registro y consulta · ${manifestEntry.label}`;$('modelSource').textContent=(manifestEntry.sources||[]).join(' · ');$('filterScope').textContent=`Alcance fijo: ${section} · ${manifestEntry.label}`;document.title=`${section} · Registro BIM | Asistente Digital EMB`;
     const loader=new GLTFLoader().setMeshoptDecoder(MeshoptDecoder);
-    for(let index=0;index<manifestEntry.files.length;index++){$('loadingDetail').textContent=`Parte ${index+1} de ${manifestEntry.files.length}`;const loaded=await loader.loadAsync(`./${manifestEntry.files[index]}?v=20260930-registration`);addLoadedScene(loaded.scene);}
+    for(let index=0;index<manifestEntry.files.length;index++){$('loadingDetail').textContent=`Parte ${index+1} de ${manifestEntry.files.length}`;const loaded=await loader.loadAsync(`./${manifestEntry.files[index]}?v=20260930-registration`);addLoadedScene(loaded.scene);clock.progress(`Partes cargadas: ${index+1} de ${manifestEntry.files.length}`,{loaded:index+1,total:manifestEntry.files.length});await loadingFrame();}
+    clock.preparing();await loadingFrame();
     if(!elements.length)throw new Error('El modelo cargó sin elementos seleccionables.');
     const box=new THREE.Box3().setFromObject(modelRoot,true),center=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3());modelRoot.position.sub(center);modelRoot.updateMatrixWorld(true);
     const floor=new THREE.GridHelper(Math.max(size.x,size.z)*1.4,24,'#496779','#233744');floor.position.y=-size.y*.5-.04;scene.add(floor);
-    applyActivityAssignments(elements,progressRecords);setSelectOptions();applyFilters();updateKpis();bindFilters();resize();fitModel();$('loading').hidden=true;$('loadState').textContent=`${elements.length.toLocaleString('es-CO')} elementos · ${manifestEntry.files.length} archivo${manifestEntry.files.length===1?'':'s'} cargado${manifestEntry.files.length===1?'':'s'}`;
-  }catch(error){console.error(error);$('loading').innerHTML=`<b>No fue posible abrir el modelo</b><span>${safe(error?.message||error)}</span><a class="returnLink" href="./index.html?view=urban">Volver a Modelos BIM Integrados</a>`;$('loadState').textContent='Modelo no disponible';}
+    applyActivityAssignments(elements,progressRecords);setSelectOptions();applyFilters();updateKpis();bindFilters();resize();fitModel();clock.finish();$('loading').hidden=true;$('loadState').textContent=`${elements.length.toLocaleString('es-CO')} elementos · ${manifestEntry.files.length} archivo${manifestEntry.files.length===1?'':'s'} cargado${manifestEntry.files.length===1?'':'s'}`;
+  }catch(error){clock.fail(error);console.error(error);$('loading').innerHTML=`<b>No fue posible abrir el modelo</b><span>${safe(error?.message||error)}</span><a class="returnLink" href="./index.html?view=urban">Volver a Modelos BIM Integrados</a>`;$('loadState').textContent='Modelo no disponible';}
 }
 
 const selectionCenter=new THREE.Vector3();

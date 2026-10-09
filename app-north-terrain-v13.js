@@ -1,3 +1,4 @@
+import {modelLoading,cancelModelLoads} from './model-loading.js?v=20261009-clock';
 import {DEFAULT_FLOW,flowConfig,stationFlowAt,clockLabel} from './station-flow.js?v=20261006-station-menus-r2';
 import {stationMenu,stationSimulationContents,refreshStationFlowUi} from './station-management-ui.js?v=20261006-station-menus-r4';
 import {createStationModelControls} from './station-model-controls.js?v=20261006-station-menus-r2';
@@ -7,7 +8,7 @@ import {COMPARISONS,comparisonLayers} from './e15-comparison.js';
 import {RENDER_E15_CAMERA,renderE15Fov} from './render-e15-camera.js';
 import {buildBogotaContext,cityPoint,METRES_TO_WORLD} from './bogota-context.js?v=20261006-ortho-5cm-tiles';
 import { localizeInterface } from './interface-language.js';
-import { loadUrbanMap, buildUrbanMap } from './urban-map-20260915-i16-e16.js?v=20261005-stations-i15';
+import { loadUrbanMap, buildUrbanMap } from './urban-map-20260915-i16-e16.js?v=20261009-clock';
 import { networkLines } from './network-data.js?v=20260923-l1';
 import {P6,P6_STATUS,stationOptions as p6Stations,workFrontOptions as p6WorkFronts,ueOptions as p6UEs,filterP6,summarizeP6,groupP6} from './p6-dashboard.js?v=20260923-multiue';
 import {OBJECT_PROGRESS_STORAGE_KEY,appendProgressRecord,loadProgressRecords,recordsForObject,summarizeProgress} from './object-progress.js?v=20261006-ifc-instance-history';
@@ -204,7 +205,7 @@ function progressObjectFromInfo(info={}){
 function register(mesh,data){mesh.userData.info=data;mesh.userData.progressObject=progressObjectFromInfo(data);pickables.push(mesh);return mesh;}
 function label(pos,text,fn,cls=''){const el=document.createElement(cls.includes('bimProgressSpot')?'div':'button');el.className='sceneLabel '+cls;el.innerHTML=text();el.onclick=e=>{e.stopPropagation();fn?.(e)};$('#sceneLabels').append(el);const l={pos:new THREE.Vector3(...pos),text,el};labels.push(l);return l;}
 let seed=1741;function rnd(){seed=(seed*16807)%2147483647;return(seed-1)/2147483646;}
-function clearScene(){stationFlow={...DEFAULT_FLOW};lastFlowMinute=-1;urbanScene?.disposePending?.();stationControls?.dispose();stationControls=null;stationCameraLabels=[];stationModelBounds=null;stationRailMotion=null;stationSceneReady=false;railTrain=null;restoreBimContext();hideObjectContextMenu();selectedProgressTarget=null;scene.remove(root);root.traverse(o=>{if(o.isCSS3DObject)o.element.remove();if(o.geometry&&!o.userData.sharedTrainAsset&&!o.userData.sharedStationGeometry&&!['BoxGeometry','CylinderGeometry','SphereGeometry'].includes(o.geometry.type))o.geometry.dispose();if(o.material?.isLineBasicMaterial)o.material.dispose();});root=new THREE.Group();scene.add(root);labels.forEach(l=>l.el.remove());labels=[];pickables=[];animatedTrains=[];persons=[];doors=[];routeGroups=[];racks=[];levelUpper=levelLower=roof=evacGroup=heatGroup=aerialLayer=aerialController=null;$('#selection').hidden=true;$('#aerialCredit').hidden=true;seed=1741;}
+function clearScene(){cancelModelLoads();stationFlow={...DEFAULT_FLOW};lastFlowMinute=-1;urbanScene?.disposePending?.();stationControls?.dispose();stationControls=null;stationCameraLabels=[];stationModelBounds=null;stationRailMotion=null;stationSceneReady=false;railTrain=null;restoreBimContext();hideObjectContextMenu();selectedProgressTarget=null;scene.remove(root);root.traverse(o=>{if(o.isCSS3DObject)o.element.remove();if(o.geometry&&!o.userData.sharedTrainAsset&&!o.userData.sharedStationGeometry&&!['BoxGeometry','CylinderGeometry','SphereGeometry'].includes(o.geometry.type))o.geometry.dispose();if(o.material?.isLineBasicMaterial)o.material.dispose();});root=new THREE.Group();scene.add(root);labels.forEach(l=>l.el.remove());labels=[];pickables=[];animatedTrains=[];persons=[];doors=[];routeGroups=[];racks=[];levelUpper=levelLower=roof=evacGroup=heatGroup=aerialLayer=aerialController=null;$('#selection').hidden=true;$('#aerialCredit').hidden=true;seed=1741;}
 function city(g,size=400,count=1150,night=false){box(g,0,-1.5,0,size,2,size,night?'#080f1b':'#0c141d');const geometry=new THREE.BoxGeometry(1,1,1),material=mat(night?'#152337':'#17202b');const inst=new THREE.InstancedMesh(geometry,material,count);const dummy=new THREE.Object3D();for(let i=0;i<count;i++){let x=(rnd()-.5)*size*.92,z=(rnd()-.5)*size*.92;const riverX=-60+Math.sin(z*.012)*15;if(Math.abs(x-riverX)<13){x+=35}let h=1+rnd()*6;if(night)h*=1.8;dummy.position.set(x,h/2-.5,z);dummy.scale.set(2+rnd()*6,h,2+rnd()*5);dummy.rotation.set(0,0,0);dummy.updateMatrix();inst.setMatrixAt(i,dummy.matrix);}g.add(inst);
 for(let i=-size/2;i<size/2;i+=13){straight(g,[[i,.01,-size/2],[i,.01,size/2]],night?'#22374d':'#202d3a',.45);straight(g,[[-size/2,.01,i],[size/2,.01,i]],night?'#22374d':'#202d3a',.45)}
 const shape=new THREE.Shape();for(let z=-size/2;z<=size/2;z+=10){let x=-60+Math.sin(z*.012)*15;if(z===-size/2)shape.moveTo(x-12,z);else shape.lineTo(x-12,z);}for(let z=size/2;z>=-size/2;z-=10)shape.lineTo(-60+Math.sin(z*.012)*15+10,z);shape.closePath();const river=new THREE.Mesh(new THREE.ShapeGeometry(shape),mat('#051321',{roughness:.2,metalness:.5}));river.rotation.x=-Math.PI/2;river.position.y=.2;g.add(river);}
@@ -359,8 +360,9 @@ async function loadPatioOverview(focus=true){
  if(focus){activeIfcFocus=null;applyIfcFocus(activeScene,null);fitUrban();}
  if(!patioOverviewPromise){
   const sections=[...activeScene.sectionDefinitions].filter(([,entry])=>entry.definitions.some(d=>d.file&&d.status!=='no-geometry')).map(([name])=>name).sort((a,b)=>Number(Boolean(urbanAssets.overviews?.[b]?.file))-Number(Boolean(urbanAssets.overviews?.[a]?.file)));
-  let next=0,loaded=0;const failed=[];
-  const show=()=>{if(urbanScene!==activeScene||!isUrban())return;const status=$('#bimLoadStatus');status.hidden=false;status.dataset.loaded=loaded;status.dataset.total=sections.length;status.dataset.failed=failed.join(', ');renderBimStatus();};
+  let next=0,loaded=0;const failed=[];const clock=modelLoading($('#world'),'Modelos BIM · Vista general');
+  const show=()=>{if(urbanScene!==activeScene||!isUrban())return;const status=$('#bimLoadStatus');status.hidden=false;clock.progress(`Modelos visibles: ${loaded} de ${sections.length}${failed.length?' · '+failed.length+' sin cargar':''}`,{loaded:loaded+failed.length,total:sections.length});
+   status.dataset.loaded=loaded;status.dataset.total=sections.length;status.dataset.failed=failed.join(', ');renderBimStatus();};
   show();
   patioOverviewPromise=Promise.all(Array.from({length:2},async()=>{
    while(next<sections.length&&urbanScene===activeScene&&isUrban()){
@@ -368,7 +370,7 @@ async function loadPatioOverview(focus=true){
     try{await activeScene.ensureOverview(section);loaded++;}catch(error){failed.push(section);console.warn('BIM overview',section,error);}
     show();
    }
-  })).then(()=>{show();if(failed.length&&urbanScene===activeScene)patioOverviewPromise=null;return {loaded,failed};});
+  })).then(()=>{show();clock.finish();if(failed.length&&urbanScene===activeScene)patioOverviewPromise=null;return {loaded,failed};});
  }
  return patioOverviewPromise;
 }

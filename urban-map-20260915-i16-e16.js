@@ -1,3 +1,4 @@
+import {modelLoading,loadingFrame} from './model-loading.js?v=20261009-clock';
 import {batchIfcRenderGeometry} from './ifc-render-batches.js?v=20261006-isolated-types';
 import {buildIfcTypeInventory,applyIfcTypeFilter,summarizeIfcTypes} from './ifc-type-filters.js?v=20261006-isolated-types';
 import {loadBimUrbanContext,buildBimUrbanContext} from './bim-urban-context.js';
@@ -228,7 +229,9 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
     if(entry.promise)return entry.promise;
     const available=entry.definitions.filter(definition=>definition.file&&definition.status!=='no-geometry');
     if(!available.length){const error=new Error('El IFC fuente no contiene geometría');error.code='no-geometry';throw error;}
+    const clock=modelLoading(document.querySelector("#world"),sectionName);let completed=0;
     entry.promise=(async()=>{
+      await loadingFrame();
       const loaded=new Array(available.length);let nextAsset=0;
       await Promise.all(Array.from({length:Math.min(4,available.length)},async()=>{
         while(nextAsset<available.length&&!disposed){
@@ -240,10 +243,11 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
             const stream=response.body.pipeThrough(new DecompressionStream('gzip'));
             asset=await assets.ifcLoader.parseAsync(await new Response(stream).arrayBuffer(),'./');
           }else asset=await assets.ifcLoader.loadAsync(url);
-          loaded[index]={definition,scene:asset.scene};
+          loaded[index]={definition,scene:asset.scene};clock.progress(`Partes cargadas: ${++completed} de ${available.length}`,{loaded:completed,total:available.length});await loadingFrame();
         }
       }));
       if(disposed){for(const asset of loaded)if(asset)disposeObject(asset.scene);throw new Error('Scene closed');}
+      clock.preparing();await loadingFrame();
       for(const asset of loaded){
         const model=asset.scene;
         if(ptHqSections.has(sectionName))stylePtHq(model);
@@ -289,7 +293,7 @@ export function buildUrbanMap(root, assets, addLabel, inspectStation, activatePr
       else createSectionLabel(sectionName,entry,[sectionCenter.x,sectionBounds.max.y+.6,sectionCenter.z]);
       applySectionAppearance(sectionName,entry);
       return sectionBounds;
-    })().catch(error=>{entry.promise=null;throw error;});
+    })().then(bounds=>{clock.finish();return bounds;}).catch(error=>{if(disposed)clock.finish();else clock.fail(error);entry.promise=null;throw error;});
     return entry.promise;
   };
   const ensureOverview=async sectionName=>{
