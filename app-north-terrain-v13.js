@@ -1,4 +1,4 @@
-import {modelLoading,cancelModelLoads} from './model-loading.js?v=20261009-clock';
+import {modelLoading,cancelModelLoads} from './model-loading.js?v=20261009-clock-r2';
 import {DEFAULT_FLOW,flowConfig,stationFlowAt,clockLabel} from './station-flow.js?v=20261006-station-menus-r2';
 import {stationMenu,stationSimulationContents,refreshStationFlowUi} from './station-management-ui.js?v=20261006-station-menus-r4';
 import {createStationModelControls} from './station-model-controls.js?v=20261006-station-menus-r2';
@@ -8,7 +8,7 @@ import {COMPARISONS,comparisonLayers} from './e15-comparison.js';
 import {RENDER_E15_CAMERA,renderE15Fov} from './render-e15-camera.js';
 import {buildBogotaContext,cityPoint,METRES_TO_WORLD} from './bogota-context.js?v=20261006-ortho-5cm-tiles';
 import { localizeInterface } from './interface-language.js';
-import { loadUrbanMap, buildUrbanMap } from './urban-map-20260915-i16-e16.js?v=20261009-clock';
+import { loadUrbanMap, buildUrbanMap } from './urban-map-20260915-i16-e16.js?v=20261009-clock-r2';
 import { networkLines } from './network-data.js?v=20260923-l1';
 import {P6,P6_STATUS,stationOptions as p6Stations,workFrontOptions as p6WorkFronts,ueOptions as p6UEs,filterP6,summarizeP6,groupP6} from './p6-dashboard.js?v=20260923-multiue';
 import {OBJECT_PROGRESS_STORAGE_KEY,appendProgressRecord,loadProgressRecords,recordsForObject,summarizeProgress} from './object-progress.js?v=20261006-ifc-instance-history';

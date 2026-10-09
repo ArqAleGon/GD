@@ -1,4 +1,4 @@
-import {modelLoading,loadingFrame} from './model-loading.js?v=20261009-clock';
+import {modelLoading,loadingFrame} from './model-loading.js?v=20261009-clock-r2';
 import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
 import {GLTFLoader} from './GLTFLoader.js';

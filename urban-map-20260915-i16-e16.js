@@ -1,4 +1,4 @@
-import {modelLoading,loadingFrame} from './model-loading.js?v=20261009-clock';
+import {modelLoading,loadingFrame} from './model-loading.js?v=20261009-clock-r2';
 import {batchIfcRenderGeometry} from './ifc-render-batches.js?v=20261006-isolated-types';
 import {buildIfcTypeInventory,applyIfcTypeFilter,summarizeIfcTypes} from './ifc-type-filters.js?v=20261006-isolated-types';
 import {loadBimUrbanContext,buildBimUrbanContext} from './bim-urban-context.js';
