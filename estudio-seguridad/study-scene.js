@@ -50,14 +50,15 @@ export class StudyScene{
   const colorFor=r=>types[Object.keys(types).find(k=>(r.ifcTypeName||'').includes(types[k].ifcFamilyToken))].color;
   const loader=new GLTFLoader();const cameraManifest=await (await fetch('./assets/models/e09-ins/manifest.json')).json();
   const cameraMaterials=Object.fromEntries(Object.entries(types).map(([k,t])=>[k,new THREE.MeshStandardMaterial({color:t.color,roughness:.7})]));
-  let cameraDone=0;this.onProgress(0,manifest.files.length+cameraManifest.files.length);
+  const total=manifest.files.length+cameraManifest.files.length+(manifest.additionalModels||[]).reduce((n,p)=>n+p.files.length,0);
+  let cameraDone=0;this.onProgress(0,total);
   for(const file of cameraManifest.files){
    const gltf=await loader.parseAsync(await this.binary('./assets/models/e09-ins/'+file.file),'');
    const keep=[];gltf.scene.traverse(n=>{if(n.userData.ifcGlobalId&&n.userData.isCamera)keep.push(n);});
    for(const n of keep){gltf.scene.attach(n);this.cameraGroup.add(n);this.cameraNodes.push(n);const type=Object.keys(types).find(k=>(n.userData.ifcTypeName||'').includes(types[k].ifcFamilyToken));n.traverse(mesh=>{if(mesh.isMesh)mesh.material=cameraMaterials[type];});}
    // Remaining installation meshes are supplied by the batched static package.
    gltf.scene.traverse(n=>{if(n.isMesh){n.geometry.dispose();for(const mat of (Array.isArray(n.material)?n.material:[n.material]))mat.dispose();}});
-   this.onProgress(++cameraDone,manifest.files.length+cameraManifest.files.length);
+   this.onProgress(++cameraDone,total);
   }
   for(const record of records){const mat=new THREE.MeshBasicMaterial({color:colorFor(record),transparent:true,depthTest:false});const marker=new THREE.Mesh(this.markerGeometry,mat);marker.position.fromArray(record.positionGltfMetres).sub(ORIGIN);marker.userData.record=record;marker.renderOrder=20;this.markerGroup.add(marker);this.markers.push(marker);}
   let next=0,done=0;
@@ -67,14 +68,40 @@ export class StudyScene{
    let object;
    if(file.mode===1)object=new THREE.LineSegments(geometry,new THREE.LineBasicMaterial({vertexColors:true,transparent:file.opacity<1,opacity:file.opacity}));
    else{geometry.computeVertexNormals();object=new THREE.Mesh(geometry,new THREE.MeshStandardMaterial({vertexColors:true,roughness:.85,metalness:0,side:THREE.DoubleSide,transparent:file.opacity<1,opacity:file.opacity,depthWrite:file.opacity>=1}));}
-   geometry.computeBoundingSphere();object.userData.package=file.package;object.userData.bounds=file.bounds;this.staticGroup.add(object);this.staticMeshes.push(object);done++;this.onProgress(done+cameraDone,manifest.files.length+cameraDone);this.dirty=true;
+   geometry.computeBoundingSphere();object.userData.package=file.package;object.userData.bounds=file.bounds;this.staticGroup.add(object);this.staticMeshes.push(object);done++;this.onProgress(done+cameraDone,total);this.dirty=true;
    await new Promise(resolve=>setTimeout(resolve,0));
   }};
-  await Promise.all([worker(),worker(),worker()]);if(token!==this.generation)return;this.ready=true;this.dirty=true;
+  await Promise.all([worker(),worker(),worker()]);if(token!==this.generation)return;
+  this.brtCounts={};
+  for(const pkg of manifest.additionalModels||[]){const identities=new Set();
+   for(const file of pkg.files){
+    const gltf=await loader.parseAsync(await this.binary(`./assets/models/${pkg.package}/${file.file}`),'');if(token!==this.generation)return;
+    gltf.scene.updateMatrixWorld(true);const groups=new Map();
+    gltf.scene.traverse(mesh=>{if(!mesh.isMesh)return;let owner=mesh;while(owner&&!owner.userData.ifcGlobalId)owner=owner.parent;const metadata=owner?.userData;if(!metadata?.ifcGlobalId)throw Error('Pieza BRT sin identidad IFC');if(metadata.ifcType==='IfcOpeningElement')return;
+     identities.add(metadata.ifcGlobalId);const matrix=mesh.matrixWorld.clone();matrix.elements[12]-=ORIGIN.x;matrix.elements[13]-=ORIGIN.y;matrix.elements[14]-=ORIGIN.z;
+     const key=mesh.geometry.uuid+':'+mesh.material.uuid+':'+metadata.ifcType;let group=groups.get(key);if(!group){group={geometry:mesh.geometry,material:mesh.material,items:[]};groups.set(key,group);}group.items.push({matrix,metadata});
+    });
+    for(const group of groups.values()){
+     const object=new THREE.InstancedMesh(group.geometry,group.material,group.items.length),bounds=new THREE.Box3();group.geometry.computeBoundingBox();
+     group.items.forEach((item,i)=>{object.setMatrixAt(i,item.matrix);bounds.union(group.geometry.boundingBox.clone().applyMatrix4(item.matrix));});object.instanceMatrix.needsUpdate=true;object.computeBoundingSphere();
+     object.userData={package:pkg.package,bounds:{min:bounds.min.toArray(),max:bounds.max.toArray()},instanceRecords:group.items.map(item=>({...item.metadata,sourceQualifiedId:pkg.source+'::'+item.metadata.ifcGlobalId}))};this.staticGroup.add(object);this.staticMeshes.push(object);
+    }
+    done++;this.onProgress(done+cameraDone,total);this.dirty=true;await new Promise(resolve=>setTimeout(resolve,0));
+   }
+   if(identities.size!==pkg.renderableElements)throw Error(`Cobertura BRT incompleta: ${pkg.package} ${identities.size}/${pkg.renderableElements}`);
+   this.brtCounts[pkg.package]=identities.size;
+  }
+  document.body.dataset.brtElements=String(Object.values(this.brtCounts).reduce((a,b)=>a+b,0));this.ready=true;this.dirty=true;
  }
  setLevel(level){this.level=level;this.filter();this.frame();}
- filter(){if(!this.level)return;for(const m of this.markers)m.visible=m.userData.record.ifcStorey===this.level.ifc;for(const n of this.cameraNodes)n.visible=n.userData.ifcStorey===this.level.ifc;for(const mesh of this.staticMeshes)mesh.visible=mesh.userData.package!=='e09-ins'||this.installations!==false;this.dirty=true;}
- frame(){const visible=this.records?.filter(r=>r.ifcStorey===this.level?.ifc)||[];if(!visible.length)return;const box=new THREE.Box3();for(const r of visible)box.expandByPoint(new THREE.Vector3().fromArray(r.positionGltfMetres).sub(ORIGIN));const center=box.getCenter(new THREE.Vector3());const size=box.getSize(new THREE.Vector3());const radius=Math.max(size.x,size.z,50);this.controls.target.copy(center);this.axonCamera.position.copy(center).add(new THREE.Vector3(.8,.9,1).normalize().multiplyScalar(radius*1.05));this.controls.update();this.dirty=true;}
+ filter(){if(!this.level)return;for(const m of this.markers)m.visible=m.userData.record.ifcStorey===this.level.ifc;for(const n of this.cameraNodes)n.visible=n.userData.ifcStorey===this.level.ifc;for(const mesh of this.staticMeshes)mesh.visible=(mesh.userData.package!=='e09-ins'||this.installations!==false)&&(!mesh.userData.package.startsWith('e09-brt-')||this.showBrt!==false);this.dirty=true;}
+ frame(){const visible=this.records?.filter(r=>r.ifcStorey===this.level?.ifc)||[];if(!visible.length)return;const box=new THREE.Box3();for(const r of visible)box.expandByPoint(new THREE.Vector3().fromArray(r.positionGltfMetres).sub(ORIGIN));
+  const floor=this.level.cutMin-ORIGIN.y,ceiling=this.level.cutMax-ORIGIN.y;
+  for(const mesh of this.staticMeshes){const b=mesh.userData.bounds;if(!b||!mesh.visible||b.max[1]<floor||b.min[1]>ceiling)continue;box.expandByPoint(new THREE.Vector3(b.min[0],Math.max(b.min[1],floor),b.min[2]));box.expandByPoint(new THREE.Vector3(b.max[0],Math.min(b.max[1],ceiling),b.max[2]));}
+  const center=box.getCenter(new THREE.Vector3()),back=new THREE.Vector3(.8,.9,1).normalize(),right=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),back).normalize(),up=new THREE.Vector3().crossVectors(back,right),rect=this.axon.getBoundingClientRect(),tanV=Math.tan(THREE.MathUtils.degToRad(this.axonCamera.fov/2)),tanH=tanV*Math.max(.1,rect.width/rect.height);let distance=40;
+  for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z]){const v=new THREE.Vector3(x,y,z).sub(center);distance=Math.max(distance,Math.abs(v.dot(right))/tanH+v.dot(back),Math.abs(v.dot(up))/tanV+v.dot(back));}
+  this.controls.target.copy(center);this.axonCamera.position.copy(center).addScaledVector(back,distance*1.12);this.controls.update();this.dirty=true;
+ }
  focusSelected(){if(!this.selected)return;const center=new THREE.Vector3().fromArray(this.selected.positionGltfMetres).sub(ORIGIN);this.controls.target.copy(center);this.axonCamera.position.copy(center).add(new THREE.Vector3(26,32,34));this.controls.update();this.dirty=true;}
  select(record,settings){this.selected=record;this.settings=settings;this.updateOptics();this.dirty=true;}
  updateOptics(){

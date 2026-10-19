@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "station": "E09",
-  "name": "EstaciÃ³n 9 Â· NQS",
+  "name": "Estación 9 · NQS + BRT",
   "modelPackages": [
     {
       "role": "architecture-and-structure",
@@ -13,6 +13,16 @@
       "manifest": "models/e09-ins/manifest.json",
       "conversion": "IFC-to-GLB",
       "cameraCatalog": "models/e09-ins/cameras.json"
+    },
+    {
+      "role": "brt-arq",
+      "manifest": "models/e09-brt-arq/manifest.json",
+      "conversion": "native IFC to shared glTF instances"
+    },
+    {
+      "role": "brt-est",
+      "manifest": "models/e09-brt-est/manifest.json",
+      "conversion": "native IFC to shared glTF instances"
     }
   ],
   "localSourceCatalogs": {
@@ -23,13 +33,15 @@
   "reviewPage": "../revision-e09.html",
   "cameraTypeColors": "camera-types.json",
   "inventoryDrawingLayers": "cctv/inventory.json",
-  "pdfRegistration": "pending",
+  "pdfRegistration": "visual correspondence transferred to six replacement sheets; not surveyed calibration",
   "cameraPdfIdentityMapping": "pending",
   "opticalAxes": "pending",
-  "published": false,
   "studyPage": "../index.html",
   "batchedGeometry": "models/e09-study/manifest.json",
   "architectureWebSheets": "plants/manifest.json",
   "integrationAudit": "integration-audit.json",
-  "fixedCameraView": "enabled for 26 Fixed Camera elements; geometric front -X; configurable evaluation FOV"
+  "fixedCameraView": "enabled for 26 Fixed Camera elements; geometric front -X; configurable evaluation FOV",
+  "revision": 4,
+  "brtGeometryAudit": "brt-geometry-audit.json",
+  "publicUrl": "https://arqalegon.github.io/GD/estudio-seguridad/"
 }

@@ -1,0 +1,44 @@
+{
+  "e09-brt-est": {
+    "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+    "sourceSha256": "26b34da8c8b3d31612f00f59681bd15d4625955bca7652d49d02d06c904fd678",
+    "nativeRepresentations": 3776,
+    "renderableElements": 3774,
+    "openingOperandsExcludedFromDisplay": 2,
+    "sourceNoShapeCount": 0,
+    "boundsRelativeToStudyOrigin": {
+      "min": [
+        -158.68934631347656,
+        8.545204162597656,
+        -4.913190841674805
+      ],
+      "max": [
+        64.57762145996094,
+        16.6279354095459,
+        108.63672637939453
+      ]
+    },
+    "triangles": 1476379
+  },
+  "e09-brt-arq": {
+    "source": "L1T1-2330-581-CON-ED-ARQ-MO-0001_V00.ifc",
+    "sourceSha256": "542c0e16dd173132339b1b5c12121053cc0055f36d5c9befd47b7fef5aea43b1",
+    "nativeRepresentations": 2725,
+    "renderableElements": 2552,
+    "openingOperandsExcludedFromDisplay": 173,
+    "sourceNoShapeCount": 5,
+    "boundsRelativeToStudyOrigin": {
+      "min": [
+        -212.22567749023438,
+        9.455900192260742,
+        -56.72071075439453
+      ],
+      "max": [
+        162.99815368652344,
+        22.756000518798828,
+        127.09056091308594
+      ]
+    },
+    "triangles": 13667739
+  }
+}

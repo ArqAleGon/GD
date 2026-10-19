@@ -1,41 +1,20 @@
 {
-  "station": "E09",
   "sourceCameras": 250,
-  "checks": {
-    "architecture": {
-      "sheets": 7,
-      "camerasCovered": 250,
-      "markersPerSheet": {
-        "1": 27,
-        "2": 22,
-        "3": 23,
-        "4": 40,
-        "5": 52,
-        "6": 61,
-        "7": 34
-      },
-      "invertible": true,
-      "cropWithinImage": true,
-      "portraitAfterRotation": true
-    },
-    "inventory": {
-      "sheets": 9,
-      "camerasCovered": 250,
-      "markersPerSheet": {
-        "2": 27,
-        "4": 23,
-        "6": 22,
-        "8": 52,
-        "10": 2,
-        "12": 34,
-        "14": 34,
-        "16": 27,
-        "18": 29
-      },
-      "invertible": true,
-      "cropWithinImage": true,
-      "portraitAfterRotation": true
-    }
+  "newArchitecturalPages": 6,
+  "coveredCameras": 223,
+  "noReplacementLevel": {
+    "name": "Sótano",
+    "count": 27
   },
-  "registrationLimit": "Visual prototype registration; geometric fit residuals are not surveyed accuracy. PDF text labels are not authoritative GlobalId associations."
+  "outsideProvidedPlans": [],
+  "markersPerPage": {
+    "1": 23,
+    "2": 22,
+    "3": 52,
+    "4": 40,
+    "5": 34,
+    "6": 61
+  },
+  "CCTVRegistrationUnchanged": true,
+  "limitation": "Image registration transfers previous visual correspondence; it does not establish surveyed accuracy."
 }

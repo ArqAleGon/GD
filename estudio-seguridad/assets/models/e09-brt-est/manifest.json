@@ -1,0 +1,319 @@
+{
+  "version": 1,
+  "station": "E09",
+  "section": "E09-BRT",
+  "name": "BRT NQS - EST",
+  "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+  "sourceSha256": "26b34da8c8b3d31612f00f59681bd15d4625955bca7652d49d02d06c904fd678",
+  "converter": "IfcOpenShell 0.8.5",
+  "kernel": "hybrid-cgal-simple-opencascade",
+  "units": "metres",
+  "coordinateConvention": "X,Z,-Y; untouched native placement",
+  "files": [
+    {
+      "file": "e09-brt-est-001.glb.gz",
+      "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+      "section": "E09-BRT",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 5497362,
+      "sha256": "7f4353e934c41c628776b53a1118ca6d8cc81b9ffcf0ce23b5cdcddcfa9d76fd",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-brt-est-002.glb.gz",
+      "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+      "section": "E09-BRT",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 962811,
+      "sha256": "34b7ea34729db7ec4bb029f637fb93c4169013c6b68c8fc2d876e9e79a8819fb",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-brt-est-003.glb.gz",
+      "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+      "section": "E09-BRT",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 951481,
+      "sha256": "14e0d5aaaf4af72e8b8ea1fba2acf49447625c2cb9cad8563479e8d09d79018f",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-brt-est-004.glb.gz",
+      "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+      "section": "E09-BRT",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 2527849,
+      "sha256": "f02c44be335cb49abc318fa3ccdd3dc76d4f7d59d507938fef161744a3e44cf2",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-brt-est-005.glb.gz",
+      "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+      "section": "E09-BRT",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 2091093,
+      "sha256": "9f1b223cfad9178ef9b3ce153b7528d68829d31714b37dacda2aff4885fab92a",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-brt-est-006.glb.gz",
+      "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+      "section": "E09-BRT",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 67333,
+      "sha256": "c006b1031617cec6c5d7092b34ab36baeeae3b647fd1f19fb7bfd2107d422886",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-brt-est-007.glb.gz",
+      "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+      "section": "E09-BRT",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 402931,
+      "sha256": "c30316d63b6e23f3fc2f094fc9bd5876326e54fc3aaacb4bf2e56643faca87db",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-brt-est-008.glb.gz",
+      "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+      "section": "E09-BRT",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 236513,
+      "sha256": "d61e148579b1138fc067112a0e7a6a00c5fcb293ba25fce2d7a20fd7b036aa46",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-brt-est-009.glb.gz",
+      "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+      "section": "E09-BRT",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 206903,
+      "sha256": "7e7dc1b9d5bf7a0161bb15c577c55245bdca129c0105b04aa94ceefa434fb7be",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-brt-est-010.glb.gz",
+      "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+      "section": "E09-BRT",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 87878,
+      "sha256": "cbb3ebd75b90910195ae4f0704dbae1be124e308e5989ee09669610a77d4a5a2",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-brt-est-011.glb.gz",
+      "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+      "section": "E09-BRT",
+      "discipline": "EST",
+      "converted": 276,
+      "compressedBytes": 630169,
+      "sha256": "c2f3e955455e192b19501c1fd72582af8ed88642cc220e0e528f29755d204173",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    }
+  ],
+  "inputElements": 3776,
+  "expectedRenderableElements": 3774,
+  "convertedElements": 3776,
+  "missingElements": [],
+  "unexpectedElements": [],
+  "excludedSourceConditions": [
+    {
+      "id": 3232709,
+      "globalId": "17uE8T4qH4ex2dOoY7WPJw",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 3263293,
+      "globalId": "0abChoqC5B6uCH9eDHtoEI",
+      "reason": "Native subtractive opening, applied to its host"
+    }
+  ],
+  "levels": [
+    {
+      "id": 127,
+      "globalId": "05P$UGewL48Q5vosutqOKF",
+      "name": "STR_LEVEL BASE _0.00",
+      "elevation": -2550.0,
+      "matrix": [
+        [
+          0.820707796765889,
+          0.571348153342321,
+          0.0,
+          106910.280153313
+        ],
+        [
+          -0.571348153342321,
+          0.820707796765889,
+          0.0,
+          103338.30833124
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 133,
+      "globalId": "05P$UGewL48Q5vosutqORE",
+      "name": "STR_PL_01_CIMENTACIÓN",
+      "elevation": 8.52999999999976,
+      "matrix": [
+        [
+          0.820707796765889,
+          0.571348153342321,
+          0.0,
+          106910.280153313
+        ],
+        [
+          -0.571348153342321,
+          0.820707796765889,
+          0.0,
+          103338.30833124
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2558.5299999999997
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 145,
+      "globalId": "05P$UGewL48Q5vosutqqQJ",
+      "name": "STR_LEVEL BASE _0.03",
+      "elevation": 10.0299999999993,
+      "matrix": [
+        [
+          0.820707796765889,
+          0.571348153342321,
+          0.0,
+          106910.280153313
+        ],
+        [
+          -0.571348153342321,
+          0.820707796765889,
+          0.0,
+          103338.30833124
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2560.0299999999993
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 151,
+      "globalId": "05P$UGewL48Q5vosutqqLt",
+      "name": "STR_PL_02_PLATAFORMA_BRT",
+      "elevation": 10.9299999999992,
+      "matrix": [
+        [
+          0.820707796765889,
+          0.571348153342321,
+          0.0,
+          106910.280153313
+        ],
+        [
+          -0.571348153342321,
+          0.820707796765889,
+          0.0,
+          103338.30833124
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2560.9299999999994
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 157,
+      "globalId": "05P$UGewL48Q5vosutqqQX",
+      "name": "STR_PL_03_CUBIERTA_BRT",
+      "elevation": 14.3159999999988,
+      "matrix": [
+        [
+          0.820707796765889,
+          0.571348153342321,
+          0.0,
+          106910.280153313
+        ],
+        [
+          -0.571348153342321,
+          0.820707796765889,
+          0.0,
+          103338.30833124
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2564.315999999999
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "validated": true,
+  "seconds": 65.97415661811829,
+  "convertedOpeningElements": 2,
+  "renderableElements": 3774,
+  "renderingNote": "All native source representations converted. Opening operands retained in source archive and excluded from visible rendering; host subtraction preserved."
+}

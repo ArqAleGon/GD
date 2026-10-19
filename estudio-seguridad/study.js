@@ -1,6 +1,6 @@
-import {PlanViewer} from './study-plans.js';
-import {StudyScene} from './study-scene.js';
-import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js';
+import {PlanViewer} from './study-plans.js?v=20261019-brt-v04';
+import {StudyScene} from './study-scene.js?v=20261019-brt-v04';
+import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261019-brt-v04';
 const $=s=>document.querySelector(s);
 const levels=[
  {id:'B',name:'Sótano',ifc:'ARC_PL_00_BASEMENT',cutMin:2552.8,cutMax:2558.8},
@@ -15,7 +15,7 @@ const defaults=()=>({fov:90,range:25,yaw:0,tilt:0});
 initDrawers();initFullscreen(()=>{window.dispatchEvent(new Event('resize'));});
 const canView=r=>!!r&&(typeOf(r)==='F'||!!settings.profile);
 const typeOf=r=>Object.keys(types).find(k=>(r.ifcTypeName||'').includes(types[k].ifcFamilyToken));
-async function json(url){const r=await fetch(url);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
+async function json(url){const request=new URL(url,location.href);request.searchParams.set('v','20261019-brt-v04');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
 function options(select,items){select.replaceChildren(...items.map(([value,text])=>{const o=document.createElement('option');o.value=value;o.textContent=text;return o;}));}
 for(const selector of ['#entry-level','#level-select']){options($(selector),levels.map(l=>[l.id,l.name]));$(selector).value=level.id;}
 $('#entry-dialog').showModal();
@@ -59,7 +59,7 @@ async function start(){
   scene=new StudyScene({axon:$('#axon-art'),pov:$('#pov-art'),onSelect:selectCamera,onProgress:(done,total)=>{const percent=Math.floor(done/total*100);$('#load-percent').textContent=percent+'%';$('#load-progress').value=percent;$('#load-parts').textContent=`Partes cargadas: ${done} de ${total}`;$('#resource-status').textContent=`Paquete E09 · ${done}/${total} partes de geometría`;}});
   changeLevel($('#entry-level').value);
   await scene.load(modelManifest,records,types);scene.setLevel(level);scene.select(active,settings);modelsReady=true;$('#model-loading').hidden=true;updatePovMessage();
-  $('#resource-status').textContent=`E09 · arquitectura, estructura e instalaciones · ${records.length} cámaras · 26 perspectivas fijas`;
+  $('#resource-status').textContent=`E09 + BRT NQS · arquitectura, estructura e instalaciones · ${records.length} cámaras · 26 perspectivas fijas`;
   clearInterval(loadTimer);document.body.dataset.ready='true';
  }catch(error){clearInterval(loadTimer);showError('#resource-status','No se completó la carga: '+error.message);$('#model-loading').textContent='No se pudo cargar el paquete. Usa «Reintentar modelos».';$('#retry-model').hidden=false;updatePovMessage();document.body.dataset.ready='error';console.error(error);}
 }
@@ -71,11 +71,12 @@ $('#level-select').addEventListener('change',e=>changeLevel(e.target.value));$('
 for(const k of ['fov','range','yaw','tilt'])$('#'+k).addEventListener('input',e=>{settings[k]=Number(e.target.value);updateOptics();});
 $('#reset-optics').addEventListener('click',()=>{settingsById.delete(active.ifcGlobalId);selectCamera(active.ifcGlobalId);});
 $('#show-installations').addEventListener('change',e=>{if(scene){scene.installations=e.target.checked;scene.filter();}});$('#show-cone').addEventListener('change',e=>{if(scene){scene.showCone=e.target.checked;scene.dirty=true;planView.select(active,canView(active)?scene.pose:null,settings);}});
+$('#show-brt').addEventListener('change',e=>{if(scene){scene.showBrt=e.target.checked;scene.filter();}});
 $('#frame-level').addEventListener('click',()=>scene?.frame());$('#frame-camera').addEventListener('click',()=>scene?.focusSelected());$('#help-button').addEventListener('click',()=>$('#help-dialog').showModal());
 for(const b of document.querySelectorAll('.expand'))b.addEventListener('click',()=>{const panel=document.getElementById(b.dataset.panel),was=panel.classList.contains('is-expanded');document.querySelectorAll('.is-expanded').forEach(p=>p.classList.remove('is-expanded'));if(!was)panel.classList.add('is-expanded');if(scene)scene.dirty=true;});
 document.addEventListener('keydown',e=>{if(e.key==='Escape'){document.querySelectorAll('.is-expanded').forEach(p=>p.classList.remove('is-expanded'));if(scene)scene.dirty=true;}});
 function svgElement(tag,attrs={}){const e=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const [k,v] of Object.entries(attrs))e.setAttribute(k,v);return e;}
-function populateSheets(){const pages=$('#plan-kind').value==='architecture'?architecture:inventory;const filtered=pages.filter(p=>p.level===level.name);options($('#plan-sheet'),filtered.map(p=>[p.page,`${p.level} · ${p.buildings?.join(' / ')||'parte '+p.part} · pág. ${p.page}`]));$('#plan-sheet').disabled=!filtered.length;zoom=1;drawPlan();}
+function populateSheets(){const hasArchitecture=architecture.some(p=>p.level===level.name);$('#plan-kind option[value="architecture"]').disabled=!hasArchitecture;if(!hasArchitecture&&$('#plan-kind').value==='architecture')$('#plan-kind').value='inventory';const pages=$('#plan-kind').value==='architecture'?architecture:inventory;const filtered=pages.filter(p=>p.level===level.name);options($('#plan-sheet'),filtered.map(p=>[p.page,p.sourceFile?`${p.level} · Plano ${p.part} · ${p.sourceFile.replace(/\.pdf$/i,'')}`:`${p.level} · ${p.buildings?.join(' / ')||'parte '+p.part} · pág. ${p.page}`]));$('#plan-sheet').disabled=!filtered.length;zoom=1;drawPlan();}
 function syncPlan(){
  const kind=$('#plan-kind').value,pages=(kind==='architecture'?architecture:inventory).filter(p=>p.level===level.name),current=Number($('#plan-sheet').value),preferred=planView.choosePage(kind,pages,active,current);
  if(preferred&&preferred.page!==current){$('#plan-sheet').value=preferred.page;zoom=1;drawPlan();}else planView.select(active,canView(active)?scene?.pose:null,settings);
@@ -85,7 +86,7 @@ function drawPlan(){
  if(!page){$('#plan-svg').replaceChildren();$('#plan-status').textContent=planErrors[kind]?'Error al cargar catálogo: '+planErrors[kind]:'No hay láminas disponibles para este nivel.';$('#plan-retry').hidden=!planErrors[kind];return;}
  $('#plan-loading').hidden=false;planView.zoom=zoom;
  planView.draw(kind,page,level,active,()=>{if(token===planToken){$('#plan-loading').hidden=true;$('#plan-status').textContent=`${kind==='architecture'?'Planta arquitectónica':'Inventario CCTV'} · página ${page.page} · ${planView.markers.length} cámaras IFC`;$('#plan-status').classList.remove('resources-error');}},()=>{if(token===planToken){$('#plan-loading').hidden=true;showError('#plan-status','No se pudo cargar esta lámina.');$('#plan-retry').hidden=false;}});
- $('#plan-registration').textContent=planView.reg?.status||'Sin registro espacial';planView.select(active,canView(active)?scene?.pose:null,settings);
+ $('#plan-registration').textContent=level.id==='B'?'Sótano: plano arquitectónico no aportado · inventario conservado':planView.reg?.status||'Sin registro espacial';planView.select(active,canView(active)?scene?.pose:null,settings);
 }
 $('#plan-kind').addEventListener('change',()=>{populateSheets();syncPlan();});$('#plan-sheet').addEventListener('change',()=>{zoom=1;drawPlan();});$('#plan-retry').addEventListener('click',async()=>{const kind=$('#plan-kind').value;if(planErrors[kind]){try{const data=await json(kind==='architecture'?'./assets/plants/manifest.json':'./assets/cctv/inventory.json');if(kind==='architecture')architecture=data.pages;else inventory=data.pages;delete planErrors[kind];populateSheets();}catch(error){showError('#plan-status',error.message);}}else drawPlan();});
 for(const [id,fn] of [['zoom-in',()=>Math.min(8,zoom*1.5)],['zoom-out',()=>Math.max(1,zoom/1.5)],['zoom-fit',()=>1]])$('#'+id).addEventListener('click',()=>{zoom=fn();planView.zoom=zoom;planView.fit();});

@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "originGltfMetres": [
     96310.0,
     2550.0,
@@ -7463,5 +7463,300 @@
   "triangles": 18007661,
   "cameraElementsSeparate": 250,
   "simplification": false,
-  "note": "Batched from existing converted geometry. No IFC reconversion; cameras remain separate with GlobalIds."
+  "note": "BRT reuses native glTF geometries as GPU instances, preserving source-qualified IFC identities and native world placement.",
+  "additionalModels": [
+    {
+      "package": "e09-brt-est",
+      "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+      "sourceSha256": "26b34da8c8b3d31612f00f59681bd15d4625955bca7652d49d02d06c904fd678",
+      "files": [
+        {
+          "file": "e09-brt-est-001.glb.gz",
+          "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+          "section": "E09-BRT",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 5497362,
+          "sha256": "7f4353e934c41c628776b53a1118ca6d8cc81b9ffcf0ce23b5cdcddcfa9d76fd",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-brt-est-002.glb.gz",
+          "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+          "section": "E09-BRT",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 962811,
+          "sha256": "34b7ea34729db7ec4bb029f637fb93c4169013c6b68c8fc2d876e9e79a8819fb",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-brt-est-003.glb.gz",
+          "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+          "section": "E09-BRT",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 951481,
+          "sha256": "14e0d5aaaf4af72e8b8ea1fba2acf49447625c2cb9cad8563479e8d09d79018f",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-brt-est-004.glb.gz",
+          "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+          "section": "E09-BRT",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 2527849,
+          "sha256": "f02c44be335cb49abc318fa3ccdd3dc76d4f7d59d507938fef161744a3e44cf2",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-brt-est-005.glb.gz",
+          "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+          "section": "E09-BRT",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 2091093,
+          "sha256": "9f1b223cfad9178ef9b3ce153b7528d68829d31714b37dacda2aff4885fab92a",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-brt-est-006.glb.gz",
+          "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+          "section": "E09-BRT",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 67333,
+          "sha256": "c006b1031617cec6c5d7092b34ab36baeeae3b647fd1f19fb7bfd2107d422886",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-brt-est-007.glb.gz",
+          "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+          "section": "E09-BRT",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 402931,
+          "sha256": "c30316d63b6e23f3fc2f094fc9bd5876326e54fc3aaacb4bf2e56643faca87db",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-brt-est-008.glb.gz",
+          "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+          "section": "E09-BRT",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 236513,
+          "sha256": "d61e148579b1138fc067112a0e7a6a00c5fcb293ba25fce2d7a20fd7b036aa46",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-brt-est-009.glb.gz",
+          "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+          "section": "E09-BRT",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 206903,
+          "sha256": "7e7dc1b9d5bf7a0161bb15c577c55245bdca129c0105b04aa94ceefa434fb7be",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-brt-est-010.glb.gz",
+          "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+          "section": "E09-BRT",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 87878,
+          "sha256": "cbb3ebd75b90910195ae4f0704dbae1be124e308e5989ee09669610a77d4a5a2",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-brt-est-011.glb.gz",
+          "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+          "section": "E09-BRT",
+          "discipline": "EST",
+          "converted": 276,
+          "compressedBytes": 630169,
+          "sha256": "c2f3e955455e192b19501c1fd72582af8ed88642cc220e0e528f29755d204173",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        }
+      ],
+      "renderableElements": 3774,
+      "bounds": {
+        "min": [
+          -158.68934631347656,
+          8.545204162597656,
+          -4.913190841674805
+        ],
+        "max": [
+          64.57762145996094,
+          16.6279354095459,
+          108.63672637939453
+        ]
+      }
+    },
+    {
+      "package": "e09-brt-arq",
+      "source": "L1T1-2330-581-CON-ED-ARQ-MO-0001_V00.ifc",
+      "sourceSha256": "542c0e16dd173132339b1b5c12121053cc0055f36d5c9befd47b7fef5aea43b1",
+      "files": [
+        {
+          "file": "e09-brt-arq-001.glb.gz",
+          "source": "L1T1-2330-581-CON-ED-ARQ-MO-0001_V00.ifc",
+          "section": "E09-BRT",
+          "discipline": "ARQ",
+          "converted": 350,
+          "compressedBytes": 960652,
+          "sha256": "da9f7f89fa771eba3e05688df145ce660f2388930fff8f943fe086f1a46e88a0",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-brt-arq-002.glb.gz",
+          "source": "L1T1-2330-581-CON-ED-ARQ-MO-0001_V00.ifc",
+          "section": "E09-BRT",
+          "discipline": "ARQ",
+          "converted": 350,
+          "compressedBytes": 223712,
+          "sha256": "1602d595bca3ba1e89080f1053968a716bb3fb6992391322a7f3837c0c039d57",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-brt-arq-003.glb.gz",
+          "source": "L1T1-2330-581-CON-ED-ARQ-MO-0001_V00.ifc",
+          "section": "E09-BRT",
+          "discipline": "ARQ",
+          "converted": 350,
+          "compressedBytes": 4189366,
+          "sha256": "78d721f9f8bd7ba089b80e6ad71beab4491da51295d8e9836d3da7e461b2df7d",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-brt-arq-004.glb.gz",
+          "source": "L1T1-2330-581-CON-ED-ARQ-MO-0001_V00.ifc",
+          "section": "E09-BRT",
+          "discipline": "ARQ",
+          "converted": 350,
+          "compressedBytes": 1782392,
+          "sha256": "235ac92e9d9192a539b7e0b5dd5977c215a90b5c0aaf0dab3b35fbe0a58d2a29",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-brt-arq-005.glb.gz",
+          "source": "L1T1-2330-581-CON-ED-ARQ-MO-0001_V00.ifc",
+          "section": "E09-BRT",
+          "discipline": "ARQ",
+          "converted": 350,
+          "compressedBytes": 508041,
+          "sha256": "7af225fe9883136ad76452ba76648265ebe192e2eb13b25942b5af398bc45e03",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-brt-arq-006.glb.gz",
+          "source": "L1T1-2330-581-CON-ED-ARQ-MO-0001_V00.ifc",
+          "section": "E09-BRT",
+          "discipline": "ARQ",
+          "converted": 350,
+          "compressedBytes": 875781,
+          "sha256": "55d4217e0a4c32cdc157e78c59985f358b4be2bee57e033f6123c4657980dbf5",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-brt-arq-007.glb.gz",
+          "source": "L1T1-2330-581-CON-ED-ARQ-MO-0001_V00.ifc",
+          "section": "E09-BRT",
+          "discipline": "ARQ",
+          "converted": 350,
+          "compressedBytes": 1667735,
+          "sha256": "982ed4341f5fa75517f3ef2660314f4c244f9ee93fd91e2ab16ee6c1ae98ac30",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-brt-arq-008.glb.gz",
+          "source": "L1T1-2330-581-CON-ED-ARQ-MO-0001_V00.ifc",
+          "section": "E09-BRT",
+          "discipline": "ARQ",
+          "converted": 275,
+          "compressedBytes": 6697849,
+          "sha256": "290e00ea5c0e69fa9113b515f2ea6e76edad98fa0b228e3193091c633c090a47",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        }
+      ],
+      "renderableElements": 2552,
+      "bounds": {
+        "min": [
+          -212.22567749023438,
+          9.455900192260742,
+          -56.72071075439453
+        ],
+        "max": [
+          162.99815368652344,
+          22.756000518798828,
+          127.09056091308594
+        ]
+      }
+    }
+  ],
+  "brtSources": {
+    "e09-brt-est": {
+      "source": "L1T1-2320-581-CON-ED-EST-MO-0001_VD1.ifc",
+      "sourceSha256": "26b34da8c8b3d31612f00f59681bd15d4625955bca7652d49d02d06c904fd678",
+      "nativeRepresentations": 3776,
+      "renderableElements": 3774,
+      "openingOperandsExcludedFromDisplay": 2,
+      "sourceNoShapeCount": 0,
+      "boundsRelativeToStudyOrigin": {
+        "min": [
+          -158.68934631347656,
+          8.545204162597656,
+          -4.913190841674805
+        ],
+        "max": [
+          64.57762145996094,
+          16.6279354095459,
+          108.63672637939453
+        ]
+      },
+      "triangles": 1476379
+    },
+    "e09-brt-arq": {
+      "source": "L1T1-2330-581-CON-ED-ARQ-MO-0001_V00.ifc",
+      "sourceSha256": "542c0e16dd173132339b1b5c12121053cc0055f36d5c9befd47b7fef5aea43b1",
+      "nativeRepresentations": 2725,
+      "renderableElements": 2552,
+      "openingOperandsExcludedFromDisplay": 173,
+      "sourceNoShapeCount": 5,
+      "boundsRelativeToStudyOrigin": {
+        "min": [
+          -212.22567749023438,
+          9.455900192260742,
+          -56.72071075439453
+        ],
+        "max": [
+          162.99815368652344,
+          22.756000518798828,
+          127.09056091308594
+        ]
+      },
+      "triangles": 13667739
+    }
+  }
 }
