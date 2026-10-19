@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "sourceElements": 93138,
+  "staticBatchedElements": 92888,
+  "cameraElements": 250,
+  "fixedCameraPerspectives": 26,
+  "sourceTriangles": 18696897,
+  "batchedTriangles": 18007661,
+  "separateCameraTriangles": 689236,
+  "triangleConservation": true,
+  "fixedFrontAxis": "-X family axis; lens geometry verified for all 26 fixed cameras",
+  "eyeOffsetFromFamilyOriginMetres": 0.246,
+  "architectureSheets": 7,
+  "cctvDispositionSheets": 9,
+  "limitations": [
+    "No PDF-to-model calibration",
+    "No PDF-label-to-GlobalId match",
+    "FOV and cone length are evaluation inputs, not IFC specifications",
+    "No depth-of-field or photometric coverage calculation"
+  ]
+}

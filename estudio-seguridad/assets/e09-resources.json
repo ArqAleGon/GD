@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "station": "E09",
+  "name": "EstaciÃ³n 9 Â· NQS",
+  "modelPackages": [
+    {
+      "role": "architecture-and-structure",
+      "manifest": "models/e09/manifest.json",
+      "conversion": "reused-from-mockup"
+    },
+    {
+      "role": "installations-and-cameras",
+      "manifest": "models/e09-ins/manifest.json",
+      "conversion": "IFC-to-GLB",
+      "cameraCatalog": "models/e09-ins/cameras.json"
+    }
+  ],
+  "localSourceCatalogs": {
+    "architecturePlans": "../../source-files/e09-plans.json",
+    "cctvPlans": "../../source-files/e09-cctv-plans.json"
+  },
+  "sourceCatalogsServedByWebApp": false,
+  "reviewPage": "../revision-e09.html",
+  "cameraTypeColors": "camera-types.json",
+  "inventoryDrawingLayers": "cctv/inventory.json",
+  "pdfRegistration": "pending",
+  "cameraPdfIdentityMapping": "pending",
+  "opticalAxes": "pending",
+  "published": false,
+  "studyPage": "../index.html",
+  "batchedGeometry": "models/e09-study/manifest.json",
+  "architectureWebSheets": "plants/manifest.json",
+  "integrationAudit": "integration-audit.json",
+  "fixedCameraView": "enabled for 26 Fixed Camera elements; geometric front -X; configurable evaluation FOV"
+}

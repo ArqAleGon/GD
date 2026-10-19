@@ -1,0 +1,80 @@
+[
+  {
+    "id": "standard",
+    "name": "Cámara estándar · referencia",
+    "type": "Domo fijo",
+    "description": "Perfil ilustrativo por defecto",
+    "resolution": "1920 × 1080",
+    "fov": "90° H / 59° V",
+    "lens": "Referencia · por definir",
+    "fps": "30 fps · ejemplo",
+    "protection": "Por definir",
+    "note": "Perfil de muestra, sin fabricante. Los valores no representan un equipo instalado."
+  },
+  {
+    "id": "p3275",
+    "name": "AXIS P3275-LVE · 10 mm",
+    "type": "Domo varifocal",
+    "description": "Referencia para accesos y circulación",
+    "resolution": "1920 × 1080",
+    "fov": "100–32° H / 52–18° V",
+    "lens": "3,4–9,8 mm",
+    "fps": "Hasta 50/60 fps",
+    "protection": "IP66 / IP67 · IK10",
+    "url": "https://www.axis.com/products/axis-p3275-lve/support",
+    "note": "Variante 10 mm. Campo visual según distancia focal; datos del fabricante."
+  },
+  {
+    "id": "p3268",
+    "name": "AXIS P3268-LVE · 4K",
+    "type": "Domo varifocal 4K",
+    "description": "Referencia de alta resolución",
+    "resolution": "3840 × 2160",
+    "fov": "100–53° H / 54–30° V",
+    "lens": "4,3–8,6 mm",
+    "fps": "Hasta 25/30 fps",
+    "protection": "IP66 · IK10",
+    "url": "https://www.axis.com/en-us/products/axis-p3268-lve/support",
+    "note": "Referencia de equipo existente. Modelo sustituido por el fabricante; se conserva para evaluar instalaciones."
+  },
+  {
+    "id": "q6355",
+    "name": "AXIS Q6355-LE · PTZ",
+    "type": "PTZ · zoom óptico 31×",
+    "description": "Referencia para grandes recintos",
+    "resolution": "1920 × 1080",
+    "fov": "60,6–2° H / 36,5–1,1° V",
+    "lens": "6,91–214,64 mm",
+    "fps": "Hasta 50/60 fps",
+    "protection": "IP66 / IP67 · IK10",
+    "url": "https://www.axis.com/products/axis-q6355-le/support",
+    "note": "Giro continuo 360°. La cobertura futura dependerá del zoom y de la orientación seleccionada."
+  },
+  {
+    "id": "m4318",
+    "name": "AXIS M4318-PLVE · panorámica",
+    "type": "Panorámica · sensor 12 MP",
+    "description": "Referencia para vestíbulos",
+    "resolution": "2992 × 2992",
+    "fov": "182° H / 182° V",
+    "lens": "1,2 mm · fija",
+    "fps": "Hasta 25/30 fps",
+    "protection": "IP66 · IK10",
+    "url": "https://www.axis.com/en-gb/products/axis-m4318-plve",
+    "note": "Proyección circular ojo de pez de 182°. Volumen esférico de evaluación; montaje y enfoque deben verificarse."
+  },
+  {
+    "id": "p3737",
+    "name": "AXIS P3737-PLE · multisensor",
+    "type": "Multidireccional · 4 × 5 MP",
+    "description": "Referencia para espacios amplios",
+    "resolution": "2592 × 1944 / sensor",
+    "fov": "99–37° H / 70–28° V por sensor; cuatro sensores",
+    "lens": "3,2–8,1 mm",
+    "fps": "20 fps a 5 MP; hasta 25/30 fps en Quad HD",
+    "protection": "IP66 / IP67 · IK09",
+    "url": "https://www.axis.com/en-us/products/axis-p3737-ple",
+    "note": "Cuatro vistas y volúmenes. Distribución de evaluación a 90° entre sensores; validar orientación de montaje.",
+    "datasheet": "https://www.axis.com/dam/public/0b/58/57/datasheet-axis-p3737-ple-panoramic-camera-en-US-509611.pdf"
+  }
+]

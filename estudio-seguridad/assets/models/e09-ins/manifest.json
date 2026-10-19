@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "station": "E09",
+  "name": "E09 · Instalaciones y cámaras",
+  "source": "L1T1-5400-309-CON-ED-INS-MO-0001_VDD.ifc",
+  "sourceSha256": "8f7c1d516f9821b8b20061dfacac6944dcd77f8bdb68ff2d2a18000aeb3f87bb",
+  "sourceSchema": "IFC2X3",
+  "converter": "IfcOpenShell 0.8.5",
+  "units": "metres",
+  "coordinateConvention": "glTF metres [IFC X, IFC Z, -IFC Y]; every node placement verified against source IFC.",
+  "files": [
+    {
+      "file": "e09-ins-5400-vdd-p001.glb.gz",
+      "source": "L1T1-5400-309-CON-ED-INS-MO-0001_VDD.ifc",
+      "section": "E09",
+      "discipline": "INS",
+      "version": "VDD",
+      "converted": 500,
+      "compressedBytes": 249139,
+      "uncompressedBytes": 935416,
+      "sha256": "1343bc4a5329c86c57bd112df05117d705f1c597cdcf40b7357dde83f2d53b9a",
+      "streetDatum": 2550.0,
+      "instanceIdentity": "ifc-globalid",
+      "status": "ready",
+      "boundsPendingValidation": false,
+      "boundsGltfMetres": {
+        "min": [
+          96222.00352802177,
+          2553.4,
+          -100190.15357600179
+        ],
+        "max": [
+          96415.25221239962,
+          2580.986956968308,
+          -100031.87880943676
+        ]
+      }
+    },
+    {
+      "file": "e09-ins-5400-vdd-p002.glb.gz",
+      "source": "L1T1-5400-309-CON-ED-INS-MO-0001_VDD.ifc",
+      "section": "E09",
+      "discipline": "INS",
+      "version": "VDD",
+      "converted": 500,
+      "compressedBytes": 1143936,
+      "uncompressedBytes": 3653740,
+      "sha256": "b438141ffa7ff840777fbcd921ab06e9431e2f0bb18ccf4aa0bd508fe42cef32",
+      "streetDatum": 2550.0,
+      "instanceIdentity": "ifc-globalid",
+      "status": "ready",
+      "boundsPendingValidation": false,
+      "boundsGltfMetres": {
+        "min": [
+          96203.63548337066,
+          2554.7443166315556,
+          -100274.30333292624
+        ],
+        "max": [
+          96415.72910648551,
+          2581.486956968308,
+          -100031.38755189301
+        ]
+      }
+    },
+    {
+      "file": "e09-ins-5400-vdd-p003.glb.gz",
+      "source": "L1T1-5400-309-CON-ED-INS-MO-0001_VDD.ifc",
+      "section": "E09",
+      "discipline": "INS",
+      "version": "VDD",
+      "converted": 382,
+      "compressedBytes": 3143651,
+      "uncompressedBytes": 9404716,
+      "sha256": "4f100365dffa6e29f52b86ef529b04c1101e70ee73fefe8fd244bac403fbbb0a",
+      "streetDatum": 2550.0,
+      "instanceIdentity": "ifc-globalid",
+      "status": "ready",
+      "boundsPendingValidation": false,
+      "boundsGltfMetres": {
+        "min": [
+          96223.2822864203,
+          2556.3663489945234,
+          -100191.41926304618
+        ],
+        "max": [
+          96417.49815762453,
+          2580.4150011086467,
+          -100042.14414814377
+        ]
+      }
+    }
+  ],
+  "inputElements": 1382,
+  "convertedElements": 1382,
+  "missingElements": [],
+  "cameraCount": 250,
+  "cameraCatalog": "cameras.json",
+  "seconds": 69.92,
+  "notes": [
+    "No element exclusions",
+    "No geometry simplification",
+    "Materials and per-element identifiers retained"
+  ],
+  "audit": "audit.json"
+}

@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "sheets": 9,
+  "labelOccurrences": 248,
+  "uniqueLabels": 244,
+  "occurrencesByType": {
+    "D": 220,
+    "F": 26,
+    "P": 2
+  },
+  "sourcePdfUnchanged": true,
+  "checks": [
+    "Every catalog label has a located overlay",
+    "No extra labels",
+    "All coordinates within PDF page",
+    "All preview images exist",
+    "Common type-color dictionary",
+    "IFC geometry and camera catalog: D=222 F=26 P=2"
+  ]
+}

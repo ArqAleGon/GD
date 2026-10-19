@@ -1,0 +1,309 @@
+{
+  "station": "E09",
+  "stationName": "NQS",
+  "originalPath": "D:\\OneDrive - EMB\\_0_Complementarios\\00_GemeloDigital\\PLANOS\\Sam\\E9-PL-0001_V01.pdf",
+  "localCopy": "plans/E9-PL-0001_V01.pdf",
+  "bytes": 688381555,
+  "sha256": "397473ecc54131728bd4ed26a1ae9f77cd5e6a8c53dd5d3c9f3d11a1a6ce55f9",
+  "originalAndCopyHashMatched": true,
+  "pageCount": 7,
+  "pdfZeroElevationMetres": 2561.8,
+  "zeroElevationEvidence": "Page 1, note 03: PL 01, +0.00 corresponds to 2561.80 m.s.n.m.",
+  "modelStreetDatumMetres": 2550.0,
+  "calibrationNote": "Do not conflate the PDF architectural zero with the mockup scene datum. Level matches are candidates, not calibrated spatial transforms.",
+  "pages": [
+    {
+      "page": 1,
+      "widthPt": 2041.0,
+      "heightPt": 3574.0,
+      "rotation": 90,
+      "level": "Sótano",
+      "buildings": [
+        "Edificio descendente"
+      ],
+      "review": "Full sheet PNG visually inspected",
+      "preview": "../recovery/pdf-review/page-1.png",
+      "hasExtractableText": true,
+      "candidateIfcLevels": [
+        {
+          "id": "2SCB_wEvLD9uWO8$uQSWQR",
+          "name": "ARQ_PL_00_SÓTANO",
+          "elevation": 2553.3999999999983,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": -8.4
+        }
+      ],
+      "spatialCalibration": "pending",
+      "note": "The sheet contains plan, axonometric view, schedules and title block; use only the plan region for camera overlay.",
+      "image": "page-1.jpg",
+      "width": 4000,
+      "height": 2285
+    },
+    {
+      "page": 2,
+      "widthPt": 4764.96,
+      "heightPt": 2040.96,
+      "rotation": 0,
+      "level": "Acceso",
+      "buildings": [
+        "Edificio ascendente 01",
+        "Edificio ascendente 02",
+        "Nave central / contexto"
+      ],
+      "review": "Full sheet PNG visually inspected",
+      "preview": "../recovery/pdf-review/page-2.png",
+      "hasExtractableText": false,
+      "candidateIfcLevels": [
+        {
+          "id": "24fcK5hzzAMeuf5_95wn$h",
+          "name": "ARQ_PL_00.1_ACCESO",
+          "elevation": 2559.3999999999996,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": -2.4
+        },
+        {
+          "id": "1Q$e_zGrX7cB2wNrNGrL_Q",
+          "name": "ARQ_PL_00.2_ACCESO",
+          "elevation": 2559.5499999999984,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": -2.25
+        },
+        {
+          "id": "2Z_MLb5iP1gwnGZS51ZGUl",
+          "name": "ARQ_PL_00.3_ACCESO",
+          "elevation": 2559.7499999999995,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": -2.05
+        },
+        {
+          "id": "24fcK5hzzAMeuf5_95wn_T",
+          "name": "ARQ_PL_00.4_ACCESO",
+          "elevation": 2559.999999999999,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": -1.8
+        },
+        {
+          "id": "1Q$e_zGrX7cB2wNrNGrL$2",
+          "name": "ARQ_PL_00.5_ACCESO",
+          "elevation": 2560.4999999999986,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": -1.3
+        },
+        {
+          "id": "24fcK5hzzAMeuf5_95wny0",
+          "name": "ARQ_PL_00.6_ACCESO",
+          "elevation": 2560.699999999999,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": -1.1
+        },
+        {
+          "id": "1Q$e_zGrX7cB2wNrNGrLno",
+          "name": "ARQ_PL_00.7_ACCESO",
+          "elevation": 2561.3499999999995,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": -0.45
+        },
+        {
+          "id": "1ZvOeQwd10lPlZWEpLLxYV",
+          "name": "ARQ_PL_01_ACCESO",
+          "elevation": 2561.7999999999997,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": -0.0
+        }
+      ],
+      "spatialCalibration": "pending",
+      "note": "The sheet contains plan, axonometric view, schedules and title block; use only the plan region for camera overlay.",
+      "image": "page-2.jpg",
+      "width": 4000,
+      "height": 1714
+    },
+    {
+      "page": 3,
+      "widthPt": 3574.08,
+      "heightPt": 2040.96,
+      "rotation": 0,
+      "level": "Acceso",
+      "buildings": [
+        "Edificio descendente"
+      ],
+      "review": "Full sheet PNG visually inspected",
+      "preview": "../recovery/pdf-review/page-3.png",
+      "hasExtractableText": false,
+      "candidateIfcLevels": [
+        {
+          "id": "24fcK5hzzAMeuf5_95wn$h",
+          "name": "ARQ_PL_00.1_ACCESO",
+          "elevation": 2559.3999999999996,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": -2.4
+        },
+        {
+          "id": "1Q$e_zGrX7cB2wNrNGrL_Q",
+          "name": "ARQ_PL_00.2_ACCESO",
+          "elevation": 2559.5499999999984,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": -2.25
+        },
+        {
+          "id": "2Z_MLb5iP1gwnGZS51ZGUl",
+          "name": "ARQ_PL_00.3_ACCESO",
+          "elevation": 2559.7499999999995,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": -2.05
+        },
+        {
+          "id": "24fcK5hzzAMeuf5_95wn_T",
+          "name": "ARQ_PL_00.4_ACCESO",
+          "elevation": 2559.999999999999,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": -1.8
+        },
+        {
+          "id": "1Q$e_zGrX7cB2wNrNGrL$2",
+          "name": "ARQ_PL_00.5_ACCESO",
+          "elevation": 2560.4999999999986,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": -1.3
+        },
+        {
+          "id": "24fcK5hzzAMeuf5_95wny0",
+          "name": "ARQ_PL_00.6_ACCESO",
+          "elevation": 2560.699999999999,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": -1.1
+        },
+        {
+          "id": "1Q$e_zGrX7cB2wNrNGrLno",
+          "name": "ARQ_PL_00.7_ACCESO",
+          "elevation": 2561.3499999999995,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": -0.45
+        },
+        {
+          "id": "1ZvOeQwd10lPlZWEpLLxYV",
+          "name": "ARQ_PL_01_ACCESO",
+          "elevation": 2561.7999999999997,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": -0.0
+        }
+      ],
+      "spatialCalibration": "pending",
+      "note": "The sheet contains plan, axonometric view, schedules and title block; use only the plan region for camera overlay.",
+      "image": "page-3.jpg",
+      "width": 4000,
+      "height": 2285
+    },
+    {
+      "page": 4,
+      "widthPt": 4764.96,
+      "heightPt": 2040.96,
+      "rotation": 0,
+      "level": "Intermedio",
+      "buildings": [
+        "Edificio ascendente 01",
+        "Edificio ascendente 02",
+        "Conexiones / contexto de nave central"
+      ],
+      "review": "Full sheet PNG visually inspected",
+      "preview": "../recovery/pdf-review/page-4.png",
+      "hasExtractableText": false,
+      "candidateIfcLevels": [
+        {
+          "id": "2SCB_wEvLD9uWO8$uQSW5e",
+          "name": "ARQ_PL_02_INTERMEDIO",
+          "elevation": 2568.3999999999983,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": 6.6
+        }
+      ],
+      "spatialCalibration": "pending",
+      "note": "The sheet contains plan, axonometric view, schedules and title block; use only the plan region for camera overlay.",
+      "image": "page-4.jpg",
+      "width": 4000,
+      "height": 1714
+    },
+    {
+      "page": 5,
+      "widthPt": 3574.08,
+      "heightPt": 2040.96,
+      "rotation": 0,
+      "level": "Intermedio",
+      "buildings": [
+        "Edificio descendente"
+      ],
+      "review": "Full sheet PNG visually inspected",
+      "preview": "../recovery/pdf-review/page-5.png",
+      "hasExtractableText": false,
+      "candidateIfcLevels": [
+        {
+          "id": "2SCB_wEvLD9uWO8$uQSW5e",
+          "name": "ARQ_PL_02_INTERMEDIO",
+          "elevation": 2568.3999999999983,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": 6.6
+        }
+      ],
+      "spatialCalibration": "pending",
+      "note": "The sheet contains plan, axonometric view, schedules and title block; use only the plan region for camera overlay.",
+      "image": "page-5.jpg",
+      "width": 4000,
+      "height": 2285
+    },
+    {
+      "page": 6,
+      "widthPt": 4764.96,
+      "heightPt": 2040.96,
+      "rotation": 0,
+      "level": "Plataforma",
+      "buildings": [
+        "Edificio ascendente 01",
+        "Edificio ascendente 02",
+        "Nave central"
+      ],
+      "review": "Full sheet PNG visually inspected",
+      "preview": "../recovery/pdf-review/page-6.png",
+      "hasExtractableText": false,
+      "candidateIfcLevels": [
+        {
+          "id": "2SCB_wEvLD9uWO8$uQSW4n",
+          "name": "ARQ_PL_03_PLATAFORMA",
+          "elevation": 2577.139999999998,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": 15.34
+        }
+      ],
+      "spatialCalibration": "pending",
+      "note": "The sheet contains plan, axonometric view, schedules and title block; use only the plan region for camera overlay.",
+      "image": "page-6.jpg",
+      "width": 4000,
+      "height": 1714
+    },
+    {
+      "page": 7,
+      "widthPt": 3574.08,
+      "heightPt": 2040.96,
+      "rotation": 0,
+      "level": "Plataforma",
+      "buildings": [
+        "Edificio descendente"
+      ],
+      "review": "Full sheet PNG visually inspected",
+      "preview": "../recovery/pdf-review/page-7.png",
+      "hasExtractableText": false,
+      "candidateIfcLevels": [
+        {
+          "id": "2SCB_wEvLD9uWO8$uQSW4n",
+          "name": "ARQ_PL_03_PLATAFORMA",
+          "elevation": 2577.139999999998,
+          "source": "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc",
+          "relativeToPdfZeroMetres": 15.34
+        }
+      ],
+      "spatialCalibration": "pending",
+      "note": "The sheet contains plan, axonometric view, schedules and title block; use only the plan region for camera overlay.",
+      "image": "page-7.jpg",
+      "width": 4000,
+      "height": 2285
+    }
+  ]
+}

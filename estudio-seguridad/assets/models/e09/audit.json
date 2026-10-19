@@ -1,0 +1,33 @@
+{
+  "station": "E09 · NQS",
+  "geometryReconverted": false,
+  "meshNodes": 91756,
+  "uniqueSourceGlobalIdPairs": 91756,
+  "ifcTypes": {
+    "IfcMember": 48976,
+    "IfcPlate": 25095,
+    "IfcBeam": 5491,
+    "IfcWallStandardCase": 3737,
+    "IfcSlab": 1983,
+    "IfcBuildingElementProxy": 1771,
+    "IfcColumn": 1217,
+    "IfcFurnishingElement": 998,
+    "IfcWall": 703,
+    "IfcDoor": 428,
+    "IfcCovering": 412,
+    "IfcRailing": 337,
+    "IfcFlowTerminal": 237,
+    "IfcWindow": 175,
+    "IfcStairFlight": 144,
+    "IfcRoof": 52
+  },
+  "sources": {
+    "L1T1-0000-309-CON-ED-ARQ-MO-0001_V00.ifc": 87226,
+    "L1T1-1150-309-CON-ED-EST-MO-0001_V00.ifc": 55,
+    "L1T1-1200-309-CON-ED-EST-MO-0001_V00.ifc": 4475
+  },
+  "requiredExtensions": [],
+  "verifiedFiles": 164,
+  "compressedBytes": 48609542,
+  "levelReferences": 15
+}

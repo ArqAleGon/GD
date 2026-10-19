@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "elements": 1382,
+  "cameras": 250,
+  "camerasByStorey": {
+    "ARC_PL_00_BASEMENT": 27,
+    "ARC_PL_01_ACCESS": 45,
+    "ARC_PL_02_INTERMEDIATE": 88,
+    "ARC_PL_03_PLATFORM": 90
+  },
+  "trianglesInstanced": 7676422,
+  "maxPlacementMatrixDifference": 3.3306690738754696e-16,
+  "boundsGltfMetres": {
+    "min": [
+      96203.63548337066,
+      2553.4,
+      -100274.30333292624
+    ],
+    "max": [
+      96417.49815762453,
+      2581.486956968308,
+      -100031.38755189301
+    ]
+  },
+  "compressedBytes": 4536726,
+  "checks": [
+    "SHA256",
+    "GLB binary bounds",
+    "Finite coordinates",
+    "Triangle indices",
+    "All IFC element identities",
+    "All placement matrices against IFC"
+  ],
+  "limits": [
+    "PDF registration and optical axes not calibrated",
+    "No claim of installed equipment"
+  ]
+}

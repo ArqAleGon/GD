@@ -1,0 +1,5 @@
+{
+  "D": {"label": "Domo", "color": "#008FD6", "ifcFamilyToken": "DOME-CAMERA"},
+  "F": {"label": "Fija", "color": "#E59A00", "ifcFamilyToken": "FIXED-CAMERA"},
+  "P": {"label": "PTZ", "color": "#CE45C9", "ifcFamilyToken": "PTZ-CAMERA"}
+}

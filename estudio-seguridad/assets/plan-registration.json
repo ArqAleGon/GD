@@ -1,0 +1,1747 @@
+{
+  "version": 1,
+  "originIfc": [
+    96310,
+    100150
+  ],
+  "method": "Similarity fitted to vector camera symbols; architecture transferred using three corresponding structural column centers in PDF renders. Visual registration for prototype; not surveyed coordinates.",
+  "architecture": {
+    "1": {
+      "matrix": [
+        [
+          14.251355273314545,
+          6.976621619988417,
+          1627.9855308530541
+        ],
+        [
+          6.934347607414885,
+          -14.270367257949427,
+          1122.9380631687584
+        ]
+      ],
+      "crop": [
+        105.26315789473684,
+        210.52631578947367,
+        2021.0526315789473,
+        989.4736842105264
+      ],
+      "rotation": 90,
+      "status": "Alineación visual por columnas · revisar antes de medir",
+      "controlPoints": [
+        [
+          125,
+          483
+        ],
+        [
+          961,
+          483
+        ],
+        [
+          734,
+          170
+        ]
+      ]
+    },
+    "3": {
+      "matrix": [
+        [
+          14.207046342915731,
+          7.067806075310772,
+          1610.4654961464105
+        ],
+        [
+          6.934347607414887,
+          -14.270367257949424,
+          1076.622273695074
+        ]
+      ],
+      "crop": [
+        94.73684210526316,
+        189.47368421052633,
+        2031.578947368421,
+        978.9473684210526
+      ],
+      "rotation": 90,
+      "status": "Alineación visual por columnas · revisar antes de medir",
+      "controlPoints": [
+        [
+          117,
+          461
+        ],
+        [
+          953,
+          461
+        ],
+        [
+          728,
+          148
+        ]
+      ]
+    },
+    "5": {
+      "matrix": [
+        [
+          14.229200808115138,
+          7.022213847649584,
+          1623.4360398155218
+        ],
+        [
+          6.95650207261429,
+          -14.315959485610612,
+          1047.4875542062907
+        ]
+      ],
+      "crop": [
+        105.26315789473684,
+        126.3157894736842,
+        2042.1052631578948,
+        1073.6842105263158
+      ],
+      "rotation": 90,
+      "status": "Alineación visual por columnas · revisar antes de medir",
+      "controlPoints": [
+        [
+          123,
+          447
+        ],
+        [
+          959,
+          447
+        ],
+        [
+          733,
+          133
+        ]
+      ]
+    },
+    "7": {
+      "matrix": [
+        [
+          14.207046342915731,
+          7.067806075310787,
+          1604.149706672726
+        ],
+        [
+          6.934347607414876,
+          -14.270367257949411,
+          988.201221063495
+        ]
+      ],
+      "crop": [
+        94.73684210526316,
+        84.21052631578948,
+        2031.578947368421,
+        1084.2105263157894
+      ],
+      "rotation": 90,
+      "status": "Alineación visual por columnas · revisar antes de medir",
+      "controlPoints": [
+        [
+          114,
+          419
+        ],
+        [
+          950,
+          419
+        ],
+        [
+          725,
+          106
+        ]
+      ]
+    },
+    "2": {
+      "matrix": [
+        [
+          10.64177152230727,
+          5.203942697438646,
+          1320.6192661658831
+        ],
+        [
+          5.1645689891568365,
+          -10.634874746017626,
+          104.23289155699518
+        ]
+      ],
+      "crop": [
+        84.21052631578948,
+        263.1578947368421,
+        2473.684210526316,
+        1073.6842105263158
+      ],
+      "rotation": 90,
+      "status": "Alineación visual por columnas · revisar antes de medir",
+      "controlPoints": [
+        [
+          813,
+          373
+        ],
+        [
+          1093,
+          373
+        ],
+        [
+          227,
+          572
+        ]
+      ]
+    },
+    "4": {
+      "matrix": [
+        [
+          10.445639662500355,
+          5.510969110215292,
+          1393.3932239318733
+        ],
+        [
+          5.190521597142566,
+          -10.688316327655926,
+          132.38957628050153
+        ]
+      ],
+      "crop": [
+        105.26315789473684,
+        42.10526315789474,
+        2494.7368421052633,
+        1294.7368421052631
+      ],
+      "rotation": 90,
+      "status": "Alineación visual por columnas · revisar antes de medir",
+      "controlPoints": [
+        [
+          837,
+          388
+        ],
+        [
+          1116,
+          388
+        ],
+        [
+          247,
+          588
+        ]
+      ]
+    },
+    "6": {
+      "matrix": [
+        [
+          10.60432991024274,
+          5.377890519406512,
+          1341.8035669409558
+        ],
+        [
+          5.2164742051282635,
+          -10.741757909294185,
+          200.5462610040109
+        ]
+      ],
+      "crop": [
+        84.21052631578948,
+        105.26315789473684,
+        2494.7368421052633,
+        1305.2631578947369
+      ],
+      "rotation": 90,
+      "status": "Alineación visual por columnas · revisar antes de medir",
+      "controlPoints": [
+        [
+          819,
+          422
+        ],
+        [
+          1100,
+          422
+        ],
+        [
+          228,
+          623
+        ]
+      ]
+    }
+  },
+  "inventory": {
+    "2": {
+      "matrix": [
+        [
+          23.62131948790802,
+          11.478221780431893,
+          3478.727885269353
+        ],
+        [
+          11.478221780431893,
+          -23.62131948790802,
+          1431.1175100646556
+        ]
+      ],
+      "crop": [
+        955.6299131249999,
+        98.85826687499998,
+        3394.1338293749996,
+        1351.062980625
+      ],
+      "rotation": 90,
+      "status": "Registro por símbolos del plano · posición IFC",
+      "symbolControls": 15,
+      "symbolResidualPdfPoints": [
+        2.321869378130292,
+        1.7666874994169648,
+        0.7157199197247153,
+        1.2385037875389544,
+        0.8555423060460052,
+        0.23037741670260048,
+        1.2734325853313293,
+        0.30860218067491757,
+        0.542266675303341,
+        0.7248957166712267,
+        0.659629107901211,
+        0.4068123870495875,
+        0.9445957786697585,
+        0.32341699649621763,
+        0.31706147088673564
+      ],
+      "labelCandidates": [
+        {
+          "label": "B-D-22",
+          "id": "3xBJ3iO9H0SOvzUDGmklSs",
+          "distanceMetres": 0.9073235746136603
+        },
+        {
+          "label": "B-D-23",
+          "id": "3xBJ3iO9H0SOvzUDGmklSt",
+          "distanceMetres": 1.2549755934955116
+        },
+        {
+          "label": "B-D-19",
+          "id": "1q_uZZZu17OQe4nBcCNUbg",
+          "distanceMetres": 1.4884363512825978
+        },
+        {
+          "label": "B-D-17",
+          "id": "3xBJ3iO9H0SOvzUDGmklSq",
+          "distanceMetres": 0.9508515666001297
+        },
+        {
+          "label": "B-D-18",
+          "id": "3xBJ3iO9H0SOvzUDGmklSr",
+          "distanceMetres": 0.8503052971762491
+        },
+        {
+          "label": "B-F-1",
+          "id": "3xBJ3iO9H0SOvzUDGmklSh",
+          "distanceMetres": 1.1913780712074704
+        },
+        {
+          "label": "B-D-8",
+          "id": "1q_uZZZu17OQe4nBcCNUbJ",
+          "distanceMetres": 0.5940265646392463
+        },
+        {
+          "label": "B-D-5",
+          "id": "3xBJ3iO9H0SOvzUDGmklS$",
+          "distanceMetres": 1.45997374841625
+        },
+        {
+          "label": "B-D-15",
+          "id": "1q_uZZZu17OQe4nBcCNUb_",
+          "distanceMetres": 1.4358746479105031
+        },
+        {
+          "label": "B-D-10",
+          "id": "3xBJ3iO9H0SOvzUDGmklSz",
+          "distanceMetres": 0.8081587364183215
+        },
+        {
+          "label": "B-D-6",
+          "id": "3xBJ3iO9H0SOvzUDGmklSf",
+          "distanceMetres": 0.9623230327839155
+        },
+        {
+          "label": "B-D-9",
+          "id": "3xBJ3iO9H0SOvzUDGmklSn",
+          "distanceMetres": 0.7358236116982557
+        },
+        {
+          "label": "B-D-7",
+          "id": "3xBJ3iO9H0SOvzUDGmklSm",
+          "distanceMetres": 0.7133494599381726
+        },
+        {
+          "label": "B-D-11",
+          "id": "3xBJ3iO9H0SOvzUDGmklSe",
+          "distanceMetres": 0.8768471037117861
+        },
+        {
+          "label": "B-D-24",
+          "id": "3xBJ3iO9H0SOvzUDGmklSw",
+          "distanceMetres": 0.5564042546238941
+        },
+        {
+          "label": "B-D-4",
+          "id": "1gfO30Qbf8WxGiC88AT$8x",
+          "distanceMetres": 0.6800341159178399
+        },
+        {
+          "label": "B-D-3",
+          "id": "1gfO30Qbf8WxGiC88AT$8Z",
+          "distanceMetres": 0.42364757665198033
+        },
+        {
+          "label": "B-D-2",
+          "id": "1gfO30Qbf8WxGiC88AT$9V",
+          "distanceMetres": 0.46848556548485965
+        },
+        {
+          "label": "B-D-16",
+          "id": "1gfO30Qbf8WxGiC88AT$Aa",
+          "distanceMetres": 0.9342312157988701
+        },
+        {
+          "label": "B-D-1",
+          "id": "3xBJ3iO9H0SOvzUDGmklSv",
+          "distanceMetres": 1.1223311571944363
+        },
+        {
+          "label": "B-D-25",
+          "id": "3xBJ3iO9H0SOvzUDGmklS_",
+          "distanceMetres": 0.5612374493122749
+        },
+        {
+          "label": "B-D-12",
+          "id": "1gfO30Qbf8WxGiC88AT$BA",
+          "distanceMetres": 1.041416474669794
+        },
+        {
+          "label": "B-D-14",
+          "id": "1gfO30Qbf8WxGiC88AT$Ae",
+          "distanceMetres": 0.5439165859267462
+        },
+        {
+          "label": "B-D-13",
+          "id": "1gfO30Qbf8WxGiC88AT$B4",
+          "distanceMetres": 0.9944493608534533
+        }
+      ]
+    },
+    "4": {
+      "matrix": [
+        [
+          23.61979934296041,
+          11.473659175496174,
+          3433.069794426444
+        ],
+        [
+          11.473659175496174,
+          -23.61979934296041,
+          1544.193828544468
+        ]
+      ],
+      "crop": [
+        856.7716462499999,
+        98.85826687499998,
+        3525.9448518749996,
+        1384.01573625
+      ],
+      "rotation": 90,
+      "status": "Registro por símbolos del plano · posición IFC",
+      "symbolControls": 19,
+      "symbolResidualPdfPoints": [
+        0.016538051140180227,
+        0.014955754799204694,
+        0.013653348153682748,
+        0.013492975096573741,
+        0.010731430502036345,
+        0.017866964133674283,
+        0.02395951991910977,
+        0.024490339240078908,
+        0.024832122599727707,
+        0.0106429744991649,
+        0.0501129661957933,
+        0.059676663543529844,
+        0.06081523778606362,
+        0.2738220102423383,
+        0.06685422727676142,
+        0.06540280470704446,
+        0.06349411485675514,
+        0.854186001977505,
+        0.06185496863264859
+      ],
+      "labelCandidates": [
+        {
+          "label": "A-D-14",
+          "id": "3xBJ3iO9H0SOvzUDGmklUD",
+          "distanceMetres": 1.1718053508876707
+        },
+        {
+          "label": "A-F-2",
+          "id": "1fPJGW4Q9CEBwXlOdlqhxB",
+          "distanceMetres": 0.800351850085839
+        },
+        {
+          "label": "A-D-19",
+          "id": "2Z7ljTx2jFnhmsr1MXyUC0",
+          "distanceMetres": 1.233839017961764
+        },
+        {
+          "label": "A-F-3",
+          "id": "2IBK7Vx$DAaQrDyg0bamDK",
+          "distanceMetres": 1.4836441423888365
+        },
+        {
+          "label": "A-D-1",
+          "id": "3fumhxgzD6JgTL8fC_NLB4",
+          "distanceMetres": 1.117572523557234
+        },
+        {
+          "label": "A-D-2",
+          "id": "3xBJ3iO9H0SOvzUDGmklUT",
+          "distanceMetres": 1.2446192261377726
+        },
+        {
+          "label": "A-D-17",
+          "id": "2Z7ljTx2jFnhmsr1MXyUCQ",
+          "distanceMetres": 0.7152883577731736
+        },
+        {
+          "label": "A-D-3",
+          "id": "3xBJ3iO9H0SOvzUDGmklUI",
+          "distanceMetres": 1.323604899781351
+        },
+        {
+          "label": "A-D-4",
+          "id": "3fumhxgzD6JgTL8fC_NLCU",
+          "distanceMetres": 0.5563959291323217
+        },
+        {
+          "label": "A-D-9",
+          "id": "1fPJGW4Q9CEBwXlOdlqh$x",
+          "distanceMetres": 0.9150512383070022
+        },
+        {
+          "label": "A-D-21",
+          "id": "2Z7ljTx2jFnhmsr1MXyUFi",
+          "distanceMetres": 0.7907292119853355
+        },
+        {
+          "label": "A-D-26",
+          "id": "3xBJ3iO9H0SOvzUDGmklU1",
+          "distanceMetres": 1.3262661413184909
+        },
+        {
+          "label": "A-D-10",
+          "id": "3xBJ3iO9H0SOvzUDGmklUM",
+          "distanceMetres": 1.2251667481142856
+        },
+        {
+          "label": "A-D-5",
+          "id": "3fumhxgzD6JgTL8fC_NLC8",
+          "distanceMetres": 0.4918219850342598
+        },
+        {
+          "label": "A-P-1",
+          "id": "1fPJGW4Q9CEBwXlOdlqhu7",
+          "distanceMetres": 0.9162452936247174
+        },
+        {
+          "label": "A-D-25",
+          "id": "2Z7ljTx2jFnhmsr1MXyUEY",
+          "distanceMetres": 1.3951508082162187
+        },
+        {
+          "label": "A-D-24",
+          "id": "2Z7ljTx2jFnhmsr1MXyUEe",
+          "distanceMetres": 1.603224200167991
+        },
+        {
+          "label": "A-D-6",
+          "id": "3xBJ3iO9H0SOvzUDGmklUS",
+          "distanceMetres": 1.289095042548881
+        },
+        {
+          "label": "A-D-22",
+          "id": "2Z7ljTx2jFnhmsr1MXyUFG",
+          "distanceMetres": 0.7893916494255384
+        },
+        {
+          "label": "A-D-23",
+          "id": "2Z7ljTx2jFnhmsr1MXyUE_",
+          "distanceMetres": 0.8889736199355234
+        },
+        {
+          "label": "A-D-11",
+          "id": "1fPJGW4Q9CEBwXlOdlqhyl",
+          "distanceMetres": 1.3253218327532292
+        },
+        {
+          "label": "A-D-7",
+          "id": "3xBJ3iO9H0SOvzUDGmklUH",
+          "distanceMetres": 0.293214599866135
+        },
+        {
+          "label": "A-F-1",
+          "id": "2rgqQw6bf46PhmmfeKLy5e",
+          "distanceMetres": 1.540548032998529
+        }
+      ]
+    },
+    "6": {
+      "matrix": [
+        [
+          23.423175356037046,
+          11.377045099371957,
+          2467.909814626748
+        ],
+        [
+          11.377045099371957,
+          -23.423175356037046,
+          -1075.6427820167437
+        ]
+      ],
+      "crop": [
+        82.3818890625,
+        214.19291156249997,
+        4745.1968099999995,
+        1301.6338471875
+      ],
+      "rotation": 90,
+      "status": "Registro por símbolos del plano · posición IFC",
+      "symbolControls": 18,
+      "symbolResidualPdfPoints": [
+        0.37610307857878233,
+        0.40588814993052946,
+        0.24304822691023095,
+        2.3670138864484795,
+        0.362231931379848,
+        0.39631301837909766,
+        0.4005237510315268,
+        1.1254694987007192,
+        0.4003741652786032,
+        0.4010446141336247,
+        0.40306468617248786,
+        0.3500908943331257,
+        0.23031163523120163,
+        0.242107641235976,
+        0.22699296727962714,
+        0.16354624521584274,
+        0.1668817777500282,
+        0.6439729180998454
+      ],
+      "labelCandidates": [
+        {
+          "label": "A-D-27",
+          "id": "1EivlSeH58MB728jyYRi4_",
+          "distanceMetres": 0.7327486106108361
+        },
+        {
+          "label": "A-F-4",
+          "id": "3xBJ3iO9H0SOvzUDGmklU5",
+          "distanceMetres": 0.8671043732684679
+        },
+        {
+          "label": "A-D-20",
+          "id": "1EivlSeH58MB728jyYRi4m",
+          "distanceMetres": 0.7625160589920045
+        },
+        {
+          "label": "A-D-45",
+          "id": "1EivlSeH58MB728jyYRi4g",
+          "distanceMetres": 1.072763274394243
+        },
+        {
+          "label": "A-D-15",
+          "id": "1EivlSeH58MB728jyYRi5E",
+          "distanceMetres": 1.2371221591499653
+        },
+        {
+          "label": "A-D-13",
+          "id": "1EivlSeH58MB728jyYRi4F",
+          "distanceMetres": 0.8106546904562929
+        },
+        {
+          "label": "A-D-28",
+          "id": "0Ojt3bg5X8NOyjdpvdpueQ",
+          "distanceMetres": 0.7645192145185312
+        },
+        {
+          "label": "A-D-8",
+          "id": "3xBJ3iO9H0SOvzUDGmklUv",
+          "distanceMetres": 0.8688040615540402
+        },
+        {
+          "label": "A-D-16",
+          "id": "1EivlSeH58MB728jyYRi56",
+          "distanceMetres": 0.42159980217724796
+        },
+        {
+          "label": "A-D-29",
+          "id": "0Ojt3bg5X8NOyjdpvdpuli",
+          "distanceMetres": 1.015115365444687
+        },
+        {
+          "label": "A-D-18",
+          "id": "1EivlSeH58MB728jyYRi5M",
+          "distanceMetres": 0.47709337877960006
+        },
+        {
+          "label": "A-D-12",
+          "id": "3xBJ3iO9H0SOvzUDGmklUu",
+          "distanceMetres": 1.0144904530640644
+        },
+        {
+          "label": "A-D-30",
+          "id": "0Ojt3bg5X8NOyjdpvdpufX",
+          "distanceMetres": 1.010678543745179
+        },
+        {
+          "label": "A-P-2",
+          "id": "0Ojt3bg5X8NOyjdpvdpulX",
+          "distanceMetres": 0.5707055683594436
+        },
+        {
+          "label": "A-D-32",
+          "id": "0Ojt3bg5X8NOyjdpvdpufp",
+          "distanceMetres": 0.9534248788319895
+        },
+        {
+          "label": "A-D-31",
+          "id": "0Ojt3bg5X8NOyjdpvdpufv",
+          "distanceMetres": 0.5701296582043284
+        },
+        {
+          "label": "A-D-33",
+          "id": "0Ojt3bg5X8NOyjdpvdpuf5",
+          "distanceMetres": 0.973232303840405
+        },
+        {
+          "label": "A-D-34",
+          "id": "3xBJ3iO9H0SOvzUDGmklU4",
+          "distanceMetres": 1.358680923763614
+        },
+        {
+          "label": "A-D-36",
+          "id": "0Ojt3bg5X8NOyjdpvdpugn",
+          "distanceMetres": 0.7256070098564282
+        },
+        {
+          "label": "A-D-37",
+          "id": "3xBJ3iO9H0SOvzUDGmklU0",
+          "distanceMetres": 1.0867053682908914
+        },
+        {
+          "label": "A-D-38",
+          "id": "3xBJ3iO9H0SOvzUDGmklUo",
+          "distanceMetres": 0.8820429969921375
+        }
+      ]
+    },
+    "8": {
+      "matrix": [
+        [
+          23.661266904512257,
+          11.49786603958848,
+          3369.4676631235893
+        ],
+        [
+          11.49786603958848,
+          -23.661266904512257,
+          1517.1418563705136
+        ]
+      ],
+      "crop": [
+        774.3897571875,
+        98.85826687499998,
+        3558.8976074999996,
+        1384.01573625
+      ],
+      "rotation": 90,
+      "status": "Registro por símbolos del plano · posición IFC",
+      "symbolControls": 14,
+      "symbolResidualPdfPoints": [
+        2.383117700241372,
+        1.7441136337567593,
+        1.452462691117704,
+        1.386168896800228,
+        1.6618410912346138,
+        2.0078596895434915,
+        1.0053797631316732,
+        2.578939881264758,
+        2.5075790387599666,
+        2.3283471059169405,
+        0.1837994463701045,
+        0.7181083581784191,
+        1.4467779773808882,
+        2.088437997254505
+      ],
+      "labelCandidates": [
+        {
+          "label": "I-D-35",
+          "id": "3NhqQMlfH9Cg8MK2yDJRmd",
+          "distanceMetres": 1.4338859579986991
+        },
+        {
+          "label": "I-D-34",
+          "id": "3NhqQMlfH9Cg8MK2yDJRpb",
+          "distanceMetres": 1.3688515918344344
+        },
+        {
+          "label": "I-D-37",
+          "id": "3NhqQMlfH9Cg8MK2yDJRmR",
+          "distanceMetres": 0.8059112744656605
+        },
+        {
+          "label": "I-D-36",
+          "id": "3NhqQMlfH9Cg8MK2yDJRpj",
+          "distanceMetres": 1.2337409949414946
+        },
+        {
+          "label": "I-D-38",
+          "id": "3NhqQMlfH9Cg8MK2yDJRm3",
+          "distanceMetres": 1.0419828175922423
+        },
+        {
+          "label": "I-D-31",
+          "id": "3NhqQMlfH9Cg8MK2yDJRpz",
+          "distanceMetres": 1.116705196565688
+        },
+        {
+          "label": "I-D-41",
+          "id": "3NhqQMlfH9Cg8MK2yDJRm$",
+          "distanceMetres": 1.0393283511656244
+        },
+        {
+          "label": "I-D-30",
+          "id": "3NhqQMlfH9Cg8MK2yDJRpr",
+          "distanceMetres": 0.8492923552031397
+        },
+        {
+          "label": "I-D-10",
+          "id": "3NhqQMlfH9Cg8MK2yDJRrD",
+          "distanceMetres": 1.1441649867058734
+        },
+        {
+          "label": "I-D-32",
+          "id": "3NhqQMlfH9Cg8MK2yDJRp5",
+          "distanceMetres": 1.1654073714483473
+        },
+        {
+          "label": "I-F-3",
+          "id": "3xBJ3iO9H0SOvzUDGmklOf",
+          "distanceMetres": 1.2339695502185937
+        },
+        {
+          "label": "I-D-11",
+          "id": "3NhqQMlfH9Cg8MK2yDJRr5",
+          "distanceMetres": 0.7242539833048935
+        },
+        {
+          "label": "I-D-4",
+          "id": "3NhqQMlfH9Cg8MK2yDJRqT",
+          "distanceMetres": 0.607076370148646
+        },
+        {
+          "label": "I-D-33",
+          "id": "3NhqQMlfH9Cg8MK2yDJRpT",
+          "distanceMetres": 0.897254475779177
+        },
+        {
+          "label": "I-D-12",
+          "id": "3NhqQMlfH9Cg8MK2yDJRrT",
+          "distanceMetres": 0.6185581093500816
+        },
+        {
+          "label": "I-D-16",
+          "id": "3NhqQMlfH9Cg8MK2yDJRrr",
+          "distanceMetres": 0.9358587866545389
+        },
+        {
+          "label": "I-D-17",
+          "id": "3NhqQMlfH9Cg8MK2yDJRrz",
+          "distanceMetres": 1.043862851303905
+        },
+        {
+          "label": "I-D-13",
+          "id": "3NhqQMlfH9Cg8MK2yDJRrL",
+          "distanceMetres": 0.8654958423846011
+        },
+        {
+          "label": "I-D-43",
+          "id": "3NhqQMlfH9Cg8MK2yDJRnV",
+          "distanceMetres": 1.2189793942393303
+        },
+        {
+          "label": "I-D-20",
+          "id": "3NhqQMlfH9Cg8MK2yDJR_Q",
+          "distanceMetres": 0.6695427150734939
+        },
+        {
+          "label": "I-D-14",
+          "id": "3NhqQMlfH9Cg8MK2yDJRqj",
+          "distanceMetres": 0.9496236966744531
+        },
+        {
+          "label": "I-F-4",
+          "id": "3xBJ3iO9H0SOvzUDGmklOe",
+          "distanceMetres": 1.3298121413616273
+        },
+        {
+          "label": "I-D-18",
+          "id": "3NhqQMlfH9Cg8MK2yDJRrj",
+          "distanceMetres": 1.153011344174879
+        },
+        {
+          "label": "I-D-19",
+          "id": "3NhqQMlfH9Cg8MK2yDJRrb",
+          "distanceMetres": 1.1693684145164773
+        },
+        {
+          "label": "I-D-3",
+          "id": "3NhqQMlfH9Cg8MK2yDJRqz",
+          "distanceMetres": 0.6545454958468716
+        },
+        {
+          "label": "I-D-42",
+          "id": "3NhqQMlfH9Cg8MK2yDJRml",
+          "distanceMetres": 1.5803255739508781
+        },
+        {
+          "label": "I-D-26",
+          "id": "3NhqQMlfH9Cg8MK2yDJRoz",
+          "distanceMetres": 0.9821818586213035
+        },
+        {
+          "label": "I-D-7",
+          "id": "3NhqQMlfH9Cg8MK2yDJRqr",
+          "distanceMetres": 0.9195036031332285
+        },
+        {
+          "label": "I-D-9",
+          "id": "3NhqQMlfH9Cg8MK2yDJRqD",
+          "distanceMetres": 1.6468991287160069
+        },
+        {
+          "label": "I-D-15",
+          "id": "3NhqQMlfH9Cg8MK2yDJRqb",
+          "distanceMetres": 1.0245383776878396
+        },
+        {
+          "label": "I-D-5",
+          "id": "3NhqQMlfH9Cg8MK2yDJRqN",
+          "distanceMetres": 1.2040712812385972
+        },
+        {
+          "label": "I-D-21",
+          "id": "3NhqQMlfH9Cg8MK2yDJRoL",
+          "distanceMetres": 1.0296987638741901
+        },
+        {
+          "label": "I-F-1",
+          "id": "3xBJ3iO9H0SOvzUDGmklOh",
+          "distanceMetres": 1.310954319671396
+        },
+        {
+          "label": "I-D-45",
+          "id": "3NhqQMlfH9Cg8MK2yDJRn7",
+          "distanceMetres": 1.246277918939096
+        },
+        {
+          "label": "I-D-22",
+          "id": "3NhqQMlfH9Cg8MK2yDJRoT",
+          "distanceMetres": 0.8931062810630204
+        },
+        {
+          "label": "I-D-2",
+          "id": "3NhqQMlfH9Cg8MK2yDJRtd",
+          "distanceMetres": 0.8087387293910046
+        },
+        {
+          "label": "I-D-28",
+          "id": "3NhqQMlfH9Cg8MK2yDJRoj",
+          "distanceMetres": 0.9743610838351335
+        },
+        {
+          "label": "I-D-1",
+          "id": "3xBJ3iO9H0SOvzUDGmklOp",
+          "distanceMetres": 1.2237526418272044
+        },
+        {
+          "label": "I-D-46",
+          "id": "3NhqQMlfH9Cg8MK2yDJRnF",
+          "distanceMetres": 0.8215156982795998
+        },
+        {
+          "label": "I-D-47",
+          "id": "3NhqQMlfH9Cg8MK2yDJRnt",
+          "distanceMetres": 0.8362750784153159
+        },
+        {
+          "label": "I-D-24",
+          "id": "3NhqQMlfH9Cg8MK2yDJRoD",
+          "distanceMetres": 0.8503338055684447
+        },
+        {
+          "label": "I-D-23",
+          "id": "3NhqQMlfH9Cg8MK2yDJRo5",
+          "distanceMetres": 1.0213522538404185
+        },
+        {
+          "label": "I-D-6",
+          "id": "3NhqQMlfH9Cg8MK2yDJRtl",
+          "distanceMetres": 0.8536462624506262
+        },
+        {
+          "label": "I-F-2",
+          "id": "3xBJ3iO9H0SOvzUDGmklOg",
+          "distanceMetres": 1.2146372662868894
+        },
+        {
+          "label": "I-D-44",
+          "id": "3NhqQMlfH9Cg8MK2yDJRnN",
+          "distanceMetres": 1.225205936529592
+        },
+        {
+          "label": "I-D-29",
+          "id": "3NhqQMlfH9Cg8MK2yDJRpL",
+          "distanceMetres": 1.2559280832497584
+        },
+        {
+          "label": "I-D-25",
+          "id": "3NhqQMlfH9Cg8MK2yDJRor",
+          "distanceMetres": 1.2579825025844713
+        }
+      ]
+    },
+    "10": {
+      "matrix": [
+        [
+          23.53035170255662,
+          11.47532597360397,
+          3281.6734582712784
+        ],
+        [
+          11.47532597360397,
+          -23.53035170255662,
+          179.58027518056772
+        ]
+      ],
+      "crop": [
+        659.0551125,
+        82.3818890625,
+        4168.523586562499,
+        1482.874003125
+      ],
+      "rotation": 90,
+      "status": "Registro por símbolos del plano · posición IFC",
+      "symbolControls": 0,
+      "symbolResidualPdfPoints": [],
+      "labelCandidates": [
+        {
+          "label": "I-D-48",
+          "id": "3xBJ3iO9H0SOvzUDGmklRO",
+          "distanceMetres": 0.5123627923780636
+        },
+        {
+          "label": "I-D-49",
+          "id": "3lq5Vvd7r7tfpebIJxppKr",
+          "distanceMetres": 0.7268337839436765
+        }
+      ]
+    },
+    "12": {
+      "matrix": [
+        [
+          23.589229654292406,
+          11.455537263969882,
+          2415.7825183561226
+        ],
+        [
+          11.455537263969882,
+          -23.589229654292406,
+          -1131.6374393294523
+        ]
+      ],
+      "crop": [
+        82.3818890625,
+        82.3818890625,
+        4761.6731878125,
+        1416.968491875
+      ],
+      "rotation": 90,
+      "status": "Registro por símbolos del plano · posición IFC",
+      "symbolControls": 21,
+      "symbolResidualPdfPoints": [
+        2.15188298579303,
+        2.334793536643958,
+        1.4432177679298845,
+        1.5196576135147934,
+        1.5461257225489857,
+        1.0593496653298367,
+        1.5332312966540995,
+        1.1191021676997677,
+        1.579567312827181,
+        1.116167666547345,
+        0.6841473344397465,
+        2.7813402589822305,
+        1.456268854658411,
+        2.42097392445374,
+        1.9279489070104876,
+        0.45903469017793896,
+        2.891042648670204,
+        1.7989392969608349,
+        2.255379053236425,
+        1.9375832848409864,
+        2.6288501786330247
+      ],
+      "labelCandidates": [
+        {
+          "label": "I-D-73",
+          "id": "3Cs1RJDgfErhpH3b0csP70",
+          "distanceMetres": 0.6194744053226161
+        },
+        {
+          "label": "I-D-75",
+          "id": "3Cs1RJDgfErhpH3b0csP6c",
+          "distanceMetres": 0.8317539042150767
+        },
+        {
+          "label": "I-D-65",
+          "id": "3Cs1RJDgfErhpH3b0csP1k",
+          "distanceMetres": 1.354025357290819
+        },
+        {
+          "label": "I-D-64",
+          "id": "3Cs1RJDgfErhpH3b0csP6M",
+          "distanceMetres": 1.0954057183252517
+        },
+        {
+          "label": "I-D-68",
+          "id": "3Cs1RJDgfErhpH3b0csP6s",
+          "distanceMetres": 0.6401558415506665
+        },
+        {
+          "label": "I-D-74",
+          "id": "3Cs1RJDgfErhpH3b0csP7K",
+          "distanceMetres": 1.3508822520877561
+        },
+        {
+          "label": "I-F-5",
+          "id": "3xBJ3iO9H0SOvzUDGmklR8",
+          "distanceMetres": 0.9765361536157625
+        },
+        {
+          "label": "I-D-63",
+          "id": "3Cs1RJDgfErhpH3b0csP1c",
+          "distanceMetres": 1.593273069563493
+        },
+        {
+          "label": "I-D-66",
+          "id": "3Cs1RJDgfErhpH3b0csP67",
+          "distanceMetres": 0.545254507769377
+        },
+        {
+          "label": "I-F-10",
+          "id": "3Cs1RJDgfErhpH3b0csP3Y",
+          "distanceMetres": 0.8968031957385966
+        },
+        {
+          "label": "I-F-9",
+          "id": "3Cs1RJDgfErhpH3b0csP0H",
+          "distanceMetres": 0.7041480408275604
+        },
+        {
+          "label": "I-D-76",
+          "id": "3Cs1RJDgfErhpH3b0csP0Y",
+          "distanceMetres": 0.8140351110403097
+        },
+        {
+          "label": "I-D-50",
+          "id": "3xBJ3iO9H0SOvzUDGmklRC",
+          "distanceMetres": 1.0898027754899313
+        },
+        {
+          "label": "I-D-67",
+          "id": "3Cs1RJDgfErhpH3b0csP1D",
+          "distanceMetres": 0.5966233870035332
+        },
+        {
+          "label": "I-D-57",
+          "id": "3lq5Vvd7r7tfpebIJxpp17",
+          "distanceMetres": 1.3288388264246813
+        },
+        {
+          "label": "I-D-72",
+          "id": "3Cs1RJDgfErhpH3b0csP7c",
+          "distanceMetres": 1.0102589301054732
+        },
+        {
+          "label": "I-D-51",
+          "id": "3lq5Vvd7r7tfpebIJxppVn",
+          "distanceMetres": 0.7066857187842178
+        },
+        {
+          "label": "I-D-58",
+          "id": "3lq5Vvd7r7tfpebIJxppV3",
+          "distanceMetres": 0.8614599646903766
+        },
+        {
+          "label": "I-D-59",
+          "id": "3lq5Vvd7r7tfpebIJxppVP",
+          "distanceMetres": 0.9377432692029546
+        },
+        {
+          "label": "I-F-6",
+          "id": "3xBJ3iO9H0SOvzUDGmklRF",
+          "distanceMetres": 0.897510954267151
+        },
+        {
+          "label": "I-D-60",
+          "id": "3lq5Vvd7r7tfpebIJxppUd",
+          "distanceMetres": 0.6397596183585746
+        },
+        {
+          "label": "I-F-8",
+          "id": "3xBJ3iO9H0SOvzUDGmklRD",
+          "distanceMetres": 0.6783388286093073
+        },
+        {
+          "label": "I-D-52",
+          "id": "3xBJ3iO9H0SOvzUDGmklR9",
+          "distanceMetres": 1.1320370814564245
+        },
+        {
+          "label": "I-F-7",
+          "id": "3xBJ3iO9H0SOvzUDGmklRE",
+          "distanceMetres": 0.9920563881488634
+        },
+        {
+          "label": "I-D-61",
+          "id": "3lq5Vvd7r7tfpebIJxppUl",
+          "distanceMetres": 1.0547106758526856
+        },
+        {
+          "label": "I-D-53",
+          "id": "3lq5Vvd7r7tfpebIJxpp1r",
+          "distanceMetres": 0.53053819594743
+        },
+        {
+          "label": "I-D-54",
+          "id": "3xBJ3iO9H0SOvzUDGmklRL",
+          "distanceMetres": 0.49052467512078324
+        },
+        {
+          "label": "I-D-62",
+          "id": "3lq5Vvd7r7tfpebIJxppU5",
+          "distanceMetres": 0.9344926515189084
+        },
+        {
+          "label": "I-D-55",
+          "id": "3lq5Vvd7r7tfpebIJxpp1e",
+          "distanceMetres": 0.4935607709738388
+        },
+        {
+          "label": "I-D-56",
+          "id": "3lq5Vvd7r7tfpebIJxppUO",
+          "distanceMetres": 1.1570303166310012
+        }
+      ]
+    },
+    "14": {
+      "matrix": [
+        [
+          23.7173982796707,
+          11.609093063469272,
+          3305.4967611380875
+        ],
+        [
+          11.609093063469272,
+          -23.7173982796707,
+          1561.5990399111954
+        ]
+      ],
+      "crop": [
+        659.0551125,
+        98.85826687499998,
+        3674.2322521874994,
+        1384.01573625
+      ],
+      "rotation": 90,
+      "status": "Registro por símbolos del plano · posición IFC",
+      "symbolControls": 9,
+      "symbolResidualPdfPoints": [
+        0.3430796063392719,
+        0.31691531365732223,
+        1.25576152354221,
+        0.9264884153314766,
+        1.6798181393467224,
+        1.0957920557887821,
+        1.891634581702071,
+        2.091943733374904,
+        2.0603851984688797
+      ],
+      "labelCandidates": [
+        {
+          "label": "P-D-23",
+          "id": "2EZfpxnRL6RvLJzkXFmgLf",
+          "distanceMetres": 1.0799889248231682
+        },
+        {
+          "label": "P-D-22",
+          "id": "2EZfpxnRL6RvLJzkXFmgLH",
+          "distanceMetres": 0.8188396059387797
+        },
+        {
+          "label": "P-D-21",
+          "id": "2EZfpxnRL6RvLJzkXFmgGQ",
+          "distanceMetres": 1.2409063527218156
+        },
+        {
+          "label": "P-D-3",
+          "id": "2EZfpxnRL6RvLJzkXFmgHI",
+          "distanceMetres": 1.0140049019942536
+        },
+        {
+          "label": "P-D-19",
+          "id": "2EZfpxnRL6RvLJzkXFmgLP",
+          "distanceMetres": 0.644974986253932
+        },
+        {
+          "label": "P-D-11",
+          "id": "2EZfpxnRL6RvLJzkXFmgGG",
+          "distanceMetres": 1.2451028607489103
+        },
+        {
+          "label": "P-D-16",
+          "id": "2EZfpxnRL6RvLJzkXFmgGC",
+          "distanceMetres": 0.9437772790958475
+        },
+        {
+          "label": "P-D-28",
+          "id": "2EZfpxnRL6RvLJzkXFmgLp",
+          "distanceMetres": 1.0358741395446887
+        },
+        {
+          "label": "P-D-6",
+          "id": "2EZfpxnRL6RvLJzkXFmgGW",
+          "distanceMetres": 1.2628055427558216
+        },
+        {
+          "label": "P-D-27",
+          "id": "2EZfpxnRL6RvLJzkXFmgL$",
+          "distanceMetres": 0.8304181564840332
+        },
+        {
+          "label": "P-D-29",
+          "id": "3xBJ3iO9H0SOvzUDGmklNN",
+          "distanceMetres": 0.9215717846107693
+        },
+        {
+          "label": "P-D-4",
+          "id": "2EZfpxnRL6RvLJzkXFmgHC",
+          "distanceMetres": 1.0181627001803446
+        },
+        {
+          "label": "P-D-5",
+          "id": "2EZfpxnRL6RvLJzkXFmgGs",
+          "distanceMetres": 1.1247628160233927
+        },
+        {
+          "label": "P-D-24",
+          "id": "2EZfpxnRL6RvLJzkXFmgL1",
+          "distanceMetres": 1.1073455289588574
+        },
+        {
+          "label": "P-D-12",
+          "id": "2EZfpxnRL6RvLJzkXFmgU0",
+          "distanceMetres": 1.051744599191786
+        },
+        {
+          "label": "P-D-13",
+          "id": "2EZfpxnRL6RvLJzkXFmgG2",
+          "distanceMetres": 1.0391247421074166
+        },
+        {
+          "label": "P-D-25",
+          "id": "2EZfpxnRL6RvLJzkXFmgL9",
+          "distanceMetres": 1.2314386277529907
+        },
+        {
+          "label": "P-D-7",
+          "id": "2EZfpxnRL6RvLJzkXFmgGe",
+          "distanceMetres": 1.1999138150643462
+        },
+        {
+          "label": "P-D-1",
+          "id": "2EZfpxnRL6RvLJzkXFmgH2",
+          "distanceMetres": 0.9201299499758209
+        },
+        {
+          "label": "P-D-30",
+          "id": "2EZfpxnRL6RvLJzkXFmgI1",
+          "distanceMetres": 0.8901261306020191
+        },
+        {
+          "label": "P-D-31",
+          "id": "2EZfpxnRL6RvLJzkXFmgIB",
+          "distanceMetres": 0.8797956949850819
+        },
+        {
+          "label": "P-D-17",
+          "id": "2EZfpxnRL6RvLJzkXFmgJa",
+          "distanceMetres": 0.9683015654940276
+        },
+        {
+          "label": "P-D-8",
+          "id": "2EZfpxnRL6RvLJzkXFmgHg",
+          "distanceMetres": 1.1700448923090427
+        },
+        {
+          "label": "P-D-26",
+          "id": "3xBJ3iO9H0SOvzUDGmklNp",
+          "distanceMetres": 1.1816933369789542
+        },
+        {
+          "label": "P-D-32",
+          "id": "2EZfpxnRL6RvLJzkXFmgIP",
+          "distanceMetres": 0.8328453232626934
+        },
+        {
+          "label": "P-D-18",
+          "id": "2EZfpxnRL6RvLJzkXFmgUO",
+          "distanceMetres": 0.7598172429867521
+        },
+        {
+          "label": "P-D-9",
+          "id": "2EZfpxnRL6RvLJzkXFmgHY",
+          "distanceMetres": 1.2352096394449381
+        },
+        {
+          "label": "P-D-33",
+          "id": "2EZfpxnRL6RvLJzkXFmgIH",
+          "distanceMetres": 0.8874714465636533
+        },
+        {
+          "label": "P-D-2",
+          "id": "2EZfpxnRL6RvLJzkXFmgHQ",
+          "distanceMetres": 1.0716718092358655
+        },
+        {
+          "label": "P-D-10",
+          "id": "2EZfpxnRL6RvLJzkXFmgHw",
+          "distanceMetres": 1.1424890312786318
+        },
+        {
+          "label": "P-D-14",
+          "id": "2EZfpxnRL6RvLJzkXFmgHm",
+          "distanceMetres": 0.8430437894862478
+        },
+        {
+          "label": "P-D-15",
+          "id": "2EZfpxnRL6RvLJzkXFmgU8",
+          "distanceMetres": 0.7373298113091598
+        },
+        {
+          "label": "P-D-20",
+          "id": "2EZfpxnRL6RvLJzkXFmgJq",
+          "distanceMetres": 0.7828221632241557
+        }
+      ]
+    },
+    "16": {
+      "matrix": [
+        [
+          23.53035170255662,
+          11.47532597360397,
+          2978.5081065212785
+        ],
+        [
+          11.47532597360397,
+          -23.53035170255662,
+          205.94247968056771
+        ]
+      ],
+      "crop": [
+        461.33857874999995,
+        98.85826687499998,
+        4316.810986875,
+        1482.874003125
+      ],
+      "rotation": 90,
+      "status": "Registro por símbolos del plano · posición IFC",
+      "symbolControls": 9,
+      "symbolResidualPdfPoints": [
+        1.4306109258873385,
+        1.5279373291900122,
+        0.32183036499525375,
+        0.9461215266908377,
+        1.5651476450860073,
+        0.24242870438164013,
+        1.3725128422504131,
+        0.9060327793895264,
+        1.2311171272456973
+      ],
+      "labelCandidates": [
+        {
+          "label": "P-D-34",
+          "id": "3xBJ3iO9H0SOvzUDGmklKu",
+          "distanceMetres": 0.6389432880383489
+        },
+        {
+          "label": "P-D-36",
+          "id": "3xBJ3iO9H0SOvzUDGmklK$",
+          "distanceMetres": 0.5111458872908975
+        },
+        {
+          "label": "P-D-38",
+          "id": "3xBJ3iO9H0SOvzUDGmklKo",
+          "distanceMetres": 0.597312054781125
+        },
+        {
+          "label": "P-D-39",
+          "id": "3xBJ3iO9H0SOvzUDGmklKp",
+          "distanceMetres": 0.5573997244720966
+        },
+        {
+          "label": "P-D-40",
+          "id": "0P7JN8zgP1hwZCRZRuS9J0",
+          "distanceMetres": 0.7392812960975335
+        },
+        {
+          "label": "P-D-42",
+          "id": "0P7JN8zgP1hwZCRZRuS9IW",
+          "distanceMetres": 0.6996488477985909
+        },
+        {
+          "label": "P-D-43",
+          "id": "3xBJ3iO9H0SOvzUDGmklKy",
+          "distanceMetres": 0.9219815643557411
+        },
+        {
+          "label": "P-D-35",
+          "id": "3xBJ3iO9H0SOvzUDGmklKf",
+          "distanceMetres": 1.096221945526259
+        },
+        {
+          "label": "P-D-41",
+          "id": "0P7JN8zgP1hwZCRZRuS9IP",
+          "distanceMetres": 1.4464523483845926
+        },
+        {
+          "label": "P-D-37",
+          "id": "3xBJ3iO9H0SOvzUDGmklK_",
+          "distanceMetres": 0.998834829552209
+        },
+        {
+          "label": "P-D-45",
+          "id": "3xBJ3iO9H0SOvzUDGmklKb",
+          "distanceMetres": 0.7940584270034694
+        },
+        {
+          "label": "P-D-50",
+          "id": "0P7JN8zgP1hwZCRZRuS9JO",
+          "distanceMetres": 0.6336025329494245
+        },
+        {
+          "label": "P-D-44",
+          "id": "3xBJ3iO9H0SOvzUDGmklKk",
+          "distanceMetres": 0.396109408142745
+        },
+        {
+          "label": "P-D-46",
+          "id": "3xBJ3iO9H0SOvzUDGmklKX",
+          "distanceMetres": 0.6987040724506964
+        },
+        {
+          "label": "P-D-47",
+          "id": "3xBJ3iO9H0SOvzUDGmklKc",
+          "distanceMetres": 0.8171328775153447
+        },
+        {
+          "label": "P-D-48",
+          "id": "3xBJ3iO9H0SOvzUDGmklKd",
+          "distanceMetres": 0.8632316860886469
+        },
+        {
+          "label": "P-D-49",
+          "id": "0P7JN8zgP1hwZCRZRuS9Jn",
+          "distanceMetres": 0.5075530822494738
+        },
+        {
+          "label": "P-D-51",
+          "id": "0P7JN8zgP1hwZCRZRuS9Im",
+          "distanceMetres": 0.43587702398206435
+        },
+        {
+          "label": "P-D-52",
+          "id": "3xBJ3iO9H0SOvzUDGmklKi",
+          "distanceMetres": 0.4914945649775496
+        }
+      ]
+    },
+    "18": {
+      "matrix": [
+        [
+          23.52107175265985,
+          11.50644704575774,
+          2411.2616765874714
+        ],
+        [
+          11.50644704575774,
+          -23.52107175265985,
+          -1083.4337491748436
+        ]
+      ],
+      "crop": [
+        65.90551125,
+        98.85826687499998,
+        4745.1968099999995,
+        1416.968491875
+      ],
+      "rotation": 90,
+      "status": "Registro por símbolos del plano · posición IFC",
+      "symbolControls": 16,
+      "symbolResidualPdfPoints": [
+        1.2005831351660055,
+        1.7034547050897946,
+        1.6281721552654207,
+        1.4873030960174336,
+        1.7152292726219531,
+        2.9380677508824222,
+        2.4288980342414996,
+        0.9895112729604383,
+        2.587116845019408,
+        1.495751012355684,
+        2.256191284339988,
+        1.0496212709827044,
+        1.7976692211385303,
+        1.2466580588382576,
+        1.0691230549794895,
+        1.198611750841978
+      ],
+      "labelCandidates": [
+        {
+          "label": "P-D-67",
+          "id": "3O7kIWp_TDWOv$9XtQUCF_",
+          "distanceMetres": 0.9478386914441569
+        },
+        {
+          "label": "P-D-70",
+          "id": "2ExENYraj3eRTA_50um4Ks",
+          "distanceMetres": 0.8104004886277338
+        },
+        {
+          "label": "P-D-75",
+          "id": "2ExENYraj3eRTA_50um4Kb",
+          "distanceMetres": 0.9155505867362999
+        },
+        {
+          "label": "P-D-53",
+          "id": "3xBJ3iO9H0SOvzUDGmklNx",
+          "distanceMetres": 1.3278119005984326
+        },
+        {
+          "label": "P-D-68",
+          "id": "3O7kIWp_TDWOv$9XtQUCEU",
+          "distanceMetres": 0.7615599890146233
+        },
+        {
+          "label": "P-D-71",
+          "id": "2ExENYraj3eRTA_50um4RB",
+          "distanceMetres": 0.9626093098764715
+        },
+        {
+          "label": "P-D-54",
+          "id": "3Xds1SIGP1GP6HWWZ_M82v",
+          "distanceMetres": 1.0604269692528574
+        },
+        {
+          "label": "P-D-76",
+          "id": "2ExENYraj3eRTA_50um4Rd",
+          "distanceMetres": 0.4091386113652821
+        },
+        {
+          "label": "P-D-69",
+          "id": "3O7kIWp_TDWOv$9XtQUCEG",
+          "distanceMetres": 1.1350541119404784
+        },
+        {
+          "label": "P-D-73",
+          "id": "2ExENYraj3eRTA_50um4R1",
+          "distanceMetres": 0.6090381716966475
+        },
+        {
+          "label": "P-D-60",
+          "id": "3O7kIWp_TDWOv$9XtQUCDL",
+          "distanceMetres": 0.8828399373097621
+        },
+        {
+          "label": "P-D-55",
+          "id": "3O7kIWp_TDWOv$9XtQUCD5",
+          "distanceMetres": 0.5161510262263955
+        },
+        {
+          "label": "P-D-74",
+          "id": "2ExENYraj3eRTA_50um4Rv",
+          "distanceMetres": 0.5693505888499413
+        },
+        {
+          "label": "P-D-61",
+          "id": "3O7kIWp_TDWOv$9XtQUCDt",
+          "distanceMetres": 0.6880783149460501
+        },
+        {
+          "label": "P-D-62",
+          "id": "3O7kIWp_TDWOv$9XtQUCDl",
+          "distanceMetres": 0.8135311416695253
+        },
+        {
+          "label": "P-D-59",
+          "id": "3O7kIWp_TDWOv$9XtQUCBU",
+          "distanceMetres": 1.3939781678504157
+        },
+        {
+          "label": "P-D-56",
+          "id": "3O7kIWp_TDWOv$9XtQUCB8",
+          "distanceMetres": 1.066503122833178
+        },
+        {
+          "label": "P-F-10",
+          "id": "2ExENYraj3eRTA_50um4Pb",
+          "distanceMetres": 0.8385374287954577
+        },
+        {
+          "label": "P-F-9",
+          "id": "2ExENYraj3eRTA_50um4Pz",
+          "distanceMetres": 1.3120546509120015
+        },
+        {
+          "label": "P-D-58",
+          "id": "3xBJ3iO9H0SOvzUDGmklNu",
+          "distanceMetres": 0.8740639696950697
+        },
+        {
+          "label": "P-D-63",
+          "id": "3O7kIWp_TDWOv$9XtQUCCJ",
+          "distanceMetres": 0.6662794725246264
+        },
+        {
+          "label": "P-D-64",
+          "id": "3O7kIWp_TDWOv$9XtQUCCB",
+          "distanceMetres": 0.8569783324168991
+        },
+        {
+          "label": "P-D-65",
+          "id": "3xBJ3iO9H0SOvzUDGmklN4",
+          "distanceMetres": 0.6445284212231941
+        },
+        {
+          "label": "P-D-66",
+          "id": "3O7kIWp_TDWOv$9XtQUCCP",
+          "distanceMetres": 0.41698686197855767
+        },
+        {
+          "label": "P-D-57",
+          "id": "3O7kIWp_TDWOv$9XtQUCB0",
+          "distanceMetres": 1.287793777066231
+        }
+      ]
+    }
+  }
+}
