@@ -1,0 +1,74 @@
+{
+  "nativeRooms": 212,
+  "sourceIdentitiesPreserved": true,
+  "pdfLinked": 211,
+  "pdfOnlyPending": 9,
+  "ifcOnlyArea": 1,
+  "areaDifferences": [
+    {
+      "id": "2lZrvpCM16V848yeFPfFRb",
+      "code": "PA-02",
+      "level": "P",
+      "building": "EDIFICIO ASCENDENTE 01",
+      "pdf": 679.56,
+      "ifc": 678.3043
+    },
+    {
+      "id": "3hL8NREhP7lf5xPMbppFqQ",
+      "code": "PA-01",
+      "level": "I",
+      "building": "EDIFICIO DESCENDENTE",
+      "pdf": 870.4,
+      "ifc": 870.8059
+    },
+    {
+      "id": "3hL8NREhP7lf5xPMbppFqI",
+      "code": "PA-02",
+      "level": "P",
+      "building": "EDIFICIO DESCENDENTE",
+      "pdf": 936.12,
+      "ifc": 932.7024
+    },
+    {
+      "id": "0LwmIaY7XELQeJB2TxtBBz",
+      "code": "ÁREA BRT",
+      "level": "I",
+      "building": "EDIFICIO DESCENDENTE",
+      "pdf": 40.5,
+      "ifc": 42.6587
+    }
+  ],
+  "printedTotalChecks": [
+    {
+      "level": "B",
+      "building": "EDIFICIO DESCENDENTE",
+      "sumPrintedRows": 2431.84,
+      "printedTotal": 2431.86
+    },
+    {
+      "level": "A",
+      "building": "EDIFICIO DESCENDENTE",
+      "sumPrintedRows": 1960.02,
+      "printedTotal": 1959.98
+    },
+    {
+      "level": "I",
+      "building": "EDIFICIO DESCENDENTE",
+      "sumPrintedRows": 2507.12,
+      "printedTotal": 2507.15
+    },
+    {
+      "level": "P",
+      "building": "EDIFICIO DESCENDENTE",
+      "sumPrintedRows": 2541.88,
+      "printedTotal": 2541.88
+    }
+  ],
+  "levels": {
+    "I": 74,
+    "P": 49,
+    "B": 31,
+    "A": 58
+  },
+  "sourceAreaPreserved": true
+}

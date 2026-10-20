@@ -3,6 +3,7 @@ const el=(tag,attrs={})=>{const e=document.createElementNS(ns,tag);for(const [k,
 export class PlanViewer{
  constructor({svg,container,onSelect}){Object.assign(this,{svg,container,onSelect});this.zoom=1;this.markers=[];new ResizeObserver(()=>this.fit()).observe(container);}
  configure(registration,records,types){Object.assign(this,{registration,records,types});}
+ setMarkersVisible(visible){this.markersVisible=visible;for(const m of this.markers){m.group.style.display=visible?'':'none';m.group.setAttribute('tabindex',visible?'0':'-1');}}
  project(record,reg){const p=record.positionIfcMetres,o=this.registration.originIfc,m=reg.matrix,x=p[0]-o[0],y=p[1]-o[1];return [m[0][0]*x+m[0][1]*y+m[0][2],m[1][0]*x+m[1][1]*y+m[1][2]];}
  visible(record,reg){if(!record||!reg||(reg.allowedCameraIds&&!reg.allowedCameraIds.includes(record.ifcGlobalId)))return false;const [x,y]=this.project(record,reg),[a,b,w,h]=reg.crop;return x>=a&&x<=a+w&&y>=b&&y<=b+h;}
  choosePage(kind,pages,active,current){const available=pages.filter(p=>this.visible(active,this.registration?.[kind]?.[p.page]));return available.find(p=>p.page===current)||available[0];}
@@ -19,7 +20,7 @@ export class PlanViewer{
    const title=el('title');title.textContent=`${this.types[type].label} · Marca IFC ${record.mark}`;group.append(title);
    const action=()=>this.onSelect(record.ifcGlobalId);group.addEventListener('click',e=>{e.stopPropagation();action();});group.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();action();}});this.layer.append(group);this.markers.push({group,record});
   }
-  this.fit();this.container.scrollTo(0,0);this.select(active);
+  this.spaces?.drawPlan();this.setMarkersVisible(this.markersVisible!==false);this.fit();this.container.scrollTo(0,0);this.select(active);
  }
  select(record,pose,settings){this.active=record;for(const m of this.markers){const selected=m.record.ifcGlobalId===record?.ifcGlobalId;m.group.setAttribute('aria-pressed',String(selected));m.group.querySelector('text')?.remove();if(selected){this.layer.append(m.group);const t=el('text',{x:this.radius*2,y:0,'font-size':this.radius*1.5});t.textContent=`IFC ${record.mark}`;m.group.append(t);}}
   this.coneLayer?.replaceChildren();if(!record||!pose||!settings||!this.visible(record,this.reg)||document.querySelector('#show-cone')?.checked===false)return;

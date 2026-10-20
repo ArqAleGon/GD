@@ -33,13 +33,13 @@ export class StudyScene{
   this.markerGeometry=markerGeometry;
   let start;
   axon.addEventListener('pointerdown',e=>start=[e.clientX,e.clientY]);
-  axon.addEventListener('click',e=>{if(!start||Math.hypot(e.clientX-start[0],e.clientY-start[1])>5)return;const r=axon.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;this.raycaster.setFromCamera(new THREE.Vector2(x/r.width*2-1,-y/r.height*2+1),this.axonCamera);const candidates=this.markers.filter(m=>m.visible);let target=this.raycaster.intersectObjects(candidates,false)[0]?.object;
+  axon.addEventListener('click',e=>{if(e.target.closest('.space-label')||this.showMarkers===false||!start||Math.hypot(e.clientX-start[0],e.clientY-start[1])>5)return;const r=axon.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;this.raycaster.setFromCamera(new THREE.Vector2(x/r.width*2-1,-y/r.height*2+1),this.axonCamera);const candidates=this.markers.filter(m=>m.visible);let target=this.raycaster.intersectObjects(candidates,false)[0]?.object;
    if(!target){let nearest=11;for(const marker of candidates){const p=marker.getWorldPosition(new THREE.Vector3()).project(this.axonCamera);if(p.z<-1||p.z>1)continue;const distance=Math.hypot((p.x+1)*r.width/2-x,(1-p.y)*r.height/2-y);if(distance<nearest){nearest=distance;target=marker;}}}
    if(target)this.onSelect(target.userData.record.ifcGlobalId);
   });
   this.cone=new THREE.Group();this.scene.add(this.cone);
   this.observer=new THREE.Group();const mat=new THREE.MeshBasicMaterial({color:0xf3d189});const head=new THREE.Mesh(new THREE.SphereGeometry(.18,10,8),mat);head.position.y=1.55;const body=new THREE.Mesh(new THREE.CylinderGeometry(.18,.25,1.2,10),mat);body.position.y=.8;this.observer.add(head,body);this.scene.add(this.observer);this.observer.visible=false;
-  this.activeRing=new THREE.Mesh(new THREE.SphereGeometry(1.15,12,8),new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,depthTest:false}));this.activeRing.renderOrder=21;this.scene.add(this.activeRing);this.activeRing.visible=false;
+  this.activeRing=new THREE.Mesh(new THREE.SphereGeometry(1.15,12,8),new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,depthTest:false}));this.activeRing.renderOrder=61;this.scene.add(this.activeRing);this.activeRing.visible=false;
   new ResizeObserver(()=>{this.dirty=true;}).observe(axon);new ResizeObserver(()=>this.dirty=true).observe(pov);
   window.addEventListener('resize',()=>{this.renderer.setSize(innerWidth,innerHeight);this.dirty=true;});window.addEventListener('scroll',()=>this.dirty=true,true);
   this.renderer.setAnimationLoop(()=>{if(this.dirty){this.dirty=false;this.render();}});
@@ -60,7 +60,7 @@ export class StudyScene{
    gltf.scene.traverse(n=>{if(n.isMesh){n.geometry.dispose();for(const mat of (Array.isArray(n.material)?n.material:[n.material]))mat.dispose();}});
    this.onProgress(++cameraDone,total);
   }
-  for(const record of records){const mat=new THREE.MeshBasicMaterial({color:colorFor(record),transparent:true,depthTest:false});const marker=new THREE.Mesh(this.markerGeometry,mat);marker.position.fromArray(record.positionGltfMetres).sub(ORIGIN);marker.userData.record=record;marker.renderOrder=20;this.markerGroup.add(marker);this.markers.push(marker);}
+  for(const record of records){const mat=new THREE.MeshBasicMaterial({color:colorFor(record),transparent:true,depthTest:false});const marker=new THREE.Mesh(this.markerGeometry,mat);marker.position.fromArray(record.positionGltfMetres).sub(ORIGIN);marker.userData.record=record;marker.renderOrder=60;this.markerGroup.add(marker);this.markers.push(marker);}
   let next=0,done=0;
   const worker=async()=>{while(next<manifest.files.length){const file=manifest.files[next++];const buffer=await this.binary('./assets/models/e09-study/'+file.file);if(token!==this.generation)return;
    const header=new Uint32Array(buffer,0,2),nv=header[0],ni=header[1];if(buffer.byteLength!==8+nv*24+ni*4)throw Error('Paquete geométrico incompleto');
@@ -134,18 +134,18 @@ export class StudyScene{
  render(){
   const r=this.renderer;r.setScissorTest(false);r.setClearColor(0x000000,0);r.clear();if(document.querySelector('#entry-dialog').open)return;
   const expanded=document.querySelector('.view.is-expanded')?.id;
-  r.domElement.style.zIndex=expanded&&expanded!=='plan-panel'?'6':'2';if(expanded==='plan-panel')return;r.setScissorTest(true);
+  r.domElement.style.zIndex=expanded&&expanded!=='plan-panel'?'6':'2';if(expanded==='plan-panel'){this.spaces?.beforePov();return;}r.setScissorTest(true);
   const view=(element,camera,aspect,sub=null,renderScene=this.scene)=>{let box=element.getBoundingClientRect();if(sub){box={left:box.left+sub[0]*box.width,top:box.top+sub[1]*box.height,width:box.width*sub[2],height:box.height*sub[3],bottom:box.bottom};}if(box.width<=0||box.height<=0||box.bottom<0||box.top>innerHeight)return;let w=box.width,h=box.height,x=box.left,y=box.top;if(aspect){if(w/h>aspect){const nw=h*aspect;x+=(w-nw)/2;w=nw;}else{const nh=w/aspect;y+=(h-nh)/2;h=nh;}}camera.aspect=w/h;camera.updateProjectionMatrix();if(camera!==this.axonCamera&&camera.isPerspectiveCamera){camera.projectionMatrix.elements[0]=1/Math.tan(THREE.MathUtils.degToRad(this.settings.fov/2));camera.projectionMatrixInverse.copy(camera.projectionMatrix).invert();}r.setViewport(x,innerHeight-y-h,w,h);r.setScissor(Math.max(0,x),Math.max(0,innerHeight-y-h),Math.min(w,innerWidth-x),Math.min(h,innerHeight-y));r.setClearColor(0x08141e,1);r.clear();r.render(renderScene,camera);};
   this.filter();this.dirty=false;
-  this.cone.visible=false;this.markerGroup.visible=false;this.activeRing.visible=false;this.observer.visible=false;
+  this.cone.visible=false;this.markerGroup.visible=false;this.activeRing.visible=false;this.observer.visible=false;this.spaces?.beforePov();
   r.clippingPlanes=[];this.setModelClipping([]);for(const n of this.cameraNodes)n.visible=n.userData.ifcGlobalId!==this.selected?.ifcGlobalId;
   if(this.ready&&this.isFixed&&(!expanded||expanded==='pov-panel')){
    if(this.mode==='fisheye'){r.setScissorTest(false);r.autoClear=true;this.cubeCamera.update(r,this.scene);r.autoClear=false;r.setScissorTest(true);view(this.pov,this.fishCamera,1,null,this.fishScene);}
    else if(this.mode==='multi')for(let i=0;i<4;i++)view(this.pov,this.sensorCameras[i],this.imageAspect,[(i%2)/2,Math.floor(i/2)/2,.5,.5]);
    else view(this.pov,this.povCamera,this.imageAspect);
   }
-  this.filter();this.dirty=false;this.markerGroup.visible=true;this.activeRing.visible=!!this.selected;this.cone.visible=this.isFixed&&this.showCone!==false;this.observer.visible=this.isFixed;
+  this.filter();this.dirty=false;this.markerGroup.visible=this.showMarkers!==false;this.activeRing.visible=!!this.selected&&this.showMarkers!==false;this.cone.visible=this.isFixed&&this.showCone!==false;this.observer.visible=this.isFixed;
   if(this.level){this.setModelClipping([new THREE.Plane(new THREE.Vector3(0,-1,0),this.level.cutMax-ORIGIN.y),new THREE.Plane(new THREE.Vector3(0,1,0),-(this.level.cutMin-ORIGIN.y))]);for(const mesh of this.staticMeshes){const b=mesh.userData.bounds;mesh.visible=mesh.visible&&b.max[1]>=this.level.cutMin-ORIGIN.y&&b.min[1]<=this.level.cutMax-ORIGIN.y;}}
-  if(!expanded||expanded==='axon-panel')view(this.axon,this.axonCamera);r.clippingPlanes=[];r.setScissorTest(false);
+  this.spaces?.beforeAxon();if(!expanded||expanded==='axon-panel')view(this.axon,this.axonCamera);this.spaces?.afterAxon(expanded);r.clippingPlanes=[];r.setScissorTest(false);
  }
 }
