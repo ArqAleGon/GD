@@ -78,16 +78,26 @@ export class RouteStudy{
   const text=`${metres(this.distance)} / ${metres(this.total)}`;$('#route-distance').textContent=text;$('#route-live-distance').textContent=text;$('#route-live-label').textContent=this.family.label+(this.current?.leg.schematic?' · enlace esquemático':'');
   $('#route-progress').value=this.total?Math.round(this.distance/this.total*1000):0;$('#route-play').textContent=this.playing?'Ⅱ Pausar':'▶ Reproducir';$('#route-play').setAttribute('aria-pressed',String(this.playing));$('#route-current').textContent=this.current?.leg.schematic?'Enlace esquemático · '+this.current.leg.fromLevel+' → '+this.current.leg.toLevel:this.current?.leg.label||'';
  }
+ onSheet(part,y){const boundary={14:480,16:460,17:400}[part.leg.slide];return this.plan.page.part==='A'?y<=boundary:y>=boundary;}
+ clippedSegments(part){
+  const result=[],boundary={14:480,16:460,17:400}[part.leg.slide];
+  for(let i=1;i<part.points.length;i++){
+   let a=part.points[i-1],b=part.points[i];const ya=part.leg.sourcePoints[i-1][1],yb=part.leg.sourcePoints[i][1],insideA=this.onSheet(part,ya),insideB=this.onSheet(part,yb);
+   if(!insideA&&!insideB)continue;
+   if(insideA!==insideB){const crossing=a.clone().lerp(b,(boundary-ya)/(yb-ya));if(insideA)b=crossing;else a=crossing;}
+   result.push([a,b]);
+  }return result;
+ }
  drawPlan(){
   this.plan.routeLayer?.remove();this.planLeader=null;if(!this.active||!this.plan.layer||this.plan.kind!=='architecture')return;
   const layer=svg('g',{'aria-label':'Recorrido sobre planta','pointer-events':'none'});this.plan.routeLayer=layer;this.plan.layer.append(layer);const m=this.plan.reg.matrix;
   this.project=p=>[m[0][0]*p.x-m[0][1]*p.z+m[0][2],m[1][0]*p.x-m[1][1]*p.z+m[1][2]];
-  for(const p of this.parts){if(p.leg.schematic||p.leg.level!==this.plan.level.id)continue;const points=p.points.map(this.project),d='M'+points.map(p=>p.join(',')).join('L');layer.append(svg('path',{d,fill:'none',stroke:'#fff','stroke-width':7,'vector-effect':'non-scaling-stroke'}),svg('path',{d,fill:'none',stroke:this.family.color,'stroke-width':3.5,'vector-effect':'non-scaling-stroke'}));
-   for(let dist=0;dist<p.length;dist+=12){const s=this.sample(p,dist),a=this.project(s.point),b=this.project(s.point.clone().add(s.direction)),angle=Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI;layer.append(svg('path',{d:'M-20,-12 L0,0 L-20,12',transform:`translate(${a}) rotate(${angle})`,fill:'none',stroke:this.family.color,'stroke-width':3,'vector-effect':'non-scaling-stroke'}));}
+  for(const p of this.parts){if(p.leg.schematic||p.leg.level!==this.plan.level.id)continue;const d=this.clippedSegments(p).map(([a,b])=>'M'+this.project(a).join(',')+'L'+this.project(b).join(',')).join(' ');if(!d)continue;layer.append(svg('path',{d,fill:'none',stroke:'#fff','stroke-width':7,'vector-effect':'non-scaling-stroke'}),svg('path',{d,fill:'none',stroke:this.family.color,'stroke-width':3.5,'vector-effect':'non-scaling-stroke'}));
+   for(let dist=0;dist<p.length;dist+=12){const s=this.sample(p,dist);if(!this.onSheet(p,s.sourceY))continue;const a=this.project(s.point),b=this.project(s.point.clone().add(s.direction)),angle=Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI;layer.append(svg('path',{d:'M-20,-12 L0,0 L-20,12',transform:`translate(${a}) rotate(${angle})`,fill:'none',stroke:this.family.color,'stroke-width':3,'vector-effect':'non-scaling-stroke'}));}
   }
   this.planLeader=svg('g');this.planLeader.append(svg('path',{d:'M30,0 L-20,-20 L-10,0 L-20,20 Z',fill:this.family.color,stroke:'#fff','stroke-width':2,'vector-effect':'non-scaling-stroke'}));layer.append(this.planLeader);this.updatePlanLeader();
  }
- updatePlanLeader(){if(!this.planLeader||!this.current)return;const visible=!this.current.leg.schematic&&this.current.leg.level===this.plan.level.id;this.planLeader.style.display=visible?'':'none';if(!visible)return;const s=this.currentSample,a=this.project(s.point),b=this.project(s.point.clone().add(s.direction));this.planLeader.setAttribute('transform',`translate(${a}) rotate(${Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI})`);}
+ updatePlanLeader(){if(!this.planLeader||!this.current)return;const visible=!this.current.leg.schematic&&this.current.leg.level===this.plan.level.id&&this.onSheet(this.current,this.currentSample.sourceY);this.planLeader.style.display=visible?'':'none';if(!visible)return;const s=this.currentSample,a=this.project(s.point),b=this.project(s.point.clone().add(s.direction));this.planLeader.setAttribute('transform',`translate(${a}) rotate(${Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI})`);}
  sizeArrows(camera,element){const height=Math.max(1,element.clientHeight),scale=2*Math.tan(camera.fov*Math.PI/360)/height;for(const p of this.parts){for(const arrow of p.arrows){const length=Math.max(1.8,Math.min(9,camera.position.distanceTo(arrow.position)*scale*12));arrow.setLength(length,length*.5,length*.38);}const width=Math.max(1,Math.min(5,camera.position.distanceTo(p.points[0])*scale*1.3/.16));for(const n of p.group.children)if(n.isMesh)n.scale.set(width*(n.renderOrder===78?1.8:1),1,width*(n.renderOrder===78?1.8:1));}this.leader.scale.setScalar(Math.max(1,Math.min(4,camera.position.distanceTo(this.leader.position)*scale*3/.65)));}
  cachedView(view,element,camera,key){
   const s=this.scene,r=s.renderer,rect=element.getBoundingClientRect();if(rect.width<=0||rect.height<=0)return;
