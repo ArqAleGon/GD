@@ -1,0 +1,220 @@
+{
+  "version": "20261021-native-v1",
+  "sections": {
+    "E01": {
+      "file": "native-ifc/e01.json.gz",
+      "sources": 3,
+      "entities": 68360
+    },
+    "E02": {
+      "file": "native-ifc/e02.json.gz",
+      "sources": 3,
+      "entities": 89801
+    },
+    "E03": {
+      "file": "native-ifc/e03.json.gz",
+      "sources": 3,
+      "entities": 94255
+    },
+    "E04": {
+      "file": "native-ifc/e04.json.gz",
+      "sources": 3,
+      "entities": 99686
+    },
+    "E05": {
+      "file": "native-ifc/e05.json.gz",
+      "sources": 3,
+      "entities": 103716
+    },
+    "E06": {
+      "file": "native-ifc/e06.json.gz",
+      "sources": 3,
+      "entities": 60864
+    },
+    "E07": {
+      "file": "native-ifc/e07.json.gz",
+      "sources": 3,
+      "entities": 83260
+    },
+    "E08": {
+      "file": "native-ifc/e08.json.gz",
+      "sources": 3,
+      "entities": 58099
+    },
+    "E09": {
+      "file": "native-ifc/e09.json.gz",
+      "sources": 3,
+      "entities": 96064
+    },
+    "E10": {
+      "file": "native-ifc/e10.json.gz",
+      "sources": 3,
+      "entities": 98575
+    },
+    "E11": {
+      "file": "native-ifc/e11.json.gz",
+      "sources": 3,
+      "entities": 99189
+    },
+    "E12": {
+      "file": "native-ifc/e12.json.gz",
+      "sources": 3,
+      "entities": 102289
+    },
+    "E13": {
+      "file": "native-ifc/e13.json.gz",
+      "sources": 3,
+      "entities": 121411
+    },
+    "E14": {
+      "file": "native-ifc/e14.json.gz",
+      "sources": 3,
+      "entities": 113570
+    },
+    "E15": {
+      "file": "native-ifc/e15.json.gz",
+      "sources": 2,
+      "entities": 92397
+    },
+    "E16": {
+      "file": "native-ifc/e16.json.gz",
+      "sources": 4,
+      "entities": 134384
+    },
+    "I01": {
+      "file": "native-ifc/i01.json.gz",
+      "sources": 2,
+      "entities": 10074
+    },
+    "I02": {
+      "file": "native-ifc/i02.json.gz",
+      "sources": 2,
+      "entities": 5329
+    },
+    "I03": {
+      "file": "native-ifc/i03.json.gz",
+      "sources": 2,
+      "entities": 4334
+    },
+    "I04": {
+      "file": "native-ifc/i04.json.gz",
+      "sources": 2,
+      "entities": 4736
+    },
+    "I05": {
+      "file": "native-ifc/i05.json.gz",
+      "sources": 2,
+      "entities": 3909
+    },
+    "I06": {
+      "file": "native-ifc/i06.json.gz",
+      "sources": 2,
+      "entities": 5336
+    },
+    "I07": {
+      "file": "native-ifc/i07.json.gz",
+      "sources": 2,
+      "entities": 8126
+    },
+    "I08": {
+      "file": "native-ifc/i08.json.gz",
+      "sources": 2,
+      "entities": 4044
+    },
+    "I09": {
+      "file": "native-ifc/i09.json.gz",
+      "sources": 2,
+      "entities": 5287
+    },
+    "I10": {
+      "file": "native-ifc/i10.json.gz",
+      "sources": 2,
+      "entities": 7143
+    },
+    "I11": {
+      "file": "native-ifc/i11.json.gz",
+      "sources": 2,
+      "entities": 5236
+    },
+    "I12": {
+      "file": "native-ifc/i12.json.gz",
+      "sources": 2,
+      "entities": 4678
+    },
+    "I13": {
+      "file": "native-ifc/i13.json.gz",
+      "sources": 2,
+      "entities": 5676
+    },
+    "I14": {
+      "file": "native-ifc/i14.json.gz",
+      "sources": 2,
+      "entities": 7484
+    },
+    "I15": {
+      "file": "native-ifc/i15.json.gz",
+      "sources": 2,
+      "entities": 7782
+    },
+    "I16": {
+      "file": "native-ifc/i16.json.gz",
+      "sources": 2,
+      "entities": 5578
+    },
+    "PT102": {
+      "file": "native-ifc/pt102.json.gz",
+      "sources": 1,
+      "entities": 12698
+    },
+    "PT103": {
+      "file": "native-ifc/pt103.json.gz",
+      "sources": 2,
+      "entities": 491
+    },
+    "PT104": {
+      "file": "native-ifc/pt104.json.gz",
+      "sources": 1,
+      "entities": 17724
+    },
+    "PT105": {
+      "file": "native-ifc/pt105.json.gz",
+      "sources": 1,
+      "entities": 2924
+    },
+    "PT106": {
+      "file": "native-ifc/pt106.json.gz",
+      "sources": 2,
+      "entities": 416
+    },
+    "PT107": {
+      "file": "native-ifc/pt107.json.gz",
+      "sources": 1,
+      "entities": 12891
+    },
+    "PT108": {
+      "file": "native-ifc/pt108.json.gz",
+      "sources": 1,
+      "entities": 23470
+    },
+    "PT109": {
+      "file": "native-ifc/pt109.json.gz",
+      "sources": 2,
+      "entities": 1693
+    },
+    "PT110": {
+      "file": "native-ifc/pt110.json.gz",
+      "sources": 1,
+      "entities": 0
+    },
+    "PT111": {
+      "file": "native-ifc/pt111.json.gz",
+      "sources": 1,
+      "entities": 3411
+    },
+    "PT112": {
+      "file": "native-ifc/pt112.json.gz",
+      "sources": 1,
+      "entities": 2462
+    }
+  }
+}
