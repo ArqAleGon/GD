@@ -1,0 +1,2256 @@
+{
+  "version": 10,
+  "method": "Asignación espacial a espacios IFC del mismo nivel. Tolerancia exterior 2 m; casos ambiguos o alejados sin asignar. No modifica propiedades IFC.",
+  "records": [
+    {
+      "id": "1gfO30Qbf8WxGiC88AT$8Z",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppFWY",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "1gfO30Qbf8WxGiC88AT$8x",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppFWY",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "1gfO30Qbf8WxGiC88AT$9V",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppFWY",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "1gfO30Qbf8WxGiC88AT$Aa",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppE9m",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "1gfO30Qbf8WxGiC88AT$Ae",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppE9m",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "1gfO30Qbf8WxGiC88AT$B4",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppEFn",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "1gfO30Qbf8WxGiC88AT$BA",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppE9d",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "1q_uZZZu17OQe4nBcCNUaI",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppE9k",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "1q_uZZZu17OQe4nBcCNUao",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppE9k",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "1q_uZZZu17OQe4nBcCNUbJ",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppFWY",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "1q_uZZZu17OQe4nBcCNUb_",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppFWY",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "1q_uZZZu17OQe4nBcCNUbg",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppE9k",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklS$",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppFWY",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklS_",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppF8K",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklSe",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppFWY",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklSf",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppFWY",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklSm",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppFWY",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklSn",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppFWY",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklSq",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppE9k",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklSr",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppE9k",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklSs",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppE9k",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklSt",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppE9k",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklSv",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "1yX_Ik6TvE0x1ynOHzzNfG",
+      "distanceToRoomMetres": 0.849,
+      "method": "A menos de 2 m de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklSw",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppE9Z",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklSz",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppFWY",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklSg",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppFWY",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklSh",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "B",
+      "room": "3hL8NREhP7lf5xPMbppE9k",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "1fPJGW4Q9CEBwXlOdlqhxB",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "0GvZzrRcP0qxVTGhs1i5HY",
+      "distanceToRoomMetres": 0.901,
+      "method": "A menos de 2 m de huella IFC"
+    },
+    {
+      "id": "2IBK7Vx$DAaQrDyg0bamDK",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "1EvAUSDhH5ZB8BHLXnYnTg",
+      "distanceToRoomMetres": 1.6,
+      "method": "A menos de 2 m de huella IFC"
+    },
+    {
+      "id": "2rgqQw6bf46PhmmfeKLy5e",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "22KaTRKUf7$Pnrd6eVBRc4",
+      "distanceToRoomMetres": 1.402,
+      "method": "A menos de 2 m de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklU5",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "A",
+      "room": "30ZgdManzEDejOzlTnQLBs",
+      "distanceToRoomMetres": 0.971,
+      "method": "A menos de 2 m de huella IFC"
+    },
+    {
+      "id": "0Ojt3bg5X8NOyjdpvdpueQ",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "A",
+      "room": "30ZgdManzEDejOzlTnQLBs",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "0Ojt3bg5X8NOyjdpvdpuf5",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "A",
+      "room": "30ZgdManzEDejOzlTnQMHJ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "0Ojt3bg5X8NOyjdpvdpufX",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "A",
+      "room": "30ZgdManzEDejOzlTnQLBs",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "0Ojt3bg5X8NOyjdpvdpufp",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "A",
+      "room": "30ZgdManzEDejOzlTnQLBs",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "0Ojt3bg5X8NOyjdpvdpufv",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "A",
+      "room": "30ZgdManzEDejOzlTnQLBs",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "0Ojt3bg5X8NOyjdpvdpug9",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "A",
+      "room": "30ZgdManzEDejOzlTnQLBs",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "0Ojt3bg5X8NOyjdpvdpugn",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "A",
+      "room": "30ZgdManzEDejOzlTnQLBs",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "0Ojt3bg5X8NOyjdpvdpuli",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "A",
+      "room": "1k7IswWlPCY8Ktp6jxHDwJ",
+      "distanceToRoomMetres": 0.744,
+      "method": "A menos de 2 m de huella IFC"
+    },
+    {
+      "id": "1EivlSeH58MB728jyYRi4F",
+      "station": "E09 · NQS",
+      "building": "Exterior / por asignar",
+      "level": "A",
+      "room": null,
+      "distanceToRoomMetres": 11.016,
+      "method": "Sin correspondencia inequívoca"
+    },
+    {
+      "id": "1EivlSeH58MB728jyYRi4_",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "A",
+      "room": "2svJVEdhf3LeuiGfHkRYb$",
+      "distanceToRoomMetres": 1.323,
+      "method": "A menos de 2 m de huella IFC"
+    },
+    {
+      "id": "1EivlSeH58MB728jyYRi4g",
+      "station": "E09 · NQS",
+      "building": "Exterior / por asignar",
+      "level": "A",
+      "room": null,
+      "distanceToRoomMetres": 4.353,
+      "method": "Sin correspondencia inequívoca"
+    },
+    {
+      "id": "1EivlSeH58MB728jyYRi4m",
+      "station": "E09 · NQS",
+      "building": "Exterior / por asignar",
+      "level": "A",
+      "room": null,
+      "distanceToRoomMetres": 4.125,
+      "method": "Sin correspondencia inequívoca"
+    },
+    {
+      "id": "1EivlSeH58MB728jyYRi56",
+      "station": "E09 · NQS",
+      "building": "Exterior / por asignar",
+      "level": "A",
+      "room": null,
+      "distanceToRoomMetres": 14.555,
+      "method": "Sin correspondencia inequívoca"
+    },
+    {
+      "id": "1EivlSeH58MB728jyYRi5E",
+      "station": "E09 · NQS",
+      "building": "Exterior / por asignar",
+      "level": "A",
+      "room": null,
+      "distanceToRoomMetres": 16.313,
+      "method": "Sin correspondencia inequívoca"
+    },
+    {
+      "id": "1EivlSeH58MB728jyYRi5M",
+      "station": "E09 · NQS",
+      "building": "Exterior / por asignar",
+      "level": "A",
+      "room": null,
+      "distanceToRoomMetres": 16.283,
+      "method": "Sin correspondencia inequívoca"
+    },
+    {
+      "id": "1fPJGW4Q9CEBwXlOdlqh$x",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "0beUnAm1L7WA9JVAmxGtlr",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "1fPJGW4Q9CEBwXlOdlqhyl",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "22KaTRKUf7$Pnrd6eVBRc4",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2Z7ljTx2jFnhmsr1MXyUC0",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "1EvAUSDhH5ZB8BHLXnYnTg",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2Z7ljTx2jFnhmsr1MXyUCQ",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "3iQjxs6JbCmgztnRsKGKdd",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2Z7ljTx2jFnhmsr1MXyUEY",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "3iQjxs6JbCmgztnRsKGKdd",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2Z7ljTx2jFnhmsr1MXyUE_",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "3iQjxs6JbCmgztnRsKGKdd",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2Z7ljTx2jFnhmsr1MXyUEe",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "3iQjxs6JbCmgztnRsKGKdd",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2Z7ljTx2jFnhmsr1MXyUFG",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "3iQjxs6JbCmgztnRsKGKdd",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2Z7ljTx2jFnhmsr1MXyUFi",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "3MEU73VVH2Sut79zTMMp8$",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3fumhxgzD6JgTL8fC_NLB4",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "1h$CJ7CJ5728C8IlV92UVc",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3fumhxgzD6JgTL8fC_NLC8",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "1h$CJ7CJ5728C8IlV92UVc",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3fumhxgzD6JgTL8fC_NLCU",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "1h$CJ7CJ5728C8IlV92UVc",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklU0",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "A",
+      "room": "30ZgdManzEDejOzlTnQLBs",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklU1",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "3iQjxs6JbCmgztnRsKGKdd",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklU4",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "A",
+      "room": "30ZgdManzEDejOzlTnQLBs",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklUD",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "0GvZzrRcP0qxVTGhs1i5HY",
+      "distanceToRoomMetres": 0.802,
+      "method": "A menos de 2 m de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklUH",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "29Q0EFlZr91wfMKHBvsnYf",
+      "distanceToRoomMetres": 0.861,
+      "method": "A menos de 2 m de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklUI",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "1h$CJ7CJ5728C8IlV92UVc",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklUM",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "0beUnAm1L7WA9JVAmxGtlr",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklUS",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "1h$CJ7CJ5728C8IlV92UVc",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklUT",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "A",
+      "room": "1h$CJ7CJ5728C8IlV92UVc",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklUo",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "A",
+      "room": "30ZgdManzEDejOzlTnQLBs",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklUu",
+      "station": "E09 · NQS",
+      "building": "Exterior / por asignar",
+      "level": "A",
+      "room": null,
+      "distanceToRoomMetres": 20.783,
+      "method": "Sin correspondencia inequívoca"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklUv",
+      "station": "E09 · NQS",
+      "building": "Exterior / por asignar",
+      "level": "A",
+      "room": null,
+      "distanceToRoomMetres": 12.917,
+      "method": "Sin correspondencia inequívoca"
+    },
+    {
+      "id": "0Ojt3bg5X8NOyjdpvdpulX",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "A",
+      "room": "30ZgdManzEDejOzlTnQK8v",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "1fPJGW4Q9CEBwXlOdlqhu7",
+      "station": "E09 · NQS",
+      "building": "Exterior / por asignar",
+      "level": "A",
+      "room": null,
+      "distanceToRoomMetres": 3.131,
+      "method": "Sin correspondencia inequívoca"
+    },
+    {
+      "id": "3Cs1RJDgfErhpH3b0csP0Y",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "I",
+      "room": "2I5AHNmob1HgXQ$_RSJg9J",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3Cs1RJDgfErhpH3b0csP1D",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "I",
+      "room": "2I5AHNmob1HgXQ$_RSJg9J",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3Cs1RJDgfErhpH3b0csP1G",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "I",
+      "room": "3Kon2c7fX8MeeUBz8ro0lE",
+      "distanceToRoomMetres": 1.018,
+      "method": "A menos de 2 m de huella IFC"
+    },
+    {
+      "id": "3Cs1RJDgfErhpH3b0csP1c",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "I",
+      "room": "2I5AHNmob1HgXQ$_RSJg9J",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3Cs1RJDgfErhpH3b0csP1k",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "I",
+      "room": "2I5AHNmob1HgXQ$_RSJg9J",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3Cs1RJDgfErhpH3b0csP67",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "I",
+      "room": "2I5AHNmob1HgXQ$_RSJg9J",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3Cs1RJDgfErhpH3b0csP6M",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "I",
+      "room": "2I5AHNmob1HgXQ$_RSJg9J",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3Cs1RJDgfErhpH3b0csP6c",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "I",
+      "room": "2I5AHNmob1HgXQ$_RSJg9J",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3Cs1RJDgfErhpH3b0csP6s",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "I",
+      "room": "2I5AHNmob1HgXQ$_RSJg9J",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3Cs1RJDgfErhpH3b0csP70",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "I",
+      "room": "2I5AHNmob1HgXQ$_RSJg9J",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3Cs1RJDgfErhpH3b0csP7K",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "I",
+      "room": "3Kon2c7fX8MeeUBz8ro0lE",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3Cs1RJDgfErhpH3b0csP7_",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "I",
+      "room": "3Kon2c7fX8MeeUBz8ro0lE",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3Cs1RJDgfErhpH3b0csP7c",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "I",
+      "room": "3Kon2c7fX8MeeUBz8ro0lE",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3Cs1RJDgfErhpH3b0csP7k",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "I",
+      "room": "3Kon2c7fX8MeeUBz8ro0lE",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJR_Q",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFqQ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRm$",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRm3",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRm9",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRmR",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRmd",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppEFl",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRml",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFqQ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRmn",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRn7",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFqQ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRnF",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFqQ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRnN",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFqQ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRnV",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFqQ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRnt",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFqQ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRo5",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFqQ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRoD",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFqQ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRoL",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFqQ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRoT",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFqQ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRob",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFqQ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRoj",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFqQ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRor",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFqQ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRoz",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFqQ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRp5",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRpD",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFbd",
+      "distanceToRoomMetres": 1.108,
+      "method": "A menos de 2 m de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRpL",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFqQ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRpT",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRpb",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppEFl",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRpj",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRpr",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRpz",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.89,
+      "method": "A menos de 2 m de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRq5",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRqD",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRqN",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRqT",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRqb",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFpZ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRqj",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRqr",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRqz",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRr5",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRrD",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3nNkr2YXf12RMiMV8F6SyN",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRrL",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRrT",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRrb",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFqQ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRrj",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFqQ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRrr",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRrz",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRtd",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFZr",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3NhqQMlfH9Cg8MK2yDJRtl",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFpt",
+      "distanceToRoomMetres": 0.818,
+      "method": "A menos de 2 m de huella IFC"
+    },
+    {
+      "id": "3lq5Vvd7r7tfpebIJxpp17",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "I",
+      "room": "0IRFYWWpn8twgueLG4onWL",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3lq5Vvd7r7tfpebIJxpp1e",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "I",
+      "room": "2lZrvpCM16V848yeFPfFRh",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3lq5Vvd7r7tfpebIJxpp1r",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "I",
+      "room": "2lZrvpCM16V848yeFPfFRh",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3lq5Vvd7r7tfpebIJxppKr",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "I",
+      "room": "30IhLz_9j6SQsOJu3aJdsX",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3lq5Vvd7r7tfpebIJxppU5",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "I",
+      "room": "0IRFYWWpn8twgueLG4onWL",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3lq5Vvd7r7tfpebIJxppUO",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "I",
+      "room": "2lZrvpCM16V848yeFPfFRh",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3lq5Vvd7r7tfpebIJxppUd",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "I",
+      "room": "0IRFYWWpn8twgueLG4onWL",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3lq5Vvd7r7tfpebIJxppUl",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "I",
+      "room": "0IRFYWWpn8twgueLG4onWL",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3lq5Vvd7r7tfpebIJxppV3",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "I",
+      "room": "0IRFYWWpn8twgueLG4onWL",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3lq5Vvd7r7tfpebIJxppVP",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "I",
+      "room": "0IRFYWWpn8twgueLG4onWL",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3lq5Vvd7r7tfpebIJxppVn",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "I",
+      "room": "0IRFYWWpn8twgueLG4onWL",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklOp",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFZr",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklR9",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "I",
+      "room": "2lZrvpCM16V848yeFPfFRh",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklRC",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "I",
+      "room": "2lZrvpCM16V848yeFPfFRa",
+      "distanceToRoomMetres": 1.626,
+      "method": "A menos de 2 m de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklRG",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "I",
+      "room": "3Kon2c7fX8MeeUBz8ro0lE",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklRL",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "I",
+      "room": "2lZrvpCM16V848yeFPfFRh",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklRO",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "I",
+      "room": "30IhLz_9j6SQsOJu3aJdsX",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3Cs1RJDgfErhpH3b0csP0H",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "I",
+      "room": "3Kon2c7fX8MeeUBz8ro0lE",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3Cs1RJDgfErhpH3b0csP3Y",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "I",
+      "room": "2I5AHNmob1HgXQ$_RSJg9J",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklOe",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFqQ",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklOf",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklOg",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "I",
+      "room": "30IhLz_9j6SQsOJu3aJdsX",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklOh",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "I",
+      "room": "3hL8NREhP7lf5xPMbppFau",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklR8",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "I",
+      "room": "2lZrvpCM16V848yeFPfFQk",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklRD",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "I",
+      "room": "0IRFYWWpn8twgueLG4onWL",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklRE",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "I",
+      "room": "2lZrvpCM16V848yeFPfFRh",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklRF",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "I",
+      "room": "0IRFYWWpn8twgueLG4onWL",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "0P7JN8zgP1hwZCRZRuS9IP",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "P",
+      "room": "30IhLz_9j6SQsOJu3aJdsH",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "0P7JN8zgP1hwZCRZRuS9IW",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "P",
+      "room": "30IhLz_9j6SQsOJu3aJdsH",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "0P7JN8zgP1hwZCRZRuS9Im",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "P",
+      "room": "30IhLz_9j6SQsOJu3aJdsK",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "0P7JN8zgP1hwZCRZRuS9J0",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "P",
+      "room": "30IhLz_9j6SQsOJu3aJdsH",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "0P7JN8zgP1hwZCRZRuS9JO",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "P",
+      "room": "30IhLz_9j6SQsOJu3aJdsK",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "0P7JN8zgP1hwZCRZRuS9Jn",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "P",
+      "room": "30IhLz_9j6SQsOJu3aJdsK",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgG2",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "2WBcLCEvD8S9r73Py666FE",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgGC",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFpv",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgGG",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFpv",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgGQ",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFp1",
+      "distanceToRoomMetres": 1.341,
+      "method": "A menos de 2 m de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgGW",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgGe",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgGs",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgH2",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFp3",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgHC",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3s3XLXRFX34u_GiTcvOqxS",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgHI",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3s3XLXRFX34u_GiTcvOqxS",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgHQ",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFp3",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgHY",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgHg",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgHm",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgHw",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgI1",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgIB",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgIH",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgIP",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgJa",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgJq",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgJy",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 1.172,
+      "method": "A menos de 2 m de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgL$",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgL1",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "0r3Scn7NX51vxV4vDVcsad",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgL9",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgLH",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFpv",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgLP",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFpv",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgLf",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFpv",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgLp",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgU0",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgU8",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2EZfpxnRL6RvLJzkXFmgUO",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2ExENYraj3eRTA_50um4Kb",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "P",
+      "room": "2I5AHNmob1HgXQ$_RSJgFT",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2ExENYraj3eRTA_50um4Ks",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "P",
+      "room": "2I5AHNmob1HgXQ$_RSJgFT",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2ExENYraj3eRTA_50um4R1",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "P",
+      "room": "2I5AHNmob1HgXQ$_RSJgFT",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2ExENYraj3eRTA_50um4RB",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "P",
+      "room": "2I5AHNmob1HgXQ$_RSJgFT",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2ExENYraj3eRTA_50um4Rd",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "P",
+      "room": "2I5AHNmob1HgXQ$_RSJgFT",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2ExENYraj3eRTA_50um4Rn",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "P",
+      "room": "2I5AHNmob1HgXQ$_RSJgFT",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2ExENYraj3eRTA_50um4Rv",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "P",
+      "room": "2I5AHNmob1HgXQ$_RSJgFT",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3O7kIWp_TDWOv$9XtQUCB0",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "P",
+      "room": "2Oio4np7X0DAYZmqL4qddl",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3O7kIWp_TDWOv$9XtQUCB8",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "P",
+      "room": "2Oio4np7X0DAYZmqL4qddl",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3O7kIWp_TDWOv$9XtQUCBM",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "P",
+      "room": "2lZrvpCM16V848yeFPfFRb",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3O7kIWp_TDWOv$9XtQUCBU",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "P",
+      "room": "2lZrvpCM16V848yeFPfFRb",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3O7kIWp_TDWOv$9XtQUCCB",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "P",
+      "room": "2lZrvpCM16V848yeFPfFRb",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3O7kIWp_TDWOv$9XtQUCCJ",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "P",
+      "room": "2lZrvpCM16V848yeFPfFRb",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3O7kIWp_TDWOv$9XtQUCCP",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "P",
+      "room": "2lZrvpCM16V848yeFPfFRb",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3O7kIWp_TDWOv$9XtQUCCl",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "P",
+      "room": "0a9YQK1$zFCxEJuKWohiZn",
+      "distanceToRoomMetres": 1.484,
+      "method": "A menos de 2 m de huella IFC"
+    },
+    {
+      "id": "3O7kIWp_TDWOv$9XtQUCD5",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "P",
+      "room": "2lZrvpCM16V848yeFPfFRb",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3O7kIWp_TDWOv$9XtQUCDL",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "P",
+      "room": "2lZrvpCM16V848yeFPfFhO",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3O7kIWp_TDWOv$9XtQUCDl",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "P",
+      "room": "2lZrvpCM16V848yeFPfFRb",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3O7kIWp_TDWOv$9XtQUCDt",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "P",
+      "room": "2lZrvpCM16V848yeFPfFRb",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3O7kIWp_TDWOv$9XtQUCEG",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "P",
+      "room": "2I5AHNmob1HgXQ$_RSJgFT",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3O7kIWp_TDWOv$9XtQUCEU",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "P",
+      "room": "2I5AHNmob1HgXQ$_RSJgFT",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3O7kIWp_TDWOv$9XtQUCEj",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "P",
+      "room": "2I5AHNmob1HgXQ$_RSJgFT",
+      "distanceToRoomMetres": 1.442,
+      "method": "A menos de 2 m de huella IFC"
+    },
+    {
+      "id": "3O7kIWp_TDWOv$9XtQUCF_",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 02",
+      "level": "P",
+      "room": "2I5AHNmob1HgXQ$_RSJgFT",
+      "distanceToRoomMetres": 0.948,
+      "method": "A menos de 2 m de huella IFC"
+    },
+    {
+      "id": "3Xds1SIGP1GP6HWWZ_M82v",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "P",
+      "room": "2lZrvpCM16V848yeFPfFRb",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklK$",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "P",
+      "room": "30IhLz_9j6SQsOJu3aJdsH",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklKX",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "P",
+      "room": "30IhLz_9j6SQsOJu3aJdsK",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklK_",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "P",
+      "room": "30IhLz_9j6SQsOJu3aJdsH",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklKb",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "P",
+      "room": "30IhLz_9j6SQsOJu3aJdsK",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklKc",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "P",
+      "room": "30IhLz_9j6SQsOJu3aJdsK",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklKd",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "P",
+      "room": "30IhLz_9j6SQsOJu3aJdsK",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklKf",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "P",
+      "room": "30IhLz_9j6SQsOJu3aJdsH",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklKi",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "P",
+      "room": "30IhLz_9j6SQsOJu3aJdsK",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklKk",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "P",
+      "room": "30IhLz_9j6SQsOJu3aJdsK",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklKo",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "P",
+      "room": "30IhLz_9j6SQsOJu3aJdsH",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklKp",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "P",
+      "room": "30IhLz_9j6SQsOJu3aJdsH",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklKu",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "P",
+      "room": "30IhLz_9j6SQsOJu3aJdsH",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklKy",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "P",
+      "room": "30IhLz_9j6SQsOJu3aJdsH",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklN4",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "P",
+      "room": "2lZrvpCM16V848yeFPfFRb",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklNN",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklNp",
+      "station": "E09 · NQS",
+      "building": "Gilbraltar",
+      "level": "P",
+      "room": "3hL8NREhP7lf5xPMbppFqI",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklNu",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "P",
+      "room": "2lZrvpCM16V848yeFPfFRb",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklNx",
+      "station": "E09 · NQS",
+      "building": "Nave central",
+      "level": "P",
+      "room": "30IhLz_9j6SQsOJu3aJdsG",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2ExENYraj3eRTA_50um4Pb",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "P",
+      "room": "2lZrvpCM16V848yeFPfFRb",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "2ExENYraj3eRTA_50um4Pz",
+      "station": "E09 · NQS",
+      "building": "Calle 72 · 01",
+      "level": "P",
+      "room": "2Oio4np7X0DAYZmqL4qddl",
+      "distanceToRoomMetres": 0.0,
+      "method": "Dentro de huella IFC"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklKg",
+      "station": "E09 · NQS",
+      "building": "Exterior / por asignar",
+      "level": "P",
+      "room": null,
+      "distanceToRoomMetres": 3.686,
+      "method": "Sin correspondencia inequívoca"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklKh",
+      "station": "E09 · NQS",
+      "building": "Exterior / por asignar",
+      "level": "P",
+      "room": null,
+      "distanceToRoomMetres": 3.169,
+      "method": "Sin correspondencia inequívoca"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklKm",
+      "station": "E09 · NQS",
+      "building": "Exterior / por asignar",
+      "level": "P",
+      "room": null,
+      "distanceToRoomMetres": 3.482,
+      "method": "Sin correspondencia inequívoca"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklKn",
+      "station": "E09 · NQS",
+      "building": "Exterior / por asignar",
+      "level": "P",
+      "room": null,
+      "distanceToRoomMetres": 2.832,
+      "method": "Sin correspondencia inequívoca"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklKq",
+      "station": "E09 · NQS",
+      "building": "Exterior / por asignar",
+      "level": "P",
+      "room": null,
+      "distanceToRoomMetres": 3.607,
+      "method": "Sin correspondencia inequívoca"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklKr",
+      "station": "E09 · NQS",
+      "building": "Exterior / por asignar",
+      "level": "P",
+      "room": null,
+      "distanceToRoomMetres": 3.126,
+      "method": "Sin correspondencia inequívoca"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklKs",
+      "station": "E09 · NQS",
+      "building": "Exterior / por asignar",
+      "level": "P",
+      "room": null,
+      "distanceToRoomMetres": 3.585,
+      "method": "Sin correspondencia inequívoca"
+    },
+    {
+      "id": "3xBJ3iO9H0SOvzUDGmklKt",
+      "station": "E09 · NQS",
+      "building": "Exterior / por asignar",
+      "level": "P",
+      "room": null,
+      "distanceToRoomMetres": 3.142,
+      "method": "Sin correspondencia inequívoca"
+    }
+  ]
+}

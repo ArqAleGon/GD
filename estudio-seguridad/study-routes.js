@@ -55,7 +55,7 @@ export class RouteStudy{
  }
  enable(active){
   if(this.active===active)return;if(active)this.onEnter?.();this.active=active;$('#level-select option[value="B"]').disabled=active;$('#plan-kind').disabled=active;this.controls.enabled=active;this.group.visible=active;document.body.classList.toggle('routes-mode',active);$('#routes-controls').hidden=!active;$('#routes-tab').setAttribute('aria-pressed',String(active));
-  $('#pov-panel h2').textContent=active?'Vista 3D · estación completa':'Vista 3D';$('#pov-panel .view-heading p').textContent=active?'Recorridos · todos los modelos en transparencia':'Perspectiva de la cámara activa';
+  $('#pov-panel h2').textContent=active?'Vista 3D · estación completa':'Vista 3D';$('#pov-panel .view-heading p').textContent=active?'Recorridos · todos los modelos en transparencia':'Vista POV solo activa para cámaras Fixed';
   this.setTransparency(active);if(active){$('#routes-controls').scrollTop=0;this.scene.fullStation=false;this.fit();this.choosePath();}else{this.playing=false;this.plan.routeLayer?.remove();this.onExit();}
   this.scene.dirty=true;
  }
@@ -71,15 +71,15 @@ export class RouteStudy{
  updatePosition(force=false){
   if(!this.parts.length)return;const part=this.parts.find(p=>this.distance<p.offset+p.length)||this.parts.at(-1);this.current=part;this.currentSample=this.sample(part,this.distance-part.offset);this.leader.position.copy(this.currentSample.point);
   for(const p of this.parts)for(let i=0;i<p.arrows.length;i++){const s=this.sample(p,(this.distance+i*14)%p.length);p.arrows[i].position.copy(s.point);p.arrows[i].setDirection(s.direction);}
-  if(this.active&&$('#route-follow').checked&&!part.leg.schematic){const page=({14:1,16:3,17:5}[part.leg.slide]||part.leg.preferredPage)+(this.currentSample.sourceY>({14:480,16:460,17:400}[part.leg.slide])?1:0);const key=part.leg.level+':'+page;if(force||key!==this.followKey){this.followKey=key;this.setContext(part.leg.level,page);this.focusLevel();}}
+  if(this.active&&$('#route-follow').checked&&!part.leg.schematic){const page=({A:1,I:3,P:5}[part.leg.level]);const key=part.leg.level+':'+page;if(force||key!==this.followKey){this.followKey=key;this.setContext(part.leg.level,page);this.focusLevel();}}
   this.updateText();this.updatePlanLeader();this.scene.dirty=true;
  }
  updateText(){
   const text=`${metres(this.distance)} / ${metres(this.total)}`;$('#route-distance').textContent=text;$('#route-live-distance').textContent=text;$('#route-live-label').textContent=this.family.label+(this.current?.leg.schematic?' · enlace esquemático':'');
   $('#route-progress').value=this.total?Math.round(this.distance/this.total*1000):0;$('#route-play').textContent=this.playing?'Ⅱ Pausar':'▶ Reproducir';$('#route-play').setAttribute('aria-pressed',String(this.playing));$('#route-current').textContent=this.current?.leg.schematic?'Enlace esquemático · '+this.current.leg.fromLevel+' → '+this.current.leg.toLevel:this.current?.leg.label||'';
  }
- onSheet(part,y){const boundary={14:480,16:460,17:400}[part.leg.slide];return this.plan.page.part==='A'?y<=boundary:y>=boundary;}
- clippedSegments(part){
+ onSheet(part,y){if(this.plan.page.unified)return true;const boundary={14:480,16:460,17:400}[part.leg.slide];return this.plan.page.part==='A'?y<=boundary:y>=boundary;}
+ clippedSegments(part){if(this.plan.page.unified)return part.points.slice(1).map((p,i)=>[part.points[i],p]);
   const result=[],boundary={14:480,16:460,17:400}[part.leg.slide];
   for(let i=1;i<part.points.length;i++){
    let a=part.points[i-1],b=part.points[i];const ya=part.leg.sourcePoints[i-1][1],yb=part.leg.sourcePoints[i][1],insideA=this.onSheet(part,ya),insideB=this.onSheet(part,yb);

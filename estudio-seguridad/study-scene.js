@@ -29,8 +29,11 @@ export class StudyScene{
   this.fishScene.add(new THREE.Mesh(new THREE.PlaneGeometry(2,2),this.fishMaterial));
   this.controls=new OrbitControls(this.axonCamera,axon);this.controls.target.set(0,15,0);this.controls.update();this.controls.addEventListener('change',()=>this.dirty=true);
   this.raycaster=new THREE.Raycaster();this.cameraNodes=[];this.markers=[];this.staticMeshes=[];
-  const markerGeometry=new THREE.SphereGeometry(.8,12,8);
+  const markerGeometry=new THREE.SphereGeometry(.32,10,6);
   this.markerGeometry=markerGeometry;
+  this.cameraTag=document.createElement('button');this.cameraTag.className='camera-axon-tag';this.cameraTag.hidden=true;document.body.append(this.cameraTag);this.cameraTag.addEventListener('click',()=>{if(this.tagRecord)this.onSelect(this.tagRecord.ifcGlobalId);});
+  axon.addEventListener('pointermove',e=>{if(e.buttons)return;const box=axon.getBoundingClientRect();let nearest=10,record=null;for(const m of this.markers){if(!m.visible)continue;const p=m.position.clone().project(this.axonCamera);if(p.z< -1||p.z>1)continue;const d=Math.hypot(box.left+(p.x+1)*box.width/2-e.clientX,box.top+(1-p.y)*box.height/2-e.clientY);if(d<nearest){nearest=d;record=m.userData.record;}}if(record!==this.hoverCamera){this.hoverCamera=record;this.dirty=true;}});
+  axon.addEventListener('pointerleave',()=>{this.hoverCamera=null;this.dirty=true;});
   let start;
   axon.addEventListener('pointerdown',e=>start=[e.clientX,e.clientY]);
   axon.addEventListener('click',e=>{if(e.target.closest('.space-label')||this.showMarkers===false||!start||Math.hypot(e.clientX-start[0],e.clientY-start[1])>5)return;const r=axon.getBoundingClientRect(),x=e.clientX-r.left,y=e.clientY-r.top;this.raycaster.setFromCamera(new THREE.Vector2(x/r.width*2-1,-y/r.height*2+1),this.axonCamera);const candidates=this.markers.filter(m=>m.visible);let target=this.raycaster.intersectObjects(candidates,false)[0]?.object;
@@ -39,11 +42,12 @@ export class StudyScene{
   });
   this.cone=new THREE.Group();this.scene.add(this.cone);
   this.observer=new THREE.Group();const mat=new THREE.MeshBasicMaterial({color:0xf3d189});const head=new THREE.Mesh(new THREE.SphereGeometry(.18,10,8),mat);head.position.y=1.55;const body=new THREE.Mesh(new THREE.CylinderGeometry(.18,.25,1.2,10),mat);body.position.y=.8;this.observer.add(head,body);this.scene.add(this.observer);this.observer.visible=false;
-  this.activeRing=new THREE.Mesh(new THREE.SphereGeometry(1.15,12,8),new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,depthTest:false}));this.activeRing.renderOrder=61;this.scene.add(this.activeRing);this.activeRing.visible=false;
+  this.activeRing=new THREE.Mesh(new THREE.SphereGeometry(.60,12,8),new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,depthTest:false}));this.activeRing.renderOrder=61;this.scene.add(this.activeRing);this.activeRing.visible=false;
   new ResizeObserver(()=>{if(this.fullStation)this.frame();this.dirty=true;}).observe(axon);new ResizeObserver(()=>this.dirty=true).observe(pov);
   window.addEventListener('resize',()=>{this.renderer.setSize(innerWidth,innerHeight);this.dirty=true;});window.addEventListener('scroll',()=>this.dirty=true,true);
-  this.renderer.setAnimationLoop(time=>{this.routes?.tick(time);if(this.dirty){this.dirty=false;this.render();}});
+  this.renderer.setAnimationLoop(time=>{this.routes?.tick(time);if(this.dirty){this.dirty=false;this.render();this.updateCameraTag();}});
  }
+ updateCameraTag(){const r=this.hoverCamera||this.selected,expanded=document.querySelector('.view.is-expanded')?.id;this.cameraTag.hidden=true;if(!this.ready||!r||this.showMarkers===false||(expanded&&expanded!=='axon-panel')||(!this.fullStation&&r.ifcStorey!==this.level?.ifc)||document.querySelector('dialog[open]'))return;const box=this.axon.getBoundingClientRect(),p=new THREE.Vector3().fromArray(r.positionGltfMetres).sub(ORIGIN).project(this.axonCamera);if(p.z< -1||p.z>1||Math.abs(p.x)>.96||Math.abs(p.y)>.94)return;this.tagRecord=r;const type=Object.keys(this.types).find(k=>r.ifcTypeName.includes(this.types[k].ifcFamilyToken));this.cameraTag.textContent=type+' '+r.mark;this.cameraTag.title=`${this.types[type].label} · Marca IFC ${r.mark}`;this.cameraTag.style.borderColor=this.types[type].color;this.cameraTag.style.left=box.left+(p.x+1)*box.width/2+8+'px';this.cameraTag.style.top=box.top+(1-p.y)*box.height/2-8+'px';this.cameraTag.hidden=false;}
  async binary(url){const r=await fetch(url);if(!r.ok)throw Error(`${r.status}: ${url}`);return new Response(r.body.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();}
  async load(manifest,records,types){
   const token=++this.generation;this.records=records;this.types=types;this.ready=false;
@@ -91,7 +95,7 @@ export class StudyScene{
    if(identities.size!==pkg.renderableElements)throw Error(`Cobertura IFC incompleta: ${pkg.package} ${identities.size}/${pkg.renderableElements}`);
    this.brtCounts[pkg.package]=identities.size;
   }
-  document.body.dataset.brtElements=String(Object.entries(this.brtCounts).filter(([k])=>k.startsWith('e09-brt-')).reduce((n,[,v])=>n+v,0));document.body.dataset.structure1300Elements=String(Object.entries(this.brtCounts).filter(([k])=>k.startsWith('e09-est-1300-')).reduce((n,[,v])=>n+v,0));document.body.dataset.complementaryStructureElements=String(Object.entries(this.brtCounts).filter(([k])=>k.startsWith('e09-est-complementary-')).reduce((n,[,v])=>n+v,0));this.ready=true;this.dirty=true;
+  document.body.dataset.brtElements=String(Object.entries(this.brtCounts).filter(([k])=>k.startsWith('e09-brt-')).reduce((n,[,v])=>n+v,0));document.body.dataset.structure1300Elements=String(Object.entries(this.brtCounts).filter(([k])=>k.startsWith('e09-est-1300-')).reduce((n,[,v])=>n+v,0));document.body.dataset.complementaryStructureElements=String(Object.entries(this.brtCounts).filter(([k])=>k.startsWith('e09-est-complementary-')).reduce((n,[,v])=>n+v,0));document.body.dataset.structure914Elements=String(this.brtCounts['e09-str-914']||0);this.ready=true;this.dirty=true;
  }
  showFullStation(){this.fullStation=true;this.installations=true;this.showBrt=true;this.showStructure1300=true;this.hiddenPackages?.clear();this.filter();this.frame();}
  setLevel(level){this.fullStation=false;this.level=level;this.filter();this.frame();}
@@ -108,7 +112,7 @@ export class StudyScene{
  updateOptics(){
   const record=this.selected;this.activeRing.visible=!!record;
   if(record)this.activeRing.position.fromArray(record.positionGltfMetres).sub(ORIGIN);
-  this.cone.traverse(n=>{n.geometry?.dispose();n.material?.dispose();});this.cone.clear();this.observer.visible=false;this.isFixed=!!record&&(record.ifcTypeName.includes('FIXED-CAMERA')||!!this.settings.profile);
+  this.cone.traverse(n=>{n.geometry?.dispose();n.material?.dispose();});this.cone.clear();this.observer.visible=false;this.isFixed=!!record&&record.ifcTypeName.includes('FIXED-CAMERA');
   if(!this.isFixed)return;
   const {eye,direction,up}=fixedPose(record,this.settings.yaw,this.settings.tilt);this.pose={eye,direction,up};this.povCamera.position.copy(eye);this.povCamera.up.copy(up);this.povCamera.lookAt(eye.clone().add(direction));
   const o=this.settings.optics;this.mode=o?.mode||'perspective';this.imageAspect=o?o.width/o.height:16/9;

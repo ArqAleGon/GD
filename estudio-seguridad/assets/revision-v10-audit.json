@@ -1,0 +1,84 @@
+{
+  "version": 10,
+  "uniqueCameras": 250,
+  "byBuilding": {
+    "Gilbraltar": 134,
+    "Calle 72 · 01": 47,
+    "Exterior / por asignar": 17,
+    "Calle 72 · 02": 29,
+    "Nave central": 23
+  },
+  "plans": [
+    {
+      "kind": "architecture",
+      "level": "Acceso",
+      "cameras": 45,
+      "sourceLayers": 2,
+      "allRoutesInsideCanvas": true
+    },
+    {
+      "kind": "architecture",
+      "level": "Intermedio",
+      "cameras": 88,
+      "sourceLayers": 2,
+      "allRoutesInsideCanvas": true
+    },
+    {
+      "kind": "architecture",
+      "level": "Plataforma",
+      "cameras": 90,
+      "sourceLayers": 2,
+      "allRoutesInsideCanvas": true
+    },
+    {
+      "kind": "inventory",
+      "level": "Sótano",
+      "cameras": 27,
+      "sourceLayers": 1,
+      "allRoutesInsideCanvas": true
+    },
+    {
+      "kind": "inventory",
+      "level": "Acceso",
+      "cameras": 45,
+      "sourceLayers": 2,
+      "allRoutesInsideCanvas": true
+    },
+    {
+      "kind": "inventory",
+      "level": "Intermedio",
+      "cameras": 88,
+      "sourceLayers": 3,
+      "allRoutesInsideCanvas": true
+    },
+    {
+      "kind": "inventory",
+      "level": "Plataforma",
+      "cameras": 90,
+      "sourceLayers": 3,
+      "allRoutesInsideCanvas": true
+    }
+  ],
+  "model914": {
+    "source": "L1T1-0000-914-CON-CN-STR-MO-0001.ifc",
+    "elements": 1167,
+    "missing": 0,
+    "sourceWithoutGeometry": 5,
+    "nativePlacementPreserved": true
+  },
+  "totalGeometryParts": 371,
+  "checks": [
+    "Original source-image affine registration preserved exactly",
+    "All cameras and route points inside complete-level plan bounds",
+    "Unique station/building/level/type aggregation",
+    "Native IFC identity and geometry audited separately",
+    "JavaScript syntax validated"
+  ],
+  "limitations": [
+    "Building assignment is spatial against same-level IFC room footprints with 2 m tolerance; 17 cameras remain exterior / unassigned.",
+    "No basement architectural drawing supplied; CCTV retained.",
+    "9 previously accepted PDF spaces remain location pending.",
+    "Source PDF titles and IFC properties remain original; interface uses Calle 72 / Gilbraltar.",
+    "Route vertical links remain identified as schematic."
+  ]
+}

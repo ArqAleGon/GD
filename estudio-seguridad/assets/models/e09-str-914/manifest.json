@@ -1,0 +1,300 @@
+{
+  "version": 1,
+  "station": "E09",
+  "section": "E09-STR-914",
+  "name": "E09 estructura complementaria · 0001",
+  "source": "L1T1-0000-914-CON-CN-STR-MO-0001.ifc",
+  "sourceSha256": "17041f72c36b8131ef5b1ff397bc4002ea22e67351b227bbf86368658f4290f0",
+  "converter": "IfcOpenShell 0.8.5",
+  "kernel": "hybrid-cgal-simple-opencascade",
+  "units": "metres",
+  "coordinateConvention": "X,Z,-Y; untouched native placement",
+  "files": [
+    {
+      "file": "e09-str-914-001.glb.gz",
+      "source": "L1T1-0000-914-CON-CN-STR-MO-0001.ifc",
+      "section": "E09-STR-914",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 144753,
+      "sha256": "aa1e63c6717117d50b21fc2f68ed70dbba1110ab5772555b6fea2cf1c8553c99",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-str-914-002.glb.gz",
+      "source": "L1T1-0000-914-CON-CN-STR-MO-0001.ifc",
+      "section": "E09-STR-914",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 149059,
+      "sha256": "422590e7b176b904eb700965ab6de2559daee2cd712f4b0dea0f5bdfc0ddc61b",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-str-914-003.glb.gz",
+      "source": "L1T1-0000-914-CON-CN-STR-MO-0001.ifc",
+      "section": "E09-STR-914",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 170578,
+      "sha256": "5965f5ba12b2ff173ab4c46a0869912248cabc21d88302a07a60af942be01ec9",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-str-914-004.glb.gz",
+      "source": "L1T1-0000-914-CON-CN-STR-MO-0001.ifc",
+      "section": "E09-STR-914",
+      "discipline": "EST",
+      "converted": 117,
+      "compressedBytes": 101977,
+      "sha256": "1cccbae1980be3c2d756b24073471831b8f3717988310f3db217f391290acda1",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    }
+  ],
+  "inputElements": 1172,
+  "expectedRenderableElements": 1167,
+  "convertedElements": 1167,
+  "missingElements": [],
+  "unexpectedElements": [],
+  "excludedSourceConditions": [
+    {
+      "id": 1633,
+      "globalId": "02TdXSdDnDgQDuLPcKSbxt",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 1691,
+      "globalId": "02TdXSdDnDgQDuLPcKSbx6",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 1736,
+      "globalId": "02TdXSdDnDgQDuLPcKSbum",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 1780,
+      "globalId": "02TdXSdDnDgQDuLPcKSbvz",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 1791,
+      "globalId": "02TdXSdDnDgQDuLPcKSbvF",
+      "reason": "No native shape representations"
+    }
+  ],
+  "levels": [
+    {
+      "id": 111,
+      "globalId": "3Zu5Bv0LOHrPC10026FoQQ",
+      "name": "STR_PL_01_NIVEL-1",
+      "elevation": 0.0,
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          94055.50655451974
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          103666.5022251702
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 114,
+      "globalId": "02TdXSdDnDgQDuLPcKSby$",
+      "name": "Nivel 5",
+      "elevation": 0.0,
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          94055.50655451974
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          103666.5022251702
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 118,
+      "globalId": "02TdXSdDnDgQDuLPcKSby_",
+      "name": "Nivel 2",
+      "elevation": 2560.960044999998,
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          94055.50655451974
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          103666.5022251702
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2560.960044999998
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 122,
+      "globalId": "3nXrfgpND2Cg41DXNcrNQ0",
+      "name": "STR_PL_01_NIVEL-2",
+      "elevation": 2564.05562271985,
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          94055.50655451974
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          103666.5022251702
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2564.05562271985
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 126,
+      "globalId": "02TdXSdDnDgQDuLPcKSbyv",
+      "name": "Nivel 3",
+      "elevation": 2566.3832779719964,
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          94055.50655451974
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          103666.5022251702
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2566.3832779719964
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 130,
+      "globalId": "02TdXSdDnDgQDuLPcKSby4",
+      "name": "Nivel 4",
+      "elevation": 2567.907848271997,
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          94055.50655451974
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          103666.5022251702
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2567.907848271997
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "validated": true,
+  "seconds": 2.3487510681152344,
+  "renderableElements": 1167,
+  "convertedOpeningElements": 0,
+  "bounds": {
+    "min": [
+      63.414262323247385,
+      10.749437411083363,
+      -65.82307120428595
+    ],
+    "max": [
+      266.55741766157735,
+      19.710109252603615,
+      72.37933223263826
+    ]
+  }
+}

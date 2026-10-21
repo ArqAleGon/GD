@@ -1,5 +1,5 @@
 {
-  "version": 4,
+  "version": 10,
   "originGltfMetres": [
     96310.0,
     2550.0,
@@ -8049,6 +8049,71 @@
       "package": "e09-est-complementary-1310",
       "role": "complementary-structure",
       "label": "Pasarelas"
+    },
+    {
+      "source": "L1T1-0000-914-CON-CN-STR-MO-0001.ifc",
+      "files": [
+        {
+          "file": "e09-str-914-001.glb.gz",
+          "source": "L1T1-0000-914-CON-CN-STR-MO-0001.ifc",
+          "section": "E09-STR-914",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 144753,
+          "sha256": "aa1e63c6717117d50b21fc2f68ed70dbba1110ab5772555b6fea2cf1c8553c99",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-str-914-002.glb.gz",
+          "source": "L1T1-0000-914-CON-CN-STR-MO-0001.ifc",
+          "section": "E09-STR-914",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 149059,
+          "sha256": "422590e7b176b904eb700965ab6de2559daee2cd712f4b0dea0f5bdfc0ddc61b",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-str-914-003.glb.gz",
+          "source": "L1T1-0000-914-CON-CN-STR-MO-0001.ifc",
+          "section": "E09-STR-914",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 170578,
+          "sha256": "5965f5ba12b2ff173ab4c46a0869912248cabc21d88302a07a60af942be01ec9",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-str-914-004.glb.gz",
+          "source": "L1T1-0000-914-CON-CN-STR-MO-0001.ifc",
+          "section": "E09-STR-914",
+          "discipline": "EST",
+          "converted": 117,
+          "compressedBytes": 101977,
+          "sha256": "1cccbae1980be3c2d756b24073471831b8f3717988310f3db217f391290acda1",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        }
+      ],
+      "renderableElements": 1167,
+      "bounds": {
+        "min": [
+          63.414262323247385,
+          10.749437411083363,
+          -65.82307120428595
+        ],
+        "max": [
+          266.55741766157735,
+          19.710109252603615,
+          72.37933223263826
+        ]
+      },
+      "package": "e09-str-914",
+      "role": "structure-914",
+      "label": "Estructura 914"
     }
   ],
   "brtSources": {
@@ -8098,5 +8163,6 @@
   "structure1300Elements": 2878,
   "structure1300Audit": "../../structure-1300-audit.json",
   "complementaryStructureElements": 3346,
-  "complementaryStructureAudit": "../../structure-v07-audit.json"
+  "complementaryStructureAudit": "../../structure-v07-audit.json",
+  "structure914Elements": 1167
 }

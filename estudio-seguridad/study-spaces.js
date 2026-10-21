@@ -1,3 +1,4 @@
+import {displayName} from './study-dashboard.js?v=20261021-integrated-v10';
 import * as THREE from 'three';
 const $=s=>document.querySelector(s),ns='http://www.w3.org/2000/svg';
 const svg=(tag,attrs)=>{const e=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))e.setAttribute(k,v);return e;};
@@ -33,7 +34,7 @@ export class SpaceStudy{
   $('#space-filters').replaceChildren(...buttons.map(c=>{const b=document.createElement('button'),dot=document.createElement('i');dot.className='space-swatch';dot.style.background=c.color;b.append(dot,document.createTextNode(c.name));b.setAttribute('aria-pressed',String(this.filter===c.value));b.addEventListener('click',()=>this.setFilter(c.value));return b;}));
   $('#space-rows').replaceChildren(...matching.sort((a,b)=>a.record.code.localeCompare(b.record.code,undefined,{numeric:true})).map(({record:r})=>{
    const tr=document.createElement('tr');tr.classList.toggle('is-selected',r.id===this.selected);const cells=Array.from({length:4},()=>document.createElement('td')),button=document.createElement('button'),dot=document.createElement('i');dot.className='space-swatch';dot.style.background=r.color;button.append(dot,document.createTextNode(r.code));button.disabled=!r.points;button.setAttribute('aria-label',`${r.points?'Ubicar':'Ubicación pendiente'} ${r.code} · ${r.name}`);button.addEventListener('click',()=>this.select(r.id));cells[0].append(button);cells[1].textContent=r.name;
-   const source=document.createElement('small');source.textContent=r.building+(r.status?' · '+r.status:'');cells[1].append(document.createElement('br'),source);cells[2].textContent=area(r.area);cells[2].title=r.areaSource;const areaSource=document.createElement('small');areaSource.textContent=r.pdfPage?'PDF · pág. '+r.pdfPage:'IFC · sin área PDF';cells[2].append(document.createElement('br'),areaSource);
+   const source=document.createElement('small');source.textContent=displayName(r.building)+(r.status?' · '+r.status:'');cells[1].append(document.createElement('br'),source);cells[2].textContent=area(r.area);cells[2].title=r.areaSource;const areaSource=document.createElement('small');areaSource.textContent=r.pdfPage?'PDF · pág. '+r.pdfPage:'IFC · sin área PDF';cells[2].append(document.createElement('br'),areaSource);
    if(r.ifcArea&&Math.abs(r.ifcArea-r.area)>=.015){const diff=document.createElement('small');diff.textContent='IFC: '+area(r.ifcArea);cells[2].append(document.createElement('br'),diff);}if(r.areaNote){const note=document.createElement('small');note.textContent=r.areaNote;cells[1].append(document.createElement('br'),note);}cells[3].textContent=r.type;tr.append(...cells);return tr;
   }));
   if(!matching.length){const row=document.createElement('tr'),cell=document.createElement('td');cell.colSpan=4;cell.textContent='No hay espacios de este tipo en el nivel activo.';row.append(cell);$('#space-rows').append(row);}
@@ -53,7 +54,7 @@ export class SpaceStudy{
  beforePov(){this.group.visible=false;$('#space-labels').hidden=true;}
  beforeAxon(){this.group.visible=this.enabled&&!this.scene.fullStation;}
  afterAxon(expanded){
-  const container=$('#space-labels');container.hidden=this.scene.fullStation||(!!expanded&&expanded!=='axon-panel');if(container.hidden)return;
+  const container=$('#space-labels');container.hidden=!this.scene.ready||this.scene.fullStation||(!!expanded&&expanded!=='axon-panel');if(container.hidden)return;
   const box=this.scene.axon.getBoundingClientRect(),occupied=[];Object.assign(container.style,{left:box.left+'px',top:box.top+'px',width:box.width+'px',height:box.height+'px'});this.scene.axonCamera.updateMatrixWorld();
   const sorted=[...this.items].sort((a,b)=>Number(b.record.id===this.selected)-Number(a.record.id===this.selected)||b.record.area-a.record.area);
   for(const item of sorted){const r=item.record,p=item.anchor.clone().project(this.scene.axonCamera);let visible=this.enabled&&this.labelsEnabled&&r.level===this.level?.id&&this.matches(r)&&p.z>=-1&&p.z<=1&&Math.abs(p.x)<.97&&Math.abs(p.y)<.95;const x=(p.x+1)*box.width/2,y=(1-p.y)*box.height/2,selected=r.id===this.selected;

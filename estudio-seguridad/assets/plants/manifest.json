@@ -1,10 +1,300 @@
 {
   "station": "E09",
   "stationName": "NQS",
-  "version": 4,
-  "pageCount": 6,
+  "version": 10,
+  "pageCount": 3,
   "sourceDirectory": "D:\\OneDrive - EMB\\_0_Complementarios\\00_GemeloDigital\\PLANOS\\Sam\\PLANOS_E9",
   "pages": [
+    {
+      "page": 1,
+      "level": "Acceso",
+      "part": "complete",
+      "unified": true,
+      "width": 2477,
+      "height": 2592,
+      "rotation": 0,
+      "buildings": [
+        "Gilbraltar",
+        "Calle 72 · 01",
+        "Calle 72 · 02",
+        "Nave central"
+      ],
+      "buildingLabels": [
+        {
+          "name": "Gilbraltar",
+          "position": [
+            1941.2856076978637,
+            292.54095444611994
+          ]
+        },
+        {
+          "name": "Calle 72 · 01",
+          "position": [
+            698.1652493399038,
+            308.0507616171967
+          ]
+        },
+        {
+          "name": "Calle 72 · 02",
+          "position": [
+            869.7114708478298,
+            1944.6409564817473
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "image": "plan-v04-1.jpg",
+          "width": 1698,
+          "height": 2400,
+          "crop": [
+            0,
+            0,
+            1698,
+            2400
+          ],
+          "transform": [
+            [
+              0.6437916035426653,
+              0.00013603798659958148,
+              1347.5975141053548
+            ],
+            [
+              -0.004509196430048023,
+              0.6452872090671004,
+              192.65186252309445
+            ]
+          ],
+          "sourcePage": 1,
+          "sourceFile": "PLANO ACCESO E9 A.pdf"
+        },
+        {
+          "image": "plan-v04-2.jpg",
+          "width": 1698,
+          "height": 2400,
+          "crop": [
+            0,
+            0,
+            1698,
+            2400
+          ],
+          "transform": [
+            [
+              1.0506412517231032,
+              3.9458665809157604e-18,
+              35.0
+            ],
+            [
+              9.128688981841224e-17,
+              1.0506412517231032,
+              35.0
+            ]
+          ],
+          "sourcePage": 2,
+          "sourceFile": "PLANO ACCESO E9 B.pdf"
+        }
+      ]
+    },
+    {
+      "page": 3,
+      "level": "Intermedio",
+      "part": "complete",
+      "unified": true,
+      "width": 2383,
+      "height": 2655,
+      "rotation": 0,
+      "buildings": [
+        "Gilbraltar",
+        "Calle 72 · 01",
+        "Calle 72 · 02",
+        "Nave central"
+      ],
+      "buildingLabels": [
+        {
+          "name": "Gilbraltar",
+          "position": [
+            1819.9195810148349,
+            305.66688042408896
+          ]
+        },
+        {
+          "name": "Calle 72 · 01",
+          "position": [
+            579.4137240643181,
+            322.89940738212204
+          ]
+        },
+        {
+          "name": "Calle 72 · 02",
+          "position": [
+            768.8157995832863,
+            1612.3536561118824
+          ]
+        },
+        {
+          "name": "Nave central",
+          "position": [
+            1171.9321846714015,
+            535.8869791010468
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "image": "plan-v04-3.jpg",
+          "width": 1698,
+          "height": 2400,
+          "crop": [
+            0,
+            0,
+            1698,
+            2400
+          ],
+          "transform": [
+            [
+              0.6539356650907963,
+              0.00016537122298902854,
+              1236.4443928633757
+            ],
+            [
+              -0.0023569707516133106,
+              0.6572637779876769,
+              188.56646407834978
+            ]
+          ],
+          "sourcePage": 3,
+          "sourceFile": "PLANO INT E9 A.pdf"
+        },
+        {
+          "image": "plan-v04-4.jpg",
+          "width": 1698,
+          "height": 2400,
+          "crop": [
+            0,
+            0,
+            1698,
+            2400
+          ],
+          "transform": [
+            [
+              1.045158296341458,
+              -1.2493956264729696e-05,
+              35.02998549503559
+            ],
+            [
+              -0.032016642710924595,
+              1.054320631070964,
+              89.36425932315001
+            ]
+          ],
+          "sourcePage": 4,
+          "sourceFile": "PLANO INT E9 B.pdf"
+        }
+      ]
+    },
+    {
+      "page": 5,
+      "level": "Plataforma",
+      "part": "complete",
+      "unified": true,
+      "width": 2428,
+      "height": 2608,
+      "rotation": 0,
+      "buildings": [
+        "Gilbraltar",
+        "Calle 72 · 01",
+        "Calle 72 · 02",
+        "Nave central"
+      ],
+      "buildingLabels": [
+        {
+          "name": "Gilbraltar",
+          "position": [
+            1822.561548128811,
+            296.25735047422654
+          ]
+        },
+        {
+          "name": "Calle 72 · 01",
+          "position": [
+            581.0273736573394,
+            316.52378495942526
+          ]
+        },
+        {
+          "name": "Calle 72 · 02",
+          "position": [
+            772.1648047439779,
+            1602.7621306449578
+          ]
+        },
+        {
+          "name": "Nave central",
+          "position": [
+            1174.0987741169272,
+            290.0098353762762
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "image": "plan-v04-5.jpg",
+          "width": 1698,
+          "height": 2400,
+          "crop": [
+            0,
+            0,
+            1698,
+            2400
+          ],
+          "transform": [
+            [
+              0.6556341563580381,
+              0.00013662279149968755,
+              1278.9054604938788
+            ],
+            [
+              -0.004198521089906669,
+              0.6571348636233045,
+              180.85131106008475
+            ]
+          ],
+          "sourcePage": 5,
+          "sourceFile": "PLANO PLA E9 A.pdf"
+        },
+        {
+          "image": "plan-v04-6.jpg",
+          "width": 1698,
+          "height": 2400,
+          "crop": [
+            0,
+            0,
+            1698,
+            2400
+          ],
+          "transform": [
+            [
+              1.0401252241259193,
+              -2.480938826246745e-05,
+              35.05954253182995
+            ],
+            [
+              -0.014713528063191523,
+              1.0469966731822473,
+              59.98357065129926
+            ]
+          ],
+          "sourcePage": 6,
+          "sourceFile": "PLANO PLA E9 B.pdf"
+        }
+      ]
+    }
+  ],
+  "missingLevels": [
+    "Sótano"
+  ],
+  "note": "Sótano retains its CCTV inventory sheet; no architectural replacement provided.",
+  "sourcePages": [
     {
       "page": 1,
       "level": "Acceso",
@@ -95,9 +385,5 @@
       "height": 2400,
       "rotation": 0
     }
-  ],
-  "missingLevels": [
-    "Sótano"
-  ],
-  "note": "Sótano retains its CCTV inventory sheet; no architectural replacement provided."
+  ]
 }

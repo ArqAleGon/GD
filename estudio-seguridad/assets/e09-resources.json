@@ -58,6 +58,12 @@
       "source": "L1T1-1310-409-CON-ED-EST-MO-0001_V00.ifc",
       "label": "Pasarelas",
       "conversion": "native IFC to shared glTF instances"
+    },
+    {
+      "role": "structure-914",
+      "manifest": "models/e09-str-914/manifest.json",
+      "source": "L1T1-0000-914-CON-CN-STR-MO-0001.ifc",
+      "label": "Estructura 914"
     }
   ],
   "localSourceCatalogs": {
@@ -76,7 +82,7 @@
   "architectureWebSheets": "plants/manifest.json",
   "integrationAudit": "integration-audit.json",
   "fixedCameraView": "enabled for 26 Fixed Camera elements; geometric front -X; configurable evaluation FOV",
-  "revision": 8,
+  "revision": 10,
   "brtGeometryAudit": "brt-geometry-audit.json",
   "publicUrl": "https://arqalegon.github.io/GD/estudio-seguridad/",
   "spaces": "spaces.json",
