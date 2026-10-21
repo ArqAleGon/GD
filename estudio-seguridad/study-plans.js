@@ -20,10 +20,10 @@ export class PlanViewer{
    const title=el('title');title.textContent=`${this.types[type].label} · Marca IFC ${record.mark}`;group.append(title);
    const action=()=>this.onSelect(record.ifcGlobalId);group.addEventListener('click',e=>{e.stopPropagation();action();});group.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();action();}});this.layer.append(group);this.markers.push({group,record});
   }
-  this.spaces?.drawPlan();this.setMarkersVisible(this.markersVisible!==false);this.fit();this.container.scrollTo(0,0);this.select(active);
+  this.spaces?.drawPlan();this.routes?.drawPlan();this.setMarkersVisible(this.markersVisible!==false);this.fit();this.container.scrollTo(0,0);this.select(active);
  }
  select(record,pose,settings){this.active=record;for(const m of this.markers){const selected=m.record.ifcGlobalId===record?.ifcGlobalId;m.group.setAttribute('aria-pressed',String(selected));m.group.querySelector('text')?.remove();if(selected){this.layer.append(m.group);const t=el('text',{x:this.radius*2,y:0,'font-size':this.radius*1.5});t.textContent=`IFC ${record.mark}`;m.group.append(t);}}
-  this.coneLayer?.replaceChildren();if(!record||!pose||!settings||!this.visible(record,this.reg)||document.querySelector('#show-cone')?.checked===false)return;
+  this.coneLayer?.replaceChildren();if(this.routes?.active||!record||!pose||!settings||!this.visible(record,this.reg)||document.querySelector('#show-cone')?.checked===false)return;
   const [x,y]=this.project(record,this.reg),m=this.reg.matrix,d=pose.direction,heading=Math.atan2(-d.z,d.x),range=settings.range;
   const point=angle=>{const dx=Math.cos(angle)*range,dy=Math.sin(angle)*range;return [x+m[0][0]*dx+m[0][1]*dy,y+m[1][0]*dx+m[1][1]*dy];};
   const mode=settings.optics?.mode;for(let sensor=0;sensor<(mode==='multi'?4:1);sensor++){const yaw=heading+sensor*Math.PI/2,half=(settings.fov*Math.PI/180)/2,points=[[x,y]];for(let i=0;i<=32;i++)points.push(point(yaw-half+2*half*i/32));this.coneLayer.append(el('polygon',{points:points.map(p=>p.join(',')).join(' '),fill:'#e59a00','fill-opacity':.22,stroke:'#b66b00','stroke-width':2,'vector-effect':'non-scaling-stroke'}));}

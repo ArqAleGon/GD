@@ -14,3 +14,33 @@ main{min-height:680px}.views{grid-template-columns:minmax(0,1.7fr) minmax(260px,
 #space-labels{position:fixed;inset:auto;z-index:8}.space-label.is-selected{max-width:280px;white-space:normal}#space-type{width:100%;min-width:0;font-size:10px;margin-top:8px;padding:8px}.inspector-body{overflow-x:hidden}
 
 .axon .view-heading{flex-wrap:wrap;gap:8px}.axon .panel-actions{flex-wrap:wrap;justify-content:flex-end;margin-left:auto}#frame-station[aria-pressed=true]{background:#22506a;border-color:#81d6ff;color:#fff}
+/* Passenger flows share the model package and the registered architectural sheets. */
+#routes-tab{background:#e2231a;border-color:#ff4a40;color:#fff;font-weight:700;min-height:110px}
+#routes-tab[aria-pressed="true"]{box-shadow:inset 3px 0 #fff}
+#routes-drawer{top:auto;bottom:0}
+#route-legend p{display:flex;align-items:center;gap:9px;font-size:12px}
+#route-legend i{display:inline-block;width:22px;height:5px;border:1px solid #b6cbd5}
+#routes-controls{padding:18px 14px;overflow:auto;max-height:calc(100dvh - 205px)}
+#routes-controls h2{margin:6px 0 15px}
+#routes-controls label{display:block;font-size:12px;margin:13px 0 7px;line-height:1.5}
+#routes-controls select,#routes-controls input[type="range"]{width:100%;margin-top:5px}
+#routes-controls select{font-size:12px;padding:8px 5px}
+#routes-controls output{float:right;color:#7bcaff}
+#routes-controls button{font-size:12px;margin:5px 0}
+#routes-controls details{font-size:12px;margin:10px 0}
+#routes-controls .micro-note{line-height:1.5}
+#route-distance{display:block;font-size:23px;font-variant-numeric:tabular-nums;color:#fff;margin-top:18px}
+.route-actions{display:flex;gap:6px}
+#routes-exit{width:100%;border-color:#ed4139!important}
+#route-live{display:none;position:absolute;left:12px;bottom:12px;background:#08141ee8;border:1px solid #5e8c9e;padding:9px 12px;z-index:8;pointer-events:none;max-width:calc(100% - 24px)}
+#route-live span,#route-live small{display:block;font-size:11px}
+#route-live b{display:block;font-size:23px;font-variant-numeric:tabular-nums;margin:4px 0}
+.routes-mode #route-live{display:block}
+.routes-mode .inspector>.inspector-header,.routes-mode .inspector>.inspector-body,.routes-mode #expanded-optics,.routes-mode #pov-message,.routes-mode #pov-badge,.routes-mode #pov-art>.scene-note,.routes-mode #pov-panel>.view-footer,.routes-mode #frame-camera,.routes-mode #frame-station,.routes-mode #camera-count,.routes-mode .camera-menu{display:none!important}
+.routes-mode #pov-art{cursor:grab}
+.routes-mode #pov-art:active{cursor:grabbing}
+.routes-mode #pov-panel .pov-content{flex:1;min-height:0}
+.routes-mode #pov-panel.is-expanded .pov-content{grid-template-columns:1fr}
+.routes-mode #route-live{z-index:9;position:fixed;bottom:auto;padding:6px 9px}
+#route-live b{font-size:17px;margin:2px 0}#route-live small{font-size:9px}
+#route-distance{font-size:19px;white-space:nowrap}

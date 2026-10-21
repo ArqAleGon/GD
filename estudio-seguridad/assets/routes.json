@@ -1,0 +1,3981 @@
+{
+  "version": 1,
+  "source": "20261023 Funcionalidad E1-E9.pptx",
+  "slides": [
+    14,
+    15,
+    16,
+    17
+  ],
+  "units": "m",
+  "coordinateSystem": "IFC metres to glTF relative [96310,2550,-100150]",
+  "verticalLinks": "schematic-user-authorized",
+  "measurementNote": "Distancias aproximadas del trazado registrado al IFC. Enlaces discontinuos entre niveles: esquemáticos, sin validar la geometría interior de escaleras o ascensores.",
+  "families": [
+    {
+      "id": "r1",
+      "label": "Ruta 1 – Acceso Ed Descendente",
+      "color": "#111111"
+    },
+    {
+      "id": "r2",
+      "label": "Ruta 2 – Acceso Ed Ascendente 1",
+      "color": "#00B050"
+    },
+    {
+      "id": "r3",
+      "label": "Ruta 3 – Acceso Ed Ascendente 2",
+      "color": "#7030A0"
+    },
+    {
+      "id": "r4",
+      "label": "Ruta 4 – Cambio de sentido",
+      "color": "#E153D7"
+    },
+    {
+      "id": "pmr",
+      "label": "Ruta movilidad reducida",
+      "color": "#ED7D31"
+    },
+    {
+      "id": "brt",
+      "label": "Ruta BRT-Metro",
+      "color": "#A02B93"
+    }
+  ],
+  "routes": [
+    {
+      "id": "r1-01",
+      "family": "r1",
+      "label": "Acceso descendente · ingreso sur → escalera",
+      "level": "A",
+      "slide": 14,
+      "alsoSlide": null,
+      "points": [
+        [
+          -71.2381,
+          9.87,
+          33.2709
+        ],
+        [
+          -80.8486,
+          9.87,
+          13.9697
+        ],
+        [
+          -73.5601,
+          9.87,
+          10.4319
+        ],
+        [
+          -73.5831,
+          9.87,
+          10.3858
+        ]
+      ],
+      "sourcePoints": [
+        [
+          232.616,
+          431.918
+        ],
+        [
+          232.616,
+          293.745
+        ],
+        [
+          283.16,
+          293.745
+        ],
+        [
+          283.16,
+          293.415
+        ]
+      ],
+      "sourceShapeIds": [
+        23
+      ],
+      "length": 29.715,
+      "bidirectional": false,
+      "preferredPage": 1
+    },
+    {
+      "id": "r1-02",
+      "family": "r1",
+      "label": "Acceso descendente · ingreso occidental → escalera",
+      "level": "A",
+      "slide": 14,
+      "alsoSlide": null,
+      "points": [
+        [
+          -90.4704,
+          9.87,
+          20.9466
+        ],
+        [
+          -80.0698,
+          9.87,
+          15.8981
+        ],
+        [
+          -80.8486,
+          9.87,
+          13.9697
+        ],
+        [
+          -73.5831,
+          9.87,
+          10.3858
+        ]
+      ],
+      "sourcePoints": [
+        [
+          159.477,
+          307.042
+        ],
+        [
+          231.603,
+          307.042
+        ],
+        [
+          232.616,
+          293.745
+        ],
+        [
+          283.16,
+          293.415
+        ]
+      ],
+      "sourceShapeIds": [
+        180
+      ],
+      "length": 21.742,
+      "bidirectional": false,
+      "preferredPage": 1
+    },
+    {
+      "id": "r1-03",
+      "family": "r1",
+      "label": "Acceso descendente · ingreso oriental → escalera",
+      "level": "A",
+      "slide": 14,
+      "alsoSlide": null,
+      "points": [
+        [
+          19.1253,
+          9.87,
+          -15.3793
+        ],
+        [
+          3.7743,
+          9.87,
+          -22.3766
+        ]
+      ],
+      "sourcePoints": [
+        [
+          872.58,
+          404.318
+        ],
+        [
+          806.304,
+          321.016
+        ]
+      ],
+      "sourceShapeIds": [
+        181
+      ],
+      "length": 16.871,
+      "bidirectional": false,
+      "preferredPage": 1
+    },
+    {
+      "id": "r1-04",
+      "family": "r1",
+      "label": "Intermedio descendente · escalera oeste → occidental",
+      "level": "I",
+      "slide": 16,
+      "alsoSlide": 15,
+      "points": [
+        [
+          -70.4145,
+          18.72,
+          6.8311
+        ],
+        [
+          -27.4699,
+          18.72,
+          -14.0146
+        ],
+        [
+          -21.414,
+          18.72,
+          -1.7332
+        ],
+        [
+          -21.4257,
+          18.72,
+          -1.7275
+        ],
+        [
+          -37.4074,
+          18.72,
+          5.9605
+        ]
+      ],
+      "sourcePoints": [
+        [
+          325.273,
+          309.409
+        ],
+        [
+          674.43,
+          309.409
+        ],
+        [
+          674.43,
+          396.591
+        ],
+        [
+          674.335,
+          396.591
+        ],
+        [
+          544.622,
+          396.192
+        ]
+      ],
+      "sourceShapeIds": [
+        12
+      ],
+      "length": 79.178,
+      "bidirectional": false,
+      "preferredPage": 3
+    },
+    {
+      "id": "r1-05",
+      "family": "r1",
+      "label": "Intermedio descendente · escalera este → occidental",
+      "level": "I",
+      "slide": 16,
+      "alsoSlide": 15,
+      "points": [
+        [
+          -4.9219,
+          18.72,
+          -28.1459
+        ],
+        [
+          -13.9986,
+          18.72,
+          -32.3108
+        ],
+        [
+          -21.5216,
+          18.72,
+          -16.9019
+        ],
+        [
+          -27.4264,
+          18.72,
+          -13.897
+        ],
+        [
+          -21.4417,
+          18.72,
+          -1.7894
+        ],
+        [
+          -37.4074,
+          18.72,
+          5.9605
+        ]
+      ],
+      "sourcePoints": [
+        [
+          868.061,
+          291.158
+        ],
+        [
+          821.989,
+          242.067
+        ],
+        [
+          722.792,
+          309.409
+        ],
+        [
+          674.335,
+          310.203
+        ],
+        [
+          674.43,
+          396.192
+        ],
+        [
+          544.622,
+          396.192
+        ]
+      ],
+      "sourceShapeIds": [
+        176,
+        178,
+        182
+      ],
+      "length": 65.013,
+      "bidirectional": false,
+      "preferredPage": 3
+    },
+    {
+      "id": "r1-06",
+      "family": "r1",
+      "label": "Intermedio descendente · escalera oeste → oriental",
+      "level": "I",
+      "slide": 16,
+      "alsoSlide": 15,
+      "points": [
+        [
+          -70.4145,
+          18.72,
+          6.8311
+        ],
+        [
+          -27.4699,
+          18.72,
+          -14.0146
+        ],
+        [
+          -21.414,
+          18.72,
+          -1.7332
+        ],
+        [
+          -21.4257,
+          18.72,
+          -1.7275
+        ],
+        [
+          -12.6614,
+          18.72,
+          -6.0514
+        ]
+      ],
+      "sourcePoints": [
+        [
+          325.273,
+          309.409
+        ],
+        [
+          674.43,
+          309.409
+        ],
+        [
+          674.43,
+          396.591
+        ],
+        [
+          674.335,
+          396.591
+        ],
+        [
+          745.817,
+          396.192
+        ]
+      ],
+      "sourceShapeIds": [
+        12
+      ],
+      "length": 71.216,
+      "bidirectional": false,
+      "preferredPage": 3
+    },
+    {
+      "id": "r1-07",
+      "family": "r1",
+      "label": "Intermedio descendente · escalera este → oriental",
+      "level": "I",
+      "slide": 16,
+      "alsoSlide": 15,
+      "points": [
+        [
+          -4.9219,
+          18.72,
+          -28.1459
+        ],
+        [
+          -13.9986,
+          18.72,
+          -32.3108
+        ],
+        [
+          -21.5216,
+          18.72,
+          -16.9019
+        ],
+        [
+          -27.4264,
+          18.72,
+          -13.897
+        ],
+        [
+          -21.4417,
+          18.72,
+          -1.7894
+        ],
+        [
+          -12.6614,
+          18.72,
+          -6.0514
+        ]
+      ],
+      "sourcePoints": [
+        [
+          868.061,
+          291.158
+        ],
+        [
+          821.989,
+          242.067
+        ],
+        [
+          722.792,
+          309.409
+        ],
+        [
+          674.335,
+          310.203
+        ],
+        [
+          674.43,
+          396.192
+        ],
+        [
+          745.817,
+          396.192
+        ]
+      ],
+      "sourceShapeIds": [
+        176,
+        178,
+        182
+      ],
+      "length": 57.025,
+      "bidirectional": false,
+      "preferredPage": 3
+    },
+    {
+      "id": "r1-08",
+      "family": "r1",
+      "label": "Plataforma · descendente oeste → andén",
+      "level": "P",
+      "slide": 17,
+      "alsoSlide": null,
+      "points": [
+        [
+          -51.2183,
+          27.46,
+          11.2355
+        ],
+        [
+          -59.6141,
+          27.46,
+          15.3125
+        ],
+        [
+          -46.5928,
+          27.46,
+          44.2909
+        ]
+      ],
+      "sourcePoints": [
+        [
+          392.271,
+          356.825
+        ],
+        [
+          335.557,
+          356.825
+        ],
+        [
+          335.557,
+          549.2
+        ]
+      ],
+      "sourceShapeIds": [
+        19,
+        17
+      ],
+      "length": 41.103,
+      "bidirectional": false,
+      "preferredPage": 5
+    },
+    {
+      "id": "r1-09",
+      "family": "r1",
+      "label": "Plataforma · descendente este → andén",
+      "level": "P",
+      "slide": 17,
+      "alsoSlide": null,
+      "points": [
+        [
+          1.0188,
+          27.46,
+          -11.6688
+        ],
+        [
+          10.8139,
+          27.46,
+          -16.4253
+        ],
+        [
+          33.5764,
+          27.46,
+          6.1715
+        ]
+      ],
+      "sourcePoints": [
+        [
+          738.462,
+          370.158
+        ],
+        [
+          804.628,
+          370.158
+        ],
+        [
+          873.023,
+          553.375
+        ]
+      ],
+      "sourceShapeIds": [
+        15,
+        13
+      ],
+      "length": 42.963,
+      "bidirectional": false,
+      "preferredPage": 5
+    },
+    {
+      "id": "r2-01",
+      "family": "r2",
+      "label": "Acceso ascendente 1 → escalera",
+      "level": "A",
+      "slide": 14,
+      "alsoSlide": null,
+      "points": [
+        [
+          -51.569,
+          11.02,
+          85.3097
+        ],
+        [
+          -29.3907,
+          11.02,
+          112.1179
+        ],
+        [
+          -18.6971,
+          11.02,
+          104.8153
+        ]
+      ],
+      "sourcePoints": [
+        [
+          207.2,
+          766.887
+        ],
+        [
+          257.674,
+          980.0
+        ],
+        [
+          336.8,
+          968.0
+        ]
+      ],
+      "sourceShapeIds": [
+        173,
+        175
+      ],
+      "length": 47.742,
+      "bidirectional": false,
+      "preferredPage": 2
+    },
+    {
+      "id": "r2-02",
+      "family": "r2",
+      "label": "Intermedio ascendente 1 → escalera",
+      "level": "I",
+      "slide": 16,
+      "alsoSlide": 15,
+      "points": [
+        [
+          -12.8964,
+          18.72,
+          100.1198
+        ],
+        [
+          -4.1055,
+          18.72,
+          94.0972
+        ],
+        [
+          -11.4095,
+          18.72,
+          84.7249
+        ],
+        [
+          -35.2376,
+          18.72,
+          100.2388
+        ],
+        [
+          -28.3076,
+          18.72,
+          109.6942
+        ],
+        [
+          -21.2979,
+          18.72,
+          104.928
+        ]
+      ],
+      "sourcePoints": [
+        [
+          405.215,
+          1014.65
+        ],
+        [
+          482.339,
+          1004.501
+        ],
+        [
+          467.1,
+          930.053
+        ],
+        [
+          260.807,
+          952.888
+        ],
+        [
+          273.353,
+          1026.77
+        ],
+        [
+          334.727,
+          1018.886
+        ]
+      ],
+      "sourceShapeIds": [
+        160,
+        163,
+        165,
+        173,
+        174
+      ],
+      "length": 71.171,
+      "bidirectional": false,
+      "preferredPage": 4
+    },
+    {
+      "id": "r2-03",
+      "family": "r2",
+      "label": "Plataforma · ascendente 1 → andén",
+      "level": "P",
+      "slide": 17,
+      "alsoSlide": null,
+      "points": [
+        [
+          -10.9854,
+          27.46,
+          100.5185
+        ],
+        [
+          -2.6706,
+          27.46,
+          95.3436
+        ],
+        [
+          -10.0952,
+          27.46,
+          84.9207
+        ],
+        [
+          -21.8688,
+          27.46,
+          87.4066
+        ],
+        [
+          -41.905,
+          27.46,
+          56.5057
+        ]
+      ],
+      "sourcePoints": [
+        [
+          374.115,
+          951.451
+        ],
+        [
+          433.2,
+          945.2
+        ],
+        [
+          421.6,
+          868.447
+        ],
+        [
+          351.183,
+          850.8
+        ],
+        [
+          327.467,
+          628.495
+        ]
+      ],
+      "sourceShapeIds": [
+        45,
+        47,
+        49,
+        43
+      ],
+      "length": 71.452,
+      "bidirectional": false,
+      "preferredPage": 6
+    },
+    {
+      "id": "r3-01",
+      "family": "r3",
+      "label": "Acceso ascendente 2 · este → escalera",
+      "level": "A",
+      "slide": 14,
+      "alsoSlide": null,
+      "points": [
+        [
+          108.0093,
+          12.12,
+          13.9351
+        ],
+        [
+          90.2538,
+          12.12,
+          22.548
+        ],
+        [
+          83.8306,
+          12.12,
+          21.4477
+        ],
+        [
+          56.8621,
+          12.12,
+          34.5665
+        ],
+        [
+          59.8394,
+          12.12,
+          40.667
+        ],
+        [
+          67.2349,
+          12.12,
+          36.931
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1286.133,
+          801.118
+        ],
+        [
+          1164.267,
+          801.118
+        ],
+        [
+          1131.6,
+          777.2
+        ],
+        [
+          946.4,
+          777.409
+        ],
+        [
+          946.4,
+          820.21
+        ],
+        [
+          997.562,
+          819.367
+        ]
+      ],
+      "sourceShapeIds": [
+        183,
+        184,
+        186,
+        188,
+        191
+      ],
+      "length": 71.315,
+      "bidirectional": false,
+      "preferredPage": 2
+    },
+    {
+      "id": "r3-02",
+      "family": "r3",
+      "label": "Acceso ascendente 2 · oeste → escalera",
+      "level": "A",
+      "slide": 14,
+      "alsoSlide": null,
+      "points": [
+        [
+          47.9991,
+          12.12,
+          34.1282
+        ],
+        [
+          50.9909,
+          12.12,
+          40.2585
+        ],
+        [
+          57.8671,
+          12.12,
+          36.7872
+        ],
+        [
+          59.8394,
+          12.12,
+          40.667
+        ],
+        [
+          67.2349,
+          12.12,
+          36.931
+        ]
+      ],
+      "sourcePoints": [
+        [
+          898.4,
+          750.533
+        ],
+        [
+          898.4,
+          793.543
+        ],
+        [
+          945.963,
+          792.773
+        ],
+        [
+          946.4,
+          820.21
+        ],
+        [
+          997.562,
+          819.367
+        ]
+      ],
+      "sourceShapeIds": [
+        196,
+        197,
+        191
+      ],
+      "length": 27.162,
+      "bidirectional": false,
+      "preferredPage": 2
+    },
+    {
+      "id": "r3-03",
+      "family": "r3",
+      "label": "Intermedio ascendente 2 → escalera",
+      "level": "I",
+      "slide": 16,
+      "alsoSlide": 15,
+      "points": [
+        [
+          76.3533,
+          18.72,
+          32.019
+        ],
+        [
+          100.4262,
+          18.72,
+          20.3473
+        ],
+        [
+          96.7674,
+          18.72,
+          13.4054
+        ],
+        [
+          75.1504,
+          18.72,
+          24.062
+        ],
+        [
+          75.8649,
+          18.72,
+          25.1839
+        ],
+        [
+          52.9308,
+          18.72,
+          36.1391
+        ],
+        [
+          55.4928,
+          18.72,
+          40.9999
+        ],
+        [
+          67.1761,
+          18.72,
+          35.1201
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1211.845,
+          871.511
+        ],
+        [
+          1406.663,
+          871.511
+        ],
+        [
+          1406.663,
+          821.263
+        ],
+        [
+          1231.124,
+          822.276
+        ],
+        [
+          1231.918,
+          830.741
+        ],
+        [
+          1046.875,
+          829.794
+        ],
+        [
+          1046.875,
+          864.978
+        ],
+        [
+          1142.157,
+          863.737
+        ]
+      ],
+      "sourceShapeIds": [
+        186,
+        188,
+        190,
+        192,
+        195,
+        198,
+        200
+      ],
+      "length": 104.022,
+      "bidirectional": false,
+      "preferredPage": 4
+    },
+    {
+      "id": "r3-04",
+      "family": "r3",
+      "label": "Plataforma · ascendente 2 → andén",
+      "level": "P",
+      "slide": 17,
+      "alsoSlide": null,
+      "points": [
+        [
+          70.8796,
+          27.46,
+          33.1637
+        ],
+        [
+          83.1927,
+          27.46,
+          27.1918
+        ],
+        [
+          80.8557,
+          27.46,
+          23.0408
+        ],
+        [
+          47.9191,
+          27.46,
+          39.2566
+        ],
+        [
+          46.5731,
+          27.46,
+          36.5983
+        ],
+        [
+          42.0234,
+          27.46,
+          15.8002
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1000.731,
+          800.122
+        ],
+        [
+          1083.6,
+          800.122
+        ],
+        [
+          1082.33,
+          771.2
+        ],
+        [
+          860.0,
+          772.522
+        ],
+        [
+          860,
+          754.4
+        ],
+        [
+          892.32,
+          628.495
+        ]
+      ],
+      "sourceShapeIds": [
+        55,
+        57,
+        59,
+        33
+      ],
+      "length": 79.43,
+      "bidirectional": false,
+      "preferredPage": 6
+    },
+    {
+      "id": "r4-01",
+      "family": "r4",
+      "label": "Intermedio · cambio de sentido entre accesos",
+      "level": "I",
+      "slide": 16,
+      "alsoSlide": 15,
+      "points": [
+        [
+          -13.422,
+          18.72,
+          -8.1155
+        ],
+        [
+          -20.1735,
+          18.72,
+          -4.8383
+        ],
+        [
+          -22.4925,
+          18.72,
+          -9.6798
+        ],
+        [
+          -9.1197,
+          18.72,
+          -16.1067
+        ],
+        [
+          14.7595,
+          18.72,
+          -19.6864
+        ],
+        [
+          17.1894,
+          18.72,
+          -14.8639
+        ],
+        [
+          39.5991,
+          18.72,
+          10.8449
+        ],
+        [
+          47.064,
+          18.72,
+          38.2636
+        ],
+        [
+          55.6125,
+          18.72,
+          42.6649
+        ],
+        [
+          67.9897,
+          18.72,
+          36.6638
+        ]
+      ],
+      "sourcePoints": [
+        [
+          747.504,
+          382.255
+        ],
+        [
+          692.612,
+          382.255
+        ],
+        [
+          693.06,
+          348.076
+        ],
+        [
+          801.578,
+          348.445
+        ],
+        [
+          969.81,
+          394.333
+        ],
+        [
+          970.151,
+          428.711
+        ],
+        [
+          1046.875,
+          646.705
+        ],
+        [
+          1001.842,
+          825.643
+        ],
+        [
+          1041.99,
+          874.911
+        ],
+        [
+          1142.157,
+          874.911
+        ]
+      ],
+      "sourceShapeIds": [
+        220,
+        222,
+        218,
+        213,
+        211,
+        209,
+        207,
+        205,
+        204
+      ],
+      "length": 143.148,
+      "bidirectional": true,
+      "preferredPage": 3
+    },
+    {
+      "id": "r4-02",
+      "family": "r4",
+      "label": "Plataforma · andén descendente ↔ escalera",
+      "level": "P",
+      "slide": 17,
+      "alsoSlide": null,
+      "points": [
+        [
+          -6.4382,
+          27.46,
+          25.0746
+        ],
+        [
+          -7.3789,
+          27.46,
+          23.2566
+        ],
+        [
+          34.8505,
+          27.46,
+          3.0187
+        ],
+        [
+          11.2003,
+          27.46,
+          -20.087
+        ],
+        [
+          -0.3816,
+          27.46,
+          -14.4802
+        ]
+      ],
+      "sourcePoints": [
+        [
+          605.097,
+          550.616
+        ],
+        [
+          604.988,
+          538.169
+        ],
+        [
+          888.533,
+          539.502
+        ],
+        [
+          816.651,
+          351.345
+        ],
+        [
+          738.462,
+          351.251
+        ]
+      ],
+      "sourceShapeIds": [
+        96,
+        97,
+        99,
+        105
+      ],
+      "length": 94.807,
+      "bidirectional": true,
+      "preferredPage": 6
+    },
+    {
+      "id": "r4-03",
+      "family": "r4",
+      "label": "Plataforma · andén ascendente ↔ escalera",
+      "level": "P",
+      "slide": 17,
+      "alsoSlide": null,
+      "points": [
+        [
+          -0.2149,
+          27.46,
+          37.3648
+        ],
+        [
+          -1.1556,
+          27.46,
+          35.5468
+        ],
+        [
+          -0.2311,
+          27.46,
+          37.3727
+        ],
+        [
+          40.6041,
+          27.46,
+          17.5675
+        ],
+        [
+          46.0083,
+          27.46,
+          39.2841
+        ],
+        [
+          82.0648,
+          27.46,
+          21.7966
+        ],
+        [
+          85.1534,
+          27.46,
+          28.2142
+        ],
+        [
+          71.6818,
+          27.46,
+          34.7479
+        ]
+      ],
+      "sourcePoints": [
+        [
+          605.097,
+          634.4
+        ],
+        [
+          604.988,
+          621.953
+        ],
+        [
+          604.988,
+          634.4
+        ],
+        [
+          879.816,
+          634.4
+        ],
+        [
+          849.6,
+          767.6
+        ],
+        [
+          1092.267,
+          767.6
+        ],
+        [
+          1091.397,
+          810.922
+        ],
+        [
+          1000.731,
+          810.922
+        ]
+      ],
+      "sourceShapeIds": [
+        76,
+        78,
+        80,
+        84,
+        88,
+        91
+      ],
+      "length": 134.025,
+      "bidirectional": true,
+      "preferredPage": 6
+    },
+    {
+      "id": "pmr-01",
+      "family": "pmr",
+      "label": "Acceso descendente → elevador",
+      "level": "A",
+      "slide": 14,
+      "alsoSlide": null,
+      "points": [
+        [
+          8.0416,
+          9.87,
+          -8.6918
+        ],
+        [
+          -12.355,
+          9.87,
+          -16.9712
+        ]
+      ],
+      "sourcePoints": [
+        [
+          792.081,
+          411.856
+        ],
+        [
+          701.191,
+          307.042
+        ]
+      ],
+      "sourceShapeIds": [
+        96
+      ],
+      "length": 22.013,
+      "bidirectional": false,
+      "preferredPage": 1
+    },
+    {
+      "id": "pmr-02",
+      "family": "pmr",
+      "label": "Acceso ascendente 2 · este → elevador",
+      "level": "A",
+      "slide": 14,
+      "alsoSlide": null,
+      "points": [
+        [
+          108.3322,
+          12.12,
+          14.7935
+        ],
+        [
+          90.5766,
+          12.12,
+          23.4065
+        ],
+        [
+          90.5068,
+          12.12,
+          27.0652
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1285.6,
+          806.876
+        ],
+        [
+          1163.733,
+          806.876
+        ],
+        [
+          1153.436,
+          827.44
+        ]
+      ],
+      "sourceShapeIds": [
+        109,
+        111
+      ],
+      "length": 23.394,
+      "bidirectional": false,
+      "preferredPage": 2
+    },
+    {
+      "id": "pmr-03",
+      "family": "pmr",
+      "label": "Acceso ascendente 2 · oeste → elevador",
+      "level": "A",
+      "slide": 14,
+      "alsoSlide": null,
+      "points": [
+        [
+          47.1728,
+          12.12,
+          34.6466
+        ],
+        [
+          49.3551,
+          12.12,
+          39.1182
+        ],
+        [
+          83.2856,
+          12.12,
+          22.4476
+        ],
+        [
+          90.5766,
+          12.12,
+          23.4065
+        ],
+        [
+          90.5068,
+          12.12,
+          27.0652
+        ]
+      ],
+      "sourcePoints": [
+        [
+          892.41,
+          751.2
+        ],
+        [
+          892.41,
+          782.573
+        ],
+        [
+          1125.867,
+          781.373
+        ],
+        [
+          1163.733,
+          806.876
+        ],
+        [
+          1153.436,
+          827.44
+        ]
+      ],
+      "sourceShapeIds": [
+        112,
+        115,
+        119,
+        111
+      ],
+      "length": 53.793,
+      "bidirectional": false,
+      "preferredPage": 2
+    },
+    {
+      "id": "pmr-04",
+      "family": "pmr",
+      "label": "Acceso ascendente 1 · sur → elevador",
+      "level": "A",
+      "slide": 14,
+      "alsoSlide": null,
+      "points": [
+        [
+          -22.1582,
+          11.02,
+          121.2543
+        ],
+        [
+          -33.0324,
+          11.02,
+          104.5771
+        ],
+        [
+          -29.6712,
+          11.02,
+          102.1571
+        ]
+      ],
+      "sourcePoints": [
+        [
+          273.067,
+          1051.733
+        ],
+        [
+          257.888,
+          927.2
+        ],
+        [
+          283.096,
+          922.721
+        ]
+      ],
+      "sourceShapeIds": [
+        129,
+        123
+      ],
+      "length": 24.051,
+      "bidirectional": false,
+      "preferredPage": 2
+    },
+    {
+      "id": "pmr-05",
+      "family": "pmr",
+      "label": "Acceso ascendente 1 · oeste → elevador",
+      "level": "A",
+      "slide": 14,
+      "alsoSlide": null,
+      "points": [
+        [
+          -48.8763,
+          11.02,
+          84.0035
+        ],
+        [
+          -33.0636,
+          11.02,
+          104.5922
+        ],
+        [
+          -29.6712,
+          11.02,
+          102.1571
+        ]
+      ],
+      "sourcePoints": [
+        [
+          225.681,
+          766.887
+        ],
+        [
+          257.674,
+          927.2
+        ],
+        [
+          283.096,
+          922.721
+        ]
+      ],
+      "sourceShapeIds": [
+        131,
+        123
+      ],
+      "length": 30.136,
+      "bidirectional": false,
+      "preferredPage": 2
+    },
+    {
+      "id": "pmr-06",
+      "family": "pmr",
+      "label": "Acceso ascendente 1 · este → elevador",
+      "level": "A",
+      "slide": 14,
+      "alsoSlide": null,
+      "points": [
+        [
+          -40.8687,
+          11.02,
+          80.1192
+        ],
+        [
+          -33.0636,
+          11.02,
+          104.5922
+        ],
+        [
+          -29.6712,
+          11.02,
+          102.1571
+        ]
+      ],
+      "sourcePoints": [
+        [
+          280.642,
+          766.887
+        ],
+        [
+          257.674,
+          927.2
+        ],
+        [
+          283.096,
+          922.721
+        ]
+      ],
+      "sourceShapeIds": [
+        133,
+        123
+      ],
+      "length": 29.863,
+      "bidirectional": false,
+      "preferredPage": 2
+    },
+    {
+      "id": "pmr-07",
+      "family": "pmr",
+      "label": "BRT · extremo oriental → elevador",
+      "level": "A",
+      "slide": 14,
+      "alsoSlide": null,
+      "points": [
+        [
+          44.117,
+          11.02,
+          6.3839
+        ],
+        [
+          -32.6607,
+          11.02,
+          42.536
+        ]
+      ],
+      "sourcePoints": [
+        [
+          952.0,
+          582.458
+        ],
+        [
+          427.987,
+          576.267
+        ]
+      ],
+      "sourceShapeIds": [
+        159
+      ],
+      "length": 84.863,
+      "bidirectional": false,
+      "preferredPage": 2
+    },
+    {
+      "id": "pmr-08",
+      "family": "pmr",
+      "label": "BRT · extremo occidental → elevador",
+      "level": "A",
+      "slide": 14,
+      "alsoSlide": null,
+      "points": [
+        [
+          -82.2314,
+          11.02,
+          68.6576
+        ],
+        [
+          -26.7008,
+          11.02,
+          42.0423
+        ],
+        [
+          -27.7502,
+          11.02,
+          40.107
+        ],
+        [
+          -32.6607,
+          11.02,
+          42.536
+        ]
+      ],
+      "sourcePoints": [
+        [
+          82.133,
+          588.042
+        ],
+        [
+          462.4,
+          589.867
+        ],
+        [
+          461.818,
+          576.0
+        ],
+        [
+          427.987,
+          576.267
+        ]
+      ],
+      "sourceShapeIds": [
+        161,
+        169
+      ],
+      "length": 69.259,
+      "bidirectional": false,
+      "preferredPage": 2
+    },
+    {
+      "id": "pmr-09",
+      "family": "pmr",
+      "label": "Intermedio descendente · elevador de acceso → elevador de plataforma",
+      "level": "I",
+      "slide": 16,
+      "alsoSlide": 15,
+      "points": [
+        [
+          -18.8246,
+          18.72,
+          -19.0718
+        ],
+        [
+          -21.7328,
+          18.72,
+          -20.4055
+        ],
+        [
+          -27.1635,
+          18.72,
+          -15.9078
+        ],
+        [
+          -21.6138,
+          18.72,
+          -5.1074
+        ],
+        [
+          -30.1721,
+          18.72,
+          -0.9531
+        ],
+        [
+          -27.8731,
+          18.72,
+          3.7094
+        ],
+        [
+          -25.706,
+          18.72,
+          2.6575
+        ]
+      ],
+      "sourcePoints": [
+        [
+          747.504,
+          304.479
+        ],
+        [
+          732.74,
+          288.754
+        ],
+        [
+          682.564,
+          299.417
+        ],
+        [
+          684.034,
+          376.709
+        ],
+        [
+          614.451,
+          376.709
+        ],
+        [
+          614.451,
+          409.807
+        ],
+        [
+          632.07,
+          409.807
+        ]
+      ],
+      "sourceShapeIds": [
+        63,
+        65,
+        69,
+        71,
+        73,
+        76
+      ],
+      "length": 39.514,
+      "bidirectional": false,
+      "preferredPage": 3
+    },
+    {
+      "id": "pmr-10",
+      "family": "pmr",
+      "label": "Intermedio · elevador BRT → descendente",
+      "level": "I",
+      "slide": 16,
+      "alsoSlide": 15,
+      "points": [
+        [
+          -38.8248,
+          18.72,
+          45.3123
+        ],
+        [
+          -44.5062,
+          18.72,
+          48.0669
+        ],
+        [
+          -59.7979,
+          18.72,
+          12.1034
+        ],
+        [
+          -55.7217,
+          18.72,
+          10.2877
+        ],
+        [
+          -51.3097,
+          18.72,
+          0.0669
+        ],
+        [
+          -25.1277,
+          18.72,
+          -12.5035
+        ],
+        [
+          -21.6138,
+          18.72,
+          -5.1074
+        ],
+        [
+          -30.1721,
+          18.72,
+          -0.9531
+        ],
+        [
+          -27.8731,
+          18.72,
+          3.7094
+        ],
+        [
+          -25.706,
+          18.72,
+          2.6575
+        ]
+      ],
+      "sourcePoints": [
+        [
+          424.286,
+          626.204
+        ],
+        [
+          378.308,
+          626.204
+        ],
+        [
+          377.865,
+          369.125
+        ],
+        [
+          410.479,
+          370.058
+        ],
+        [
+          472.485,
+          323.782
+        ],
+        [
+          684.907,
+          324.576
+        ],
+        [
+          684.034,
+          376.709
+        ],
+        [
+          614.451,
+          376.709
+        ],
+        [
+          614.451,
+          409.807
+        ],
+        [
+          632.07,
+          409.807
+        ]
+      ],
+      "sourceShapeIds": [
+        126,
+        128,
+        143,
+        145,
+        147,
+        71,
+        73,
+        76
+      ],
+      "length": 115.341,
+      "bidirectional": false,
+      "preferredPage": 4
+    },
+    {
+      "id": "pmr-11",
+      "family": "pmr",
+      "label": "Intermedio · elevador BRT → ascendente 1",
+      "level": "I",
+      "slide": 16,
+      "alsoSlide": 15,
+      "points": [
+        [
+          -38.8248,
+          18.72,
+          45.3123
+        ],
+        [
+          -44.5062,
+          18.72,
+          48.0669
+        ],
+        [
+          -18.7674,
+          18.72,
+          88.4065
+        ],
+        [
+          -25.7593,
+          18.72,
+          92.708
+        ],
+        [
+          -38.8117,
+          18.72,
+          99.379
+        ]
+      ],
+      "sourcePoints": [
+        [
+          424.286,
+          626.204
+        ],
+        [
+          378.308,
+          626.204
+        ],
+        [
+          407.166,
+          930.711
+        ],
+        [
+          347.485,
+          935.966
+        ],
+        [
+          240.691,
+          937.941
+        ]
+      ],
+      "sourceShapeIds": [
+        126,
+        130,
+        150,
+        111
+      ],
+      "length": 77.033,
+      "bidirectional": false,
+      "preferredPage": 4
+    },
+    {
+      "id": "pmr-12",
+      "family": "pmr",
+      "label": "Intermedio ascendente 1 · elevador de acceso → plataforma",
+      "level": "I",
+      "slide": 16,
+      "alsoSlide": 15,
+      "points": [
+        [
+          -25.4502,
+          18.72,
+          99.6227
+        ],
+        [
+          -21.8263,
+          18.72,
+          96.6714
+        ],
+        [
+          -25.7593,
+          18.72,
+          92.708
+        ],
+        [
+          -38.8117,
+          18.72,
+          99.379
+        ]
+      ],
+      "sourcePoints": [
+        [
+          325.986,
+          976.694
+        ],
+        [
+          359.371,
+          969.809
+        ],
+        [
+          347.485,
+          935.966
+        ],
+        [
+          240.691,
+          937.941
+        ]
+      ],
+      "sourceShapeIds": [
+        106,
+        109,
+        111
+      ],
+      "length": 24.916,
+      "bidirectional": false,
+      "preferredPage": 4
+    },
+    {
+      "id": "pmr-13",
+      "family": "pmr",
+      "label": "Intermedio ascendente 2 · elevador de acceso → plataforma",
+      "level": "I",
+      "slide": 16,
+      "alsoSlide": 15,
+      "points": [
+        [
+          89.9799,
+          18.72,
+          27.5717
+        ],
+        [
+          91.7995,
+          18.72,
+          22.6837
+        ],
+        [
+          99.1207,
+          18.72,
+          19.134
+        ],
+        [
+          96.2425,
+          18.72,
+          14.2141
+        ],
+        [
+          76.035,
+          18.72,
+          24.3948
+        ],
+        [
+          76.678,
+          18.72,
+          25.6148
+        ],
+        [
+          47.7004,
+          18.72,
+          39.6645
+        ],
+        [
+          50.1189,
+          18.72,
+          43.9837
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1314.786,
+          883.961
+        ],
+        [
+          1343.121,
+          860.867
+        ],
+        [
+          1402.37,
+          860.867
+        ],
+        [
+          1400.532,
+          824.458
+        ],
+        [
+          1235.695,
+          826.667
+        ],
+        [
+          1235.695,
+          835.498
+        ],
+        [
+          1001.185,
+          835.498
+        ],
+        [
+          1002.1,
+          867.159
+        ]
+      ],
+      "sourceShapeIds": [
+        78,
+        81,
+        83,
+        85,
+        93,
+        91,
+        88
+      ],
+      "length": 80.212,
+      "bidirectional": false,
+      "preferredPage": 4
+    },
+    {
+      "id": "pmr-14",
+      "family": "pmr",
+      "label": "Plataforma · elevador descendente → andén",
+      "level": "P",
+      "slide": 17,
+      "alsoSlide": null,
+      "points": [
+        [
+          -25.4327,
+          27.46,
+          2.5151
+        ],
+        [
+          -29.32,
+          27.46,
+          4.3642
+        ],
+        [
+          -20.0235,
+          27.46,
+          31.4048
+        ]
+      ],
+      "sourcePoints": [
+        [
+          556.154,
+          377.409
+        ],
+        [
+          530.0,
+          377.2
+        ],
+        [
+          514.373,
+          549.2
+        ]
+      ],
+      "sourceShapeIds": [
+        28,
+        29
+      ],
+      "length": 32.899,
+      "bidirectional": false,
+      "preferredPage": 5
+    },
+    {
+      "id": "pmr-15",
+      "family": "pmr",
+      "label": "Plataforma · elevador ascendente 1 → andén",
+      "level": "P",
+      "slide": 17,
+      "alsoSlide": null,
+      "points": [
+        [
+          -38.1776,
+          27.46,
+          98.5407
+        ],
+        [
+          -21.688,
+          27.46,
+          87.3189
+        ],
+        [
+          -41.905,
+          27.46,
+          56.5057
+        ]
+      ],
+      "sourcePoints": [
+        [
+          232.6,
+          868.447
+        ],
+        [
+          352.4,
+          850.8
+        ],
+        [
+          327.467,
+          628.495
+        ]
+      ],
+      "sourceShapeIds": [
+        41,
+        43
+      ],
+      "length": 56.799,
+      "bidirectional": false,
+      "preferredPage": 6
+    },
+    {
+      "id": "pmr-16",
+      "family": "pmr",
+      "label": "Plataforma · elevador ascendente 2 → andén",
+      "level": "P",
+      "slide": 17,
+      "alsoSlide": null,
+      "points": [
+        [
+          49.9692,
+          27.46,
+          43.3053
+        ],
+        [
+          46.5731,
+          27.46,
+          36.5983
+        ],
+        [
+          42.0234,
+          27.46,
+          15.8002
+        ]
+      ],
+      "sourcePoints": [
+        [
+          860.0,
+          800.122
+        ],
+        [
+          860.0,
+          754.4
+        ],
+        [
+          892.32,
+          628.495
+        ]
+      ],
+      "sourceShapeIds": [
+        31,
+        33
+      ],
+      "length": 28.808,
+      "bidirectional": false,
+      "preferredPage": 6
+    },
+    {
+      "id": "brt-01",
+      "family": "brt",
+      "label": "Acceso BRT · oeste → escalera norte",
+      "level": "A",
+      "slide": 14,
+      "alsoSlide": null,
+      "points": [
+        [
+          -83.8113,
+          11.02,
+          66.5033
+        ],
+        [
+          -65.0855,
+          11.02,
+          57.6138
+        ]
+      ],
+      "sourcePoints": [
+        [
+          79.2,
+          571.473
+        ],
+        [
+          207.2,
+          572.574
+        ]
+      ],
+      "sourceShapeIds": [
+        148
+      ],
+      "length": 20.729,
+      "bidirectional": false,
+      "preferredPage": 2
+    },
+    {
+      "id": "brt-02",
+      "family": "brt",
+      "label": "Acceso BRT · oeste → escalera sur",
+      "level": "A",
+      "slide": 14,
+      "alsoSlide": null,
+      "points": [
+        [
+          -83.313,
+          11.02,
+          66.4415
+        ],
+        [
+          -63.2491,
+          11.02,
+          61.3766
+        ]
+      ],
+      "sourcePoints": [
+        [
+          82.133,
+          572.494
+        ],
+        [
+          207.2,
+          598.974
+        ]
+      ],
+      "sourceShapeIds": [
+        155
+      ],
+      "length": 20.693,
+      "bidirectional": false,
+      "preferredPage": 2
+    },
+    {
+      "id": "brt-03",
+      "family": "brt",
+      "label": "Acceso BRT · este → escalera",
+      "level": "A",
+      "slide": 14,
+      "alsoSlide": null,
+      "points": [
+        [
+          44.4557,
+          11.02,
+          7.0779
+        ],
+        [
+          -16.1542,
+          11.02,
+          36.4786
+        ],
+        [
+          -23.364,
+          11.02,
+          43.2676
+        ]
+      ],
+      "sourcePoints": [
+        [
+          952.0,
+          587.327
+        ],
+        [
+          536.0,
+          587.327
+        ],
+        [
+          477.6,
+          606.0
+        ]
+      ],
+      "sourceShapeIds": [
+        143,
+        144
+      ],
+      "length": 77.268,
+      "bidirectional": false,
+      "preferredPage": 2
+    },
+    {
+      "id": "brt-04",
+      "family": "brt",
+      "label": "Intermedio BRT · oeste norte → descendente",
+      "level": "I",
+      "slide": 16,
+      "alsoSlide": 15,
+      "points": [
+        [
+          -67.0689,
+          18.72,
+          58.805
+        ],
+        [
+          -47.3428,
+          18.72,
+          49.2408
+        ],
+        [
+          -46.039,
+          18.72,
+          48.6087
+        ],
+        [
+          -61.9048,
+          18.72,
+          12.3969
+        ],
+        [
+          -56.3124,
+          18.72,
+          9.6823
+        ],
+        [
+          -51.5798,
+          18.72,
+          -0.8422
+        ],
+        [
+          -26.76,
+          18.72,
+          -12.8154
+        ]
+      ],
+      "sourcePoints": [
+        [
+          196.396,
+          625.043
+        ],
+        [
+          356.036,
+          625.043
+        ],
+        [
+          366.587,
+          625.043
+        ],
+        [
+          363.094,
+          364.948
+        ],
+        [
+          408.562,
+          364.948
+        ],
+        [
+          473.654,
+          317.824
+        ],
+        [
+          675.208,
+          318.251
+        ]
+      ],
+      "sourceShapeIds": [
+        113,
+        133,
+        137,
+        141
+      ],
+      "length": 108.219,
+      "bidirectional": false,
+      "preferredPage": 4
+    },
+    {
+      "id": "brt-05",
+      "family": "brt",
+      "label": "Intermedio BRT · oeste norte → ascendente 1",
+      "level": "I",
+      "slide": 16,
+      "alsoSlide": 15,
+      "points": [
+        [
+          -67.0689,
+          18.72,
+          58.805
+        ],
+        [
+          -47.3428,
+          18.72,
+          49.2408
+        ],
+        [
+          -43.8867,
+          18.72,
+          52.9694
+        ],
+        [
+          -19.9658,
+          18.72,
+          90.2417
+        ]
+      ],
+      "sourcePoints": [
+        [
+          196.396,
+          625.043
+        ],
+        [
+          356.036,
+          625.043
+        ],
+        [
+          365.646,
+          656.199
+        ],
+        [
+          393.207,
+          937.941
+        ]
+      ],
+      "sourceShapeIds": [
+        113
+      ],
+      "length": 71.295,
+      "bidirectional": false,
+      "preferredPage": 4
+    },
+    {
+      "id": "brt-06",
+      "family": "brt",
+      "label": "Intermedio BRT · oeste sur → descendente",
+      "level": "I",
+      "slide": 16,
+      "alsoSlide": 15,
+      "points": [
+        [
+          -65.2427,
+          18.72,
+          63.3237
+        ],
+        [
+          -43.8867,
+          18.72,
+          52.9694
+        ],
+        [
+          -46.039,
+          18.72,
+          48.6087
+        ],
+        [
+          -61.9048,
+          18.72,
+          12.3969
+        ],
+        [
+          -56.3124,
+          18.72,
+          9.6823
+        ],
+        [
+          -51.5798,
+          18.72,
+          -0.8422
+        ],
+        [
+          -26.76,
+          18.72,
+          -12.8154
+        ]
+      ],
+      "sourcePoints": [
+        [
+          192.816,
+          656.199
+        ],
+        [
+          365.646,
+          656.199
+        ],
+        [
+          366.587,
+          625.043
+        ],
+        [
+          363.094,
+          364.948
+        ],
+        [
+          408.562,
+          364.948
+        ],
+        [
+          473.654,
+          317.824
+        ],
+        [
+          675.208,
+          318.251
+        ]
+      ],
+      "sourceShapeIds": [
+        115,
+        133,
+        137,
+        141
+      ],
+      "length": 113.445,
+      "bidirectional": false,
+      "preferredPage": 4
+    },
+    {
+      "id": "brt-07",
+      "family": "brt",
+      "label": "Intermedio BRT · oeste sur → ascendente 1",
+      "level": "I",
+      "slide": 16,
+      "alsoSlide": 15,
+      "points": [
+        [
+          -65.2427,
+          18.72,
+          63.3237
+        ],
+        [
+          -43.8867,
+          18.72,
+          52.9694
+        ],
+        [
+          -19.9658,
+          18.72,
+          90.2417
+        ]
+      ],
+      "sourcePoints": [
+        [
+          192.816,
+          656.199
+        ],
+        [
+          365.646,
+          656.199
+        ],
+        [
+          393.207,
+          937.941
+        ]
+      ],
+      "sourceShapeIds": [
+        115
+      ],
+      "length": 68.022,
+      "bidirectional": false,
+      "preferredPage": 4
+    },
+    {
+      "id": "brt-08",
+      "family": "brt",
+      "label": "Intermedio BRT · este → descendente",
+      "level": "I",
+      "slide": 16,
+      "alsoSlide": 15,
+      "points": [
+        [
+          -22.696,
+          18.72,
+          42.6952
+        ],
+        [
+          -43.8867,
+          18.72,
+          52.9694
+        ],
+        [
+          -46.039,
+          18.72,
+          48.6087
+        ],
+        [
+          -61.9048,
+          18.72,
+          12.3969
+        ],
+        [
+          -56.3124,
+          18.72,
+          9.6823
+        ],
+        [
+          -51.5798,
+          18.72,
+          -0.8422
+        ],
+        [
+          -26.76,
+          18.72,
+          -12.8154
+        ]
+      ],
+      "sourcePoints": [
+        [
+          537.138,
+          656.199
+        ],
+        [
+          365.646,
+          656.199
+        ],
+        [
+          366.587,
+          625.043
+        ],
+        [
+          363.094,
+          364.948
+        ],
+        [
+          408.562,
+          364.948
+        ],
+        [
+          473.654,
+          317.824
+        ],
+        [
+          675.208,
+          318.251
+        ]
+      ],
+      "sourceShapeIds": [
+        116,
+        133,
+        137,
+        141
+      ],
+      "length": 113.261,
+      "bidirectional": false,
+      "preferredPage": 4
+    },
+    {
+      "id": "brt-09",
+      "family": "brt",
+      "label": "Intermedio BRT · este → ascendente 1",
+      "level": "I",
+      "slide": 16,
+      "alsoSlide": 15,
+      "points": [
+        [
+          -22.696,
+          18.72,
+          42.6952
+        ],
+        [
+          -43.8867,
+          18.72,
+          52.9694
+        ],
+        [
+          -19.9658,
+          18.72,
+          90.2417
+        ]
+      ],
+      "sourcePoints": [
+        [
+          537.138,
+          656.199
+        ],
+        [
+          365.646,
+          656.199
+        ],
+        [
+          393.207,
+          937.941
+        ]
+      ],
+      "sourceShapeIds": [
+        116
+      ],
+      "length": 67.838,
+      "bidirectional": false,
+      "preferredPage": 4
+    },
+    {
+      "id": "r4-03-reverse",
+      "family": "r4",
+      "label": "Plataforma · andén ascendente ↔ escalera",
+      "level": "P",
+      "slide": 17,
+      "alsoSlide": null,
+      "points": [
+        [
+          71.6818,
+          27.46,
+          34.7479
+        ],
+        [
+          85.1534,
+          27.46,
+          28.2142
+        ],
+        [
+          82.0648,
+          27.46,
+          21.7966
+        ],
+        [
+          46.0083,
+          27.46,
+          39.2841
+        ],
+        [
+          40.6041,
+          27.46,
+          17.5675
+        ],
+        [
+          -0.2311,
+          27.46,
+          37.3727
+        ],
+        [
+          -1.1556,
+          27.46,
+          35.5468
+        ],
+        [
+          -0.2149,
+          27.46,
+          37.3648
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1000.731,
+          810.922
+        ],
+        [
+          1091.397,
+          810.922
+        ],
+        [
+          1092.267,
+          767.6
+        ],
+        [
+          849.6,
+          767.6
+        ],
+        [
+          879.816,
+          634.4
+        ],
+        [
+          604.988,
+          634.4
+        ],
+        [
+          604.988,
+          621.953
+        ],
+        [
+          605.097,
+          634.4
+        ]
+      ],
+      "sourceShapeIds": [
+        76,
+        78,
+        80,
+        84,
+        88,
+        91
+      ],
+      "length": 134.025,
+      "bidirectional": true,
+      "preferredPage": 6
+    }
+  ],
+  "links": [
+    {
+      "id": "link-r1-01-r1-04",
+      "family": "r1",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -73.5831,
+          9.87,
+          10.3858
+        ],
+        [
+          -70.4145,
+          18.72,
+          6.8311
+        ]
+      ],
+      "length": 10.05,
+      "schematic": true
+    },
+    {
+      "id": "link-r1-04-r1-08",
+      "family": "r1",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -37.4074,
+          18.72,
+          5.9605
+        ],
+        [
+          -51.2183,
+          27.46,
+          11.2355
+        ]
+      ],
+      "length": 17.174,
+      "schematic": true
+    },
+    {
+      "id": "link-r1-01-r1-06",
+      "family": "r1",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -73.5831,
+          9.87,
+          10.3858
+        ],
+        [
+          -70.4145,
+          18.72,
+          6.8311
+        ]
+      ],
+      "length": 10.05,
+      "schematic": true
+    },
+    {
+      "id": "link-r1-06-r1-09",
+      "family": "r1",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -12.6614,
+          18.72,
+          -6.0514
+        ],
+        [
+          1.0188,
+          27.46,
+          -11.6688
+        ]
+      ],
+      "length": 17.178,
+      "schematic": true
+    },
+    {
+      "id": "link-r1-02-r1-04",
+      "family": "r1",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -73.5831,
+          9.87,
+          10.3858
+        ],
+        [
+          -70.4145,
+          18.72,
+          6.8311
+        ]
+      ],
+      "length": 10.05,
+      "schematic": true
+    },
+    {
+      "id": "link-r1-02-r1-06",
+      "family": "r1",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -73.5831,
+          9.87,
+          10.3858
+        ],
+        [
+          -70.4145,
+          18.72,
+          6.8311
+        ]
+      ],
+      "length": 10.05,
+      "schematic": true
+    },
+    {
+      "id": "link-r1-03-r1-05",
+      "family": "r1",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          3.7743,
+          9.87,
+          -22.3766
+        ],
+        [
+          -4.9219,
+          18.72,
+          -28.1459
+        ]
+      ],
+      "length": 13.683,
+      "schematic": true
+    },
+    {
+      "id": "link-r1-05-r1-08",
+      "family": "r1",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -37.4074,
+          18.72,
+          5.9605
+        ],
+        [
+          -51.2183,
+          27.46,
+          11.2355
+        ]
+      ],
+      "length": 17.174,
+      "schematic": true
+    },
+    {
+      "id": "link-r1-03-r1-07",
+      "family": "r1",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          3.7743,
+          9.87,
+          -22.3766
+        ],
+        [
+          -4.9219,
+          18.72,
+          -28.1459
+        ]
+      ],
+      "length": 13.683,
+      "schematic": true
+    },
+    {
+      "id": "link-r1-07-r1-09",
+      "family": "r1",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -12.6614,
+          18.72,
+          -6.0514
+        ],
+        [
+          1.0188,
+          27.46,
+          -11.6688
+        ]
+      ],
+      "length": 17.178,
+      "schematic": true
+    },
+    {
+      "id": "link-r2-01-r2-02",
+      "family": "r2",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -18.6971,
+          11.02,
+          104.8153
+        ],
+        [
+          -12.8964,
+          18.72,
+          100.1198
+        ]
+      ],
+      "length": 10.723,
+      "schematic": true
+    },
+    {
+      "id": "link-r2-02-r2-03",
+      "family": "r2",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -21.2979,
+          18.72,
+          104.928
+        ],
+        [
+          -10.9854,
+          27.46,
+          100.5185
+        ]
+      ],
+      "length": 14.219,
+      "schematic": true
+    },
+    {
+      "id": "link-r3-01-r3-03",
+      "family": "r3",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          67.2349,
+          12.12,
+          36.931
+        ],
+        [
+          76.3533,
+          18.72,
+          32.019
+        ]
+      ],
+      "length": 12.281,
+      "schematic": true
+    },
+    {
+      "id": "link-r3-03-r3-04",
+      "family": "r3",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          67.1761,
+          18.72,
+          35.1201
+        ],
+        [
+          70.8796,
+          27.46,
+          33.1637
+        ]
+      ],
+      "length": 9.692,
+      "schematic": true
+    },
+    {
+      "id": "link-r3-02-r3-03",
+      "family": "r3",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          67.2349,
+          12.12,
+          36.931
+        ],
+        [
+          76.3533,
+          18.72,
+          32.019
+        ]
+      ],
+      "length": 12.281,
+      "schematic": true
+    },
+    {
+      "id": "link-pmr-01-pmr-09",
+      "family": "pmr",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -12.355,
+          9.87,
+          -16.9712
+        ],
+        [
+          -18.8246,
+          18.72,
+          -19.0718
+        ]
+      ],
+      "length": 11.162,
+      "schematic": true
+    },
+    {
+      "id": "link-pmr-09-pmr-14",
+      "family": "pmr",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -25.706,
+          18.72,
+          2.6575
+        ],
+        [
+          -25.4327,
+          27.46,
+          2.5151
+        ]
+      ],
+      "length": 8.745,
+      "schematic": true
+    },
+    {
+      "id": "link-pmr-02-pmr-13",
+      "family": "pmr",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          90.5068,
+          12.12,
+          27.0652
+        ],
+        [
+          89.9799,
+          18.72,
+          27.5717
+        ]
+      ],
+      "length": 6.64,
+      "schematic": true
+    },
+    {
+      "id": "link-pmr-13-pmr-16",
+      "family": "pmr",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          50.1189,
+          18.72,
+          43.9837
+        ],
+        [
+          49.9692,
+          27.46,
+          43.3053
+        ]
+      ],
+      "length": 8.768,
+      "schematic": true
+    },
+    {
+      "id": "link-pmr-03-pmr-13",
+      "family": "pmr",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          90.5068,
+          12.12,
+          27.0652
+        ],
+        [
+          89.9799,
+          18.72,
+          27.5717
+        ]
+      ],
+      "length": 6.64,
+      "schematic": true
+    },
+    {
+      "id": "link-pmr-04-pmr-12",
+      "family": "pmr",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -29.6712,
+          11.02,
+          102.1571
+        ],
+        [
+          -25.4502,
+          18.72,
+          99.6227
+        ]
+      ],
+      "length": 9.139,
+      "schematic": true
+    },
+    {
+      "id": "link-pmr-12-pmr-15",
+      "family": "pmr",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -38.8117,
+          18.72,
+          99.379
+        ],
+        [
+          -38.1776,
+          27.46,
+          98.5407
+        ]
+      ],
+      "length": 8.803,
+      "schematic": true
+    },
+    {
+      "id": "link-pmr-05-pmr-12",
+      "family": "pmr",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -29.6712,
+          11.02,
+          102.1571
+        ],
+        [
+          -25.4502,
+          18.72,
+          99.6227
+        ]
+      ],
+      "length": 9.139,
+      "schematic": true
+    },
+    {
+      "id": "link-pmr-06-pmr-12",
+      "family": "pmr",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -29.6712,
+          11.02,
+          102.1571
+        ],
+        [
+          -25.4502,
+          18.72,
+          99.6227
+        ]
+      ],
+      "length": 9.139,
+      "schematic": true
+    },
+    {
+      "id": "link-pmr-07-pmr-10",
+      "family": "pmr",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -32.6607,
+          11.02,
+          42.536
+        ],
+        [
+          -38.8248,
+          18.72,
+          45.3123
+        ]
+      ],
+      "length": 10.247,
+      "schematic": true
+    },
+    {
+      "id": "link-pmr-10-pmr-14",
+      "family": "pmr",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -25.706,
+          18.72,
+          2.6575
+        ],
+        [
+          -25.4327,
+          27.46,
+          2.5151
+        ]
+      ],
+      "length": 8.745,
+      "schematic": true
+    },
+    {
+      "id": "link-pmr-07-pmr-11",
+      "family": "pmr",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -32.6607,
+          11.02,
+          42.536
+        ],
+        [
+          -38.8248,
+          18.72,
+          45.3123
+        ]
+      ],
+      "length": 10.247,
+      "schematic": true
+    },
+    {
+      "id": "link-pmr-11-pmr-15",
+      "family": "pmr",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -38.8117,
+          18.72,
+          99.379
+        ],
+        [
+          -38.1776,
+          27.46,
+          98.5407
+        ]
+      ],
+      "length": 8.803,
+      "schematic": true
+    },
+    {
+      "id": "link-pmr-08-pmr-10",
+      "family": "pmr",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -32.6607,
+          11.02,
+          42.536
+        ],
+        [
+          -38.8248,
+          18.72,
+          45.3123
+        ]
+      ],
+      "length": 10.247,
+      "schematic": true
+    },
+    {
+      "id": "link-pmr-08-pmr-11",
+      "family": "pmr",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -32.6607,
+          11.02,
+          42.536
+        ],
+        [
+          -38.8248,
+          18.72,
+          45.3123
+        ]
+      ],
+      "length": 10.247,
+      "schematic": true
+    },
+    {
+      "id": "link-brt-01-brt-04",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -65.0855,
+          11.02,
+          57.6138
+        ],
+        [
+          -67.0689,
+          18.72,
+          58.805
+        ]
+      ],
+      "length": 8.04,
+      "schematic": true
+    },
+    {
+      "id": "link-brt-01-brt-05",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -65.0855,
+          11.02,
+          57.6138
+        ],
+        [
+          -67.0689,
+          18.72,
+          58.805
+        ]
+      ],
+      "length": 8.04,
+      "schematic": true
+    },
+    {
+      "id": "link-brt-02-brt-06",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -63.2491,
+          11.02,
+          61.3766
+        ],
+        [
+          -65.2427,
+          18.72,
+          63.3237
+        ]
+      ],
+      "length": 8.189,
+      "schematic": true
+    },
+    {
+      "id": "link-brt-02-brt-07",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -63.2491,
+          11.02,
+          61.3766
+        ],
+        [
+          -65.2427,
+          18.72,
+          63.3237
+        ]
+      ],
+      "length": 8.189,
+      "schematic": true
+    },
+    {
+      "id": "link-brt-03-brt-08",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -23.364,
+          11.02,
+          43.2676
+        ],
+        [
+          -22.696,
+          18.72,
+          42.6952
+        ]
+      ],
+      "length": 7.75,
+      "schematic": true
+    },
+    {
+      "id": "link-brt-03-brt-09",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -23.364,
+          11.02,
+          43.2676
+        ],
+        [
+          -22.696,
+          18.72,
+          42.6952
+        ]
+      ],
+      "length": 7.75,
+      "schematic": true
+    },
+    {
+      "id": "link-r4-02-r4-01",
+      "family": "r4",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "P",
+      "toLevel": "I",
+      "points": [
+        [
+          -0.3816,
+          27.46,
+          -14.4802
+        ],
+        [
+          -13.422,
+          18.72,
+          -8.1155
+        ]
+      ],
+      "length": 16.94,
+      "schematic": true
+    },
+    {
+      "id": "link-r4-01-r4-03-reverse",
+      "family": "r4",
+      "label": "Enlace esquemático entre niveles",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          67.9897,
+          18.72,
+          36.6638
+        ],
+        [
+          71.6818,
+          27.46,
+          34.7479
+        ]
+      ],
+      "length": 9.679,
+      "schematic": true
+    }
+  ],
+  "journeys": [
+    {
+      "id": "journey-1",
+      "family": "r1",
+      "label": "Acceso descendente · ingreso sur · occidental",
+      "legs": [
+        "r1-01",
+        "link-r1-01-r1-04",
+        "r1-04",
+        "link-r1-04-r1-08",
+        "r1-08"
+      ]
+    },
+    {
+      "id": "journey-2",
+      "family": "r1",
+      "label": "Acceso descendente · ingreso sur · oriental",
+      "legs": [
+        "r1-01",
+        "link-r1-01-r1-06",
+        "r1-06",
+        "link-r1-06-r1-09",
+        "r1-09"
+      ]
+    },
+    {
+      "id": "journey-3",
+      "family": "r1",
+      "label": "Acceso descendente · ingreso occidental · occidental",
+      "legs": [
+        "r1-02",
+        "link-r1-02-r1-04",
+        "r1-04",
+        "link-r1-04-r1-08",
+        "r1-08"
+      ]
+    },
+    {
+      "id": "journey-4",
+      "family": "r1",
+      "label": "Acceso descendente · ingreso occidental · oriental",
+      "legs": [
+        "r1-02",
+        "link-r1-02-r1-06",
+        "r1-06",
+        "link-r1-06-r1-09",
+        "r1-09"
+      ]
+    },
+    {
+      "id": "journey-5",
+      "family": "r1",
+      "label": "Acceso descendente · ingreso oriental · occidental",
+      "legs": [
+        "r1-03",
+        "link-r1-03-r1-05",
+        "r1-05",
+        "link-r1-05-r1-08",
+        "r1-08"
+      ]
+    },
+    {
+      "id": "journey-6",
+      "family": "r1",
+      "label": "Acceso descendente · ingreso oriental · oriental",
+      "legs": [
+        "r1-03",
+        "link-r1-03-r1-07",
+        "r1-07",
+        "link-r1-07-r1-09",
+        "r1-09"
+      ]
+    },
+    {
+      "id": "journey-7",
+      "family": "r2",
+      "label": "Acceso ascendente 1 · escalera",
+      "legs": [
+        "r2-01",
+        "link-r2-01-r2-02",
+        "r2-02",
+        "link-r2-02-r2-03",
+        "r2-03"
+      ]
+    },
+    {
+      "id": "journey-8",
+      "family": "r3",
+      "label": "Acceso ascendente 2 · este · escalera",
+      "legs": [
+        "r3-01",
+        "link-r3-01-r3-03",
+        "r3-03",
+        "link-r3-03-r3-04",
+        "r3-04"
+      ]
+    },
+    {
+      "id": "journey-9",
+      "family": "r3",
+      "label": "Acceso ascendente 2 · oeste · escalera",
+      "legs": [
+        "r3-02",
+        "link-r3-02-r3-03",
+        "r3-03",
+        "link-r3-03-r3-04",
+        "r3-04"
+      ]
+    },
+    {
+      "id": "journey-10",
+      "family": "pmr",
+      "label": "Acceso descendente · elevador de plataforma",
+      "legs": [
+        "pmr-01",
+        "link-pmr-01-pmr-09",
+        "pmr-09",
+        "link-pmr-09-pmr-14",
+        "pmr-14"
+      ]
+    },
+    {
+      "id": "journey-11",
+      "family": "pmr",
+      "label": "Acceso ascendente 2 · este · plataforma",
+      "legs": [
+        "pmr-02",
+        "link-pmr-02-pmr-13",
+        "pmr-13",
+        "link-pmr-13-pmr-16",
+        "pmr-16"
+      ]
+    },
+    {
+      "id": "journey-12",
+      "family": "pmr",
+      "label": "Acceso ascendente 2 · oeste · plataforma",
+      "legs": [
+        "pmr-03",
+        "link-pmr-03-pmr-13",
+        "pmr-13",
+        "link-pmr-13-pmr-16",
+        "pmr-16"
+      ]
+    },
+    {
+      "id": "journey-13",
+      "family": "pmr",
+      "label": "Acceso ascendente 1 · sur · plataforma",
+      "legs": [
+        "pmr-04",
+        "link-pmr-04-pmr-12",
+        "pmr-12",
+        "link-pmr-12-pmr-15",
+        "pmr-15"
+      ]
+    },
+    {
+      "id": "journey-14",
+      "family": "pmr",
+      "label": "Acceso ascendente 1 · oeste · plataforma",
+      "legs": [
+        "pmr-05",
+        "link-pmr-05-pmr-12",
+        "pmr-12",
+        "link-pmr-12-pmr-15",
+        "pmr-15"
+      ]
+    },
+    {
+      "id": "journey-15",
+      "family": "pmr",
+      "label": "Acceso ascendente 1 · este · plataforma",
+      "legs": [
+        "pmr-06",
+        "link-pmr-06-pmr-12",
+        "pmr-12",
+        "link-pmr-12-pmr-15",
+        "pmr-15"
+      ]
+    },
+    {
+      "id": "journey-16",
+      "family": "pmr",
+      "label": "BRT · extremo oriental · descendente",
+      "legs": [
+        "pmr-07",
+        "link-pmr-07-pmr-10",
+        "pmr-10",
+        "link-pmr-10-pmr-14",
+        "pmr-14"
+      ]
+    },
+    {
+      "id": "journey-17",
+      "family": "pmr",
+      "label": "BRT · extremo oriental · ascendente 1",
+      "legs": [
+        "pmr-07",
+        "link-pmr-07-pmr-11",
+        "pmr-11",
+        "link-pmr-11-pmr-15",
+        "pmr-15"
+      ]
+    },
+    {
+      "id": "journey-18",
+      "family": "pmr",
+      "label": "BRT · extremo occidental · descendente",
+      "legs": [
+        "pmr-08",
+        "link-pmr-08-pmr-10",
+        "pmr-10",
+        "link-pmr-10-pmr-14",
+        "pmr-14"
+      ]
+    },
+    {
+      "id": "journey-19",
+      "family": "pmr",
+      "label": "BRT · extremo occidental · ascendente 1",
+      "legs": [
+        "pmr-08",
+        "link-pmr-08-pmr-11",
+        "pmr-11",
+        "link-pmr-11-pmr-15",
+        "pmr-15"
+      ]
+    },
+    {
+      "id": "journey-20",
+      "family": "brt",
+      "label": "Acceso BRT · oeste · descendente",
+      "legs": [
+        "brt-01",
+        "link-brt-01-brt-04",
+        "brt-04"
+      ]
+    },
+    {
+      "id": "journey-21",
+      "family": "brt",
+      "label": "Acceso BRT · oeste · ascendente 1",
+      "legs": [
+        "brt-01",
+        "link-brt-01-brt-05",
+        "brt-05"
+      ]
+    },
+    {
+      "id": "journey-22",
+      "family": "brt",
+      "label": "Acceso BRT · oeste · descendente",
+      "legs": [
+        "brt-02",
+        "link-brt-02-brt-06",
+        "brt-06"
+      ]
+    },
+    {
+      "id": "journey-23",
+      "family": "brt",
+      "label": "Acceso BRT · oeste · ascendente 1",
+      "legs": [
+        "brt-02",
+        "link-brt-02-brt-07",
+        "brt-07"
+      ]
+    },
+    {
+      "id": "journey-24",
+      "family": "brt",
+      "label": "Acceso BRT · este · descendente",
+      "legs": [
+        "brt-03",
+        "link-brt-03-brt-08",
+        "brt-08"
+      ]
+    },
+    {
+      "id": "journey-25",
+      "family": "brt",
+      "label": "Acceso BRT · este · ascendente 1",
+      "legs": [
+        "brt-03",
+        "link-brt-03-brt-09",
+        "brt-09"
+      ]
+    },
+    {
+      "id": "journey-r4",
+      "family": "r4",
+      "label": "Cambio de sentido · andén descendente → andén ascendente",
+      "legs": [
+        "r4-02",
+        "link-r4-02-r4-01",
+        "r4-01",
+        "link-r4-01-r4-03-reverse",
+        "r4-03-reverse"
+      ],
+      "bidirectional": true
+    }
+  ]
+}
