@@ -1,6 +1,6 @@
 /* One persistent document owns fullscreen; only its scene frame is replaced. */
 (() => {
-  const pages = new Set(['index.html', 'bim.html', 'predial.html', 'documents.html', 'model-register.html']);
+  const pages = new Set(['index.html', 'bim.html', 'predial.html', 'documents.html', 'model-register.html', 'ifc-audit.html']);
   const base = new URL('./', location.href);
   function route(value) {
     const url = new URL(value, base);
@@ -30,7 +30,7 @@
     fresh.title = 'Metro Digital · escena activa';
     fresh.allow = 'fullscreen';
     fresh.allowFullscreen = true;
-    next.source.searchParams.set('brand', '20261006-ortho-5cm-tiles');
+    next.source.searchParams.set('brand', '20261021-ifc-audit-v1');
     fresh.src = next.source.href;
     fresh.addEventListener('load', () => {
       status.hidden = true;

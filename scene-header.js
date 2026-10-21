@@ -10,7 +10,7 @@ if(header){
   nav.className='headActions';nav.setAttribute('aria-label','Navegación de módulos');
   nav.innerHTML="<a class=\"moduleLink\" href=\"./index.html\">Inicio</a><details class=\"headerModuleMenu\"><summary>BIM</summary><div class=\"headerModulePanel\"><a href=\"./index.html?view=urban\">Modelos</a><a href=\"./bim.html\">Avance</a></div></details><details class=\"headerModuleMenu\"><summary>Documental</summary><div class=\"headerModulePanel\"><a href=\"./predial.html\">Predial</a><a href=\"./documents.html\">Documentos</a></div></details><button id=\"language\" title=\"Cambiar idioma\">EN</button><button id=\"reference\" data-i18n=\"reference\">Referencia</button><button id=\"help\" title=\"Ayuda\" aria-label=\"Ayuda\">?</button><button id=\"fullscreen\" data-scene-fullscreen title=\"Ampliar a página completa\" aria-label=\"Ampliar a página completa\">⛶</button>";
   if(fullscreen){fullscreen.textContent='⛶';nav.querySelector('[data-scene-fullscreen]').replaceWith(fullscreen);}
-  const activeHref={bim:'./bim.html',predial:'./predial.html',documentos:'./documents.html',registro:'./index.html?view=urban'}[scene];
+  const activeHref={bim:'./bim.html',predial:'./predial.html',documentos:'./documents.html',registro:'./index.html?view=urban','ifc-audit':'./ifc-audit.html'}[scene];
   const active=Array.from(nav.querySelectorAll('a')).find(a=>a.getAttribute('href')===activeHref);
   active?.classList.add('active');if(scene!=='registro')active?.setAttribute('aria-current','page');
   let language='es';
@@ -18,6 +18,7 @@ if(header){
   nav.querySelector('#reference').onclick=()=>{const button=document.querySelector('.dataSourceToggle');if(button?.getAttribute('aria-expanded')!=='true')button?.click();};
   const dialog=document.createElement('dialog');dialog.className='sceneHeaderDialog';dialog.setAttribute('aria-label','Ayuda de la escena');document.body.append(dialog);
   const help={
+   'ifc-audit':['Selecciona ubicación y archivo IFC. Combina filtros de clase, nivel, ID y texto para aislar entidades.','Mostrar dashboards presenta cantidades y cobertura. El informe genera una hoja por tipología de todo el archivo seleccionado. Las revisiones visuales se guardan en este navegador y se pueden exportar.'],
    predial:['Arrastra el mapa para desplazarlo y usa la rueda o + y − para acercar o alejar. Encuadrar restaura la vista general.','Selecciona un predio para consultar su estado y documentos. Compara los predios adquiridos con Huellas estaciones y ajusta su opacidad.'],
    bim:['Arrastra para orbitar el modelo y usa la rueda para acercar o alejar. Encuadrar restaura la vista de los modelos filtrados.','Filtra por sector, unidad de ejecución, disciplina o estado. Selecciona geometrías o filas para consultar el avance y su relación con el cronograma.'],
    documentos:['Selecciona un documento del catálogo o abre un archivo local. Usa los filtros para buscar por formato, sector o predio.','Los controles de hoja y página dependen del formato seleccionado. Los vínculos prediales se habilitan con el Excel en esta sesión.'],
@@ -33,3 +34,6 @@ if(header){
   };
  }
 }
+
+const ifcAuditMenu=header?.querySelector('.headerModulePanel');
+if(ifcAuditMenu&&!ifcAuditMenu.querySelector('a[href="./ifc-audit.html"]')){const link=document.createElement('a');link.href='./ifc-audit.html';link.textContent='Control IFC';if(scene==='ifc-audit'){link.classList.add('active');link.setAttribute('aria-current','page');}ifcAuditMenu.append(link);}

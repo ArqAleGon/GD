@@ -1,4 +1,4 @@
-import './scene-header.js?v=20261005-shared-header-v1';
+import './scene-header.js?v=20261021-ifc-audit-v1';
 const current=document.body.dataset.scene||'scene';
 import './scene-bridge.js?v=20261002-v1';
 
