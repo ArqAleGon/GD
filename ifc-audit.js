@@ -4,7 +4,7 @@ import {GLTFLoader} from './GLTFLoader.js';
 import {MeshoptDecoder} from './meshopt_decoder.module.js';
 import {modelLoading,loadingFrame} from './model-loading.js';
 import {labels,metadata,identity,matches,semantic,geometric,summary,groupCounts,csv,imagePDF} from './ifc-audit-core.mjs';
-import {definitionFor,drawDefinition} from './ifc-entity-definitions.mjs?v=20261021-iso-v1';
+import {definitionFor,drawDefinition} from './ifc-entity-definitions.mjs?v=20261021-iso-v2';
 const $=id=>document.getElementById(id),safe=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const BASE='https://arqalegon.github.io/GD/',STORE='emb-ifc-correspondence-v1',verdictNames={pending:'Pendiente',yes:'Coincide',partial:'Parcial',no:'No coincide'};
 const palette=['#57cfc1','#ffbf73','#8cafff','#cc9afb','#ff8e9d','#88d7e8','#a5cb71','#e3b8a0','#9aadc0','#ffd776','#82beff','#cd93c9'];
