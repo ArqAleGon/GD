@@ -51,9 +51,9 @@ export class SpaceStudy{
   }
  }
  beforePov(){this.group.visible=false;$('#space-labels').hidden=true;}
- beforeAxon(){this.group.visible=this.enabled;}
+ beforeAxon(){this.group.visible=this.enabled&&!this.scene.fullStation;}
  afterAxon(expanded){
-  const container=$('#space-labels');container.hidden=!!expanded&&expanded!=='axon-panel';if(container.hidden)return;
+  const container=$('#space-labels');container.hidden=this.scene.fullStation||(!!expanded&&expanded!=='axon-panel');if(container.hidden)return;
   const box=this.scene.axon.getBoundingClientRect(),occupied=[];Object.assign(container.style,{left:box.left+'px',top:box.top+'px',width:box.width+'px',height:box.height+'px'});this.scene.axonCamera.updateMatrixWorld();
   const sorted=[...this.items].sort((a,b)=>Number(b.record.id===this.selected)-Number(a.record.id===this.selected)||b.record.area-a.record.area);
   for(const item of sorted){const r=item.record,p=item.anchor.clone().project(this.scene.axonCamera);let visible=this.enabled&&this.labelsEnabled&&r.level===this.level?.id&&this.matches(r)&&p.z>=-1&&p.z<=1&&Math.abs(p.x)<.97&&Math.abs(p.y)<.95;const x=(p.x+1)*box.width/2,y=(1-p.y)*box.height/2,selected=r.id===this.selected;

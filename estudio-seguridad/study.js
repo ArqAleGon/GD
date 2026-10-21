@@ -1,7 +1,7 @@
-import {PlanViewer} from './study-plans.js?v=20261021-structure-v07';
-import {StudyScene} from './study-scene.js?v=20261021-structure-v07';
-import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261021-structure-v07';
-import {SpaceStudy} from './study-spaces.js?v=20261021-structure-v07';
+import {PlanViewer} from './study-plans.js?v=20261021-full-station-v08';
+import {StudyScene} from './study-scene.js?v=20261021-full-station-v08';
+import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261021-full-station-v08';
+import {SpaceStudy} from './study-spaces.js?v=20261021-full-station-v08';
 const $=s=>document.querySelector(s);
 const levels=[
  {id:'B',name:'Sótano',ifc:'ARC_PL_00_BASEMENT',cutMin:2552.8,cutMax:2558.8},
@@ -17,7 +17,7 @@ const defaults=()=>({fov:90,range:25,yaw:0,tilt:0});
 initDrawers();initFullscreen(()=>{window.dispatchEvent(new Event('resize'));});
 const canView=r=>!!r&&(typeOf(r)==='F'||!!settings.profile);
 const typeOf=r=>Object.keys(types).find(k=>(r.ifcTypeName||'').includes(types[k].ifcFamilyToken));
-async function json(url){const request=new URL(url,location.href);request.searchParams.set('v','20261021-structure-v07');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
+async function json(url){const request=new URL(url,location.href);request.searchParams.set('v','20261021-full-station-v08');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
 function options(select,items){select.replaceChildren(...items.map(([value,text])=>{const o=document.createElement('option');o.value=value;o.textContent=text;return o;}));}
 for(const selector of ['#entry-level','#level-select']){options($(selector),levels.map(l=>[l.id,l.name]));$(selector).value=level.id;}
 $('#entry-dialog').showModal();
@@ -28,7 +28,7 @@ function cameraLabel(r){const type=types[typeOf(r)]?.label||'Cámara';const vari
 function updateCameraMenu(){const cams=records.filter(r=>r.ifcStorey===level.ifc).sort((a,b)=>(typeOf(a)==='F'?0:1)-(typeOf(b)==='F'?0:1)||String(a.mark||'').localeCompare(String(b.mark||''),undefined,{numeric:true}));options($('#camera-select'),cams.map(r=>[r.ifcGlobalId,cameraLabel(r)]));$('#camera-select').disabled=!cams.length;$('#camera-count').textContent=`${cams.length} cámaras · ${cams.filter(r=>typeOf(r)==='F').length} fijas en este nivel`;return cams;}
 function selectCamera(id){
  const record=records.find(r=>r.ifcGlobalId===id);if(!record)return;
- if(record.ifcStorey!==level.ifc){level=levels.find(l=>l.ifc===record.ifcStorey);$('#level-select').value=level.id;updateCameraMenu();populateSheets();scene?.setLevel(level);}
+ if(record.ifcStorey!==level.ifc){level=levels.find(l=>l.ifc===record.ifcStorey);$('#level-select').value=level.id;updateCameraMenu();populateSheets();scene?.setLevel(level);spaces?.setLevel(level);syncAxonView();}
  active=record;$('#camera-select').value=id;settings=settingsById.get(id)||defaults();settingsById.set(id,settings);
  $('#active-title').textContent=cameraLabel(record);$('#camera-location').textContent=`${level.name} · ${record.ifcGlobalId}`;
  $('#camera-description').textContent=prop(record,'Other','Description-')||record.ifcTypeName;
@@ -43,7 +43,7 @@ function selectCamera(id){
 }
 function updateOptics(){for(const k of ['fov','range','yaw','tilt'])$('#'+k+'-value').textContent=settings[k]+(k==='range'?' m':'°');$('#fov-summary').textContent=canView(active)?`Evaluación: ${settings.fov}° H · cono ${settings.range} m`:'Perspectiva solo para Fixed Camera';scene?.select(active,settings);planView.select(active,canView(active)?scene?.pose:null,settings);if(scene?.pose&&canView(active)){const d=scene.pose.direction,heading=(Math.atan2(d.x,-d.z)*180/Math.PI+360)%360,pitch=Math.asin(Math.max(-1,Math.min(1,d.y)))*180/Math.PI;const rows=$('#position-specs').lastElementChild;if(rows)rows.querySelector('dd').textContent=`${heading.toFixed(1)}° / ${pitch.toFixed(1)}°`;}}
 function updatePovMessage(){const fixed=canView(active);$('#pov-message').hidden=!!(fixed&&modelsReady);$('#pov-badge').hidden=!(fixed&&modelsReady);$('#pov-badge').textContent=fixed?cameraLabel(active):'';$('#pov-message').textContent=!active?'Selecciona una cámara fija.':!fixed?'Consulta la ficha y ubicación. Aplica un perfil del catálogo para evaluar una vista en esta posición.':!modelsReady?'Cargando geometría detallada para la perspectiva…':'';}
-function changeLevel(id){level=levels.find(l=>l.id===id)||levels[1];$('#level-select').value=level.id;const cams=updateCameraMenu();populateSheets();scene?.setLevel(level);spaces?.setLevel(level);$('#axon-subtitle').textContent=`${level.name} · corte de ${level.cutMin.toFixed(1)} a ${level.cutMax.toFixed(1)} m`;selectCamera(cams[0]?.ifcGlobalId);}
+function changeLevel(id){level=levels.find(l=>l.id===id)||levels[1];$('#level-select').value=level.id;const cams=updateCameraMenu();populateSheets();scene?.setLevel(level);spaces?.setLevel(level);syncAxonView();selectCamera(cams[0]?.ifcGlobalId);}
 function showError(where,text){$(where).textContent=text;$(where).classList.add('resources-error');}
 async function loadData(){
  const results=await Promise.allSettled([json('./assets/camera-types.json'),json('./assets/models/e09-ins/cameras.json'),json('./assets/plants/manifest.json'),json('./assets/cctv/inventory.json'),json('./assets/models/e09-study/manifest.json'),json('./assets/plan-registration.json'),json('./assets/spaces.json')]);
@@ -60,9 +60,9 @@ async function start(){
  try{
   await (loadingPromise ||= loadData());
   scene=new StudyScene({axon:$('#axon-art'),pov:$('#pov-art'),onSelect:selectCamera,onProgress:(done,total)=>{const percent=Math.floor(done/total*100);$('#load-percent').textContent=percent+'%';$('#load-progress').value=percent;$('#load-parts').textContent=`Partes cargadas: ${done} de ${total}`;$('#resource-status').textContent=`Paquete E09 · ${done}/${total} partes de geometría`;}});
-  if(spacesData)spaces=new SpaceStudy({scene,plan:planView,data:spacesData,onSelectPlan:r=>{const part=r.building.includes('DESCENDENTE')?'A':'B',page=architecture.find(p=>p.level===level.name&&p.part===part);if(page){if($('#plan-kind').value!=='architecture'){$('#plan-kind').value='architecture';populateSheets();}$('#plan-sheet').value=page.page;zoom=1;drawPlan();}}});scene.showMarkers=camerasVisible;
+  if(spacesData)spaces=new SpaceStudy({scene,plan:planView,data:spacesData,onSelectPlan:r=>{if(scene.fullStation)showLevelView();const part=r.building.includes('DESCENDENTE')?'A':'B',page=architecture.find(p=>p.level===level.name&&p.part===part);if(page){if($('#plan-kind').value!=='architecture'){$('#plan-kind').value='architecture';populateSheets();}$('#plan-sheet').value=page.page;zoom=1;drawPlan();}}});scene.showMarkers=camerasVisible;
   changeLevel($('#entry-level').value);
-  await scene.load(modelManifest,records,types);scene.setLevel(level);scene.select(active,settings);modelsReady=true;$('#model-loading').hidden=true;updatePovMessage();
+  await scene.load(modelManifest,records,types);scene.setLevel(level);scene.select(active,settings);modelsReady=true;$('#frame-station').disabled=false;$('#model-loading').hidden=true;updatePovMessage();
   $('#resource-status').textContent=`E09 + BRT NQS · arquitectura, estructura e instalaciones · 5 IFC estructurales adicionales (${modelManifest.structure1300Elements+modelManifest.complementaryStructureElements} elementos) · ${records.length} cámaras · 26 perspectivas fijas`;
   clearInterval(loadTimer);document.body.dataset.ready='true';
  }catch(error){clearInterval(loadTimer);showError('#resource-status','No se completó la carga: '+error.message);$('#model-loading').textContent='No se pudo cargar el paquete. Usa «Reintentar modelos».';$('#retry-model').hidden=false;updatePovMessage();document.body.dataset.ready='error';console.error(error);}
@@ -78,7 +78,10 @@ $('#show-installations').addEventListener('change',e=>{if(scene){scene.installat
 $('#show-brt').addEventListener('change',e=>{if(scene){scene.showBrt=e.target.checked;scene.filter();}});
 for(const code of ['1100','1310'])$('#show-structure-'+code).addEventListener('change',e=>{if(scene){scene.hiddenPackages ||= new Set();const key='e09-est-complementary-'+code;if(e.target.checked)scene.hiddenPackages.delete(key);else scene.hiddenPackages.add(key);scene.filter();}});
 $('#show-structure-1300').addEventListener('change',e=>{if(scene){scene.showStructure1300=e.target.checked;scene.filter();}});
-$('#frame-level').addEventListener('click',()=>scene?.frame());$('#frame-camera').addEventListener('click',()=>scene?.focusSelected());$('#help-button').addEventListener('click',()=>$('#help-dialog').showModal());
+function syncAxonView(){const full=!!scene?.fullStation;$('#frame-station').setAttribute('aria-pressed',String(full));$('#axon-title').textContent=full?'Estación completa · 3D':'Planta axonométrica 3D';$('#axon-subtitle').textContent=full?'Todos los niveles · sin cortes · modelos cargados':`${level.name} · corte de ${level.cutMin.toFixed(1)} a ${level.cutMax.toFixed(1)} m`;document.body.dataset.axonMode=full?'station':'level';}
+function showLevelView(){scene?.setLevel(level);syncAxonView();}
+$('#frame-station').addEventListener('click',()=>{if(!modelsReady)return;for(const id of ['show-installations','show-brt','show-structure-1300','show-structure-1100','show-structure-1310'])$('#'+id).checked=true;scene.showFullStation();syncAxonView();});
+$('#frame-level').addEventListener('click',showLevelView);$('#frame-camera').addEventListener('click',()=>{showLevelView();scene?.focusSelected();});$('#help-button').addEventListener('click',()=>$('#help-dialog').showModal());
 const opticsHome=$('#optics').parentElement,opticsAnchor=document.createComment('Equalizadores');opticsHome.insertBefore(opticsAnchor,$('#optics'));
 function expandPanel(panel){
  document.querySelectorAll('.view.is-expanded').forEach(p=>p.classList.remove('is-expanded'));

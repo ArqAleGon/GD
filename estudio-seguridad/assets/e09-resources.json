@@ -76,11 +76,12 @@
   "architectureWebSheets": "plants/manifest.json",
   "integrationAudit": "integration-audit.json",
   "fixedCameraView": "enabled for 26 Fixed Camera elements; geometric front -X; configurable evaluation FOV",
-  "revision": 7,
+  "revision": 8,
   "brtGeometryAudit": "brt-geometry-audit.json",
   "publicUrl": "https://arqalegon.github.io/GD/estudio-seguridad/",
   "spaces": "spaces.json",
   "spacesAudit": "spaces-audit.json",
   "structure1300Audit": "structure-1300-audit.json",
-  "complementaryStructureAudit": "structure-v07-audit.json"
+  "complementaryStructureAudit": "structure-v07-audit.json",
+  "fullStationView": "All loaded model packages, native full height, no level clipping; return via Nivel"
 }

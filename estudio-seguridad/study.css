@@ -12,3 +12,5 @@ main{min-height:680px}.views{grid-template-columns:minmax(0,1.7fr) minmax(260px,
 @media(max-width:650px){.pov.is-expanded .pov-content{flex-direction:column}.pov.is-expanded #expanded-optics{width:100%;height:220px;padding:10px;border-left:0;border-top:1px solid #426175}.pov.is-expanded #optics{display:grid;grid-template-columns:1fr 1fr;gap:6px 14px}.pov.is-expanded #optics h3,.pov.is-expanded #optics .profile-badge{grid-column:1/-1;margin:2px}.pov.is-expanded #optics .micro-note{display:none}.pov.is-expanded #optics label{margin:3px}.pov.is-expanded #optics button{grid-column:1/-1}#spaces-dialog{padding:12px}#spaces-dialog table{font-size:10px}}
 
 #space-labels{position:fixed;inset:auto;z-index:8}.space-label.is-selected{max-width:280px;white-space:normal}#space-type{width:100%;min-width:0;font-size:10px;margin-top:8px;padding:8px}.inspector-body{overflow-x:hidden}
+
+.axon .view-heading{flex-wrap:wrap;gap:8px}.axon .panel-actions{flex-wrap:wrap;justify-content:flex-end;margin-left:auto}#frame-station[aria-pressed=true]{background:#22506a;border-color:#81d6ff;color:#fff}

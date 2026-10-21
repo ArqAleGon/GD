@@ -40,7 +40,7 @@ export class StudyScene{
   this.cone=new THREE.Group();this.scene.add(this.cone);
   this.observer=new THREE.Group();const mat=new THREE.MeshBasicMaterial({color:0xf3d189});const head=new THREE.Mesh(new THREE.SphereGeometry(.18,10,8),mat);head.position.y=1.55;const body=new THREE.Mesh(new THREE.CylinderGeometry(.18,.25,1.2,10),mat);body.position.y=.8;this.observer.add(head,body);this.scene.add(this.observer);this.observer.visible=false;
   this.activeRing=new THREE.Mesh(new THREE.SphereGeometry(1.15,12,8),new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,depthTest:false}));this.activeRing.renderOrder=61;this.scene.add(this.activeRing);this.activeRing.visible=false;
-  new ResizeObserver(()=>{this.dirty=true;}).observe(axon);new ResizeObserver(()=>this.dirty=true).observe(pov);
+  new ResizeObserver(()=>{if(this.fullStation)this.frame();this.dirty=true;}).observe(axon);new ResizeObserver(()=>this.dirty=true).observe(pov);
   window.addEventListener('resize',()=>{this.renderer.setSize(innerWidth,innerHeight);this.dirty=true;});window.addEventListener('scroll',()=>this.dirty=true,true);
   this.renderer.setAnimationLoop(()=>{if(this.dirty){this.dirty=false;this.render();}});
  }
@@ -93,14 +93,15 @@ export class StudyScene{
   }
   document.body.dataset.brtElements=String(Object.entries(this.brtCounts).filter(([k])=>k.startsWith('e09-brt-')).reduce((n,[,v])=>n+v,0));document.body.dataset.structure1300Elements=String(Object.entries(this.brtCounts).filter(([k])=>k.startsWith('e09-est-1300-')).reduce((n,[,v])=>n+v,0));document.body.dataset.complementaryStructureElements=String(Object.entries(this.brtCounts).filter(([k])=>k.startsWith('e09-est-complementary-')).reduce((n,[,v])=>n+v,0));this.ready=true;this.dirty=true;
  }
- setLevel(level){this.level=level;this.filter();this.frame();}
- filter(){if(!this.level)return;for(const m of this.markers)m.visible=m.userData.record.ifcStorey===this.level.ifc;for(const n of this.cameraNodes)n.visible=n.userData.ifcStorey===this.level.ifc;for(const mesh of this.staticMeshes)mesh.visible=(mesh.userData.package!=='e09-ins'||this.installations!==false)&&(!mesh.userData.package.startsWith('e09-brt-')||this.showBrt!==false)&&(!mesh.userData.package.startsWith('e09-est-1300-')||this.showStructure1300!==false)&&!this.hiddenPackages?.has(mesh.userData.package);this.dirty=true;}
- frame(){const visible=this.records?.filter(r=>r.ifcStorey===this.level?.ifc)||[];if(!visible.length)return;const box=new THREE.Box3();for(const r of visible)box.expandByPoint(new THREE.Vector3().fromArray(r.positionGltfMetres).sub(ORIGIN));
-  const floor=this.level.cutMin-ORIGIN.y,ceiling=this.level.cutMax-ORIGIN.y;
+ showFullStation(){this.fullStation=true;this.installations=true;this.showBrt=true;this.showStructure1300=true;this.hiddenPackages?.clear();this.filter();this.frame();}
+ setLevel(level){this.fullStation=false;this.level=level;this.filter();this.frame();}
+ filter(){if(!this.level)return;for(const m of this.markers)m.visible=this.fullStation||m.userData.record.ifcStorey===this.level.ifc;for(const n of this.cameraNodes)n.visible=this.fullStation||n.userData.ifcStorey===this.level.ifc;for(const mesh of this.staticMeshes)mesh.visible=(mesh.userData.package!=='e09-ins'||this.installations!==false)&&(!mesh.userData.package.startsWith('e09-brt-')||this.showBrt!==false)&&(!mesh.userData.package.startsWith('e09-est-1300-')||this.showStructure1300!==false)&&!this.hiddenPackages?.has(mesh.userData.package);this.dirty=true;}
+ frame(){const visible=this.records?.filter(r=>this.fullStation||r.ifcStorey===this.level?.ifc)||[];if(!visible.length)return;const box=new THREE.Box3();for(const r of visible)box.expandByPoint(new THREE.Vector3().fromArray(r.positionGltfMetres).sub(ORIGIN));
+  const floor=this.fullStation?-Infinity:this.level.cutMin-ORIGIN.y,ceiling=this.fullStation?Infinity:this.level.cutMax-ORIGIN.y;
   for(const mesh of this.staticMeshes){const b=mesh.userData.bounds;if(!b||!mesh.visible||b.max[1]<floor||b.min[1]>ceiling)continue;box.expandByPoint(new THREE.Vector3(b.min[0],Math.max(b.min[1],floor),b.min[2]));box.expandByPoint(new THREE.Vector3(b.max[0],Math.min(b.max[1],ceiling),b.max[2]));}
   const center=box.getCenter(new THREE.Vector3()),back=new THREE.Vector3(.8,.9,1).normalize(),right=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),back).normalize(),up=new THREE.Vector3().crossVectors(back,right),rect=this.axon.getBoundingClientRect(),tanV=Math.tan(THREE.MathUtils.degToRad(this.axonCamera.fov/2)),tanH=tanV*Math.max(.1,rect.width/rect.height);let distance=40;
   for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z]){const v=new THREE.Vector3(x,y,z).sub(center);distance=Math.max(distance,Math.abs(v.dot(right))/tanH+v.dot(back),Math.abs(v.dot(up))/tanV+v.dot(back));}
-  this.controls.target.copy(center);this.axonCamera.position.copy(center).addScaledVector(back,distance*1.12);this.controls.update();this.dirty=true;
+  this.axonCamera.far=Math.max(1500,distance*3+box.getSize(new THREE.Vector3()).length());this.axonCamera.updateProjectionMatrix();this.controls.target.copy(center);this.axonCamera.position.copy(center).addScaledVector(back,distance*1.12);this.controls.update();this.dirty=true;
  }
  focusSelected(){if(!this.selected)return;const center=new THREE.Vector3().fromArray(this.selected.positionGltfMetres).sub(ORIGIN);this.controls.target.copy(center);this.axonCamera.position.copy(center).add(new THREE.Vector3(26,32,34));this.controls.update();this.dirty=true;}
  select(record,settings){this.selected=record;this.settings=settings;this.updateOptics();this.dirty=true;}
@@ -145,7 +146,7 @@ export class StudyScene{
    else view(this.pov,this.povCamera,this.imageAspect);
   }
   this.filter();this.dirty=false;this.markerGroup.visible=this.showMarkers!==false;this.activeRing.visible=!!this.selected&&this.showMarkers!==false;this.cone.visible=this.isFixed&&this.showCone!==false;this.observer.visible=this.isFixed;
-  if(this.level){this.setModelClipping([new THREE.Plane(new THREE.Vector3(0,-1,0),this.level.cutMax-ORIGIN.y),new THREE.Plane(new THREE.Vector3(0,1,0),-(this.level.cutMin-ORIGIN.y))]);for(const mesh of this.staticMeshes){const b=mesh.userData.bounds;mesh.visible=mesh.visible&&b.max[1]>=this.level.cutMin-ORIGIN.y&&b.min[1]<=this.level.cutMax-ORIGIN.y;}}
+  if(this.level&&!this.fullStation){this.setModelClipping([new THREE.Plane(new THREE.Vector3(0,-1,0),this.level.cutMax-ORIGIN.y),new THREE.Plane(new THREE.Vector3(0,1,0),-(this.level.cutMin-ORIGIN.y))]);for(const mesh of this.staticMeshes){const b=mesh.userData.bounds;mesh.visible=mesh.visible&&b.max[1]>=this.level.cutMin-ORIGIN.y&&b.min[1]<=this.level.cutMax-ORIGIN.y;}}
   this.spaces?.beforeAxon();if(!expanded||expanded==='axon-panel')view(this.axon,this.axonCamera);this.spaces?.afterAxon(expanded);r.clippingPlanes=[];r.setScissorTest(false);
  }
 }
