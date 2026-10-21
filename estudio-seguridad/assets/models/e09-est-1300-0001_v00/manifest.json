@@ -1,0 +1,422 @@
+{
+  "version": 1,
+  "station": "E09",
+  "section": "E09-EST-1300",
+  "name": "E09 estructura 1300 · 0001_V00",
+  "source": "L1T1-1300-409-CON-ED-EST-MO-0001_V00.ifc",
+  "sourceSha256": "c9b9c3260078cd36e0925dd85b9508efcebfbfcb7bdd0e04a9b4a70dc3a2a432",
+  "converter": "IfcOpenShell 0.8.5",
+  "kernel": "hybrid-cgal-simple-opencascade",
+  "units": "metres",
+  "coordinateConvention": "X,Z,-Y; untouched native placement",
+  "files": [
+    {
+      "file": "e09-est-1300-0001_v00-001.glb.gz",
+      "source": "L1T1-1300-409-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E09-EST-1300",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 227979,
+      "sha256": "357b8f8be5aad9e8c24873487f969cf34aecae2732afcd6286fd4fb37ac295b2",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-est-1300-0001_v00-002.glb.gz",
+      "source": "L1T1-1300-409-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E09-EST-1300",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 145762,
+      "sha256": "19a03938dfbbedc7ba3af2e7c275f1ad30555fb11e6e237d4c7da2bf2f004277",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-est-1300-0001_v00-003.glb.gz",
+      "source": "L1T1-1300-409-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E09-EST-1300",
+      "discipline": "EST",
+      "converted": 13,
+      "compressedBytes": 4069,
+      "sha256": "c25ed46602494e58f877add1702ee9f217426893aaaba6ab8c58f638c8aa0768",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    }
+  ],
+  "inputElements": 724,
+  "expectedRenderableElements": 686,
+  "convertedElements": 713,
+  "missingElements": [],
+  "unexpectedElements": [],
+  "excludedSourceConditions": [
+    {
+      "id": 69362,
+      "globalId": "3sF4R8dKL1FgAQ9gvm_YlF",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 70533,
+      "globalId": "3sF4R8dKL1FgAQ9gvm_ZQV",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 71924,
+      "globalId": "3sF4R8dKL1FgAQ9gvm_ZIr",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 73244,
+      "globalId": "3sF4R8dKL1FgAQ9gvm_ad1",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 74583,
+      "globalId": "3sF4R8dKL1FgAQ9gvm_adm",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 75960,
+      "globalId": "3sF4R8dKL1FgAQ9gvm_ad$",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 77241,
+      "globalId": "3sF4R8dKL1FgAQ9gvm_adk",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 79595,
+      "globalId": "3sF4R8dKL1FgAQ9gvm_dys",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 80765,
+      "globalId": "3sF4R8dKL1FgAQ9gvm_dyb",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 81933,
+      "globalId": "3sF4R8dKL1FgAQ9gvm_dzK",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 83101,
+      "globalId": "3sF4R8dKL1FgAQ9gvm_dz3",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 20783,
+      "globalId": "2s5zLYdTrBWvAO5lIcCv7C",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 20799,
+      "globalId": "1qrmy2CRz779ULqVdNCsLi",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 20815,
+      "globalId": "1lWH3kgEP2rfQrk54ghjNP",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 20831,
+      "globalId": "1lWH3kgEP2rfQrk54ghjNI",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 20843,
+      "globalId": "1lWH3kgEP2rfQrk54ghjN8",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 20855,
+      "globalId": "1lWH3kgEP2rfQrk54ghjJx",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 20870,
+      "globalId": "22StTP20DEHhCnGkzohLGf",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 22541,
+      "globalId": "2s5zLYdTrBWvAO5lIcCvYd",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 22553,
+      "globalId": "2s5zLYdTrBWvAO5lIcCvX5",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 22569,
+      "globalId": "2s5zLYdTrBWvAO5lIcCvXB",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 22581,
+      "globalId": "2s5zLYdTrBWvAO5lIcC_UD",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 22593,
+      "globalId": "2s5zLYdTrBWvAO5lIcC_U8",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 22605,
+      "globalId": "2s5zLYdTrBWvAO5lIcC_T_",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 22617,
+      "globalId": "2s5zLYdTrBWvAO5lIcC_Qm",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 22629,
+      "globalId": "2s5zLYdTrBWvAO5lIcC_PF",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 22648,
+      "globalId": "2s5zLYdTrBWvAO5lIcC_NX",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 22666,
+      "globalId": "1HLwfGMNT1wh0SZnfX$vjv",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 22681,
+      "globalId": "1HLwfGMNT1wh0SZnfX$vfR",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 22697,
+      "globalId": "0tCSHI9NjAWROgnNo3uq4I",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 22709,
+      "globalId": "0qzFOG_z98UAniyS8JJbbf",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 88679,
+      "globalId": "2ciH0Lekn37RY0rTqhDz4a",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 89684,
+      "globalId": "1ohibI_SD7EgyvOQWnI8zo",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 89942,
+      "globalId": "0a34Lb07L63vkUnfu0Sh3P",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 90171,
+      "globalId": "1gk9jmosn65OLY06h6lI4S",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 90411,
+      "globalId": "3azP2AYTLCLfrNxUXmfF6S",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 90772,
+      "globalId": "1qih4wJuHDsPtGxZv68sbs",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 99498,
+      "globalId": "1HLwfGMNT1wh0SZnfX$vCr",
+      "reason": "Native subtractive opening, applied to its host"
+    }
+  ],
+  "levels": [
+    {
+      "id": 110,
+      "globalId": "3c94_Z$rr4hQMLCvDaCfWb",
+      "name": "ARC_PL_00",
+      "elevation": 3.400000000000505,
+      "matrix": [
+        [
+          0.8265897491271855,
+          -0.5628049276950733,
+          0.0,
+          100952.43218334334
+        ],
+        [
+          0.5628049276950733,
+          0.8265897491271855,
+          0.0,
+          115715.15168560136
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2553.4000000000005
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 114,
+      "globalId": "3c94_Z$rr4hQMLCvDaChLu",
+      "name": "STR_PL_00.6_CIMIENTOS",
+      "elevation": 10.7000000000011,
+      "matrix": [
+        [
+          0.8265897491271855,
+          -0.5628049276950733,
+          0.0,
+          100952.43218334334
+        ],
+        [
+          0.5628049276950733,
+          0.8265897491271855,
+          0.0,
+          115715.15168560136
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2560.700000000001
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 118,
+      "globalId": "3c94_Z$rr4hQMLCvDaCfWX",
+      "name": "STR_PL_02_INTERMEDIO",
+      "elevation": 18.39999999999995,
+      "matrix": [
+        [
+          0.8265897491271855,
+          -0.5628049276950733,
+          0.0,
+          100952.43218334334
+        ],
+        [
+          0.5628049276950733,
+          0.8265897491271855,
+          0.0,
+          115715.15168560136
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2568.4
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 122,
+      "globalId": "3c94_Z$rr4hQMLCvDaCfWc",
+      "name": "STR_PL_03_PLATAFORMA",
+      "elevation": 27.139999999999954,
+      "matrix": [
+        [
+          0.8265897491271855,
+          -0.5628049276950733,
+          0.0,
+          100952.43218334334
+        ],
+        [
+          0.5628049276950733,
+          0.8265897491271855,
+          0.0,
+          115715.15168560136
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2577.14
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 126,
+      "globalId": "3c94_Z$rr4hQMLCvDaCfXQ",
+      "name": "STR_PL_04_CUBIERTA",
+      "elevation": 33.73999999999994,
+      "matrix": [
+        [
+          0.8265897491271855,
+          -0.5628049276950733,
+          0.0,
+          100952.43218334334
+        ],
+        [
+          0.5628049276950733,
+          0.8265897491271855,
+          0.0,
+          115715.15168560136
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2583.74
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "validated": true,
+  "seconds": 3.3712353706359863,
+  "renderableElements": 686,
+  "convertedOpeningElements": 27,
+  "bounds": {
+    "min": [
+      -54.02635984275548,
+      -34.200001525877724,
+      65.74125143658603
+    ],
+    "max": [
+      13.314683113785577,
+      36.90000008583047,
+      119.23249121522531
+    ]
+  }
+}

@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "originGltfMetres": [
     96310.0,
     2550.0,
@@ -7713,6 +7713,190 @@
           127.09056091308594
         ]
       }
+    },
+    {
+      "source": "L1T1-1300-409-CON-ED-EST-MO-0001_V00.ifc",
+      "files": [
+        {
+          "file": "e09-est-1300-0001_v00-001.glb.gz",
+          "source": "L1T1-1300-409-CON-ED-EST-MO-0001_V00.ifc",
+          "section": "E09-EST-1300",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 227979,
+          "sha256": "357b8f8be5aad9e8c24873487f969cf34aecae2732afcd6286fd4fb37ac295b2",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-est-1300-0001_v00-002.glb.gz",
+          "source": "L1T1-1300-409-CON-ED-EST-MO-0001_V00.ifc",
+          "section": "E09-EST-1300",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 145762,
+          "sha256": "19a03938dfbbedc7ba3af2e7c275f1ad30555fb11e6e237d4c7da2bf2f004277",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-est-1300-0001_v00-003.glb.gz",
+          "source": "L1T1-1300-409-CON-ED-EST-MO-0001_V00.ifc",
+          "section": "E09-EST-1300",
+          "discipline": "EST",
+          "converted": 13,
+          "compressedBytes": 4069,
+          "sha256": "c25ed46602494e58f877add1702ee9f217426893aaaba6ab8c58f638c8aa0768",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        }
+      ],
+      "renderableElements": 686,
+      "bounds": {
+        "min": [
+          -54.02635984275548,
+          -34.200001525877724,
+          65.74125143658603
+        ],
+        "max": [
+          13.314683113785577,
+          36.90000008583047,
+          119.23249121522531
+        ]
+      },
+      "package": "e09-est-1300-0001_v00",
+      "role": "access-structure",
+      "label": "Ascendente 01"
+    },
+    {
+      "source": "L1T1-1300-409-CON-ED-EST-MO-0002_V01.ifc",
+      "files": [
+        {
+          "file": "e09-est-1300-0002_v01-001.glb.gz",
+          "source": "L1T1-1300-409-CON-ED-EST-MO-0002_V01.ifc",
+          "section": "E09-EST-1300",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 202107,
+          "sha256": "145bd7dfac1725da80d223ea389ceb2e9771f0a4ce2da9956ffa3598c69a56f9",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-est-1300-0002_v01-002.glb.gz",
+          "source": "L1T1-1300-409-CON-ED-EST-MO-0002_V01.ifc",
+          "section": "E09-EST-1300",
+          "discipline": "EST",
+          "converted": 162,
+          "compressedBytes": 86722,
+          "sha256": "34f13199de43b8c9c0d7ab19cd12eefb06732d5dfd09364329e4a56563ad423c",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        }
+      ],
+      "renderableElements": 505,
+      "bounds": {
+        "min": [
+          42.04526704949967,
+          -32.25,
+          12.32497373042861
+        ],
+        "max": [
+          112.61480226289132,
+          36.84681499162116,
+          50.37829872145085
+        ]
+      },
+      "package": "e09-est-1300-0002_v01",
+      "role": "access-structure",
+      "label": "Ascendente 02"
+    },
+    {
+      "source": "L1T1-1300-409-CON-ED-EST-MO-0003_V00.ifc",
+      "files": [
+        {
+          "file": "e09-est-1300-0003_v00-001.glb.gz",
+          "source": "L1T1-1300-409-CON-ED-EST-MO-0003_V00.ifc",
+          "section": "E09-EST-1300",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 348011,
+          "sha256": "4eff3f2032e43ee53f60564324beca291f153169c98afc1abf8d581115f09d7e",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-est-1300-0003_v00-002.glb.gz",
+          "source": "L1T1-1300-409-CON-ED-EST-MO-0003_V00.ifc",
+          "section": "E09-EST-1300",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 365373,
+          "sha256": "cf0434a842bdf575d5b6707757114ee8726fd7b6ce1bf4e91bcc6636d09821bb",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-est-1300-0003_v00-003.glb.gz",
+          "source": "L1T1-1300-409-CON-ED-EST-MO-0003_V00.ifc",
+          "section": "E09-EST-1300",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 140568,
+          "sha256": "ac644548e3be545632fcf17f406ae5f3a9977198db835cd525646121d1a0ebe3",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-est-1300-0003_v00-004.glb.gz",
+          "source": "L1T1-1300-409-CON-ED-EST-MO-0003_V00.ifc",
+          "section": "E09-EST-1300",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 135671,
+          "sha256": "8dd9d7f7f8f4afec1bf4a5390e2fbe945c7ba90974abb70ab1eb5b39f577a336",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-est-1300-0003_v00-005.glb.gz",
+          "source": "L1T1-1300-409-CON-ED-EST-MO-0003_V00.ifc",
+          "section": "E09-EST-1300",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 185747,
+          "sha256": "e8fd846d5c098484b30c93dc589474718561ce8b84408db14e4a5baf108d2920",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-est-1300-0003_v00-006.glb.gz",
+          "source": "L1T1-1300-409-CON-ED-EST-MO-0003_V00.ifc",
+          "section": "E09-EST-1300",
+          "discipline": "EST",
+          "converted": 40,
+          "compressedBytes": 17706,
+          "sha256": "b34fd5e7a69ab92d4d184d31c60a68cfe7160f8335add3755ce3fc25a6248a23",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        }
+      ],
+      "renderableElements": 1687,
+      "bounds": {
+        "min": [
+          -91.90618764453393,
+          -35.649999237060456,
+          -43.75657313698321
+        ],
+        "max": [
+          21.972734564435086,
+          36.9000000858282,
+          34.577947568075615
+        ]
+      },
+      "package": "e09-est-1300-0003_v00",
+      "role": "access-structure",
+      "label": "Descendente"
     }
   ],
   "brtSources": {
@@ -7758,5 +7942,7 @@
       },
       "triangles": 13667739
     }
-  }
+  },
+  "structure1300Elements": 2878,
+  "structure1300Audit": "../../structure-1300-audit.json"
 }

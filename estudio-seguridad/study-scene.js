@@ -77,7 +77,7 @@ export class StudyScene{
    for(const file of pkg.files){
     const gltf=await loader.parseAsync(await this.binary(`./assets/models/${pkg.package}/${file.file}`),'');if(token!==this.generation)return;
     gltf.scene.updateMatrixWorld(true);const groups=new Map();
-    gltf.scene.traverse(mesh=>{if(!mesh.isMesh)return;let owner=mesh;while(owner&&!owner.userData.ifcGlobalId)owner=owner.parent;const metadata=owner?.userData;if(!metadata?.ifcGlobalId)throw Error('Pieza BRT sin identidad IFC');if(metadata.ifcType==='IfcOpeningElement')return;
+    gltf.scene.traverse(mesh=>{if(!mesh.isMesh)return;let owner=mesh;while(owner&&!owner.userData.ifcGlobalId)owner=owner.parent;const metadata=owner?.userData;if(!metadata?.ifcGlobalId)throw Error('Pieza sin identidad IFC');if(metadata.ifcType==='IfcOpeningElement')return;
      identities.add(metadata.ifcGlobalId);const matrix=mesh.matrixWorld.clone();matrix.elements[12]-=ORIGIN.x;matrix.elements[13]-=ORIGIN.y;matrix.elements[14]-=ORIGIN.z;
      const key=mesh.geometry.uuid+':'+mesh.material.uuid+':'+metadata.ifcType;let group=groups.get(key);if(!group){group={geometry:mesh.geometry,material:mesh.material,items:[]};groups.set(key,group);}group.items.push({matrix,metadata});
     });
@@ -88,13 +88,13 @@ export class StudyScene{
     }
     done++;this.onProgress(done+cameraDone,total);this.dirty=true;await new Promise(resolve=>setTimeout(resolve,0));
    }
-   if(identities.size!==pkg.renderableElements)throw Error(`Cobertura BRT incompleta: ${pkg.package} ${identities.size}/${pkg.renderableElements}`);
+   if(identities.size!==pkg.renderableElements)throw Error(`Cobertura IFC incompleta: ${pkg.package} ${identities.size}/${pkg.renderableElements}`);
    this.brtCounts[pkg.package]=identities.size;
   }
-  document.body.dataset.brtElements=String(Object.values(this.brtCounts).reduce((a,b)=>a+b,0));this.ready=true;this.dirty=true;
+  document.body.dataset.brtElements=String(Object.entries(this.brtCounts).filter(([k])=>k.startsWith('e09-brt-')).reduce((n,[,v])=>n+v,0));document.body.dataset.structure1300Elements=String(Object.entries(this.brtCounts).filter(([k])=>k.startsWith('e09-est-1300-')).reduce((n,[,v])=>n+v,0));this.ready=true;this.dirty=true;
  }
  setLevel(level){this.level=level;this.filter();this.frame();}
- filter(){if(!this.level)return;for(const m of this.markers)m.visible=m.userData.record.ifcStorey===this.level.ifc;for(const n of this.cameraNodes)n.visible=n.userData.ifcStorey===this.level.ifc;for(const mesh of this.staticMeshes)mesh.visible=(mesh.userData.package!=='e09-ins'||this.installations!==false)&&(!mesh.userData.package.startsWith('e09-brt-')||this.showBrt!==false);this.dirty=true;}
+ filter(){if(!this.level)return;for(const m of this.markers)m.visible=m.userData.record.ifcStorey===this.level.ifc;for(const n of this.cameraNodes)n.visible=n.userData.ifcStorey===this.level.ifc;for(const mesh of this.staticMeshes)mesh.visible=(mesh.userData.package!=='e09-ins'||this.installations!==false)&&(!mesh.userData.package.startsWith('e09-brt-')||this.showBrt!==false)&&(!mesh.userData.package.startsWith('e09-est-1300-')||this.showStructure1300!==false);this.dirty=true;}
  frame(){const visible=this.records?.filter(r=>r.ifcStorey===this.level?.ifc)||[];if(!visible.length)return;const box=new THREE.Box3();for(const r of visible)box.expandByPoint(new THREE.Vector3().fromArray(r.positionGltfMetres).sub(ORIGIN));
   const floor=this.level.cutMin-ORIGIN.y,ceiling=this.level.cutMax-ORIGIN.y;
   for(const mesh of this.staticMeshes){const b=mesh.userData.bounds;if(!b||!mesh.visible||b.max[1]<floor||b.min[1]>ceiling)continue;box.expandByPoint(new THREE.Vector3(b.min[0],Math.max(b.min[1],floor),b.min[2]));box.expandByPoint(new THREE.Vector3(b.max[0],Math.min(b.max[1],ceiling),b.max[2]));}

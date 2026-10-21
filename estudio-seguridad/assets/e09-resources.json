@@ -23,6 +23,27 @@
       "role": "brt-est",
       "manifest": "models/e09-brt-est/manifest.json",
       "conversion": "native IFC to shared glTF instances"
+    },
+    {
+      "role": "access-structure",
+      "manifest": "models/e09-est-1300-0001_v00/manifest.json",
+      "source": "L1T1-1300-409-CON-ED-EST-MO-0001_V00.ifc",
+      "label": "Ascendente 01",
+      "conversion": "native IFC to shared glTF instances"
+    },
+    {
+      "role": "access-structure",
+      "manifest": "models/e09-est-1300-0002_v01/manifest.json",
+      "source": "L1T1-1300-409-CON-ED-EST-MO-0002_V01.ifc",
+      "label": "Ascendente 02",
+      "conversion": "native IFC to shared glTF instances"
+    },
+    {
+      "role": "access-structure",
+      "manifest": "models/e09-est-1300-0003_v00/manifest.json",
+      "source": "L1T1-1300-409-CON-ED-EST-MO-0003_V00.ifc",
+      "label": "Descendente",
+      "conversion": "native IFC to shared glTF instances"
     }
   ],
   "localSourceCatalogs": {
@@ -41,9 +62,10 @@
   "architectureWebSheets": "plants/manifest.json",
   "integrationAudit": "integration-audit.json",
   "fixedCameraView": "enabled for 26 Fixed Camera elements; geometric front -X; configurable evaluation FOV",
-  "revision": 5,
+  "revision": 6,
   "brtGeometryAudit": "brt-geometry-audit.json",
   "publicUrl": "https://arqalegon.github.io/GD/estudio-seguridad/",
   "spaces": "spaces.json",
-  "spacesAudit": "spaces-audit.json"
+  "spacesAudit": "spaces-audit.json",
+  "structure1300Audit": "structure-1300-audit.json"
 }

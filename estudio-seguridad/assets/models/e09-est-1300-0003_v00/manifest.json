@@ -1,0 +1,966 @@
+{
+  "version": 1,
+  "station": "E09",
+  "section": "E09-EST-1300",
+  "name": "E09 estructura 1300 · 0003_V00",
+  "source": "L1T1-1300-409-CON-ED-EST-MO-0003_V00.ifc",
+  "sourceSha256": "00211cade8454ece2b1d16f180d0c5271f820e2e9d41136a77c022302f5fb4c7",
+  "converter": "IfcOpenShell 0.8.5",
+  "kernel": "hybrid-cgal-simple-opencascade",
+  "units": "metres",
+  "coordinateConvention": "X,Z,-Y; untouched native placement",
+  "files": [
+    {
+      "file": "e09-est-1300-0003_v00-001.glb.gz",
+      "source": "L1T1-1300-409-CON-ED-EST-MO-0003_V00.ifc",
+      "section": "E09-EST-1300",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 348011,
+      "sha256": "4eff3f2032e43ee53f60564324beca291f153169c98afc1abf8d581115f09d7e",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-est-1300-0003_v00-002.glb.gz",
+      "source": "L1T1-1300-409-CON-ED-EST-MO-0003_V00.ifc",
+      "section": "E09-EST-1300",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 365373,
+      "sha256": "cf0434a842bdf575d5b6707757114ee8726fd7b6ce1bf4e91bcc6636d09821bb",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-est-1300-0003_v00-003.glb.gz",
+      "source": "L1T1-1300-409-CON-ED-EST-MO-0003_V00.ifc",
+      "section": "E09-EST-1300",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 140568,
+      "sha256": "ac644548e3be545632fcf17f406ae5f3a9977198db835cd525646121d1a0ebe3",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-est-1300-0003_v00-004.glb.gz",
+      "source": "L1T1-1300-409-CON-ED-EST-MO-0003_V00.ifc",
+      "section": "E09-EST-1300",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 135671,
+      "sha256": "8dd9d7f7f8f4afec1bf4a5390e2fbe945c7ba90974abb70ab1eb5b39f577a336",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-est-1300-0003_v00-005.glb.gz",
+      "source": "L1T1-1300-409-CON-ED-EST-MO-0003_V00.ifc",
+      "section": "E09-EST-1300",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 185747,
+      "sha256": "e8fd846d5c098484b30c93dc589474718561ce8b84408db14e4a5baf108d2920",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-est-1300-0003_v00-006.glb.gz",
+      "source": "L1T1-1300-409-CON-ED-EST-MO-0003_V00.ifc",
+      "section": "E09-EST-1300",
+      "discipline": "EST",
+      "converted": 40,
+      "compressedBytes": 17706,
+      "sha256": "b34fd5e7a69ab92d4d184d31c60a68cfe7160f8335add3755ce3fc25a6248a23",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    }
+  ],
+  "inputElements": 1808,
+  "expectedRenderableElements": 1687,
+  "convertedElements": 1790,
+  "missingElements": [],
+  "unexpectedElements": [],
+  "excludedSourceConditions": [
+    {
+      "id": 216166,
+      "globalId": "1CqbAbi9fD9vn9oKPBKpfa",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 217683,
+      "globalId": "1CqbAbi9fD9vn9oKPBKpcc",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 229627,
+      "globalId": "0mK2oHcxf0UwoofDvA7_tT",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 230844,
+      "globalId": "0mK2oHcxf0UwoofDvA7z8S",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 232179,
+      "globalId": "0mK2oHcxf0UwoofDvA7z8D",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 233458,
+      "globalId": "0mK2oHcxf0UwoofDvA7z8w",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 235004,
+      "globalId": "0mK2oHcxf0UwoofDvA7m9h",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 236283,
+      "globalId": "0mK2oHcxf0UwoofDvA7m8O",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 237562,
+      "globalId": "0mK2oHcxf0UwoofDvA7m08",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 242605,
+      "globalId": "23qKfYLr9COAIm95WCW8AX",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 243791,
+      "globalId": "23qKfYLr9COAIm95WCW8BI",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 244976,
+      "globalId": "23qKfYLr9COAIm95WCW8B3",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 246771,
+      "globalId": "23qKfYLr9COAIm95WCWFbu",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 248305,
+      "globalId": "23qKfYLr9COAIm95WCWFj5",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 255708,
+      "globalId": "0d5yyUFMD3VQPg2zqGZhO7",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 269068,
+      "globalId": "1Q9tpceWDFXA7wcHtnDjzJ",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 270365,
+      "globalId": "1Q9tpceWDFXA7wcHtnDjzC",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 271662,
+      "globalId": "1Q9tpceWDFXA7wcHtnDjyz",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 8180,
+      "globalId": "3PUjeGjy94Ne5d2_qwi0XO",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 8398,
+      "globalId": "0k7xnGJOfD$vpNuPkWlefR",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72110,
+      "globalId": "0J3R9d_CPFB8CEcUbypsTF",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72121,
+      "globalId": "0J3R9d_CPFB8CEcUbyps7y",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72133,
+      "globalId": "0J3R9d_CPFB8CEcUbyps0A",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72145,
+      "globalId": "0J3R9d_CPFB8CEcUbyps2N",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72157,
+      "globalId": "0J3R9d_CPFB8CEcUbyps29",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72169,
+      "globalId": "0J3R9d_CPFB8CEcUbyps3b",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72181,
+      "globalId": "0J3R9d_CPFB8CEcUbyps3h",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72193,
+      "globalId": "3RO$_RTSrBmvN4QMQKGsuK",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72205,
+      "globalId": "0J3R9d_CPFB8CEcUbyps3D",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72220,
+      "globalId": "1c9ew7PobDL8gABuC69NFt",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72231,
+      "globalId": "2f0XB$QzbEAfcIA1GDj4mO",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72246,
+      "globalId": "3UXtzdR0z9vABxUMko8VcW",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72261,
+      "globalId": "1c9ew7PobDL8gABuC69N$V",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72272,
+      "globalId": "3LJmZ$jVP9cgqkE_JUQERE",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72283,
+      "globalId": "3LJmZ$jVP9cgqkE_JUQERS",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72294,
+      "globalId": "3LJmZ$jVP9cgqkE_JUQFgq",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72305,
+      "globalId": "3LJmZ$jVP9cgqkE_JUQFh5",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72316,
+      "globalId": "08V3K5vQDDPOmFJU9KZzDK",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72327,
+      "globalId": "08V3K5vQDDPOmFJU9KZzD7",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72338,
+      "globalId": "1OHggXUB1CEA0P9IsZUwyq",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72349,
+      "globalId": "08V3K5vQDDPOmFJU9KZzCT",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72360,
+      "globalId": "08V3K5vQDDPOmFJU9KZzC1",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72371,
+      "globalId": "08V3K5vQDDPOmFJU9KZzCr",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72382,
+      "globalId": "08V3K5vQDDPOmFJU9KZzCd",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72393,
+      "globalId": "08V3K5vQDDPOmFJU9KZzF9",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72404,
+      "globalId": "08V3K5vQDDPOmFJU9KZzFz",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72415,
+      "globalId": "08V3K5vQDDPOmFJU9KZzEQ",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72426,
+      "globalId": "08V3K5vQDDPOmFJU9KZzEC",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72437,
+      "globalId": "08V3K5vQDDPOmFJU9KZzE$",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72448,
+      "globalId": "08V3K5vQDDPOmFJU9KZzEZ",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72459,
+      "globalId": "08V3K5vQDDPOmFJU9KZz9L",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72470,
+      "globalId": "08V3K5vQDDPOmFJU9KZzB3",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72481,
+      "globalId": "08V3K5vQDDPOmFJU9KZzBm",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72492,
+      "globalId": "08V3K5vQDDPOmFJU9KZzBa",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72503,
+      "globalId": "08V3K5vQDDPOmFJU9KZzA8",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72514,
+      "globalId": "08V3K5vQDDPOmFJU9KZzAn",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72525,
+      "globalId": "08V3K5vQDDPOmFJU9KZzAb",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72536,
+      "globalId": "08V3K5vQDDPOmFJU9KZz59",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72547,
+      "globalId": "08V3K5vQDDPOmFJU9KZz5$",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72558,
+      "globalId": "08V3K5vQDDPOmFJU9KZz5W",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72569,
+      "globalId": "08V3K5vQDDPOmFJU9KZz4T",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72580,
+      "globalId": "08V3K5vQDDPOmFJU9KZz40",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72591,
+      "globalId": "08V3K5vQDDPOmFJU9KZz0h",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72602,
+      "globalId": "08V3K5vQDDPOmFJU9KZwvO",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72613,
+      "globalId": "08V3K5vQDDPOmFJU9KZwvN",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72624,
+      "globalId": "08V3K5vQDDPOmFJU9KZwv_",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72635,
+      "globalId": "08V3K5vQDDPOmFJU9KZwvY",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72646,
+      "globalId": "08V3K5vQDDPOmFJU9KZwuN",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72657,
+      "globalId": "08V3K5vQDDPOmFJU9KZwum",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72668,
+      "globalId": "08V3K5vQDDPOmFJU9KZwuc",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 72679,
+      "globalId": "2Go3T6pizFcgULc6CGnKwg",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 73288,
+      "globalId": "0IaOmUN3HAm8X_Rl1DlzdD",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 73299,
+      "globalId": "3efbYC1nT0NfJD7zZMYvfn",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 73310,
+      "globalId": "3efbYC1nT0NfJD7zZMYvfP",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 73321,
+      "globalId": "0NUlIoSiP6xvXkYEO74UkR",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 73332,
+      "globalId": "3efbYC1nT0NfJD7zZMYvfI",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 73343,
+      "globalId": "3efbYC1nT0NfJD7zZMYvkX",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 73354,
+      "globalId": "3efbYC1nT0NfJD7zZMYvko",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 73365,
+      "globalId": "3efbYC1nT0NfJD7zZMYvkq",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 73376,
+      "globalId": "0NUlIoSiP6xvXkYEO74Uhu",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 73387,
+      "globalId": "0NUlIoSiP6xvXkYEO74UeQ",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 73429,
+      "globalId": "0IaOmUN3HAm8X_Rl1DlzZm",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 73441,
+      "globalId": "3QoC$4o$X9oOTs8nLKys3v",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 73453,
+      "globalId": "3HTbNJllj5MRWLt7FuqVds",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 73465,
+      "globalId": "3HTbNJllj5MRWLt7FuqVdy",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 73477,
+      "globalId": "3HTbNJllj5MRWLt7FuqVau",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 73489,
+      "globalId": "3HTbNJllj5MRWLt7FuqVdL",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 73501,
+      "globalId": "3HTbNJllj5MRWLt7FuqVaa",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 73517,
+      "globalId": "2tHr1N2W52AxQbl4PBow3z",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 219684,
+      "globalId": "2UQ83Q2WD6hxO$$QhGe416",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 219698,
+      "globalId": "2UQ83Q2WD6hxO$$QhGe4F8",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 219712,
+      "globalId": "2UQ83Q2WD6hxO$$QhGe4Fk",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 219724,
+      "globalId": "0oSjFb3Cb09850NaVHMZm4",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 221209,
+      "globalId": "0WIKzNwbPBYgPbEzEh27Jg",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 256971,
+      "globalId": "2CEww8uTT8ee2jNmBnn$WL",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 256982,
+      "globalId": "2CEww8uTT8ee2jNmBnn$W8",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 256993,
+      "globalId": "2CEww8uTT8ee2jNmBnn$Vq",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 257004,
+      "globalId": "2CEww8uTT8ee2jNmBnn$VW",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 257015,
+      "globalId": "2CEww8uTT8ee2jNmBnn$VG",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 288897,
+      "globalId": "2Go3T6pizFcgULc6CGnLzy",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 288909,
+      "globalId": "2Go3T6pizFcgULc6CGnL$H",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 297534,
+      "globalId": "1y83q0XrfAPfAcTn0Tbx4Q",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 297821,
+      "globalId": "0Fn8dXX256kxGJX_mzUqDk",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 298102,
+      "globalId": "3SWGnftlP50uYJMmZ$xr4D",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 298261,
+      "globalId": "3lWY0Q3c9CmgJ2q3qJSk9k",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 298613,
+      "globalId": "2UQ83Q2WD6hxO$$QhGe1xX",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 307781,
+      "globalId": "16XCiHjLrBsAGeLd7WbcdC",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 309965,
+      "globalId": "16XCiHjLrBsAGeLd7Wbcdl",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 315580,
+      "globalId": "3xhdHOs2jA$u8jnrpv6MzF",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 316020,
+      "globalId": "31Yd0KYoD7ZhuRwsiclYAf",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 321976,
+      "globalId": "362XhdPQL1Fg2usHTDRGh6",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 360104,
+      "globalId": "2KJqpnFpX0SfRZJmaG_I9Q",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 367806,
+      "globalId": "33xtZPMs19Dui57sdbBi$_",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 367818,
+      "globalId": "33xtZPMs19Dui57sdbBiyt",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 367830,
+      "globalId": "33xtZPMs19Dui57sdbBiY8",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 369356,
+      "globalId": "0aYcYZi11BE9APd7PxRbUP",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 369367,
+      "globalId": "0aYcYZi11BE9APd7PxRbUG",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 369378,
+      "globalId": "0aYcYZi11BE9APd7PxRbUA",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 369389,
+      "globalId": "0aYcYZi11BE9APd7PxRbU0",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 379877,
+      "globalId": "2cuS1aWJ9879W$hIrBUy_9",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 402246,
+      "globalId": "0Fi$Kj_vj8Qx2d6NxVPtf0",
+      "reason": "Native subtractive opening, applied to its host"
+    }
+  ],
+  "levels": [
+    {
+      "id": 110,
+      "globalId": "3kmdo4dnb6VO$SPHOHQiFk",
+      "name": "STR_PL_00_CIMENTACION",
+      "elevation": 3.399999999999929,
+      "matrix": [
+        [
+          0.8994815289606598,
+          -0.4369587841645864,
+          0.0,
+          102414.07209533457
+        ],
+        [
+          0.43695878416458633,
+          0.8994815289606599,
+          0.0,
+          114732.3014998332
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2553.4
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 114,
+      "globalId": "3kmdo4dnb6VO$SPHOHQgHZ",
+      "name": "STR_PL_00.1_ACCESO",
+      "elevation": 9.399999999999386,
+      "matrix": [
+        [
+          0.8994815289606598,
+          -0.4369587841645864,
+          0.0,
+          102414.07209533457
+        ],
+        [
+          0.43695878416458633,
+          0.8994815289606599,
+          0.0,
+          114732.3014998332
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2559.399999999999
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 118,
+      "globalId": "3kmdo4dnb6VO$SPHOHQgHy",
+      "name": "STR_PL_00.2_ACCESO",
+      "elevation": 9.549999999998347,
+      "matrix": [
+        [
+          0.8994815289606598,
+          -0.4369587841645864,
+          0.0,
+          102414.07209533457
+        ],
+        [
+          0.43695878416458633,
+          0.8994815289606599,
+          0.0,
+          114732.3014998332
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2559.5499999999984
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 122,
+      "globalId": "3DATiVKC1BHAC4Nt$IqQXh",
+      "name": "STR_PL_00.4_ACCESO",
+      "elevation": 9.899999999999626,
+      "matrix": [
+        [
+          0.8994815289606598,
+          -0.4369587841645864,
+          0.0,
+          102414.07209533457
+        ],
+        [
+          0.43695878416458633,
+          0.8994815289606599,
+          0.0,
+          114732.3014998332
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2559.8999999999996
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 126,
+      "globalId": "3DATiVKC1BHAC4Nt$IqQTm",
+      "name": "STR_PL_00.5_ACCESO",
+      "elevation": 10.499999999998241,
+      "matrix": [
+        [
+          0.8994815289606598,
+          -0.4369587841645864,
+          0.0,
+          102414.07209533457
+        ],
+        [
+          0.43695878416458633,
+          0.8994815289606599,
+          0.0,
+          114732.3014998332
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2560.499999999998
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 130,
+      "globalId": "3kmdo4dnb6VO$SPHOHQiFe",
+      "name": "STR_PL_02_INTERMEDIO",
+      "elevation": 18.399999999999945,
+      "matrix": [
+        [
+          0.8994815289606598,
+          -0.4369587841645864,
+          0.0,
+          102414.07209533457
+        ],
+        [
+          0.43695878416458633,
+          0.8994815289606599,
+          0.0,
+          114732.3014998332
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2568.4
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 134,
+      "globalId": "3kmdo4dnb6VO$SPHOHQiFl",
+      "name": "STR_PL_03_PLATAFORMA",
+      "elevation": 27.13999999999774,
+      "matrix": [
+        [
+          0.8994815289606598,
+          -0.4369587841645864,
+          0.0,
+          102414.07209533457
+        ],
+        [
+          0.43695878416458633,
+          0.8994815289606599,
+          0.0,
+          114732.3014998332
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2577.1399999999976
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 138,
+      "globalId": "3kmdo4dnb6VO$SPHOHQiFj",
+      "name": "STR_PL_04_CUBIERTA",
+      "elevation": 33.73999999999773,
+      "matrix": [
+        [
+          0.8994815289606598,
+          -0.4369587841645864,
+          0.0,
+          102414.07209533457
+        ],
+        [
+          0.43695878416458633,
+          0.8994815289606599,
+          0.0,
+          114732.3014998332
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2583.7399999999975
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "validated": true,
+  "seconds": 9.376684665679932,
+  "renderableElements": 1687,
+  "convertedOpeningElements": 103,
+  "bounds": {
+    "min": [
+      -91.90618764453393,
+      -35.649999237060456,
+      -43.75657313698321
+    ],
+    "max": [
+      21.972734564435086,
+      36.9000000858282,
+      34.577947568075615
+    ]
+  }
+}

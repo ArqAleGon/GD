@@ -1,0 +1,281 @@
+{
+  "version": 1,
+  "station": "E09",
+  "section": "E09-EST-1300",
+  "name": "E09 estructura 1300 · 0002_V01",
+  "source": "L1T1-1300-409-CON-ED-EST-MO-0002_V01.ifc",
+  "sourceSha256": "3f1c51ff732c128db05d891219b24f4a388fb7f1eb12c7aee284838e86349901",
+  "converter": "IfcOpenShell 0.8.5",
+  "kernel": "hybrid-cgal-simple-opencascade",
+  "units": "metres",
+  "coordinateConvention": "X,Z,-Y; untouched native placement",
+  "files": [
+    {
+      "file": "e09-est-1300-0002_v01-001.glb.gz",
+      "source": "L1T1-1300-409-CON-ED-EST-MO-0002_V01.ifc",
+      "section": "E09-EST-1300",
+      "discipline": "EST",
+      "converted": 350,
+      "compressedBytes": 202107,
+      "sha256": "145bd7dfac1725da80d223ea389ceb2e9771f0a4ce2da9956ffa3598c69a56f9",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    },
+    {
+      "file": "e09-est-1300-0002_v01-002.glb.gz",
+      "source": "L1T1-1300-409-CON-ED-EST-MO-0002_V01.ifc",
+      "section": "E09-EST-1300",
+      "discipline": "EST",
+      "converted": 162,
+      "compressedBytes": 86722,
+      "sha256": "34f13199de43b8c9c0d7ab19cd12eefb06732d5dfd09364329e4a56563ad423c",
+      "instanceIdentity": "source-qualified-ifc-globalid",
+      "status": "ready"
+    }
+  ],
+  "inputElements": 517,
+  "expectedRenderableElements": 505,
+  "convertedElements": 512,
+  "missingElements": [],
+  "unexpectedElements": [],
+  "excludedSourceConditions": [
+    {
+      "id": 25797,
+      "globalId": "2hW4t5ukn6iw80Klx5ZSig",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 27936,
+      "globalId": "2hW4t5ukn6iw80Klx5ZQIQ",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 29971,
+      "globalId": "2hW4t5ukn6iw80Klx5Z7hw",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 32012,
+      "globalId": "2hW4t5ukn6iw80Klx5Z7lT",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 33729,
+      "globalId": "2hW4t5ukn6iw80Klx5Z7Wi",
+      "reason": "No native shape representations"
+    },
+    {
+      "id": 40084,
+      "globalId": "0eFnpgICTDxvymhKYVY$H7",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 40989,
+      "globalId": "29WeoUn1z3ouDShAC89TIQ",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 41005,
+      "globalId": "0z7XdafDf04vrOO2sWXnIR",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 41016,
+      "globalId": "3BZe5finP7fAdeOzojtyll",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 41027,
+      "globalId": "3BZe5finP7fAdeOzojtyjY",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 41038,
+      "globalId": "3BZe5finP7fAdeOzojtydC",
+      "reason": "Native subtractive opening, applied to its host"
+    },
+    {
+      "id": 48918,
+      "globalId": "0XTkwAMWT0ROGqCNg2YZ4S",
+      "reason": "Native subtractive opening, applied to its host"
+    }
+  ],
+  "levels": [
+    {
+      "id": 110,
+      "globalId": "07FpRkHErBTgNHSA0jAjrf",
+      "name": "STR_LEVEL BASE _0.00",
+      "elevation": -2550.0,
+      "matrix": [
+        [
+          0.898181088786976,
+          -0.439625672300245,
+          0.0,
+          102385.75634337714
+        ],
+        [
+          0.439625672300245,
+          0.898181088786976,
+          0.0,
+          114754.42662594281
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 114,
+      "globalId": "1VvgZlZCT3dxT1Hc3qegm$",
+      "name": "STR_PL_01_CIMENTACION",
+      "elevation": 11.799999999999951,
+      "matrix": [
+        [
+          0.898181088786976,
+          -0.439625672300245,
+          0.0,
+          102385.75634337714
+        ],
+        [
+          0.439625672300245,
+          0.898181088786976,
+          0.0,
+          114754.42662594281
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2561.7999999999997
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 118,
+      "globalId": "1VvgZlZCT3dxT1Hc3qegmW",
+      "name": "STR_PL_02_INTERMEDIO",
+      "elevation": 18.39999999999995,
+      "matrix": [
+        [
+          0.898181088786976,
+          -0.439625672300245,
+          0.0,
+          102385.75634337714
+        ],
+        [
+          0.439625672300245,
+          0.898181088786976,
+          0.0,
+          114754.42662594281
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2568.4
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 122,
+      "globalId": "1VvgZlZCT3dxT1Hc3qegmX",
+      "name": "STR_PL_03_PLATAFORMA",
+      "elevation": 27.139999999997737,
+      "matrix": [
+        [
+          0.898181088786976,
+          -0.439625672300245,
+          0.0,
+          102385.75634337714
+        ],
+        [
+          0.439625672300245,
+          0.898181088786976,
+          0.0,
+          114754.42662594281
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2577.1399999999976
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "id": 126,
+      "globalId": "1VvgZlZCT3dxT1Hc3qegmb",
+      "name": "HUELLA ESTACIÓN",
+      "elevation": 33.73999999999772,
+      "matrix": [
+        [
+          0.898181088786976,
+          -0.439625672300245,
+          0.0,
+          102385.75634337714
+        ],
+        [
+          0.439625672300245,
+          0.898181088786976,
+          0.0,
+          114754.42662594281
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          2583.7399999999975
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "validated": true,
+  "seconds": 2.2037761211395264,
+  "renderableElements": 505,
+  "convertedOpeningElements": 7,
+  "bounds": {
+    "min": [
+      42.04526704949967,
+      -32.25,
+      12.32497373042861
+    ],
+    "max": [
+      112.61480226289132,
+      36.84681499162116,
+      50.37829872145085
+    ]
+  }
+}
