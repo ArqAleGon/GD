@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "originGltfMetres": [
     96310.0,
     2550.0,
@@ -7897,6 +7897,158 @@
       "package": "e09-est-1300-0003_v00",
       "role": "access-structure",
       "label": "Descendente"
+    },
+    {
+      "source": "L1T1-1100-309-CON-ED-EST-MO-0001_V01.ifc",
+      "files": [
+        {
+          "file": "e09-est-complementary-1100-001.glb.gz",
+          "source": "L1T1-1100-309-CON-ED-EST-MO-0001_V01.ifc",
+          "section": "E09-EST-COMPLEMENTARY",
+          "discipline": "EST",
+          "converted": 326,
+          "compressedBytes": 99771,
+          "sha256": "a1cefee956740335100d2706feb55a66b3bde954704c98062698a1fd663f6085",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        }
+      ],
+      "renderableElements": 326,
+      "bounds": {
+        "min": [
+          -77.92997202867991,
+          -43.129999999999654,
+          -12.848883846236276
+        ],
+        "max": [
+          75.26917651313124,
+          25.009999961853282,
+          72.1932313250727
+        ]
+      },
+      "package": "e09-est-complementary-1100",
+      "role": "complementary-structure",
+      "label": "Nave central"
+    },
+    {
+      "source": "L1T1-1310-409-CON-ED-EST-MO-0001_V00.ifc",
+      "files": [
+        {
+          "file": "e09-est-complementary-1310-001.glb.gz",
+          "source": "L1T1-1310-409-CON-ED-EST-MO-0001_V00.ifc",
+          "section": "E09-EST-COMPLEMENTARY",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 6287151,
+          "sha256": "a44f71d065f3ffcef78bbec0d8245650f353f5306d9822a3434bc324e7940612",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-est-complementary-1310-002.glb.gz",
+          "source": "L1T1-1310-409-CON-ED-EST-MO-0001_V00.ifc",
+          "section": "E09-EST-COMPLEMENTARY",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 333795,
+          "sha256": "fef853eef81528cd152cce343b91faa5a139b2fc146428bd24ea73a80546e0a1",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-est-complementary-1310-003.glb.gz",
+          "source": "L1T1-1310-409-CON-ED-EST-MO-0001_V00.ifc",
+          "section": "E09-EST-COMPLEMENTARY",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 509756,
+          "sha256": "00b7280cf1a96a40b0f03f74ab960b24146746c8958a21677acdbdf6fda86d4d",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-est-complementary-1310-004.glb.gz",
+          "source": "L1T1-1310-409-CON-ED-EST-MO-0001_V00.ifc",
+          "section": "E09-EST-COMPLEMENTARY",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 1628869,
+          "sha256": "a1957442f9178117f98e45355d18dd11788e6e51f86e843711acb41bda4005f7",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-est-complementary-1310-005.glb.gz",
+          "source": "L1T1-1310-409-CON-ED-EST-MO-0001_V00.ifc",
+          "section": "E09-EST-COMPLEMENTARY",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 1175770,
+          "sha256": "e7be444853a78484d72c3f7d65eaf2fdcf9235637108da556fc28f5c9af38358",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-est-complementary-1310-006.glb.gz",
+          "source": "L1T1-1310-409-CON-ED-EST-MO-0001_V00.ifc",
+          "section": "E09-EST-COMPLEMENTARY",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 710364,
+          "sha256": "1ade3056d9aa09d5bfbedf2b3de9de3b04c49f280bb8f5ae1d3f9dd5959661b8",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-est-complementary-1310-007.glb.gz",
+          "source": "L1T1-1310-409-CON-ED-EST-MO-0001_V00.ifc",
+          "section": "E09-EST-COMPLEMENTARY",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 2852180,
+          "sha256": "424afd2fabd4a28a2345839e8355ffad335625d0ad051210ce1ad932f19ecae8",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-est-complementary-1310-008.glb.gz",
+          "source": "L1T1-1310-409-CON-ED-EST-MO-0001_V00.ifc",
+          "section": "E09-EST-COMPLEMENTARY",
+          "discipline": "EST",
+          "converted": 350,
+          "compressedBytes": 143858,
+          "sha256": "14b839b380d9d533a3d0e50a3cf77cde2f056efb3ed9417ddeece8ea5d7863de",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        },
+        {
+          "file": "e09-est-complementary-1310-009.glb.gz",
+          "source": "L1T1-1310-409-CON-ED-EST-MO-0001_V00.ifc",
+          "section": "E09-EST-COMPLEMENTARY",
+          "discipline": "EST",
+          "converted": 220,
+          "compressedBytes": 2040603,
+          "sha256": "722ed067855bf4b8fdc0051a67a2adf4ddf98a0bd0aab804f6c38d3e92272f8c",
+          "instanceIdentity": "source-qualified-ifc-globalid",
+          "status": "ready"
+        }
+      ],
+      "renderableElements": 3020,
+      "bounds": {
+        "min": [
+          -61.04030985706777,
+          16.64000000357555,
+          -16.09680485239369
+        ],
+        "max": [
+          50.06768053796259,
+          31.49320097122518,
+          79.95724514187896
+        ]
+      },
+      "package": "e09-est-complementary-1310",
+      "role": "complementary-structure",
+      "label": "Pasarelas"
     }
   ],
   "brtSources": {
@@ -7944,5 +8096,7 @@
     }
   },
   "structure1300Elements": 2878,
-  "structure1300Audit": "../../structure-1300-audit.json"
+  "structure1300Audit": "../../structure-1300-audit.json",
+  "complementaryStructureElements": 3346,
+  "complementaryStructureAudit": "../../structure-v07-audit.json"
 }

@@ -44,6 +44,20 @@
       "source": "L1T1-1300-409-CON-ED-EST-MO-0003_V00.ifc",
       "label": "Descendente",
       "conversion": "native IFC to shared glTF instances"
+    },
+    {
+      "role": "complementary-structure",
+      "manifest": "models/e09-est-complementary-1100/manifest.json",
+      "source": "L1T1-1100-309-CON-ED-EST-MO-0001_V01.ifc",
+      "label": "Nave central",
+      "conversion": "native IFC to shared glTF instances"
+    },
+    {
+      "role": "complementary-structure",
+      "manifest": "models/e09-est-complementary-1310/manifest.json",
+      "source": "L1T1-1310-409-CON-ED-EST-MO-0001_V00.ifc",
+      "label": "Pasarelas",
+      "conversion": "native IFC to shared glTF instances"
     }
   ],
   "localSourceCatalogs": {
@@ -62,10 +76,11 @@
   "architectureWebSheets": "plants/manifest.json",
   "integrationAudit": "integration-audit.json",
   "fixedCameraView": "enabled for 26 Fixed Camera elements; geometric front -X; configurable evaluation FOV",
-  "revision": 6,
+  "revision": 7,
   "brtGeometryAudit": "brt-geometry-audit.json",
   "publicUrl": "https://arqalegon.github.io/GD/estudio-seguridad/",
   "spaces": "spaces.json",
   "spacesAudit": "spaces-audit.json",
-  "structure1300Audit": "structure-1300-audit.json"
+  "structure1300Audit": "structure-1300-audit.json",
+  "complementaryStructureAudit": "structure-v07-audit.json"
 }

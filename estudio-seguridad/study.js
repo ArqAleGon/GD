@@ -1,7 +1,7 @@
-import {PlanViewer} from './study-plans.js?v=20261021-structure-v06';
-import {StudyScene} from './study-scene.js?v=20261021-structure-v06';
-import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261021-structure-v06';
-import {SpaceStudy} from './study-spaces.js?v=20261021-structure-v06';
+import {PlanViewer} from './study-plans.js?v=20261021-structure-v07';
+import {StudyScene} from './study-scene.js?v=20261021-structure-v07';
+import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261021-structure-v07';
+import {SpaceStudy} from './study-spaces.js?v=20261021-structure-v07';
 const $=s=>document.querySelector(s);
 const levels=[
  {id:'B',name:'Sótano',ifc:'ARC_PL_00_BASEMENT',cutMin:2552.8,cutMax:2558.8},
@@ -17,7 +17,7 @@ const defaults=()=>({fov:90,range:25,yaw:0,tilt:0});
 initDrawers();initFullscreen(()=>{window.dispatchEvent(new Event('resize'));});
 const canView=r=>!!r&&(typeOf(r)==='F'||!!settings.profile);
 const typeOf=r=>Object.keys(types).find(k=>(r.ifcTypeName||'').includes(types[k].ifcFamilyToken));
-async function json(url){const request=new URL(url,location.href);request.searchParams.set('v','20261021-structure-v06');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
+async function json(url){const request=new URL(url,location.href);request.searchParams.set('v','20261021-structure-v07');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
 function options(select,items){select.replaceChildren(...items.map(([value,text])=>{const o=document.createElement('option');o.value=value;o.textContent=text;return o;}));}
 for(const selector of ['#entry-level','#level-select']){options($(selector),levels.map(l=>[l.id,l.name]));$(selector).value=level.id;}
 $('#entry-dialog').showModal();
@@ -63,7 +63,7 @@ async function start(){
   if(spacesData)spaces=new SpaceStudy({scene,plan:planView,data:spacesData,onSelectPlan:r=>{const part=r.building.includes('DESCENDENTE')?'A':'B',page=architecture.find(p=>p.level===level.name&&p.part===part);if(page){if($('#plan-kind').value!=='architecture'){$('#plan-kind').value='architecture';populateSheets();}$('#plan-sheet').value=page.page;zoom=1;drawPlan();}}});scene.showMarkers=camerasVisible;
   changeLevel($('#entry-level').value);
   await scene.load(modelManifest,records,types);scene.setLevel(level);scene.select(active,settings);modelsReady=true;$('#model-loading').hidden=true;updatePovMessage();
-  $('#resource-status').textContent=`E09 + BRT NQS · arquitectura, estructura e instalaciones · 3 IFC de accesos (${modelManifest.structure1300Elements} elementos) · ${records.length} cámaras · 26 perspectivas fijas`;
+  $('#resource-status').textContent=`E09 + BRT NQS · arquitectura, estructura e instalaciones · 5 IFC estructurales adicionales (${modelManifest.structure1300Elements+modelManifest.complementaryStructureElements} elementos) · ${records.length} cámaras · 26 perspectivas fijas`;
   clearInterval(loadTimer);document.body.dataset.ready='true';
  }catch(error){clearInterval(loadTimer);showError('#resource-status','No se completó la carga: '+error.message);$('#model-loading').textContent='No se pudo cargar el paquete. Usa «Reintentar modelos».';$('#retry-model').hidden=false;updatePovMessage();document.body.dataset.ready='error';console.error(error);}
 }
@@ -76,6 +76,7 @@ for(const k of ['fov','range','yaw','tilt'])$('#'+k).addEventListener('input',e=
 $('#reset-optics').addEventListener('click',()=>{settingsById.delete(active.ifcGlobalId);selectCamera(active.ifcGlobalId);});
 $('#show-installations').addEventListener('change',e=>{if(scene){scene.installations=e.target.checked;scene.filter();}});$('#show-cone').addEventListener('change',e=>{if(scene){scene.showCone=e.target.checked;scene.dirty=true;planView.select(active,canView(active)?scene.pose:null,settings);}});
 $('#show-brt').addEventListener('change',e=>{if(scene){scene.showBrt=e.target.checked;scene.filter();}});
+for(const code of ['1100','1310'])$('#show-structure-'+code).addEventListener('change',e=>{if(scene){scene.hiddenPackages ||= new Set();const key='e09-est-complementary-'+code;if(e.target.checked)scene.hiddenPackages.delete(key);else scene.hiddenPackages.add(key);scene.filter();}});
 $('#show-structure-1300').addEventListener('change',e=>{if(scene){scene.showStructure1300=e.target.checked;scene.filter();}});
 $('#frame-level').addEventListener('click',()=>scene?.frame());$('#frame-camera').addEventListener('click',()=>scene?.focusSelected());$('#help-button').addEventListener('click',()=>$('#help-dialog').showModal());
 const opticsHome=$('#optics').parentElement,opticsAnchor=document.createComment('Equalizadores');opticsHome.insertBefore(opticsAnchor,$('#optics'));
