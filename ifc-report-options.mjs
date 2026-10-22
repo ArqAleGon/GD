@@ -17,7 +17,7 @@ export function observationLines(text, measure, width) {
 }
 export function observationLayout(ctx,text){
   for(let size=20;size>=14;size--){
-    ctx.font=size+'px Arial';
+    ctx.font=size+'px Gotham';
     const lines=observationLines(text,s=>ctx.measureText(s).width,1038),height=size+5;
     if(lines.length*height<=156)return {lines,size,height};
   }
@@ -34,7 +34,7 @@ export function reportIdentityError(meta){
 }
 export function filesLayout(ctx,files){
   for(let size=15;size>=10;size--){
-    ctx.font=size+'px Arial';
+    ctx.font=size+'px Gotham';
     const lines=observationLines(files.join(' | '),s=>ctx.measureText(s).width,1638),height=size+4;
     if(lines.length*height<=64)return {lines,size,height};
   }

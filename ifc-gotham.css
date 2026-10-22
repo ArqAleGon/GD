@@ -1,0 +1,13 @@
+/* Institutional Gotham files supplied with the digital-twin project. */
+@font-face{font-family:"Gotham";src:url("./assets/fonts/gotham-thin.otf") format("opentype");font-weight:100;font-style:normal;font-display:swap}
+@font-face{font-family:"Gotham";src:url("./assets/fonts/gotham-extra-light.otf") format("opentype");font-weight:200;font-style:normal;font-display:swap}
+@font-face{font-family:"Gotham";src:url("./assets/fonts/gotham-light.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"Gotham";src:url("./assets/fonts/gotham-book.otf") format("opentype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Gotham";src:url("./assets/fonts/gotham-medium.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"Gotham";src:url("./assets/fonts/gotham-bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"Gotham";src:url("./assets/fonts/gotham-black.otf") format("opentype");font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:"Gotham";src:url("./assets/fonts/gotham-ultra.otf") format("opentype");font-weight:900;font-style:normal;font-display:swap}
+@font-face{font-family:"Gotham";src:url("./assets/fonts/gotham-italic.otf") format("opentype");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"Gotham";src:url("./assets/fonts/gotham-italicbold.otf") format("opentype");font-weight:700;font-style:italic;font-display:swap}
+@font-face{font-family:"Gotham";src:url("./assets/fonts/gotham-thin-italic.otf") format("opentype");font-weight:100;font-style:italic;font-display:swap}
+@font-face{font-family:"Gotham";src:url("./assets/fonts/gotham-extra-light-italic.otf") format("opentype");font-weight:200;font-style:italic;font-display:swap}

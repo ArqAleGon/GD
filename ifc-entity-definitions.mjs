@@ -29,9 +29,9 @@ export const definitions = Object.freeze(Object.fromEntries(Object.entries(entri
 export function definitionFor(type) {
   return definitions[type] || {text:type==='GroupedGeometry'?'Geometría publicada sin identidades IFC individuales. Esta agrupación de visualización no es una clase definida por ISO 16739.':'No se dispone de una definición verificada para esta clase. Es necesario consultar el esquema IFC del archivo fuente.',standard:'Sin referencia normativa',schema:'',clause:'',url:''};
 }
-export function fitLines(ctx,text,width,height,{size=18,minSize=16,leading=1.2}={}) {
+export function fitLines(ctx,text,width,height,{size=18,minSize=13,leading=1.2}={}) {
   for(let fontSize=size;fontSize>=minSize;fontSize--){
-    ctx.font=fontSize+'px Arial';const lines=[];let line='';
+    ctx.font=fontSize+'px Gotham';const lines=[];let line='';
     for(const word of text.split(/\s+/)){
       if(ctx.measureText(word).width>width)throw new Error('Palabra demasiado larga: '+word);
       const next=line?line+' '+word:word;
@@ -46,8 +46,8 @@ export function fitLines(ctx,text,width,height,{size=18,minSize=16,leading=1.2}=
 export function drawDefinition(ctx,type){
   const d=definitionFor(type),x=1485,width=209;
   ctx.strokeStyle='#344758';ctx.lineWidth=1;ctx.beginPath();ctx.moveTo(1465,173);ctx.lineTo(1465,389);ctx.stroke();
-  ctx.fillStyle='#54d4c7';ctx.font='bold 16px Arial';ctx.fillText(d.url?'DEFINICIÓN IFC':'CLASIFICACIÓN',x,181);
+  ctx.fillStyle='#54d4c7';ctx.font='bold 16px Gotham';ctx.fillText(d.url?'DEFINICIÓN IFC':'CLASIFICACIÓN',x,181);
   ctx.fillStyle='#e6eef5';const layout=fitLines(ctx,d.text,width,158);
   layout.lines.forEach((line,i)=>ctx.fillText(line,x,211+i*layout.lineHeight));
-  ctx.fillStyle='#aebfcd';ctx.font='13px Arial';ctx.fillText(d.standard,x,377);ctx.font='12px Arial';ctx.fillText(d.schema+(d.clause?' · § '+d.clause:''),x,395);
+  ctx.fillStyle='#aebfcd';ctx.font='13px Gotham';ctx.fillText(d.standard,x,377);ctx.font='12px Gotham';ctx.fillText(d.schema+(d.clause?' · § '+d.clause:''),x,395);
 }
