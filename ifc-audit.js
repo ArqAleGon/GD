@@ -1,5 +1,5 @@
 import {installAnnotations} from './ifc-view-annotations.mjs?v=20261022-annotations-v2';
-import {loadReportFonts,loadModoLogo,reportCover} from './ifc-report-cover.mjs?v=20261022-annotations-v2';
+import {loadReportFonts,loadModoLogo,reportCover} from './ifc-report-cover.mjs?v=20261022-cover-v3';
 import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
 import {modelLoading,loadingFrame} from './model-loading.js';

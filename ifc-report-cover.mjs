@@ -10,7 +10,7 @@ export function reportCover({section,label,meta,total,logo}){
  c.fillStyle='#f7f8fa';c.fillRect(0,0,1754,1240);c.fillStyle='#e60028';c.fillRect(0,0,28,1240);c.fillRect(82,82,74,8);
  c.fillStyle='#59616d';c.font='500 19px Gotham';c.fillText('EMPRESA METRO DE BOGOTÁ',82,139);
  c.fillStyle='#121d2a';c.font='900 74px Gotham';c.fillText('INFORME',82,300);c.font='800 66px Gotham';c.fillText('DE REVISIÓN IFC',82,385);
- c.font='300 30px Gotham';c.fillText('GEMELO DIGITAL',86,451);
+ c.font='300 30px Gotham';c.fillText('MetroDigital',86,451);
  const scale=Math.min(690/logo.width,580/logo.height);c.drawImage(logo,977,90,logo.width*scale,logo.height*scale);
  c.strokeStyle='#cdd3da';c.lineWidth=2;c.beginPath();c.moveTo(82,550);c.lineTo(1670,550);c.stroke();
  c.fillStyle='#e60028';c.font='700 35px Gotham';c.fillText('EDIFICACIÓN / UBICACIÓN',82,630);
