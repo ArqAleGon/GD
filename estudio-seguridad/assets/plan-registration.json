@@ -74,6 +74,29 @@
       "rotation": 0,
       "status": "Planta unificada · correspondencia visual IFC",
       "note": "Composición afín de las láminas originales; conserva su registro visual, no es un levantamiento topográfico."
+    },
+    "7": {
+      "matrix": [
+        [
+          10.69628618786385,
+          5.287476818063835,
+          1161.8626159250623
+        ],
+        [
+          5.098885101201948,
+          -10.595998911843719,
+          718.0583305024396
+        ]
+      ],
+      "crop": [
+        90,
+        80,
+        1390,
+        660
+      ],
+      "rotation": 90,
+      "status": "Sótano · registro por esquinas de espacios IFC · error de ajuste < 0,25 m",
+      "source": "Presentación · diapositiva 17 · imagen arquitectónica original"
     }
   },
   "inventory": {

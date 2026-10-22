@@ -1,10 +1,10 @@
-import {initVideoTours} from './study-videotours.js?v=20261022-videotours-v11';
-import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261022-videotours-v11';
-import {PlanViewer} from './study-plans.js?v=20261022-videotours-v11';
-import {StudyScene} from './study-scene.js?v=20261022-videotours-v11';
-import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261022-videotours-v11';
-import {RouteStudy} from './study-routes.js?v=20261022-videotours-v11';
-import {SpaceStudy} from './study-spaces.js?v=20261022-videotours-v11';
+import {initVideoTours} from './study-videotours.js?v=20261022-routes-v12';
+import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261022-routes-v12';
+import {PlanViewer} from './study-plans.js?v=20261022-routes-v12';
+import {StudyScene} from './study-scene.js?v=20261022-routes-v12';
+import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261022-routes-v12';
+import {RouteStudy} from './study-routes.js?v=20261022-routes-v12';
+import {SpaceStudy} from './study-spaces.js?v=20261022-routes-v12';
 const $=s=>document.querySelector(s);
 const levels=[
  {id:'B',name:'Sótano',ifc:'ARC_PL_00_BASEMENT',cutMin:2552.8,cutMax:2558.8},
@@ -20,7 +20,7 @@ const defaults=()=>({fov:90,range:25,yaw:0,tilt:0});
 initDrawers();initVideoTours();initFullscreen(()=>{window.dispatchEvent(new Event('resize'));});
 const canView=r=>!!r&&typeOf(r)==='F';
 const typeOf=r=>Object.keys(types).find(k=>(r.ifcTypeName||'').includes(types[k].ifcFamilyToken));
-async function json(url){const request=new URL(url,location.href);request.searchParams.set('v','20261022-videotours-v11');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
+async function json(url){const request=new URL(url,location.href);request.searchParams.set('v','20261022-routes-v12');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
 function options(select,items){select.replaceChildren(...items.map(([value,text])=>{const o=document.createElement('option');o.value=value;o.textContent=text;return o;}));}
 for(const selector of ['#entry-level','#level-select']){options($(selector),levels.map(l=>[l.id,l.name]));$(selector).value=level.id;}
 $('#entry-dialog').showModal();
@@ -105,7 +105,7 @@ for(const button of document.querySelectorAll('[data-toggle-cameras]'))button.ad
  planView.setMarkersVisible(camerasVisible);if(scene){scene.showMarkers=camerasVisible;scene.dirty=true;}
 });
 function svgElement(tag,attrs={}){const e=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const [k,v] of Object.entries(attrs))e.setAttribute(k,v);return e;}
-function populateSheets(){const hasArchitecture=architecture.some(p=>p.level===level.name);$('#plan-kind option[value="architecture"]').disabled=!hasArchitecture;if(!hasArchitecture&&$('#plan-kind').value==='architecture')$('#plan-kind').value='inventory';const pages=$('#plan-kind').value==='architecture'?architecture:inventory;const filtered=pages.filter(p=>p.level===level.name);options($('#plan-sheet'),filtered.map(p=>[p.page,`${p.level} · Todas las edificaciones`]));$('#plan-sheet').disabled=!filtered.length;zoom=1;drawPlan();}
+function populateSheets(){const hasArchitecture=architecture.some(p=>p.level===level.name);$('#plan-kind option[value="architecture"]').disabled=!hasArchitecture;if(!hasArchitecture&&$('#plan-kind').value==='architecture')$('#plan-kind').value='inventory';const pages=$('#plan-kind').value==='architecture'?architecture:inventory;const filtered=pages.filter(p=>p.level===level.name);options($('#plan-sheet'),filtered.map(p=>[p.page,`${p.level} · ${p.buildings?.length===1?p.buildings[0]:'Todas las edificaciones'}`]));$('#plan-sheet').disabled=!filtered.length;zoom=1;drawPlan();}
 function syncPlan(){
  if(routes?.active){routes.drawPlan();return;}
  const kind=$('#plan-kind').value,pages=(kind==='architecture'?architecture:inventory).filter(p=>p.level===level.name),current=Number($('#plan-sheet').value),preferred=planView.choosePage(kind,pages,active,current);
@@ -116,7 +116,7 @@ function drawPlan(){
  if(!page){$('#plan-svg').replaceChildren();$('#plan-status').textContent=planErrors[kind]?'Error al cargar catálogo: '+planErrors[kind]:'No hay láminas disponibles para este nivel.';$('#plan-retry').hidden=!planErrors[kind];return;}
  $('#plan-loading').hidden=false;planView.zoom=zoom;
  planView.draw(kind,page,level,active,()=>{if(token===planToken){$('#plan-loading').hidden=true;$('#plan-status').textContent=`${kind==='architecture'?'Planta arquitectónica':'Inventario CCTV'} · nivel completo · ${planView.markers.length} cámaras IFC`;$('#plan-status').classList.remove('resources-error');}},()=>{if(token===planToken){$('#plan-loading').hidden=true;showError('#plan-status','No se pudo cargar esta lámina.');$('#plan-retry').hidden=false;}});
- routes?.drawPlan();$('#plan-registration').textContent=level.id==='B'?'Sótano: plano arquitectónico no aportado · inventario conservado':planView.reg?.status||'Sin registro espacial';planView.select(active,canView(active)?scene?.pose:null,settings);
+ routes?.drawPlan();$('#plan-registration').textContent=planView.reg?.status||'Sin registro espacial';planView.select(active,canView(active)?scene?.pose:null,settings);
 }
 $('#plan-kind').addEventListener('change',()=>{populateSheets();syncPlan();});$('#plan-sheet').addEventListener('change',()=>{zoom=1;drawPlan();});$('#plan-retry').addEventListener('click',async()=>{const kind=$('#plan-kind').value;if(planErrors[kind]){try{const data=await json(kind==='architecture'?'./assets/plants/manifest.json':'./assets/cctv/inventory.json');if(kind==='architecture')architecture=data.pages;else inventory=data.pages;delete planErrors[kind];populateSheets();}catch(error){showError('#plan-status',error.message);}}else drawPlan();});
 for(const [id,fn] of [['zoom-in',()=>Math.min(8,zoom*1.5)],['zoom-out',()=>Math.max(1,zoom/1.5)],['zoom-fit',()=>1]])$('#'+id).addEventListener('click',()=>{zoom=fn();planView.zoom=zoom;planView.fit();});

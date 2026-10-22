@@ -1,10 +1,23 @@
 {
   "station": "E09",
   "stationName": "NQS",
-  "version": 10,
-  "pageCount": 3,
+  "version": 12,
+  "pageCount": 4,
   "sourceDirectory": "D:\\OneDrive - EMB\\_0_Complementarios\\00_GemeloDigital\\PLANOS\\Sam\\PLANOS_E9",
   "pages": [
+    {
+      "page": 7,
+      "level": "Sótano",
+      "part": "complete",
+      "unified": true,
+      "width": 1578,
+      "height": 812,
+      "image": "basement-v12.png",
+      "sourceFile": "Presentación · diapositiva 17",
+      "buildings": [
+        "Gilbraltar"
+      ]
+    },
     {
       "page": 1,
       "level": "Acceso",
