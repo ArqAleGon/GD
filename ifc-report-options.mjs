@@ -40,3 +40,17 @@ export function filesLayout(ctx,files){
   }
   return null;
 }
+export function includeObservedPages(draft){
+  for(const type of draft.types)if(draft.notes[type]?.trim())draft.selected.add(type);
+}
+export function reportFileName(section,number){
+  const building=String(section).replace(/^PT(?=\d)/i,'');
+  const sequence=String(number).replace(/^IFC-/i,'');
+  if(!/^[A-Za-z0-9_-]{1,30}$/.test(building)||!/^[A-Za-z0-9_-]{1,30}$/.test(sequence))throw new Error('Edificio o número de informe no válido.');
+  return `L1T1-0000-${building}-EMB-BIM-${sequence}-IN`;
+}
+// Letterbox captures: preserve the entire saved view without stretching or cropping.
+export function containedImageRect(width,height,x,y,maxWidth,maxHeight){
+  const scale=Math.min(maxWidth/width,maxHeight/height),w=width*scale,h=height*scale;
+  return {x:x+(maxWidth-w)/2,y:y+(maxHeight-h)/2,width:w,height:h};
+}

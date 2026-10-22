@@ -10,6 +10,10 @@ El visor de control utiliza exclusivamente los IFC originales abiertos por el us
 
 ## Componente de terceros
 
+Las páginas con observación no vacía se incluyen automáticamente en el informe y no pueden desmarcarse mientras mantengan esa observación. El nombre de salida es `L1T1-0000-NúmeroEdificio-EMB-BIM-NúmeroInforme-IN.pdf`; por ejemplo, `L1T1-0000-102-EMB-BIM-0001-IN.pdf`.
+
+«Vista para informe» conserva una captura de la vista actual para la página IFC seleccionada en el panel de observaciones (o aislada mediante «Solo»). Incluye encuadre, zoom, colores y filtros visibles; se ajusta al espacio del PDF sin recortarla ni deformarla. Los conteos del dashboard siguen correspondiendo al alcance completo de la página. Cada tipología y alcance de archivos tiene su captura independiente durante la carga actual de modelos; al recargar los modelos se descartan las capturas. «Usar vista automática» restaura el encuadre isométrico de esa página.
+
 Se distribuyen sin modificación `web-ifc-api.js`, `web-ifc.wasm` y `LICENSE.md` del paquete npm `web-ifc@0.0.78`, verificado contra la integridad SHA-512 del registro npm. Licencia: Mozilla Public License 2.0 (consultar el archivo de licencia del paquete).
 
 Código fuente y compilación: https://github.com/ThatOpen/engine_web-ifc/tree/0.0.78
