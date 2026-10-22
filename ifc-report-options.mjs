@@ -23,3 +23,20 @@ export function observationLayout(ctx,text){
   }
   return null;
 }
+export function localReportDate(now=new Date()){
+  return [now.getFullYear(),String(now.getMonth()+1).padStart(2,'0'),String(now.getDate()).padStart(2,'0')].join('-');
+}
+export function reportIdentityError(meta){
+  if(!/^[A-Za-z0-9_-]{1,30}$/.test(meta.number))return 'Indica un consecutivo de hasta 30 caracteres: letras, números, guion o guion bajo.';
+  if(!/^\d{4}-\d{2}-\d{2}$/.test(meta.date)||!Number.isFinite(Date.parse(meta.date+'T12:00:00Z'))||new Date(meta.date+'T12:00:00Z').toISOString().slice(0,10)!==meta.date)return 'Indica una fecha válida para el informe.';
+  if(!/^[A-Za-z0-9_-]{1,12}$/.test(meta.version))return 'Indica una versión de hasta 12 caracteres: letras, números, guion o guion bajo.';
+  return '';
+}
+export function filesLayout(ctx,files){
+  for(let size=15;size>=10;size--){
+    ctx.font=size+'px Arial';
+    const lines=observationLines(files.join(' | '),s=>ctx.measureText(s).width,1638),height=size+4;
+    if(lines.length*height<=64)return {lines,size,height};
+  }
+  return null;
+}
