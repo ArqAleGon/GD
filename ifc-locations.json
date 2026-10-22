@@ -1,0 +1,177 @@
+{
+  "version": "20261022-ifc-only-v1",
+  "locations": [
+    {
+      "code": "E01",
+      "label": "IFC · E01 · ARQ + EST"
+    },
+    {
+      "code": "E02",
+      "label": "IFC · E02 · ARQ + EST"
+    },
+    {
+      "code": "E03",
+      "label": "IFC · E03 · ARQ + EST"
+    },
+    {
+      "code": "E04",
+      "label": "IFC · E04 · ARQ + EST"
+    },
+    {
+      "code": "E05",
+      "label": "IFC · E05 · ARQ + EST"
+    },
+    {
+      "code": "E06",
+      "label": "IFC · E06 · ARQ + EST"
+    },
+    {
+      "code": "E07",
+      "label": "IFC · E07 · ARQ + EST"
+    },
+    {
+      "code": "E08",
+      "label": "IFC · E08 · ARQ + EST"
+    },
+    {
+      "code": "E09",
+      "label": "IFC · E09 · ARQ + EST"
+    },
+    {
+      "code": "E10",
+      "label": "IFC · E10 · ARQ + EST"
+    },
+    {
+      "code": "E11",
+      "label": "IFC · E11 · ARQ + EST"
+    },
+    {
+      "code": "E12",
+      "label": "IFC · E12 · ARQ + EST"
+    },
+    {
+      "code": "E13",
+      "label": "IFC · E13 · ARQ + EST"
+    },
+    {
+      "code": "E14",
+      "label": "IFC · E14 · ARQ + EST"
+    },
+    {
+      "code": "E15",
+      "label": "IFC · E15 · ARQ + EST"
+    },
+    {
+      "code": "E16",
+      "label": "IFC · E16 · ARQ + EST"
+    },
+    {
+      "code": "I01",
+      "label": "IFC · I01 · EST"
+    },
+    {
+      "code": "I02",
+      "label": "IFC · I02 · EST"
+    },
+    {
+      "code": "I03",
+      "label": "IFC · I03 · EST"
+    },
+    {
+      "code": "I04",
+      "label": "IFC · I04 · EST"
+    },
+    {
+      "code": "I05",
+      "label": "IFC · I05 · EST"
+    },
+    {
+      "code": "I06",
+      "label": "IFC · I06 · EST"
+    },
+    {
+      "code": "I07",
+      "label": "IFC · I07 · EST"
+    },
+    {
+      "code": "I08",
+      "label": "IFC · I08 · EST"
+    },
+    {
+      "code": "I09",
+      "label": "IFC · I09 · EST"
+    },
+    {
+      "code": "I10",
+      "label": "IFC · I10 · EST"
+    },
+    {
+      "code": "I11",
+      "label": "IFC · I11 · EST"
+    },
+    {
+      "code": "I12",
+      "label": "IFC · I12 · EST"
+    },
+    {
+      "code": "I13",
+      "label": "IFC · I13 · EST"
+    },
+    {
+      "code": "I14",
+      "label": "IFC · I14 · EST"
+    },
+    {
+      "code": "I15",
+      "label": "IFC · I15 · EST"
+    },
+    {
+      "code": "I16",
+      "label": "IFC · I16 · EST"
+    },
+    {
+      "code": "PT102",
+      "label": "102 · Administración"
+    },
+    {
+      "code": "PT103",
+      "label": "103 · Caseta de Control"
+    },
+    {
+      "code": "PT104",
+      "label": "104 · Cocheras"
+    },
+    {
+      "code": "PT105",
+      "label": "105 · Locales Técnicos"
+    },
+    {
+      "code": "PT106",
+      "label": "106 · Máquina de Lavado"
+    },
+    {
+      "code": "PT107",
+      "label": "107 · Edificio de Mantenimiento"
+    },
+    {
+      "code": "PT108",
+      "label": "108 · Mantenimiento Mayor"
+    },
+    {
+      "code": "PT109",
+      "label": "109 · Tanque"
+    },
+    {
+      "code": "PT110",
+      "label": "110 · PTAR"
+    },
+    {
+      "code": "PT111",
+      "label": "111 · Puesto de Mando"
+    },
+    {
+      "code": "PT112",
+      "label": "112 · Torno en Foso"
+    }
+  ]
+}

@@ -6,7 +6,7 @@ Las relaciones IfcRelAggregates e IfcRelNests permiten representar un conjunto p
 
 ObjectType se cruza con IfcEntity mediante reglas explícitas de denominación y códigos de familia del proyecto. Resultado: compatible, revisar o no evaluable. No es una comprobación de forma, volumen o correspondencia espacial. Los huecos IfcOpeningElement son volúmenes de sustracción y se ocultan inicialmente.
 
-El modo publicado carga metadatos complementarios extraídos de los originales del catálogo: ObjectType, niveles nativos y descomposición. El SHA-256 y el esquema de cada fuente se incluyen en cada paquete. La recuperación de jerarquía no añade los tipos que el conversor excluyó; para inventario completo se debe abrir el IFC original.
+El visor de control utiliza exclusivamente los IFC originales abiertos por el usuario. Inicia sin modelos; cada apertura sustituye la selección anterior y cambiar de ubicación limpia la vista. El catálogo contiene solo códigos y nombres de ubicaciones. No se cargan geometrías WebGLB ni sus metadatos de conversión. Los derivados que utilizan otros módulos del mockup se conservan.
 
 ## Componente de terceros
 
