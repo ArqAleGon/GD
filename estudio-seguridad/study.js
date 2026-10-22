@@ -1,9 +1,10 @@
-import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261021-integrated-v10';
-import {PlanViewer} from './study-plans.js?v=20261021-integrated-v10';
-import {StudyScene} from './study-scene.js?v=20261021-integrated-v10';
-import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261021-integrated-v10';
-import {RouteStudy} from './study-routes.js?v=20261021-integrated-v10';
-import {SpaceStudy} from './study-spaces.js?v=20261021-integrated-v10';
+import {initVideoTours} from './study-videotours.js?v=20261022-videotours-v11';
+import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261022-videotours-v11';
+import {PlanViewer} from './study-plans.js?v=20261022-videotours-v11';
+import {StudyScene} from './study-scene.js?v=20261022-videotours-v11';
+import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261022-videotours-v11';
+import {RouteStudy} from './study-routes.js?v=20261022-videotours-v11';
+import {SpaceStudy} from './study-spaces.js?v=20261022-videotours-v11';
 const $=s=>document.querySelector(s);
 const levels=[
  {id:'B',name:'Sótano',ifc:'ARC_PL_00_BASEMENT',cutMin:2552.8,cutMax:2558.8},
@@ -16,10 +17,10 @@ let spacesData,spaces,routes;let securityContext;
 let zoom=1,planToken=0;const settingsById=new Map();let settings={fov:90,range:25,yaw:0,tilt:0};let profiles=[],loadStart=0,loadTimer;
 const planErrors={};const planView=new PlanViewer({svg:$('#plan-svg'),container:$('#plan-scroll'),onSelect:selectCamera});
 const defaults=()=>({fov:90,range:25,yaw:0,tilt:0});
-initDrawers();initFullscreen(()=>{window.dispatchEvent(new Event('resize'));});
+initDrawers();initVideoTours();initFullscreen(()=>{window.dispatchEvent(new Event('resize'));});
 const canView=r=>!!r&&typeOf(r)==='F';
 const typeOf=r=>Object.keys(types).find(k=>(r.ifcTypeName||'').includes(types[k].ifcFamilyToken));
-async function json(url){const request=new URL(url,location.href);request.searchParams.set('v','20261021-integrated-v10');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
+async function json(url){const request=new URL(url,location.href);request.searchParams.set('v','20261022-videotours-v11');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
 function options(select,items){select.replaceChildren(...items.map(([value,text])=>{const o=document.createElement('option');o.value=value;o.textContent=text;return o;}));}
 for(const selector of ['#entry-level','#level-select']){options($(selector),levels.map(l=>[l.id,l.name]));$(selector).value=level.id;}
 $('#entry-dialog').showModal();
@@ -97,7 +98,7 @@ function expandPanel(panel){
  window.dispatchEvent(new Event('resize'));if(scene)scene.dirty=true;
 }
 for(const b of document.querySelectorAll('.expand'))b.addEventListener('click',()=>{const panel=document.getElementById(b.dataset.panel);expandPanel(panel.classList.contains('is-expanded')?null:panel);});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#spaces-dialog').open)expandPanel(null);});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#spaces-dialog').open&&!$('#videotours-dialog').open)expandPanel(null);});
 let camerasVisible=true;
 for(const button of document.querySelectorAll('[data-toggle-cameras]'))button.addEventListener('click',()=>{
  camerasVisible=!camerasVisible;for(const b of document.querySelectorAll('[data-toggle-cameras]')){b.setAttribute('aria-pressed',String(camerasVisible));b.textContent=camerasVisible?'Cámaras visibles':'Cámaras ocultas';}
