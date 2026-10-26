@@ -5,7 +5,7 @@ const svg=(tag,attrs)=>{const e=document.createElementNS(ns,tag);for(const [k,v]
 const area=n=>n.toLocaleString('es-CO',{minimumFractionDigits:2,maximumFractionDigits:2});
 export class SpaceStudy{
  constructor({scene,plan,data,onSelectPlan}){
-  Object.assign(this,{scene,plan,data,onSelectPlan});this.filter='all';this.selected=null;this.enabled=true;this.labelsEnabled=true;this.group=new THREE.Group();scene.scene.add(this.group);scene.spaces=this;this.items=[];document.body.append($('#space-labels'));
+  Object.assign(this,{scene,plan,data,onSelectPlan});this.filter='all';this.selected=null;this.enabled=false;this.labelsEnabled=false;this.group=new THREE.Group();this.group.visible=false;scene.scene.add(this.group);scene.spaces=this;this.items=[];document.body.append($('#space-labels'));
   for(const record of data.records){
    const vertices=record.points.flatMap(p=>[p[0],record.floor-2550+.14,-p[1]]),geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.Float32BufferAttribute(vertices,3));geometry.setIndex(record.triangles.flat());geometry.computeVertexNormals();
    // Analytical footprint overlay remains legible below ceilings and tall partitions.
@@ -18,9 +18,20 @@ export class SpaceStudy{
   }
   const control=document.createElement('label');control.textContent='Tipo de espacio';this.quick=document.createElement('select');this.quick.id='space-type';this.quick.setAttribute('aria-label','Tipo de espacio a resaltar');control.append(this.quick);$('#spaces-summary').before(control);this.quick.addEventListener('change',()=>this.setFilter(this.quick.value));
   for(const b of document.querySelectorAll('[data-open-spaces],#open-spaces'))b.addEventListener('click',()=>{$('#spaces-dialog').showModal();});$('#close-spaces').addEventListener('click',()=>$('#spaces-dialog').close());
-  $('#show-spaces').addEventListener('change',e=>{this.enabled=e.target.checked;this.refresh();});$('#show-space-labels').addEventListener('change',e=>{this.labelsEnabled=e.target.checked;this.scene.dirty=true;});
+  $('#toggle-space-colors').addEventListener('click',()=>this.setColors(!this.enabled));
+  $('#toggle-space-labels').addEventListener('click',()=>this.setLabels(!this.labelsEnabled));
+  $('#show-spaces').addEventListener('change',e=>this.setColors(e.target.checked));
+  $('#show-space-labels').addEventListener('change',e=>this.setLabels(e.target.checked));
+  this.syncVisibilityControls();
   this.plan.spaces=this;
  }
+ syncVisibilityControls(){
+  for(const [id,checkbox,on,name] of [['toggle-space-colors','show-spaces',this.enabled,'colores'],['toggle-space-labels','show-space-labels',this.labelsEnabled,'etiquetas']]){
+   const button=$('#'+id);button.disabled=false;button.setAttribute('aria-pressed',String(on));button.title=(on?'Ocultar ':'Mostrar ')+name+' de espacios';$('#'+checkbox).checked=on;
+  }
+ }
+ setColors(on){this.enabled=on;this.syncVisibilityControls();this.scene.dirty=true;}
+ setLabels(on){this.labelsEnabled=on;this.syncVisibilityControls();this.scene.dirty=true;}
  matches(record){return this.filter==='all'||(this.filter==='administrative'?record.administrative:record.type===this.filter);}
  setLevel(level){this.level=level;this.selected=null;const options=[['all','Todos los tipos'],...this.data.categories.map(c=>[c.name,c.name]),['administrative','Administrativas · oficinas y reuniones']];this.quick.replaceChildren(...options.map(([value,text])=>{const option=document.createElement('option');option.value=value;option.textContent=text;return option;}));this.quick.value=this.filter;this.refresh();}
  setFilter(value){this.filter=value;this.quick.value=value;this.selected=null;this.refresh();}
@@ -43,7 +54,7 @@ export class SpaceStudy{
  drawPlan(){
   this.plan.spaceLayer?.remove();if(!this.plan.layer||this.plan.kind!=='architecture'||!this.level)return;
   const reg=this.plan.reg,m=reg.matrix,layer=svg('g',{'aria-label':'Espacios arquitectónicos'});this.plan.spaceLayer=layer;this.plan.layer.insertBefore(layer,this.plan.coneLayer);
-  if(!this.enabled)return;
+  // Architectural plan conventions remain independent of the 3D display toggles.
   for(const {record:r} of this.items){if(r.level!==this.level.id)continue;const points=r.points.map(([x,y])=>[m[0][0]*x+m[0][1]*y+m[0][2],m[1][0]*x+m[1][1]*y+m[1][2]]),[cx,cy]=[m[0][0]*r.center[0]+m[0][1]*r.center[1]+m[0][2],m[1][0]*r.center[0]+m[1][1]*r.center[1]+m[1][2]];
    if(cx<0||cy<0||cx>this.plan.page.width||cy>this.plan.page.height)continue;
    const selected=r.id===this.selected,match=this.matches(r),d=r.triangles.map(t=>'M'+t.map(i=>points[i].join(',')).join('L')+'Z').join(' '),path=svg('path',{d,fill:r.color,'fill-opacity':selected?.7:this.filter!=='all'&&match?.45:0,stroke:'none',class:'space-region',role:'button',tabindex:'0','aria-label':`${r.code} · ${r.name} · ${area(r.area)} m²`});
@@ -54,10 +65,10 @@ export class SpaceStudy{
  beforePov(){this.group.visible=false;$('#space-labels').hidden=true;}
  beforeAxon(){this.group.visible=this.enabled&&!this.scene.fullStation;}
  afterAxon(expanded){
-  const container=$('#space-labels');container.hidden=!this.scene.ready||this.scene.fullStation||(!!expanded&&expanded!=='axon-panel');if(container.hidden)return;
+  const container=$('#space-labels');container.hidden=!this.labelsEnabled||!this.scene.ready||this.scene.fullStation||(!!expanded&&expanded!=='axon-panel');if(container.hidden)return;
   const box=this.scene.axon.getBoundingClientRect(),occupied=[];Object.assign(container.style,{left:box.left+'px',top:box.top+'px',width:box.width+'px',height:box.height+'px'});this.scene.axonCamera.updateMatrixWorld();
   const sorted=[...this.items].sort((a,b)=>Number(b.record.id===this.selected)-Number(a.record.id===this.selected)||b.record.area-a.record.area);
-  for(const item of sorted){const r=item.record,p=item.anchor.clone().project(this.scene.axonCamera);let visible=this.enabled&&this.labelsEnabled&&r.level===this.level?.id&&this.matches(r)&&p.z>=-1&&p.z<=1&&Math.abs(p.x)<.97&&Math.abs(p.y)<.95;const x=(p.x+1)*box.width/2,y=(1-p.y)*box.height/2,selected=r.id===this.selected;
+  for(const item of sorted){const r=item.record,p=item.anchor.clone().project(this.scene.axonCamera);let visible=this.labelsEnabled&&r.level===this.level?.id&&this.matches(r)&&p.z>=-1&&p.z<=1&&Math.abs(p.x)<.97&&Math.abs(p.y)<.95;const x=(p.x+1)*box.width/2,y=(1-p.y)*box.height/2,selected=r.id===this.selected;
    if(visible&&!selected&&occupied.some(q=>Math.abs(q[0]-x)<56&&Math.abs(q[1]-y)<23))visible=false;
    item.label.hidden=!visible;if(visible){occupied.push([x,y]);item.label.style.left=x+'px';item.label.style.top=y+'px';}
   }

@@ -4,7 +4,7 @@ import {PlanViewer} from './study-plans.js?v=20261022-routes-v12';
 import {StudyScene} from './study-scene.js?v=20261022-routes-v12';
 import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261022-routes-v12';
 import {RouteStudy} from './study-routes.js?v=20261022-routes-v12';
-import {SpaceStudy} from './study-spaces.js?v=20261022-routes-v12';
+import {SpaceStudy} from './study-spaces.js?v=20261026-space-toggles-v1';
 const $=s=>document.querySelector(s);
 const levels=[
  {id:'B',name:'Sótano',ifc:'ARC_PL_00_BASEMENT',cutMin:2552.8,cutMax:2558.8},
