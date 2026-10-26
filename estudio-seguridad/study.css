@@ -55,3 +55,5 @@ main{min-height:680px}.views{grid-template-columns:minmax(0,1.7fr) minmax(260px,
 #route-video-panel{position:fixed;z-index:7;background:#000;overflow:hidden;display:flex;align-items:center;justify-content:center}#route-video-panel[hidden]{display:none}#route-video{width:100%;height:100%;object-fit:contain;background:#000}#route-video-status{position:absolute;top:8px;left:8px;right:8px;margin:0;background:#08141ee8;padding:8px;font-size:12px;pointer-events:none}#route-video-retry{position:absolute;top:54px;left:12px}
 #route-plan-label{font-size:11px;border-left:4px solid;padding-left:8px}#route-plan-label[hidden]{display:none}
 .side-tools{top:clamp(140px,25vh,240px);gap:7px}.side-tools .drawer-tab{min-height:clamp(75px,14vh,120px)}
+
+.routes-mode #pov-panel .view-heading{gap:8px}.routes-mode #pov-panel .view-heading>div{min-width:0;flex:1}.routes-mode #pov-panel .view-heading h2{overflow-wrap:anywhere;line-height:1.35}.routes-mode #route-view-control{flex-shrink:0}

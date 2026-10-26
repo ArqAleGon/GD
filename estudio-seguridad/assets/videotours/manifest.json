@@ -1,10 +1,20 @@
 {
-  "version": 1,
+  "version": 13,
   "videos": [
     {
       "id": "e09-ruta-1",
-      "title": "E9 · Ruta 1",
+      "title": "Acceso Gibraltar-Biciusuarios",
       "file": "e09-ruta-1.mp4"
+    },
+    {
+      "id": "metro-brt",
+      "title": "Metro-BRT",
+      "file": "metro-brt.mp4"
+    },
+    {
+      "id": "brt-metro-pmr",
+      "title": "BRT-Metro · PMR",
+      "file": "brt-metro-pmr.mp4"
     }
   ]
 }

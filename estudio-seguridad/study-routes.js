@@ -1,4 +1,4 @@
-import {RouteVideo} from './study-videotours.js?v=20261026-route-pov-v1';
+import {RouteVideo} from './study-videotours.js?v=20261026-routes-v13';
 import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
 const $=s=>document.querySelector(s), ns='http://www.w3.org/2000/svg';
@@ -14,7 +14,7 @@ export class RouteStudy{
   document.body.append($('#route-live'));this.group=new THREE.Group();scene.scene.add(this.group);this.group.visible=false;this.caches=new Map();
   this.lookup=new Map([...data.routes,...data.links].map(r=>[r.id,r]));
   $('#route-family').replaceChildren(...data.families.map(f=>option(f.id,f.label)));
-  $('#route-legend').replaceChildren(...data.families.map(f=>{const p=document.createElement('p'),dot=document.createElement('i');dot.style.background=f.color;p.append(dot,document.createTextNode(f.label));return p;}));
+  $('#route-legend').replaceChildren(...data.families.map(f=>{const p=document.createElement('p'),dot=document.createElement('i');dot.style.background=f.secondaryColor?`linear-gradient(90deg,${f.color} 50%,${f.secondaryColor} 50%)`:f.color;p.append(dot,document.createTextNode(f.label));return p;}));
   $('#routes-tab').disabled=false;$('#routes-enter').addEventListener('click',()=>{this.enable(true);$('#routes-drawer .drawer-close').click();$('#route-view').focus();});$('#routes-exit').addEventListener('click',()=>this.enable(false));
   $('#route-family').addEventListener('change',()=>this.chooseFamily());$('#route-path').addEventListener('change',()=>this.choosePath());
   $('#route-play').addEventListener('click',()=>{if(this.distance>=this.total)this.distance=0;this.playing=!this.playing;this.updateText();scene.dirty=true;});
@@ -32,7 +32,7 @@ export class RouteStudy{
   const journeys=this.data.journeys.filter(r=>r.family===family),legs=this.data.routes.filter(r=>r.family===family&&!r.id.endsWith('-reverse'));
   const all=document.createElement('optgroup');all.label='Recorridos entre niveles · enlaces esquemáticos';all.append(...journeys.map(r=>option(r.id,r.label)));
   const parts=document.createElement('optgroup');parts.label='Tramos originales por nivel';parts.append(...legs.map(r=>option(r.id,r.label)));
-  $('#route-path').replaceChildren(all,parts);this.choosePath();this.setPov(this.family.id==='r1');
+  $('#route-path').replaceChildren(all,parts);this.choosePath();this.setPov(!!this.family.videoId);
  }
  choosePath(){
   const id=$('#route-path').value,journey=this.data.journeys.find(r=>r.id===id),single=this.lookup.get(id),source=journey||single;if(!source)return;
@@ -44,27 +44,27 @@ export class RouteStudy{
   for(const leg of legs){
    const points=leg.points.map(p=>new THREE.Vector3(...p)),lengths=[0];for(let i=1;i<points.length;i++)lengths.push(lengths.at(-1)+points[i].distanceTo(points[i-1]));
    const length=lengths.at(-1);if(!length)continue;
-   const group=new THREE.Group();this.group.add(group);const color=this.family.color;
+   const group=new THREE.Group();this.group.add(group);const color=leg.color||this.family.color;
    const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints(points),leg.schematic?new THREE.LineDashedMaterial({color,dashSize:.9,gapSize:.65,depthTest:false,transparent:true,opacity:.85}):new THREE.LineBasicMaterial({color,depthTest:false}));line.computeLineDistances();line.renderOrder=80;group.add(line);
-   if(!leg.schematic)for(let i=1;i<points.length;i++){const d=points[i].clone().sub(points[i-1]),len=d.length();if(len<.01)continue;const mesh=new THREE.Mesh(new THREE.CylinderGeometry(.16,.16,len,6),new THREE.MeshBasicMaterial({color,depthTest:false}));mesh.position.copy(points[i]).add(points[i-1]).multiplyScalar(.5);mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),d.normalize());mesh.renderOrder=79;group.add(mesh);if(this.family.id==='r1'){const halo=new THREE.Mesh(mesh.geometry.clone(),new THREE.MeshBasicMaterial({color:0xffffff,depthTest:false}));halo.position.copy(mesh.position);halo.quaternion.copy(mesh.quaternion);halo.scale.set(1.8,1,1.8);halo.renderOrder=78;group.add(halo);}}
+   if(!leg.schematic)for(let i=1;i<points.length;i++){const d=points[i].clone().sub(points[i-1]),len=d.length();if(len<.01)continue;const mesh=new THREE.Mesh(new THREE.CylinderGeometry(.16,.16,len,6),new THREE.MeshBasicMaterial({color,depthTest:false}));mesh.position.copy(points[i]).add(points[i-1]).multiplyScalar(.5);mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),d.normalize());mesh.renderOrder=79;group.add(mesh);if(color==='#000000'){const halo=new THREE.Mesh(mesh.geometry.clone(),new THREE.MeshBasicMaterial({color:0xffffff,depthTest:false}));halo.position.copy(mesh.position);halo.quaternion.copy(mesh.quaternion);halo.scale.set(1.8,1,1.8);halo.renderOrder=78;group.add(halo);}}
    const part={leg,points,lengths,length,offset,group,arrows:[]};offset+=length;this.parts.push(part);if(leg.schematic)this.linkLength+=length;else this.planLength+=length;
    for(let i=0;i<Math.max(1,Math.ceil(length/14));i++){const arrow=new THREE.ArrowHelper(new THREE.Vector3(1,0,0),new THREE.Vector3(),2.4,color,1.15,.85);arrow.traverse(n=>{if(n.material){n.material.depthTest=false;n.material.depthWrite=false;}n.renderOrder=85;});group.add(arrow);part.arrows.push(arrow);}
   }
   this.total=offset;this.distance=0;this.followKey=null;this.playing=this.active&&!matchMedia('(prefers-reduced-motion: reduce)').matches;
   this.leader=new THREE.Group();const ring=new THREE.Mesh(new THREE.SphereGeometry(.65,12,8),new THREE.MeshBasicMaterial({color:0xffffff,depthTest:false}));ring.renderOrder=89;this.leader.add(ring);this.group.add(this.leader);
-  $('#route-source').textContent=this.data.measurementNote;$('#route-source-pages').textContent='Fuente: diapositivas '+[...new Set(legs.filter(x=>x.slide).flatMap(x=>x.alsoSlide?[x.alsoSlide,x.slide]:[x.slide]))].sort().join(', ');
+  $('#route-source').textContent=this.data.measurementNote;$('#route-source-pages').textContent=[['Actualización',13],['Base anterior',12]].map(([label,rev])=>{const pages=[...new Set(legs.filter(x=>x.slide&&(x.sourceRevision||12)===rev).map(x=>x.slide))].sort((a,b)=>a-b);return pages.length?label+': diapositivas '+pages.join(', '):'';}).filter(Boolean).join(' · ');
   $('#route-measure').textContent=`Plantas: ${metres(this.planLength)} · enlaces estimados: ${metres(this.linkLength)}`;
   this.updatePosition(true);this.scene.dirty=true;
  }
  enable(active){
   if(this.active===active)return;if(active)this.onEnter?.();this.active=active;$('#plan-kind').disabled=active;this.controls.enabled=active&&!this.povMode;this.group.visible=active;document.body.classList.toggle('routes-mode',active);$('#routes-controls').hidden=!active;$('#route-view-control').hidden=!active;$('#route-plan-label').hidden=!active;$('#routes-tab').setAttribute('aria-pressed',String(active));
   $('#pov-panel h2').textContent=active?'Vista 3D · estación completa':'Vista 3D';$('#pov-panel .view-heading p').textContent=active?'Recorridos · todos los modelos en transparencia':'Vista POV solo activa para cámaras Fixed';
-  this.setTransparency(active);if(active){this.setPov(this.family.id==='r1');$('#routes-controls').scrollTop=0;this.scene.fullStation=false;this.fit();this.choosePath();}else{this.video.setVisible(false);this.playing=false;this.plan.routeLayer?.remove();delete document.body.dataset.routePose;this.onExit();}
+  this.setTransparency(active);if(active){this.setPov(!!this.family.videoId);$('#routes-controls').scrollTop=0;this.scene.fullStation=false;this.fit();this.choosePath();}else{this.video.setVisible(false);this.playing=false;this.plan.routeLayer?.remove();delete document.body.dataset.routePose;this.onExit();}
   this.scene.dirty=true;
  }
  setPov(enabled){
   this.povMode=enabled;this.controls.enabled=this.active&&!enabled;$('#route-view').value=enabled?'pov':'3d';
-  this.videoMode=this.family?.id==='r1'&&enabled;this.video.setVisible(this.active&&this.videoMode);
+  this.videoMode=!!this.family?.videoId&&enabled;this.video.setVisible(this.active&&this.videoMode,this.family?.videoId,this.family?.label);
   if(this.active){$('#pov-panel h2').textContent=enabled?'POV · '+this.family.label:'Vista 3D · estación completa';$('#pov-panel .view-heading p').textContent=this.videoMode?'Video del recorrido · reproducción independiente del trazado':enabled?'Observador a 1,60 m · posición sincronizada con plantas':'Recorridos · todos los modelos en transparencia';}
   this.scene.dirty=true;
  }
@@ -113,12 +113,12 @@ export class RouteStudy{
   this.plan.routeLayer?.remove();this.planLeader=null;if(!this.active||!this.plan.layer||this.plan.kind!=='architecture')return;
   const layer=svg('g',{'aria-label':this.family.label+' · recorrido sobre planta','pointer-events':'none'});this.plan.routeLayer=layer;this.plan.layer.append(layer);const m=this.plan.reg.matrix;
   this.project=p=>[m[0][0]*p.x-m[0][1]*p.z+m[0][2],m[1][0]*p.x-m[1][1]*p.z+m[1][2]];
-  for(const p of this.parts){if(p.leg.schematic||p.leg.level!==this.plan.level.id)continue;const d=this.clippedSegments(p).map(([a,b])=>'M'+this.project(a).join(',')+'L'+this.project(b).join(',')).join(' ');if(!d)continue;layer.append(svg('path',{d,fill:'none',stroke:'#fff','stroke-width':7,'vector-effect':'non-scaling-stroke'}),svg('path',{d,fill:'none',stroke:this.family.color,'stroke-width':3.5,'vector-effect':'non-scaling-stroke'}));
-   for(let dist=0;dist<p.length;dist+=12){const s=this.sample(p,dist);if(!this.onSheet(p,s.sourceY))continue;const a=this.project(s.point),b=this.project(s.point.clone().add(s.direction)),angle=Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI;layer.append(svg('path',{d:'M-20,-12 L0,0 L-20,12',transform:`translate(${a}) rotate(${angle})`,fill:'none',stroke:this.family.color,'stroke-width':3,'vector-effect':'non-scaling-stroke'}));}
+  for(const p of this.parts){if(p.leg.schematic||p.leg.level!==this.plan.level.id)continue;const d=this.clippedSegments(p).map(([a,b])=>'M'+this.project(a).join(',')+'L'+this.project(b).join(',')).join(' ');if(!d)continue;layer.append(svg('path',{d,fill:'none',stroke:'#fff','stroke-width':7,'vector-effect':'non-scaling-stroke'}),svg('path',{d,fill:'none',stroke:p.leg.color||this.family.color,'stroke-width':3.5,'vector-effect':'non-scaling-stroke'}));
+   for(let dist=0;dist<p.length;dist+=12){const s=this.sample(p,dist);if(!this.onSheet(p,s.sourceY))continue;const a=this.project(s.point),b=this.project(s.point.clone().add(s.direction)),angle=Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI;layer.append(svg('path',{d:'M-20,-12 L0,0 L-20,12',transform:`translate(${a}) rotate(${angle})`,fill:'none',stroke:p.leg.color||this.family.color,'stroke-width':3,'vector-effect':'non-scaling-stroke'}));}
   }
   this.planLeader=svg('g');this.planLeader.append(svg('path',{d:'M30,0 L-20,-20 L-10,0 L-20,20 Z',fill:this.family.color,stroke:'#fff','stroke-width':2,'vector-effect':'non-scaling-stroke'}));layer.append(this.planLeader);this.updatePlanLeader();
  }
- updatePlanLeader(){if(!this.planLeader||!this.current)return;const visible=!this.current.leg.schematic&&this.current.leg.level===this.plan.level.id&&this.onSheet(this.current,this.currentSample.sourceY);this.planLeader.style.display=visible?'':'none';if(!visible)return;const s=this.currentSample,a=this.project(s.point),b=this.project(s.point.clone().add(s.direction));this.planLeader.setAttribute('transform',`translate(${a}) rotate(${Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI})`);}
+ updatePlanLeader(){if(!this.planLeader||!this.current)return;const visible=!this.current.leg.schematic&&this.current.leg.level===this.plan.level.id&&this.onSheet(this.current,this.currentSample.sourceY);this.planLeader.style.display=visible?'':'none';if(!visible)return;const s=this.currentSample,a=this.project(s.point),b=this.project(s.point.clone().add(s.direction));this.planLeader.firstElementChild.setAttribute('fill',this.current.leg.color||this.family.color);this.planLeader.setAttribute('transform',`translate(${a}) rotate(${Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI})`);}
  sizeArrows(camera,element){const height=Math.max(1,element.clientHeight),scale=2*Math.tan(camera.fov*Math.PI/360)/height;for(const p of this.parts){for(const arrow of p.arrows){const length=Math.max(1.8,Math.min(9,camera.position.distanceTo(arrow.position)*scale*12));arrow.setLength(length,length*.5,length*.38);}const width=Math.max(1,Math.min(5,camera.position.distanceTo(p.points[0])*scale*1.3/.16));for(const n of p.group.children)if(n.isMesh)n.scale.set(width*(n.renderOrder===78?1.8:1),1,width*(n.renderOrder===78?1.8:1));}this.leader.scale.setScalar(Math.max(1,Math.min(4,camera.position.distanceTo(this.leader.position)*scale*3/.65)));}
  cachedView(view,element,camera,key){
   const s=this.scene,r=s.renderer,rect=element.getBoundingClientRect();if(rect.width<=0||rect.height<=0)return;
