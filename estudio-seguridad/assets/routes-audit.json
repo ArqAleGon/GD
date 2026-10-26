@@ -270,8 +270,8 @@
   "limitations": [
     "Geometric registration inherits the plan-to-IFC calibration; it is not a survey.",
     "Vertical links remain schematic, not obstacle-aware stair or elevator navigation.",
-    "Videos are independently played recordings, not time-calibrated route telemetry.",
+    "Video time and route distance share proportional progress; no surveyed or landmark-calibrated video trajectory is available.",
     "Other access routes retain previous source geometry where the new slides contain no replacement."
   ],
-  "sha256": "5f400eaaf4408b6d055410303c45631d193d9eb39c38c01e4ce61bfeb03000b0"
+  "sha256": "50bb731cfc3b32ec7ed9416eced3a14c16f0f275f69b8120e0e9039fb318f043"
 }

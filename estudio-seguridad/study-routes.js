@@ -1,4 +1,4 @@
-import {RouteVideo} from './study-videotours.js?v=20261026-routes-v13';
+import {RouteVideo} from './study-videotours.js?v=20261026-route-sync-v1';
 import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
 const $=s=>document.querySelector(s), ns='http://www.w3.org/2000/svg';
@@ -10,24 +10,25 @@ export class RouteStudy{
   Object.assign(this,{scene,plan,data,setContext,onExit,onEnter});scene.routes=this;plan.routes=this;this.active=false;this.playing=false;this.distance=0;this.speed=2;this.opacity=.22;this.parts=[];this.materials=new Map();
   this.camera=new THREE.PerspectiveCamera(42,1,.1,5000);this.controls=new OrbitControls(this.camera,scene.pov);this.controls.enabled=false;this.controls.addEventListener('change',()=>scene.dirty=true);
   this.povCamera=new THREE.PerspectiveCamera(65,1,.06,5000);this.povMode=false;
-  this.video=new RouteVideo();$('#route-view').addEventListener('change',e=>this.setPov(e.target.value==='pov'));
+  this.video=new RouteVideo();this.bindVideoClock();$('#route-view').addEventListener('change',e=>this.setPov(e.target.value==='pov'));
   document.body.append($('#route-live'));this.group=new THREE.Group();scene.scene.add(this.group);this.group.visible=false;this.caches=new Map();
   this.lookup=new Map([...data.routes,...data.links].map(r=>[r.id,r]));
   $('#route-family').replaceChildren(...data.families.map(f=>option(f.id,f.label)));
   $('#route-legend').replaceChildren(...data.families.map(f=>{const p=document.createElement('p'),dot=document.createElement('i');dot.style.background=f.secondaryColor?`linear-gradient(90deg,${f.color} 50%,${f.secondaryColor} 50%)`:f.color;p.append(dot,document.createTextNode(f.label));return p;}));
   $('#routes-tab').disabled=false;$('#routes-enter').addEventListener('click',()=>{this.enable(true);$('#routes-drawer .drawer-close').click();$('#route-view').focus();});$('#routes-exit').addEventListener('click',()=>this.enable(false));
   $('#route-family').addEventListener('change',()=>this.chooseFamily());$('#route-path').addEventListener('change',()=>this.choosePath());
-  $('#route-play').addEventListener('click',()=>{if(this.distance>=this.total)this.distance=0;this.playing=!this.playing;this.updateText();scene.dirty=true;});
-  $('#route-reset').addEventListener('click',()=>{this.distance=0;this.updatePosition(true);});
-  $('#route-speed').addEventListener('input',e=>{this.speed=Number(e.target.value);$('#route-speed-value').textContent=this.speed+' m/s';});
+  $('#route-play').addEventListener('click',()=>{const restart=this.distance>=this.total;if(restart)this.distance=0;this.playing=!this.playing;this.syncVideoClock(restart);this.updateText();scene.dirty=true;});
+  $('#route-reset').addEventListener('click',()=>{this.distance=0;this.syncVideoClock(true);this.updatePosition(true);});
+  $('#route-speed').addEventListener('input',e=>{this.speed=Number(e.target.value);this.syncVideoClock();this.updateSpeedText();});
   $('#route-opacity').addEventListener('input',e=>{this.opacity=Number(e.target.value)/100;$('#route-opacity-value').textContent=e.target.value+'%';this.setTransparency(true);scene.dirty=true;});
-  $('#route-progress').addEventListener('input',e=>{this.distance=this.total*Number(e.target.value)/1000;this.updatePosition(true);});
+  $('#route-progress').addEventListener('input',e=>{this.distance=this.total*Number(e.target.value)/1000;this.syncVideoClock(true);this.updatePosition(true);});
   $('#route-reverse').addEventListener('change',()=>this.choosePath());$('#route-fit').addEventListener('click',()=>{this.setPov(false);this.fit();});
   $('#route-follow').addEventListener('change',()=>this.updatePosition(true));
   new ResizeObserver(()=>{if(this.active)this.fit();}).observe(scene.pov);
   this.chooseFamily();
  }
  chooseFamily(){
+  this.videoMode=false;this.video.setVisible(false);
   const family=$('#route-family').value;this.family=this.data.families.find(f=>f.id===family);
   const journeys=this.data.journeys.filter(r=>r.family===family),legs=this.data.routes.filter(r=>r.family===family&&!r.id.endsWith('-reverse'));
   const all=document.createElement('optgroup');all.label='Recorridos entre niveles · enlaces esquemáticos';all.append(...journeys.map(r=>option(r.id,r.label)));
@@ -54,7 +55,7 @@ export class RouteStudy{
   this.leader=new THREE.Group();const ring=new THREE.Mesh(new THREE.SphereGeometry(.65,12,8),new THREE.MeshBasicMaterial({color:0xffffff,depthTest:false}));ring.renderOrder=89;this.leader.add(ring);this.group.add(this.leader);
   $('#route-source').textContent=this.data.measurementNote;$('#route-source-pages').textContent=[['Actualización',13],['Base anterior',12]].map(([label,rev])=>{const pages=[...new Set(legs.filter(x=>x.slide&&(x.sourceRevision||12)===rev).map(x=>x.slide))].sort((a,b)=>a-b);return pages.length?label+': diapositivas '+pages.join(', '):'';}).filter(Boolean).join(' · ');
   $('#route-measure').textContent=`Plantas: ${metres(this.planLength)} · enlaces estimados: ${metres(this.linkLength)}`;
-  this.updatePosition(true);this.scene.dirty=true;
+  this.updatePosition(true);this.syncVideoClock(true);this.scene.dirty=true;
  }
  enable(active){
   if(this.active===active)return;if(active)this.onEnter?.();this.active=active;$('#plan-kind').disabled=active;this.controls.enabled=active&&!this.povMode;this.group.visible=active;document.body.classList.toggle('routes-mode',active);$('#routes-controls').hidden=!active;$('#route-view-control').hidden=!active;$('#route-plan-label').hidden=!active;$('#routes-tab').setAttribute('aria-pressed',String(active));
@@ -63,10 +64,38 @@ export class RouteStudy{
   this.scene.dirty=true;
  }
  setPov(enabled){
+  if(this.videoClockReady())this.readVideoClock();
   this.povMode=enabled;this.controls.enabled=this.active&&!enabled;$('#route-view').value=enabled?'pov':'3d';
   this.videoMode=!!this.family?.videoId&&enabled;this.video.setVisible(this.active&&this.videoMode,this.family?.videoId,this.family?.label);
-  if(this.active){$('#pov-panel h2').textContent=enabled?'POV · '+this.family.label:'Vista 3D · estación completa';$('#pov-panel .view-heading p').textContent=this.videoMode?'Video del recorrido · reproducción independiente del trazado':enabled?'Observador a 1,60 m · posición sincronizada con plantas':'Recorridos · todos los modelos en transparencia';}
+  this.syncVideoClock(true);
+  if(this.active){$('#pov-panel h2').textContent=enabled?'POV · '+this.family.label:'Vista 3D · estación completa';$('#pov-panel .view-heading p').textContent=this.videoMode?'Video y plantas sincronizados · avance proporcional':enabled?'Observador a 1,60 m · posición sincronizada con plantas':'Recorridos · todos los modelos en transparencia';}
   this.scene.dirty=true;
+ }
+ videoClockReady(){const v=this.video.video;return this.active&&this.videoMode&&this.video.loadedId===this.family?.videoId&&v.readyState>=1&&Number.isFinite(v.duration)&&v.duration>0&&this.total>0;}
+ bindVideoClock(){
+  const v=this.video.video;
+  v.addEventListener('loadedmetadata',()=>this.syncVideoClock(true));
+  for(const event of ['timeupdate','seeking','seeked','ended'])v.addEventListener(event,()=>{if(this.videoClockReady())this.readVideoClock();});
+  for(const event of ['play','pause','ended'])v.addEventListener(event,()=>{if(this.videoClockReady()){this.playing=!v.paused&&!v.ended;this.readVideoClock();}});
+  v.addEventListener('ratechange',()=>{if(this.videoClockReady()){this.speed=v.playbackRate*this.total/v.duration;this.updateSpeedText();}});
+  v.addEventListener('error',()=>{if(this.active&&this.videoMode){this.playing=false;this.updateText();}});
+ }
+ updateSpeedText(){
+  const input=$('#route-speed');input.min=Math.min(.5,this.speed);input.max=Math.max(6,this.speed);input.step='any';input.value=this.speed;
+  $('#route-speed-value').textContent=this.speed.toLocaleString('es-CO',{maximumFractionDigits:2})+' m/s';
+ }
+ readVideoClock(){
+  const v=this.video.video;this.distance=this.total*Math.min(1,Math.max(0,v.currentTime/v.duration));
+  if(v.ended)this.playing=false;this.updatePosition();
+ }
+ syncVideoClock(seek=false){
+  if(!this.videoClockReady())return;const v=this.video.video;
+  const rate=Math.min(16,Math.max(.0625,this.speed*v.duration/this.total));
+  if(Math.abs(v.playbackRate-rate)>1e-6)v.playbackRate=rate;
+  this.speed=rate*this.total/v.duration;this.updateSpeedText();
+  if(seek)v.currentTime=Math.min(v.duration,Math.max(0,this.distance/this.total*v.duration));
+  if(this.playing){const id=this.family.videoId;v.play()?.catch(()=>{if(this.videoClockReady()&&this.family.videoId===id&&v.paused){this.playing=false;this.updateText();}});}
+  else v.pause();
  }
  renderPov(view){
   const s=this.scene;this.povMaterials??=new Map();const originals=[];
@@ -84,7 +113,7 @@ export class RouteStudy{
   document.body.dataset.routeFrame=JSON.stringify({min:box.min.toArray(),max:box.max.toArray(),distance,width:rect.width,height:rect.height});this.camera.far=Math.max(5000,distance*4);this.camera.position.copy(center).addScaledVector(back,distance*1.08);this.controls.target.copy(center);this.controls.update();this.scene.dirty=true;
  }
  sample(part,distance){let i=1;while(i<part.lengths.length-1&&part.lengths[i]<distance)i++;const start=part.points[i-1],end=part.points[i],len=part.lengths[i]-part.lengths[i-1],t=len?Math.max(0,Math.min(1,(distance-part.lengths[i-1])/len)):0;return {point:start.clone().lerp(end,t),direction:end.clone().sub(start).normalize(),sourceY:part.leg.sourcePoints?part.leg.sourcePoints[i-1][1]*(1-t)+part.leg.sourcePoints[i][1]*t:null};}
- tick(time){if(!this.active||document.hidden){this.last=time;return;}const dt=Math.min(.1,(time-(this.last??time))/1000);this.last=time;if(this.playing){this.distance=Math.min(this.total,this.distance+dt*this.speed);if(this.distance===this.total)this.playing=false;this.updatePosition();this.scene.dirty=true;}}
+ tick(time){if(!this.active||document.hidden){this.last=time;return;}const dt=Math.min(.1,(time-(this.last??time))/1000);this.last=time;if(this.videoMode){if(this.videoClockReady()&&(!this.video.video.paused||this.video.video.seeking))this.readVideoClock();return;}if(this.playing){this.distance=Math.min(this.total,this.distance+dt*this.speed);if(this.distance===this.total)this.playing=false;this.updatePosition();this.scene.dirty=true;}}
  updatePosition(force=false){
   if(!this.parts.length)return;const part=this.parts.find(p=>this.distance<p.offset+p.length)||this.parts.at(-1);this.current=part;this.currentSample=this.sample(part,this.distance-part.offset);this.leader.position.copy(this.currentSample.point);
   const direction=this.currentSample.direction.clone();direction.y=0;if(direction.lengthSq()<.001)direction.set(0,0,-1);direction.normalize();
@@ -97,7 +126,7 @@ export class RouteStudy{
  updateText(){
   $('#route-plan-label').textContent=this.family.label;$('#route-plan-label').style.borderColor=this.family.color;
   const text=`${metres(this.distance)} / ${metres(this.total)}`;$('#route-distance').textContent=text;$('#route-live-distance').textContent=text;$('#route-live-label').textContent=this.family.label+(this.current?.leg.schematic?' · enlace esquemático':'');
-  $('#route-progress').value=this.total?Math.round(this.distance/this.total*1000):0;$('#route-play').textContent=this.playing?'Ⅱ Pausar trazado':'▶ Reproducir trazado';$('#route-play').setAttribute('aria-pressed',String(this.playing));$('#route-current').textContent=this.current?.leg.schematic?'Enlace esquemático · '+this.current.leg.fromLevel+' → '+this.current.leg.toLevel:this.current?.leg.label||'';
+  $('#route-progress').value=this.total?Math.round(this.distance/this.total*1000):0;$('#route-play').textContent=this.playing?'Ⅱ Pausar':'▶ Reproducir';$('#route-play').setAttribute('aria-pressed',String(this.playing));$('#route-current').textContent=this.current?.leg.schematic?'Enlace esquemático · '+this.current.leg.fromLevel+' → '+this.current.leg.toLevel:this.current?.leg.label||'';
  }
  onSheet(part,y){if(this.plan.page.unified)return true;const boundary={14:480,16:460,17:400}[part.leg.slide];return this.plan.page.part==='A'?y<=boundary:y>=boundary;}
  clippedSegments(part){if(this.plan.page.unified)return part.points.slice(1).map((p,i)=>[part.points[i],p]);
