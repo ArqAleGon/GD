@@ -1,7 +1,7 @@
 import {initVideoTours} from './study-videotours.js?v=20261022-routes-v12';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261022-routes-v12';
-import {PlanViewer} from './study-plans.js?v=20261022-routes-v12';
-import {StudyScene} from './study-scene.js?v=20261022-routes-v12';
+import {PlanViewer} from './study-plans.js?v=20261026-camera-cone-v1';
+import {StudyScene} from './study-scene.js?v=20261026-camera-cone-v1';
 import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261022-routes-v12';
 import {RouteStudy} from './study-routes.js?v=20261022-routes-v12';
 import {SpaceStudy} from './study-spaces.js?v=20261026-space-toggles-v1';
@@ -85,7 +85,7 @@ $('#show-brt').addEventListener('change',e=>{if(scene){scene.showBrt=e.target.ch
 for(const code of ['1100','1310'])$('#show-structure-'+code).addEventListener('change',e=>{if(scene){scene.hiddenPackages ||= new Set();const key='e09-est-complementary-'+code;if(e.target.checked)scene.hiddenPackages.delete(key);else scene.hiddenPackages.add(key);scene.filter();}});
 $('#show-structure-914').addEventListener('change',e=>{if(scene){scene.hiddenPackages ||= new Set();if(e.target.checked)scene.hiddenPackages.delete('e09-str-914');else scene.hiddenPackages.add('e09-str-914');scene.filter();}});
 $('#show-structure-1300').addEventListener('change',e=>{if(scene){scene.showStructure1300=e.target.checked;scene.filter();}});
-function syncAxonView(){const full=!!scene?.fullStation;$('#frame-station').setAttribute('aria-pressed',String(full));$('#axon-title').textContent=full?'Estación completa · 3D':'Planta axonométrica 3D';$('#axon-subtitle').textContent=full?'Todos los niveles · sin cortes · modelos cargados':`${level.name} · corte de ${level.cutMin.toFixed(1)} a ${level.cutMax.toFixed(1)} m`;document.body.dataset.axonMode=full?'station':'level';}
+function syncAxonView(){const full=!!scene?.fullStation;$('#frame-station').setAttribute('aria-pressed',String(full));$('#axon-title').textContent=full?'Estación completa · 3D':'Planta 3D';$('#axon-subtitle').textContent=full?'Todos los niveles · sin cortes · modelos cargados':`${level.name} · corte de ${level.cutMin.toFixed(1)} a ${level.cutMax.toFixed(1)} m`;document.body.dataset.axonMode=full?'station':'level';}
 function showLevelView(){scene?.setLevel(level);syncAxonView();}
 $('#frame-station').addEventListener('click',()=>{if(!modelsReady)return;for(const id of ['show-installations','show-brt','show-structure-1300','show-structure-1100','show-structure-1310','show-structure-914'])$('#'+id).checked=true;scene.showFullStation();syncAxonView();});
 $('#frame-level').addEventListener('click',showLevelView);$('#frame-camera').addEventListener('click',()=>{showLevelView();scene?.focusSelected();});$('#help-button').addEventListener('click',()=>$('#help-dialog').showModal());

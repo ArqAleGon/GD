@@ -3,7 +3,7 @@ const el=(tag,attrs={})=>{const e=document.createElementNS(ns,tag);for(const [k,
 export class PlanViewer{
  constructor({svg,container,onSelect}){Object.assign(this,{svg,container,onSelect});this.zoom=1;this.markers=[];new ResizeObserver(()=>this.fit()).observe(container);}
  configure(registration,records,types){Object.assign(this,{registration,records,types});}
- setMarkersVisible(visible){this.markersVisible=visible;for(const m of this.markers){m.group.style.display=visible?'':'none';m.group.setAttribute('tabindex',visible?'0':'-1');}}
+ setMarkersVisible(visible){this.markersVisible=visible;if(this.coneLayer)this.coneLayer.style.display=visible?'':'none';for(const m of this.markers){m.group.style.display=visible?'':'none';m.group.setAttribute('tabindex',visible?'0':'-1');}}
  project(record,reg){const p=record.positionIfcMetres,o=this.registration.originIfc,m=reg.matrix,x=p[0]-o[0],y=p[1]-o[1];return [m[0][0]*x+m[0][1]*y+m[0][2],m[1][0]*x+m[1][1]*y+m[1][2]];}
  visible(record,reg){if(!record||!reg||(reg.allowedCameraIds&&!reg.allowedCameraIds.includes(record.ifcGlobalId)))return false;const [x,y]=this.project(record,reg),[a,b,w,h]=reg.crop;return x>=a&&x<=a+w&&y>=b&&y<=b+h;}
  choosePage(kind,pages,active,current){const available=pages.filter(p=>this.visible(active,this.registration?.[kind]?.[p.page]));return available.find(p=>p.page===current)||available[0];}
@@ -19,7 +19,7 @@ export class PlanViewer{
    const image=el('image',{href:`./assets/${kind==='architecture'?'plants':'cctv'}/${part.image}`,width:part.width,height:part.height});image.addEventListener('load',()=>{if(++loaded===layers.length&&!failed)onLoad();},{once:true});image.addEventListener('error',()=>{failed=true;onError();},{once:true});group.append(image);group.style.mixBlendMode='multiply';this.layer.append(group);
   }
   for(const label of page.buildingLabels||[]){const text=el('text',{class:'building-plan-label',x:label.position[0],y:label.position[1],'text-anchor':'middle','pointer-events':'none'});text.textContent=label.name;this.layer.append(text);}
-  this.coneLayer=el('g',{'pointer-events':'none'});this.layer.append(this.coneLayer);
+  this.coneLayer=el('g',{'pointer-events':'none',class:'camera-cone','aria-label':'Cono visual de la cámara activa'});this.layer.append(this.coneLayer);
   const radius=Math.min(w,h)/210;this.radius=radius;
   for(const record of this.records||[]){if(record.ifcStorey!==level.ifc||!this.visible(record,reg))continue;const [cx,cy]=this.project(record,reg),type=Object.keys(this.types).find(k=>record.ifcTypeName.includes(this.types[k].ifcFamilyToken)),color=this.types[type].color;
    const group=el('g',{class:'plan-marker',role:'button',tabindex:0,'data-camera-id':record.ifcGlobalId,'aria-label':`${this.types[type].label} · Marca IFC ${record.mark} · ${kind==='architecture'?'planta arquitectónica':'inventario'}`,transform:`translate(${cx} ${cy}) rotate(${-rotation})`,'aria-pressed':String(record.ifcGlobalId===active?.ifcGlobalId)});

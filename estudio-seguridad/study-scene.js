@@ -150,7 +150,7 @@ export class StudyScene{
    else if(this.mode==='multi')for(let i=0;i<4;i++)view(this.pov,this.sensorCameras[i],this.imageAspect,[(i%2)/2,Math.floor(i/2)/2,.5,.5]);
    else view(this.pov,this.povCamera,this.imageAspect);
   }
-  this.filter();this.dirty=false;this.markerGroup.visible=this.showMarkers!==false;this.activeRing.visible=!!this.selected&&this.showMarkers!==false;this.cone.visible=this.isFixed&&this.showCone!==false;this.observer.visible=this.isFixed;
+  this.filter();this.dirty=false;this.markerGroup.visible=this.showMarkers!==false;this.activeRing.visible=!!this.selected&&this.showMarkers!==false;this.cone.visible=this.isFixed&&this.showCone!==false&&this.showMarkers!==false;this.observer.visible=this.isFixed;
   if(this.level&&!this.fullStation){this.setModelClipping([new THREE.Plane(new THREE.Vector3(0,-1,0),this.level.cutMax-ORIGIN.y),new THREE.Plane(new THREE.Vector3(0,1,0),-(this.level.cutMin-ORIGIN.y))]);for(const mesh of this.staticMeshes){const b=mesh.userData.bounds;mesh.visible=mesh.visible&&b.max[1]>=this.level.cutMin-ORIGIN.y&&b.min[1]<=this.level.cutMax-ORIGIN.y;}}
   this.spaces?.beforeAxon();if(!expanded||expanded==='axon-panel')view(this.axon,this.axonCamera);this.spaces?.afterAxon(expanded);r.clippingPlanes=[];r.setScissorTest(false);
  }
