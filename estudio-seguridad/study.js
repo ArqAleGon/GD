@@ -1,9 +1,8 @@
-import {initVideoTours} from './study-videotours.js?v=20261022-routes-v12';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261022-routes-v12';
 import {PlanViewer} from './study-plans.js?v=20261026-camera-cone-v1';
 import {StudyScene} from './study-scene.js?v=20261026-camera-cone-v1';
 import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261022-routes-v12';
-import {RouteStudy} from './study-routes.js?v=20261022-routes-v12';
+import {RouteStudy} from './study-routes.js?v=20261026-route-pov-v1';
 import {SpaceStudy} from './study-spaces.js?v=20261026-space-toggles-v1';
 const $=s=>document.querySelector(s);
 const levels=[
@@ -17,10 +16,10 @@ let spacesData,spaces,routes;let securityContext;
 let zoom=1,planToken=0;const settingsById=new Map();let settings={fov:90,range:25,yaw:0,tilt:0};let profiles=[],loadStart=0,loadTimer;
 const planErrors={};const planView=new PlanViewer({svg:$('#plan-svg'),container:$('#plan-scroll'),onSelect:selectCamera});
 const defaults=()=>({fov:90,range:25,yaw:0,tilt:0});
-initDrawers();initVideoTours();initFullscreen(()=>{window.dispatchEvent(new Event('resize'));});
+initDrawers();initFullscreen(()=>{window.dispatchEvent(new Event('resize'));});
 const canView=r=>!!r&&typeOf(r)==='F';
 const typeOf=r=>Object.keys(types).find(k=>(r.ifcTypeName||'').includes(types[k].ifcFamilyToken));
-async function json(url){const request=new URL(url,location.href);request.searchParams.set('v','20261022-routes-v12');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
+async function json(url){const request=new URL(url,location.href);request.searchParams.set('v',url.endsWith('routes.json')?'20261026-route-pov-v1':'20261022-routes-v12');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
 function options(select,items){select.replaceChildren(...items.map(([value,text])=>{const o=document.createElement('option');o.value=value;o.textContent=text;return o;}));}
 for(const selector of ['#entry-level','#level-select']){options($(selector),levels.map(l=>[l.id,l.name]));$(selector).value=level.id;}
 $('#entry-dialog').showModal();
@@ -69,7 +68,7 @@ async function start(){
   await scene.load(modelManifest,records,types);scene.setLevel(level);scene.select(active,settings);modelsReady=true;$('#frame-station').disabled=false;$('#model-loading').hidden=true;updatePovMessage();
   $('#resource-status').textContent=`E09 + BRT NQS · arquitectura, estructura e instalaciones · 6 IFC estructurales adicionales (${modelManifest.structure1300Elements+modelManifest.complementaryStructureElements+modelManifest.structure914Elements} elementos) · ${records.length} cámaras · 26 perspectivas fijas`;
   clearInterval(loadTimer);document.body.dataset.ready='true';
-  try{const routeData=await json('./assets/routes.json');for(const r of [...routeData.families,...routeData.routes,...routeData.journeys,...routeData.links])if(r.label)r.label=displayName(r.label);routes=new RouteStudy({scene,plan:planView,data:routeData,onEnter:()=>expandPanel(null),setContext:(id,page)=>{if(!securityContext)securityContext={level:level.id,camera:active?.ifcGlobalId};level=levels.find(l=>l.id===id)||level;$('#level-select').value=level.id;scene.setLevel(level);spaces?.setLevel(level);syncAxonView();$('#plan-kind').value='architecture';populateSheets();if(page)$('#plan-sheet').value=String(page);drawPlan();},onExit:()=>{const saved=securityContext;securityContext=null;if(saved){changeLevel(saved.level);selectCamera(saved.camera);}else changeLevel(level.id);}});document.body.dataset.routesReady='true';}catch(error){$('#routes-tab').disabled=true;$('#resource-status').textContent+=' · No se pudieron cargar los recorridos: '+error.message;console.error(error);}
+  try{const routeData=await json('./assets/routes.json');routes=new RouteStudy({scene,plan:planView,data:routeData,onEnter:()=>expandPanel(null),setContext:(id,page)=>{if(!securityContext)securityContext={level:level.id,camera:active?.ifcGlobalId};level=levels.find(l=>l.id===id)||level;$('#level-select').value=level.id;scene.setLevel(level);spaces?.setLevel(level);syncAxonView();$('#plan-kind').value='architecture';populateSheets();if(page)$('#plan-sheet').value=String(page);drawPlan();},onExit:()=>{const saved=securityContext;securityContext=null;if(saved){changeLevel(saved.level);selectCamera(saved.camera);}else changeLevel(level.id);}});document.body.dataset.routesReady='true';}catch(error){$('#routes-tab').disabled=true;$('#resource-status').textContent+=' · No se pudieron cargar los recorridos: '+error.message;console.error(error);}
 
  }catch(error){clearInterval(loadTimer);showError('#resource-status','No se completó la carga: '+error.message);$('#model-loading').textContent='No se pudo cargar el paquete. Usa «Reintentar modelos».';$('#retry-model').hidden=false;updatePovMessage();document.body.dataset.ready='error';console.error(error);}
 }
@@ -98,7 +97,7 @@ function expandPanel(panel){
  window.dispatchEvent(new Event('resize'));if(scene)scene.dirty=true;
 }
 for(const b of document.querySelectorAll('.expand'))b.addEventListener('click',()=>{const panel=document.getElementById(b.dataset.panel);expandPanel(panel.classList.contains('is-expanded')?null:panel);});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#spaces-dialog').open&&!$('#videotours-dialog').open)expandPanel(null);});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!$('#spaces-dialog').open)expandPanel(null);});
 let camerasVisible=true;
 for(const button of document.querySelectorAll('[data-toggle-cameras]'))button.addEventListener('click',()=>{
  camerasVisible=!camerasVisible;for(const b of document.querySelectorAll('[data-toggle-cameras]')){b.setAttribute('aria-pressed',String(camerasVisible));b.textContent=camerasVisible?'Cámaras visibles':'Cámaras ocultas';}

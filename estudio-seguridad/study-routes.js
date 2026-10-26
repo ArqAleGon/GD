@@ -1,3 +1,4 @@
+import {RouteVideo} from './study-videotours.js?v=20261026-route-pov-v1';
 import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
 const $=s=>document.querySelector(s), ns='http://www.w3.org/2000/svg';
@@ -9,12 +10,12 @@ export class RouteStudy{
   Object.assign(this,{scene,plan,data,setContext,onExit,onEnter});scene.routes=this;plan.routes=this;this.active=false;this.playing=false;this.distance=0;this.speed=2;this.opacity=.22;this.parts=[];this.materials=new Map();
   this.camera=new THREE.PerspectiveCamera(42,1,.1,5000);this.controls=new OrbitControls(this.camera,scene.pov);this.controls.enabled=false;this.controls.addEventListener('change',()=>scene.dirty=true);
   this.povCamera=new THREE.PerspectiveCamera(65,1,.06,5000);this.povMode=false;
-  $('#route-pov').addEventListener('click',()=>this.setPov(!this.povMode));
+  this.video=new RouteVideo();$('#route-view').addEventListener('change',e=>this.setPov(e.target.value==='pov'));
   document.body.append($('#route-live'));this.group=new THREE.Group();scene.scene.add(this.group);this.group.visible=false;this.caches=new Map();
   this.lookup=new Map([...data.routes,...data.links].map(r=>[r.id,r]));
   $('#route-family').replaceChildren(...data.families.map(f=>option(f.id,f.label)));
   $('#route-legend').replaceChildren(...data.families.map(f=>{const p=document.createElement('p'),dot=document.createElement('i');dot.style.background=f.color;p.append(dot,document.createTextNode(f.label));return p;}));
-  $('#routes-tab').disabled=false;$('#routes-tab').addEventListener('click',()=>this.enable(true));$('#routes-enter').addEventListener('click',()=>this.enable(true));$('#routes-exit').addEventListener('click',()=>this.enable(false));
+  $('#routes-tab').disabled=false;$('#routes-enter').addEventListener('click',()=>{this.enable(true);$('#routes-drawer .drawer-close').click();$('#route-view').focus();});$('#routes-exit').addEventListener('click',()=>this.enable(false));
   $('#route-family').addEventListener('change',()=>this.chooseFamily());$('#route-path').addEventListener('change',()=>this.choosePath());
   $('#route-play').addEventListener('click',()=>{if(this.distance>=this.total)this.distance=0;this.playing=!this.playing;this.updateText();scene.dirty=true;});
   $('#route-reset').addEventListener('click',()=>{this.distance=0;this.updatePosition(true);});
@@ -31,7 +32,7 @@ export class RouteStudy{
   const journeys=this.data.journeys.filter(r=>r.family===family),legs=this.data.routes.filter(r=>r.family===family&&!r.id.endsWith('-reverse'));
   const all=document.createElement('optgroup');all.label='Recorridos entre niveles · enlaces esquemáticos';all.append(...journeys.map(r=>option(r.id,r.label)));
   const parts=document.createElement('optgroup');parts.label='Tramos originales por nivel';parts.append(...legs.map(r=>option(r.id,r.label)));
-  $('#route-path').replaceChildren(all,parts);this.choosePath();
+  $('#route-path').replaceChildren(all,parts);this.choosePath();this.setPov(this.family.id==='r1');
  }
  choosePath(){
   const id=$('#route-path').value,journey=this.data.journeys.find(r=>r.id===id),single=this.lookup.get(id),source=journey||single;if(!source)return;
@@ -56,12 +57,17 @@ export class RouteStudy{
   this.updatePosition(true);this.scene.dirty=true;
  }
  enable(active){
-  if(this.active===active)return;if(active)this.onEnter?.();this.active=active;$('#plan-kind').disabled=active;this.controls.enabled=active&&!this.povMode;this.group.visible=active;document.body.classList.toggle('routes-mode',active);$('#routes-controls').hidden=!active;$('#routes-tab').setAttribute('aria-pressed',String(active));
+  if(this.active===active)return;if(active)this.onEnter?.();this.active=active;$('#plan-kind').disabled=active;this.controls.enabled=active&&!this.povMode;this.group.visible=active;document.body.classList.toggle('routes-mode',active);$('#routes-controls').hidden=!active;$('#route-view-control').hidden=!active;$('#route-plan-label').hidden=!active;$('#routes-tab').setAttribute('aria-pressed',String(active));
   $('#pov-panel h2').textContent=active?'Vista 3D · estación completa':'Vista 3D';$('#pov-panel .view-heading p').textContent=active?'Recorridos · todos los modelos en transparencia':'Vista POV solo activa para cámaras Fixed';
-  this.setTransparency(active);if(active){this.setPov(false);$('#routes-controls').scrollTop=0;this.scene.fullStation=false;this.fit();this.choosePath();}else{this.playing=false;this.plan.routeLayer?.remove();delete document.body.dataset.routePose;this.onExit();}
+  this.setTransparency(active);if(active){this.setPov(this.family.id==='r1');$('#routes-controls').scrollTop=0;this.scene.fullStation=false;this.fit();this.choosePath();}else{this.video.setVisible(false);this.playing=false;this.plan.routeLayer?.remove();delete document.body.dataset.routePose;this.onExit();}
   this.scene.dirty=true;
  }
- setPov(enabled){this.povMode=enabled;this.controls.enabled=this.active&&!enabled;$('#route-pov').setAttribute('aria-pressed',String(enabled));$('#route-pov').textContent=enabled?'Volver a estación completa':'POV del recorrido';$('#pov-panel h2').textContent=enabled?'POV del recorrido':'Vista 3D · estación completa';$('#pov-panel .view-heading p').textContent=enabled?'Observador a 1,60 m · posición sincronizada con plantas':'Recorridos · todos los modelos en transparencia';this.scene.dirty=true;}
+ setPov(enabled){
+  this.povMode=enabled;this.controls.enabled=this.active&&!enabled;$('#route-view').value=enabled?'pov':'3d';
+  this.videoMode=this.family?.id==='r1'&&enabled;this.video.setVisible(this.active&&this.videoMode);
+  if(this.active){$('#pov-panel h2').textContent=enabled?'POV · '+this.family.label:'Vista 3D · estación completa';$('#pov-panel .view-heading p').textContent=this.videoMode?'Video del recorrido · reproducción independiente del trazado':enabled?'Observador a 1,60 m · posición sincronizada con plantas':'Recorridos · todos los modelos en transparencia';}
+  this.scene.dirty=true;
+ }
  renderPov(view){
   const s=this.scene;this.povMaterials??=new Map();const originals=[];
   for(const group of [s.staticGroup,s.cameraGroup])group.traverse(n=>{if(!n.material)return;originals.push([n,n.material]);const copy=m=>{if(!this.povMaterials.has(m)){const c=m.clone();Object.assign(c,this.materials.get(m));c.clippingPlanes=[];this.povMaterials.set(m,c);}return this.povMaterials.get(m);};n.material=Array.isArray(n.material)?n.material.map(copy):copy(n.material);});
@@ -89,8 +95,9 @@ export class RouteStudy{
   this.updateText();this.updatePlanLeader();this.scene.dirty=true;
  }
  updateText(){
+  $('#route-plan-label').textContent=this.family.label;$('#route-plan-label').style.borderColor=this.family.color;
   const text=`${metres(this.distance)} / ${metres(this.total)}`;$('#route-distance').textContent=text;$('#route-live-distance').textContent=text;$('#route-live-label').textContent=this.family.label+(this.current?.leg.schematic?' · enlace esquemático':'');
-  $('#route-progress').value=this.total?Math.round(this.distance/this.total*1000):0;$('#route-play').textContent=this.playing?'Ⅱ Pausar':'▶ Reproducir';$('#route-play').setAttribute('aria-pressed',String(this.playing));$('#route-current').textContent=this.current?.leg.schematic?'Enlace esquemático · '+this.current.leg.fromLevel+' → '+this.current.leg.toLevel:this.current?.leg.label||'';
+  $('#route-progress').value=this.total?Math.round(this.distance/this.total*1000):0;$('#route-play').textContent=this.playing?'Ⅱ Pausar trazado':'▶ Reproducir trazado';$('#route-play').setAttribute('aria-pressed',String(this.playing));$('#route-current').textContent=this.current?.leg.schematic?'Enlace esquemático · '+this.current.leg.fromLevel+' → '+this.current.leg.toLevel:this.current?.leg.label||'';
  }
  onSheet(part,y){if(this.plan.page.unified)return true;const boundary={14:480,16:460,17:400}[part.leg.slide];return this.plan.page.part==='A'?y<=boundary:y>=boundary;}
  clippedSegments(part){if(this.plan.page.unified)return part.points.slice(1).map((p,i)=>[part.points[i],p]);
@@ -104,7 +111,7 @@ export class RouteStudy{
  }
  drawPlan(){
   this.plan.routeLayer?.remove();this.planLeader=null;if(!this.active||!this.plan.layer||this.plan.kind!=='architecture')return;
-  const layer=svg('g',{'aria-label':'Recorrido sobre planta','pointer-events':'none'});this.plan.routeLayer=layer;this.plan.layer.append(layer);const m=this.plan.reg.matrix;
+  const layer=svg('g',{'aria-label':this.family.label+' · recorrido sobre planta','pointer-events':'none'});this.plan.routeLayer=layer;this.plan.layer.append(layer);const m=this.plan.reg.matrix;
   this.project=p=>[m[0][0]*p.x-m[0][1]*p.z+m[0][2],m[1][0]*p.x-m[1][1]*p.z+m[1][2]];
   for(const p of this.parts){if(p.leg.schematic||p.leg.level!==this.plan.level.id)continue;const d=this.clippedSegments(p).map(([a,b])=>'M'+this.project(a).join(',')+'L'+this.project(b).join(',')).join(' ');if(!d)continue;layer.append(svg('path',{d,fill:'none',stroke:'#fff','stroke-width':7,'vector-effect':'non-scaling-stroke'}),svg('path',{d,fill:'none',stroke:this.family.color,'stroke-width':3.5,'vector-effect':'non-scaling-stroke'}));
    for(let dist=0;dist<p.length;dist+=12){const s=this.sample(p,dist);if(!this.onSheet(p,s.sourceY))continue;const a=this.project(s.point),b=this.project(s.point.clone().add(s.direction)),angle=Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI;layer.append(svg('path',{d:'M-20,-12 L0,0 L-20,12',transform:`translate(${a}) rotate(${angle})`,fill:'none',stroke:this.family.color,'stroke-width':3,'vector-effect':'non-scaling-stroke'}));}
@@ -127,10 +134,11 @@ export class RouteStudy{
  }
  focusLevel(){const box=new THREE.Box3();for(const p of this.parts)if(!p.leg.schematic&&p.leg.level===this.scene.level.id)for(const v of p.points)box.expandByPoint(v);if(box.isEmpty())return;const center=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3()),rect=this.scene.axon.getBoundingClientRect(),distance=Math.max(55,size.length()*1.4,size.length()/Math.max(.4,rect.width/rect.height));this.scene.controls.target.copy(center);this.scene.axonCamera.position.copy(center).addScaledVector(new THREE.Vector3(.8,1,1).normalize(),distance);this.scene.controls.update();}
  renderViews(view,expanded){
-  const rect=this.scene.pov.getBoundingClientRect(),hud=$('#route-live');hud.style.left=(rect.left+10)+'px';hud.style.top=(rect.bottom-hud.offsetHeight-10)+'px';hud.style.maxWidth=Math.max(100,rect.width-20)+'px';hud.style.visibility=expanded&&expanded!=='pov-panel'?'hidden':'visible';const s=this.scene;s.cone.visible=s.observer.visible=s.activeRing.visible=s.markerGroup.visible=false;s.spaces?.beforePov();s.setModelClipping([]);for(const mesh of s.staticMeshes)mesh.visible=true;for(const node of s.cameraNodes)node.visible=true;
+  const rect=this.scene.pov.getBoundingClientRect(),hud=$('#route-live');hud.style.left=(rect.left+10)+'px';hud.style.top=(rect.bottom-hud.offsetHeight-10)+'px';hud.style.maxWidth=Math.max(100,rect.width-20)+'px';hud.style.visibility=this.videoMode||(expanded&&expanded!=='pov-panel')?'hidden':'visible';this.video.layout(rect,expanded);const s=this.scene;s.cone.visible=s.observer.visible=s.activeRing.visible=s.markerGroup.visible=false;s.spaces?.beforePov();s.setModelClipping([]);for(const mesh of s.staticMeshes)mesh.visible=true;for(const node of s.cameraNodes)node.visible=true;
   for(const p of this.parts)p.group.visible=true;this.leader.visible=true;this.group.visible=true;
   if(!expanded||expanded==='pov-panel'){
-   if(this.povMode)this.renderPov(view);
+   if(this.videoMode){/* Native video occupies this viewport. */}
+   else if(this.povMode)this.renderPov(view);
    else this.cachedView(view,s.pov,this.camera,'whole');
   }
   s.fullStation=false;const floor=s.level.cutMin-2550,ceiling=s.level.cutMax-2550;s.setModelClipping([new THREE.Plane(new THREE.Vector3(0,-1,0),ceiling),new THREE.Plane(new THREE.Vector3(0,1,0),-floor)]);
