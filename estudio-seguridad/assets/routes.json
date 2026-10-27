@@ -1,5 +1,5 @@
 {
-  "version": 15,
+  "version": 16,
   "source": "20261023 Funcionalidad E1-E9.pptx",
   "sourceSha256": "3064f1852ab5b6d0509b567536d6ae16de9c044fd4440d539629b3bda9971ed6",
   "slides": [
@@ -5904,20 +5904,20 @@
           {
             "time": 54,
             "leg": "v13-pmr-i",
-            "fraction": 0.4,
-            "label": "Corte de edición"
+            "fraction": 0.52,
+            "label": "Zona no paga Metro"
           },
           {
             "time": 59,
             "leg": "v13-pmr-i",
-            "fraction": 0.63,
-            "label": "Zona no paga Metro"
+            "fraction": 0.72,
+            "label": "Aproximación a validación Metro"
           },
           {
             "time": 63,
             "leg": "v13-pmr-i",
             "fraction": 0.79,
-            "label": "Validación ingreso Metro"
+            "label": "Transición de edición hacia ascensor Metro"
           },
           {
             "time": 66,
@@ -5956,12 +5956,13 @@
             "label": "Llegada al tren"
           },
           {
-            "time": 105.266667,
+            "time": 101.566667,
             "leg": "v13-pmr-p",
             "fraction": 1,
-            "label": "Interior del tren"
+            "label": "Fin del video actualizado"
           }
-        ]
+        ],
+        "sourceUpdated": "2026-10-27"
       }
     },
     {
@@ -6194,7 +6195,8 @@
             "fraction": 1,
             "label": "Fin"
           }
-        ]
+        ],
+        "sourceUpdated": "2026-10-27"
       }
     },
     {

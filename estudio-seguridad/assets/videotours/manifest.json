@@ -1,5 +1,5 @@
 {
-  "version": 13,
+  "version": 16,
   "videos": [
     {
       "id": "e09-ruta-1",
@@ -9,12 +9,14 @@
     {
       "id": "metro-brt",
       "title": "Metro-BRT",
-      "file": "metro-brt.mp4"
+      "file": "metro-brt-v16.mp4",
+      "sourceUpdated": "2026-10-27"
     },
     {
       "id": "brt-metro-pmr",
       "title": "BRT-Metro/PMR (Personas con movilidad Reducida)",
-      "file": "brt-metro-pmr.mp4"
+      "file": "brt-metro-pmr-v16.mp4",
+      "sourceUpdated": "2026-10-27"
     }
   ]
 }

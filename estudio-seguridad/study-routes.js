@@ -1,7 +1,7 @@
-import {RouteVideo} from './study-videotours.js?v=20261027-review15';
+import {RouteVideo} from './study-videotours.js?v=20261027-video16';
 import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
-import {distanceAtTime,timeAtDistance,speedAtTime} from './study-video-clock.js?v=20261027-review15';
+import {distanceAtTime,timeAtDistance,speedAtTime} from './study-video-clock.js?v=20261027-video16';
 const $=s=>document.querySelector(s), ns='http://www.w3.org/2000/svg';
 const svg=(tag,attrs={})=>{const n=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);return n;};
 const option=(value,text)=>{const n=document.createElement('option');n.value=value;n.textContent=text;return n;};

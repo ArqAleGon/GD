@@ -1,4 +1,4 @@
-import {displayName} from './study-dashboard.js?v=20261027-review15';
+import {displayName} from './study-dashboard.js?v=20261027-video16';
 import * as THREE from 'three';
 const $=s=>document.querySelector(s),ns='http://www.w3.org/2000/svg';
 const svg=(tag,attrs)=>{const e=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))e.setAttribute(k,v);return e;};
