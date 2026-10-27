@@ -1,7 +1,7 @@
-import {RouteVideo} from './study-videotours.js?v=20261027-gibraltar17';
+import {RouteVideo} from './study-videotours.js?v=20261027-bike18';
 import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
-import {distanceAtTime,timeAtDistance,speedAtTime,planAnimationStarted} from './study-video-clock.js?v=20261027-gibraltar17';
+import {distanceAtTime,timeAtDistance,speedAtTime,planAnimationStarted} from './study-video-clock.js?v=20261027-bike18';
 const $=s=>document.querySelector(s), ns='http://www.w3.org/2000/svg';
 const svg=(tag,attrs={})=>{const n=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);return n;};
 const option=(value,text)=>{const n=document.createElement('option');n.value=value;n.textContent=text;return n;};
@@ -126,7 +126,7 @@ export class RouteStudy{
   if(this.active&&$('#route-follow').checked&&!part.leg.schematic){const page=({A:1,I:3,P:5,B:7}[part.leg.level]);const key=part.leg.level+':'+page;if(force||key!==this.followKey){this.followKey=key;this.setContext(part.leg.level,page);this.focusLevel();}}
   this.updateText();this.updatePlanLeader();this.scene.dirty=true;
  }
- planAnimationStarted(){return !this.videoMode||planAnimationStarted(this.videoProfile,this.video.video.currentTime);}
+ planAnimationStarted(part=this.current){return !this.videoMode||planAnimationStarted(this.videoProfile,this.video.video.currentTime,part?.leg.id);}
  updateText(){
   $('#route-plan-label').textContent=this.family.label;$('#route-plan-label').style.borderColor=this.family.color;
   const text=`${metres(this.distance)} / ${metres(this.total)}`;$('#route-distance').textContent=text;$('#route-live-distance').textContent=text;$('#route-live-label').textContent=this.family.label+(this.current?.leg.schematic?' · enlace esquemático':'');
@@ -169,7 +169,7 @@ export class RouteStudy{
  focusLevel(){const box=new THREE.Box3();for(const p of this.parts)if(!p.leg.schematic&&p.leg.level===this.scene.level.id)for(const v of p.points)box.expandByPoint(v);if(box.isEmpty())return;const center=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3()),rect=this.scene.axon.getBoundingClientRect(),distance=Math.max(55,size.length()*1.4,size.length()/Math.max(.4,rect.width/rect.height));this.scene.controls.target.copy(center);this.scene.axonCamera.position.copy(center).addScaledVector(new THREE.Vector3(.8,1,1).normalize(),distance);this.scene.controls.update();}
  renderViews(view,expanded){
   const rect=this.scene.pov.getBoundingClientRect(),hud=$('#route-live');hud.style.left=(rect.left+10)+'px';hud.style.top=(rect.bottom-hud.offsetHeight-10)+'px';hud.style.maxWidth=Math.max(100,rect.width-20)+'px';hud.style.visibility=this.videoMode||(expanded&&expanded!=='pov-panel')?'hidden':'visible';this.video.layout(rect,expanded);const s=this.scene;s.cone.visible=s.observer.visible=s.activeRing.visible=s.markerGroup.visible=false;s.spaces?.beforePov();s.setModelClipping([]);for(const mesh of s.staticMeshes)mesh.visible=true;for(const node of s.cameraNodes)node.visible=true;
-  for(const p of this.parts){p.group.visible=true;for(const arrow of p.arrows)arrow.visible=this.planAnimationStarted();}this.leader.visible=this.planAnimationStarted();this.group.visible=true;
+  for(const p of this.parts){p.group.visible=true;for(const arrow of p.arrows)arrow.visible=this.planAnimationStarted(p);}this.leader.visible=this.planAnimationStarted();this.group.visible=true;
   if(!expanded||expanded==='pov-panel'){
    if(this.videoMode){/* Native video occupies this viewport. */}
    else if(this.povMode)this.renderPov(view);

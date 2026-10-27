@@ -1,5 +1,5 @@
 {
-  "version": 17,
+  "version": 18,
   "source": "20261023 Funcionalidad E1-E9.pptx",
   "sourceSha256": "3064f1852ab5b6d0509b567536d6ae16de9c044fd4440d539629b3bda9971ed6",
   "slides": [
@@ -33,7 +33,7 @@
       "color": "#000000",
       "secondaryColor": "#66FF66",
       "videoId": "e09-ruta-1",
-      "defaultJourney": "journey-g-s-oeste"
+      "defaultJourney": "video-gibraltar-completo"
     },
     {
       "id": "r2",
@@ -6533,7 +6533,7 @@
       "bidirectional": false,
       "videoSync": {
         "videoId": "e09-ruta-1",
-        "method": "Hitos visuales revisados en el video: inicio y llegada, validadores, escaleras y ascensores. Interpolación entre hitos; conexiones verticales esquemáticas. El retorno del cicloparqueadero al acceso es un enlace esquemático pendiente de validación geométrica; su distancia es estimada.",
+        "method": "Tramo verde de Biciusuarios desde 0:00; línea negra de Acceso Gibraltar desde 2:08. Avance interpolado entre hitos del POV y cambios de nivel. El retorno del cicloparqueadero al acceso y los enlaces verticales son esquemáticos; sus distancias son estimadas.",
         "keys": [
           {
             "time": 0,
@@ -6631,7 +6631,14 @@
             "fraction": 1,
             "label": "Fin"
           }
-        ]
+        ],
+        "legAnimationStartSeconds": {
+          "g-a-s": 128,
+          "link-g-a-s-g-i-w-oeste": 128,
+          "g-i-w-oeste": 128,
+          "link-g-i-w-oeste-g-p-w": 128,
+          "g-p-w": 128
+        }
       }
     }
   ]
