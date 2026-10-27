@@ -16,7 +16,7 @@ export class RouteVideo{
   const ticket=this.ticket=(this.ticket||0)+1;
   try{
    this.message('Cargando video…');this.retry.hidden=true;
-   if(!this.manifest)this.manifest=fetch('./assets/videotours/manifest.json?v=20261026-route-sync-v1').then(r=>{if(!r.ok)throw Error('Catálogo no disponible');return r.json();}).catch(error=>{this.manifest=null;throw error;});
+   if(!this.manifest)this.manifest=fetch('./assets/videotours/manifest.json?v=20261027-review15').then(r=>{if(!r.ok)throw Error('Catálogo no disponible');return r.json();}).catch(error=>{this.manifest=null;throw error;});
    const data=await this.manifest;if(ticket!==this.ticket||id!==this.videoId)return;
    const item=data.videos?.find(v=>v.id===id);if(!item)throw Error('Video no disponible');
    this.video.src=new URL(item.file,new URL('./assets/videotours/',location.href)).href;this.loadedId=id;this.video.load();

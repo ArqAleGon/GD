@@ -57,3 +57,6 @@ main{min-height:680px}.views{grid-template-columns:minmax(0,1.7fr) minmax(260px,
 .side-tools{top:clamp(140px,25vh,240px);gap:7px}.side-tools .drawer-tab{min-height:clamp(75px,14vh,120px)}
 
 .routes-mode #pov-panel .view-heading{gap:8px}.routes-mode #pov-panel .view-heading>div{min-width:0;flex:1}.routes-mode #pov-panel .view-heading h2{overflow-wrap:anywhere;line-height:1.35}.routes-mode #route-view-control{flex-shrink:0}
+
+/* Match the camera dashboard action text. */
+#camera-count{font-size:12px;line-height:1.5}

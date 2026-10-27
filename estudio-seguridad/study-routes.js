@@ -1,6 +1,7 @@
-import {RouteVideo} from './study-videotours.js?v=20261026-route-sync-v1';
+import {RouteVideo} from './study-videotours.js?v=20261027-review15';
 import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
+import {distanceAtTime,timeAtDistance,speedAtTime} from './study-video-clock.js?v=20261027-review15';
 const $=s=>document.querySelector(s), ns='http://www.w3.org/2000/svg';
 const svg=(tag,attrs={})=>{const n=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);return n;};
 const option=(value,text)=>{const n=document.createElement('option');n.value=value;n.textContent=text;return n;};
@@ -16,10 +17,10 @@ export class RouteStudy{
   $('#route-family').replaceChildren(...data.families.map(f=>option(f.id,f.label)));
   $('#route-legend').replaceChildren(...data.families.map(f=>{const p=document.createElement('p'),dot=document.createElement('i');dot.style.background=f.secondaryColor?`linear-gradient(90deg,${f.color} 50%,${f.secondaryColor} 50%)`:f.color;p.append(dot,document.createTextNode(f.label));return p;}));
   $('#routes-tab').disabled=false;$('#routes-enter').addEventListener('click',()=>{this.enable(true);$('#routes-drawer .drawer-close').click();$('#route-view').focus();});$('#routes-exit').addEventListener('click',()=>this.enable(false));
-  $('#route-family').addEventListener('change',()=>this.chooseFamily());$('#route-path').addEventListener('change',()=>this.choosePath());
-  $('#route-play').addEventListener('click',()=>{const restart=this.distance>=this.total;if(restart)this.distance=0;this.playing=!this.playing;this.syncVideoClock(restart);this.updateText();scene.dirty=true;});
+  $('#route-family').addEventListener('change',()=>this.chooseFamily());$('#route-path').addEventListener('change',()=>{this.choosePath();this.setPov(this.povMode);});
+  $('#route-play').addEventListener('click',()=>{const restart=this.videoMode?this.video.video.ended:this.distance>=this.total;if(restart)this.distance=0;this.playing=!this.playing;this.syncVideoClock(restart);this.updateText();scene.dirty=true;});
   $('#route-reset').addEventListener('click',()=>{this.distance=0;this.syncVideoClock(true);this.updatePosition(true);});
-  $('#route-speed').addEventListener('input',e=>{this.speed=Number(e.target.value);this.syncVideoClock();this.updateSpeedText();});
+  $('#route-speed').addEventListener('input',e=>{if(this.videoMode)this.videoRate=Number(e.target.value);else this.speed=Number(e.target.value);this.syncVideoClock();this.updateSpeedText();});
   $('#route-opacity').addEventListener('input',e=>{this.opacity=Number(e.target.value)/100;$('#route-opacity-value').textContent=e.target.value+'%';this.setTransparency(true);scene.dirty=true;});
   $('#route-progress').addEventListener('input',e=>{this.distance=this.total*Number(e.target.value)/1000;this.syncVideoClock(true);this.updatePosition(true);});
   $('#route-reverse').addEventListener('change',()=>this.choosePath());$('#route-fit').addEventListener('click',()=>{this.setPov(false);this.fit();});
@@ -33,10 +34,11 @@ export class RouteStudy{
   const journeys=this.data.journeys.filter(r=>r.family===family),legs=this.data.routes.filter(r=>r.family===family&&!r.id.endsWith('-reverse'));
   const all=document.createElement('optgroup');all.label='Recorridos entre niveles · enlaces esquemáticos';all.append(...journeys.map(r=>option(r.id,r.label)));
   const parts=document.createElement('optgroup');parts.label='Tramos originales por nivel';parts.append(...legs.map(r=>option(r.id,r.label)));
-  $('#route-path').replaceChildren(all,parts);this.choosePath();this.setPov(!!this.family.videoId);
+  $('#route-path').replaceChildren(all,parts);if(this.family.defaultJourney)$('#route-path').value=this.family.defaultJourney;this.choosePath();this.setPov(!!this.family.videoId);
  }
  choosePath(){
   const id=$('#route-path').value,journey=this.data.journeys.find(r=>r.id===id),single=this.lookup.get(id),source=journey||single;if(!source)return;
+  this.videoProfile=source.videoSync;this.videoRate=1;
   $('#route-reverse').disabled=!source.bidirectional;if(!source.bidirectional)$('#route-reverse').checked=false;
   let legs=(journey?journey.legs:[single.id]).map(id=>({...this.lookup.get(id)}));
   if($('#route-reverse').checked)legs=legs.reverse().map(r=>({...r,points:r.points.slice().reverse(),sourcePoints:r.sourcePoints?.slice().reverse(),fromLevel:r.toLevel,toLevel:r.fromLevel}));
@@ -51,9 +53,9 @@ export class RouteStudy{
    const part={leg,points,lengths,length,offset,group,arrows:[]};offset+=length;this.parts.push(part);if(leg.schematic)this.linkLength+=length;else this.planLength+=length;
    for(let i=0;i<Math.max(1,Math.ceil(length/14));i++){const arrow=new THREE.ArrowHelper(new THREE.Vector3(1,0,0),new THREE.Vector3(),2.4,color,1.15,.85);arrow.traverse(n=>{if(n.material){n.material.depthTest=false;n.material.depthWrite=false;}n.renderOrder=85;});group.add(arrow);part.arrows.push(arrow);}
   }
-  this.total=offset;this.distance=0;this.followKey=null;this.playing=this.active&&!matchMedia('(prefers-reduced-motion: reduce)').matches;
+  this.total=offset;this.videoKeys=(this.videoProfile?.keys||[]).map(key=>{const part=this.parts.find(p=>p.leg.id===key.leg);if(!part)throw Error('Hito de video sin tramo: '+key.leg);return {...key,distance:part.offset+part.length*key.fraction};});this.distance=0;this.followKey=null;this.playing=this.active&&!matchMedia('(prefers-reduced-motion: reduce)').matches;
   this.leader=new THREE.Group();const ring=new THREE.Mesh(new THREE.SphereGeometry(.65,12,8),new THREE.MeshBasicMaterial({color:0xffffff,depthTest:false}));ring.renderOrder=89;this.leader.add(ring);this.group.add(this.leader);
-  $('#route-source').textContent=this.data.measurementNote;$('#route-source-pages').textContent=[['Actualización',13],['Base anterior',12]].map(([label,rev])=>{const pages=[...new Set(legs.filter(x=>x.slide&&(x.sourceRevision||12)===rev).map(x=>x.slide))].sort((a,b)=>a-b);return pages.length?label+': diapositivas '+pages.join(', '):'';}).filter(Boolean).join(' · ');
+  $('#route-source').textContent=this.data.measurementNote+(this.videoProfile?' '+this.videoProfile.method:'');$('#route-source-pages').textContent=[['Actualización',13],['Base anterior',12]].map(([label,rev])=>{const pages=[...new Set(legs.filter(x=>x.slide&&(x.sourceRevision||12)===rev).map(x=>x.slide))].sort((a,b)=>a-b);return pages.length?label+': diapositivas '+pages.join(', '):'';}).filter(Boolean).join(' · ');
   $('#route-measure').textContent=`Plantas: ${metres(this.planLength)} · enlaces estimados: ${metres(this.linkLength)}`;
   this.updatePosition(true);this.syncVideoClock(true);this.scene.dirty=true;
  }
@@ -66,35 +68,36 @@ export class RouteStudy{
  setPov(enabled){
   if(this.videoClockReady())this.readVideoClock();
   this.povMode=enabled;this.controls.enabled=this.active&&!enabled;$('#route-view').value=enabled?'pov':'3d';
-  this.videoMode=!!this.family?.videoId&&enabled;this.video.setVisible(this.active&&this.videoMode,this.family?.videoId,this.family?.label);
+  this.videoMode=!!this.videoProfile&&enabled;this.video.setVisible(this.active&&this.videoMode,this.videoProfile?.videoId,this.family?.label);this.updateSpeedText();
   this.syncVideoClock(true);
-  if(this.active){$('#pov-panel h2').textContent=enabled?'POV · '+this.family.label:'Vista 3D · estación completa';$('#pov-panel .view-heading p').textContent=this.videoMode?'Video y plantas sincronizados · avance proporcional':enabled?'Observador a 1,60 m · posición sincronizada con plantas':'Recorridos · todos los modelos en transparencia';}
+  if(this.active){$('#pov-panel h2').textContent=enabled?'POV · '+this.family.label:'Vista 3D · estación completa';$('#pov-panel .view-heading p').textContent=this.videoMode?'Video y plantas · hitos y cambios de nivel':enabled?'POV geométrico · este tramo no tiene video correspondiente':'Recorridos · todos los modelos en transparencia';}
   this.scene.dirty=true;
  }
- videoClockReady(){const v=this.video.video;return this.active&&this.videoMode&&this.video.loadedId===this.family?.videoId&&v.readyState>=1&&Number.isFinite(v.duration)&&v.duration>0&&this.total>0;}
+ videoClockReady(){const v=this.video.video;return this.active&&this.videoMode&&this.video.loadedId===this.videoProfile?.videoId&&v.readyState>=1&&Number.isFinite(v.duration)&&v.duration>0&&this.total>0;}
  bindVideoClock(){
   const v=this.video.video;
   v.addEventListener('loadedmetadata',()=>this.syncVideoClock(true));
   for(const event of ['timeupdate','seeking','seeked','ended'])v.addEventListener(event,()=>{if(this.videoClockReady())this.readVideoClock();});
   for(const event of ['play','pause','ended'])v.addEventListener(event,()=>{if(this.videoClockReady()){this.playing=!v.paused&&!v.ended;this.readVideoClock();}});
-  v.addEventListener('ratechange',()=>{if(this.videoClockReady()){this.speed=v.playbackRate*this.total/v.duration;this.updateSpeedText();}});
+  v.addEventListener('ratechange',()=>{if(this.videoClockReady()){this.videoRate=v.playbackRate;this.updateSpeedText();}});
   v.addEventListener('error',()=>{if(this.active&&this.videoMode){this.playing=false;this.updateText();}});
  }
  updateSpeedText(){
+  if(this.videoMode){const input=$('#route-speed');input.min=.25;input.max=2;input.step=.25;input.value=this.videoRate||1;input.setAttribute('aria-label','Velocidad del video');$('#route-speed-value').textContent=(this.videoRate||1).toLocaleString('es-CO')+'× · video';return;}
   const input=$('#route-speed');input.min=Math.min(.5,this.speed);input.max=Math.max(6,this.speed);input.step='any';input.value=this.speed;
   $('#route-speed-value').textContent=this.speed.toLocaleString('es-CO',{maximumFractionDigits:2})+' m/s';
  }
  readVideoClock(){
-  const v=this.video.video;this.distance=this.total*Math.min(1,Math.max(0,v.currentTime/v.duration));
+  const v=this.video.video;this.distance=distanceAtTime(this.videoKeys,v.currentTime);this.speed=speedAtTime(this.videoKeys,v.currentTime)*v.playbackRate;
   if(v.ended)this.playing=false;this.updatePosition();
  }
  syncVideoClock(seek=false){
   if(!this.videoClockReady())return;const v=this.video.video;
-  const rate=Math.min(16,Math.max(.0625,this.speed*v.duration/this.total));
+  const rate=Math.min(2,Math.max(.25,this.videoRate||1));
   if(Math.abs(v.playbackRate-rate)>1e-6)v.playbackRate=rate;
-  this.speed=rate*this.total/v.duration;this.updateSpeedText();
-  if(seek)v.currentTime=Math.min(v.duration,Math.max(0,this.distance/this.total*v.duration));
-  if(this.playing){const id=this.family.videoId;v.play()?.catch(()=>{if(this.videoClockReady()&&this.family.videoId===id&&v.paused){this.playing=false;this.updateText();}});}
+  this.updateSpeedText();
+  if(seek)v.currentTime=Math.min(v.duration,Math.max(0,timeAtDistance(this.videoKeys,this.distance)));
+  if(this.playing){const id=this.videoProfile.videoId;v.play()?.catch(()=>{if(this.videoClockReady()&&this.videoProfile?.videoId===id&&v.paused){this.playing=false;this.updateText();}});}
   else v.pause();
  }
  renderPov(view){
@@ -118,8 +121,8 @@ export class RouteStudy{
   if(!this.parts.length)return;const part=this.parts.find(p=>this.distance<p.offset+p.length)||this.parts.at(-1);this.current=part;this.currentSample=this.sample(part,this.distance-part.offset);this.leader.position.copy(this.currentSample.point);
   const direction=this.currentSample.direction.clone();direction.y=0;if(direction.lengthSq()<.001)direction.set(0,0,-1);direction.normalize();
   this.povCamera.position.copy(this.currentSample.point).add(new THREE.Vector3(0,1.28,0));this.povCamera.lookAt(this.povCamera.position.clone().add(direction));
-  if(this.active)document.body.dataset.routePose=JSON.stringify({path:$('#route-path').value,level:part.leg.level||null,schematic:!!part.leg.schematic,distance:this.distance,point:this.currentSample.point.toArray(),eye:this.povCamera.position.toArray(),direction:direction.toArray()});
-  for(const p of this.parts)for(let i=0;i<p.arrows.length;i++){const s=this.sample(p,(this.distance+i*14)%p.length);p.arrows[i].position.copy(s.point);p.arrows[i].setDirection(s.direction);}
+  if(this.active)document.body.dataset.routePose=JSON.stringify({path:$('#route-path').value,leg:part.leg.id,videoTime:this.videoMode?this.video.video.currentTime:null,level:part.leg.level||null,schematic:!!part.leg.schematic,distance:this.distance,point:this.currentSample.point.toArray(),eye:this.povCamera.position.toArray(),direction:direction.toArray()});
+  for(const p of this.parts)for(let i=0;i<p.arrows.length;i++){const s=this.sample(p,(Math.max(0,Math.min(p.length,this.distance-p.offset))+i*14)%p.length);p.arrows[i].position.copy(s.point);p.arrows[i].setDirection(s.direction);}
   if(this.active&&$('#route-follow').checked&&!part.leg.schematic){const page=({A:1,I:3,P:5,B:7}[part.leg.level]);const key=part.leg.level+':'+page;if(force||key!==this.followKey){this.followKey=key;this.setContext(part.leg.level,page);this.focusLevel();}}
   this.updateText();this.updatePlanLeader();this.scene.dirty=true;
  }

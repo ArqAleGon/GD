@@ -1,1 +1,6575 @@
-{"version":13,"source":"20261023 Funcionalidad E1-E9.pptx","sourceSha256":"3064f1852ab5b6d0509b567536d6ae16de9c044fd4440d539629b3bda9971ed6","slides":[11,13,15],"units":"m","coordinateSystem":"IFC metres to glTF relative [96310,2550,-100150]","verticalLinks":"schematic-user-authorized","measurementNote":"Intercambio Metro-BRT actualizado con las diapositivas 11, 13 y 15 y registrado a las plantas IFC. Azul: circulación general; naranja: PMR. Otros accesos conservan los trazados previos donde no hay una nueva flecha. Distancias aproximadas; conexiones entre niveles esquemáticas. POV y plantas comparten reproducción, pausa, avance y velocidad. La sincronización distribuye la distancia del trazado proporcionalmente al tiempo del video; no identifica hitos espaciales dentro de la grabación.","families":[{"id":"metro-brt","label":"1. Metro-BRT","color":"#00B0F0","videoId":"metro-brt"},{"id":"brt","label":"2. BRT-Metro/PMR (Personas con movilidad Reducida)","color":"#00B0F0","secondaryColor":"#E97132","videoId":"brt-metro-pmr"},{"id":"r1","label":"3. Acceso Gibraltar/Biciusuarios","color":"#000000","secondaryColor":"#66FF66","videoId":"e09-ruta-1"},{"id":"r2","label":"4. Acceso Calle 72-1","color":"#00B050"},{"id":"r3","label":"5. Acceso Calle 72-2","color":"#7030A0"},{"id":"r4","label":"6. Cambio de sentido","color":"#FF00FF"}],"routes":[{"id":"v13-pmr-a","family":"brt","label":"PMR · BRT → elevador","level":"A","slide":11,"sourceRevision":13,"points":[[35.06902,11.02,9.78061],[-32.59966,11.02,42.35422]],"sourcePoints":[[1557.506,561.722],[1037.039,560.122]],"sourceShapeIds":[2],"color":"#E97132","length":75.101,"bidirectional":true,"preferredPage":1},{"id":"v13-pmr-i","family":"brt","label":"PMR · elevador BRT → elevador Calle 72-1","level":"I","slide":13,"sourceRevision":13,"points":[[-38.67235,18.72,46.0351],[-44.74152,18.72,48.97821],[-19.52391,18.72,86.66132],[-39.51708,18.72,99.48688]],"sourcePoints":[[999.574,588.997],[954.716,588.997],[986.282,889.935],[828.8,908.809]],"sourceShapeIds":[91,93,101],"color":"#E97132","length":75.841,"bidirectional":true,"preferredPage":3},{"id":"v13-pmr-p","family":"brt","label":"PMR · elevador Calle 72-1 → andén","level":"P","slide":15,"sourceRevision":13,"points":[[-37.97754,27.46,98.85563],[-21.82058,27.46,87.70665],[-42.43044,27.46,56.8268]],"sourcePoints":[[837.437,912.452],[970.862,891.895],[940.4,638.231]],"sourceShapeIds":[50,54],"color":"#E97132","length":56.756,"bidirectional":true,"preferredPage":5},{"id":"v13-brt-a-wn","family":"brt","label":"BRT · oeste norte → escalera","level":"A","slide":11,"sourceRevision":13,"points":[[-83.75321,11.02,66.58107],[-65.02604,11.02,57.6909]],"sourcePoints":[[644.802,556.384],[788.462,557.62]],"sourceShapeIds":[148],"color":"#00B0F0","length":20.73,"bidirectional":true,"preferredPage":1},{"id":"v13-brt-a-ws","family":"brt","label":"BRT · oeste sur → escalera","level":"A","slide":11,"sourceRevision":13,"points":[[-83.25495,11.02,66.5191],[-63.19208,11.02,61.45194]],"sourcePoints":[[648.094,557.529],[788.462,587.249]],"sourceShapeIds":[155],"color":"#00B0F0","length":20.693,"bidirectional":true,"preferredPage":1},{"id":"v13-brt-a-e","family":"brt","label":"BRT · este → escalera","level":"A","slide":11,"sourceRevision":13,"points":[[44.52284,11.02,7.14988],[-16.09207,11.02,36.55299],[-23.30427,11.02,43.34096]],"sourcePoints":[[1624.387,574.178],[1157.49,574.178],[1091.945,595.135]],"sourceShapeIds":[143,144],"color":"#00B0F0","length":77.274,"bidirectional":true,"preferredPage":1},{"id":"v13-brt-i-wn-g-oeste","family":"brt","label":"BRT · oeste norte → Gibraltar oeste","level":"I","slide":13,"sourceRevision":13,"points":[[-70.20565,18.72,60.18853],[-47.65917,18.72,49.25513],[-44.32683,18.72,52.02869],[-61.99933,18.72,12.43965],[-56.2446,18.72,9.72604],[-51.51184,18.72,-0.80244],[-26.67777,18.72,-12.77702],[-21.71059,18.72,-1.73538],[-37.32709,18.72,6.00536]],"sourcePoints":[[770.037,582.136],[936.681,582.136],[947.695,608.602],[944.048,310.592],[986.528,311.062],[1045.983,261.795],[1230.083,262.242],[1227.197,342.746],[1110.806,343.726]],"sourceShapeIds":[50,55,133,137,141,2],"color":"#00B0F0","length":147.761,"bidirectional":true,"preferredPage":3},{"id":"v13-brt-i-wn-g-este","family":"brt","label":"BRT · oeste norte → Gibraltar este","level":"I","slide":13,"sourceRevision":13,"points":[[-70.20565,18.72,60.18853],[-47.65917,18.72,49.25513],[-44.32683,18.72,52.02869],[-61.99933,18.72,12.43965],[-56.2446,18.72,9.72604],[-51.51184,18.72,-0.80244],[-26.67777,18.72,-12.77702],[-21.71059,18.72,-1.73538],[-12.56695,18.72,-6.00804]],"sourcePoints":[[770.037,582.136],[936.681,582.136],[947.695,608.602],[944.048,310.592],[986.528,311.062],[1045.983,261.795],[1230.083,262.242],[1227.197,342.746],[1294.578,343.726]],"sourceShapeIds":[50,55,133,137,141,2],"color":"#00B0F0","length":140.424,"bidirectional":true,"preferredPage":3},{"id":"v13-brt-i-wn-c1","family":"brt","label":"BRT · oeste norte → Calle 72-1","level":"I","slide":13,"sourceRevision":13,"points":[[-70.20565,18.72,60.18853],[-47.65917,18.72,49.25513],[-44.72781,18.72,51.58459],[-19.6714,18.72,89.86317],[-35.96784,18.72,100.41346],[-28.82673,18.72,109.7437],[-20.73183,18.72,104.45311]],"sourcePoints":[[770.037,582.136],[936.681,582.136],[946.712,604.752],[975.482,908.809],[846.82,924.773],[859.918,1001.908],[923.983,993.677]],"sourceShapeIds":[50,53,98,99],"color":"#00B0F0","length":115.385,"bidirectional":true,"preferredPage":3},{"id":"v13-brt-i-ws-g-oeste","family":"brt","label":"BRT · oeste sur → Gibraltar oeste","level":"I","slide":13,"sourceRevision":13,"points":[[-68.44714,18.72,64.73069],[-44.03789,18.72,52.89397],[-44.32683,18.72,52.02869],[-61.99933,18.72,12.43965],[-56.2446,18.72,9.72604],[-51.51184,18.72,-0.80244],[-26.67777,18.72,-12.77702],[-21.71059,18.72,-1.73538],[-37.32709,18.72,6.00536]],"sourcePoints":[[766.3,614.664],[946.712,614.664],[947.695,608.602],[944.048,310.592],[986.528,311.062],[1045.983,261.795],[1230.083,262.242],[1227.197,342.746],[1110.806,343.726]],"sourceShapeIds":[51,55,133,137,141,2],"color":"#00B0F0","length":146.408,"bidirectional":true,"preferredPage":3},{"id":"v13-brt-i-ws-g-este","family":"brt","label":"BRT · oeste sur → Gibraltar este","level":"I","slide":13,"sourceRevision":13,"points":[[-68.44714,18.72,64.73069],[-44.03789,18.72,52.89397],[-44.32683,18.72,52.02869],[-61.99933,18.72,12.43965],[-56.2446,18.72,9.72604],[-51.51184,18.72,-0.80244],[-26.67777,18.72,-12.77702],[-21.71059,18.72,-1.73538],[-12.56695,18.72,-6.00804]],"sourcePoints":[[766.3,614.664],[946.712,614.664],[947.695,608.602],[944.048,310.592],[986.528,311.062],[1045.983,261.795],[1230.083,262.242],[1227.197,342.746],[1294.578,343.726]],"sourceShapeIds":[51,55,133,137,141,2],"color":"#00B0F0","length":139.071,"bidirectional":true,"preferredPage":3},{"id":"v13-brt-i-ws-c1","family":"brt","label":"BRT · oeste sur → Calle 72-1","level":"I","slide":13,"sourceRevision":13,"points":[[-68.44714,18.72,64.73069],[-44.03789,18.72,52.89397],[-44.72781,18.72,51.58459],[-19.6714,18.72,89.86317],[-35.96784,18.72,100.41346],[-28.82673,18.72,109.7437],[-20.73183,18.72,104.45311]],"sourcePoints":[[766.3,614.664],[946.712,614.664],[946.712,604.752],[975.482,908.809],[846.82,924.773],[859.918,1001.908],[923.983,993.677]],"sourceShapeIds":[51,53,98,99],"color":"#00B0F0","length":115.191,"bidirectional":true,"preferredPage":3},{"id":"v13-brt-i-e-g-oeste","family":"brt","label":"BRT · este → Gibraltar oeste","level":"I","slide":13,"sourceRevision":13,"points":[[-19.81764,18.72,41.14892],[-44.03789,18.72,52.89397],[-44.32683,18.72,52.02869],[-61.99933,18.72,12.43965],[-56.2446,18.72,9.72604],[-51.51184,18.72,-0.80244],[-26.67777,18.72,-12.77702],[-21.71059,18.72,-1.73538],[-37.32709,18.72,6.00536]],"sourcePoints":[[1125.727,614.664],[946.712,614.664],[947.695,608.602],[944.048,310.592],[986.528,311.062],[1045.983,261.795],[1230.083,262.242],[1227.197,342.746],[1110.806,343.726]],"sourceShapeIds":[52,55,133,137,141,2],"color":"#00B0F0","length":146.198,"bidirectional":true,"preferredPage":3},{"id":"v13-brt-i-e-g-este","family":"brt","label":"BRT · este → Gibraltar este","level":"I","slide":13,"sourceRevision":13,"points":[[-19.81764,18.72,41.14892],[-44.03789,18.72,52.89397],[-44.32683,18.72,52.02869],[-61.99933,18.72,12.43965],[-56.2446,18.72,9.72604],[-51.51184,18.72,-0.80244],[-26.67777,18.72,-12.77702],[-21.71059,18.72,-1.73538],[-12.56695,18.72,-6.00804]],"sourcePoints":[[1125.727,614.664],[946.712,614.664],[947.695,608.602],[944.048,310.592],[986.528,311.062],[1045.983,261.795],[1230.083,262.242],[1227.197,342.746],[1294.578,343.726]],"sourceShapeIds":[52,55,133,137,141,2],"color":"#00B0F0","length":138.861,"bidirectional":true,"preferredPage":3},{"id":"v13-brt-i-e-c1","family":"brt","label":"BRT · este → Calle 72-1","level":"I","slide":13,"sourceRevision":13,"points":[[-19.81764,18.72,41.14892],[-44.03789,18.72,52.89397],[-44.72781,18.72,51.58459],[-19.6714,18.72,89.86317],[-35.96784,18.72,100.41346],[-28.82673,18.72,109.7437],[-20.73183,18.72,104.45311]],"sourcePoints":[[1125.727,614.664],[946.712,614.664],[946.712,604.752],[975.482,908.809],[846.82,924.773],[859.918,1001.908],[923.983,993.677]],"sourceShapeIds":[52,53,98,99],"color":"#00B0F0","length":114.981,"bidirectional":true,"preferredPage":3},{"id":"v13-brt-p-g-oeste","family":"brt","label":"Gibraltar oeste · escalera → andén","level":"P","slide":15,"sourceRevision":13,"points":[[-51.19874,27.46,11.22883],[-59.59471,27.46,15.30322],[-46.52475,27.46,44.3443]],"sourcePoints":[[1018.234,330.616],[954.016,330.616],[954.016,548.445]],"sourceShapeIds":[19,17],"color":"#00B0F0","length":41.179,"bidirectional":true,"preferredPage":5},{"id":"v13-brt-p-g-este","family":"brt","label":"Gibraltar este · escalera → andén","level":"P","slide":15,"sourceRevision":13,"points":[[1.04012,27.46,-11.65601],[10.83543,27.46,-16.40947],[33.62136,27.46,6.23391]],"sourcePoints":[[1410.23,345.713],[1485.151,345.713],[1562.596,553.172]],"sourceShapeIds":[15,13],"color":"#00B0F0","length":43.011,"bidirectional":true,"preferredPage":5},{"id":"v13-brt-p-c1","family":"brt","label":"Calle 72-1 · escalera → andén","level":"P","slide":15,"sourceRevision":13,"points":[[-10.96605,27.46,100.49366],[-2.65295,27.46,95.32111],[-10.0681,27.46,84.91304],[-20.08684,27.46,86.55234],[-40.04615,27.46,55.67039]],"sourcePoints":[[997.676,1003.918],[1064.579,996.84],[1051.444,909.932],[985.049,889.95],[958.575,638.231]],"sourceShapeIds":[45,47,49,43],"color":"#00B0F0","length":69.493,"bidirectional":true,"preferredPage":5},{"id":"out-v13-pmr-a","family":"metro-brt","label":"Salida · elevador → PMR · BRT","level":"A","slide":11,"sourceRevision":13,"points":[[-32.59966,11.02,42.35422],[35.06902,11.02,9.78061]],"sourcePoints":[[1037.039,560.122],[1557.506,561.722]],"sourceShapeIds":[2],"color":"#E97132","length":75.101,"bidirectional":false,"preferredPage":1},{"id":"out-v13-pmr-i","family":"metro-brt","label":"Salida · elevador Calle 72-1 → PMR · elevador BRT","level":"I","slide":13,"sourceRevision":13,"points":[[-39.51708,18.72,99.48688],[-19.52391,18.72,86.66132],[-44.74152,18.72,48.97821],[-38.67235,18.72,46.0351]],"sourcePoints":[[828.8,908.809],[986.282,889.935],[954.716,588.997],[999.574,588.997]],"sourceShapeIds":[91,93,101],"color":"#E97132","length":75.841,"bidirectional":false,"preferredPage":3},{"id":"out-v13-pmr-p","family":"metro-brt","label":"Salida · andén → PMR · elevador Calle 72-1","level":"P","slide":15,"sourceRevision":13,"points":[[-42.43044,27.46,56.8268],[-21.82058,27.46,87.70665],[-37.97754,27.46,98.85563]],"sourcePoints":[[940.4,638.231],[970.862,891.895],[837.437,912.452]],"sourceShapeIds":[50,54],"color":"#E97132","length":56.756,"bidirectional":false,"preferredPage":5},{"id":"out-v13-brt-a-wn","family":"metro-brt","label":"Salida · escalera → BRT · oeste norte","level":"A","slide":11,"sourceRevision":13,"points":[[-65.02604,11.02,57.6909],[-83.75321,11.02,66.58107]],"sourcePoints":[[788.462,557.62],[644.802,556.384]],"sourceShapeIds":[148],"color":"#00B0F0","length":20.73,"bidirectional":false,"preferredPage":1},{"id":"out-v13-brt-a-ws","family":"metro-brt","label":"Salida · escalera → BRT · oeste sur","level":"A","slide":11,"sourceRevision":13,"points":[[-63.19208,11.02,61.45194],[-83.25495,11.02,66.5191]],"sourcePoints":[[788.462,587.249],[648.094,557.529]],"sourceShapeIds":[155],"color":"#00B0F0","length":20.693,"bidirectional":false,"preferredPage":1},{"id":"out-v13-brt-a-e","family":"metro-brt","label":"Salida · escalera → BRT · este","level":"A","slide":11,"sourceRevision":13,"points":[[-23.30427,11.02,43.34096],[-16.09207,11.02,36.55299],[44.52284,11.02,7.14988]],"sourcePoints":[[1091.945,595.135],[1157.49,574.178],[1624.387,574.178]],"sourceShapeIds":[143,144],"color":"#00B0F0","length":77.274,"bidirectional":false,"preferredPage":1},{"id":"out-v13-brt-i-wn-g-oeste","family":"metro-brt","label":"Salida · Gibraltar oeste → BRT · oeste norte","level":"I","slide":13,"sourceRevision":13,"points":[[-37.32709,18.72,6.00536],[-21.71059,18.72,-1.73538],[-26.67777,18.72,-12.77702],[-51.51184,18.72,-0.80244],[-56.2446,18.72,9.72604],[-61.99933,18.72,12.43965],[-44.32683,18.72,52.02869],[-47.65917,18.72,49.25513],[-70.20565,18.72,60.18853]],"sourcePoints":[[1110.806,343.726],[1227.197,342.746],[1230.083,262.242],[1045.983,261.795],[986.528,311.062],[944.048,310.592],[947.695,608.602],[936.681,582.136],[770.037,582.136]],"sourceShapeIds":[50,55,133,137,141,2],"color":"#00B0F0","length":147.761,"bidirectional":false,"preferredPage":3},{"id":"out-v13-brt-i-wn-g-este","family":"metro-brt","label":"Salida · Gibraltar este → BRT · oeste norte","level":"I","slide":13,"sourceRevision":13,"points":[[-12.56695,18.72,-6.00804],[-21.71059,18.72,-1.73538],[-26.67777,18.72,-12.77702],[-51.51184,18.72,-0.80244],[-56.2446,18.72,9.72604],[-61.99933,18.72,12.43965],[-44.32683,18.72,52.02869],[-47.65917,18.72,49.25513],[-70.20565,18.72,60.18853]],"sourcePoints":[[1294.578,343.726],[1227.197,342.746],[1230.083,262.242],[1045.983,261.795],[986.528,311.062],[944.048,310.592],[947.695,608.602],[936.681,582.136],[770.037,582.136]],"sourceShapeIds":[50,55,133,137,141,2],"color":"#00B0F0","length":140.424,"bidirectional":false,"preferredPage":3},{"id":"out-v13-brt-i-wn-c1","family":"metro-brt","label":"Salida · Calle 72-1 → BRT · oeste norte","level":"I","slide":13,"sourceRevision":13,"points":[[-20.73183,18.72,104.45311],[-28.82673,18.72,109.7437],[-35.96784,18.72,100.41346],[-19.6714,18.72,89.86317],[-44.72781,18.72,51.58459],[-47.65917,18.72,49.25513],[-70.20565,18.72,60.18853]],"sourcePoints":[[923.983,993.677],[859.918,1001.908],[846.82,924.773],[975.482,908.809],[946.712,604.752],[936.681,582.136],[770.037,582.136]],"sourceShapeIds":[50,53,98,99],"color":"#00B0F0","length":115.385,"bidirectional":false,"preferredPage":3},{"id":"out-v13-brt-i-ws-g-oeste","family":"metro-brt","label":"Salida · Gibraltar oeste → BRT · oeste sur","level":"I","slide":13,"sourceRevision":13,"points":[[-37.32709,18.72,6.00536],[-21.71059,18.72,-1.73538],[-26.67777,18.72,-12.77702],[-51.51184,18.72,-0.80244],[-56.2446,18.72,9.72604],[-61.99933,18.72,12.43965],[-44.32683,18.72,52.02869],[-44.03789,18.72,52.89397],[-68.44714,18.72,64.73069]],"sourcePoints":[[1110.806,343.726],[1227.197,342.746],[1230.083,262.242],[1045.983,261.795],[986.528,311.062],[944.048,310.592],[947.695,608.602],[946.712,614.664],[766.3,614.664]],"sourceShapeIds":[51,55,133,137,141,2],"color":"#00B0F0","length":146.408,"bidirectional":false,"preferredPage":3},{"id":"out-v13-brt-i-ws-g-este","family":"metro-brt","label":"Salida · Gibraltar este → BRT · oeste sur","level":"I","slide":13,"sourceRevision":13,"points":[[-12.56695,18.72,-6.00804],[-21.71059,18.72,-1.73538],[-26.67777,18.72,-12.77702],[-51.51184,18.72,-0.80244],[-56.2446,18.72,9.72604],[-61.99933,18.72,12.43965],[-44.32683,18.72,52.02869],[-44.03789,18.72,52.89397],[-68.44714,18.72,64.73069]],"sourcePoints":[[1294.578,343.726],[1227.197,342.746],[1230.083,262.242],[1045.983,261.795],[986.528,311.062],[944.048,310.592],[947.695,608.602],[946.712,614.664],[766.3,614.664]],"sourceShapeIds":[51,55,133,137,141,2],"color":"#00B0F0","length":139.071,"bidirectional":false,"preferredPage":3},{"id":"out-v13-brt-i-ws-c1","family":"metro-brt","label":"Salida · Calle 72-1 → BRT · oeste sur","level":"I","slide":13,"sourceRevision":13,"points":[[-20.73183,18.72,104.45311],[-28.82673,18.72,109.7437],[-35.96784,18.72,100.41346],[-19.6714,18.72,89.86317],[-44.72781,18.72,51.58459],[-44.03789,18.72,52.89397],[-68.44714,18.72,64.73069]],"sourcePoints":[[923.983,993.677],[859.918,1001.908],[846.82,924.773],[975.482,908.809],[946.712,604.752],[946.712,614.664],[766.3,614.664]],"sourceShapeIds":[51,53,98,99],"color":"#00B0F0","length":115.191,"bidirectional":false,"preferredPage":3},{"id":"out-v13-brt-i-e-g-oeste","family":"metro-brt","label":"Salida · Gibraltar oeste → BRT · este","level":"I","slide":13,"sourceRevision":13,"points":[[-37.32709,18.72,6.00536],[-21.71059,18.72,-1.73538],[-26.67777,18.72,-12.77702],[-51.51184,18.72,-0.80244],[-56.2446,18.72,9.72604],[-61.99933,18.72,12.43965],[-44.32683,18.72,52.02869],[-44.03789,18.72,52.89397],[-19.81764,18.72,41.14892]],"sourcePoints":[[1110.806,343.726],[1227.197,342.746],[1230.083,262.242],[1045.983,261.795],[986.528,311.062],[944.048,310.592],[947.695,608.602],[946.712,614.664],[1125.727,614.664]],"sourceShapeIds":[52,55,133,137,141,2],"color":"#00B0F0","length":146.198,"bidirectional":false,"preferredPage":3},{"id":"out-v13-brt-i-e-g-este","family":"metro-brt","label":"Salida · Gibraltar este → BRT · este","level":"I","slide":13,"sourceRevision":13,"points":[[-12.56695,18.72,-6.00804],[-21.71059,18.72,-1.73538],[-26.67777,18.72,-12.77702],[-51.51184,18.72,-0.80244],[-56.2446,18.72,9.72604],[-61.99933,18.72,12.43965],[-44.32683,18.72,52.02869],[-44.03789,18.72,52.89397],[-19.81764,18.72,41.14892]],"sourcePoints":[[1294.578,343.726],[1227.197,342.746],[1230.083,262.242],[1045.983,261.795],[986.528,311.062],[944.048,310.592],[947.695,608.602],[946.712,614.664],[1125.727,614.664]],"sourceShapeIds":[52,55,133,137,141,2],"color":"#00B0F0","length":138.861,"bidirectional":false,"preferredPage":3},{"id":"out-v13-brt-i-e-c1","family":"metro-brt","label":"Salida · Calle 72-1 → BRT · este","level":"I","slide":13,"sourceRevision":13,"points":[[-20.73183,18.72,104.45311],[-28.82673,18.72,109.7437],[-35.96784,18.72,100.41346],[-19.6714,18.72,89.86317],[-44.72781,18.72,51.58459],[-44.03789,18.72,52.89397],[-19.81764,18.72,41.14892]],"sourcePoints":[[923.983,993.677],[859.918,1001.908],[846.82,924.773],[975.482,908.809],[946.712,604.752],[946.712,614.664],[1125.727,614.664]],"sourceShapeIds":[52,53,98,99],"color":"#00B0F0","length":114.981,"bidirectional":false,"preferredPage":3},{"id":"out-v13-brt-p-g-oeste","family":"metro-brt","label":"Salida · andén → Gibraltar oeste · escalera","level":"P","slide":15,"sourceRevision":13,"points":[[-46.52475,27.46,44.3443],[-59.59471,27.46,15.30322],[-51.19874,27.46,11.22883]],"sourcePoints":[[954.016,548.445],[954.016,330.616],[1018.234,330.616]],"sourceShapeIds":[19,17],"color":"#00B0F0","length":41.179,"bidirectional":false,"preferredPage":5},{"id":"out-v13-brt-p-g-este","family":"metro-brt","label":"Salida · andén → Gibraltar este · escalera","level":"P","slide":15,"sourceRevision":13,"points":[[33.62136,27.46,6.23391],[10.83543,27.46,-16.40947],[1.04012,27.46,-11.65601]],"sourcePoints":[[1562.596,553.172],[1485.151,345.713],[1410.23,345.713]],"sourceShapeIds":[15,13],"color":"#00B0F0","length":43.011,"bidirectional":false,"preferredPage":5},{"id":"out-v13-brt-p-c1","family":"metro-brt","label":"Salida · andén → Calle 72-1 · escalera","level":"P","slide":15,"sourceRevision":13,"points":[[-40.04615,27.46,55.67039],[-20.08684,27.46,86.55234],[-10.0681,27.46,84.91304],[-2.65295,27.46,95.32111],[-10.96605,27.46,100.49366]],"sourcePoints":[[958.575,638.231],[985.049,889.95],[1051.444,909.932],[1064.579,996.84],[997.676,1003.918]],"sourceShapeIds":[45,47,49,43],"color":"#00B0F0","length":69.493,"bidirectional":false,"preferredPage":5},{"id":"g-a-s","family":"r1","label":"Acceso Gibraltar · sur → escalera oeste","level":"A","slide":18,"points":[[-71.22457,9.87,33.27957],[-80.83822,9.87,13.95549],[-73.55221,9.87,10.41872],[-73.57517,9.87,10.37257]],"sourcePoints":[[232.616,431.918],[232.616,293.745],[283.16,293.745],[283.16,293.415]],"sourceShapeIds":[23],"length":29.734,"bidirectional":false,"preferredPage":1,"sourceRevision":12,"color":"#000000"},{"id":"g-a-w","family":"r1","label":"Acceso Gibraltar · occidente → escalera oeste","level":"A","slide":18,"points":[[-90.45616,9.87,20.93297],[-80.05908,9.87,15.88602],[-80.83822,9.87,13.95549],[-73.57517,9.87,10.37257]],"sourcePoints":[[159.477,307.042],[231.603,307.042],[232.616,293.745],[283.16,293.415]],"sourceShapeIds":[180],"length":21.738,"bidirectional":false,"preferredPage":1,"sourceRevision":12,"color":"#000000"},{"id":"g-a-e","family":"r1","label":"Acceso Gibraltar · oriente → escalera este","level":"A","slide":18,"points":[[19.10701,9.87,-15.36129],[3.75732,9.87,-22.37383]],"sourcePoints":[[872.58,404.318],[806.304,321.016]],"sourceShapeIds":[181],"length":16.876,"bidirectional":false,"preferredPage":1,"sourceRevision":12,"color":"#000000"},{"id":"g-i-w-oeste","family":"r1","label":"Intermedio Gibraltar · escalera oeste → oeste","level":"I","slide":19,"points":[[-70.41821,18.72,6.85849],[-27.43956,18.72,-13.99069],[-21.38311,18.72,-1.71294],[-21.39464,18.72,-1.70735],[-37.38925,18.72,5.98201]],"sourcePoints":[[313.764,247.836],[619.282,247.836],[619.282,335.139],[619.2,335.139],[505.698,334.739]],"sourceShapeIds":[12],"length":79.219,"bidirectional":false,"preferredPage":3,"sourceRevision":12,"color":"#000000"},{"id":"g-i-e-oeste","family":"r1","label":"Intermedio Gibraltar · escalera este → oeste","level":"I","slide":19,"points":[[-4.8727,18.72,-28.12345],[-13.95416,18.72,-32.28575],[-21.48649,18.72,-16.87856],[-27.39595,18.72,-13.87329],[-21.41086,18.72,-1.76919],[-37.38925,18.72,5.98201]],"sourcePoints":[[788.714,229.559],[748.4,180.4],[661.6,247.836],[619.2,248.631],[619.282,334.739],[505.698,334.739]],"sourceShapeIds":[176,178,182],"length":65.032,"bidirectional":false,"preferredPage":3,"sourceRevision":12,"color":"#000000"},{"id":"g-i-w-este","family":"r1","label":"Intermedio Gibraltar · escalera oeste → este","level":"I","slide":19,"points":[[-70.41821,18.72,6.85849],[-27.43956,18.72,-13.99069],[-21.38311,18.72,-1.71294],[-21.39464,18.72,-1.70735],[-12.62347,18.72,-6.032]],"sourcePoints":[[313.764,247.836],[619.282,247.836],[619.282,335.139],[619.2,335.139],[681.748,334.739]],"sourceShapeIds":[12],"length":71.251,"bidirectional":false,"preferredPage":3,"sourceRevision":12,"color":"#000000"},{"id":"g-i-e-este","family":"r1","label":"Intermedio Gibraltar · escalera este → este","level":"I","slide":19,"points":[[-4.8727,18.72,-28.12345],[-13.95416,18.72,-32.28575],[-21.48649,18.72,-16.87856],[-27.39595,18.72,-13.87329],[-21.41086,18.72,-1.76919],[-12.62347,18.72,-6.032]],"sourcePoints":[[788.714,229.559],[748.4,180.4],[661.6,247.836],[619.2,248.631],[619.282,334.739],[681.748,334.739]],"sourceShapeIds":[176,178,182],"length":57.039,"bidirectional":false,"preferredPage":3,"sourceRevision":12,"color":"#000000"},{"id":"g-p-w","family":"r1","label":"Plataforma Gibraltar · oeste → andén","level":"P","slide":20,"points":[[-51.22187,27.46,11.24285],[-59.61736,27.46,15.31714],[-46.59161,27.46,44.28866]],"sourcePoints":[[392.271,356.825],[335.557,356.825],[335.557,549.2]],"sourceShapeIds":[19,17],"length":41.097,"bidirectional":false,"preferredPage":5,"sourceRevision":12,"color":"#000000"},{"id":"g-p-e","family":"r1","label":"Plataforma Gibraltar · este → andén","level":"P","slide":20,"points":[[1.01224,27.46,-11.64203],[10.80692,27.46,-16.39534],[33.57254,27.46,6.16923]],"sourcePoints":[[738.462,370.158],[804.628,370.158],[873.023,553.375]],"sourceShapeIds":[15,13],"length":42.941,"bidirectional":false,"preferredPage":5,"sourceRevision":12,"color":"#000000"},{"id":"c1-a","family":"r2","label":"Acceso Calle 72-1 → escalera","level":"A","slide":21,"points":[[-51.57909,11.02,85.3229],[-29.39254,11.02,112.11555],[-18.69843,11.02,104.81271]],"sourcePoints":[[207.2,766.887],[257.674,980.0],[336.8,968.0]],"sourceShapeIds":[173,175],"length":47.736,"bidirectional":false,"preferredPage":1,"sourceRevision":12,"color":"#00B050"},{"id":"c2-a-e","family":"r3","label":"Acceso Calle 72-2 · este → escalera","level":"A","slide":24,"points":[[108.01816,12.12,13.93544],[90.25976,12.12,22.54991],[83.83532,12.12,21.45125],[56.86239,12.12,34.57244],[59.84042,12.12,40.67072],[67.23713,12.12,36.93407]],"sourcePoints":[[1286.133,801.118],[1164.267,801.118],[1131.6,777.2],[946.4,777.409],[946.4,820.21],[997.562,819.367]],"sourceShapeIds":[183,184,186,188,191],"length":71.324,"bidirectional":false,"preferredPage":1,"sourceRevision":12,"color":"#7030A0"},{"id":"c2-a-w","family":"r3","label":"Acceso Calle 72-2 · oeste → escalera","level":"A","slide":24,"points":[[47.9978,12.12,34.13618],[50.99037,12.12,40.26424],[57.86771,12.12,36.79239],[59.84042,12.12,40.67072],[67.23713,12.12,36.93407]],"sourcePoints":[[898.4,750.533],[898.4,793.543],[945.963,792.773],[946.4,820.21],[997.562,819.367]],"sourceShapeIds":[196,197,191],"length":27.162,"bidirectional":false,"preferredPage":1,"sourceRevision":12,"color":"#7030A0"},{"id":"c2-i","family":"r3","label":"Intermedio Calle 72-2 → escalera","level":"I","slide":25,"points":[[76.37607,18.72,32.12278],[99.68022,18.72,20.82147],[96.33931,18.72,13.9105],[79.23888,18.72,23.03457],[52.52181,18.72,36.05072],[55.08131,18.72,40.90266],[68.4514,18.72,34.20395]],"sourcePoints":[[1089.407,811.263],[1254.372,811.263],[1256.09,762.0],[1132.568,766.8],[943.266,767.145],[943.266,802.33],[1038.549,801.089]],"sourceShapeIds":[117,119,120,122,123,124],"length":103.117,"bidirectional":false,"preferredPage":3,"sourceRevision":12,"color":"#7030A0"},{"id":"c2-p","family":"r3","label":"Plataforma Calle 72-2 → andén","level":"P","slide":26,"points":[[70.87846,27.46,33.16511],[83.19111,27.46,27.19318],[80.85371,27.46,23.04204],[47.91822,27.46,39.2581],[46.57188,27.46,36.59973],[42.02012,27.46,15.80118]],"sourcePoints":[[1000.731,800.122],[1083.6,800.122],[1082.33,771.2],[860.0,772.522],[860.0,754.4],[892.32,628.495]],"sourceShapeIds":[55,57,59,31,33],"length":79.43,"bidirectional":false,"preferredPage":5,"sourceRevision":12,"color":"#7030A0"},{"id":"change-p-s","family":"r4","label":"Plataforma · andén Calle 72 ↔ escalera","level":"P","slide":33,"points":[[-0.21479,27.46,37.36467],[-1.15561,27.46,35.54659],[-0.23098,27.46,37.37252],[40.60402,27.46,17.56711],[46.0092,27.46,39.28464],[82.0656,27.46,21.7969],[85.15452,27.46,28.2148],[71.68301,27.46,34.74862]],"sourcePoints":[[605.097,634.4],[604.988,621.953],[604.988,634.4],[879.816,634.4],[849.6,767.6],[1092.267,767.6],[1091.397,810.922],[1000.731,810.922]],"sourceShapeIds":[76,78,80,84,88,91],"length":134.027,"bidirectional":true,"preferredPage":5,"sourceRevision":12,"color":"#FF00FF"},{"id":"change-p-n","family":"r4","label":"Plataforma · andén Gibraltar ↔ escalera","level":"P","slide":33,"points":[[-6.4387,27.46,25.07382],[-7.37952,27.46,23.25573],[34.84972,27.46,3.01768],[11.19388,27.46,-20.05916],[-0.38769,27.46,-14.45611]],"sourcePoints":[[605.097,550.616],[604.988,538.169],[888.533,539.502],[816.651,351.345],[738.462,351.251]],"sourceShapeIds":[96,97,99,105],"length":94.789,"bidirectional":true,"preferredPage":5,"sourceRevision":12,"color":"#FF00FF"},{"id":"change-i","family":"r4","label":"Intermedio · cambio de sentido entre edificios","level":"I","slide":34,"points":[[-13.37948,18.72,-8.09534],[-20.1369,18.72,-4.81769],[-22.45593,18.72,-9.65799],[-9.07145,18.72,-16.08594],[14.82592,18.72,-19.66843],[17.25589,18.72,-14.84708],[39.59046,18.72,10.8656],[45.85823,18.72,38.55809],[55.11182,18.72,42.60568],[69.26098,18.72,35.74383]],"sourcePoints":[[683.224,320.783],[635.192,320.783],[635.584,286.557],[730.54,286.925],[877.746,332.877],[878.044,367.303],[945.179,585.6],[898.234,762.995],[938.382,812.263],[1038.549,812.263]],"sourceShapeIds":[220,222,218,213,211,209,131,129,127],"length":145.566,"bidirectional":true,"preferredPage":3,"sourceRevision":12,"color":"#FF00FF"},{"id":"bike-a-ns","family":"r1","label":"Acceso · eje norte ↔ sur de biciusuarios","level":"A","slide":18,"points":[[-48.12325,9.87,-11.59731],[-33.86464,9.87,17.84946]],"sourcePoints":[[486.452,238.038],[484.267,447.498]],"sourceShapeIds":[57],"length":32.717,"bidirectional":true,"preferredPage":1,"sourceRevision":12,"color":"#66FF66"},{"id":"bike-a-w","family":"r1","label":"Acceso · entrada occidental ↔ eje biciusuarios","level":"A","slide":18,"points":[[-90.2916,9.87,20.56156],[-94.56018,9.87,11.16772],[-48.0097,9.87,-11.36907]],"sourcePoints":[[161.429,305.363],[163.691,239.326],[486.452,239.67]],"sourceShapeIds":[81,78],"length":62.037,"bidirectional":true,"preferredPage":1,"sourceRevision":12,"color":"#66FF66"},{"id":"bike-a-sw","family":"r1","label":"Acceso · entrada suroccidental ↔ eje biciusuarios","level":"A","slide":18,"points":[[-71.37059,9.87,33.35046],[-33.86464,9.87,17.84946]],"sourcePoints":[[231.603,431.918],[484.267,447.498]],"sourceShapeIds":[69],"length":40.583,"bidirectional":true,"preferredPage":1,"sourceRevision":12,"color":"#66FF66"},{"id":"bike-a-se","family":"r1","label":"Acceso · entrada suroriental ↔ eje biciusuarios","level":"A","slide":18,"points":[[19.2663,9.87,-15.43861],[16.90501,9.87,-9.65426],[-33.89462,9.87,17.78918]],"sourcePoints":[[873.685,404.318],[844.411,431.031],[484.267,447.067]],"sourceShapeIds":[73,70],"length":63.986,"bidirectional":true,"preferredPage":1,"sourceRevision":12,"color":"#66FF66"},{"id":"bike-a-ramp-upper","family":"r1","label":"Acceso · rampa de biciusuarios · tramo superior","level":"A","slide":18,"points":[[-13.0054,9.87,-8.51009],[-40.37001,9.87,4.77322]],"sourcePoints":[[674.099,353.999],[484.267,353.999]],"sourceShapeIds":[44],"length":30.418,"bidirectional":false,"preferredPage":1,"sourceRevision":12,"color":"#66FF66"},{"id":"bike-a-ramp-lower","family":"r1","label":"Acceso · rampa de biciusuarios · retorno","level":"A","slide":18,"points":[[-13.14932,9.87,-8.5116],[-11.26845,9.87,-4.73091],[-31.70988,9.87,5.19176]],"sourcePoints":[[673.299,353.588],[673.299,380.621],[531.494,380.621]],"sourceShapeIds":[38,31],"length":26.945,"bidirectional":false,"preferredPage":1,"sourceRevision":12,"color":"#66FF66"},{"id":"bike-b-spur","family":"r1","label":"Sótano · circulación junto a rampa","level":"B","slide":17,"points":[[-16.76579,3.72,-2.01806],[-43.75082,3.72,10.96737]],"sourcePoints":[[645.12,562.35],[435.2,562.35]],"sourceShapeIds":[23],"length":29.947,"bidirectional":true,"preferredPage":7,"sourceRevision":12,"color":"#66FF66"},{"id":"bike-b-parking","family":"r1","label":"Sótano · rampa → cicloparqueadero","level":"B","slide":17,"points":[[-43.57441,3.72,10.74064],[-47.73157,3.72,2.33091],[-5.29482,3.72,-18.19727],[-3.24928,3.72,-22.81513],[-11.22458,3.72,-26.12105]],"sourcePoints":[[437.013,561.46],[437.013,496.14],[767.467,495.467],[794.667,472.668],[754.818,427.844]],"sourceShapeIds":[27,29,30,33],"length":70.206,"bidirectional":false,"preferredPage":7,"sourceRevision":12,"color":"#66FF66"},{"id":"change-p-s-reverse","family":"r4","label":"Plataforma · andén Calle 72 ↔ escalera","level":"P","slide":33,"points":[[71.68301,27.46,34.74862],[85.15452,27.46,28.2148],[82.0656,27.46,21.7969],[46.0092,27.46,39.28464],[40.60402,27.46,17.56711],[-0.23098,27.46,37.37252],[-1.15561,27.46,35.54659],[-0.21479,27.46,37.36467]],"sourcePoints":[[1000.731,810.922],[1091.397,810.922],[1092.267,767.6],[849.6,767.6],[879.816,634.4],[604.988,634.4],[604.988,621.953],[605.097,634.4]],"sourceShapeIds":[76,78,80,84,88,91],"length":134.027,"bidirectional":true,"preferredPage":5,"sourceRevision":12,"color":"#FF00FF"},{"id":"c1-i","family":"r2","label":"Intermedio Calle 72-1 → escalera","level":"I","slide":13,"sourceRevision":13,"points":[[-11.08432,18.72,99.04136],[-0.92947,18.72,92.35961],[-8.4919,18.72,83.13566],[-35.96784,18.72,100.41346],[-28.82673,18.72,109.7437],[-20.73183,18.72,104.45311]],"sourcePoints":[[997.564,989.255],[1078.071,978.659],[1062.163,900.933],[846.82,924.773],[859.918,1001.908],[923.983,993.677]],"sourceShapeIds":[94,95,96,98,99],"color":"#00B050","length":77.96,"bidirectional":true,"preferredPage":3},{"id":"c1-p","family":"r2","label":"Plataforma Calle 72-1 → andén","level":"P","slide":15,"sourceRevision":13,"points":[[-10.96605,27.46,100.49366],[-2.65295,27.46,95.32111],[-10.0681,27.46,84.91304],[-20.08684,27.46,86.55234],[-40.04615,27.46,55.67039]],"sourcePoints":[[997.676,1003.918],[1064.579,996.84],[1051.444,909.932],[985.049,889.95],[958.575,638.231]],"sourceShapeIds":[45,47,49,43],"color":"#00B050","length":69.493,"bidirectional":true,"preferredPage":5}],"links":[{"id":"link-v13-pmr-a-v13-pmr-i","family":"brt","label":"Enlace esquemático entre niveles · pendiente de validar","fromLevel":"A","toLevel":"I","points":[[-32.59966,11.02,42.35422],[-38.67235,18.72,46.0351]],"color":"#E97132","length":10.475,"schematic":true},{"id":"link-v13-pmr-i-v13-pmr-p","family":"brt","label":"Enlace esquemático entre niveles · pendiente de validar","fromLevel":"I","toLevel":"P","points":[[-39.51708,18.72,99.48688],[-37.97754,27.46,98.85563]],"color":"#E97132","length":8.897,"schematic":true},{"id":"link-v13-brt-a-wn-v13-brt-i-wn-g-oeste","family":"brt","label":"Enlace esquemático entre niveles · pendiente de validar","fromLevel":"A","toLevel":"I","points":[[-65.02604,11.02,57.6909],[-70.20565,18.72,60.18853]],"color":"#00B0F0","length":9.61,"schematic":true},{"id":"link-v13-brt-i-wn-g-oeste-v13-brt-p-g-oeste","family":"brt","label":"Enlace esquemático entre niveles · pendiente de validar","fromLevel":"I","toLevel":"P","points":[[-37.32709,18.72,6.00536],[-51.19874,27.46,11.22883]],"color":"#00B0F0","length":17.207,"schematic":true},{"id":"link-v13-brt-a-wn-v13-brt-i-wn-g-este","family":"brt","label":"Enlace esquemático entre niveles · pendiente de validar","fromLevel":"A","toLevel":"I","points":[[-65.02604,11.02,57.6909],[-70.20565,18.72,60.18853]],"color":"#00B0F0","length":9.61,"schematic":true},{"id":"link-v13-brt-i-wn-g-este-v13-brt-p-g-este","family":"brt","label":"Enlace esquemático entre niveles · pendiente de validar","fromLevel":"I","toLevel":"P","points":[[-12.56695,18.72,-6.00804],[1.04012,27.46,-11.65601]],"color":"#00B0F0","length":17.13,"schematic":true},{"id":"link-v13-brt-a-wn-v13-brt-i-wn-c1","family":"brt","label":"Enlace esquemático entre niveles · pendiente de validar","fromLevel":"A","toLevel":"I","points":[[-65.02604,11.02,57.6909],[-70.20565,18.72,60.18853]],"color":"#00B0F0","length":9.61,"schematic":true},{"id":"link-v13-brt-i-wn-c1-v13-brt-p-c1","family":"brt","label":"Enlace esquemático entre niveles · pendiente de validar","fromLevel":"I","toLevel":"P","points":[[-20.73183,18.72,104.45311],[-10.96605,27.46,100.49366]],"color":"#00B0F0","length":13.691,"schematic":true},{"id":"link-v13-brt-a-ws-v13-brt-i-ws-g-oeste","family":"brt","label":"Enlace esquemático entre niveles · pendiente de validar","fromLevel":"A","toLevel":"I","points":[[-63.19208,11.02,61.45194],[-68.44714,18.72,64.73069]],"color":"#00B0F0","length":9.882,"schematic":true},{"id":"link-v13-brt-i-ws-g-oeste-v13-brt-p-g-oeste","family":"brt","label":"Enlace esquemático entre niveles · pendiente de validar","fromLevel":"I","toLevel":"P","points":[[-37.32709,18.72,6.00536],[-51.19874,27.46,11.22883]],"color":"#00B0F0","length":17.207,"schematic":true},{"id":"link-v13-brt-a-ws-v13-brt-i-ws-g-este","family":"brt","label":"Enlace esquemático entre niveles · pendiente de validar","fromLevel":"A","toLevel":"I","points":[[-63.19208,11.02,61.45194],[-68.44714,18.72,64.73069]],"color":"#00B0F0","length":9.882,"schematic":true},{"id":"link-v13-brt-i-ws-g-este-v13-brt-p-g-este","family":"brt","label":"Enlace esquemático entre niveles · pendiente de validar","fromLevel":"I","toLevel":"P","points":[[-12.56695,18.72,-6.00804],[1.04012,27.46,-11.65601]],"color":"#00B0F0","length":17.13,"schematic":true},{"id":"link-v13-brt-a-ws-v13-brt-i-ws-c1","family":"brt","label":"Enlace esquemático entre niveles · pendiente de validar","fromLevel":"A","toLevel":"I","points":[[-63.19208,11.02,61.45194],[-68.44714,18.72,64.73069]],"color":"#00B0F0","length":9.882,"schematic":true},{"id":"link-v13-brt-i-ws-c1-v13-brt-p-c1","family":"brt","label":"Enlace esquemático entre niveles · pendiente de validar","fromLevel":"I","toLevel":"P","points":[[-20.73183,18.72,104.45311],[-10.96605,27.46,100.49366]],"color":"#00B0F0","length":13.691,"schematic":true},{"id":"link-v13-brt-a-e-v13-brt-i-e-g-oeste","family":"brt","label":"Enlace esquemático entre niveles · pendiente de validar","fromLevel":"A","toLevel":"I","points":[[-23.30427,11.02,43.34096],[-19.81764,18.72,41.14892]],"color":"#00B0F0","length":8.732,"schematic":true},{"id":"link-v13-brt-i-e-g-oeste-v13-brt-p-g-oeste","family":"brt","label":"Enlace esquemático entre niveles · pendiente de validar","fromLevel":"I","toLevel":"P","points":[[-37.32709,18.72,6.00536],[-51.19874,27.46,11.22883]],"color":"#00B0F0","length":17.207,"schematic":true},{"id":"link-v13-brt-a-e-v13-brt-i-e-g-este","family":"brt","label":"Enlace esquemático entre niveles · pendiente de validar","fromLevel":"A","toLevel":"I","points":[[-23.30427,11.02,43.34096],[-19.81764,18.72,41.14892]],"color":"#00B0F0","length":8.732,"schematic":true},{"id":"link-v13-brt-i-e-g-este-v13-brt-p-g-este","family":"brt","label":"Enlace esquemático entre niveles · pendiente de validar","fromLevel":"I","toLevel":"P","points":[[-12.56695,18.72,-6.00804],[1.04012,27.46,-11.65601]],"color":"#00B0F0","length":17.13,"schematic":true},{"id":"link-v13-brt-a-e-v13-brt-i-e-c1","family":"brt","label":"Enlace esquemático entre niveles · pendiente de validar","fromLevel":"A","toLevel":"I","points":[[-23.30427,11.02,43.34096],[-19.81764,18.72,41.14892]],"color":"#00B0F0","length":8.732,"schematic":true},{"id":"link-v13-brt-i-e-c1-v13-brt-p-c1","family":"brt","label":"Enlace esquemático entre niveles · pendiente de validar","fromLevel":"I","toLevel":"P","points":[[-20.73183,18.72,104.45311],[-10.96605,27.46,100.49366]],"color":"#00B0F0","length":13.691,"schematic":true},{"id":"out-link-v13-pmr-a-v13-pmr-i","family":"metro-brt","label":"Salida · Enlace esquemático entre niveles · pendiente de validar","fromLevel":"I","toLevel":"A","points":[[-38.67235,18.72,46.0351],[-32.59966,11.02,42.35422]],"color":"#E97132","length":10.475,"schematic":true,"bidirectional":false},{"id":"out-link-v13-pmr-i-v13-pmr-p","family":"metro-brt","label":"Salida · Enlace esquemático entre niveles · pendiente de validar","fromLevel":"P","toLevel":"I","points":[[-37.97754,27.46,98.85563],[-39.51708,18.72,99.48688]],"color":"#E97132","length":8.897,"schematic":true,"bidirectional":false},{"id":"out-link-v13-brt-a-wn-v13-brt-i-wn-g-oeste","family":"metro-brt","label":"Salida · Enlace esquemático entre niveles · pendiente de validar","fromLevel":"I","toLevel":"A","points":[[-70.20565,18.72,60.18853],[-65.02604,11.02,57.6909]],"color":"#00B0F0","length":9.61,"schematic":true,"bidirectional":false},{"id":"out-link-v13-brt-i-wn-g-oeste-v13-brt-p-g-oeste","family":"metro-brt","label":"Salida · Enlace esquemático entre niveles · pendiente de validar","fromLevel":"P","toLevel":"I","points":[[-51.19874,27.46,11.22883],[-37.32709,18.72,6.00536]],"color":"#00B0F0","length":17.207,"schematic":true,"bidirectional":false},{"id":"out-link-v13-brt-a-wn-v13-brt-i-wn-g-este","family":"metro-brt","label":"Salida · Enlace esquemático entre niveles · pendiente de validar","fromLevel":"I","toLevel":"A","points":[[-70.20565,18.72,60.18853],[-65.02604,11.02,57.6909]],"color":"#00B0F0","length":9.61,"schematic":true,"bidirectional":false},{"id":"out-link-v13-brt-i-wn-g-este-v13-brt-p-g-este","family":"metro-brt","label":"Salida · Enlace esquemático entre niveles · pendiente de validar","fromLevel":"P","toLevel":"I","points":[[1.04012,27.46,-11.65601],[-12.56695,18.72,-6.00804]],"color":"#00B0F0","length":17.13,"schematic":true,"bidirectional":false},{"id":"out-link-v13-brt-a-wn-v13-brt-i-wn-c1","family":"metro-brt","label":"Salida · Enlace esquemático entre niveles · pendiente de validar","fromLevel":"I","toLevel":"A","points":[[-70.20565,18.72,60.18853],[-65.02604,11.02,57.6909]],"color":"#00B0F0","length":9.61,"schematic":true,"bidirectional":false},{"id":"out-link-v13-brt-i-wn-c1-v13-brt-p-c1","family":"metro-brt","label":"Salida · Enlace esquemático entre niveles · pendiente de validar","fromLevel":"P","toLevel":"I","points":[[-10.96605,27.46,100.49366],[-20.73183,18.72,104.45311]],"color":"#00B0F0","length":13.691,"schematic":true,"bidirectional":false},{"id":"out-link-v13-brt-a-ws-v13-brt-i-ws-g-oeste","family":"metro-brt","label":"Salida · Enlace esquemático entre niveles · pendiente de validar","fromLevel":"I","toLevel":"A","points":[[-68.44714,18.72,64.73069],[-63.19208,11.02,61.45194]],"color":"#00B0F0","length":9.882,"schematic":true,"bidirectional":false},{"id":"out-link-v13-brt-i-ws-g-oeste-v13-brt-p-g-oeste","family":"metro-brt","label":"Salida · Enlace esquemático entre niveles · pendiente de validar","fromLevel":"P","toLevel":"I","points":[[-51.19874,27.46,11.22883],[-37.32709,18.72,6.00536]],"color":"#00B0F0","length":17.207,"schematic":true,"bidirectional":false},{"id":"out-link-v13-brt-a-ws-v13-brt-i-ws-g-este","family":"metro-brt","label":"Salida · Enlace esquemático entre niveles · pendiente de validar","fromLevel":"I","toLevel":"A","points":[[-68.44714,18.72,64.73069],[-63.19208,11.02,61.45194]],"color":"#00B0F0","length":9.882,"schematic":true,"bidirectional":false},{"id":"out-link-v13-brt-i-ws-g-este-v13-brt-p-g-este","family":"metro-brt","label":"Salida · Enlace esquemático entre niveles · pendiente de validar","fromLevel":"P","toLevel":"I","points":[[1.04012,27.46,-11.65601],[-12.56695,18.72,-6.00804]],"color":"#00B0F0","length":17.13,"schematic":true,"bidirectional":false},{"id":"out-link-v13-brt-a-ws-v13-brt-i-ws-c1","family":"metro-brt","label":"Salida · Enlace esquemático entre niveles · pendiente de validar","fromLevel":"I","toLevel":"A","points":[[-68.44714,18.72,64.73069],[-63.19208,11.02,61.45194]],"color":"#00B0F0","length":9.882,"schematic":true,"bidirectional":false},{"id":"out-link-v13-brt-i-ws-c1-v13-brt-p-c1","family":"metro-brt","label":"Salida · Enlace esquemático entre niveles · pendiente de validar","fromLevel":"P","toLevel":"I","points":[[-10.96605,27.46,100.49366],[-20.73183,18.72,104.45311]],"color":"#00B0F0","length":13.691,"schematic":true,"bidirectional":false},{"id":"out-link-v13-brt-a-e-v13-brt-i-e-g-oeste","family":"metro-brt","label":"Salida · Enlace esquemático entre niveles · pendiente de validar","fromLevel":"I","toLevel":"A","points":[[-19.81764,18.72,41.14892],[-23.30427,11.02,43.34096]],"color":"#00B0F0","length":8.732,"schematic":true,"bidirectional":false},{"id":"out-link-v13-brt-i-e-g-oeste-v13-brt-p-g-oeste","family":"metro-brt","label":"Salida · Enlace esquemático entre niveles · pendiente de validar","fromLevel":"P","toLevel":"I","points":[[-51.19874,27.46,11.22883],[-37.32709,18.72,6.00536]],"color":"#00B0F0","length":17.207,"schematic":true,"bidirectional":false},{"id":"out-link-v13-brt-a-e-v13-brt-i-e-g-este","family":"metro-brt","label":"Salida · Enlace esquemático entre niveles · pendiente de validar","fromLevel":"I","toLevel":"A","points":[[-19.81764,18.72,41.14892],[-23.30427,11.02,43.34096]],"color":"#00B0F0","length":8.732,"schematic":true,"bidirectional":false},{"id":"out-link-v13-brt-i-e-g-este-v13-brt-p-g-este","family":"metro-brt","label":"Salida · Enlace esquemático entre niveles · pendiente de validar","fromLevel":"P","toLevel":"I","points":[[1.04012,27.46,-11.65601],[-12.56695,18.72,-6.00804]],"color":"#00B0F0","length":17.13,"schematic":true,"bidirectional":false},{"id":"out-link-v13-brt-a-e-v13-brt-i-e-c1","family":"metro-brt","label":"Salida · Enlace esquemático entre niveles · pendiente de validar","fromLevel":"I","toLevel":"A","points":[[-19.81764,18.72,41.14892],[-23.30427,11.02,43.34096]],"color":"#00B0F0","length":8.732,"schematic":true,"bidirectional":false},{"id":"out-link-v13-brt-i-e-c1-v13-brt-p-c1","family":"metro-brt","label":"Salida · Enlace esquemático entre niveles · pendiente de validar","fromLevel":"P","toLevel":"I","points":[[-10.96605,27.46,100.49366],[-20.73183,18.72,104.45311]],"color":"#00B0F0","length":13.691,"schematic":true,"bidirectional":false},{"id":"link-g-a-s-g-i-w-oeste","family":"r1","label":"Enlace esquemático · pendiente de validar en detalle","fromLevel":"A","toLevel":"I","points":[[-73.57517,9.87,10.37257],[-70.41821,18.72,6.85849]],"length":10.032,"schematic":true,"sourceRevision":12,"color":"#000000"},{"id":"link-g-i-w-oeste-g-p-w","family":"r1","label":"Enlace esquemático · pendiente de validar en detalle","fromLevel":"I","toLevel":"P","points":[[-37.38925,18.72,5.98201],[-51.22187,27.46,11.24285]],"length":17.187,"schematic":true,"sourceRevision":12,"color":"#000000"},{"id":"link-g-a-s-g-i-w-este","family":"r1","label":"Enlace esquemático · pendiente de validar en detalle","fromLevel":"A","toLevel":"I","points":[[-73.57517,9.87,10.37257],[-70.41821,18.72,6.85849]],"length":10.032,"schematic":true,"sourceRevision":12,"color":"#000000"},{"id":"link-g-i-w-este-g-p-e","family":"r1","label":"Enlace esquemático · pendiente de validar en detalle","fromLevel":"I","toLevel":"P","points":[[-12.62347,18.72,-6.032],[1.01224,27.46,-11.64203]],"length":17.14,"schematic":true,"sourceRevision":12,"color":"#000000"},{"id":"link-g-a-w-g-i-w-oeste","family":"r1","label":"Enlace esquemático · pendiente de validar en detalle","fromLevel":"A","toLevel":"I","points":[[-73.57517,9.87,10.37257],[-70.41821,18.72,6.85849]],"length":10.032,"schematic":true,"sourceRevision":12,"color":"#000000"},{"id":"link-g-a-w-g-i-w-este","family":"r1","label":"Enlace esquemático · pendiente de validar en detalle","fromLevel":"A","toLevel":"I","points":[[-73.57517,9.87,10.37257],[-70.41821,18.72,6.85849]],"length":10.032,"schematic":true,"sourceRevision":12,"color":"#000000"},{"id":"link-g-a-e-g-i-e-oeste","family":"r1","label":"Enlace esquemático · pendiente de validar en detalle","fromLevel":"A","toLevel":"I","points":[[3.75732,9.87,-22.37383],[-4.8727,18.72,-28.12345]],"length":13.633,"schematic":true,"sourceRevision":12,"color":"#000000"},{"id":"link-g-i-e-oeste-g-p-w","family":"r1","label":"Enlace esquemático · pendiente de validar en detalle","fromLevel":"I","toLevel":"P","points":[[-37.38925,18.72,5.98201],[-51.22187,27.46,11.24285]],"length":17.187,"schematic":true,"sourceRevision":12,"color":"#000000"},{"id":"link-g-a-e-g-i-e-este","family":"r1","label":"Enlace esquemático · pendiente de validar en detalle","fromLevel":"A","toLevel":"I","points":[[3.75732,9.87,-22.37383],[-4.8727,18.72,-28.12345]],"length":13.633,"schematic":true,"sourceRevision":12,"color":"#000000"},{"id":"link-g-i-e-este-g-p-e","family":"r1","label":"Enlace esquemático · pendiente de validar en detalle","fromLevel":"I","toLevel":"P","points":[[-12.62347,18.72,-6.032],[1.01224,27.46,-11.64203]],"length":17.14,"schematic":true,"sourceRevision":12,"color":"#000000"},{"id":"link-c1-a-c1-i","family":"r2","label":"Enlace esquemático · pendiente de validar en detalle","fromLevel":"A","toLevel":"I","points":[[-18.69843,11.02,104.81271],[-11.08432,18.72,99.04136]],"length":12.271,"schematic":true,"sourceRevision":12,"color":"#00B050"},{"id":"link-c1-i-c1-p","family":"r2","label":"Enlace esquemático · pendiente de validar en detalle","fromLevel":"I","toLevel":"P","points":[[-20.73183,18.72,104.45311],[-10.96605,27.46,100.49366]],"length":13.691,"schematic":true,"sourceRevision":12,"color":"#00B050"},{"id":"link-c2-a-e-c2-i","family":"r3","label":"Enlace esquemático · pendiente de validar en detalle","fromLevel":"A","toLevel":"I","points":[[67.23713,12.12,36.93407],[76.37607,18.72,32.12278]],"length":12.257,"schematic":true,"sourceRevision":12,"color":"#7030A0"},{"id":"link-c2-i-c2-p","family":"r3","label":"Enlace esquemático · pendiente de validar en detalle","fromLevel":"I","toLevel":"P","points":[[68.4514,18.72,34.20395],[70.87846,27.46,33.16511]],"length":9.13,"schematic":true,"sourceRevision":12,"color":"#7030A0"},{"id":"link-c2-a-w-c2-i","family":"r3","label":"Enlace esquemático · pendiente de validar en detalle","fromLevel":"A","toLevel":"I","points":[[67.23713,12.12,36.93407],[76.37607,18.72,32.12278]],"length":12.257,"schematic":true,"sourceRevision":12,"color":"#7030A0"},{"id":"link-change-p-n-change-i","family":"r4","label":"Enlace esquemático · pendiente de validar en detalle","fromLevel":"P","toLevel":"I","points":[[-0.38769,27.46,-14.45611],[-13.37948,18.72,-8.09534]],"length":16.901,"schematic":true,"sourceRevision":12,"color":"#FF00FF"},{"id":"link-change-i-change-p-s-reverse","family":"r4","label":"Enlace esquemático · pendiente de validar en detalle","fromLevel":"I","toLevel":"P","points":[[69.26098,18.72,35.74383],[71.68301,27.46,34.74862]],"length":9.124,"schematic":true,"sourceRevision":12,"color":"#FF00FF"},{"id":"link-bike-a-ramp-lower-bike-b-parking","family":"r1","label":"Enlace esquemático · pendiente de validar en detalle","fromLevel":"A","toLevel":"B","points":[[-31.70988,9.87,5.19176],[-43.57441,3.72,10.74064]],"length":14.47,"schematic":true,"sourceRevision":12,"color":"#66FF66"}],"journeys":[{"id":"out-v13-journey-brt-e-c1","family":"metro-brt","label":"Metro · Calle 72-1 → BRT este","legs":["out-v13-brt-p-c1","out-link-v13-brt-i-e-c1-v13-brt-p-c1","out-v13-brt-i-e-c1","out-link-v13-brt-a-e-v13-brt-i-e-c1","out-v13-brt-a-e"],"bidirectional":false},{"id":"v13-journey-pmr","family":"brt","label":"PMR · BRT → Metro · Calle 72-1","legs":["v13-pmr-a","link-v13-pmr-a-v13-pmr-i","v13-pmr-i","link-v13-pmr-i-v13-pmr-p","v13-pmr-p"],"bidirectional":false},{"id":"v13-journey-brt-wn-g-oeste","family":"brt","label":"BRT oeste norte → Metro · Gibraltar oeste","legs":["v13-brt-a-wn","link-v13-brt-a-wn-v13-brt-i-wn-g-oeste","v13-brt-i-wn-g-oeste","link-v13-brt-i-wn-g-oeste-v13-brt-p-g-oeste","v13-brt-p-g-oeste"],"bidirectional":false},{"id":"v13-journey-brt-wn-g-este","family":"brt","label":"BRT oeste norte → Metro · Gibraltar este","legs":["v13-brt-a-wn","link-v13-brt-a-wn-v13-brt-i-wn-g-este","v13-brt-i-wn-g-este","link-v13-brt-i-wn-g-este-v13-brt-p-g-este","v13-brt-p-g-este"],"bidirectional":false},{"id":"v13-journey-brt-wn-c1","family":"brt","label":"BRT oeste norte → Metro · Calle 72-1","legs":["v13-brt-a-wn","link-v13-brt-a-wn-v13-brt-i-wn-c1","v13-brt-i-wn-c1","link-v13-brt-i-wn-c1-v13-brt-p-c1","v13-brt-p-c1"],"bidirectional":false},{"id":"v13-journey-brt-ws-g-oeste","family":"brt","label":"BRT oeste sur → Metro · Gibraltar oeste","legs":["v13-brt-a-ws","link-v13-brt-a-ws-v13-brt-i-ws-g-oeste","v13-brt-i-ws-g-oeste","link-v13-brt-i-ws-g-oeste-v13-brt-p-g-oeste","v13-brt-p-g-oeste"],"bidirectional":false},{"id":"v13-journey-brt-ws-g-este","family":"brt","label":"BRT oeste sur → Metro · Gibraltar este","legs":["v13-brt-a-ws","link-v13-brt-a-ws-v13-brt-i-ws-g-este","v13-brt-i-ws-g-este","link-v13-brt-i-ws-g-este-v13-brt-p-g-este","v13-brt-p-g-este"],"bidirectional":false},{"id":"v13-journey-brt-ws-c1","family":"brt","label":"BRT oeste sur → Metro · Calle 72-1","legs":["v13-brt-a-ws","link-v13-brt-a-ws-v13-brt-i-ws-c1","v13-brt-i-ws-c1","link-v13-brt-i-ws-c1-v13-brt-p-c1","v13-brt-p-c1"],"bidirectional":false},{"id":"v13-journey-brt-e-g-oeste","family":"brt","label":"BRT este → Metro · Gibraltar oeste","legs":["v13-brt-a-e","link-v13-brt-a-e-v13-brt-i-e-g-oeste","v13-brt-i-e-g-oeste","link-v13-brt-i-e-g-oeste-v13-brt-p-g-oeste","v13-brt-p-g-oeste"],"bidirectional":false},{"id":"v13-journey-brt-e-g-este","family":"brt","label":"BRT este → Metro · Gibraltar este","legs":["v13-brt-a-e","link-v13-brt-a-e-v13-brt-i-e-g-este","v13-brt-i-e-g-este","link-v13-brt-i-e-g-este-v13-brt-p-g-este","v13-brt-p-g-este"],"bidirectional":false},{"id":"v13-journey-brt-e-c1","family":"brt","label":"BRT este → Metro · Calle 72-1","legs":["v13-brt-a-e","link-v13-brt-a-e-v13-brt-i-e-c1","v13-brt-i-e-c1","link-v13-brt-i-e-c1-v13-brt-p-c1","v13-brt-p-c1"],"bidirectional":false},{"id":"out-v13-journey-pmr","family":"metro-brt","label":"PMR · Metro · Calle 72-1 → BRT","legs":["out-v13-pmr-p","out-link-v13-pmr-i-v13-pmr-p","out-v13-pmr-i","out-link-v13-pmr-a-v13-pmr-i","out-v13-pmr-a"],"bidirectional":false},{"id":"out-v13-journey-brt-wn-g-oeste","family":"metro-brt","label":"Metro · Gibraltar oeste → BRT oeste norte","legs":["out-v13-brt-p-g-oeste","out-link-v13-brt-i-wn-g-oeste-v13-brt-p-g-oeste","out-v13-brt-i-wn-g-oeste","out-link-v13-brt-a-wn-v13-brt-i-wn-g-oeste","out-v13-brt-a-wn"],"bidirectional":false},{"id":"out-v13-journey-brt-wn-g-este","family":"metro-brt","label":"Metro · Gibraltar este → BRT oeste norte","legs":["out-v13-brt-p-g-este","out-link-v13-brt-i-wn-g-este-v13-brt-p-g-este","out-v13-brt-i-wn-g-este","out-link-v13-brt-a-wn-v13-brt-i-wn-g-este","out-v13-brt-a-wn"],"bidirectional":false},{"id":"out-v13-journey-brt-wn-c1","family":"metro-brt","label":"Metro · Calle 72-1 → BRT oeste norte","legs":["out-v13-brt-p-c1","out-link-v13-brt-i-wn-c1-v13-brt-p-c1","out-v13-brt-i-wn-c1","out-link-v13-brt-a-wn-v13-brt-i-wn-c1","out-v13-brt-a-wn"],"bidirectional":false},{"id":"out-v13-journey-brt-ws-g-oeste","family":"metro-brt","label":"Metro · Gibraltar oeste → BRT oeste sur","legs":["out-v13-brt-p-g-oeste","out-link-v13-brt-i-ws-g-oeste-v13-brt-p-g-oeste","out-v13-brt-i-ws-g-oeste","out-link-v13-brt-a-ws-v13-brt-i-ws-g-oeste","out-v13-brt-a-ws"],"bidirectional":false},{"id":"out-v13-journey-brt-ws-g-este","family":"metro-brt","label":"Metro · Gibraltar este → BRT oeste sur","legs":["out-v13-brt-p-g-este","out-link-v13-brt-i-ws-g-este-v13-brt-p-g-este","out-v13-brt-i-ws-g-este","out-link-v13-brt-a-ws-v13-brt-i-ws-g-este","out-v13-brt-a-ws"],"bidirectional":false},{"id":"out-v13-journey-brt-ws-c1","family":"metro-brt","label":"Metro · Calle 72-1 → BRT oeste sur","legs":["out-v13-brt-p-c1","out-link-v13-brt-i-ws-c1-v13-brt-p-c1","out-v13-brt-i-ws-c1","out-link-v13-brt-a-ws-v13-brt-i-ws-c1","out-v13-brt-a-ws"],"bidirectional":false},{"id":"out-v13-journey-brt-e-g-oeste","family":"metro-brt","label":"Metro · Gibraltar oeste → BRT este","legs":["out-v13-brt-p-g-oeste","out-link-v13-brt-i-e-g-oeste-v13-brt-p-g-oeste","out-v13-brt-i-e-g-oeste","out-link-v13-brt-a-e-v13-brt-i-e-g-oeste","out-v13-brt-a-e"],"bidirectional":false},{"id":"out-v13-journey-brt-e-g-este","family":"metro-brt","label":"Metro · Gibraltar este → BRT este","legs":["out-v13-brt-p-g-este","out-link-v13-brt-i-e-g-este-v13-brt-p-g-este","out-v13-brt-i-e-g-este","out-link-v13-brt-a-e-v13-brt-i-e-g-este","out-v13-brt-a-e"],"bidirectional":false},{"id":"journey-g-s-oeste","family":"r1","label":"Acceso Gibraltar · sur → Gibraltar · oeste","legs":["g-a-s","link-g-a-s-g-i-w-oeste","g-i-w-oeste","link-g-i-w-oeste-g-p-w","g-p-w"],"bidirectional":false,"sourceRevision":12,"color":"#000000"},{"id":"journey-g-s-este","family":"r1","label":"Acceso Gibraltar · sur → Gibraltar · este","legs":["g-a-s","link-g-a-s-g-i-w-este","g-i-w-este","link-g-i-w-este-g-p-e","g-p-e"],"bidirectional":false,"sourceRevision":12,"color":"#000000"},{"id":"journey-g-w-oeste","family":"r1","label":"Acceso Gibraltar · occidente → Gibraltar · oeste","legs":["g-a-w","link-g-a-w-g-i-w-oeste","g-i-w-oeste","link-g-i-w-oeste-g-p-w","g-p-w"],"bidirectional":false,"sourceRevision":12,"color":"#000000"},{"id":"journey-g-w-este","family":"r1","label":"Acceso Gibraltar · occidente → Gibraltar · este","legs":["g-a-w","link-g-a-w-g-i-w-este","g-i-w-este","link-g-i-w-este-g-p-e","g-p-e"],"bidirectional":false,"sourceRevision":12,"color":"#000000"},{"id":"journey-g-e-oeste","family":"r1","label":"Acceso Gibraltar · oriente → Gibraltar · oeste","legs":["g-a-e","link-g-a-e-g-i-e-oeste","g-i-e-oeste","link-g-i-e-oeste-g-p-w","g-p-w"],"bidirectional":false,"sourceRevision":12,"color":"#000000"},{"id":"journey-g-e-este","family":"r1","label":"Acceso Gibraltar · oriente → Gibraltar · este","legs":["g-a-e","link-g-a-e-g-i-e-este","g-i-e-este","link-g-i-e-este-g-p-e","g-p-e"],"bidirectional":false,"sourceRevision":12,"color":"#000000"},{"id":"journey-c1","family":"r2","label":"Acceso Calle 72-1 → Calle 72-1","legs":["c1-a","link-c1-a-c1-i","c1-i","link-c1-i-c1-p","c1-p"],"bidirectional":false,"sourceRevision":12,"color":"#00B050"},{"id":"journey-c2-e","family":"r3","label":"Acceso Calle 72-2 · este → Calle 72-2","legs":["c2-a-e","link-c2-a-e-c2-i","c2-i","link-c2-i-c2-p","c2-p"],"bidirectional":false,"sourceRevision":12,"color":"#7030A0"},{"id":"journey-c2-w","family":"r3","label":"Acceso Calle 72-2 · oeste → Calle 72-2","legs":["c2-a-w","link-c2-a-w-c2-i","c2-i","link-c2-i-c2-p","c2-p"],"bidirectional":false,"sourceRevision":12,"color":"#7030A0"},{"id":"journey-change","family":"r4","label":"Plataforma · andén Gibraltar ↔ escalera → · andén Calle 72 ↔ escalera","legs":["change-p-n","link-change-p-n-change-i","change-i","link-change-i-change-p-s-reverse","change-p-s-reverse"],"bidirectional":true,"sourceRevision":12,"color":"#FF00FF"},{"id":"journey-bike","family":"r1","label":"Acceso · rampa de biciusuarios · retorno → Sótano · rampa → cicloparqueadero","legs":["bike-a-ramp-lower","link-bike-a-ramp-lower-bike-b-parking","bike-b-parking"],"bidirectional":false,"sourceRevision":12,"color":"#66FF66"}]}
+{
+  "version": 15,
+  "source": "20261023 Funcionalidad E1-E9.pptx",
+  "sourceSha256": "3064f1852ab5b6d0509b567536d6ae16de9c044fd4440d539629b3bda9971ed6",
+  "slides": [
+    11,
+    13,
+    15
+  ],
+  "units": "m",
+  "coordinateSystem": "IFC metres to glTF relative [96310,2550,-100150]",
+  "verticalLinks": "schematic-user-authorized",
+  "measurementNote": "Intercambio Metro-BRT actualizado con las diapositivas 11, 13 y 15 y registrado a las plantas IFC. Azul: circulación general; naranja: PMR. Otros accesos conservan los trazados previos donde no hay una nueva flecha. Distancias aproximadas; conexiones entre niveles esquemáticas. POV y plantas comparten reproducción, pausa, avance y velocidad. La sincronización distribuye la distancia del trazado proporcionalmente al tiempo del video; no identifica hitos espaciales dentro de la grabación.",
+  "families": [
+    {
+      "id": "metro-brt",
+      "label": "1. Metro-BRT",
+      "color": "#00B0F0",
+      "videoId": "metro-brt",
+      "defaultJourney": "out-v13-journey-brt-wn-g-oeste"
+    },
+    {
+      "id": "brt",
+      "label": "2. BRT-Metro/PMR (Personas con movilidad Reducida)",
+      "color": "#00B0F0",
+      "secondaryColor": "#E97132",
+      "videoId": "brt-metro-pmr",
+      "defaultJourney": "v13-journey-pmr"
+    },
+    {
+      "id": "r1",
+      "label": "3. Acceso Gibraltar/Biciusuarios",
+      "color": "#000000",
+      "secondaryColor": "#66FF66",
+      "videoId": "e09-ruta-1",
+      "defaultJourney": "video-gibraltar-completo"
+    },
+    {
+      "id": "r2",
+      "label": "4. Acceso Calle 72-1",
+      "color": "#00B050"
+    },
+    {
+      "id": "r3",
+      "label": "5. Acceso Calle 72-2",
+      "color": "#7030A0"
+    },
+    {
+      "id": "r4",
+      "label": "6. Cambio de sentido",
+      "color": "#FF00FF"
+    }
+  ],
+  "routes": [
+    {
+      "id": "v13-pmr-a",
+      "family": "brt",
+      "label": "PMR · BRT → elevador",
+      "level": "A",
+      "slide": 11,
+      "sourceRevision": 13,
+      "points": [
+        [
+          35.06902,
+          11.02,
+          9.78061
+        ],
+        [
+          -32.59966,
+          11.02,
+          42.35422
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1557.506,
+          561.722
+        ],
+        [
+          1037.039,
+          560.122
+        ]
+      ],
+      "sourceShapeIds": [
+        2
+      ],
+      "color": "#E97132",
+      "length": 75.101,
+      "bidirectional": true,
+      "preferredPage": 1
+    },
+    {
+      "id": "v13-pmr-i",
+      "family": "brt",
+      "label": "PMR · elevador BRT → elevador Calle 72-1",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -38.67235,
+          18.72,
+          46.0351
+        ],
+        [
+          -44.74152,
+          18.72,
+          48.97821
+        ],
+        [
+          -19.52391,
+          18.72,
+          86.66132
+        ],
+        [
+          -39.51708,
+          18.72,
+          99.48688
+        ]
+      ],
+      "sourcePoints": [
+        [
+          999.574,
+          588.997
+        ],
+        [
+          954.716,
+          588.997
+        ],
+        [
+          986.282,
+          889.935
+        ],
+        [
+          828.8,
+          908.809
+        ]
+      ],
+      "sourceShapeIds": [
+        91,
+        93,
+        101
+      ],
+      "color": "#E97132",
+      "length": 75.841,
+      "bidirectional": true,
+      "preferredPage": 3
+    },
+    {
+      "id": "v13-pmr-p",
+      "family": "brt",
+      "label": "PMR · elevador Calle 72-1 → andén",
+      "level": "P",
+      "slide": 15,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -37.97754,
+          27.46,
+          98.85563
+        ],
+        [
+          -21.82058,
+          27.46,
+          87.70665
+        ],
+        [
+          -42.43044,
+          27.46,
+          56.8268
+        ]
+      ],
+      "sourcePoints": [
+        [
+          837.437,
+          912.452
+        ],
+        [
+          970.862,
+          891.895
+        ],
+        [
+          940.4,
+          638.231
+        ]
+      ],
+      "sourceShapeIds": [
+        50,
+        54
+      ],
+      "color": "#E97132",
+      "length": 56.756,
+      "bidirectional": true,
+      "preferredPage": 5
+    },
+    {
+      "id": "v13-brt-a-wn",
+      "family": "brt",
+      "label": "BRT · oeste norte → escalera",
+      "level": "A",
+      "slide": 11,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -83.75321,
+          11.02,
+          66.58107
+        ],
+        [
+          -65.02604,
+          11.02,
+          57.6909
+        ]
+      ],
+      "sourcePoints": [
+        [
+          644.802,
+          556.384
+        ],
+        [
+          788.462,
+          557.62
+        ]
+      ],
+      "sourceShapeIds": [
+        148
+      ],
+      "color": "#00B0F0",
+      "length": 20.73,
+      "bidirectional": true,
+      "preferredPage": 1
+    },
+    {
+      "id": "v13-brt-a-ws",
+      "family": "brt",
+      "label": "BRT · oeste sur → escalera",
+      "level": "A",
+      "slide": 11,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -83.25495,
+          11.02,
+          66.5191
+        ],
+        [
+          -63.19208,
+          11.02,
+          61.45194
+        ]
+      ],
+      "sourcePoints": [
+        [
+          648.094,
+          557.529
+        ],
+        [
+          788.462,
+          587.249
+        ]
+      ],
+      "sourceShapeIds": [
+        155
+      ],
+      "color": "#00B0F0",
+      "length": 20.693,
+      "bidirectional": true,
+      "preferredPage": 1
+    },
+    {
+      "id": "v13-brt-a-e",
+      "family": "brt",
+      "label": "BRT · este → escalera",
+      "level": "A",
+      "slide": 11,
+      "sourceRevision": 13,
+      "points": [
+        [
+          44.52284,
+          11.02,
+          7.14988
+        ],
+        [
+          -16.09207,
+          11.02,
+          36.55299
+        ],
+        [
+          -23.30427,
+          11.02,
+          43.34096
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1624.387,
+          574.178
+        ],
+        [
+          1157.49,
+          574.178
+        ],
+        [
+          1091.945,
+          595.135
+        ]
+      ],
+      "sourceShapeIds": [
+        143,
+        144
+      ],
+      "color": "#00B0F0",
+      "length": 77.274,
+      "bidirectional": true,
+      "preferredPage": 1
+    },
+    {
+      "id": "v13-brt-i-wn-g-oeste",
+      "family": "brt",
+      "label": "BRT · oeste norte → Gibraltar oeste",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -70.20565,
+          18.72,
+          60.18853
+        ],
+        [
+          -47.65917,
+          18.72,
+          49.25513
+        ],
+        [
+          -44.32683,
+          18.72,
+          52.02869
+        ],
+        [
+          -61.99933,
+          18.72,
+          12.43965
+        ],
+        [
+          -56.2446,
+          18.72,
+          9.72604
+        ],
+        [
+          -51.51184,
+          18.72,
+          -0.80244
+        ],
+        [
+          -26.67777,
+          18.72,
+          -12.77702
+        ],
+        [
+          -21.71059,
+          18.72,
+          -1.73538
+        ],
+        [
+          -37.32709,
+          18.72,
+          6.00536
+        ]
+      ],
+      "sourcePoints": [
+        [
+          770.037,
+          582.136
+        ],
+        [
+          936.681,
+          582.136
+        ],
+        [
+          947.695,
+          608.602
+        ],
+        [
+          944.048,
+          310.592
+        ],
+        [
+          986.528,
+          311.062
+        ],
+        [
+          1045.983,
+          261.795
+        ],
+        [
+          1230.083,
+          262.242
+        ],
+        [
+          1227.197,
+          342.746
+        ],
+        [
+          1110.806,
+          343.726
+        ]
+      ],
+      "sourceShapeIds": [
+        50,
+        55,
+        133,
+        137,
+        141,
+        2
+      ],
+      "color": "#00B0F0",
+      "length": 147.761,
+      "bidirectional": true,
+      "preferredPage": 3
+    },
+    {
+      "id": "v13-brt-i-wn-g-este",
+      "family": "brt",
+      "label": "BRT · oeste norte → Gibraltar este",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -70.20565,
+          18.72,
+          60.18853
+        ],
+        [
+          -47.65917,
+          18.72,
+          49.25513
+        ],
+        [
+          -44.32683,
+          18.72,
+          52.02869
+        ],
+        [
+          -61.99933,
+          18.72,
+          12.43965
+        ],
+        [
+          -56.2446,
+          18.72,
+          9.72604
+        ],
+        [
+          -51.51184,
+          18.72,
+          -0.80244
+        ],
+        [
+          -26.67777,
+          18.72,
+          -12.77702
+        ],
+        [
+          -21.71059,
+          18.72,
+          -1.73538
+        ],
+        [
+          -12.56695,
+          18.72,
+          -6.00804
+        ]
+      ],
+      "sourcePoints": [
+        [
+          770.037,
+          582.136
+        ],
+        [
+          936.681,
+          582.136
+        ],
+        [
+          947.695,
+          608.602
+        ],
+        [
+          944.048,
+          310.592
+        ],
+        [
+          986.528,
+          311.062
+        ],
+        [
+          1045.983,
+          261.795
+        ],
+        [
+          1230.083,
+          262.242
+        ],
+        [
+          1227.197,
+          342.746
+        ],
+        [
+          1294.578,
+          343.726
+        ]
+      ],
+      "sourceShapeIds": [
+        50,
+        55,
+        133,
+        137,
+        141,
+        2
+      ],
+      "color": "#00B0F0",
+      "length": 140.424,
+      "bidirectional": true,
+      "preferredPage": 3
+    },
+    {
+      "id": "v13-brt-i-wn-c1",
+      "family": "brt",
+      "label": "BRT · oeste norte → Calle 72-1",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -70.20565,
+          18.72,
+          60.18853
+        ],
+        [
+          -47.65917,
+          18.72,
+          49.25513
+        ],
+        [
+          -44.72781,
+          18.72,
+          51.58459
+        ],
+        [
+          -19.6714,
+          18.72,
+          89.86317
+        ],
+        [
+          -35.96784,
+          18.72,
+          100.41346
+        ],
+        [
+          -28.82673,
+          18.72,
+          109.7437
+        ],
+        [
+          -20.73183,
+          18.72,
+          104.45311
+        ]
+      ],
+      "sourcePoints": [
+        [
+          770.037,
+          582.136
+        ],
+        [
+          936.681,
+          582.136
+        ],
+        [
+          946.712,
+          604.752
+        ],
+        [
+          975.482,
+          908.809
+        ],
+        [
+          846.82,
+          924.773
+        ],
+        [
+          859.918,
+          1001.908
+        ],
+        [
+          923.983,
+          993.677
+        ]
+      ],
+      "sourceShapeIds": [
+        50,
+        53,
+        98,
+        99
+      ],
+      "color": "#00B0F0",
+      "length": 115.385,
+      "bidirectional": true,
+      "preferredPage": 3
+    },
+    {
+      "id": "v13-brt-i-ws-g-oeste",
+      "family": "brt",
+      "label": "BRT · oeste sur → Gibraltar oeste",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -68.44714,
+          18.72,
+          64.73069
+        ],
+        [
+          -44.03789,
+          18.72,
+          52.89397
+        ],
+        [
+          -44.32683,
+          18.72,
+          52.02869
+        ],
+        [
+          -61.99933,
+          18.72,
+          12.43965
+        ],
+        [
+          -56.2446,
+          18.72,
+          9.72604
+        ],
+        [
+          -51.51184,
+          18.72,
+          -0.80244
+        ],
+        [
+          -26.67777,
+          18.72,
+          -12.77702
+        ],
+        [
+          -21.71059,
+          18.72,
+          -1.73538
+        ],
+        [
+          -37.32709,
+          18.72,
+          6.00536
+        ]
+      ],
+      "sourcePoints": [
+        [
+          766.3,
+          614.664
+        ],
+        [
+          946.712,
+          614.664
+        ],
+        [
+          947.695,
+          608.602
+        ],
+        [
+          944.048,
+          310.592
+        ],
+        [
+          986.528,
+          311.062
+        ],
+        [
+          1045.983,
+          261.795
+        ],
+        [
+          1230.083,
+          262.242
+        ],
+        [
+          1227.197,
+          342.746
+        ],
+        [
+          1110.806,
+          343.726
+        ]
+      ],
+      "sourceShapeIds": [
+        51,
+        55,
+        133,
+        137,
+        141,
+        2
+      ],
+      "color": "#00B0F0",
+      "length": 146.408,
+      "bidirectional": true,
+      "preferredPage": 3
+    },
+    {
+      "id": "v13-brt-i-ws-g-este",
+      "family": "brt",
+      "label": "BRT · oeste sur → Gibraltar este",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -68.44714,
+          18.72,
+          64.73069
+        ],
+        [
+          -44.03789,
+          18.72,
+          52.89397
+        ],
+        [
+          -44.32683,
+          18.72,
+          52.02869
+        ],
+        [
+          -61.99933,
+          18.72,
+          12.43965
+        ],
+        [
+          -56.2446,
+          18.72,
+          9.72604
+        ],
+        [
+          -51.51184,
+          18.72,
+          -0.80244
+        ],
+        [
+          -26.67777,
+          18.72,
+          -12.77702
+        ],
+        [
+          -21.71059,
+          18.72,
+          -1.73538
+        ],
+        [
+          -12.56695,
+          18.72,
+          -6.00804
+        ]
+      ],
+      "sourcePoints": [
+        [
+          766.3,
+          614.664
+        ],
+        [
+          946.712,
+          614.664
+        ],
+        [
+          947.695,
+          608.602
+        ],
+        [
+          944.048,
+          310.592
+        ],
+        [
+          986.528,
+          311.062
+        ],
+        [
+          1045.983,
+          261.795
+        ],
+        [
+          1230.083,
+          262.242
+        ],
+        [
+          1227.197,
+          342.746
+        ],
+        [
+          1294.578,
+          343.726
+        ]
+      ],
+      "sourceShapeIds": [
+        51,
+        55,
+        133,
+        137,
+        141,
+        2
+      ],
+      "color": "#00B0F0",
+      "length": 139.071,
+      "bidirectional": true,
+      "preferredPage": 3
+    },
+    {
+      "id": "v13-brt-i-ws-c1",
+      "family": "brt",
+      "label": "BRT · oeste sur → Calle 72-1",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -68.44714,
+          18.72,
+          64.73069
+        ],
+        [
+          -44.03789,
+          18.72,
+          52.89397
+        ],
+        [
+          -44.72781,
+          18.72,
+          51.58459
+        ],
+        [
+          -19.6714,
+          18.72,
+          89.86317
+        ],
+        [
+          -35.96784,
+          18.72,
+          100.41346
+        ],
+        [
+          -28.82673,
+          18.72,
+          109.7437
+        ],
+        [
+          -20.73183,
+          18.72,
+          104.45311
+        ]
+      ],
+      "sourcePoints": [
+        [
+          766.3,
+          614.664
+        ],
+        [
+          946.712,
+          614.664
+        ],
+        [
+          946.712,
+          604.752
+        ],
+        [
+          975.482,
+          908.809
+        ],
+        [
+          846.82,
+          924.773
+        ],
+        [
+          859.918,
+          1001.908
+        ],
+        [
+          923.983,
+          993.677
+        ]
+      ],
+      "sourceShapeIds": [
+        51,
+        53,
+        98,
+        99
+      ],
+      "color": "#00B0F0",
+      "length": 115.191,
+      "bidirectional": true,
+      "preferredPage": 3
+    },
+    {
+      "id": "v13-brt-i-e-g-oeste",
+      "family": "brt",
+      "label": "BRT · este → Gibraltar oeste",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -19.81764,
+          18.72,
+          41.14892
+        ],
+        [
+          -44.03789,
+          18.72,
+          52.89397
+        ],
+        [
+          -44.32683,
+          18.72,
+          52.02869
+        ],
+        [
+          -61.99933,
+          18.72,
+          12.43965
+        ],
+        [
+          -56.2446,
+          18.72,
+          9.72604
+        ],
+        [
+          -51.51184,
+          18.72,
+          -0.80244
+        ],
+        [
+          -26.67777,
+          18.72,
+          -12.77702
+        ],
+        [
+          -21.71059,
+          18.72,
+          -1.73538
+        ],
+        [
+          -37.32709,
+          18.72,
+          6.00536
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1125.727,
+          614.664
+        ],
+        [
+          946.712,
+          614.664
+        ],
+        [
+          947.695,
+          608.602
+        ],
+        [
+          944.048,
+          310.592
+        ],
+        [
+          986.528,
+          311.062
+        ],
+        [
+          1045.983,
+          261.795
+        ],
+        [
+          1230.083,
+          262.242
+        ],
+        [
+          1227.197,
+          342.746
+        ],
+        [
+          1110.806,
+          343.726
+        ]
+      ],
+      "sourceShapeIds": [
+        52,
+        55,
+        133,
+        137,
+        141,
+        2
+      ],
+      "color": "#00B0F0",
+      "length": 146.198,
+      "bidirectional": true,
+      "preferredPage": 3
+    },
+    {
+      "id": "v13-brt-i-e-g-este",
+      "family": "brt",
+      "label": "BRT · este → Gibraltar este",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -19.81764,
+          18.72,
+          41.14892
+        ],
+        [
+          -44.03789,
+          18.72,
+          52.89397
+        ],
+        [
+          -44.32683,
+          18.72,
+          52.02869
+        ],
+        [
+          -61.99933,
+          18.72,
+          12.43965
+        ],
+        [
+          -56.2446,
+          18.72,
+          9.72604
+        ],
+        [
+          -51.51184,
+          18.72,
+          -0.80244
+        ],
+        [
+          -26.67777,
+          18.72,
+          -12.77702
+        ],
+        [
+          -21.71059,
+          18.72,
+          -1.73538
+        ],
+        [
+          -12.56695,
+          18.72,
+          -6.00804
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1125.727,
+          614.664
+        ],
+        [
+          946.712,
+          614.664
+        ],
+        [
+          947.695,
+          608.602
+        ],
+        [
+          944.048,
+          310.592
+        ],
+        [
+          986.528,
+          311.062
+        ],
+        [
+          1045.983,
+          261.795
+        ],
+        [
+          1230.083,
+          262.242
+        ],
+        [
+          1227.197,
+          342.746
+        ],
+        [
+          1294.578,
+          343.726
+        ]
+      ],
+      "sourceShapeIds": [
+        52,
+        55,
+        133,
+        137,
+        141,
+        2
+      ],
+      "color": "#00B0F0",
+      "length": 138.861,
+      "bidirectional": true,
+      "preferredPage": 3
+    },
+    {
+      "id": "v13-brt-i-e-c1",
+      "family": "brt",
+      "label": "BRT · este → Calle 72-1",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -19.81764,
+          18.72,
+          41.14892
+        ],
+        [
+          -44.03789,
+          18.72,
+          52.89397
+        ],
+        [
+          -44.72781,
+          18.72,
+          51.58459
+        ],
+        [
+          -19.6714,
+          18.72,
+          89.86317
+        ],
+        [
+          -35.96784,
+          18.72,
+          100.41346
+        ],
+        [
+          -28.82673,
+          18.72,
+          109.7437
+        ],
+        [
+          -20.73183,
+          18.72,
+          104.45311
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1125.727,
+          614.664
+        ],
+        [
+          946.712,
+          614.664
+        ],
+        [
+          946.712,
+          604.752
+        ],
+        [
+          975.482,
+          908.809
+        ],
+        [
+          846.82,
+          924.773
+        ],
+        [
+          859.918,
+          1001.908
+        ],
+        [
+          923.983,
+          993.677
+        ]
+      ],
+      "sourceShapeIds": [
+        52,
+        53,
+        98,
+        99
+      ],
+      "color": "#00B0F0",
+      "length": 114.981,
+      "bidirectional": true,
+      "preferredPage": 3
+    },
+    {
+      "id": "v13-brt-p-g-oeste",
+      "family": "brt",
+      "label": "Gibraltar oeste · escalera → andén",
+      "level": "P",
+      "slide": 15,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -51.19874,
+          27.46,
+          11.22883
+        ],
+        [
+          -59.59471,
+          27.46,
+          15.30322
+        ],
+        [
+          -46.52475,
+          27.46,
+          44.3443
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1018.234,
+          330.616
+        ],
+        [
+          954.016,
+          330.616
+        ],
+        [
+          954.016,
+          548.445
+        ]
+      ],
+      "sourceShapeIds": [
+        19,
+        17
+      ],
+      "color": "#00B0F0",
+      "length": 41.179,
+      "bidirectional": true,
+      "preferredPage": 5
+    },
+    {
+      "id": "v13-brt-p-g-este",
+      "family": "brt",
+      "label": "Gibraltar este · escalera → andén",
+      "level": "P",
+      "slide": 15,
+      "sourceRevision": 13,
+      "points": [
+        [
+          1.04012,
+          27.46,
+          -11.65601
+        ],
+        [
+          10.83543,
+          27.46,
+          -16.40947
+        ],
+        [
+          33.62136,
+          27.46,
+          6.23391
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1410.23,
+          345.713
+        ],
+        [
+          1485.151,
+          345.713
+        ],
+        [
+          1562.596,
+          553.172
+        ]
+      ],
+      "sourceShapeIds": [
+        15,
+        13
+      ],
+      "color": "#00B0F0",
+      "length": 43.011,
+      "bidirectional": true,
+      "preferredPage": 5
+    },
+    {
+      "id": "v13-brt-p-c1",
+      "family": "brt",
+      "label": "Calle 72-1 · escalera → andén",
+      "level": "P",
+      "slide": 15,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -10.96605,
+          27.46,
+          100.49366
+        ],
+        [
+          -2.65295,
+          27.46,
+          95.32111
+        ],
+        [
+          -10.0681,
+          27.46,
+          84.91304
+        ],
+        [
+          -20.08684,
+          27.46,
+          86.55234
+        ],
+        [
+          -40.04615,
+          27.46,
+          55.67039
+        ]
+      ],
+      "sourcePoints": [
+        [
+          997.676,
+          1003.918
+        ],
+        [
+          1064.579,
+          996.84
+        ],
+        [
+          1051.444,
+          909.932
+        ],
+        [
+          985.049,
+          889.95
+        ],
+        [
+          958.575,
+          638.231
+        ]
+      ],
+      "sourceShapeIds": [
+        45,
+        47,
+        49,
+        43
+      ],
+      "color": "#00B0F0",
+      "length": 69.493,
+      "bidirectional": true,
+      "preferredPage": 5
+    },
+    {
+      "id": "out-v13-pmr-a",
+      "family": "metro-brt",
+      "label": "Salida · elevador → PMR · BRT",
+      "level": "A",
+      "slide": 11,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -32.59966,
+          11.02,
+          42.35422
+        ],
+        [
+          35.06902,
+          11.02,
+          9.78061
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1037.039,
+          560.122
+        ],
+        [
+          1557.506,
+          561.722
+        ]
+      ],
+      "sourceShapeIds": [
+        2
+      ],
+      "color": "#E97132",
+      "length": 75.101,
+      "bidirectional": false,
+      "preferredPage": 1
+    },
+    {
+      "id": "out-v13-pmr-i",
+      "family": "metro-brt",
+      "label": "Salida · elevador Calle 72-1 → PMR · elevador BRT",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -39.51708,
+          18.72,
+          99.48688
+        ],
+        [
+          -19.52391,
+          18.72,
+          86.66132
+        ],
+        [
+          -44.74152,
+          18.72,
+          48.97821
+        ],
+        [
+          -38.67235,
+          18.72,
+          46.0351
+        ]
+      ],
+      "sourcePoints": [
+        [
+          828.8,
+          908.809
+        ],
+        [
+          986.282,
+          889.935
+        ],
+        [
+          954.716,
+          588.997
+        ],
+        [
+          999.574,
+          588.997
+        ]
+      ],
+      "sourceShapeIds": [
+        91,
+        93,
+        101
+      ],
+      "color": "#E97132",
+      "length": 75.841,
+      "bidirectional": false,
+      "preferredPage": 3
+    },
+    {
+      "id": "out-v13-pmr-p",
+      "family": "metro-brt",
+      "label": "Salida · andén → PMR · elevador Calle 72-1",
+      "level": "P",
+      "slide": 15,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -42.43044,
+          27.46,
+          56.8268
+        ],
+        [
+          -21.82058,
+          27.46,
+          87.70665
+        ],
+        [
+          -37.97754,
+          27.46,
+          98.85563
+        ]
+      ],
+      "sourcePoints": [
+        [
+          940.4,
+          638.231
+        ],
+        [
+          970.862,
+          891.895
+        ],
+        [
+          837.437,
+          912.452
+        ]
+      ],
+      "sourceShapeIds": [
+        50,
+        54
+      ],
+      "color": "#E97132",
+      "length": 56.756,
+      "bidirectional": false,
+      "preferredPage": 5
+    },
+    {
+      "id": "out-v13-brt-a-wn",
+      "family": "metro-brt",
+      "label": "Salida · escalera → BRT · oeste norte",
+      "level": "A",
+      "slide": 11,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -65.02604,
+          11.02,
+          57.6909
+        ],
+        [
+          -83.75321,
+          11.02,
+          66.58107
+        ]
+      ],
+      "sourcePoints": [
+        [
+          788.462,
+          557.62
+        ],
+        [
+          644.802,
+          556.384
+        ]
+      ],
+      "sourceShapeIds": [
+        148
+      ],
+      "color": "#00B0F0",
+      "length": 20.73,
+      "bidirectional": false,
+      "preferredPage": 1
+    },
+    {
+      "id": "out-v13-brt-a-ws",
+      "family": "metro-brt",
+      "label": "Salida · escalera → BRT · oeste sur",
+      "level": "A",
+      "slide": 11,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -63.19208,
+          11.02,
+          61.45194
+        ],
+        [
+          -83.25495,
+          11.02,
+          66.5191
+        ]
+      ],
+      "sourcePoints": [
+        [
+          788.462,
+          587.249
+        ],
+        [
+          648.094,
+          557.529
+        ]
+      ],
+      "sourceShapeIds": [
+        155
+      ],
+      "color": "#00B0F0",
+      "length": 20.693,
+      "bidirectional": false,
+      "preferredPage": 1
+    },
+    {
+      "id": "out-v13-brt-a-e",
+      "family": "metro-brt",
+      "label": "Salida · escalera → BRT · este",
+      "level": "A",
+      "slide": 11,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -23.30427,
+          11.02,
+          43.34096
+        ],
+        [
+          -16.09207,
+          11.02,
+          36.55299
+        ],
+        [
+          44.52284,
+          11.02,
+          7.14988
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1091.945,
+          595.135
+        ],
+        [
+          1157.49,
+          574.178
+        ],
+        [
+          1624.387,
+          574.178
+        ]
+      ],
+      "sourceShapeIds": [
+        143,
+        144
+      ],
+      "color": "#00B0F0",
+      "length": 77.274,
+      "bidirectional": false,
+      "preferredPage": 1
+    },
+    {
+      "id": "out-v13-brt-i-wn-g-oeste",
+      "family": "metro-brt",
+      "label": "Salida · Gibraltar oeste → BRT · oeste norte",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -37.32709,
+          18.72,
+          6.00536
+        ],
+        [
+          -21.71059,
+          18.72,
+          -1.73538
+        ],
+        [
+          -26.67777,
+          18.72,
+          -12.77702
+        ],
+        [
+          -51.51184,
+          18.72,
+          -0.80244
+        ],
+        [
+          -56.2446,
+          18.72,
+          9.72604
+        ],
+        [
+          -61.99933,
+          18.72,
+          12.43965
+        ],
+        [
+          -44.32683,
+          18.72,
+          52.02869
+        ],
+        [
+          -47.65917,
+          18.72,
+          49.25513
+        ],
+        [
+          -70.20565,
+          18.72,
+          60.18853
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1110.806,
+          343.726
+        ],
+        [
+          1227.197,
+          342.746
+        ],
+        [
+          1230.083,
+          262.242
+        ],
+        [
+          1045.983,
+          261.795
+        ],
+        [
+          986.528,
+          311.062
+        ],
+        [
+          944.048,
+          310.592
+        ],
+        [
+          947.695,
+          608.602
+        ],
+        [
+          936.681,
+          582.136
+        ],
+        [
+          770.037,
+          582.136
+        ]
+      ],
+      "sourceShapeIds": [
+        50,
+        55,
+        133,
+        137,
+        141,
+        2
+      ],
+      "color": "#00B0F0",
+      "length": 147.761,
+      "bidirectional": false,
+      "preferredPage": 3
+    },
+    {
+      "id": "out-v13-brt-i-wn-g-este",
+      "family": "metro-brt",
+      "label": "Salida · Gibraltar este → BRT · oeste norte",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -12.56695,
+          18.72,
+          -6.00804
+        ],
+        [
+          -21.71059,
+          18.72,
+          -1.73538
+        ],
+        [
+          -26.67777,
+          18.72,
+          -12.77702
+        ],
+        [
+          -51.51184,
+          18.72,
+          -0.80244
+        ],
+        [
+          -56.2446,
+          18.72,
+          9.72604
+        ],
+        [
+          -61.99933,
+          18.72,
+          12.43965
+        ],
+        [
+          -44.32683,
+          18.72,
+          52.02869
+        ],
+        [
+          -47.65917,
+          18.72,
+          49.25513
+        ],
+        [
+          -70.20565,
+          18.72,
+          60.18853
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1294.578,
+          343.726
+        ],
+        [
+          1227.197,
+          342.746
+        ],
+        [
+          1230.083,
+          262.242
+        ],
+        [
+          1045.983,
+          261.795
+        ],
+        [
+          986.528,
+          311.062
+        ],
+        [
+          944.048,
+          310.592
+        ],
+        [
+          947.695,
+          608.602
+        ],
+        [
+          936.681,
+          582.136
+        ],
+        [
+          770.037,
+          582.136
+        ]
+      ],
+      "sourceShapeIds": [
+        50,
+        55,
+        133,
+        137,
+        141,
+        2
+      ],
+      "color": "#00B0F0",
+      "length": 140.424,
+      "bidirectional": false,
+      "preferredPage": 3
+    },
+    {
+      "id": "out-v13-brt-i-wn-c1",
+      "family": "metro-brt",
+      "label": "Salida · Calle 72-1 → BRT · oeste norte",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -20.73183,
+          18.72,
+          104.45311
+        ],
+        [
+          -28.82673,
+          18.72,
+          109.7437
+        ],
+        [
+          -35.96784,
+          18.72,
+          100.41346
+        ],
+        [
+          -19.6714,
+          18.72,
+          89.86317
+        ],
+        [
+          -44.72781,
+          18.72,
+          51.58459
+        ],
+        [
+          -47.65917,
+          18.72,
+          49.25513
+        ],
+        [
+          -70.20565,
+          18.72,
+          60.18853
+        ]
+      ],
+      "sourcePoints": [
+        [
+          923.983,
+          993.677
+        ],
+        [
+          859.918,
+          1001.908
+        ],
+        [
+          846.82,
+          924.773
+        ],
+        [
+          975.482,
+          908.809
+        ],
+        [
+          946.712,
+          604.752
+        ],
+        [
+          936.681,
+          582.136
+        ],
+        [
+          770.037,
+          582.136
+        ]
+      ],
+      "sourceShapeIds": [
+        50,
+        53,
+        98,
+        99
+      ],
+      "color": "#00B0F0",
+      "length": 115.385,
+      "bidirectional": false,
+      "preferredPage": 3
+    },
+    {
+      "id": "out-v13-brt-i-ws-g-oeste",
+      "family": "metro-brt",
+      "label": "Salida · Gibraltar oeste → BRT · oeste sur",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -37.32709,
+          18.72,
+          6.00536
+        ],
+        [
+          -21.71059,
+          18.72,
+          -1.73538
+        ],
+        [
+          -26.67777,
+          18.72,
+          -12.77702
+        ],
+        [
+          -51.51184,
+          18.72,
+          -0.80244
+        ],
+        [
+          -56.2446,
+          18.72,
+          9.72604
+        ],
+        [
+          -61.99933,
+          18.72,
+          12.43965
+        ],
+        [
+          -44.32683,
+          18.72,
+          52.02869
+        ],
+        [
+          -44.03789,
+          18.72,
+          52.89397
+        ],
+        [
+          -68.44714,
+          18.72,
+          64.73069
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1110.806,
+          343.726
+        ],
+        [
+          1227.197,
+          342.746
+        ],
+        [
+          1230.083,
+          262.242
+        ],
+        [
+          1045.983,
+          261.795
+        ],
+        [
+          986.528,
+          311.062
+        ],
+        [
+          944.048,
+          310.592
+        ],
+        [
+          947.695,
+          608.602
+        ],
+        [
+          946.712,
+          614.664
+        ],
+        [
+          766.3,
+          614.664
+        ]
+      ],
+      "sourceShapeIds": [
+        51,
+        55,
+        133,
+        137,
+        141,
+        2
+      ],
+      "color": "#00B0F0",
+      "length": 146.408,
+      "bidirectional": false,
+      "preferredPage": 3
+    },
+    {
+      "id": "out-v13-brt-i-ws-g-este",
+      "family": "metro-brt",
+      "label": "Salida · Gibraltar este → BRT · oeste sur",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -12.56695,
+          18.72,
+          -6.00804
+        ],
+        [
+          -21.71059,
+          18.72,
+          -1.73538
+        ],
+        [
+          -26.67777,
+          18.72,
+          -12.77702
+        ],
+        [
+          -51.51184,
+          18.72,
+          -0.80244
+        ],
+        [
+          -56.2446,
+          18.72,
+          9.72604
+        ],
+        [
+          -61.99933,
+          18.72,
+          12.43965
+        ],
+        [
+          -44.32683,
+          18.72,
+          52.02869
+        ],
+        [
+          -44.03789,
+          18.72,
+          52.89397
+        ],
+        [
+          -68.44714,
+          18.72,
+          64.73069
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1294.578,
+          343.726
+        ],
+        [
+          1227.197,
+          342.746
+        ],
+        [
+          1230.083,
+          262.242
+        ],
+        [
+          1045.983,
+          261.795
+        ],
+        [
+          986.528,
+          311.062
+        ],
+        [
+          944.048,
+          310.592
+        ],
+        [
+          947.695,
+          608.602
+        ],
+        [
+          946.712,
+          614.664
+        ],
+        [
+          766.3,
+          614.664
+        ]
+      ],
+      "sourceShapeIds": [
+        51,
+        55,
+        133,
+        137,
+        141,
+        2
+      ],
+      "color": "#00B0F0",
+      "length": 139.071,
+      "bidirectional": false,
+      "preferredPage": 3
+    },
+    {
+      "id": "out-v13-brt-i-ws-c1",
+      "family": "metro-brt",
+      "label": "Salida · Calle 72-1 → BRT · oeste sur",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -20.73183,
+          18.72,
+          104.45311
+        ],
+        [
+          -28.82673,
+          18.72,
+          109.7437
+        ],
+        [
+          -35.96784,
+          18.72,
+          100.41346
+        ],
+        [
+          -19.6714,
+          18.72,
+          89.86317
+        ],
+        [
+          -44.72781,
+          18.72,
+          51.58459
+        ],
+        [
+          -44.03789,
+          18.72,
+          52.89397
+        ],
+        [
+          -68.44714,
+          18.72,
+          64.73069
+        ]
+      ],
+      "sourcePoints": [
+        [
+          923.983,
+          993.677
+        ],
+        [
+          859.918,
+          1001.908
+        ],
+        [
+          846.82,
+          924.773
+        ],
+        [
+          975.482,
+          908.809
+        ],
+        [
+          946.712,
+          604.752
+        ],
+        [
+          946.712,
+          614.664
+        ],
+        [
+          766.3,
+          614.664
+        ]
+      ],
+      "sourceShapeIds": [
+        51,
+        53,
+        98,
+        99
+      ],
+      "color": "#00B0F0",
+      "length": 115.191,
+      "bidirectional": false,
+      "preferredPage": 3
+    },
+    {
+      "id": "out-v13-brt-i-e-g-oeste",
+      "family": "metro-brt",
+      "label": "Salida · Gibraltar oeste → BRT · este",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -37.32709,
+          18.72,
+          6.00536
+        ],
+        [
+          -21.71059,
+          18.72,
+          -1.73538
+        ],
+        [
+          -26.67777,
+          18.72,
+          -12.77702
+        ],
+        [
+          -51.51184,
+          18.72,
+          -0.80244
+        ],
+        [
+          -56.2446,
+          18.72,
+          9.72604
+        ],
+        [
+          -61.99933,
+          18.72,
+          12.43965
+        ],
+        [
+          -44.32683,
+          18.72,
+          52.02869
+        ],
+        [
+          -44.03789,
+          18.72,
+          52.89397
+        ],
+        [
+          -19.81764,
+          18.72,
+          41.14892
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1110.806,
+          343.726
+        ],
+        [
+          1227.197,
+          342.746
+        ],
+        [
+          1230.083,
+          262.242
+        ],
+        [
+          1045.983,
+          261.795
+        ],
+        [
+          986.528,
+          311.062
+        ],
+        [
+          944.048,
+          310.592
+        ],
+        [
+          947.695,
+          608.602
+        ],
+        [
+          946.712,
+          614.664
+        ],
+        [
+          1125.727,
+          614.664
+        ]
+      ],
+      "sourceShapeIds": [
+        52,
+        55,
+        133,
+        137,
+        141,
+        2
+      ],
+      "color": "#00B0F0",
+      "length": 146.198,
+      "bidirectional": false,
+      "preferredPage": 3
+    },
+    {
+      "id": "out-v13-brt-i-e-g-este",
+      "family": "metro-brt",
+      "label": "Salida · Gibraltar este → BRT · este",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -12.56695,
+          18.72,
+          -6.00804
+        ],
+        [
+          -21.71059,
+          18.72,
+          -1.73538
+        ],
+        [
+          -26.67777,
+          18.72,
+          -12.77702
+        ],
+        [
+          -51.51184,
+          18.72,
+          -0.80244
+        ],
+        [
+          -56.2446,
+          18.72,
+          9.72604
+        ],
+        [
+          -61.99933,
+          18.72,
+          12.43965
+        ],
+        [
+          -44.32683,
+          18.72,
+          52.02869
+        ],
+        [
+          -44.03789,
+          18.72,
+          52.89397
+        ],
+        [
+          -19.81764,
+          18.72,
+          41.14892
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1294.578,
+          343.726
+        ],
+        [
+          1227.197,
+          342.746
+        ],
+        [
+          1230.083,
+          262.242
+        ],
+        [
+          1045.983,
+          261.795
+        ],
+        [
+          986.528,
+          311.062
+        ],
+        [
+          944.048,
+          310.592
+        ],
+        [
+          947.695,
+          608.602
+        ],
+        [
+          946.712,
+          614.664
+        ],
+        [
+          1125.727,
+          614.664
+        ]
+      ],
+      "sourceShapeIds": [
+        52,
+        55,
+        133,
+        137,
+        141,
+        2
+      ],
+      "color": "#00B0F0",
+      "length": 138.861,
+      "bidirectional": false,
+      "preferredPage": 3
+    },
+    {
+      "id": "out-v13-brt-i-e-c1",
+      "family": "metro-brt",
+      "label": "Salida · Calle 72-1 → BRT · este",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -20.73183,
+          18.72,
+          104.45311
+        ],
+        [
+          -28.82673,
+          18.72,
+          109.7437
+        ],
+        [
+          -35.96784,
+          18.72,
+          100.41346
+        ],
+        [
+          -19.6714,
+          18.72,
+          89.86317
+        ],
+        [
+          -44.72781,
+          18.72,
+          51.58459
+        ],
+        [
+          -44.03789,
+          18.72,
+          52.89397
+        ],
+        [
+          -19.81764,
+          18.72,
+          41.14892
+        ]
+      ],
+      "sourcePoints": [
+        [
+          923.983,
+          993.677
+        ],
+        [
+          859.918,
+          1001.908
+        ],
+        [
+          846.82,
+          924.773
+        ],
+        [
+          975.482,
+          908.809
+        ],
+        [
+          946.712,
+          604.752
+        ],
+        [
+          946.712,
+          614.664
+        ],
+        [
+          1125.727,
+          614.664
+        ]
+      ],
+      "sourceShapeIds": [
+        52,
+        53,
+        98,
+        99
+      ],
+      "color": "#00B0F0",
+      "length": 114.981,
+      "bidirectional": false,
+      "preferredPage": 3
+    },
+    {
+      "id": "out-v13-brt-p-g-oeste",
+      "family": "metro-brt",
+      "label": "Salida · andén → Gibraltar oeste · escalera",
+      "level": "P",
+      "slide": 15,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -46.52475,
+          27.46,
+          44.3443
+        ],
+        [
+          -59.59471,
+          27.46,
+          15.30322
+        ],
+        [
+          -51.19874,
+          27.46,
+          11.22883
+        ]
+      ],
+      "sourcePoints": [
+        [
+          954.016,
+          548.445
+        ],
+        [
+          954.016,
+          330.616
+        ],
+        [
+          1018.234,
+          330.616
+        ]
+      ],
+      "sourceShapeIds": [
+        19,
+        17
+      ],
+      "color": "#00B0F0",
+      "length": 41.179,
+      "bidirectional": false,
+      "preferredPage": 5
+    },
+    {
+      "id": "out-v13-brt-p-g-este",
+      "family": "metro-brt",
+      "label": "Salida · andén → Gibraltar este · escalera",
+      "level": "P",
+      "slide": 15,
+      "sourceRevision": 13,
+      "points": [
+        [
+          33.62136,
+          27.46,
+          6.23391
+        ],
+        [
+          10.83543,
+          27.46,
+          -16.40947
+        ],
+        [
+          1.04012,
+          27.46,
+          -11.65601
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1562.596,
+          553.172
+        ],
+        [
+          1485.151,
+          345.713
+        ],
+        [
+          1410.23,
+          345.713
+        ]
+      ],
+      "sourceShapeIds": [
+        15,
+        13
+      ],
+      "color": "#00B0F0",
+      "length": 43.011,
+      "bidirectional": false,
+      "preferredPage": 5
+    },
+    {
+      "id": "out-v13-brt-p-c1",
+      "family": "metro-brt",
+      "label": "Salida · andén → Calle 72-1 · escalera",
+      "level": "P",
+      "slide": 15,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -40.04615,
+          27.46,
+          55.67039
+        ],
+        [
+          -20.08684,
+          27.46,
+          86.55234
+        ],
+        [
+          -10.0681,
+          27.46,
+          84.91304
+        ],
+        [
+          -2.65295,
+          27.46,
+          95.32111
+        ],
+        [
+          -10.96605,
+          27.46,
+          100.49366
+        ]
+      ],
+      "sourcePoints": [
+        [
+          958.575,
+          638.231
+        ],
+        [
+          985.049,
+          889.95
+        ],
+        [
+          1051.444,
+          909.932
+        ],
+        [
+          1064.579,
+          996.84
+        ],
+        [
+          997.676,
+          1003.918
+        ]
+      ],
+      "sourceShapeIds": [
+        45,
+        47,
+        49,
+        43
+      ],
+      "color": "#00B0F0",
+      "length": 69.493,
+      "bidirectional": false,
+      "preferredPage": 5
+    },
+    {
+      "id": "g-a-s",
+      "family": "r1",
+      "label": "Acceso Gibraltar · sur → escalera oeste",
+      "level": "A",
+      "slide": 18,
+      "points": [
+        [
+          -71.22457,
+          9.87,
+          33.27957
+        ],
+        [
+          -80.83822,
+          9.87,
+          13.95549
+        ],
+        [
+          -73.55221,
+          9.87,
+          10.41872
+        ],
+        [
+          -73.57517,
+          9.87,
+          10.37257
+        ]
+      ],
+      "sourcePoints": [
+        [
+          232.616,
+          431.918
+        ],
+        [
+          232.616,
+          293.745
+        ],
+        [
+          283.16,
+          293.745
+        ],
+        [
+          283.16,
+          293.415
+        ]
+      ],
+      "sourceShapeIds": [
+        23
+      ],
+      "length": 29.734,
+      "bidirectional": false,
+      "preferredPage": 1,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "g-a-w",
+      "family": "r1",
+      "label": "Acceso Gibraltar · occidente → escalera oeste",
+      "level": "A",
+      "slide": 18,
+      "points": [
+        [
+          -90.45616,
+          9.87,
+          20.93297
+        ],
+        [
+          -80.05908,
+          9.87,
+          15.88602
+        ],
+        [
+          -80.83822,
+          9.87,
+          13.95549
+        ],
+        [
+          -73.57517,
+          9.87,
+          10.37257
+        ]
+      ],
+      "sourcePoints": [
+        [
+          159.477,
+          307.042
+        ],
+        [
+          231.603,
+          307.042
+        ],
+        [
+          232.616,
+          293.745
+        ],
+        [
+          283.16,
+          293.415
+        ]
+      ],
+      "sourceShapeIds": [
+        180
+      ],
+      "length": 21.738,
+      "bidirectional": false,
+      "preferredPage": 1,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "g-a-e",
+      "family": "r1",
+      "label": "Acceso Gibraltar · oriente → escalera este",
+      "level": "A",
+      "slide": 18,
+      "points": [
+        [
+          19.10701,
+          9.87,
+          -15.36129
+        ],
+        [
+          3.75732,
+          9.87,
+          -22.37383
+        ]
+      ],
+      "sourcePoints": [
+        [
+          872.58,
+          404.318
+        ],
+        [
+          806.304,
+          321.016
+        ]
+      ],
+      "sourceShapeIds": [
+        181
+      ],
+      "length": 16.876,
+      "bidirectional": false,
+      "preferredPage": 1,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "g-i-w-oeste",
+      "family": "r1",
+      "label": "Intermedio Gibraltar · escalera oeste → oeste",
+      "level": "I",
+      "slide": 19,
+      "points": [
+        [
+          -70.41821,
+          18.72,
+          6.85849
+        ],
+        [
+          -27.43956,
+          18.72,
+          -13.99069
+        ],
+        [
+          -21.38311,
+          18.72,
+          -1.71294
+        ],
+        [
+          -21.39464,
+          18.72,
+          -1.70735
+        ],
+        [
+          -37.38925,
+          18.72,
+          5.98201
+        ]
+      ],
+      "sourcePoints": [
+        [
+          313.764,
+          247.836
+        ],
+        [
+          619.282,
+          247.836
+        ],
+        [
+          619.282,
+          335.139
+        ],
+        [
+          619.2,
+          335.139
+        ],
+        [
+          505.698,
+          334.739
+        ]
+      ],
+      "sourceShapeIds": [
+        12
+      ],
+      "length": 79.219,
+      "bidirectional": false,
+      "preferredPage": 3,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "g-i-e-oeste",
+      "family": "r1",
+      "label": "Intermedio Gibraltar · escalera este → oeste",
+      "level": "I",
+      "slide": 19,
+      "points": [
+        [
+          -4.8727,
+          18.72,
+          -28.12345
+        ],
+        [
+          -13.95416,
+          18.72,
+          -32.28575
+        ],
+        [
+          -21.48649,
+          18.72,
+          -16.87856
+        ],
+        [
+          -27.39595,
+          18.72,
+          -13.87329
+        ],
+        [
+          -21.41086,
+          18.72,
+          -1.76919
+        ],
+        [
+          -37.38925,
+          18.72,
+          5.98201
+        ]
+      ],
+      "sourcePoints": [
+        [
+          788.714,
+          229.559
+        ],
+        [
+          748.4,
+          180.4
+        ],
+        [
+          661.6,
+          247.836
+        ],
+        [
+          619.2,
+          248.631
+        ],
+        [
+          619.282,
+          334.739
+        ],
+        [
+          505.698,
+          334.739
+        ]
+      ],
+      "sourceShapeIds": [
+        176,
+        178,
+        182
+      ],
+      "length": 65.032,
+      "bidirectional": false,
+      "preferredPage": 3,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "g-i-w-este",
+      "family": "r1",
+      "label": "Intermedio Gibraltar · escalera oeste → este",
+      "level": "I",
+      "slide": 19,
+      "points": [
+        [
+          -70.41821,
+          18.72,
+          6.85849
+        ],
+        [
+          -27.43956,
+          18.72,
+          -13.99069
+        ],
+        [
+          -21.38311,
+          18.72,
+          -1.71294
+        ],
+        [
+          -21.39464,
+          18.72,
+          -1.70735
+        ],
+        [
+          -12.62347,
+          18.72,
+          -6.032
+        ]
+      ],
+      "sourcePoints": [
+        [
+          313.764,
+          247.836
+        ],
+        [
+          619.282,
+          247.836
+        ],
+        [
+          619.282,
+          335.139
+        ],
+        [
+          619.2,
+          335.139
+        ],
+        [
+          681.748,
+          334.739
+        ]
+      ],
+      "sourceShapeIds": [
+        12
+      ],
+      "length": 71.251,
+      "bidirectional": false,
+      "preferredPage": 3,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "g-i-e-este",
+      "family": "r1",
+      "label": "Intermedio Gibraltar · escalera este → este",
+      "level": "I",
+      "slide": 19,
+      "points": [
+        [
+          -4.8727,
+          18.72,
+          -28.12345
+        ],
+        [
+          -13.95416,
+          18.72,
+          -32.28575
+        ],
+        [
+          -21.48649,
+          18.72,
+          -16.87856
+        ],
+        [
+          -27.39595,
+          18.72,
+          -13.87329
+        ],
+        [
+          -21.41086,
+          18.72,
+          -1.76919
+        ],
+        [
+          -12.62347,
+          18.72,
+          -6.032
+        ]
+      ],
+      "sourcePoints": [
+        [
+          788.714,
+          229.559
+        ],
+        [
+          748.4,
+          180.4
+        ],
+        [
+          661.6,
+          247.836
+        ],
+        [
+          619.2,
+          248.631
+        ],
+        [
+          619.282,
+          334.739
+        ],
+        [
+          681.748,
+          334.739
+        ]
+      ],
+      "sourceShapeIds": [
+        176,
+        178,
+        182
+      ],
+      "length": 57.039,
+      "bidirectional": false,
+      "preferredPage": 3,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "g-p-w",
+      "family": "r1",
+      "label": "Plataforma Gibraltar · oeste → andén",
+      "level": "P",
+      "slide": 20,
+      "points": [
+        [
+          -51.22187,
+          27.46,
+          11.24285
+        ],
+        [
+          -59.61736,
+          27.46,
+          15.31714
+        ],
+        [
+          -46.59161,
+          27.46,
+          44.28866
+        ]
+      ],
+      "sourcePoints": [
+        [
+          392.271,
+          356.825
+        ],
+        [
+          335.557,
+          356.825
+        ],
+        [
+          335.557,
+          549.2
+        ]
+      ],
+      "sourceShapeIds": [
+        19,
+        17
+      ],
+      "length": 41.097,
+      "bidirectional": false,
+      "preferredPage": 5,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "g-p-e",
+      "family": "r1",
+      "label": "Plataforma Gibraltar · este → andén",
+      "level": "P",
+      "slide": 20,
+      "points": [
+        [
+          1.01224,
+          27.46,
+          -11.64203
+        ],
+        [
+          10.80692,
+          27.46,
+          -16.39534
+        ],
+        [
+          33.57254,
+          27.46,
+          6.16923
+        ]
+      ],
+      "sourcePoints": [
+        [
+          738.462,
+          370.158
+        ],
+        [
+          804.628,
+          370.158
+        ],
+        [
+          873.023,
+          553.375
+        ]
+      ],
+      "sourceShapeIds": [
+        15,
+        13
+      ],
+      "length": 42.941,
+      "bidirectional": false,
+      "preferredPage": 5,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "c1-a",
+      "family": "r2",
+      "label": "Acceso Calle 72-1 → escalera",
+      "level": "A",
+      "slide": 21,
+      "points": [
+        [
+          -51.57909,
+          11.02,
+          85.3229
+        ],
+        [
+          -29.39254,
+          11.02,
+          112.11555
+        ],
+        [
+          -18.69843,
+          11.02,
+          104.81271
+        ]
+      ],
+      "sourcePoints": [
+        [
+          207.2,
+          766.887
+        ],
+        [
+          257.674,
+          980.0
+        ],
+        [
+          336.8,
+          968.0
+        ]
+      ],
+      "sourceShapeIds": [
+        173,
+        175
+      ],
+      "length": 47.736,
+      "bidirectional": false,
+      "preferredPage": 1,
+      "sourceRevision": 12,
+      "color": "#00B050"
+    },
+    {
+      "id": "c2-a-e",
+      "family": "r3",
+      "label": "Acceso Calle 72-2 · este → escalera",
+      "level": "A",
+      "slide": 24,
+      "points": [
+        [
+          108.01816,
+          12.12,
+          13.93544
+        ],
+        [
+          90.25976,
+          12.12,
+          22.54991
+        ],
+        [
+          83.83532,
+          12.12,
+          21.45125
+        ],
+        [
+          56.86239,
+          12.12,
+          34.57244
+        ],
+        [
+          59.84042,
+          12.12,
+          40.67072
+        ],
+        [
+          67.23713,
+          12.12,
+          36.93407
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1286.133,
+          801.118
+        ],
+        [
+          1164.267,
+          801.118
+        ],
+        [
+          1131.6,
+          777.2
+        ],
+        [
+          946.4,
+          777.409
+        ],
+        [
+          946.4,
+          820.21
+        ],
+        [
+          997.562,
+          819.367
+        ]
+      ],
+      "sourceShapeIds": [
+        183,
+        184,
+        186,
+        188,
+        191
+      ],
+      "length": 71.324,
+      "bidirectional": false,
+      "preferredPage": 1,
+      "sourceRevision": 12,
+      "color": "#7030A0"
+    },
+    {
+      "id": "c2-a-w",
+      "family": "r3",
+      "label": "Acceso Calle 72-2 · oeste → escalera",
+      "level": "A",
+      "slide": 24,
+      "points": [
+        [
+          47.9978,
+          12.12,
+          34.13618
+        ],
+        [
+          50.99037,
+          12.12,
+          40.26424
+        ],
+        [
+          57.86771,
+          12.12,
+          36.79239
+        ],
+        [
+          59.84042,
+          12.12,
+          40.67072
+        ],
+        [
+          67.23713,
+          12.12,
+          36.93407
+        ]
+      ],
+      "sourcePoints": [
+        [
+          898.4,
+          750.533
+        ],
+        [
+          898.4,
+          793.543
+        ],
+        [
+          945.963,
+          792.773
+        ],
+        [
+          946.4,
+          820.21
+        ],
+        [
+          997.562,
+          819.367
+        ]
+      ],
+      "sourceShapeIds": [
+        196,
+        197,
+        191
+      ],
+      "length": 27.162,
+      "bidirectional": false,
+      "preferredPage": 1,
+      "sourceRevision": 12,
+      "color": "#7030A0"
+    },
+    {
+      "id": "c2-i",
+      "family": "r3",
+      "label": "Intermedio Calle 72-2 → escalera",
+      "level": "I",
+      "slide": 25,
+      "points": [
+        [
+          76.37607,
+          18.72,
+          32.12278
+        ],
+        [
+          99.68022,
+          18.72,
+          20.82147
+        ],
+        [
+          96.33931,
+          18.72,
+          13.9105
+        ],
+        [
+          79.23888,
+          18.72,
+          23.03457
+        ],
+        [
+          52.52181,
+          18.72,
+          36.05072
+        ],
+        [
+          55.08131,
+          18.72,
+          40.90266
+        ],
+        [
+          68.4514,
+          18.72,
+          34.20395
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1089.407,
+          811.263
+        ],
+        [
+          1254.372,
+          811.263
+        ],
+        [
+          1256.09,
+          762.0
+        ],
+        [
+          1132.568,
+          766.8
+        ],
+        [
+          943.266,
+          767.145
+        ],
+        [
+          943.266,
+          802.33
+        ],
+        [
+          1038.549,
+          801.089
+        ]
+      ],
+      "sourceShapeIds": [
+        117,
+        119,
+        120,
+        122,
+        123,
+        124
+      ],
+      "length": 103.117,
+      "bidirectional": false,
+      "preferredPage": 3,
+      "sourceRevision": 12,
+      "color": "#7030A0"
+    },
+    {
+      "id": "c2-p",
+      "family": "r3",
+      "label": "Plataforma Calle 72-2 → andén",
+      "level": "P",
+      "slide": 26,
+      "points": [
+        [
+          70.87846,
+          27.46,
+          33.16511
+        ],
+        [
+          83.19111,
+          27.46,
+          27.19318
+        ],
+        [
+          80.85371,
+          27.46,
+          23.04204
+        ],
+        [
+          47.91822,
+          27.46,
+          39.2581
+        ],
+        [
+          46.57188,
+          27.46,
+          36.59973
+        ],
+        [
+          42.02012,
+          27.46,
+          15.80118
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1000.731,
+          800.122
+        ],
+        [
+          1083.6,
+          800.122
+        ],
+        [
+          1082.33,
+          771.2
+        ],
+        [
+          860.0,
+          772.522
+        ],
+        [
+          860.0,
+          754.4
+        ],
+        [
+          892.32,
+          628.495
+        ]
+      ],
+      "sourceShapeIds": [
+        55,
+        57,
+        59,
+        31,
+        33
+      ],
+      "length": 79.43,
+      "bidirectional": false,
+      "preferredPage": 5,
+      "sourceRevision": 12,
+      "color": "#7030A0"
+    },
+    {
+      "id": "change-p-s",
+      "family": "r4",
+      "label": "Plataforma · andén Calle 72 ↔ escalera",
+      "level": "P",
+      "slide": 33,
+      "points": [
+        [
+          -0.21479,
+          27.46,
+          37.36467
+        ],
+        [
+          -1.15561,
+          27.46,
+          35.54659
+        ],
+        [
+          -0.23098,
+          27.46,
+          37.37252
+        ],
+        [
+          40.60402,
+          27.46,
+          17.56711
+        ],
+        [
+          46.0092,
+          27.46,
+          39.28464
+        ],
+        [
+          82.0656,
+          27.46,
+          21.7969
+        ],
+        [
+          85.15452,
+          27.46,
+          28.2148
+        ],
+        [
+          71.68301,
+          27.46,
+          34.74862
+        ]
+      ],
+      "sourcePoints": [
+        [
+          605.097,
+          634.4
+        ],
+        [
+          604.988,
+          621.953
+        ],
+        [
+          604.988,
+          634.4
+        ],
+        [
+          879.816,
+          634.4
+        ],
+        [
+          849.6,
+          767.6
+        ],
+        [
+          1092.267,
+          767.6
+        ],
+        [
+          1091.397,
+          810.922
+        ],
+        [
+          1000.731,
+          810.922
+        ]
+      ],
+      "sourceShapeIds": [
+        76,
+        78,
+        80,
+        84,
+        88,
+        91
+      ],
+      "length": 134.027,
+      "bidirectional": true,
+      "preferredPage": 5,
+      "sourceRevision": 12,
+      "color": "#FF00FF"
+    },
+    {
+      "id": "change-p-n",
+      "family": "r4",
+      "label": "Plataforma · andén Gibraltar ↔ escalera",
+      "level": "P",
+      "slide": 33,
+      "points": [
+        [
+          -6.4387,
+          27.46,
+          25.07382
+        ],
+        [
+          -7.37952,
+          27.46,
+          23.25573
+        ],
+        [
+          34.84972,
+          27.46,
+          3.01768
+        ],
+        [
+          11.19388,
+          27.46,
+          -20.05916
+        ],
+        [
+          -0.38769,
+          27.46,
+          -14.45611
+        ]
+      ],
+      "sourcePoints": [
+        [
+          605.097,
+          550.616
+        ],
+        [
+          604.988,
+          538.169
+        ],
+        [
+          888.533,
+          539.502
+        ],
+        [
+          816.651,
+          351.345
+        ],
+        [
+          738.462,
+          351.251
+        ]
+      ],
+      "sourceShapeIds": [
+        96,
+        97,
+        99,
+        105
+      ],
+      "length": 94.789,
+      "bidirectional": true,
+      "preferredPage": 5,
+      "sourceRevision": 12,
+      "color": "#FF00FF"
+    },
+    {
+      "id": "change-i",
+      "family": "r4",
+      "label": "Intermedio · cambio de sentido entre edificios",
+      "level": "I",
+      "slide": 34,
+      "points": [
+        [
+          -13.37948,
+          18.72,
+          -8.09534
+        ],
+        [
+          -20.1369,
+          18.72,
+          -4.81769
+        ],
+        [
+          -22.45593,
+          18.72,
+          -9.65799
+        ],
+        [
+          -9.07145,
+          18.72,
+          -16.08594
+        ],
+        [
+          14.82592,
+          18.72,
+          -19.66843
+        ],
+        [
+          17.25589,
+          18.72,
+          -14.84708
+        ],
+        [
+          39.59046,
+          18.72,
+          10.8656
+        ],
+        [
+          45.85823,
+          18.72,
+          38.55809
+        ],
+        [
+          55.11182,
+          18.72,
+          42.60568
+        ],
+        [
+          69.26098,
+          18.72,
+          35.74383
+        ]
+      ],
+      "sourcePoints": [
+        [
+          683.224,
+          320.783
+        ],
+        [
+          635.192,
+          320.783
+        ],
+        [
+          635.584,
+          286.557
+        ],
+        [
+          730.54,
+          286.925
+        ],
+        [
+          877.746,
+          332.877
+        ],
+        [
+          878.044,
+          367.303
+        ],
+        [
+          945.179,
+          585.6
+        ],
+        [
+          898.234,
+          762.995
+        ],
+        [
+          938.382,
+          812.263
+        ],
+        [
+          1038.549,
+          812.263
+        ]
+      ],
+      "sourceShapeIds": [
+        220,
+        222,
+        218,
+        213,
+        211,
+        209,
+        131,
+        129,
+        127
+      ],
+      "length": 145.566,
+      "bidirectional": true,
+      "preferredPage": 3,
+      "sourceRevision": 12,
+      "color": "#FF00FF"
+    },
+    {
+      "id": "bike-a-ns",
+      "family": "r1",
+      "label": "Acceso · eje norte ↔ sur de biciusuarios",
+      "level": "A",
+      "slide": 18,
+      "points": [
+        [
+          -48.12325,
+          9.87,
+          -11.59731
+        ],
+        [
+          -33.86464,
+          9.87,
+          17.84946
+        ]
+      ],
+      "sourcePoints": [
+        [
+          486.452,
+          238.038
+        ],
+        [
+          484.267,
+          447.498
+        ]
+      ],
+      "sourceShapeIds": [
+        57
+      ],
+      "length": 32.717,
+      "bidirectional": true,
+      "preferredPage": 1,
+      "sourceRevision": 12,
+      "color": "#66FF66"
+    },
+    {
+      "id": "bike-a-w",
+      "family": "r1",
+      "label": "Acceso · entrada occidental ↔ eje biciusuarios",
+      "level": "A",
+      "slide": 18,
+      "points": [
+        [
+          -90.2916,
+          9.87,
+          20.56156
+        ],
+        [
+          -94.56018,
+          9.87,
+          11.16772
+        ],
+        [
+          -48.0097,
+          9.87,
+          -11.36907
+        ]
+      ],
+      "sourcePoints": [
+        [
+          161.429,
+          305.363
+        ],
+        [
+          163.691,
+          239.326
+        ],
+        [
+          486.452,
+          239.67
+        ]
+      ],
+      "sourceShapeIds": [
+        81,
+        78
+      ],
+      "length": 62.037,
+      "bidirectional": true,
+      "preferredPage": 1,
+      "sourceRevision": 12,
+      "color": "#66FF66"
+    },
+    {
+      "id": "bike-a-sw",
+      "family": "r1",
+      "label": "Acceso · entrada suroccidental ↔ eje biciusuarios",
+      "level": "A",
+      "slide": 18,
+      "points": [
+        [
+          -71.37059,
+          9.87,
+          33.35046
+        ],
+        [
+          -33.86464,
+          9.87,
+          17.84946
+        ]
+      ],
+      "sourcePoints": [
+        [
+          231.603,
+          431.918
+        ],
+        [
+          484.267,
+          447.498
+        ]
+      ],
+      "sourceShapeIds": [
+        69
+      ],
+      "length": 40.583,
+      "bidirectional": true,
+      "preferredPage": 1,
+      "sourceRevision": 12,
+      "color": "#66FF66"
+    },
+    {
+      "id": "bike-a-se",
+      "family": "r1",
+      "label": "Acceso · entrada suroriental ↔ eje biciusuarios",
+      "level": "A",
+      "slide": 18,
+      "points": [
+        [
+          19.2663,
+          9.87,
+          -15.43861
+        ],
+        [
+          16.90501,
+          9.87,
+          -9.65426
+        ],
+        [
+          -33.89462,
+          9.87,
+          17.78918
+        ]
+      ],
+      "sourcePoints": [
+        [
+          873.685,
+          404.318
+        ],
+        [
+          844.411,
+          431.031
+        ],
+        [
+          484.267,
+          447.067
+        ]
+      ],
+      "sourceShapeIds": [
+        73,
+        70
+      ],
+      "length": 63.986,
+      "bidirectional": true,
+      "preferredPage": 1,
+      "sourceRevision": 12,
+      "color": "#66FF66"
+    },
+    {
+      "id": "bike-a-ramp-upper",
+      "family": "r1",
+      "label": "Acceso · rampa de biciusuarios · tramo superior",
+      "level": "A",
+      "slide": 18,
+      "points": [
+        [
+          -13.0054,
+          9.87,
+          -8.51009
+        ],
+        [
+          -40.37001,
+          9.87,
+          4.77322
+        ]
+      ],
+      "sourcePoints": [
+        [
+          674.099,
+          353.999
+        ],
+        [
+          484.267,
+          353.999
+        ]
+      ],
+      "sourceShapeIds": [
+        44
+      ],
+      "length": 30.418,
+      "bidirectional": false,
+      "preferredPage": 1,
+      "sourceRevision": 12,
+      "color": "#66FF66"
+    },
+    {
+      "id": "bike-a-ramp-lower",
+      "family": "r1",
+      "label": "Acceso · rampa de biciusuarios · retorno",
+      "level": "A",
+      "slide": 18,
+      "points": [
+        [
+          -13.14932,
+          9.87,
+          -8.5116
+        ],
+        [
+          -11.26845,
+          9.87,
+          -4.73091
+        ],
+        [
+          -31.70988,
+          9.87,
+          5.19176
+        ]
+      ],
+      "sourcePoints": [
+        [
+          673.299,
+          353.588
+        ],
+        [
+          673.299,
+          380.621
+        ],
+        [
+          531.494,
+          380.621
+        ]
+      ],
+      "sourceShapeIds": [
+        38,
+        31
+      ],
+      "length": 26.945,
+      "bidirectional": false,
+      "preferredPage": 1,
+      "sourceRevision": 12,
+      "color": "#66FF66"
+    },
+    {
+      "id": "bike-b-spur",
+      "family": "r1",
+      "label": "Sótano · circulación junto a rampa",
+      "level": "B",
+      "slide": 17,
+      "points": [
+        [
+          -16.76579,
+          3.72,
+          -2.01806
+        ],
+        [
+          -43.75082,
+          3.72,
+          10.96737
+        ]
+      ],
+      "sourcePoints": [
+        [
+          645.12,
+          562.35
+        ],
+        [
+          435.2,
+          562.35
+        ]
+      ],
+      "sourceShapeIds": [
+        23
+      ],
+      "length": 29.947,
+      "bidirectional": true,
+      "preferredPage": 7,
+      "sourceRevision": 12,
+      "color": "#66FF66"
+    },
+    {
+      "id": "bike-b-parking",
+      "family": "r1",
+      "label": "Sótano · rampa → cicloparqueadero",
+      "level": "B",
+      "slide": 17,
+      "points": [
+        [
+          -43.57441,
+          3.72,
+          10.74064
+        ],
+        [
+          -47.73157,
+          3.72,
+          2.33091
+        ],
+        [
+          -5.29482,
+          3.72,
+          -18.19727
+        ],
+        [
+          -3.24928,
+          3.72,
+          -22.81513
+        ],
+        [
+          -11.22458,
+          3.72,
+          -26.12105
+        ]
+      ],
+      "sourcePoints": [
+        [
+          437.013,
+          561.46
+        ],
+        [
+          437.013,
+          496.14
+        ],
+        [
+          767.467,
+          495.467
+        ],
+        [
+          794.667,
+          472.668
+        ],
+        [
+          754.818,
+          427.844
+        ]
+      ],
+      "sourceShapeIds": [
+        27,
+        29,
+        30,
+        33
+      ],
+      "length": 70.206,
+      "bidirectional": false,
+      "preferredPage": 7,
+      "sourceRevision": 12,
+      "color": "#66FF66"
+    },
+    {
+      "id": "change-p-s-reverse",
+      "family": "r4",
+      "label": "Plataforma · andén Calle 72 ↔ escalera",
+      "level": "P",
+      "slide": 33,
+      "points": [
+        [
+          71.68301,
+          27.46,
+          34.74862
+        ],
+        [
+          85.15452,
+          27.46,
+          28.2148
+        ],
+        [
+          82.0656,
+          27.46,
+          21.7969
+        ],
+        [
+          46.0092,
+          27.46,
+          39.28464
+        ],
+        [
+          40.60402,
+          27.46,
+          17.56711
+        ],
+        [
+          -0.23098,
+          27.46,
+          37.37252
+        ],
+        [
+          -1.15561,
+          27.46,
+          35.54659
+        ],
+        [
+          -0.21479,
+          27.46,
+          37.36467
+        ]
+      ],
+      "sourcePoints": [
+        [
+          1000.731,
+          810.922
+        ],
+        [
+          1091.397,
+          810.922
+        ],
+        [
+          1092.267,
+          767.6
+        ],
+        [
+          849.6,
+          767.6
+        ],
+        [
+          879.816,
+          634.4
+        ],
+        [
+          604.988,
+          634.4
+        ],
+        [
+          604.988,
+          621.953
+        ],
+        [
+          605.097,
+          634.4
+        ]
+      ],
+      "sourceShapeIds": [
+        76,
+        78,
+        80,
+        84,
+        88,
+        91
+      ],
+      "length": 134.027,
+      "bidirectional": true,
+      "preferredPage": 5,
+      "sourceRevision": 12,
+      "color": "#FF00FF"
+    },
+    {
+      "id": "c1-i",
+      "family": "r2",
+      "label": "Intermedio Calle 72-1 → escalera",
+      "level": "I",
+      "slide": 13,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -11.08432,
+          18.72,
+          99.04136
+        ],
+        [
+          -0.92947,
+          18.72,
+          92.35961
+        ],
+        [
+          -8.4919,
+          18.72,
+          83.13566
+        ],
+        [
+          -35.96784,
+          18.72,
+          100.41346
+        ],
+        [
+          -28.82673,
+          18.72,
+          109.7437
+        ],
+        [
+          -20.73183,
+          18.72,
+          104.45311
+        ]
+      ],
+      "sourcePoints": [
+        [
+          997.564,
+          989.255
+        ],
+        [
+          1078.071,
+          978.659
+        ],
+        [
+          1062.163,
+          900.933
+        ],
+        [
+          846.82,
+          924.773
+        ],
+        [
+          859.918,
+          1001.908
+        ],
+        [
+          923.983,
+          993.677
+        ]
+      ],
+      "sourceShapeIds": [
+        94,
+        95,
+        96,
+        98,
+        99
+      ],
+      "color": "#00B050",
+      "length": 77.96,
+      "bidirectional": true,
+      "preferredPage": 3
+    },
+    {
+      "id": "c1-p",
+      "family": "r2",
+      "label": "Plataforma Calle 72-1 → andén",
+      "level": "P",
+      "slide": 15,
+      "sourceRevision": 13,
+      "points": [
+        [
+          -10.96605,
+          27.46,
+          100.49366
+        ],
+        [
+          -2.65295,
+          27.46,
+          95.32111
+        ],
+        [
+          -10.0681,
+          27.46,
+          84.91304
+        ],
+        [
+          -20.08684,
+          27.46,
+          86.55234
+        ],
+        [
+          -40.04615,
+          27.46,
+          55.67039
+        ]
+      ],
+      "sourcePoints": [
+        [
+          997.676,
+          1003.918
+        ],
+        [
+          1064.579,
+          996.84
+        ],
+        [
+          1051.444,
+          909.932
+        ],
+        [
+          985.049,
+          889.95
+        ],
+        [
+          958.575,
+          638.231
+        ]
+      ],
+      "sourceShapeIds": [
+        45,
+        47,
+        49,
+        43
+      ],
+      "color": "#00B050",
+      "length": 69.493,
+      "bidirectional": true,
+      "preferredPage": 5
+    },
+    {
+      "id": "video-bike-return",
+      "family": "r1",
+      "label": "Retorno desde cicloparqueadero",
+      "level": "B",
+      "slide": 17,
+      "points": [
+        [
+          -11.22458,
+          3.72,
+          -26.12105
+        ],
+        [
+          -3.24928,
+          3.72,
+          -22.81513
+        ],
+        [
+          -5.29482,
+          3.72,
+          -18.19727
+        ],
+        [
+          -47.73157,
+          3.72,
+          2.33091
+        ],
+        [
+          -43.57441,
+          3.72,
+          10.74064
+        ]
+      ],
+      "sourcePoints": [
+        [
+          754.818,
+          427.844
+        ],
+        [
+          794.667,
+          472.668
+        ],
+        [
+          767.467,
+          495.467
+        ],
+        [
+          437.013,
+          496.14
+        ],
+        [
+          437.013,
+          561.46
+        ]
+      ],
+      "sourceShapeIds": [
+        27,
+        29,
+        30,
+        33
+      ],
+      "length": 70.206,
+      "bidirectional": false,
+      "preferredPage": 7,
+      "sourceRevision": 12,
+      "color": "#66FF66"
+    }
+  ],
+  "links": [
+    {
+      "id": "link-v13-pmr-a-v13-pmr-i",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -32.59966,
+          11.02,
+          42.35422
+        ],
+        [
+          -38.67235,
+          18.72,
+          46.0351
+        ]
+      ],
+      "color": "#E97132",
+      "length": 10.475,
+      "schematic": true
+    },
+    {
+      "id": "link-v13-pmr-i-v13-pmr-p",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -39.51708,
+          18.72,
+          99.48688
+        ],
+        [
+          -37.97754,
+          27.46,
+          98.85563
+        ]
+      ],
+      "color": "#E97132",
+      "length": 8.897,
+      "schematic": true
+    },
+    {
+      "id": "link-v13-brt-a-wn-v13-brt-i-wn-g-oeste",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -65.02604,
+          11.02,
+          57.6909
+        ],
+        [
+          -70.20565,
+          18.72,
+          60.18853
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 9.61,
+      "schematic": true
+    },
+    {
+      "id": "link-v13-brt-i-wn-g-oeste-v13-brt-p-g-oeste",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -37.32709,
+          18.72,
+          6.00536
+        ],
+        [
+          -51.19874,
+          27.46,
+          11.22883
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 17.207,
+      "schematic": true
+    },
+    {
+      "id": "link-v13-brt-a-wn-v13-brt-i-wn-g-este",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -65.02604,
+          11.02,
+          57.6909
+        ],
+        [
+          -70.20565,
+          18.72,
+          60.18853
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 9.61,
+      "schematic": true
+    },
+    {
+      "id": "link-v13-brt-i-wn-g-este-v13-brt-p-g-este",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -12.56695,
+          18.72,
+          -6.00804
+        ],
+        [
+          1.04012,
+          27.46,
+          -11.65601
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 17.13,
+      "schematic": true
+    },
+    {
+      "id": "link-v13-brt-a-wn-v13-brt-i-wn-c1",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -65.02604,
+          11.02,
+          57.6909
+        ],
+        [
+          -70.20565,
+          18.72,
+          60.18853
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 9.61,
+      "schematic": true
+    },
+    {
+      "id": "link-v13-brt-i-wn-c1-v13-brt-p-c1",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -20.73183,
+          18.72,
+          104.45311
+        ],
+        [
+          -10.96605,
+          27.46,
+          100.49366
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 13.691,
+      "schematic": true
+    },
+    {
+      "id": "link-v13-brt-a-ws-v13-brt-i-ws-g-oeste",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -63.19208,
+          11.02,
+          61.45194
+        ],
+        [
+          -68.44714,
+          18.72,
+          64.73069
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 9.882,
+      "schematic": true
+    },
+    {
+      "id": "link-v13-brt-i-ws-g-oeste-v13-brt-p-g-oeste",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -37.32709,
+          18.72,
+          6.00536
+        ],
+        [
+          -51.19874,
+          27.46,
+          11.22883
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 17.207,
+      "schematic": true
+    },
+    {
+      "id": "link-v13-brt-a-ws-v13-brt-i-ws-g-este",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -63.19208,
+          11.02,
+          61.45194
+        ],
+        [
+          -68.44714,
+          18.72,
+          64.73069
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 9.882,
+      "schematic": true
+    },
+    {
+      "id": "link-v13-brt-i-ws-g-este-v13-brt-p-g-este",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -12.56695,
+          18.72,
+          -6.00804
+        ],
+        [
+          1.04012,
+          27.46,
+          -11.65601
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 17.13,
+      "schematic": true
+    },
+    {
+      "id": "link-v13-brt-a-ws-v13-brt-i-ws-c1",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -63.19208,
+          11.02,
+          61.45194
+        ],
+        [
+          -68.44714,
+          18.72,
+          64.73069
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 9.882,
+      "schematic": true
+    },
+    {
+      "id": "link-v13-brt-i-ws-c1-v13-brt-p-c1",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -20.73183,
+          18.72,
+          104.45311
+        ],
+        [
+          -10.96605,
+          27.46,
+          100.49366
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 13.691,
+      "schematic": true
+    },
+    {
+      "id": "link-v13-brt-a-e-v13-brt-i-e-g-oeste",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -23.30427,
+          11.02,
+          43.34096
+        ],
+        [
+          -19.81764,
+          18.72,
+          41.14892
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 8.732,
+      "schematic": true
+    },
+    {
+      "id": "link-v13-brt-i-e-g-oeste-v13-brt-p-g-oeste",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -37.32709,
+          18.72,
+          6.00536
+        ],
+        [
+          -51.19874,
+          27.46,
+          11.22883
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 17.207,
+      "schematic": true
+    },
+    {
+      "id": "link-v13-brt-a-e-v13-brt-i-e-g-este",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -23.30427,
+          11.02,
+          43.34096
+        ],
+        [
+          -19.81764,
+          18.72,
+          41.14892
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 8.732,
+      "schematic": true
+    },
+    {
+      "id": "link-v13-brt-i-e-g-este-v13-brt-p-g-este",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -12.56695,
+          18.72,
+          -6.00804
+        ],
+        [
+          1.04012,
+          27.46,
+          -11.65601
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 17.13,
+      "schematic": true
+    },
+    {
+      "id": "link-v13-brt-a-e-v13-brt-i-e-c1",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -23.30427,
+          11.02,
+          43.34096
+        ],
+        [
+          -19.81764,
+          18.72,
+          41.14892
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 8.732,
+      "schematic": true
+    },
+    {
+      "id": "link-v13-brt-i-e-c1-v13-brt-p-c1",
+      "family": "brt",
+      "label": "Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -20.73183,
+          18.72,
+          104.45311
+        ],
+        [
+          -10.96605,
+          27.46,
+          100.49366
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 13.691,
+      "schematic": true
+    },
+    {
+      "id": "out-link-v13-pmr-a-v13-pmr-i",
+      "family": "metro-brt",
+      "label": "Salida · Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "I",
+      "toLevel": "A",
+      "points": [
+        [
+          -38.67235,
+          18.72,
+          46.0351
+        ],
+        [
+          -32.59966,
+          11.02,
+          42.35422
+        ]
+      ],
+      "color": "#E97132",
+      "length": 10.475,
+      "schematic": true,
+      "bidirectional": false
+    },
+    {
+      "id": "out-link-v13-pmr-i-v13-pmr-p",
+      "family": "metro-brt",
+      "label": "Salida · Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "P",
+      "toLevel": "I",
+      "points": [
+        [
+          -37.97754,
+          27.46,
+          98.85563
+        ],
+        [
+          -39.51708,
+          18.72,
+          99.48688
+        ]
+      ],
+      "color": "#E97132",
+      "length": 8.897,
+      "schematic": true,
+      "bidirectional": false
+    },
+    {
+      "id": "out-link-v13-brt-a-wn-v13-brt-i-wn-g-oeste",
+      "family": "metro-brt",
+      "label": "Salida · Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "I",
+      "toLevel": "A",
+      "points": [
+        [
+          -70.20565,
+          18.72,
+          60.18853
+        ],
+        [
+          -65.02604,
+          11.02,
+          57.6909
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 9.61,
+      "schematic": true,
+      "bidirectional": false
+    },
+    {
+      "id": "out-link-v13-brt-i-wn-g-oeste-v13-brt-p-g-oeste",
+      "family": "metro-brt",
+      "label": "Salida · Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "P",
+      "toLevel": "I",
+      "points": [
+        [
+          -51.19874,
+          27.46,
+          11.22883
+        ],
+        [
+          -37.32709,
+          18.72,
+          6.00536
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 17.207,
+      "schematic": true,
+      "bidirectional": false
+    },
+    {
+      "id": "out-link-v13-brt-a-wn-v13-brt-i-wn-g-este",
+      "family": "metro-brt",
+      "label": "Salida · Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "I",
+      "toLevel": "A",
+      "points": [
+        [
+          -70.20565,
+          18.72,
+          60.18853
+        ],
+        [
+          -65.02604,
+          11.02,
+          57.6909
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 9.61,
+      "schematic": true,
+      "bidirectional": false
+    },
+    {
+      "id": "out-link-v13-brt-i-wn-g-este-v13-brt-p-g-este",
+      "family": "metro-brt",
+      "label": "Salida · Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "P",
+      "toLevel": "I",
+      "points": [
+        [
+          1.04012,
+          27.46,
+          -11.65601
+        ],
+        [
+          -12.56695,
+          18.72,
+          -6.00804
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 17.13,
+      "schematic": true,
+      "bidirectional": false
+    },
+    {
+      "id": "out-link-v13-brt-a-wn-v13-brt-i-wn-c1",
+      "family": "metro-brt",
+      "label": "Salida · Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "I",
+      "toLevel": "A",
+      "points": [
+        [
+          -70.20565,
+          18.72,
+          60.18853
+        ],
+        [
+          -65.02604,
+          11.02,
+          57.6909
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 9.61,
+      "schematic": true,
+      "bidirectional": false
+    },
+    {
+      "id": "out-link-v13-brt-i-wn-c1-v13-brt-p-c1",
+      "family": "metro-brt",
+      "label": "Salida · Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "P",
+      "toLevel": "I",
+      "points": [
+        [
+          -10.96605,
+          27.46,
+          100.49366
+        ],
+        [
+          -20.73183,
+          18.72,
+          104.45311
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 13.691,
+      "schematic": true,
+      "bidirectional": false
+    },
+    {
+      "id": "out-link-v13-brt-a-ws-v13-brt-i-ws-g-oeste",
+      "family": "metro-brt",
+      "label": "Salida · Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "I",
+      "toLevel": "A",
+      "points": [
+        [
+          -68.44714,
+          18.72,
+          64.73069
+        ],
+        [
+          -63.19208,
+          11.02,
+          61.45194
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 9.882,
+      "schematic": true,
+      "bidirectional": false
+    },
+    {
+      "id": "out-link-v13-brt-i-ws-g-oeste-v13-brt-p-g-oeste",
+      "family": "metro-brt",
+      "label": "Salida · Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "P",
+      "toLevel": "I",
+      "points": [
+        [
+          -51.19874,
+          27.46,
+          11.22883
+        ],
+        [
+          -37.32709,
+          18.72,
+          6.00536
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 17.207,
+      "schematic": true,
+      "bidirectional": false
+    },
+    {
+      "id": "out-link-v13-brt-a-ws-v13-brt-i-ws-g-este",
+      "family": "metro-brt",
+      "label": "Salida · Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "I",
+      "toLevel": "A",
+      "points": [
+        [
+          -68.44714,
+          18.72,
+          64.73069
+        ],
+        [
+          -63.19208,
+          11.02,
+          61.45194
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 9.882,
+      "schematic": true,
+      "bidirectional": false
+    },
+    {
+      "id": "out-link-v13-brt-i-ws-g-este-v13-brt-p-g-este",
+      "family": "metro-brt",
+      "label": "Salida · Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "P",
+      "toLevel": "I",
+      "points": [
+        [
+          1.04012,
+          27.46,
+          -11.65601
+        ],
+        [
+          -12.56695,
+          18.72,
+          -6.00804
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 17.13,
+      "schematic": true,
+      "bidirectional": false
+    },
+    {
+      "id": "out-link-v13-brt-a-ws-v13-brt-i-ws-c1",
+      "family": "metro-brt",
+      "label": "Salida · Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "I",
+      "toLevel": "A",
+      "points": [
+        [
+          -68.44714,
+          18.72,
+          64.73069
+        ],
+        [
+          -63.19208,
+          11.02,
+          61.45194
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 9.882,
+      "schematic": true,
+      "bidirectional": false
+    },
+    {
+      "id": "out-link-v13-brt-i-ws-c1-v13-brt-p-c1",
+      "family": "metro-brt",
+      "label": "Salida · Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "P",
+      "toLevel": "I",
+      "points": [
+        [
+          -10.96605,
+          27.46,
+          100.49366
+        ],
+        [
+          -20.73183,
+          18.72,
+          104.45311
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 13.691,
+      "schematic": true,
+      "bidirectional": false
+    },
+    {
+      "id": "out-link-v13-brt-a-e-v13-brt-i-e-g-oeste",
+      "family": "metro-brt",
+      "label": "Salida · Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "I",
+      "toLevel": "A",
+      "points": [
+        [
+          -19.81764,
+          18.72,
+          41.14892
+        ],
+        [
+          -23.30427,
+          11.02,
+          43.34096
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 8.732,
+      "schematic": true,
+      "bidirectional": false
+    },
+    {
+      "id": "out-link-v13-brt-i-e-g-oeste-v13-brt-p-g-oeste",
+      "family": "metro-brt",
+      "label": "Salida · Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "P",
+      "toLevel": "I",
+      "points": [
+        [
+          -51.19874,
+          27.46,
+          11.22883
+        ],
+        [
+          -37.32709,
+          18.72,
+          6.00536
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 17.207,
+      "schematic": true,
+      "bidirectional": false
+    },
+    {
+      "id": "out-link-v13-brt-a-e-v13-brt-i-e-g-este",
+      "family": "metro-brt",
+      "label": "Salida · Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "I",
+      "toLevel": "A",
+      "points": [
+        [
+          -19.81764,
+          18.72,
+          41.14892
+        ],
+        [
+          -23.30427,
+          11.02,
+          43.34096
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 8.732,
+      "schematic": true,
+      "bidirectional": false
+    },
+    {
+      "id": "out-link-v13-brt-i-e-g-este-v13-brt-p-g-este",
+      "family": "metro-brt",
+      "label": "Salida · Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "P",
+      "toLevel": "I",
+      "points": [
+        [
+          1.04012,
+          27.46,
+          -11.65601
+        ],
+        [
+          -12.56695,
+          18.72,
+          -6.00804
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 17.13,
+      "schematic": true,
+      "bidirectional": false
+    },
+    {
+      "id": "out-link-v13-brt-a-e-v13-brt-i-e-c1",
+      "family": "metro-brt",
+      "label": "Salida · Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "I",
+      "toLevel": "A",
+      "points": [
+        [
+          -19.81764,
+          18.72,
+          41.14892
+        ],
+        [
+          -23.30427,
+          11.02,
+          43.34096
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 8.732,
+      "schematic": true,
+      "bidirectional": false
+    },
+    {
+      "id": "out-link-v13-brt-i-e-c1-v13-brt-p-c1",
+      "family": "metro-brt",
+      "label": "Salida · Enlace esquemático entre niveles · pendiente de validar",
+      "fromLevel": "P",
+      "toLevel": "I",
+      "points": [
+        [
+          -10.96605,
+          27.46,
+          100.49366
+        ],
+        [
+          -20.73183,
+          18.72,
+          104.45311
+        ]
+      ],
+      "color": "#00B0F0",
+      "length": 13.691,
+      "schematic": true,
+      "bidirectional": false
+    },
+    {
+      "id": "link-g-a-s-g-i-w-oeste",
+      "family": "r1",
+      "label": "Enlace esquemático · pendiente de validar en detalle",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -73.57517,
+          9.87,
+          10.37257
+        ],
+        [
+          -70.41821,
+          18.72,
+          6.85849
+        ]
+      ],
+      "length": 10.032,
+      "schematic": true,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "link-g-i-w-oeste-g-p-w",
+      "family": "r1",
+      "label": "Enlace esquemático · pendiente de validar en detalle",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -37.38925,
+          18.72,
+          5.98201
+        ],
+        [
+          -51.22187,
+          27.46,
+          11.24285
+        ]
+      ],
+      "length": 17.187,
+      "schematic": true,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "link-g-a-s-g-i-w-este",
+      "family": "r1",
+      "label": "Enlace esquemático · pendiente de validar en detalle",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -73.57517,
+          9.87,
+          10.37257
+        ],
+        [
+          -70.41821,
+          18.72,
+          6.85849
+        ]
+      ],
+      "length": 10.032,
+      "schematic": true,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "link-g-i-w-este-g-p-e",
+      "family": "r1",
+      "label": "Enlace esquemático · pendiente de validar en detalle",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -12.62347,
+          18.72,
+          -6.032
+        ],
+        [
+          1.01224,
+          27.46,
+          -11.64203
+        ]
+      ],
+      "length": 17.14,
+      "schematic": true,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "link-g-a-w-g-i-w-oeste",
+      "family": "r1",
+      "label": "Enlace esquemático · pendiente de validar en detalle",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -73.57517,
+          9.87,
+          10.37257
+        ],
+        [
+          -70.41821,
+          18.72,
+          6.85849
+        ]
+      ],
+      "length": 10.032,
+      "schematic": true,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "link-g-a-w-g-i-w-este",
+      "family": "r1",
+      "label": "Enlace esquemático · pendiente de validar en detalle",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -73.57517,
+          9.87,
+          10.37257
+        ],
+        [
+          -70.41821,
+          18.72,
+          6.85849
+        ]
+      ],
+      "length": 10.032,
+      "schematic": true,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "link-g-a-e-g-i-e-oeste",
+      "family": "r1",
+      "label": "Enlace esquemático · pendiente de validar en detalle",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          3.75732,
+          9.87,
+          -22.37383
+        ],
+        [
+          -4.8727,
+          18.72,
+          -28.12345
+        ]
+      ],
+      "length": 13.633,
+      "schematic": true,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "link-g-i-e-oeste-g-p-w",
+      "family": "r1",
+      "label": "Enlace esquemático · pendiente de validar en detalle",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -37.38925,
+          18.72,
+          5.98201
+        ],
+        [
+          -51.22187,
+          27.46,
+          11.24285
+        ]
+      ],
+      "length": 17.187,
+      "schematic": true,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "link-g-a-e-g-i-e-este",
+      "family": "r1",
+      "label": "Enlace esquemático · pendiente de validar en detalle",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          3.75732,
+          9.87,
+          -22.37383
+        ],
+        [
+          -4.8727,
+          18.72,
+          -28.12345
+        ]
+      ],
+      "length": 13.633,
+      "schematic": true,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "link-g-i-e-este-g-p-e",
+      "family": "r1",
+      "label": "Enlace esquemático · pendiente de validar en detalle",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -12.62347,
+          18.72,
+          -6.032
+        ],
+        [
+          1.01224,
+          27.46,
+          -11.64203
+        ]
+      ],
+      "length": 17.14,
+      "schematic": true,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "link-c1-a-c1-i",
+      "family": "r2",
+      "label": "Enlace esquemático · pendiente de validar en detalle",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          -18.69843,
+          11.02,
+          104.81271
+        ],
+        [
+          -11.08432,
+          18.72,
+          99.04136
+        ]
+      ],
+      "length": 12.271,
+      "schematic": true,
+      "sourceRevision": 12,
+      "color": "#00B050"
+    },
+    {
+      "id": "link-c1-i-c1-p",
+      "family": "r2",
+      "label": "Enlace esquemático · pendiente de validar en detalle",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          -20.73183,
+          18.72,
+          104.45311
+        ],
+        [
+          -10.96605,
+          27.46,
+          100.49366
+        ]
+      ],
+      "length": 13.691,
+      "schematic": true,
+      "sourceRevision": 12,
+      "color": "#00B050"
+    },
+    {
+      "id": "link-c2-a-e-c2-i",
+      "family": "r3",
+      "label": "Enlace esquemático · pendiente de validar en detalle",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          67.23713,
+          12.12,
+          36.93407
+        ],
+        [
+          76.37607,
+          18.72,
+          32.12278
+        ]
+      ],
+      "length": 12.257,
+      "schematic": true,
+      "sourceRevision": 12,
+      "color": "#7030A0"
+    },
+    {
+      "id": "link-c2-i-c2-p",
+      "family": "r3",
+      "label": "Enlace esquemático · pendiente de validar en detalle",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          68.4514,
+          18.72,
+          34.20395
+        ],
+        [
+          70.87846,
+          27.46,
+          33.16511
+        ]
+      ],
+      "length": 9.13,
+      "schematic": true,
+      "sourceRevision": 12,
+      "color": "#7030A0"
+    },
+    {
+      "id": "link-c2-a-w-c2-i",
+      "family": "r3",
+      "label": "Enlace esquemático · pendiente de validar en detalle",
+      "fromLevel": "A",
+      "toLevel": "I",
+      "points": [
+        [
+          67.23713,
+          12.12,
+          36.93407
+        ],
+        [
+          76.37607,
+          18.72,
+          32.12278
+        ]
+      ],
+      "length": 12.257,
+      "schematic": true,
+      "sourceRevision": 12,
+      "color": "#7030A0"
+    },
+    {
+      "id": "link-change-p-n-change-i",
+      "family": "r4",
+      "label": "Enlace esquemático · pendiente de validar en detalle",
+      "fromLevel": "P",
+      "toLevel": "I",
+      "points": [
+        [
+          -0.38769,
+          27.46,
+          -14.45611
+        ],
+        [
+          -13.37948,
+          18.72,
+          -8.09534
+        ]
+      ],
+      "length": 16.901,
+      "schematic": true,
+      "sourceRevision": 12,
+      "color": "#FF00FF"
+    },
+    {
+      "id": "link-change-i-change-p-s-reverse",
+      "family": "r4",
+      "label": "Enlace esquemático · pendiente de validar en detalle",
+      "fromLevel": "I",
+      "toLevel": "P",
+      "points": [
+        [
+          69.26098,
+          18.72,
+          35.74383
+        ],
+        [
+          71.68301,
+          27.46,
+          34.74862
+        ]
+      ],
+      "length": 9.124,
+      "schematic": true,
+      "sourceRevision": 12,
+      "color": "#FF00FF"
+    },
+    {
+      "id": "link-bike-a-ramp-lower-bike-b-parking",
+      "family": "r1",
+      "label": "Enlace esquemático · pendiente de validar en detalle",
+      "fromLevel": "A",
+      "toLevel": "B",
+      "points": [
+        [
+          -31.70988,
+          9.87,
+          5.19176
+        ],
+        [
+          -43.57441,
+          3.72,
+          10.74064
+        ]
+      ],
+      "length": 14.47,
+      "schematic": true,
+      "sourceRevision": 12,
+      "color": "#66FF66"
+    },
+    {
+      "id": "video-bike-return-access",
+      "family": "r1",
+      "label": "Retorno a acceso · conexión esquemática",
+      "schematic": true,
+      "fromLevel": "B",
+      "toLevel": "A",
+      "points": [
+        [
+          -43.57441,
+          3.72,
+          10.74064
+        ],
+        [
+          -71.22457,
+          9.87,
+          33.27957
+        ]
+      ],
+      "color": "#66FF66",
+      "sourceNote": "Enlace espacial esquemático; cambio de nivel temporizado con el video, pendiente de validación geométrica."
+    }
+  ],
+  "journeys": [
+    {
+      "id": "out-v13-journey-brt-e-c1",
+      "family": "metro-brt",
+      "label": "Metro · Calle 72-1 → BRT este",
+      "legs": [
+        "out-v13-brt-p-c1",
+        "out-link-v13-brt-i-e-c1-v13-brt-p-c1",
+        "out-v13-brt-i-e-c1",
+        "out-link-v13-brt-a-e-v13-brt-i-e-c1",
+        "out-v13-brt-a-e"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "v13-journey-pmr",
+      "family": "brt",
+      "label": "PMR · BRT → Metro · Calle 72-1",
+      "legs": [
+        "v13-pmr-a",
+        "link-v13-pmr-a-v13-pmr-i",
+        "v13-pmr-i",
+        "link-v13-pmr-i-v13-pmr-p",
+        "v13-pmr-p"
+      ],
+      "bidirectional": false,
+      "videoSync": {
+        "videoId": "brt-metro-pmr",
+        "method": "Hitos visuales revisados en el video: inicio y llegada, validadores, escaleras y ascensores. Interpolación entre hitos; conexiones verticales esquemáticas.",
+        "keys": [
+          {
+            "time": 0,
+            "leg": "v13-pmr-a",
+            "fraction": 0,
+            "label": "Inicio"
+          },
+          {
+            "time": 1,
+            "leg": "v13-pmr-a",
+            "fraction": 0,
+            "label": "Andén BRT"
+          },
+          {
+            "time": 20,
+            "leg": "v13-pmr-a",
+            "fraction": 0.75,
+            "label": "Acceso peatonal"
+          },
+          {
+            "time": 27,
+            "leg": "v13-pmr-a",
+            "fraction": 1,
+            "label": "Ascensor BRT"
+          },
+          {
+            "time": 30,
+            "leg": "link-v13-pmr-a-v13-pmr-i",
+            "fraction": 0,
+            "label": "Inicio ascenso"
+          },
+          {
+            "time": 34,
+            "leg": "v13-pmr-i",
+            "fraction": 0,
+            "label": "Nivel intermedio"
+          },
+          {
+            "time": 39,
+            "leg": "v13-pmr-i",
+            "fraction": 0.12,
+            "label": "Pasarela"
+          },
+          {
+            "time": 49,
+            "leg": "v13-pmr-i",
+            "fraction": 0.4,
+            "label": "Validación salida BRT"
+          },
+          {
+            "time": 54,
+            "leg": "v13-pmr-i",
+            "fraction": 0.4,
+            "label": "Corte de edición"
+          },
+          {
+            "time": 59,
+            "leg": "v13-pmr-i",
+            "fraction": 0.63,
+            "label": "Zona no paga Metro"
+          },
+          {
+            "time": 63,
+            "leg": "v13-pmr-i",
+            "fraction": 0.79,
+            "label": "Validación ingreso Metro"
+          },
+          {
+            "time": 66,
+            "leg": "v13-pmr-i",
+            "fraction": 1,
+            "label": "Ascensor Metro"
+          },
+          {
+            "time": 72,
+            "leg": "link-v13-pmr-i-v13-pmr-p",
+            "fraction": 0,
+            "label": "Inicio ascenso"
+          },
+          {
+            "time": 76,
+            "leg": "v13-pmr-p",
+            "fraction": 0,
+            "label": "Nivel plataforma"
+          },
+          {
+            "time": 84,
+            "leg": "v13-pmr-p",
+            "fraction": 0.22,
+            "label": "Vestíbulo"
+          },
+          {
+            "time": 97,
+            "leg": "v13-pmr-p",
+            "fraction": 0.94,
+            "label": "Puertas de andén"
+          },
+          {
+            "time": 101,
+            "leg": "v13-pmr-p",
+            "fraction": 1,
+            "label": "Llegada al tren"
+          },
+          {
+            "time": 105.266667,
+            "leg": "v13-pmr-p",
+            "fraction": 1,
+            "label": "Interior del tren"
+          }
+        ]
+      }
+    },
+    {
+      "id": "v13-journey-brt-wn-g-oeste",
+      "family": "brt",
+      "label": "BRT oeste norte → Metro · Gibraltar oeste",
+      "legs": [
+        "v13-brt-a-wn",
+        "link-v13-brt-a-wn-v13-brt-i-wn-g-oeste",
+        "v13-brt-i-wn-g-oeste",
+        "link-v13-brt-i-wn-g-oeste-v13-brt-p-g-oeste",
+        "v13-brt-p-g-oeste"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "v13-journey-brt-wn-g-este",
+      "family": "brt",
+      "label": "BRT oeste norte → Metro · Gibraltar este",
+      "legs": [
+        "v13-brt-a-wn",
+        "link-v13-brt-a-wn-v13-brt-i-wn-g-este",
+        "v13-brt-i-wn-g-este",
+        "link-v13-brt-i-wn-g-este-v13-brt-p-g-este",
+        "v13-brt-p-g-este"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "v13-journey-brt-wn-c1",
+      "family": "brt",
+      "label": "BRT oeste norte → Metro · Calle 72-1",
+      "legs": [
+        "v13-brt-a-wn",
+        "link-v13-brt-a-wn-v13-brt-i-wn-c1",
+        "v13-brt-i-wn-c1",
+        "link-v13-brt-i-wn-c1-v13-brt-p-c1",
+        "v13-brt-p-c1"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "v13-journey-brt-ws-g-oeste",
+      "family": "brt",
+      "label": "BRT oeste sur → Metro · Gibraltar oeste",
+      "legs": [
+        "v13-brt-a-ws",
+        "link-v13-brt-a-ws-v13-brt-i-ws-g-oeste",
+        "v13-brt-i-ws-g-oeste",
+        "link-v13-brt-i-ws-g-oeste-v13-brt-p-g-oeste",
+        "v13-brt-p-g-oeste"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "v13-journey-brt-ws-g-este",
+      "family": "brt",
+      "label": "BRT oeste sur → Metro · Gibraltar este",
+      "legs": [
+        "v13-brt-a-ws",
+        "link-v13-brt-a-ws-v13-brt-i-ws-g-este",
+        "v13-brt-i-ws-g-este",
+        "link-v13-brt-i-ws-g-este-v13-brt-p-g-este",
+        "v13-brt-p-g-este"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "v13-journey-brt-ws-c1",
+      "family": "brt",
+      "label": "BRT oeste sur → Metro · Calle 72-1",
+      "legs": [
+        "v13-brt-a-ws",
+        "link-v13-brt-a-ws-v13-brt-i-ws-c1",
+        "v13-brt-i-ws-c1",
+        "link-v13-brt-i-ws-c1-v13-brt-p-c1",
+        "v13-brt-p-c1"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "v13-journey-brt-e-g-oeste",
+      "family": "brt",
+      "label": "BRT este → Metro · Gibraltar oeste",
+      "legs": [
+        "v13-brt-a-e",
+        "link-v13-brt-a-e-v13-brt-i-e-g-oeste",
+        "v13-brt-i-e-g-oeste",
+        "link-v13-brt-i-e-g-oeste-v13-brt-p-g-oeste",
+        "v13-brt-p-g-oeste"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "v13-journey-brt-e-g-este",
+      "family": "brt",
+      "label": "BRT este → Metro · Gibraltar este",
+      "legs": [
+        "v13-brt-a-e",
+        "link-v13-brt-a-e-v13-brt-i-e-g-este",
+        "v13-brt-i-e-g-este",
+        "link-v13-brt-i-e-g-este-v13-brt-p-g-este",
+        "v13-brt-p-g-este"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "v13-journey-brt-e-c1",
+      "family": "brt",
+      "label": "BRT este → Metro · Calle 72-1",
+      "legs": [
+        "v13-brt-a-e",
+        "link-v13-brt-a-e-v13-brt-i-e-c1",
+        "v13-brt-i-e-c1",
+        "link-v13-brt-i-e-c1-v13-brt-p-c1",
+        "v13-brt-p-c1"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "out-v13-journey-pmr",
+      "family": "metro-brt",
+      "label": "PMR · Metro · Calle 72-1 → BRT",
+      "legs": [
+        "out-v13-pmr-p",
+        "out-link-v13-pmr-i-v13-pmr-p",
+        "out-v13-pmr-i",
+        "out-link-v13-pmr-a-v13-pmr-i",
+        "out-v13-pmr-a"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "out-v13-journey-brt-wn-g-oeste",
+      "family": "metro-brt",
+      "label": "Metro · Gibraltar oeste → BRT oeste norte",
+      "legs": [
+        "out-v13-brt-p-g-oeste",
+        "out-link-v13-brt-i-wn-g-oeste-v13-brt-p-g-oeste",
+        "out-v13-brt-i-wn-g-oeste",
+        "out-link-v13-brt-a-wn-v13-brt-i-wn-g-oeste",
+        "out-v13-brt-a-wn"
+      ],
+      "bidirectional": false,
+      "videoSync": {
+        "videoId": "metro-brt",
+        "method": "Hitos visuales revisados en el video: inicio y llegada, validadores, escaleras y ascensores. Interpolación entre hitos; conexiones verticales esquemáticas.",
+        "keys": [
+          {
+            "time": 0,
+            "leg": "out-v13-brt-p-g-oeste",
+            "fraction": 0,
+            "label": "Inicio"
+          },
+          {
+            "time": 1,
+            "leg": "out-v13-brt-p-g-oeste",
+            "fraction": 0,
+            "label": "Pasarela sur"
+          },
+          {
+            "time": 14,
+            "leg": "out-v13-brt-p-g-oeste",
+            "fraction": 0.86,
+            "label": "Llegada al vestíbulo"
+          },
+          {
+            "time": 18,
+            "leg": "out-link-v13-brt-i-wn-g-oeste-v13-brt-p-g-oeste",
+            "fraction": 0,
+            "label": "Inicio descenso"
+          },
+          {
+            "time": 29,
+            "leg": "out-v13-brt-i-wn-g-oeste",
+            "fraction": 0,
+            "label": "Nivel intermedio"
+          },
+          {
+            "time": 36,
+            "leg": "out-v13-brt-i-wn-g-oeste",
+            "fraction": 0.2,
+            "label": "Vestíbulo Metro"
+          },
+          {
+            "time": 39,
+            "leg": "out-v13-brt-i-wn-g-oeste",
+            "fraction": 0.2,
+            "label": "Corte de edición"
+          },
+          {
+            "time": 49,
+            "leg": "out-v13-brt-i-wn-g-oeste",
+            "fraction": 0.37,
+            "label": "Aproximación a validadores"
+          },
+          {
+            "time": 55,
+            "leg": "out-v13-brt-i-wn-g-oeste",
+            "fraction": 0.48,
+            "label": "Salida Metro"
+          },
+          {
+            "time": 58,
+            "leg": "out-v13-brt-i-wn-g-oeste",
+            "fraction": 0.52,
+            "label": "Pasarela BRT"
+          },
+          {
+            "time": 66,
+            "leg": "out-link-v13-brt-a-wn-v13-brt-i-wn-g-oeste",
+            "fraction": 0,
+            "label": "Llegada a conexión BRT"
+          },
+          {
+            "time": 73,
+            "leg": "out-v13-brt-a-wn",
+            "fraction": 0,
+            "label": "Nivel de acceso BRT"
+          },
+          {
+            "time": 81,
+            "leg": "out-v13-brt-a-wn",
+            "fraction": 1,
+            "label": "Andén BRT"
+          },
+          {
+            "time": 83.633333,
+            "leg": "out-v13-brt-a-wn",
+            "fraction": 1,
+            "label": "Fin"
+          }
+        ]
+      }
+    },
+    {
+      "id": "out-v13-journey-brt-wn-g-este",
+      "family": "metro-brt",
+      "label": "Metro · Gibraltar este → BRT oeste norte",
+      "legs": [
+        "out-v13-brt-p-g-este",
+        "out-link-v13-brt-i-wn-g-este-v13-brt-p-g-este",
+        "out-v13-brt-i-wn-g-este",
+        "out-link-v13-brt-a-wn-v13-brt-i-wn-g-este",
+        "out-v13-brt-a-wn"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "out-v13-journey-brt-wn-c1",
+      "family": "metro-brt",
+      "label": "Metro · Calle 72-1 → BRT oeste norte",
+      "legs": [
+        "out-v13-brt-p-c1",
+        "out-link-v13-brt-i-wn-c1-v13-brt-p-c1",
+        "out-v13-brt-i-wn-c1",
+        "out-link-v13-brt-a-wn-v13-brt-i-wn-c1",
+        "out-v13-brt-a-wn"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "out-v13-journey-brt-ws-g-oeste",
+      "family": "metro-brt",
+      "label": "Metro · Gibraltar oeste → BRT oeste sur",
+      "legs": [
+        "out-v13-brt-p-g-oeste",
+        "out-link-v13-brt-i-ws-g-oeste-v13-brt-p-g-oeste",
+        "out-v13-brt-i-ws-g-oeste",
+        "out-link-v13-brt-a-ws-v13-brt-i-ws-g-oeste",
+        "out-v13-brt-a-ws"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "out-v13-journey-brt-ws-g-este",
+      "family": "metro-brt",
+      "label": "Metro · Gibraltar este → BRT oeste sur",
+      "legs": [
+        "out-v13-brt-p-g-este",
+        "out-link-v13-brt-i-ws-g-este-v13-brt-p-g-este",
+        "out-v13-brt-i-ws-g-este",
+        "out-link-v13-brt-a-ws-v13-brt-i-ws-g-este",
+        "out-v13-brt-a-ws"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "out-v13-journey-brt-ws-c1",
+      "family": "metro-brt",
+      "label": "Metro · Calle 72-1 → BRT oeste sur",
+      "legs": [
+        "out-v13-brt-p-c1",
+        "out-link-v13-brt-i-ws-c1-v13-brt-p-c1",
+        "out-v13-brt-i-ws-c1",
+        "out-link-v13-brt-a-ws-v13-brt-i-ws-c1",
+        "out-v13-brt-a-ws"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "out-v13-journey-brt-e-g-oeste",
+      "family": "metro-brt",
+      "label": "Metro · Gibraltar oeste → BRT este",
+      "legs": [
+        "out-v13-brt-p-g-oeste",
+        "out-link-v13-brt-i-e-g-oeste-v13-brt-p-g-oeste",
+        "out-v13-brt-i-e-g-oeste",
+        "out-link-v13-brt-a-e-v13-brt-i-e-g-oeste",
+        "out-v13-brt-a-e"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "out-v13-journey-brt-e-g-este",
+      "family": "metro-brt",
+      "label": "Metro · Gibraltar este → BRT este",
+      "legs": [
+        "out-v13-brt-p-g-este",
+        "out-link-v13-brt-i-e-g-este-v13-brt-p-g-este",
+        "out-v13-brt-i-e-g-este",
+        "out-link-v13-brt-a-e-v13-brt-i-e-g-este",
+        "out-v13-brt-a-e"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "journey-g-s-oeste",
+      "family": "r1",
+      "label": "Acceso Gibraltar · sur → Gibraltar · oeste",
+      "legs": [
+        "g-a-s",
+        "link-g-a-s-g-i-w-oeste",
+        "g-i-w-oeste",
+        "link-g-i-w-oeste-g-p-w",
+        "g-p-w"
+      ],
+      "bidirectional": false,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "journey-g-s-este",
+      "family": "r1",
+      "label": "Acceso Gibraltar · sur → Gibraltar · este",
+      "legs": [
+        "g-a-s",
+        "link-g-a-s-g-i-w-este",
+        "g-i-w-este",
+        "link-g-i-w-este-g-p-e",
+        "g-p-e"
+      ],
+      "bidirectional": false,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "journey-g-w-oeste",
+      "family": "r1",
+      "label": "Acceso Gibraltar · occidente → Gibraltar · oeste",
+      "legs": [
+        "g-a-w",
+        "link-g-a-w-g-i-w-oeste",
+        "g-i-w-oeste",
+        "link-g-i-w-oeste-g-p-w",
+        "g-p-w"
+      ],
+      "bidirectional": false,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "journey-g-w-este",
+      "family": "r1",
+      "label": "Acceso Gibraltar · occidente → Gibraltar · este",
+      "legs": [
+        "g-a-w",
+        "link-g-a-w-g-i-w-este",
+        "g-i-w-este",
+        "link-g-i-w-este-g-p-e",
+        "g-p-e"
+      ],
+      "bidirectional": false,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "journey-g-e-oeste",
+      "family": "r1",
+      "label": "Acceso Gibraltar · oriente → Gibraltar · oeste",
+      "legs": [
+        "g-a-e",
+        "link-g-a-e-g-i-e-oeste",
+        "g-i-e-oeste",
+        "link-g-i-e-oeste-g-p-w",
+        "g-p-w"
+      ],
+      "bidirectional": false,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "journey-g-e-este",
+      "family": "r1",
+      "label": "Acceso Gibraltar · oriente → Gibraltar · este",
+      "legs": [
+        "g-a-e",
+        "link-g-a-e-g-i-e-este",
+        "g-i-e-este",
+        "link-g-i-e-este-g-p-e",
+        "g-p-e"
+      ],
+      "bidirectional": false,
+      "sourceRevision": 12,
+      "color": "#000000"
+    },
+    {
+      "id": "journey-c1",
+      "family": "r2",
+      "label": "Acceso Calle 72-1 → Calle 72-1",
+      "legs": [
+        "c1-a",
+        "link-c1-a-c1-i",
+        "c1-i",
+        "link-c1-i-c1-p",
+        "c1-p"
+      ],
+      "bidirectional": false,
+      "sourceRevision": 12,
+      "color": "#00B050"
+    },
+    {
+      "id": "journey-c2-e",
+      "family": "r3",
+      "label": "Acceso Calle 72-2 · este → Calle 72-2",
+      "legs": [
+        "c2-a-e",
+        "link-c2-a-e-c2-i",
+        "c2-i",
+        "link-c2-i-c2-p",
+        "c2-p"
+      ],
+      "bidirectional": false,
+      "sourceRevision": 12,
+      "color": "#7030A0"
+    },
+    {
+      "id": "journey-c2-w",
+      "family": "r3",
+      "label": "Acceso Calle 72-2 · oeste → Calle 72-2",
+      "legs": [
+        "c2-a-w",
+        "link-c2-a-w-c2-i",
+        "c2-i",
+        "link-c2-i-c2-p",
+        "c2-p"
+      ],
+      "bidirectional": false,
+      "sourceRevision": 12,
+      "color": "#7030A0"
+    },
+    {
+      "id": "journey-change",
+      "family": "r4",
+      "label": "Plataforma · andén Gibraltar ↔ escalera → · andén Calle 72 ↔ escalera",
+      "legs": [
+        "change-p-n",
+        "link-change-p-n-change-i",
+        "change-i",
+        "link-change-i-change-p-s-reverse",
+        "change-p-s-reverse"
+      ],
+      "bidirectional": true,
+      "sourceRevision": 12,
+      "color": "#FF00FF"
+    },
+    {
+      "id": "journey-bike",
+      "family": "r1",
+      "label": "Acceso · rampa de biciusuarios · retorno → Sótano · rampa → cicloparqueadero",
+      "legs": [
+        "bike-a-ramp-lower",
+        "link-bike-a-ramp-lower-bike-b-parking",
+        "bike-b-parking"
+      ],
+      "bidirectional": false,
+      "sourceRevision": 12,
+      "color": "#66FF66"
+    },
+    {
+      "id": "video-gibraltar-completo",
+      "family": "r1",
+      "label": "Video · Gibraltar / visita al cicloparqueadero / Metro",
+      "legs": [
+        "bike-a-ramp-lower",
+        "link-bike-a-ramp-lower-bike-b-parking",
+        "bike-b-parking",
+        "video-bike-return",
+        "video-bike-return-access",
+        "g-a-s",
+        "link-g-a-s-g-i-w-oeste",
+        "g-i-w-oeste",
+        "link-g-i-w-oeste-g-p-w",
+        "g-p-w"
+      ],
+      "bidirectional": false,
+      "videoSync": {
+        "videoId": "e09-ruta-1",
+        "method": "Hitos visuales revisados en el video: inicio y llegada, validadores, escaleras y ascensores. Interpolación entre hitos; conexiones verticales esquemáticas. El retorno del cicloparqueadero al acceso es un enlace esquemático pendiente de validación geométrica; su distancia es estimada.",
+        "keys": [
+          {
+            "time": 0,
+            "leg": "bike-a-ramp-lower",
+            "fraction": 0,
+            "label": "Acceso a cicloparqueadero"
+          },
+          {
+            "time": 7,
+            "leg": "link-bike-a-ramp-lower-bike-b-parking",
+            "fraction": 0,
+            "label": "Descenso al sótano"
+          },
+          {
+            "time": 33,
+            "leg": "bike-b-parking",
+            "fraction": 0,
+            "label": "Llegada al sótano"
+          },
+          {
+            "time": 50,
+            "leg": "bike-b-parking",
+            "fraction": 0.65,
+            "label": "Vestíbulo cicloparqueadero"
+          },
+          {
+            "time": 58,
+            "leg": "video-bike-return",
+            "fraction": 0,
+            "label": "Validación cicloparqueadero"
+          },
+          {
+            "time": 65,
+            "leg": "video-bike-return",
+            "fraction": 0,
+            "label": "Giro de cámara"
+          },
+          {
+            "time": 89,
+            "leg": "video-bike-return-access",
+            "fraction": 0,
+            "label": "Inicio retorno a acceso"
+          },
+          {
+            "time": 112,
+            "leg": "g-a-s",
+            "fraction": 0,
+            "label": "Llegada al acceso"
+          },
+          {
+            "time": 127,
+            "leg": "g-a-s",
+            "fraction": 0.35,
+            "label": "Ingreso Gibraltar"
+          },
+          {
+            "time": 140,
+            "leg": "link-g-a-s-g-i-w-oeste",
+            "fraction": 0,
+            "label": "Inicio escalera mecánica"
+          },
+          {
+            "time": 161,
+            "leg": "g-i-w-oeste",
+            "fraction": 0,
+            "label": "Nivel intermedio"
+          },
+          {
+            "time": 177,
+            "leg": "g-i-w-oeste",
+            "fraction": 0.7,
+            "label": "Validación Metro"
+          },
+          {
+            "time": 184,
+            "leg": "link-g-i-w-oeste-g-p-w",
+            "fraction": 0,
+            "label": "Inicio ascenso a plataforma"
+          },
+          {
+            "time": 197,
+            "leg": "g-p-w",
+            "fraction": 0,
+            "label": "Nivel plataforma"
+          },
+          {
+            "time": 209,
+            "leg": "g-p-w",
+            "fraction": 1,
+            "label": "Puertas hacia Gibraltar"
+          },
+          {
+            "time": 210.2,
+            "leg": "g-p-w",
+            "fraction": 1,
+            "label": "Fin"
+          }
+        ]
+      }
+    }
+  ]
+}

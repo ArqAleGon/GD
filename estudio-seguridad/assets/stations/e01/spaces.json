@@ -1,0 +1,4662 @@
+{
+  "station": "E01",
+  "mode": "plan-raster",
+  "sourceNote": "Colores y posiciones conservados de los planos de planta cargados. Nombres vinculados por código y nivel al cuadro VDD, páginas 5–8. Ambas revisiones tienen diferencias de distribución: las áreas VDD se muestran solo como referencia del código, sin asignarlas a la geometría actual ni sumarlas. Los códigos sin correspondencia conservan su identificación original. Capas de color registradas visualmente; no son entidades IfcSpace.",
+  "categories": [
+    {
+      "name": "Área técnica",
+      "color": "#d5d9e3"
+    },
+    {
+      "name": "Área pública",
+      "color": "#81bdcd"
+    },
+    {
+      "name": "Área no paga",
+      "color": "#fff8b8"
+    },
+    {
+      "name": "Área paga",
+      "color": "#fbd976"
+    },
+    {
+      "name": "Área operacional",
+      "color": "#66b5fa"
+    },
+    {
+      "name": "Servicio público",
+      "color": "#7dc3b1"
+    },
+    {
+      "name": "Comercial · verde claro",
+      "color": "#cfe7ce"
+    },
+    {
+      "name": "Zona de refugio (PMR)",
+      "color": "#648bc8"
+    },
+    {
+      "name": "Área cultural",
+      "color": "#ff9898"
+    },
+    {
+      "name": "Morado · convención pendiente",
+      "color": "#9d68bd"
+    }
+  ],
+  "records": [
+    {
+      "id": "E01-B-0",
+      "code": "T-25",
+      "name": "Nodos de acceso de comunicaciones",
+      "level": "B",
+      "building": "E01 · Carrera 96",
+      "floor": 2536.1,
+      "center": [
+        24.69281,
+        -46.78237
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-B.jpg",
+      "referenceAreas": [
+        2.76
+      ],
+      "referencePage": 5,
+      "referenceCode": "T-25"
+    },
+    {
+      "id": "E01-B-1",
+      "code": "ZDR",
+      "name": "Zona de refugio (PMR)",
+      "level": "B",
+      "building": "E01 · Carrera 96",
+      "floor": 2536.1,
+      "center": [
+        25.40283,
+        -49.39198
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#648bc8",
+      "type": "Zona de refugio (PMR)",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-B.jpg",
+      "referenceAreas": [
+        3.53,
+        3.37
+      ],
+      "referencePage": 5,
+      "referenceCode": "ZDR"
+    },
+    {
+      "id": "E01-B-2",
+      "code": "T-00",
+      "name": "Corredor técnico",
+      "level": "B",
+      "building": "E01 · Carrera 96",
+      "floor": 2536.1,
+      "center": [
+        35.90899,
+        -55.61297
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-B.jpg",
+      "referenceAreas": [
+        30.02,
+        16.94
+      ],
+      "referencePage": 5,
+      "referenceCode": "T-00"
+    },
+    {
+      "id": "E01-B-3",
+      "code": "T-18",
+      "name": "Cuarto de bombas de recuperación de aguas lluvias y equipo de filtración",
+      "level": "B",
+      "building": "E01 · Carrera 96",
+      "floor": 2536.1,
+      "center": [
+        38.07402,
+        -45.20278
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-B.jpg",
+      "referenceAreas": [
+        40.1
+      ],
+      "referencePage": 5,
+      "referenceCode": "T-18"
+    },
+    {
+      "id": "E01-B-4",
+      "code": "T-19-1",
+      "name": "Espacio T-19-1",
+      "level": "B",
+      "building": "E01 · Carrera 96",
+      "floor": 2536.1,
+      "center": [
+        41.21384,
+        -38.41028
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-B.jpg"
+    },
+    {
+      "id": "E01-B-5",
+      "code": "T-19-2",
+      "name": "Espacio T-19-2",
+      "level": "B",
+      "building": "E01 · Carrera 96",
+      "floor": 2536.1,
+      "center": [
+        42.56024,
+        -40.91451
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-B.jpg"
+    },
+    {
+      "id": "E01-B-6",
+      "code": "T-17",
+      "name": "Tanque de recuperación de aguas lluvias",
+      "level": "B",
+      "building": "E01 · Carrera 96",
+      "floor": 2536.1,
+      "center": [
+        44.06052,
+        -43.70494
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-B.jpg",
+      "referenceAreas": [
+        16.84
+      ],
+      "referencePage": 5,
+      "referenceCode": "T-17"
+    },
+    {
+      "id": "E01-B-7",
+      "code": "T-16",
+      "name": "Cuarto de bombas de sistema de protección de incendios",
+      "level": "B",
+      "building": "E01 · Carrera 96",
+      "floor": 2536.1,
+      "center": [
+        47.21495,
+        -49.57199
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-B.jpg",
+      "referenceAreas": [
+        35.93
+      ],
+      "referencePage": 5,
+      "referenceCode": "T-16"
+    },
+    {
+      "id": "E01-B-8",
+      "code": "T-00",
+      "name": "Corredor técnico",
+      "level": "B",
+      "building": "E01 · Carrera 96",
+      "floor": 2536.1,
+      "center": [
+        42.64197,
+        -53.35517
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-B.jpg",
+      "referenceAreas": [
+        30.02,
+        16.94
+      ],
+      "referencePage": 5,
+      "referenceCode": "T-00"
+    },
+    {
+      "id": "E01-B-9",
+      "code": "T-21",
+      "name": "Inspección de ducto",
+      "level": "B",
+      "building": "E01 · Carrera 96",
+      "floor": 2536.1,
+      "center": [
+        36.14017,
+        -60.76934
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-B.jpg",
+      "referenceAreas": [
+        9.05
+      ],
+      "referencePage": 5,
+      "referenceCode": "T-21"
+    },
+    {
+      "id": "E01-B-10",
+      "code": "T-13",
+      "name": "Cuarto de bombas de suministro de agua",
+      "level": "B",
+      "building": "E01 · Carrera 96",
+      "floor": 2536.1,
+      "center": [
+        42.47208,
+        -58.539
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-B.jpg",
+      "referenceAreas": [
+        26.98
+      ],
+      "referencePage": 5,
+      "referenceCode": "T-13"
+    },
+    {
+      "id": "E01-B-11",
+      "code": "DISP",
+      "name": "Espacio DISP",
+      "level": "B",
+      "building": "E01 · Carrera 96",
+      "floor": 2536.1,
+      "center": [
+        40.60052,
+        -65.62795
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-B.jpg"
+    },
+    {
+      "id": "E01-B-12",
+      "code": "T-14-2",
+      "name": "Espacio T-14-2",
+      "level": "B",
+      "building": "E01 · Carrera 96",
+      "floor": 2536.1,
+      "center": [
+        44.5547,
+        -63.27189
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-B.jpg"
+    },
+    {
+      "id": "E01-B-13",
+      "code": "T-14-1",
+      "name": "Espacio T-14-1",
+      "level": "B",
+      "building": "E01 · Carrera 96",
+      "floor": 2536.1,
+      "center": [
+        47.43828,
+        -61.84635
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-B.jpg"
+    },
+    {
+      "id": "E01-B-14",
+      "code": "T-15",
+      "name": "Tanque de sistema de protección de incendios",
+      "level": "B",
+      "building": "E01 · Carrera 96",
+      "floor": 2536.1,
+      "center": [
+        52.22323,
+        -59.14492
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-B.jpg",
+      "referenceAreas": [
+        52.36
+      ],
+      "referencePage": 5,
+      "referenceCode": "T-15"
+    },
+    {
+      "id": "E01-A-0",
+      "code": "P-05",
+      "name": "Bibliometro",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        -33.5081,
+        62.85159
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#81bdcd",
+      "type": "Área pública",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-A.jpg",
+      "referenceAreas": [
+        59.0
+      ],
+      "referencePage": 6,
+      "referenceCode": "P-05"
+    },
+    {
+      "id": "E01-A-1",
+      "code": "P-04",
+      "name": "Espacio P-04",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        -28.26842,
+        65.3108
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#81bdcd",
+      "type": "Área pública",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-A.jpg"
+    },
+    {
+      "id": "E01-A-2",
+      "code": "P-03",
+      "name": "Espacio P-03",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        -24.33677,
+        66.44244
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#81bdcd",
+      "type": "Área pública",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-A.jpg"
+    },
+    {
+      "id": "E01-A-3",
+      "code": "P-02",
+      "name": "Espacio P-02",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        -24.98122,
+        62.52978
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#81bdcd",
+      "type": "Área pública",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-A.jpg"
+    },
+    {
+      "id": "E01-A-4",
+      "code": "T-21",
+      "name": "Inspección de ducto",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        -31.14167,
+        57.22813
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-A.jpg",
+      "referenceAreas": [
+        8.0,
+        5.0,
+        4.0,
+        8.0
+      ],
+      "referencePage": 6,
+      "referenceCode": "T-21"
+    },
+    {
+      "id": "E01-A-5",
+      "code": "P-06",
+      "name": "Instituto para la Economía Social",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        -28.78974,
+        53.44435
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#81bdcd",
+      "type": "Área pública",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-A.jpg",
+      "referenceAreas": [
+        15.0
+      ],
+      "referencePage": 6,
+      "referenceCode": "P-06"
+    },
+    {
+      "id": "E01-A-6",
+      "code": "P-08",
+      "name": "Espacio P-08",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        -22.11469,
+        54.23403
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#81bdcd",
+      "type": "Área pública",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-A.jpg"
+    },
+    {
+      "id": "E01-A-7",
+      "code": "T-25",
+      "name": "Nodos de acceso de comunicaciones",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        -18.38463,
+        42.03229
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-A.jpg",
+      "referenceAreas": [
+        11.0,
+        10.0
+      ],
+      "referencePage": 6,
+      "referenceCode": "T-25"
+    },
+    {
+      "id": "E01-A-8",
+      "code": "NPA",
+      "name": "Área no paga",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        -8.69725,
+        34.01617
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fff8b8",
+      "type": "Área no paga",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-A.jpg",
+      "referenceAreas": [
+        241.0,
+        200.0,
+        75.0,
+        314.0,
+        214.0
+      ],
+      "referencePage": 6,
+      "referenceCode": "NPA"
+    },
+    {
+      "id": "E01-A-9",
+      "code": "P-01",
+      "name": "Espacio P-01",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        -2.9647,
+        16.16478
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#81bdcd",
+      "type": "Área pública",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-A.jpg"
+    },
+    {
+      "id": "E01-A-10",
+      "code": "NPA",
+      "name": "Área no paga",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        24.03133,
+        -29.85319
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fff8b8",
+      "type": "Área no paga",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-A.jpg",
+      "referenceAreas": [
+        241.0,
+        200.0,
+        75.0,
+        314.0,
+        214.0
+      ],
+      "referencePage": 6,
+      "referenceCode": "NPA"
+    },
+    {
+      "id": "E01-A-11",
+      "code": "T-25",
+      "name": "Nodos de acceso de comunicaciones",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        27.60786,
+        -44.44609
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-A.jpg",
+      "referenceAreas": [
+        11.0,
+        10.0
+      ],
+      "referencePage": 6,
+      "referenceCode": "T-25"
+    },
+    {
+      "id": "E01-A-12",
+      "code": "T-21",
+      "name": "Inspección de ducto",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        25.66421,
+        -49.3877
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-A.jpg",
+      "referenceAreas": [
+        8.0,
+        5.0,
+        4.0,
+        8.0
+      ],
+      "referencePage": 6,
+      "referenceCode": "T-21"
+    },
+    {
+      "id": "E01-A-13",
+      "code": "T-21",
+      "name": "Inspección de ducto",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        33.60422,
+        -51.36615
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-A.jpg",
+      "referenceAreas": [
+        8.0,
+        5.0,
+        4.0,
+        8.0
+      ],
+      "referencePage": 6,
+      "referenceCode": "T-21"
+    },
+    {
+      "id": "E01-A-14",
+      "code": "T-08",
+      "name": "Centro de transformación Codensa (CTE)",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        34.79264,
+        -44.14027
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-A.jpg",
+      "referenceAreas": [
+        35.0
+      ],
+      "referencePage": 6,
+      "referenceCode": "T-08"
+    },
+    {
+      "id": "E01-A-15",
+      "code": "T-08",
+      "name": "Centro de transformación Codensa (CTE)",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        36.10582,
+        -46.21088
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-A.jpg",
+      "referenceAreas": [
+        35.0
+      ],
+      "referencePage": 6,
+      "referenceCode": "T-08"
+    },
+    {
+      "id": "E01-A-16",
+      "code": "T-20L",
+      "name": "Medidores (luz)",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        36.83075,
+        -47.96549
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-A.jpg",
+      "referenceAreas": [
+        9.0
+      ],
+      "referencePage": 6,
+      "referenceCode": "T-20-L"
+    },
+    {
+      "id": "E01-A-17",
+      "code": "T-20-G",
+      "name": "Espacio T-20-G",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        37.40561,
+        -49.0444
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-A.jpg"
+    },
+    {
+      "id": "E01-A-18",
+      "code": "T-20M",
+      "name": "Espacio T-20M",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        38.28329,
+        -50.29766
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-A.jpg"
+    },
+    {
+      "id": "E01-A-19",
+      "code": "PASAJE URBANO",
+      "name": "Pasaje urbano",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        38.64112,
+        -54.51538
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fbd976",
+      "type": "Área paga",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-A.jpg"
+    },
+    {
+      "id": "E01-A-20",
+      "code": "T-21",
+      "name": "Inspección de ducto",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        35.96481,
+        -60.6036
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-A.jpg",
+      "referenceAreas": [
+        8.0,
+        5.0,
+        4.0,
+        8.0
+      ],
+      "referencePage": 6,
+      "referenceCode": "T-21"
+    },
+    {
+      "id": "E01-A-21",
+      "code": "T-21",
+      "name": "Inspección de ducto",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        39.35404,
+        -59.00555
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-A.jpg",
+      "referenceAreas": [
+        8.0,
+        5.0,
+        4.0,
+        8.0
+      ],
+      "referencePage": 6,
+      "referenceCode": "T-21"
+    },
+    {
+      "id": "E01-A-22",
+      "code": "R-101",
+      "name": "Espacio R-101",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        42.21801,
+        -57.60372
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Comercial · verde claro",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-A.jpg"
+    },
+    {
+      "id": "E01-A-23",
+      "code": "P-07",
+      "name": "Salón múltiple EMB",
+      "level": "A",
+      "building": "E01 · Carrera 96",
+      "floor": 2540.9,
+      "center": [
+        40.33203,
+        -65.41166
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#81bdcd",
+      "type": "Área pública",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-A.jpg",
+      "referenceAreas": [
+        105.0
+      ],
+      "referencePage": 6,
+      "referenceCode": "P-07"
+    },
+    {
+      "id": "E01-I-0",
+      "code": "T-07",
+      "name": "Centro de transformación (CTE)",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        -32.48737,
+        70.12766
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        188.14
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-07"
+    },
+    {
+      "id": "E01-I-1",
+      "code": "T-07",
+      "name": "Centro de transformación (CTE)",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        -29.35843,
+        64.63566
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        188.14
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-07"
+    },
+    {
+      "id": "E01-I-2",
+      "code": "T-21",
+      "name": "Inspección de ducto",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        -28.44672,
+        58.28341
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        4.92,
+        5.41,
+        5.85,
+        7.95,
+        6.6
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-21"
+    },
+    {
+      "id": "E01-I-3",
+      "code": "T-01",
+      "name": "Subestación de tracción (SET)",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        -18.58117,
+        69.1362
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        229.58
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-01"
+    },
+    {
+      "id": "E01-I-4",
+      "code": "T-01",
+      "name": "Subestación de tracción (SET)",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        -13.32548,
+        71.90227
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        229.58
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-01"
+    },
+    {
+      "id": "E01-I-5",
+      "code": "T-08",
+      "name": "Espacio T-08",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        -7.78338,
+        62.03338
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-I.jpg"
+    },
+    {
+      "id": "E01-I-6",
+      "code": "C",
+      "name": "Vitrina para la memoria local",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        -30.5164,
+        50.29864
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#ff9898",
+      "type": "Área cultural",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        7.91,
+        9.7
+      ],
+      "referencePage": 7,
+      "referenceCode": "C"
+    },
+    {
+      "id": "E01-I-7",
+      "code": "NPA",
+      "name": "Área no paga",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        -9.98084,
+        45.15833
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fff8b8",
+      "type": "Área no paga",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        341.49,
+        240.53
+      ],
+      "referencePage": 7,
+      "referenceCode": "NPA"
+    },
+    {
+      "id": "E01-I-8",
+      "code": "O-02",
+      "name": "Baños públicos · hombres",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        -8.02259,
+        55.02607
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#7dc3b1",
+      "type": "Servicio público",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        32.48
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-02"
+    },
+    {
+      "id": "E01-I-9",
+      "code": "O-23",
+      "name": "Baño público · familiar",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        -8.93192,
+        48.59169
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#7dc3b1",
+      "type": "Servicio público",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        6.85,
+        7.34
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-23"
+    },
+    {
+      "id": "E01-I-10",
+      "code": "O-25",
+      "name": "Espacio O-25",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        -7.09945,
+        49.48929
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#7dc3b1",
+      "type": "Servicio público",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-I.jpg"
+    },
+    {
+      "id": "E01-I-11",
+      "code": "O-07",
+      "name": "Cuarto de limpieza",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        -7.32448,
+        45.727
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#7dc3b1",
+      "type": "Servicio público",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        3.86,
+        2.98,
+        16.09
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-07"
+    },
+    {
+      "id": "E01-I-12",
+      "code": "O-04",
+      "name": "Control de acceso baños públicos",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        -5.42226,
+        43.22206
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#7dc3b1",
+      "type": "Servicio público",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        9.25,
+        4.49
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-04"
+    },
+    {
+      "id": "E01-I-13",
+      "code": "O-01-1",
+      "name": "Espacio O-01-1",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        -16.82604,
+        36.93011
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-I.jpg"
+    },
+    {
+      "id": "E01-I-14",
+      "code": "PA",
+      "name": "Área paga",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        -5.34999,
+        32.73896
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fbd976",
+      "type": "Área paga",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        326.87,
+        257.94
+      ],
+      "referencePage": 7,
+      "referenceCode": "PA"
+    },
+    {
+      "id": "E01-I-15",
+      "code": "T-21",
+      "name": "Inspección de ducto",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        -5.78661,
+        25.94998
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        4.92,
+        5.41,
+        5.85,
+        7.95,
+        6.6
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-21"
+    },
+    {
+      "id": "E01-I-16",
+      "code": "T-21",
+      "name": "Inspección de ducto",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        -4.07296,
+        27.75536
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        4.92,
+        5.41,
+        5.85,
+        7.95,
+        6.6
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-21"
+    },
+    {
+      "id": "E01-I-17",
+      "code": "T-22",
+      "name": "Cuarto de UPS",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        -6.19226,
+        22.37452
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        127.16
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-22"
+    },
+    {
+      "id": "E01-I-18",
+      "code": "T-02",
+      "name": "Local de conducción automática (CBTC)",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        3.71747,
+        27.66631
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        59.13
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-02"
+    },
+    {
+      "id": "E01-I-19",
+      "code": "T-02-1",
+      "name": "Espacio T-02-1",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        12.08064,
+        26.42624
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-I.jpg"
+    },
+    {
+      "id": "E01-I-20",
+      "code": "T-24",
+      "name": "Espacio T-24",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        -0.9234,
+        14.46405
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-I.jpg"
+    },
+    {
+      "id": "E01-I-21",
+      "code": "T-12",
+      "name": "Planta de refrigeración para la climatización",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        1.09093,
+        10.68354
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        105.09
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-12"
+    },
+    {
+      "id": "E01-I-22",
+      "code": "T-05",
+      "name": "Almacén de mantenimiento",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        13.10858,
+        22.44273
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        30.59
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-05"
+    },
+    {
+      "id": "E01-I-23",
+      "code": "T-04",
+      "name": "Equipos de boletería",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        15.65132,
+        17.36614
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        30.18
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-04"
+    },
+    {
+      "id": "E01-I-24",
+      "code": "T-23",
+      "name": "Cuarto PDAP",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        7.10817,
+        17.49839
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        34.0
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-23"
+    },
+    {
+      "id": "E01-I-25",
+      "code": "T-00",
+      "name": "Corredor técnico",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        9.57765,
+        8.98336
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        113.77,
+        7.16
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-00"
+    },
+    {
+      "id": "E01-I-26",
+      "code": "T-03",
+      "name": "Telecomunicación estación / corriente débil",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        4.48977,
+        4.00022
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        119.53
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-03"
+    },
+    {
+      "id": "E01-I-27",
+      "code": "T-10",
+      "name": "Local equipo electromecánico",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        13.19754,
+        8.12408
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        11.07
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-10"
+    },
+    {
+      "id": "E01-I-28",
+      "code": "T-09",
+      "name": "Almacén equipo eléctrico",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        15.61085,
+        9.45325
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        11.03
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-09"
+    },
+    {
+      "id": "E01-I-29",
+      "code": "T-11",
+      "name": "Ventilación",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        7.5361,
+        -2.0215
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        136.59
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-11"
+    },
+    {
+      "id": "E01-I-30",
+      "code": "O-22",
+      "name": "Oficina de mantenimiento",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        16.73071,
+        3.09076
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        30.02
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-22"
+    },
+    {
+      "id": "E01-I-31",
+      "code": "O-08",
+      "name": "Sala de reposo de empleados",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        21.79704,
+        5.75571
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        52.59
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-08"
+    },
+    {
+      "id": "E01-I-32",
+      "code": "O-15",
+      "name": "Local de primeros auxilios",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        12.55532,
+        -3.83319
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        17.14
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-15"
+    },
+    {
+      "id": "E01-I-33",
+      "code": "O-07",
+      "name": "Cuarto de limpieza",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        19.47622,
+        -3.05114
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        3.86,
+        2.98,
+        16.09
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-07"
+    },
+    {
+      "id": "E01-I-34",
+      "code": "O-20",
+      "name": "Cuarto de lactancia",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        24.18337,
+        1.80962
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        13.73
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-20"
+    },
+    {
+      "id": "E01-I-35",
+      "code": "O-16",
+      "name": "Sala de reunión",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        26.60866,
+        -1.14442
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        33.92
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-16"
+    },
+    {
+      "id": "E01-I-36",
+      "code": "O-12",
+      "name": "Vestidores empleados · mujeres",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        10.19827,
+        -11.20253
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        30.19
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-12"
+    },
+    {
+      "id": "E01-I-37",
+      "code": "O-10",
+      "name": "Baños empleados · mujeres",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        14.75764,
+        -8.72736
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        23.97
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-10"
+    },
+    {
+      "id": "E01-I-38",
+      "code": "O-00",
+      "name": "Corredor operacional",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        17.44158,
+        -6.0801
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        62.35
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-00"
+    },
+    {
+      "id": "E01-I-39",
+      "code": "O-18",
+      "name": "Espacio O-18",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        22.37486,
+        -7.65441
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-I.jpg"
+    },
+    {
+      "id": "E01-I-40",
+      "code": "O-19",
+      "name": "Almacenamiento de basuras Metro",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        22.52383,
+        -11.66213
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        36.58
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-19"
+    },
+    {
+      "id": "E01-I-41",
+      "code": "O-11",
+      "name": "Vestidores empleados · hombres",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        13.74618,
+        -18.08952
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        30.64
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-11"
+    },
+    {
+      "id": "E01-I-42",
+      "code": "O-09",
+      "name": "Baños empleados · hombres",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        18.16924,
+        -15.28246
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        24.66
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-09"
+    },
+    {
+      "id": "E01-I-43",
+      "code": "O-14",
+      "name": "Espacio O-14",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        22.97029,
+        -14.78257
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-I.jpg"
+    },
+    {
+      "id": "E01-I-44",
+      "code": "O-13",
+      "name": "Estación de Policía Metro",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        26.34918,
+        -13.05918
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        16.21
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-13"
+    },
+    {
+      "id": "E01-I-45",
+      "code": "O-03",
+      "name": "Baños públicos · mujeres",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        20.96579,
+        -20.91148
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#7dc3b1",
+      "type": "Servicio público",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        28.83
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-03"
+    },
+    {
+      "id": "E01-I-46",
+      "code": "O-25",
+      "name": "Espacio O-25",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        23.77392,
+        -20.01896
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#7dc3b1",
+      "type": "Servicio público",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-I.jpg"
+    },
+    {
+      "id": "E01-I-47",
+      "code": "O-23",
+      "name": "Baño público · familiar",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        25.71923,
+        -17.88753
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#7dc3b1",
+      "type": "Servicio público",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        6.85,
+        7.34
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-23"
+    },
+    {
+      "id": "E01-I-48",
+      "code": "O-04",
+      "name": "Control de acceso baños públicos",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        26.70558,
+        -19.58656
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#7dc3b1",
+      "type": "Servicio público",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        9.25,
+        4.49
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-04"
+    },
+    {
+      "id": "E01-I-49",
+      "code": "O-07",
+      "name": "Cuarto de limpieza",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        27.58998,
+        -16.60527
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#7dc3b1",
+      "type": "Servicio público",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        3.86,
+        2.98,
+        16.09
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-07"
+    },
+    {
+      "id": "E01-I-50",
+      "code": "PA",
+      "name": "Área paga",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        24.83876,
+        -24.83259
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fbd976",
+      "type": "Área paga",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        326.87,
+        257.94
+      ],
+      "referencePage": 7,
+      "referenceCode": "PA"
+    },
+    {
+      "id": "E01-I-51",
+      "code": "O-01-2",
+      "name": "Espacio O-01-2",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        24.04007,
+        -37.56137
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-I.jpg"
+    },
+    {
+      "id": "E01-I-52",
+      "code": "O-06",
+      "name": "Supervisor de la estación",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        37.21715,
+        -34.36929
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        20.01
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-06"
+    },
+    {
+      "id": "E01-I-53",
+      "code": "O-05",
+      "name": "Venta de boletos e información",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        39.11397,
+        -37.92927
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        4.04
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-05"
+    },
+    {
+      "id": "E01-I-54",
+      "code": "T-25",
+      "name": "Espacio T-25",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        40.5482,
+        -39.63195
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-I.jpg"
+    },
+    {
+      "id": "E01-I-55",
+      "code": "R-201",
+      "name": "Espacio R-201",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        48.6803,
+        -44.39472
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Comercial · verde claro",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-I.jpg"
+    },
+    {
+      "id": "E01-I-56",
+      "code": "NPA",
+      "name": "Área no paga",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        36.83898,
+        -39.6702
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fff8b8",
+      "type": "Área no paga",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        341.49,
+        240.53
+      ],
+      "referencePage": 7,
+      "referenceCode": "NPA"
+    },
+    {
+      "id": "E01-I-57",
+      "code": "T-21",
+      "name": "Inspección de ducto",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        30.0075,
+        -63.67363
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        4.92,
+        5.41,
+        5.85,
+        7.95,
+        6.6
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-21"
+    },
+    {
+      "id": "E01-I-58",
+      "code": "T-21",
+      "name": "Inspección de ducto",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        35.51096,
+        -61.22041
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        4.92,
+        5.41,
+        5.85,
+        7.95,
+        6.6
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-21"
+    },
+    {
+      "id": "E01-I-59",
+      "code": "T-21",
+      "name": "Inspección de ducto",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        38.66089,
+        -59.29554
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        4.92,
+        5.41,
+        5.85,
+        7.95,
+        6.6
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-21"
+    },
+    {
+      "id": "E01-I-60",
+      "code": "T-20-L",
+      "name": "Medidores (luz)",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        35.08715,
+        -65.97915
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        31.76
+      ],
+      "referencePage": 7,
+      "referenceCode": "T-20-L"
+    },
+    {
+      "id": "E01-I-61",
+      "code": "O-17",
+      "name": "Operadores telecomunicaciones exteriores",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        41.62882,
+        -58.39862
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        39.06
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-17"
+    },
+    {
+      "id": "E01-I-62",
+      "code": "O-21",
+      "name": "Almacenamiento de la estación",
+      "level": "I",
+      "building": "E01 · Carrera 96",
+      "floor": 2548.5,
+      "center": [
+        54.6669,
+        -55.40217
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-I.jpg",
+      "referenceAreas": [
+        27.49
+      ],
+      "referencePage": 7,
+      "referenceCode": "O-21"
+    },
+    {
+      "id": "E01-P-0",
+      "code": "ZDR",
+      "name": "Zona de refugio (PMR)",
+      "level": "P",
+      "building": "E01 · Carrera 96",
+      "floor": 2558.24,
+      "center": [
+        -33.87585,
+        69.39091
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#648bc8",
+      "type": "Zona de refugio (PMR)",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-P.jpg",
+      "referenceAreas": [
+        6.08,
+        6.08,
+        6.08,
+        6.08
+      ],
+      "referencePage": 8,
+      "referenceCode": "ZDR"
+    },
+    {
+      "id": "E01-P-1",
+      "code": "ZDR",
+      "name": "Zona de refugio (PMR)",
+      "level": "P",
+      "building": "E01 · Carrera 96",
+      "floor": 2558.24,
+      "center": [
+        -20.08194,
+        76.73021
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#648bc8",
+      "type": "Zona de refugio (PMR)",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-P.jpg",
+      "referenceAreas": [
+        6.08,
+        6.08,
+        6.08,
+        6.08
+      ],
+      "referencePage": 8,
+      "referenceCode": "ZDR"
+    },
+    {
+      "id": "E01-P-2",
+      "code": "PA",
+      "name": "Área paga",
+      "level": "P",
+      "building": "E01 · Carrera 96",
+      "floor": 2558.24,
+      "center": [
+        -19.77995,
+        68.66648
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fbd976",
+      "type": "Área paga",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-P.jpg",
+      "referenceAreas": [
+        913.46,
+        1011.68
+      ],
+      "referencePage": 8,
+      "referenceCode": "PA"
+    },
+    {
+      "id": "E01-P-3",
+      "code": "PA",
+      "name": "Área paga",
+      "level": "P",
+      "building": "E01 · Carrera 96",
+      "floor": 2558.24,
+      "center": [
+        -29.70382,
+        62.56386
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fbd976",
+      "type": "Área paga",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-P.jpg",
+      "referenceAreas": [
+        913.46,
+        1011.68
+      ],
+      "referencePage": 8,
+      "referenceCode": "PA"
+    },
+    {
+      "id": "E01-P-4",
+      "code": "T-25",
+      "name": "Nodos de acceso de comunicaciones",
+      "level": "P",
+      "building": "E01 · Carrera 96",
+      "floor": 2558.24,
+      "center": [
+        -18.68606,
+        31.29287
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-P.jpg",
+      "referenceAreas": [
+        4.56,
+        5.3,
+        5.36,
+        5.36
+      ],
+      "referencePage": 8,
+      "referenceCode": "T-25"
+    },
+    {
+      "id": "E01-P-5",
+      "code": "T-21",
+      "name": "Espacio T-21",
+      "level": "P",
+      "building": "E01 · Carrera 96",
+      "floor": 2558.24,
+      "center": [
+        -17.05186,
+        30.31189
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-P.jpg"
+    },
+    {
+      "id": "E01-P-6",
+      "code": "T-25",
+      "name": "Nodos de acceso de comunicaciones",
+      "level": "P",
+      "building": "E01 · Carrera 96",
+      "floor": 2558.24,
+      "center": [
+        0.80288,
+        41.62119
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-P.jpg",
+      "referenceAreas": [
+        4.56,
+        5.3,
+        5.36,
+        5.36
+      ],
+      "referencePage": 8,
+      "referenceCode": "T-25"
+    },
+    {
+      "id": "E01-P-7",
+      "code": "T-21",
+      "name": "Espacio T-21",
+      "level": "P",
+      "building": "E01 · Carrera 96",
+      "floor": 2558.24,
+      "center": [
+        2.32377,
+        40.62104
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-P.jpg"
+    },
+    {
+      "id": "E01-P-8",
+      "code": "R-307",
+      "name": "Espacio R-307",
+      "level": "P",
+      "building": "E01 · Carrera 96",
+      "floor": 2558.24,
+      "center": [
+        -16.13841,
+        28.90629
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Comercial · verde claro",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-P.jpg"
+    },
+    {
+      "id": "E01-P-9",
+      "code": "R-306",
+      "name": "Espacio R-306",
+      "level": "P",
+      "building": "E01 · Carrera 96",
+      "floor": 2558.24,
+      "center": [
+        3.20514,
+        39.19838
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Comercial · verde claro",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-P.jpg"
+    },
+    {
+      "id": "E01-P-10",
+      "code": "T-25",
+      "name": "Nodos de acceso de comunicaciones",
+      "level": "P",
+      "building": "E01 · Carrera 96",
+      "floor": 2558.24,
+      "center": [
+        13.43832,
+        -29.08867
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-P.jpg",
+      "referenceAreas": [
+        4.56,
+        5.3,
+        5.36,
+        5.36
+      ],
+      "referencePage": 8,
+      "referenceCode": "T-25"
+    },
+    {
+      "id": "E01-P-11",
+      "code": "T-25",
+      "name": "Nodos de acceso de comunicaciones",
+      "level": "P",
+      "building": "E01 · Carrera 96",
+      "floor": 2558.24,
+      "center": [
+        34.44997,
+        -17.90904
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-P.jpg",
+      "referenceAreas": [
+        4.56,
+        5.3,
+        5.36,
+        5.36
+      ],
+      "referencePage": 8,
+      "referenceCode": "T-25"
+    },
+    {
+      "id": "E01-P-12",
+      "code": "R-305",
+      "name": "Espacio R-305",
+      "level": "P",
+      "building": "E01 · Carrera 96",
+      "floor": 2558.24,
+      "center": [
+        19.71979,
+        -38.32985
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Comercial · verde claro",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-P.jpg"
+    },
+    {
+      "id": "E01-P-13",
+      "code": "R-304",
+      "name": "Espacio R-304",
+      "level": "P",
+      "building": "E01 · Carrera 96",
+      "floor": 2558.24,
+      "center": [
+        38.99918,
+        -28.0719
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Comercial · verde claro",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-P.jpg"
+    },
+    {
+      "id": "E01-P-14",
+      "code": "ZDR",
+      "name": "Zona de refugio (PMR)",
+      "level": "P",
+      "building": "E01 · Carrera 96",
+      "floor": 2558.24,
+      "center": [
+        37.70339,
+        -65.4422
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#648bc8",
+      "type": "Zona de refugio (PMR)",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-P.jpg",
+      "referenceAreas": [
+        6.08,
+        6.08,
+        6.08,
+        6.08
+      ],
+      "referencePage": 8,
+      "referenceCode": "ZDR"
+    },
+    {
+      "id": "E01-P-15",
+      "code": "ZDR",
+      "name": "Zona de refugio (PMR)",
+      "level": "P",
+      "building": "E01 · Carrera 96",
+      "floor": 2558.24,
+      "center": [
+        51.72185,
+        -57.98342
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#648bc8",
+      "type": "Zona de refugio (PMR)",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Nombre por código y nivel; correspondencia geométrica con VDD pendiente",
+      "source": "architecture-P.jpg",
+      "referenceAreas": [
+        6.08,
+        6.08,
+        6.08,
+        6.08
+      ],
+      "referencePage": 8,
+      "referenceCode": "ZDR"
+    },
+    {
+      "id": "E01-P-16",
+      "code": "O-03",
+      "name": "Espacio O-03",
+      "level": "P",
+      "building": "E01 · Carrera 96",
+      "floor": 2558.24,
+      "center": [
+        -39.85158,
+        67.85629
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#9d68bd",
+      "type": "Morado · convención pendiente",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-P.jpg"
+    },
+    {
+      "id": "E01-P-17",
+      "code": "O-01",
+      "name": "Espacio O-01",
+      "level": "P",
+      "building": "E01 · Carrera 96",
+      "floor": 2558.24,
+      "center": [
+        -17.0756,
+        79.97467
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#9d68bd",
+      "type": "Morado · convención pendiente",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-P.jpg"
+    },
+    {
+      "id": "E01-P-18",
+      "code": "O-04",
+      "name": "Espacio O-04",
+      "level": "P",
+      "building": "E01 · Carrera 96",
+      "floor": 2558.24,
+      "center": [
+        33.23231,
+        -69.26038
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#9d68bd",
+      "type": "Morado · convención pendiente",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-P.jpg"
+    },
+    {
+      "id": "E01-P-19",
+      "code": "O-02",
+      "name": "Espacio O-02",
+      "level": "P",
+      "building": "E01 · Carrera 96",
+      "floor": 2558.24,
+      "center": [
+        55.94414,
+        -57.17614
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#9d68bd",
+      "type": "Morado · convención pendiente",
+      "area": null,
+      "areaSource": "Área del espacio actual pendiente: las distribuciones de ambas revisiones difieren.",
+      "pdfPage": null,
+      "status": "Código del plano vigente; sin correspondencia por código y nivel en el cuadro VDD",
+      "source": "architecture-P.jpg"
+    }
+  ],
+  "rasterLayers": [
+    {
+      "level": "B",
+      "type": "Área técnica",
+      "color": "#d5d9e3",
+      "floor": 2536.1,
+      "image": "./assets/stations/e01/spaces/B-0.png",
+      "corners": [
+        [
+          19.57886,
+          -45.43449
+        ],
+        [
+          43.34812,
+          -32.92712
+        ],
+        [
+          58.54323,
+          -61.18915
+        ],
+        [
+          34.77397,
+          -73.69652
+        ]
+      ]
+    },
+    {
+      "level": "B",
+      "type": "Comercial · verde claro",
+      "color": "#cfe7ce",
+      "floor": 2536.1,
+      "image": "./assets/stations/e01/spaces/B-6.png",
+      "corners": [
+        [
+          19.57886,
+          -45.43449
+        ],
+        [
+          43.34812,
+          -32.92712
+        ],
+        [
+          58.54323,
+          -61.18915
+        ],
+        [
+          34.77397,
+          -73.69652
+        ]
+      ]
+    },
+    {
+      "level": "A",
+      "type": "Área técnica",
+      "color": "#d5d9e3",
+      "floor": 2540.9,
+      "image": "./assets/stations/e01/spaces/A-0.png",
+      "corners": [
+        [
+          -39.89756,
+          67.67254
+        ],
+        [
+          -26.00245,
+          75.08488
+        ],
+        [
+          49.07678,
+          -65.82717
+        ],
+        [
+          35.18167,
+          -73.23952
+        ]
+      ]
+    },
+    {
+      "level": "A",
+      "type": "Área pública",
+      "color": "#81bdcd",
+      "floor": 2540.9,
+      "image": "./assets/stations/e01/spaces/A-1.png",
+      "corners": [
+        [
+          -39.89756,
+          67.67254
+        ],
+        [
+          -26.00245,
+          75.08488
+        ],
+        [
+          49.07678,
+          -65.82717
+        ],
+        [
+          35.18167,
+          -73.23952
+        ]
+      ]
+    },
+    {
+      "level": "A",
+      "type": "Área no paga",
+      "color": "#fff8b8",
+      "floor": 2540.9,
+      "image": "./assets/stations/e01/spaces/A-2.png",
+      "corners": [
+        [
+          -39.89756,
+          67.67254
+        ],
+        [
+          -26.00245,
+          75.08488
+        ],
+        [
+          49.07678,
+          -65.82717
+        ],
+        [
+          35.18167,
+          -73.23952
+        ]
+      ]
+    },
+    {
+      "level": "A",
+      "type": "Área paga",
+      "color": "#fbd976",
+      "floor": 2540.9,
+      "image": "./assets/stations/e01/spaces/A-3.png",
+      "corners": [
+        [
+          -39.89756,
+          67.67254
+        ],
+        [
+          -26.00245,
+          75.08488
+        ],
+        [
+          49.07678,
+          -65.82717
+        ],
+        [
+          35.18167,
+          -73.23952
+        ]
+      ]
+    },
+    {
+      "level": "A",
+      "type": "Servicio público",
+      "color": "#7dc3b1",
+      "floor": 2540.9,
+      "image": "./assets/stations/e01/spaces/A-5.png",
+      "corners": [
+        [
+          -39.89756,
+          67.67254
+        ],
+        [
+          -26.00245,
+          75.08488
+        ],
+        [
+          49.07678,
+          -65.82717
+        ],
+        [
+          35.18167,
+          -73.23952
+        ]
+      ]
+    },
+    {
+      "level": "A",
+      "type": "Comercial · verde claro",
+      "color": "#cfe7ce",
+      "floor": 2540.9,
+      "image": "./assets/stations/e01/spaces/A-6.png",
+      "corners": [
+        [
+          -39.89756,
+          67.67254
+        ],
+        [
+          -26.00245,
+          75.08488
+        ],
+        [
+          49.07678,
+          -65.82717
+        ],
+        [
+          35.18167,
+          -73.23952
+        ]
+      ]
+    },
+    {
+      "level": "I",
+      "type": "Área técnica",
+      "color": "#d5d9e3",
+      "floor": 2548.5,
+      "image": "./assets/stations/e01/spaces/I-0.png",
+      "corners": [
+        [
+          -41.83434,
+          67.88821
+        ],
+        [
+          -15.63982,
+          81.87607
+        ],
+        [
+          58.47075,
+          -57.21538
+        ],
+        [
+          32.27623,
+          -71.20323
+        ]
+      ]
+    },
+    {
+      "level": "I",
+      "type": "Área pública",
+      "color": "#81bdcd",
+      "floor": 2548.5,
+      "image": "./assets/stations/e01/spaces/I-1.png",
+      "corners": [
+        [
+          -41.83434,
+          67.88821
+        ],
+        [
+          -15.63982,
+          81.87607
+        ],
+        [
+          58.47075,
+          -57.21538
+        ],
+        [
+          32.27623,
+          -71.20323
+        ]
+      ]
+    },
+    {
+      "level": "I",
+      "type": "Área no paga",
+      "color": "#fff8b8",
+      "floor": 2548.5,
+      "image": "./assets/stations/e01/spaces/I-2.png",
+      "corners": [
+        [
+          -41.83434,
+          67.88821
+        ],
+        [
+          -15.63982,
+          81.87607
+        ],
+        [
+          58.47075,
+          -57.21538
+        ],
+        [
+          32.27623,
+          -71.20323
+        ]
+      ]
+    },
+    {
+      "level": "I",
+      "type": "Área paga",
+      "color": "#fbd976",
+      "floor": 2548.5,
+      "image": "./assets/stations/e01/spaces/I-3.png",
+      "corners": [
+        [
+          -41.83434,
+          67.88821
+        ],
+        [
+          -15.63982,
+          81.87607
+        ],
+        [
+          58.47075,
+          -57.21538
+        ],
+        [
+          32.27623,
+          -71.20323
+        ]
+      ]
+    },
+    {
+      "level": "I",
+      "type": "Área operacional",
+      "color": "#66b5fa",
+      "floor": 2548.5,
+      "image": "./assets/stations/e01/spaces/I-4.png",
+      "corners": [
+        [
+          -41.83434,
+          67.88821
+        ],
+        [
+          -15.63982,
+          81.87607
+        ],
+        [
+          58.47075,
+          -57.21538
+        ],
+        [
+          32.27623,
+          -71.20323
+        ]
+      ]
+    },
+    {
+      "level": "I",
+      "type": "Servicio público",
+      "color": "#7dc3b1",
+      "floor": 2548.5,
+      "image": "./assets/stations/e01/spaces/I-5.png",
+      "corners": [
+        [
+          -41.83434,
+          67.88821
+        ],
+        [
+          -15.63982,
+          81.87607
+        ],
+        [
+          58.47075,
+          -57.21538
+        ],
+        [
+          32.27623,
+          -71.20323
+        ]
+      ]
+    },
+    {
+      "level": "I",
+      "type": "Comercial · verde claro",
+      "color": "#cfe7ce",
+      "floor": 2548.5,
+      "image": "./assets/stations/e01/spaces/I-6.png",
+      "corners": [
+        [
+          -41.83434,
+          67.88821
+        ],
+        [
+          -15.63982,
+          81.87607
+        ],
+        [
+          58.47075,
+          -57.21538
+        ],
+        [
+          32.27623,
+          -71.20323
+        ]
+      ]
+    },
+    {
+      "level": "I",
+      "type": "Zona de refugio (PMR)",
+      "color": "#648bc8",
+      "floor": 2548.5,
+      "image": "./assets/stations/e01/spaces/I-7.png",
+      "corners": [
+        [
+          -41.83434,
+          67.88821
+        ],
+        [
+          -15.63982,
+          81.87607
+        ],
+        [
+          58.47075,
+          -57.21538
+        ],
+        [
+          32.27623,
+          -71.20323
+        ]
+      ]
+    },
+    {
+      "level": "I",
+      "type": "Área cultural",
+      "color": "#ff9898",
+      "floor": 2548.5,
+      "image": "./assets/stations/e01/spaces/I-8.png",
+      "corners": [
+        [
+          -41.83434,
+          67.88821
+        ],
+        [
+          -15.63982,
+          81.87607
+        ],
+        [
+          58.47075,
+          -57.21538
+        ],
+        [
+          32.27623,
+          -71.20323
+        ]
+      ]
+    },
+    {
+      "level": "P",
+      "type": "Área técnica",
+      "color": "#d5d9e3",
+      "floor": 2558.24,
+      "image": "./assets/stations/e01/spaces/P-0.png",
+      "corners": [
+        [
+          -42.71446,
+          69.21159
+        ],
+        [
+          -16.08901,
+          83.37814
+        ],
+        [
+          59.18167,
+          -57.92088
+        ],
+        [
+          32.55623,
+          -72.08743
+        ]
+      ]
+    },
+    {
+      "level": "P",
+      "type": "Área pública",
+      "color": "#81bdcd",
+      "floor": 2558.24,
+      "image": "./assets/stations/e01/spaces/P-1.png",
+      "corners": [
+        [
+          -42.71446,
+          69.21159
+        ],
+        [
+          -16.08901,
+          83.37814
+        ],
+        [
+          59.18167,
+          -57.92088
+        ],
+        [
+          32.55623,
+          -72.08743
+        ]
+      ]
+    },
+    {
+      "level": "P",
+      "type": "Área no paga",
+      "color": "#fff8b8",
+      "floor": 2558.24,
+      "image": "./assets/stations/e01/spaces/P-2.png",
+      "corners": [
+        [
+          -42.71446,
+          69.21159
+        ],
+        [
+          -16.08901,
+          83.37814
+        ],
+        [
+          59.18167,
+          -57.92088
+        ],
+        [
+          32.55623,
+          -72.08743
+        ]
+      ]
+    },
+    {
+      "level": "P",
+      "type": "Área paga",
+      "color": "#fbd976",
+      "floor": 2558.24,
+      "image": "./assets/stations/e01/spaces/P-3.png",
+      "corners": [
+        [
+          -42.71446,
+          69.21159
+        ],
+        [
+          -16.08901,
+          83.37814
+        ],
+        [
+          59.18167,
+          -57.92088
+        ],
+        [
+          32.55623,
+          -72.08743
+        ]
+      ]
+    },
+    {
+      "level": "P",
+      "type": "Área operacional",
+      "color": "#66b5fa",
+      "floor": 2558.24,
+      "image": "./assets/stations/e01/spaces/P-4.png",
+      "corners": [
+        [
+          -42.71446,
+          69.21159
+        ],
+        [
+          -16.08901,
+          83.37814
+        ],
+        [
+          59.18167,
+          -57.92088
+        ],
+        [
+          32.55623,
+          -72.08743
+        ]
+      ]
+    },
+    {
+      "level": "P",
+      "type": "Comercial · verde claro",
+      "color": "#cfe7ce",
+      "floor": 2558.24,
+      "image": "./assets/stations/e01/spaces/P-6.png",
+      "corners": [
+        [
+          -42.71446,
+          69.21159
+        ],
+        [
+          -16.08901,
+          83.37814
+        ],
+        [
+          59.18167,
+          -57.92088
+        ],
+        [
+          32.55623,
+          -72.08743
+        ]
+      ]
+    },
+    {
+      "level": "P",
+      "type": "Zona de refugio (PMR)",
+      "color": "#648bc8",
+      "floor": 2558.24,
+      "image": "./assets/stations/e01/spaces/P-7.png",
+      "corners": [
+        [
+          -42.71446,
+          69.21159
+        ],
+        [
+          -16.08901,
+          83.37814
+        ],
+        [
+          59.18167,
+          -57.92088
+        ],
+        [
+          32.55623,
+          -72.08743
+        ]
+      ]
+    },
+    {
+      "level": "P",
+      "type": "Morado · convención pendiente",
+      "color": "#9d68bd",
+      "floor": 2558.24,
+      "image": "./assets/stations/e01/spaces/P-9.png",
+      "corners": [
+        [
+          -42.71446,
+          69.21159
+        ],
+        [
+          -16.08901,
+          83.37814
+        ],
+        [
+          59.18167,
+          -57.92088
+        ],
+        [
+          32.55623,
+          -72.08743
+        ]
+      ]
+    }
+  ],
+  "unmappedPdfSpaces": [],
+  "referenceSchedule": [
+    {
+      "level": "B",
+      "code": "NPA",
+      "name": "Área no paga",
+      "areas": [
+        484.87
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "B",
+      "code": "O-21",
+      "name": "Almacenamiento de la estación",
+      "areas": [
+        35.87
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "B",
+      "code": "P-01",
+      "name": "Biciparqueaderos",
+      "areas": [
+        1324.27
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "B",
+      "code": "P-02",
+      "name": "Local operador biciparqueaderos",
+      "areas": [
+        35.11
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "B",
+      "code": "P-03",
+      "name": "Baño operador biciparqueaderos",
+      "areas": [
+        6.41
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "B",
+      "code": "P-04",
+      "name": "Taller de bicicletas",
+      "areas": [
+        50.12
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "B",
+      "code": "P-08",
+      "name": "Carga de vehículos eléctricos",
+      "areas": [
+        233.35
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "B",
+      "code": "T-25",
+      "name": "Nodos de acceso de comunicaciones",
+      "areas": [
+        2.76
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "B",
+      "code": "T-00",
+      "name": "Corredor técnico",
+      "areas": [
+        30.02,
+        16.94
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "B",
+      "code": "T-13",
+      "name": "Cuarto de bombas de suministro de agua",
+      "areas": [
+        26.98
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "B",
+      "code": "T-14-A",
+      "name": "Tanque de suministro de agua",
+      "areas": [
+        14.32
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "B",
+      "code": "T-14-B",
+      "name": "Tanque de suministro de agua",
+      "areas": [
+        15.35
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "B",
+      "code": "T-15",
+      "name": "Tanque de sistema de protección de incendios",
+      "areas": [
+        52.36
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "B",
+      "code": "T-16",
+      "name": "Cuarto de bombas de sistema de protección de incendios",
+      "areas": [
+        35.93
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "B",
+      "code": "T-17",
+      "name": "Tanque de recuperación de aguas lluvias",
+      "areas": [
+        16.84
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "B",
+      "code": "T-18",
+      "name": "Cuarto de bombas de recuperación de aguas lluvias y equipo de filtración",
+      "areas": [
+        40.1
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "B",
+      "code": "T-19-A",
+      "name": "Tanque de agua tratada",
+      "areas": [
+        16.48
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "B",
+      "code": "T-19-B",
+      "name": "Tanque de agua tratada",
+      "areas": [
+        16.48
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "B",
+      "code": "T-20-W",
+      "name": "Medidores (agua)",
+      "areas": [
+        50.51
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "B",
+      "code": "T-21",
+      "name": "Inspección de ducto",
+      "areas": [
+        9.05
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "B",
+      "code": "ZDR",
+      "name": "Zona de refugio (PMR)",
+      "areas": [
+        3.53,
+        3.37
+      ],
+      "pdfPage": 5
+    },
+    {
+      "level": "A",
+      "code": "C-01",
+      "name": "Área cultural",
+      "areas": [
+        4.0
+      ],
+      "pdfPage": 6
+    },
+    {
+      "level": "A",
+      "code": "NPA",
+      "name": "Área no paga",
+      "areas": [
+        241.0,
+        200.0,
+        75.0,
+        314.0,
+        214.0
+      ],
+      "pdfPage": 6
+    },
+    {
+      "level": "A",
+      "code": "P-05",
+      "name": "Bibliometro",
+      "areas": [
+        59.0
+      ],
+      "pdfPage": 6
+    },
+    {
+      "level": "A",
+      "code": "P-06",
+      "name": "Instituto para la Economía Social",
+      "areas": [
+        15.0
+      ],
+      "pdfPage": 6
+    },
+    {
+      "level": "A",
+      "code": "P-07",
+      "name": "Salón múltiple EMB",
+      "areas": [
+        105.0
+      ],
+      "pdfPage": 6
+    },
+    {
+      "level": "A",
+      "code": "T-00",
+      "name": "Corredor técnico",
+      "areas": [
+        35.0
+      ],
+      "pdfPage": 6
+    },
+    {
+      "level": "A",
+      "code": "T-02-1",
+      "name": "Señalización",
+      "areas": [
+        35.0
+      ],
+      "pdfPage": 6
+    },
+    {
+      "level": "A",
+      "code": "T-08",
+      "name": "Centro de transformación Codensa (CTE)",
+      "areas": [
+        35.0
+      ],
+      "pdfPage": 6
+    },
+    {
+      "level": "A",
+      "code": "T-20-L",
+      "name": "Medidores (luz)",
+      "areas": [
+        9.0
+      ],
+      "pdfPage": 6
+    },
+    {
+      "level": "A",
+      "code": "T-21",
+      "name": "Inspección de ducto",
+      "areas": [
+        8.0,
+        5.0,
+        4.0,
+        8.0
+      ],
+      "pdfPage": 6
+    },
+    {
+      "level": "A",
+      "code": "T-24",
+      "name": "TETRA UPS",
+      "areas": [
+        59.0
+      ],
+      "pdfPage": 6
+    },
+    {
+      "level": "A",
+      "code": "T-25",
+      "name": "Nodos de acceso de comunicaciones",
+      "areas": [
+        11.0,
+        10.0
+      ],
+      "pdfPage": 6
+    },
+    {
+      "level": "I",
+      "code": "T-02",
+      "name": "Local de conducción automática (CBTC)",
+      "areas": [
+        59.13
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "T-03",
+      "name": "Telecomunicación estación / corriente débil",
+      "areas": [
+        119.53
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "T-04",
+      "name": "Equipos de boletería",
+      "areas": [
+        30.18
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "T-05",
+      "name": "Almacén de mantenimiento",
+      "areas": [
+        30.59
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "T-06",
+      "name": "Sala de tableros",
+      "areas": [
+        68.05
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "T-07",
+      "name": "Centro de transformación (CTE)",
+      "areas": [
+        188.14
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "T-09",
+      "name": "Almacén equipo eléctrico",
+      "areas": [
+        11.03
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "T-10",
+      "name": "Local equipo electromecánico",
+      "areas": [
+        11.07
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "T-11",
+      "name": "Ventilación",
+      "areas": [
+        136.59
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "T-12",
+      "name": "Planta de refrigeración para la climatización",
+      "areas": [
+        105.09
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "T-20-L",
+      "name": "Medidores (luz)",
+      "areas": [
+        31.76
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "T-21",
+      "name": "Inspección de ducto",
+      "areas": [
+        4.92,
+        5.41,
+        5.85,
+        7.95,
+        6.6
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "T-22",
+      "name": "Cuarto de UPS",
+      "areas": [
+        127.16
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "T-23",
+      "name": "Cuarto PDAP",
+      "areas": [
+        34.0
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-07",
+      "name": "Cuarto de limpieza",
+      "areas": [
+        3.86,
+        2.98,
+        16.09
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-08",
+      "name": "Sala de reposo de empleados",
+      "areas": [
+        52.59
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-09",
+      "name": "Baños empleados · hombres",
+      "areas": [
+        24.66
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-10",
+      "name": "Baños empleados · mujeres",
+      "areas": [
+        23.97
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-11",
+      "name": "Vestidores empleados · hombres",
+      "areas": [
+        30.64
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-12",
+      "name": "Vestidores empleados · mujeres",
+      "areas": [
+        30.19
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-13",
+      "name": "Estación de Policía Metro",
+      "areas": [
+        16.21
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-15",
+      "name": "Local de primeros auxilios",
+      "areas": [
+        17.14
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-16",
+      "name": "Sala de reunión",
+      "areas": [
+        33.92
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-17",
+      "name": "Operadores telecomunicaciones exteriores",
+      "areas": [
+        39.06
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-19",
+      "name": "Almacenamiento de basuras Metro",
+      "areas": [
+        36.58
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-20",
+      "name": "Cuarto de lactancia",
+      "areas": [
+        13.73
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-21",
+      "name": "Almacenamiento de la estación",
+      "areas": [
+        27.49
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-22",
+      "name": "Oficina de mantenimiento",
+      "areas": [
+        30.02
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-23",
+      "name": "Baño público · familiar",
+      "areas": [
+        6.85,
+        7.34
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "PA",
+      "name": "Área paga",
+      "areas": [
+        326.87,
+        257.94
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "T-00",
+      "name": "Corredor técnico",
+      "areas": [
+        113.77,
+        7.16
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "T-01",
+      "name": "Subestación de tracción (SET)",
+      "areas": [
+        229.58
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "C",
+      "name": "Vitrina para la memoria local",
+      "areas": [
+        7.91,
+        9.7
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "NPA",
+      "name": "Área no paga",
+      "areas": [
+        341.49,
+        240.53
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-00",
+      "name": "Corredor operacional",
+      "areas": [
+        62.35
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-01",
+      "name": "Venta automática de boletos (AFC)",
+      "areas": [
+        9.47,
+        20.85
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-02",
+      "name": "Baños públicos · hombres",
+      "areas": [
+        32.48
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-03",
+      "name": "Baños públicos · mujeres",
+      "areas": [
+        28.83
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-04",
+      "name": "Control de acceso baños públicos",
+      "areas": [
+        9.25,
+        4.49
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-05",
+      "name": "Venta de boletos e información",
+      "areas": [
+        4.04
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "I",
+      "code": "O-06",
+      "name": "Supervisor de la estación",
+      "areas": [
+        20.01
+      ],
+      "pdfPage": 7
+    },
+    {
+      "level": "P",
+      "code": "J-01",
+      "name": "Jardín",
+      "areas": [
+        15.28
+      ],
+      "pdfPage": 8
+    },
+    {
+      "level": "P",
+      "code": "J-02",
+      "name": "Jardín",
+      "areas": [
+        15.28
+      ],
+      "pdfPage": 8
+    },
+    {
+      "level": "P",
+      "code": "J-03",
+      "name": "Jardín",
+      "areas": [
+        15.28
+      ],
+      "pdfPage": 8
+    },
+    {
+      "level": "P",
+      "code": "J-04",
+      "name": "Jardín",
+      "areas": [
+        19.46
+      ],
+      "pdfPage": 8
+    },
+    {
+      "level": "P",
+      "code": "PA",
+      "name": "Área paga",
+      "areas": [
+        913.46,
+        1011.68
+      ],
+      "pdfPage": 8
+    },
+    {
+      "level": "P",
+      "code": "T-25",
+      "name": "Nodos de acceso de comunicaciones",
+      "areas": [
+        4.56,
+        5.3,
+        5.36,
+        5.36
+      ],
+      "pdfPage": 8
+    },
+    {
+      "level": "P",
+      "code": "T-EI",
+      "name": "Escaleras de inspección en cubierta",
+      "areas": [
+        5.84,
+        4.72
+      ],
+      "pdfPage": 8
+    },
+    {
+      "level": "P",
+      "code": "ZDR",
+      "name": "Zona de refugio (PMR)",
+      "areas": [
+        6.08,
+        6.08,
+        6.08,
+        6.08
+      ],
+      "pdfPage": 8
+    }
+  ],
+  "referenceSource": "L1T1-0000-301-CON-ED-ARQ-PL-0001_VDD.pdf · páginas 5–8"
+}

@@ -1,10 +1,10 @@
-import {station,stations} from './study-stations.js?v=20261027-e01';
-import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261027-e01';
-import {PlanViewer} from './study-plans.js?v=20261027-e01';
-import {StudyScene} from './study-scene.js?v=20261027-e01-r2';
-import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261027-e01';
-import {RouteStudy} from './study-routes.js?v=20261027-e01';
-import {SpaceStudy} from './study-spaces.js?v=20261027-e01';
+import {station,stations} from './study-stations.js?v=20261027-review15';
+import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261027-review15';
+import {PlanViewer} from './study-plans.js?v=20261027-review15';
+import {StudyScene} from './study-scene.js?v=20261027-review15';
+import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261027-review15';
+import {RouteStudy} from './study-routes.js?v=20261027-review15';
+import {SpaceStudy} from './study-spaces.js?v=20261027-review15';
 const $=s=>document.querySelector(s);
 const levels=station.levels;
 let records=[],types={},architecture=[],inventory=[],modelManifest,scene,active=null,level=levels[1],started=false,modelsReady=false,loadingPromise;
@@ -15,7 +15,7 @@ const defaults=()=>({fov:90,range:25,yaw:0,tilt:0});
 initDrawers();initFullscreen(()=>{window.dispatchEvent(new Event('resize'));});
 const canView=r=>!!r&&typeOf(r)==='F';
 const typeOf=r=>Object.keys(types).find(k=>(r.ifcTypeName||'').includes(types[k].ifcFamilyToken));
-async function json(url){const request=new URL(url,location.href);request.searchParams.set('v',url.endsWith('routes.json')?'20261027-e01':'20261027-e01');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
+async function json(url){const request=new URL(url,location.href);request.searchParams.set('v',url.endsWith('routes.json')?'20261027-review15':'20261027-review15');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
 function options(select,items){select.replaceChildren(...items.map(([value,text])=>{const o=document.createElement('option');o.value=value;o.textContent=text;return o;}));}
 for(const selector of ['#entry-level','#level-select']){options($(selector),levels.map(l=>[l.id,l.name]));$(selector).value=level.id;}
 $('#entry-dialog').showModal();
