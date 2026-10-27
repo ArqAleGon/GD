@@ -1,4 +1,5 @@
 // A shared, piecewise clock for the two plan views. Equal-distance keys preserve stops.
+export function planAnimationStarted(profile,time){return time >= (profile?.animationStartSeconds||0);}
 export function distanceAtTime(keys,time){
  if(!keys.length)return 0;
  if(time<=keys[0].time)return keys[0].distance;

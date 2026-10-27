@@ -1,5 +1,5 @@
 {
-  "version": 16,
+  "version": 17,
   "source": "20261023 Funcionalidad E1-E9.pptx",
   "sourceSha256": "3064f1852ab5b6d0509b567536d6ae16de9c044fd4440d539629b3bda9971ed6",
   "slides": [
@@ -33,7 +33,7 @@
       "color": "#000000",
       "secondaryColor": "#66FF66",
       "videoId": "e09-ruta-1",
-      "defaultJourney": "video-gibraltar-completo"
+      "defaultJourney": "journey-g-s-oeste"
     },
     {
       "id": "r2",
@@ -6303,7 +6303,68 @@
       ],
       "bidirectional": false,
       "sourceRevision": 12,
-      "color": "#000000"
+      "color": "#000000",
+      "videoSync": {
+        "videoId": "e09-ruta-1",
+        "animationStartSeconds": 128,
+        "method": "Línea negra detenida hasta 2:08 del POV. Avance interpolado entre hitos del video: escalera 2:20, nivel intermedio 2:41, validación 2:57, ascenso 3:04, plataforma 3:17 y llegada 3:29. Enlaces verticales esquemáticos.",
+        "keys": [
+          {
+            "time": 0,
+            "leg": "g-a-s",
+            "fraction": 0,
+            "label": "Espera de acceso Gibraltar"
+          },
+          {
+            "time": 128,
+            "leg": "g-a-s",
+            "fraction": 0,
+            "label": "Inicio línea negra · 2:08"
+          },
+          {
+            "time": 140,
+            "leg": "link-g-a-s-g-i-w-oeste",
+            "fraction": 0,
+            "label": "Inicio escalera mecánica"
+          },
+          {
+            "time": 161,
+            "leg": "g-i-w-oeste",
+            "fraction": 0,
+            "label": "Nivel intermedio"
+          },
+          {
+            "time": 177,
+            "leg": "g-i-w-oeste",
+            "fraction": 0.7,
+            "label": "Validación Metro"
+          },
+          {
+            "time": 184,
+            "leg": "link-g-i-w-oeste-g-p-w",
+            "fraction": 0,
+            "label": "Inicio ascenso a plataforma"
+          },
+          {
+            "time": 197,
+            "leg": "g-p-w",
+            "fraction": 0,
+            "label": "Nivel plataforma"
+          },
+          {
+            "time": 209,
+            "leg": "g-p-w",
+            "fraction": 1,
+            "label": "Puertas hacia Gibraltar"
+          },
+          {
+            "time": 210.2,
+            "leg": "g-p-w",
+            "fraction": 1,
+            "label": "Fin"
+          }
+        ]
+      }
     },
     {
       "id": "journey-g-s-este",
@@ -6523,10 +6584,10 @@
             "label": "Llegada al acceso"
           },
           {
-            "time": 127,
+            "time": 128,
             "leg": "g-a-s",
-            "fraction": 0.35,
-            "label": "Ingreso Gibraltar"
+            "fraction": 0,
+            "label": "Inicio línea negra · 2:08"
           },
           {
             "time": 140,
