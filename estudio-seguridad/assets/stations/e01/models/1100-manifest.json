@@ -1,0 +1,378 @@
+{
+  "source": "L1T1-1100-301-CON-ED-EST-MO-0001_V03.ifc",
+  "sourceSha256": "12aa8d4a9055dfc6886def6851de2bd8b53090a8ecab335b77ce5c00cbbf25de",
+  "originGltfMetres": [
+    88900.0,
+    2550.0,
+    -104900.0
+  ],
+  "files": [
+    {
+      "file": "1100-0000-0.bin.gz",
+      "package": "e01-1100",
+      "ifcSource": "L1T1-1100-301-CON-ED-EST-MO-0001_V03.ifc",
+      "ifcClass": "IfcColumn",
+      "opacity": 1.0,
+      "mode": 4,
+      "vertices": 256,
+      "triangles": 472,
+      "bytes": 3067,
+      "bounds": {
+        "min": [
+          30.66837501525879,
+          -15.350000381469727,
+          45.80997848510742
+        ],
+        "max": [
+          50.684757232666016,
+          -9.350000381469727,
+          65.17486572265625
+        ]
+      },
+      "sha256": "4f22090904e3b5ddaf0a6d68cf9aecb61c2dcbed8f9f4419c2257ba246f3f546"
+    },
+    {
+      "file": "1100-0000-1.bin.gz",
+      "package": "e01-1100",
+      "ifcSource": "L1T1-1100-301-CON-ED-EST-MO-0001_V03.ifc",
+      "ifcClass": "IfcBeam",
+      "opacity": 1.0,
+      "mode": 4,
+      "vertices": 177,
+      "triangles": 290,
+      "bytes": 2137,
+      "bounds": {
+        "min": [
+          -30.46680450439453,
+          -15.75,
+          -73.89820098876953
+        ],
+        "max": [
+          56.4361457824707,
+          -9.649999618530273,
+          71.84063720703125
+        ]
+      },
+      "sha256": "71f631dfc1a5daaf58c0caf458e0fa30198656103a08ebd9e6af857446c7b6e9"
+    },
+    {
+      "file": "1100-0000-2.bin.gz",
+      "package": "e01-1100",
+      "ifcSource": "L1T1-1100-301-CON-ED-EST-MO-0001_V03.ifc",
+      "ifcClass": "IfcSlab",
+      "opacity": 1.0,
+      "mode": 4,
+      "vertices": 6872,
+      "triangles": 13636,
+      "bytes": 90455,
+      "bounds": {
+        "min": [
+          -29.614704132080078,
+          -61.349998474121094,
+          -64.46931457519531
+        ],
+        "max": [
+          48.31195068359375,
+          -9.649999618530273,
+          68.44461822509766
+        ]
+      },
+      "sha256": "e5b85006f3face7f67239d1d2304062db688c73464c6c51288634e82ba8e0577"
+    },
+    {
+      "file": "1100-0000-3.bin.gz",
+      "package": "e01-1100",
+      "ifcSource": "L1T1-1100-301-CON-ED-EST-MO-0001_V03.ifc",
+      "ifcClass": "IfcWallStandardCase",
+      "opacity": 1.0,
+      "mode": 4,
+      "vertices": 160,
+      "triangles": 280,
+      "bytes": 1998,
+      "bounds": {
+        "min": [
+          36.46598434448242,
+          -15.350000381469727,
+          35.536231994628906
+        ],
+        "max": [
+          56.03031539916992,
+          -10.0,
+          66.8979721069336
+        ]
+      },
+      "sha256": "414d2253bf8aaabe74a32b32aa2f588dedc8efd684d23bf6f0e944e39c4a5f1d"
+    },
+    {
+      "file": "1100-0001-0.bin.gz",
+      "package": "e01-1100",
+      "ifcSource": "L1T1-1100-301-CON-ED-EST-MO-0001_V03.ifc",
+      "ifcClass": "IfcSlab",
+      "opacity": 1.0,
+      "mode": 4,
+      "vertices": 3632,
+      "triangles": 6872,
+      "bytes": 42050,
+      "bounds": {
+        "min": [
+          -38.07917022705078,
+          -61.349998474121094,
+          -80.35591125488281
+        ],
+        "max": [
+          53.954505920410156,
+          -9.649999618530273,
+          66.54518127441406
+        ]
+      },
+      "sha256": "22c5b276020196135f7852e922b3b5e7ad0fdbdf77e2d5ac11cfed041384bfe2"
+    },
+    {
+      "file": "1100-0001-1.bin.gz",
+      "package": "e01-1100",
+      "ifcSource": "L1T1-1100-301-CON-ED-EST-MO-0001_V03.ifc",
+      "ifcClass": "IfcBeam",
+      "opacity": 1.0,
+      "mode": 4,
+      "vertices": 1470,
+      "triangles": 2476,
+      "bytes": 17601,
+      "bounds": {
+        "min": [
+          -31.5494441986084,
+          -15.75,
+          -71.12564849853516
+        ],
+        "max": [
+          56.4361457824707,
+          -9.199999809265137,
+          71.84063720703125
+        ]
+      },
+      "sha256": "0e5f3543cbe8c0939ab1dd453782ef5bcdee70908b0777d19be592c171cc3296"
+    },
+    {
+      "file": "1100-0002-0.bin.gz",
+      "package": "e01-1100",
+      "ifcSource": "L1T1-1100-301-CON-ED-EST-MO-0001_V03.ifc",
+      "ifcClass": "IfcSlab",
+      "opacity": 1.0,
+      "mode": 4,
+      "vertices": 5968,
+      "triangles": 11680,
+      "bytes": 73586,
+      "bounds": {
+        "min": [
+          -37.4943733215332,
+          -61.349998474121094,
+          -79.77144622802734
+        ],
+        "max": [
+          46.6063232421875,
+          -9.649999618530273,
+          67.85995483398438
+        ]
+      },
+      "sha256": "14944c46b321a470fe9bf9c6b0efb48b584f57825ecd5648b63205e506bfb975"
+    },
+    {
+      "file": "1100-0002-1.bin.gz",
+      "package": "e01-1100",
+      "ifcSource": "L1T1-1100-301-CON-ED-EST-MO-0001_V03.ifc",
+      "ifcClass": "IfcBeam",
+      "opacity": 1.0,
+      "mode": 4,
+      "vertices": 427,
+      "triangles": 718,
+      "bytes": 5259,
+      "bounds": {
+        "min": [
+          23.786579132080078,
+          -15.75,
+          28.036705017089844
+        ],
+        "max": [
+          52.31201934814453,
+          -9.350000381469727,
+          64.94622802734375
+        ]
+      },
+      "sha256": "c59181d8d6ec2d9f2efef3939c2100cb1416d69760480ec014e2b57ba5576887"
+    },
+    {
+      "file": "1100-0002-2.bin.gz",
+      "package": "e01-1100",
+      "ifcSource": "L1T1-1100-301-CON-ED-EST-MO-0001_V03.ifc",
+      "ifcClass": "IfcWallStandardCase",
+      "opacity": 1.0,
+      "mode": 4,
+      "vertices": 56,
+      "triangles": 88,
+      "bytes": 699,
+      "bounds": {
+        "min": [
+          30.70802116394043,
+          -14.350000381469727,
+          44.83993148803711
+        ],
+        "max": [
+          45.48231887817383,
+          -10.0,
+          64.97979736328125
+        ]
+      },
+      "sha256": "df04229a26a27a0613a79f52d9ef3daeeaf0e1d656e181371adba449ec097b60"
+    },
+    {
+      "file": "1100-0003-0.bin.gz",
+      "package": "e01-1100",
+      "ifcSource": "L1T1-1100-301-CON-ED-EST-MO-0001_V03.ifc",
+      "ifcClass": "IfcSlab",
+      "opacity": 1.0,
+      "mode": 4,
+      "vertices": 1216,
+      "triangles": 2404,
+      "bytes": 15481,
+      "bounds": {
+        "min": [
+          -21.695262908935547,
+          -61.349998474121094,
+          -42.916358947753906
+        ],
+        "max": [
+          56.4361457824707,
+          -9.199999809265137,
+          71.84063720703125
+        ]
+      },
+      "sha256": "f33f95f40a29fecfb9782a24b6943cc44ad1e4a13bb4604867cd21b88f1d96d4"
+    },
+    {
+      "file": "1100-0003-1.bin.gz",
+      "package": "e01-1100",
+      "ifcSource": "L1T1-1100-301-CON-ED-EST-MO-0001_V03.ifc",
+      "ifcClass": "IfcWallStandardCase",
+      "opacity": 1.0,
+      "mode": 4,
+      "vertices": 800,
+      "triangles": 1204,
+      "bytes": 8514,
+      "bounds": {
+        "min": [
+          -21.695262908935547,
+          -21.200000762939453,
+          -42.916358947753906
+        ],
+        "max": [
+          57.112525939941406,
+          -9.199999809265137,
+          72.51702117919922
+        ]
+      },
+      "sha256": "ce302b575caa06f620d58e2c78c0ec8019f9c7ffc6f7bea8451a412ec938a081"
+    },
+    {
+      "file": "1100-0003-2.bin.gz",
+      "package": "e01-1100",
+      "ifcSource": "L1T1-1100-301-CON-ED-EST-MO-0001_V03.ifc",
+      "ifcClass": "IfcBeam",
+      "opacity": 1.0,
+      "mode": 4,
+      "vertices": 327,
+      "triangles": 526,
+      "bytes": 3892,
+      "bounds": {
+        "min": [
+          27.219133377075195,
+          -15.75,
+          35.130401611328125
+        ],
+        "max": [
+          51.13973617553711,
+          -9.350000381469727,
+          66.08612823486328
+        ]
+      },
+      "sha256": "ec06fdae5b974ad32c04768c63a977337374f5fb04ff8c1c81bf6e63ae15cd12"
+    },
+    {
+      "file": "1100-0004-0.bin.gz",
+      "package": "e01-1100",
+      "ifcSource": "L1T1-1100-301-CON-ED-EST-MO-0001_V03.ifc",
+      "ifcClass": "IfcBeam",
+      "opacity": 1.0,
+      "mode": 4,
+      "vertices": 56,
+      "triangles": 84,
+      "bytes": 689,
+      "bounds": {
+        "min": [
+          25.079662322998047,
+          -10.0,
+          51.13625717163086
+        ],
+        "max": [
+          47.21086120605469,
+          -9.350000381469727,
+          65.31292724609375
+        ]
+      },
+      "sha256": "5870f406188b078d140f1d833a7ab78ebf8fd408742b417e4d57527d5fd22dd0"
+    },
+    {
+      "file": "1100-0004-1.bin.gz",
+      "package": "e01-1100",
+      "ifcSource": "L1T1-1100-301-CON-ED-EST-MO-0001_V03.ifc",
+      "ifcClass": "IfcWallStandardCase",
+      "opacity": 1.0,
+      "mode": 4,
+      "vertices": 20,
+      "triangles": 32,
+      "bytes": 302,
+      "bounds": {
+        "min": [
+          44.45907211303711,
+          -14.350000381469727,
+          58.55519104003906
+        ],
+        "max": [
+          47.21086120605469,
+          -10.0,
+          64.94622802734375
+        ]
+      },
+      "sha256": "ac27a89c83ba800923eb0ce75bf20d4e6956a5783a3521e64dc2890b41d31ee2"
+    },
+    {
+      "file": "1100-0004-2.bin.gz",
+      "package": "e01-1100",
+      "ifcSource": "L1T1-1100-301-CON-ED-EST-MO-0001_V03.ifc",
+      "ifcClass": "IfcSlab",
+      "opacity": 1.0,
+      "mode": 4,
+      "vertices": 224,
+      "triangles": 528,
+      "bytes": 3366,
+      "bounds": {
+        "min": [
+          -38.62877655029297,
+          -14.125,
+          -78.32178497314453
+        ],
+        "max": [
+          50.8344612121582,
+          -9.199999809265137,
+          71.43480682373047
+        ]
+      },
+      "sha256": "dd11b84d23dadd2279c1a9fe21aab29f7595326d1a8efdaed9e230ec2f9e9489"
+    }
+  ],
+  "inputElements": 683,
+  "expectedRenderableElements": 609,
+  "convertedElements": 609,
+  "missingElements": [],
+  "seconds": 1.69390869140625,
+  "converter": "IfcOpenShell 0.8.5",
+  "simplification": false
+}

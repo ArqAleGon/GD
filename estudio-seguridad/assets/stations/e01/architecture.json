@@ -1,0 +1,69 @@
+{
+  "station": "E01",
+  "pages": [
+    {
+      "kind": "architecture",
+      "page": 1,
+      "level": "Sótano",
+      "levelId": "B",
+      "sourcePage": 1,
+      "source": "PLANO SOTANO E1 A.pdf",
+      "sourceSha256": "bf33c17e6b999ff741edea2452a2ed1e197de94987e06ab72112d919c1a3fefe",
+      "image": "architecture-B.jpg",
+      "imageUrl": "./assets/stations/e01/plans/architecture-B.jpg",
+      "width": 3536,
+      "height": 5000,
+      "buildings": [
+        "Estación Carrera 96"
+      ]
+    },
+    {
+      "kind": "architecture",
+      "page": 2,
+      "level": "Acceso",
+      "levelId": "A",
+      "sourcePage": 1,
+      "source": "PLANO ACCESO E1 A.pdf",
+      "sourceSha256": "914197727cf429ed7efaee2c6dbe417a23fc6e1883b95c4bcd0a83b81a27b9a0",
+      "image": "architecture-A.jpg",
+      "imageUrl": "./assets/stations/e01/plans/architecture-A.jpg",
+      "width": 3536,
+      "height": 5000,
+      "buildings": [
+        "Estación Carrera 96"
+      ]
+    },
+    {
+      "kind": "architecture",
+      "page": 3,
+      "level": "Intermedio",
+      "levelId": "I",
+      "sourcePage": 1,
+      "source": "PLANO INT E1 A.pdf",
+      "sourceSha256": "8f64556a9ac6e499ab8a04b60a654431251c7d96aba0744b9076e0716f3258e4",
+      "image": "architecture-I.jpg",
+      "imageUrl": "./assets/stations/e01/plans/architecture-I.jpg",
+      "width": 3536,
+      "height": 5000,
+      "buildings": [
+        "Estación Carrera 96"
+      ]
+    },
+    {
+      "kind": "architecture",
+      "page": 4,
+      "level": "Plataforma",
+      "levelId": "P",
+      "sourcePage": 1,
+      "source": "PLANO PLA E1 A.pdf",
+      "sourceSha256": "d2042ff9cba7e734c0f102403705d074ce9099219794753dc13fab877da0b342",
+      "image": "architecture-P.jpg",
+      "imageUrl": "./assets/stations/e01/plans/architecture-P.jpg",
+      "width": 3536,
+      "height": 5000,
+      "buildings": [
+        "Estación Carrera 96"
+      ]
+    }
+  ]
+}

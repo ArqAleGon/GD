@@ -1,0 +1,69 @@
+{
+  "station": "E01",
+  "pages": [
+    {
+      "kind": "inventory",
+      "page": 1,
+      "level": "Sótano",
+      "levelId": "B",
+      "sourcePage": 2,
+      "source": "L1T1-5445-301-CON-ED-INS-PL-0009_V00.pdf",
+      "sourceSha256": "80cb468f82d3958122f5ef08057c17ac0c82e0e453036d90d7978e002ad26989",
+      "image": "inventory-B.jpg",
+      "imageUrl": "./assets/stations/e01/plans/inventory-B.jpg",
+      "width": 5000,
+      "height": 3334,
+      "buildings": [
+        "Estación Carrera 96"
+      ]
+    },
+    {
+      "kind": "inventory",
+      "page": 2,
+      "level": "Acceso",
+      "levelId": "A",
+      "sourcePage": 4,
+      "source": "L1T1-5445-301-CON-ED-INS-PL-0009_V00.pdf",
+      "sourceSha256": "80cb468f82d3958122f5ef08057c17ac0c82e0e453036d90d7978e002ad26989",
+      "image": "inventory-A.jpg",
+      "imageUrl": "./assets/stations/e01/plans/inventory-A.jpg",
+      "width": 5000,
+      "height": 3334,
+      "buildings": [
+        "Estación Carrera 96"
+      ]
+    },
+    {
+      "kind": "inventory",
+      "page": 3,
+      "level": "Intermedio",
+      "levelId": "I",
+      "sourcePage": 6,
+      "source": "L1T1-5445-301-CON-ED-INS-PL-0009_V00.pdf",
+      "sourceSha256": "80cb468f82d3958122f5ef08057c17ac0c82e0e453036d90d7978e002ad26989",
+      "image": "inventory-I.jpg",
+      "imageUrl": "./assets/stations/e01/plans/inventory-I.jpg",
+      "width": 5000,
+      "height": 3334,
+      "buildings": [
+        "Estación Carrera 96"
+      ]
+    },
+    {
+      "kind": "inventory",
+      "page": 4,
+      "level": "Plataforma",
+      "levelId": "P",
+      "sourcePage": 8,
+      "source": "L1T1-5445-301-CON-ED-INS-PL-0009_V00.pdf",
+      "sourceSha256": "80cb468f82d3958122f5ef08057c17ac0c82e0e453036d90d7978e002ad26989",
+      "image": "inventory-P.jpg",
+      "imageUrl": "./assets/stations/e01/plans/inventory-P.jpg",
+      "width": 5000,
+      "height": 3334,
+      "buildings": [
+        "Estación Carrera 96"
+      ]
+    }
+  ]
+}

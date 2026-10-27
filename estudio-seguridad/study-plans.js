@@ -16,7 +16,7 @@ export class PlanViewer{
   for(const [i,part] of layers.entries()){
    const group=el('g');if(part.transform){const m=part.transform;group.setAttribute('transform',`matrix(${m[0][0]} ${m[1][0]} ${m[0][1]} ${m[1][1]} ${m[0][2]} ${m[1][2]})`);}
    if(part.crop){const [a,b,c,d]=part.crop,id=`sheet-${kind}-${page.page}-${i}`,clip=el('clipPath',{id});clip.append(el('rect',{x:a,y:b,width:c,height:d}));group.append(clip);group.setAttribute('clip-path',`url(#${id})`);}
-   const image=el('image',{href:`./assets/${kind==='architecture'?'plants':'cctv'}/${part.image}`,width:part.width,height:part.height});image.addEventListener('load',()=>{if(++loaded===layers.length&&!failed)onLoad();},{once:true});image.addEventListener('error',()=>{failed=true;onError();},{once:true});group.append(image);group.style.mixBlendMode='multiply';this.layer.append(group);
+   const image=el('image',{href:part.imageUrl||`./assets/${kind==='architecture'?'plants':'cctv'}/${part.image}`,width:part.width,height:part.height});image.addEventListener('load',()=>{if(++loaded===layers.length&&!failed)onLoad();},{once:true});image.addEventListener('error',()=>{failed=true;onError();},{once:true});group.append(image);group.style.mixBlendMode='multiply';this.layer.append(group);
   }
   for(const label of page.buildingLabels||[]){const text=el('text',{class:'building-plan-label',x:label.position[0],y:label.position[1],'text-anchor':'middle','pointer-events':'none'});text.textContent=label.name;this.layer.append(text);}
   this.coneLayer=el('g',{'pointer-events':'none',class:'camera-cone','aria-label':'Cono visual de la cámara activa'});this.layer.append(this.coneLayer);

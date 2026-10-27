@@ -1,0 +1,54 @@
+{
+  "cameraCoverage": [
+    {
+      "kind": "architecture",
+      "level": "BASEMENT",
+      "cameras": 8,
+      "inside": 8
+    },
+    {
+      "kind": "architecture",
+      "level": "ACCESS",
+      "cameras": 36,
+      "inside": 36
+    },
+    {
+      "kind": "architecture",
+      "level": "INTERMEDIATE",
+      "cameras": 71,
+      "inside": 71
+    },
+    {
+      "kind": "architecture",
+      "level": "PLATFORM",
+      "cameras": 42,
+      "inside": 42
+    },
+    {
+      "kind": "inventory",
+      "level": "BASEMENT",
+      "cameras": 8,
+      "inside": 8
+    },
+    {
+      "kind": "inventory",
+      "level": "ACCESS",
+      "cameras": 36,
+      "inside": 36
+    },
+    {
+      "kind": "inventory",
+      "level": "INTERMEDIATE",
+      "cameras": 71,
+      "inside": 71
+    },
+    {
+      "kind": "inventory",
+      "level": "PLATFORM",
+      "cameras": 42,
+      "inside": 42
+    }
+  ],
+  "method": "Native circular structural columns; plan-to-plan features and named CN grid axes. Visual prototype registration, not survey.",
+  "platformIndependentCheckMaxPixels": 2.234
+}

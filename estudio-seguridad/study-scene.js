@@ -14,7 +14,8 @@ export function fixedPose(record,yaw=0,tilt=0){
  return {eye,direction,up};
 }
 export class StudyScene{
- constructor({axon,pov,onSelect,onProgress}){
+ constructor({axon,pov,onSelect,onProgress,origin=[96310,2550,-100150],modelBase='./assets/models/e09-study/',cameraBase='./assets/models/e09-ins/'}){
+  ORIGIN.fromArray(origin);this.modelBase=modelBase;this.cameraBase=cameraBase;
   Object.assign(this,{axon,pov,onSelect,onProgress});this.dirty=true;this.ready=false;this.selected=null;this.generation=0;
   this.scene=new THREE.Scene();this.scene.background=new THREE.Color('#08141e');
   this.renderer=new THREE.WebGLRenderer({alpha:true,antialias:true});this.renderer.domElement.className='render-surface';this.renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));this.renderer.setSize(innerWidth,innerHeight);document.body.append(this.renderer.domElement);
@@ -50,14 +51,14 @@ export class StudyScene{
  updateCameraTag(){const r=this.hoverCamera||this.selected,expanded=document.querySelector('.view.is-expanded')?.id;this.cameraTag.hidden=true;if(!this.ready||!r||this.showMarkers===false||(expanded&&expanded!=='axon-panel')||(!this.fullStation&&r.ifcStorey!==this.level?.ifc)||document.querySelector('dialog[open]'))return;const box=this.axon.getBoundingClientRect(),p=new THREE.Vector3().fromArray(r.positionGltfMetres).sub(ORIGIN).project(this.axonCamera);if(p.z< -1||p.z>1||Math.abs(p.x)>.96||Math.abs(p.y)>.94)return;this.tagRecord=r;const type=Object.keys(this.types).find(k=>r.ifcTypeName.includes(this.types[k].ifcFamilyToken));this.cameraTag.textContent=type+' '+r.mark;this.cameraTag.title=`${this.types[type].label} · Marca IFC ${r.mark}`;this.cameraTag.style.borderColor=this.types[type].color;this.cameraTag.style.left=box.left+(p.x+1)*box.width/2+8+'px';this.cameraTag.style.top=box.top+(1-p.y)*box.height/2-8+'px';this.cameraTag.hidden=false;}
  async binary(url){const r=await fetch(url);if(!r.ok)throw Error(`${r.status}: ${url}`);return new Response(r.body.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();}
  async load(manifest,records,types){
-  const token=++this.generation;this.records=records;this.types=types;this.ready=false;
+  const token=++this.generation;this.records=records;this.types=types;this.ready=false;this.frameDirection=manifest.frameDirection;
   const colorFor=r=>types[Object.keys(types).find(k=>(r.ifcTypeName||'').includes(types[k].ifcFamilyToken))].color;
-  const loader=new GLTFLoader();const cameraManifest=await (await fetch('./assets/models/e09-ins/manifest.json')).json();
+  const loader=new GLTFLoader();const cameraManifest=this.cameraBase?await (await fetch(this.cameraBase+'manifest.json')).json():{files:[]};
   const cameraMaterials=Object.fromEntries(Object.entries(types).map(([k,t])=>[k,new THREE.MeshStandardMaterial({color:t.color,roughness:.7})]));
   const total=manifest.files.length+cameraManifest.files.length+(manifest.additionalModels||[]).reduce((n,p)=>n+p.files.length,0);
   let cameraDone=0;this.onProgress(0,total);
   for(const file of cameraManifest.files){
-   const gltf=await loader.parseAsync(await this.binary('./assets/models/e09-ins/'+file.file),'');
+   const gltf=await loader.parseAsync(await this.binary(this.cameraBase+file.file),'');
    const keep=[];gltf.scene.traverse(n=>{if(n.userData.ifcGlobalId&&n.userData.isCamera)keep.push(n);});
    for(const n of keep){gltf.scene.attach(n);this.cameraGroup.add(n);this.cameraNodes.push(n);const type=Object.keys(types).find(k=>(n.userData.ifcTypeName||'').includes(types[k].ifcFamilyToken));n.traverse(mesh=>{if(mesh.isMesh)mesh.material=cameraMaterials[type];});}
    // Remaining installation meshes are supplied by the batched static package.
@@ -66,7 +67,7 @@ export class StudyScene{
   }
   for(const record of records){const mat=new THREE.MeshBasicMaterial({color:colorFor(record),transparent:true,depthTest:false});const marker=new THREE.Mesh(this.markerGeometry,mat);marker.position.fromArray(record.positionGltfMetres).sub(ORIGIN);marker.userData.record=record;marker.renderOrder=60;this.markerGroup.add(marker);this.markers.push(marker);}
   let next=0,done=0;
-  const worker=async()=>{while(next<manifest.files.length){const file=manifest.files[next++];const buffer=await this.binary('./assets/models/e09-study/'+file.file);if(token!==this.generation)return;
+  const worker=async()=>{while(next<manifest.files.length){const file=manifest.files[next++];const buffer=await this.binary(this.modelBase+file.file);if(token!==this.generation)return;
    const header=new Uint32Array(buffer,0,2),nv=header[0],ni=header[1];if(buffer.byteLength!==8+nv*24+ni*4)throw Error('Paquete geométrico incompleto');
    const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(new Float32Array(buffer,8,nv*3),3));geometry.setAttribute('color',new THREE.BufferAttribute(new Float32Array(buffer,8+nv*12,nv*3),3));geometry.setIndex(new THREE.BufferAttribute(new Uint32Array(buffer,8+nv*24,ni),1));
    let object;
@@ -79,10 +80,11 @@ export class StudyScene{
   this.brtCounts={};
   for(const pkg of manifest.additionalModels||[]){const identities=new Set();
    for(const file of pkg.files){
-    const gltf=await loader.parseAsync(await this.binary(`./assets/models/${pkg.package}/${file.file}`),'');if(token!==this.generation)return;
+    const gltf=await loader.parseAsync(await this.binary((pkg.baseUrl||`./assets/models/${pkg.package}/`)+file.file),'');if(token!==this.generation)return;
     gltf.scene.updateMatrixWorld(true);const groups=new Map();
-    gltf.scene.traverse(mesh=>{if(!mesh.isMesh)return;let owner=mesh;while(owner&&!owner.userData.ifcGlobalId)owner=owner.parent;const metadata=owner?.userData;if(!metadata?.ifcGlobalId)throw Error('Pieza sin identidad IFC');if(metadata.ifcType==='IfcOpeningElement')return;
+    gltf.scene.traverse(mesh=>{if(!mesh.isMesh&&(!mesh.isLine||!pkg.includeNativeAxes))return;let owner=mesh;while(owner&&!owner.userData.ifcGlobalId)owner=owner.parent;const metadata=owner?.userData;if(!metadata?.ifcGlobalId)throw Error('Pieza sin identidad IFC');if(metadata.ifcType==='IfcOpeningElement')return;
      identities.add(metadata.ifcGlobalId);const matrix=mesh.matrixWorld.clone();matrix.elements[12]-=ORIGIN.x;matrix.elements[13]-=ORIGIN.y;matrix.elements[14]-=ORIGIN.z;
+     if(mesh.isLine){const geometry=mesh.geometry.clone().applyMatrix4(matrix);geometry.computeBoundingBox();const b=geometry.boundingBox,object=new THREE.LineSegments(geometry,mesh.material),limit=pkg.axisDisplayBounds;const detached=!!limit&&(b.max.x<limit.min[0]||b.min.x>limit.max[0]||b.max.z<limit.min[2]||b.min.z>limit.max[2]);object.userData={package:pkg.package,bounds:{min:b.min.toArray(),max:b.max.toArray()},instanceRecords:[metadata],nativeAxis:true,detachedAxis:detached};this.staticGroup.add(object);this.staticMeshes.push(object);return;}
      const key=mesh.geometry.uuid+':'+mesh.material.uuid+':'+metadata.ifcType;let group=groups.get(key);if(!group){group={geometry:mesh.geometry,material:mesh.material,items:[]};groups.set(key,group);}group.items.push({matrix,metadata});
     });
     for(const group of groups.values()){
@@ -99,11 +101,11 @@ export class StudyScene{
  }
  showFullStation(){this.fullStation=true;this.installations=true;this.showBrt=true;this.showStructure1300=true;this.hiddenPackages?.clear();this.filter();this.frame();}
  setLevel(level){this.fullStation=false;this.level=level;this.filter();this.frame();}
- filter(){if(!this.level)return;for(const m of this.markers)m.visible=this.fullStation||m.userData.record.ifcStorey===this.level.ifc;for(const n of this.cameraNodes)n.visible=this.fullStation||n.userData.ifcStorey===this.level.ifc;for(const mesh of this.staticMeshes)mesh.visible=(mesh.userData.package!=='e09-ins'||this.installations!==false)&&(!mesh.userData.package.startsWith('e09-brt-')||this.showBrt!==false)&&(!mesh.userData.package.startsWith('e09-est-1300-')||this.showStructure1300!==false)&&!this.hiddenPackages?.has(mesh.userData.package);this.dirty=true;}
+ filter(){if(!this.level)return;for(const m of this.markers)m.visible=this.fullStation||m.userData.record.ifcStorey===this.level.ifc;for(const n of this.cameraNodes)n.visible=this.fullStation||n.userData.ifcStorey===this.level.ifc;for(const mesh of this.staticMeshes)mesh.visible=!mesh.userData.detachedAxis&&(mesh.userData.package!=='e09-ins'||this.installations!==false)&&(!mesh.userData.package.startsWith('e09-brt-')||this.showBrt!==false)&&(!mesh.userData.package.startsWith('e09-est-1300-')||this.showStructure1300!==false)&&!this.hiddenPackages?.has(mesh.userData.package);this.dirty=true;}
  frame(){const visible=this.records?.filter(r=>this.fullStation||r.ifcStorey===this.level?.ifc)||[];if(!visible.length)return;const box=new THREE.Box3();for(const r of visible)box.expandByPoint(new THREE.Vector3().fromArray(r.positionGltfMetres).sub(ORIGIN));
   const floor=this.fullStation?-Infinity:this.level.cutMin-ORIGIN.y,ceiling=this.fullStation?Infinity:this.level.cutMax-ORIGIN.y;
   for(const mesh of this.staticMeshes){const b=mesh.userData.bounds;if(!b||!mesh.visible||b.max[1]<floor||b.min[1]>ceiling)continue;box.expandByPoint(new THREE.Vector3(b.min[0],Math.max(b.min[1],floor),b.min[2]));box.expandByPoint(new THREE.Vector3(b.max[0],Math.min(b.max[1],ceiling),b.max[2]));}
-  const center=box.getCenter(new THREE.Vector3()),back=new THREE.Vector3(.8,.9,1).normalize(),right=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),back).normalize(),up=new THREE.Vector3().crossVectors(back,right),rect=this.axon.getBoundingClientRect(),tanV=Math.tan(THREE.MathUtils.degToRad(this.axonCamera.fov/2)),tanH=tanV*Math.max(.1,rect.width/rect.height);let distance=40;
+  const center=box.getCenter(new THREE.Vector3()),back=new THREE.Vector3().fromArray(this.frameDirection||[.8,.9,1]).normalize(),right=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),back).normalize(),up=new THREE.Vector3().crossVectors(back,right),rect=this.axon.getBoundingClientRect(),tanV=Math.tan(THREE.MathUtils.degToRad(this.axonCamera.fov/2)),tanH=tanV*Math.max(.1,rect.width/rect.height);let distance=40;
   for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z]){const v=new THREE.Vector3(x,y,z).sub(center);distance=Math.max(distance,Math.abs(v.dot(right))/tanH+v.dot(back),Math.abs(v.dot(up))/tanV+v.dot(back));}
   this.axonCamera.far=Math.max(1500,distance*3+box.getSize(new THREE.Vector3()).length());this.axonCamera.updateProjectionMatrix();this.controls.target.copy(center);this.axonCamera.position.copy(center).addScaledVector(back,distance*1.12);this.controls.update();this.dirty=true;
  }

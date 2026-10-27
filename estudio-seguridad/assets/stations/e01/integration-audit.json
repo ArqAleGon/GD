@@ -1,0 +1,70 @@
+{
+  "station": "E01",
+  "sourceQualifiedRepresentations": 73118,
+  "cameras": 157,
+  "camerasByLevel": {
+    "ARC_PL_01_ACCESS": 36,
+    "ARC_PL_02_INTERMEDIATE": 71,
+    "ARC_PL_03_PLATFORM": 42,
+    "ARC_PL_00_BASEMENT": 8
+  },
+  "camerasByType": {
+    "Domo": 138,
+    "Fixed": 18,
+    "PTZ": 1
+  },
+  "sources": [
+    {
+      "source": "L1T1-0000-301-CON-ED-ARQ-MO-0002_VB1.ifc",
+      "sha256": "8e52bd2d6b8accbc3d74ef2fb6cead23032839260db71ae7ba726556788d4499",
+      "converted": 63182,
+      "missing": 0,
+      "reused": false
+    },
+    {
+      "source": "L1T1-1100-301-CON-ED-EST-MO-0001_V03.ifc",
+      "sha256": "12aa8d4a9055dfc6886def6851de2bd8b53090a8ecab335b77ce5c00cbbf25de",
+      "converted": 609,
+      "missing": 0,
+      "reused": false
+    },
+    {
+      "source": "L1T1-5400-301-CON-ED-INS-MO-0001_V00.ifc",
+      "sha256": "eae0d9f8666eb412844ce290c507f00556b8f5bd91420d41f254b6eb099e95c2",
+      "converted": 1526,
+      "missing": 0,
+      "reused": false
+    },
+    {
+      "source": "L1T1-1150-301-CON-ED-EST-MO-0001_V00.ifc",
+      "localSourceSha256": "0941dba63a5129d42cf200eaead0458d988b9a6dd3baf24e2fe278cdf15d3b57",
+      "reusedFiles": 4,
+      "nativeExpected": 88,
+      "recoveredIds": 88,
+      "missing": [],
+      "unexpected": [],
+      "reused": true
+    },
+    {
+      "source": "L1T1-1200-301-CON-ED-EST-MO-0001_V03.ifc",
+      "localSourceSha256": "56a324c4468c02a0490b8389570f79c99662712d4f646e092fe105e3eaa89d08",
+      "reusedFiles": 22,
+      "nativeExpected": 7713,
+      "recoveredIds": 7713,
+      "missing": [],
+      "unexpected": [],
+      "reused": true
+    }
+  ],
+  "newConversionMissing": 0,
+  "reusedModelFiles": 26,
+  "detachedSourceAxesPreservedOutsideDisplay": 37,
+  "planPages": 8,
+  "registration": "Visual registration using native structural columns, plan features and named CN axes. Not survey calibration.",
+  "pending": [
+    "Videorecorridos E01",
+    "Trazados de recorridos E01",
+    "Geometría, nombres y áreas de espacios: el IFC de arquitectura recibido no contiene IfcSpace. Los colores y códigos se conservan en PDF."
+  ],
+  "nativeLevelsNote": "Sótano: arquitectura ARC_PL_00 2536.1 m e instalaciones 2535.1 m; ambos se conservan en sus cotas originales. No se aplica desplazamiento supuesto."
+}
