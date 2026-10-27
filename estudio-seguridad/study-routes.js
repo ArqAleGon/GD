@@ -1,7 +1,7 @@
-import {RouteVideo} from './study-videotours.js?v=20261027-bike18';
+import {RouteVideo} from './study-videotours.js?v=20261027-trace19';
 import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
-import {distanceAtTime,timeAtDistance,speedAtTime,planAnimationStarted} from './study-video-clock.js?v=20261027-bike18';
+import {distanceAtTime,timeAtDistance,speedAtTime,planAnimationStarted} from './study-video-clock.js?v=20261027-trace19';
 const $=s=>document.querySelector(s), ns='http://www.w3.org/2000/svg';
 const svg=(tag,attrs={})=>{const n=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);return n;};
 const option=(value,text)=>{const n=document.createElement('option');n.value=value;n.textContent=text;return n;};
@@ -31,9 +31,9 @@ export class RouteStudy{
  chooseFamily(){
   this.videoMode=false;this.video.setVisible(false);
   const family=$('#route-family').value;this.family=this.data.families.find(f=>f.id===family);
-  const journeys=this.data.journeys.filter(r=>r.family===family),legs=this.data.routes.filter(r=>r.family===family&&!r.id.endsWith('-reverse'));
+  const journeys=this.data.journeys.filter(r=>r.family===family),legs=this.data.routes.filter(r=>r.family===family&&!r.superseded&&!r.id.endsWith('-reverse'));
   const all=document.createElement('optgroup');all.label='Recorridos entre niveles · enlaces esquemáticos';all.append(...journeys.map(r=>option(r.id,r.label)));
-  const parts=document.createElement('optgroup');parts.label='Tramos originales por nivel';parts.append(...legs.map(r=>option(r.id,r.label)));
+  const parts=document.createElement('optgroup');parts.label='Tramos por nivel';parts.append(...legs.map(r=>option(r.id,r.label)));
   $('#route-path').replaceChildren(all,parts);if(this.family.defaultJourney)$('#route-path').value=this.family.defaultJourney;this.choosePath();this.setPov(!!this.family.videoId);
  }
  choosePath(){
@@ -148,7 +148,7 @@ export class RouteStudy{
   const layer=svg('g',{'aria-label':this.family.label+' · recorrido sobre planta','pointer-events':'none'});this.plan.routeLayer=layer;this.plan.layer.append(layer);const m=this.plan.reg.matrix;
   this.project=p=>[m[0][0]*p.x-m[0][1]*p.z+m[0][2],m[1][0]*p.x-m[1][1]*p.z+m[1][2]];
   for(const p of this.parts){if(p.leg.schematic||p.leg.level!==this.plan.level.id)continue;const d=this.clippedSegments(p).map(([a,b])=>'M'+this.project(a).join(',')+'L'+this.project(b).join(',')).join(' ');if(!d)continue;layer.append(svg('path',{d,fill:'none',stroke:'#fff','stroke-width':7,'vector-effect':'non-scaling-stroke'}),svg('path',{d,fill:'none',stroke:p.leg.color||this.family.color,'stroke-width':3.5,'vector-effect':'non-scaling-stroke'}));
-   for(let dist=0;dist<p.length;dist+=12){const s=this.sample(p,dist);if(!this.onSheet(p,s.sourceY))continue;const a=this.project(s.point),b=this.project(s.point.clone().add(s.direction)),angle=Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI;layer.append(svg('path',{d:'M-20,-12 L0,0 L-20,12',transform:`translate(${a}) rotate(${angle})`,fill:'none',stroke:p.leg.color||this.family.color,'stroke-width':3,'vector-effect':'non-scaling-stroke'}));}
+   if(!p.leg.directionFromAnimation)for(let dist=0;dist<p.length;dist+=12){const s=this.sample(p,dist);if(!this.onSheet(p,s.sourceY))continue;const a=this.project(s.point),b=this.project(s.point.clone().add(s.direction)),angle=Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI;layer.append(svg('path',{d:'M-20,-12 L0,0 L-20,12',transform:`translate(${a}) rotate(${angle})`,fill:'none',stroke:p.leg.color||this.family.color,'stroke-width':3,'vector-effect':'non-scaling-stroke'}));}
   }
   this.planLeader=svg('g');this.planLeader.append(svg('path',{d:'M30,0 L-20,-20 L-10,0 L-20,20 Z',fill:this.family.color,stroke:'#fff','stroke-width':2,'vector-effect':'non-scaling-stroke'}));layer.append(this.planLeader);this.updatePlanLeader();
  }
@@ -169,7 +169,7 @@ export class RouteStudy{
  focusLevel(){const box=new THREE.Box3();for(const p of this.parts)if(!p.leg.schematic&&p.leg.level===this.scene.level.id)for(const v of p.points)box.expandByPoint(v);if(box.isEmpty())return;const center=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3()),rect=this.scene.axon.getBoundingClientRect(),distance=Math.max(55,size.length()*1.4,size.length()/Math.max(.4,rect.width/rect.height));this.scene.controls.target.copy(center);this.scene.axonCamera.position.copy(center).addScaledVector(new THREE.Vector3(.8,1,1).normalize(),distance);this.scene.controls.update();}
  renderViews(view,expanded){
   const rect=this.scene.pov.getBoundingClientRect(),hud=$('#route-live');hud.style.left=(rect.left+10)+'px';hud.style.top=(rect.bottom-hud.offsetHeight-10)+'px';hud.style.maxWidth=Math.max(100,rect.width-20)+'px';hud.style.visibility=this.videoMode||(expanded&&expanded!=='pov-panel')?'hidden':'visible';this.video.layout(rect,expanded);const s=this.scene;s.cone.visible=s.observer.visible=s.activeRing.visible=s.markerGroup.visible=false;s.spaces?.beforePov();s.setModelClipping([]);for(const mesh of s.staticMeshes)mesh.visible=true;for(const node of s.cameraNodes)node.visible=true;
-  for(const p of this.parts){p.group.visible=true;for(const arrow of p.arrows)arrow.visible=this.planAnimationStarted(p);}this.leader.visible=this.planAnimationStarted();this.group.visible=true;
+  for(const p of this.parts){p.group.visible=true;for(const arrow of p.arrows)arrow.visible=this.planAnimationStarted(p)&&(!p.leg.directionFromAnimation||p===this.current);}this.leader.visible=this.planAnimationStarted();this.group.visible=true;
   if(!expanded||expanded==='pov-panel'){
    if(this.videoMode){/* Native video occupies this viewport. */}
    else if(this.povMode)this.renderPov(view);

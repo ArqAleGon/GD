@@ -1,5 +1,5 @@
 {
-  "version": 18,
+  "version": 19,
   "source": "20261023 Funcionalidad E1-E9.pptx",
   "sourceSha256": "3064f1852ab5b6d0509b567536d6ae16de9c044fd4440d539629b3bda9971ed6",
   "slides": [
@@ -2671,14 +2671,13 @@
     {
       "id": "g-a-s",
       "family": "r1",
-      "label": "Acceso Gibraltar · sur → escalera oeste",
+      "label": "Acceso Gibraltar · punto 5 → escalera oeste",
       "level": "A",
-      "slide": 18,
       "points": [
         [
-          -71.22457,
+          -71.723994,
           9.87,
-          33.27957
+          31.665809
         ],
         [
           -80.83822,
@@ -2696,32 +2695,13 @@
           10.37257
         ]
       ],
-      "sourcePoints": [
-        [
-          232.616,
-          431.918
-        ],
-        [
-          232.616,
-          293.745
-        ],
-        [
-          283.16,
-          293.745
-        ],
-        [
-          283.16,
-          293.415
-        ]
-      ],
-      "sourceShapeIds": [
-        23
-      ],
-      "length": 29.734,
+      "color": "#000000",
+      "length": 28.069,
       "bidirectional": false,
+      "directionFromAnimation": true,
       "preferredPage": 1,
-      "sourceRevision": 12,
-      "color": "#000000"
+      "sourceRevision": 19,
+      "sourceNote": "Trazado registrado desde las marcas del usuario sobre el plano; correspondencia visual, no levantamiento topográfico."
     },
     {
       "id": "g-a-w",
@@ -2818,9 +2798,8 @@
     {
       "id": "g-i-w-oeste",
       "family": "r1",
-      "label": "Intermedio Gibraltar · escalera oeste → oeste",
+      "label": "Intermedio Gibraltar · validación A → B",
       "level": "I",
-      "slide": 19,
       "points": [
         [
           -70.41821,
@@ -2828,56 +2807,28 @@
           6.85849
         ],
         [
-          -27.43956,
+          -36.105045,
           18.72,
-          -13.99069
+          -9.786061
         ],
         [
-          -21.38311,
+          -30.06636,
           18.72,
-          -1.71294
+          2.577334
         ],
         [
-          -21.39464,
+          -4.858175,
           18.72,
-          -1.70735
-        ],
-        [
-          -37.38925,
-          18.72,
-          5.98201
+          -9.646849
         ]
       ],
-      "sourcePoints": [
-        [
-          313.764,
-          247.836
-        ],
-        [
-          619.282,
-          247.836
-        ],
-        [
-          619.282,
-          335.139
-        ],
-        [
-          619.2,
-          335.139
-        ],
-        [
-          505.698,
-          334.739
-        ]
-      ],
-      "sourceShapeIds": [
-        12
-      ],
-      "length": 79.219,
+      "color": "#000000",
+      "length": 79.912,
       "bidirectional": false,
+      "directionFromAnimation": true,
       "preferredPage": 3,
-      "sourceRevision": 12,
-      "color": "#000000"
+      "sourceRevision": 19,
+      "sourceNote": "Trazado registrado desde las marcas del usuario sobre el plano; correspondencia visual, no levantamiento topográfico."
     },
     {
       "id": "g-i-e-oeste",
@@ -3096,49 +3047,32 @@
     {
       "id": "g-p-w",
       "family": "r1",
-      "label": "Plataforma Gibraltar · oeste → andén",
+      "label": "Plataforma Gibraltar · C → D → E",
       "level": "P",
-      "slide": 20,
       "points": [
         [
-          -51.22187,
+          -17.270214,
           27.46,
-          11.24285
+          -4.861496
         ],
         [
-          -59.61736,
+          7.72196,
           27.46,
-          15.31714
+          -17.537987
         ],
         [
-          -46.59161,
+          37.097914,
           27.46,
-          44.28866
+          4.982612
         ]
       ],
-      "sourcePoints": [
-        [
-          392.271,
-          356.825
-        ],
-        [
-          335.557,
-          356.825
-        ],
-        [
-          335.557,
-          549.2
-        ]
-      ],
-      "sourceShapeIds": [
-        19,
-        17
-      ],
-      "length": 41.097,
+      "color": "#000000",
+      "length": 65.038,
       "bidirectional": false,
+      "directionFromAnimation": true,
       "preferredPage": 5,
-      "sourceRevision": 12,
-      "color": "#000000"
+      "sourceRevision": 19,
+      "sourceNote": "Trazado registrado desde las marcas del usuario sobre el plano; correspondencia visual, no levantamiento topográfico."
     },
     {
       "id": "g-p-e",
@@ -4024,7 +3958,8 @@
       "bidirectional": false,
       "preferredPage": 1,
       "sourceRevision": 12,
-      "color": "#66FF66"
+      "color": "#66FF66",
+      "superseded": true
     },
     {
       "id": "bike-a-ramp-lower",
@@ -4071,7 +4006,8 @@
       "bidirectional": false,
       "preferredPage": 1,
       "sourceRevision": 12,
-      "color": "#66FF66"
+      "color": "#66FF66",
+      "superseded": true
     },
     {
       "id": "bike-b-spur",
@@ -4482,7 +4418,210 @@
       "bidirectional": false,
       "preferredPage": 7,
       "sourceRevision": 12,
-      "color": "#66FF66"
+      "color": "#66FF66",
+      "superseded": true
+    },
+    {
+      "id": "v19-bike-down",
+      "family": "r1",
+      "label": "Biciusuarios · 1 → 2 → 3 · descenso",
+      "level": "A",
+      "points": [
+        [
+          -8.175929,
+          9.87,
+          -0.259645
+        ],
+        [
+          -35.470685,
+          9.87,
+          12.976377
+        ],
+        [
+          -40.288693,
+          9.87,
+          3.112153
+        ],
+        [
+          -12.993937,
+          6.795,
+          -10.123868
+        ],
+        [
+          -10.584933,
+          6.795,
+          -5.191756
+        ],
+        [
+          -31.615319,
+          3.72,
+          5.00649
+        ]
+      ],
+      "color": "#66FF66",
+      "length": 100.866,
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "preferredPage": 1,
+      "sourceRevision": 19,
+      "sourceNote": "Trazado registrado desde las marcas del usuario sobre el plano; correspondencia visual, no levantamiento topográfico.",
+      "heightSource": "Cotas de acceso y sótano; descenso interpolado en las dos rampas señaladas."
+    },
+    {
+      "id": "v19-bike-up",
+      "family": "r1",
+      "label": "Biciusuarios · 3 → 2 → 4 · ascenso",
+      "level": "A",
+      "points": [
+        [
+          -31.615319,
+          3.72,
+          5.00649
+        ],
+        [
+          -10.584933,
+          6.795,
+          -5.191756
+        ],
+        [
+          -12.993937,
+          6.795,
+          -10.123868
+        ],
+        [
+          -36.052052,
+          9.87,
+          2.721403
+        ]
+      ],
+      "color": "#66FF66",
+      "length": 55.636,
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "preferredPage": 1,
+      "sourceRevision": 19,
+      "sourceNote": "Trazado registrado desde las marcas del usuario sobre el plano; correspondencia visual, no levantamiento topográfico.",
+      "heightSource": "Retorno por las rampas hasta el punto 4, sin pasar por el punto 1; alturas interpoladas entre niveles."
+    },
+    {
+      "id": "v19-bike-basement",
+      "family": "r1",
+      "label": "Biciusuarios · punto 3 → cicloparqueadero",
+      "level": "B",
+      "points": [
+        [
+          -31.615319,
+          3.72,
+          5.00649
+        ],
+        [
+          -43.57441,
+          3.72,
+          10.74064
+        ],
+        [
+          -47.73157,
+          3.72,
+          2.33091
+        ],
+        [
+          -5.29482,
+          3.72,
+          -18.19727
+        ],
+        [
+          -3.24928,
+          3.72,
+          -22.81513
+        ],
+        [
+          -11.22458,
+          3.72,
+          -26.12105
+        ]
+      ],
+      "color": "#66FF66",
+      "length": 83.469,
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "preferredPage": 7,
+      "sourceRevision": 19,
+      "sourceNote": "Trazado registrado desde las marcas del usuario sobre el plano; correspondencia visual, no levantamiento topográfico."
+    },
+    {
+      "id": "v19-bike-basement-return",
+      "family": "r1",
+      "label": "Biciusuarios · retorno al punto 3",
+      "level": "B",
+      "points": [
+        [
+          -11.22458,
+          3.72,
+          -26.12105
+        ],
+        [
+          -3.24928,
+          3.72,
+          -22.81513
+        ],
+        [
+          -5.29482,
+          3.72,
+          -18.19727
+        ],
+        [
+          -47.73157,
+          3.72,
+          2.33091
+        ],
+        [
+          -43.57441,
+          3.72,
+          10.74064
+        ],
+        [
+          -31.615319,
+          3.72,
+          5.00649
+        ]
+      ],
+      "color": "#66FF66",
+      "length": 83.469,
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "preferredPage": 7,
+      "sourceRevision": 19,
+      "sourceNote": "Trazado registrado desde las marcas del usuario sobre el plano; correspondencia visual, no levantamiento topográfico."
+    },
+    {
+      "id": "v19-bike-entry",
+      "family": "r1",
+      "label": "Biciusuarios · 4 → acceso → 5",
+      "level": "A",
+      "points": [
+        [
+          -36.052052,
+          9.87,
+          2.721403
+        ],
+        [
+          -31.453044,
+          9.87,
+          12.137253
+        ],
+        [
+          -71.723994,
+          9.87,
+          31.665809
+        ]
+      ],
+      "color": "#66FF66",
+      "length": 55.235,
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "preferredPage": 1,
+      "sourceRevision": 19,
+      "sourceNote": "Trazado registrado desde las marcas del usuario sobre el plano; correspondencia visual, no levantamiento topográfico."
     }
   ],
   "links": [
@@ -5417,17 +5556,17 @@
       "toLevel": "P",
       "points": [
         [
-          -37.38925,
+          -4.858175,
           18.72,
-          5.98201
+          -9.646849
         ],
         [
-          -51.22187,
+          -17.270214,
           27.46,
-          11.24285
+          -4.861496
         ]
       ],
-      "length": 17.187,
+      "length": 15.917,
       "schematic": true,
       "sourceRevision": 12,
       "color": "#000000"
@@ -5560,12 +5699,12 @@
           5.98201
         ],
         [
-          -51.22187,
+          -17.270214,
           27.46,
-          11.24285
+          -4.861496
         ]
       ],
-      "length": 17.187,
+      "length": 24.469,
       "schematic": true,
       "sourceRevision": 12,
       "color": "#000000"
@@ -5814,13 +5953,14 @@
           10.74064
         ],
         [
-          -71.22457,
+          -71.723994,
           9.87,
-          33.27957
+          31.665809
         ]
       ],
       "color": "#66FF66",
-      "sourceNote": "Enlace espacial esquemático; cambio de nivel temporizado con el video, pendiente de validación geométrica."
+      "sourceNote": "Enlace espacial esquemático; cambio de nivel temporizado con el video, pendiente de validación geométrica.",
+      "length": 35.61
     }
   ],
   "journeys": [
@@ -6307,25 +6447,25 @@
       "videoSync": {
         "videoId": "e09-ruta-1",
         "animationStartSeconds": 128,
-        "method": "Línea negra detenida hasta 2:08 del POV. Avance interpolado entre hitos del video: escalera 2:20, nivel intermedio 2:41, validación 2:57, ascenso 3:04, plataforma 3:17 y llegada 3:29. Enlaces verticales esquemáticos.",
+        "method": "Línea negra desde 2:08. Punto A a 3:00, punto B a 3:04, plataforma C a 3:15, D a 3:21 y E a 3:29. Trazados corregidos según imágenes del usuario; enlaces verticales esquemáticos.",
         "keys": [
           {
             "time": 0,
             "leg": "g-a-s",
             "fraction": 0,
-            "label": "Espera de acceso Gibraltar"
+            "label": "Espera"
           },
           {
             "time": 128,
             "leg": "g-a-s",
             "fraction": 0,
-            "label": "Inicio línea negra · 2:08"
+            "label": "Inicio negro · 2:08"
           },
           {
             "time": 140,
             "leg": "link-g-a-s-g-i-w-oeste",
             "fraction": 0,
-            "label": "Inicio escalera mecánica"
+            "label": "Ascenso a intermedio"
           },
           {
             "time": 161,
@@ -6334,28 +6474,40 @@
             "label": "Nivel intermedio"
           },
           {
-            "time": 177,
+            "time": 175,
             "leg": "g-i-w-oeste",
-            "fraction": 0.7,
-            "label": "Validación Metro"
+            "fraction": 0.47723716686326795,
+            "label": "Giro hacia validación"
+          },
+          {
+            "time": 180,
+            "leg": "g-i-w-oeste",
+            "fraction": 0.6494179127376344,
+            "label": "Punto A · validación Metro"
           },
           {
             "time": 184,
             "leg": "link-g-i-w-oeste-g-p-w",
             "fraction": 0,
-            "label": "Inicio ascenso a plataforma"
+            "label": "Punto B · ascenso"
           },
           {
-            "time": 197,
+            "time": 195,
             "leg": "g-p-w",
             "fraction": 0,
-            "label": "Nivel plataforma"
+            "label": "Punto C · plataforma"
+          },
+          {
+            "time": 201,
+            "leg": "g-p-w",
+            "fraction": 0.43087207777293474,
+            "label": "Punto D · giro"
           },
           {
             "time": 209,
             "leg": "g-p-w",
             "fraction": 1,
-            "label": "Puertas hacia Gibraltar"
+            "label": "Punto E · llegada"
           },
           {
             "time": 210.2,
@@ -6504,11 +6656,10 @@
     {
       "id": "journey-bike",
       "family": "r1",
-      "label": "Acceso · rampa de biciusuarios · retorno → Sótano · rampa → cicloparqueadero",
+      "label": "Biciusuarios · 1 → 2 → 3 → cicloparqueadero",
       "legs": [
-        "bike-a-ramp-lower",
-        "link-bike-a-ramp-lower-bike-b-parking",
-        "bike-b-parking"
+        "v19-bike-down",
+        "v19-bike-basement"
       ],
       "bidirectional": false,
       "sourceRevision": 12,
@@ -6519,11 +6670,11 @@
       "family": "r1",
       "label": "Video · Gibraltar / visita al cicloparqueadero / Metro",
       "legs": [
-        "bike-a-ramp-lower",
-        "link-bike-a-ramp-lower-bike-b-parking",
-        "bike-b-parking",
-        "video-bike-return",
-        "video-bike-return-access",
+        "v19-bike-down",
+        "v19-bike-basement",
+        "v19-bike-basement-return",
+        "v19-bike-up",
+        "v19-bike-entry",
         "g-a-s",
         "link-g-a-s-g-i-w-oeste",
         "g-i-w-oeste",
@@ -6533,67 +6684,91 @@
       "bidirectional": false,
       "videoSync": {
         "videoId": "e09-ruta-1",
-        "method": "Tramo verde de Biciusuarios desde 0:00; línea negra de Acceso Gibraltar desde 2:08. Avance interpolado entre hitos del POV y cambios de nivel. El retorno del cicloparqueadero al acceso y los enlaces verticales son esquemáticos; sus distancias son estimadas.",
+        "method": "Verde: 1→2→3 de 0:00 a 0:33; retorno 3→2→4 de 1:30 a 1:50; 4→5 de 1:50 a 2:07, sin pasar por 1. Negro desde 2:08; A a 3:00 y C→D→E desde 3:15. Coordenadas registradas desde las marcas del usuario. Alturas de rampa interpoladas entre niveles. Sin enlace 1→4. Enlaces verticales entre niveles del tramo negro esquemáticos, con distancias estimadas.",
         "keys": [
           {
             "time": 0,
-            "leg": "bike-a-ramp-lower",
+            "leg": "v19-bike-down",
             "fraction": 0,
-            "label": "Acceso a cicloparqueadero"
+            "label": "Punto 1 · inicio"
           },
           {
             "time": 7,
-            "leg": "link-bike-a-ramp-lower-bike-b-parking",
-            "fraction": 0,
-            "label": "Descenso al sótano"
+            "leg": "v19-bike-down",
+            "fraction": 0.4095803135575586,
+            "label": "Inicio descenso"
+          },
+          {
+            "time": 20,
+            "leg": "v19-bike-down",
+            "fraction": 0.7662831736050226,
+            "label": "Punto 2 · giro en U"
           },
           {
             "time": 33,
-            "leg": "bike-b-parking",
+            "leg": "v19-bike-basement",
             "fraction": 0,
-            "label": "Llegada al sótano"
+            "label": "Punto 3 · sótano"
           },
           {
             "time": 50,
-            "leg": "bike-b-parking",
+            "leg": "v19-bike-basement",
             "fraction": 0.65,
-            "label": "Vestíbulo cicloparqueadero"
+            "label": "Cicloparqueadero"
           },
           {
             "time": 58,
-            "leg": "video-bike-return",
+            "leg": "v19-bike-basement-return",
             "fraction": 0,
             "label": "Validación cicloparqueadero"
           },
           {
             "time": 65,
-            "leg": "video-bike-return",
+            "leg": "v19-bike-basement-return",
             "fraction": 0,
             "label": "Giro de cámara"
           },
           {
-            "time": 89,
-            "leg": "video-bike-return-access",
+            "time": 90,
+            "leg": "v19-bike-up",
             "fraction": 0,
-            "label": "Inicio retorno a acceso"
+            "label": "Retorno 3 → 2 → 4"
           },
           {
-            "time": 112,
+            "time": 98,
+            "leg": "v19-bike-up",
+            "fraction": 0.522376582430127,
+            "label": "Punto 2 · retorno"
+          },
+          {
+            "time": 110,
+            "leg": "v19-bike-entry",
+            "fraction": 0,
+            "label": "Punto 4 · acceso"
+          },
+          {
+            "time": 113,
+            "leg": "v19-bike-entry",
+            "fraction": 0.1897158788573348,
+            "label": "Giro en acceso"
+          },
+          {
+            "time": 127,
             "leg": "g-a-s",
             "fraction": 0,
-            "label": "Llegada al acceso"
+            "label": "Punto 5 · espera línea negra"
           },
           {
             "time": 128,
             "leg": "g-a-s",
             "fraction": 0,
-            "label": "Inicio línea negra · 2:08"
+            "label": "Inicio negro · 2:08"
           },
           {
             "time": 140,
             "leg": "link-g-a-s-g-i-w-oeste",
             "fraction": 0,
-            "label": "Inicio escalera mecánica"
+            "label": "Ascenso a intermedio"
           },
           {
             "time": 161,
@@ -6602,28 +6777,40 @@
             "label": "Nivel intermedio"
           },
           {
-            "time": 177,
+            "time": 175,
             "leg": "g-i-w-oeste",
-            "fraction": 0.7,
-            "label": "Validación Metro"
+            "fraction": 0.47723716686326795,
+            "label": "Giro hacia validación"
+          },
+          {
+            "time": 180,
+            "leg": "g-i-w-oeste",
+            "fraction": 0.6494179127376344,
+            "label": "Punto A · validación Metro"
           },
           {
             "time": 184,
             "leg": "link-g-i-w-oeste-g-p-w",
             "fraction": 0,
-            "label": "Inicio ascenso a plataforma"
+            "label": "Punto B · ascenso"
           },
           {
-            "time": 197,
+            "time": 195,
             "leg": "g-p-w",
             "fraction": 0,
-            "label": "Nivel plataforma"
+            "label": "Punto C · plataforma"
+          },
+          {
+            "time": 201,
+            "leg": "g-p-w",
+            "fraction": 0.43087207777293474,
+            "label": "Punto D · giro"
           },
           {
             "time": 209,
             "leg": "g-p-w",
             "fraction": 1,
-            "label": "Puertas hacia Gibraltar"
+            "label": "Punto E · llegada"
           },
           {
             "time": 210.2,
