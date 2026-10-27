@@ -49,7 +49,16 @@ export class StudyScene{
   this.renderer.setAnimationLoop(time=>{this.routes?.tick(time);if(this.dirty){this.dirty=false;this.render();this.updateCameraTag();}});
  }
  updateCameraTag(){const r=this.hoverCamera||this.selected,expanded=document.querySelector('.view.is-expanded')?.id;this.cameraTag.hidden=true;if(!this.ready||!r||this.showMarkers===false||(expanded&&expanded!=='axon-panel')||(!this.fullStation&&r.ifcStorey!==this.level?.ifc)||document.querySelector('dialog[open]'))return;const box=this.axon.getBoundingClientRect(),p=new THREE.Vector3().fromArray(r.positionGltfMetres).sub(ORIGIN).project(this.axonCamera);if(p.z< -1||p.z>1||Math.abs(p.x)>.96||Math.abs(p.y)>.94)return;this.tagRecord=r;const type=Object.keys(this.types).find(k=>r.ifcTypeName.includes(this.types[k].ifcFamilyToken));this.cameraTag.textContent=type+' '+r.mark;this.cameraTag.title=`${this.types[type].label} · Marca IFC ${r.mark}`;this.cameraTag.style.borderColor=this.types[type].color;this.cameraTag.style.left=box.left+(p.x+1)*box.width/2+8+'px';this.cameraTag.style.top=box.top+(1-p.y)*box.height/2-8+'px';this.cameraTag.hidden=false;}
- async binary(url){const r=await fetch(url);if(!r.ok)throw Error(`${r.status}: ${url}`);return new Response(r.body.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();}
+ async binary(url){
+  for(let attempt=0;attempt<4;attempt++){
+   let response;
+   try{response=await fetch(url,attempt?{cache:'reload'}:undefined);}catch(error){if(attempt===3)throw error;}
+   if(response?.ok)return new Response(response.body.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
+   if(response&&!([408,429,500,502,503,504].includes(response.status)&&attempt<3))throw Error(`${response.status}: ${url}`);
+   await new Promise(resolve=>setTimeout(resolve,1000*2**attempt));
+  }
+  throw Error(`No se pudo descargar: ${url}`);
+ }
  async load(manifest,records,types){
   const token=++this.generation;this.records=records;this.types=types;this.ready=false;this.frameDirection=manifest.frameDirection;
   const colorFor=r=>types[Object.keys(types).find(k=>(r.ifcTypeName||'').includes(types[k].ifcFamilyToken))].color;
