@@ -82,7 +82,7 @@ export class StudyScene{
    let object;
    if(file.mode===1)object=new THREE.LineSegments(geometry,new THREE.LineBasicMaterial({vertexColors:true,transparent:file.opacity<1,opacity:file.opacity}));
    else{geometry.computeVertexNormals();object=new THREE.Mesh(geometry,new THREE.MeshStandardMaterial({vertexColors:true,roughness:.85,metalness:0,side:THREE.DoubleSide,transparent:file.opacity<1,opacity:file.opacity,depthWrite:file.opacity>=1}));}
-   geometry.computeBoundingSphere();object.userData.package=file.package;object.userData.bounds=file.bounds;this.staticGroup.add(object);this.staticMeshes.push(object);done++;this.onProgress(done+cameraDone,total);this.dirty=true;
+   geometry.computeBoundingSphere();object.userData.file=file.file;object.userData.package=file.package;object.userData.bounds=file.bounds;this.staticGroup.add(object);this.staticMeshes.push(object);done++;this.onProgress(done+cameraDone,total);this.dirty=true;
    await new Promise(resolve=>setTimeout(resolve,0));
   }};
   await Promise.all([worker(),worker(),worker()]);if(token!==this.generation)return;

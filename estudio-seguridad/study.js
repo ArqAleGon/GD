@@ -1,10 +1,10 @@
-import {station,stations} from './study-stations.js?v=20261027-trace19';
-import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261027-trace19';
-import {PlanViewer} from './study-plans.js?v=20261027-trace19';
-import {StudyScene} from './study-scene.js?v=20261027-trace19';
-import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261027-trace19';
-import {RouteStudy} from './study-routes.js?v=20261027-trace19';
-import {SpaceStudy} from './study-spaces.js?v=20261027-trace19';
+import {station,stations} from './study-stations.js?v=20261027-e01routes20';
+import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261027-e01routes20';
+import {PlanViewer} from './study-plans.js?v=20261027-e01routes20';
+import {StudyScene} from './study-scene.js?v=20261027-e01routes20';
+import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261027-e01routes20';
+import {RouteStudy} from './study-routes.js?v=20261027-e01routes20';
+import {SpaceStudy} from './study-spaces.js?v=20261027-e01routes20';
 const $=s=>document.querySelector(s);
 const levels=station.levels;
 let records=[],types={},architecture=[],inventory=[],modelManifest,scene,active=null,level=levels[1],started=false,modelsReady=false,loadingPromise;
@@ -15,7 +15,7 @@ const defaults=()=>({fov:90,range:25,yaw:0,tilt:0});
 initDrawers();initFullscreen(()=>{window.dispatchEvent(new Event('resize'));});
 const canView=r=>!!r&&typeOf(r)==='F';
 const typeOf=r=>Object.keys(types).find(k=>(r.ifcTypeName||'').includes(types[k].ifcFamilyToken));
-async function json(url){const request=new URL(url,location.href);request.searchParams.set('v',url.endsWith('routes.json')?'20261027-trace19':'20261027-trace19');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
+async function json(url){const request=new URL(url,location.href);request.searchParams.set('v',url.endsWith('routes.json')?'20261027-e01routes20':'20261027-e01routes20');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
 function options(select,items){select.replaceChildren(...items.map(([value,text])=>{const o=document.createElement('option');o.value=value;o.textContent=text;return o;}));}
 for(const selector of ['#entry-level','#level-select']){options($(selector),levels.map(l=>[l.id,l.name]));$(selector).value=level.id;}
 $('#entry-dialog').showModal();
@@ -62,7 +62,7 @@ async function start(){
   if(spacesData)spaces=new SpaceStudy({scene,plan:planView,data:spacesData,onSelectPlan:r=>{if(scene.fullStation)showLevelView();const page=architecture.find(p=>p.level===level.name);if(page){if($('#plan-kind').value!=='architecture'){$('#plan-kind').value='architecture';populateSheets();}$('#plan-sheet').value=page.page;zoom=1;drawPlan();}}});scene.showMarkers=camerasVisible;
   changeLevel($('#entry-level').value);
   await scene.load(modelManifest,records,types);scene.setLevel(level);scene.select(active,settings);modelsReady=true;$('#frame-station').disabled=false;$('#model-loading').hidden=true;updatePovMessage();
-  $('#resource-status').textContent=`${station.summary} · arquitectura, estructura e instalaciones · ${records.length} cámaras · ${records.filter(canView).length} perspectivas Fixed${station.id==='E01'?' · Recorridos y videos pendientes':''}`;
+  $('#resource-status').textContent=`${station.summary} · arquitectura, estructura e instalaciones · ${records.length} cámaras · ${records.filter(canView).length} perspectivas Fixed${station.id==='E01'?' · 3 tipos de recorrido · 2 videos PMR HD':''}`;
   clearInterval(loadTimer);document.body.dataset.ready='true';
   if(station.assets.routes)try{const routeData=await json(station.assets.routes);routes=new RouteStudy({scene,plan:planView,data:routeData,onEnter:()=>expandPanel(null),setContext:(id,page)=>{if(!securityContext)securityContext={level:level.id,camera:active?.ifcGlobalId};level=levels.find(l=>l.id===id)||level;$('#level-select').value=level.id;scene.setLevel(level);spaces?.setLevel(level);syncAxonView();$('#plan-kind').value='architecture';populateSheets();if(page)$('#plan-sheet').value=String(page);drawPlan();},onExit:()=>{const saved=securityContext;securityContext=null;if(saved){changeLevel(saved.level);selectCamera(saved.camera);}else changeLevel(level.id);}});document.body.dataset.routesReady='true';}catch(error){$('#routes-tab').disabled=true;$('#resource-status').textContent+=' · No se pudieron cargar los recorridos: '+error.message;console.error(error);}
 
@@ -147,6 +147,6 @@ if(station.id==='E01'){
  for(const id of ['show-installations','show-brt','show-structure-1100','show-structure-1310','show-structure-1300','show-structure-914'])$('#'+id).closest('label').hidden=true;
  const target=$('#show-cone').closest('label');for(const [key,title] of station.packages){const label=document.createElement('label'),input=document.createElement('input');input.type='checkbox';input.checked=true;input.dataset.modelPackage=key;input.addEventListener('change',()=>{if(!scene)return;scene.hiddenPackages ||= new Set();if(input.checked)scene.hiddenPackages.delete(key);else scene.hiddenPackages.add(key);scene.filter();});label.append(input,document.createTextNode(' '+title));target.before(label);}
  $('#frame-station').addEventListener('click',()=>{for(const input of document.querySelectorAll('[data-model-package]'))input.checked=true;});
- $('#routes-drawer h2').textContent='Recorridos · E01';$('#routes-drawer > p').textContent='Pendientes de incorporación: trazados en planta y videorecorridos de E01.';$('#routes-drawer .micro-note').textContent='Las cámaras Fixed del IFC conservan su vista POV geométrica.';$('#routes-enter').disabled=true;$('#routes-enter').textContent='Recorridos pendientes';$('#routes-tab').disabled=false;
+ $('#routes-drawer h2').textContent='Recorridos · E01';$('#routes-drawer > p').textContent='Recorridos de E1_Recorridos.pptx: selecciona Biciusuarios, Acceso Peatonal o PMR y el tramo que deseas consultar.';$('#routes-drawer .micro-note').textContent='Verde: Biciusuarios. Negro: Acceso Peatonal. Naranja: PMR. Los enlaces entre niveles se distinguen en la descripción del recorrido.';
 }
 if(new URLSearchParams(location.search).get('start')==='1'){const url=new URL(location.href);url.searchParams.delete('start');history.replaceState(null,'',url);$('#entry-dialog').close();start();}

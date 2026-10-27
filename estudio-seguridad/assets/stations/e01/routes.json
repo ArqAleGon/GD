@@ -1,0 +1,2950 @@
+{
+  "version": 20,
+  "station": "E01",
+  "source": "E1_Recorridos.pptx",
+  "pageByLevel": {
+    "B": 1,
+    "A": 2,
+    "I": 3,
+    "P": 4
+  },
+  "families": [
+    {
+      "id": "bike",
+      "label": "1. Biciusuarios",
+      "color": "#55AA26",
+      "defaultJourney": "e01-bike"
+    },
+    {
+      "id": "walk",
+      "label": "2. Acceso Peatonal",
+      "color": "#000000",
+      "defaultJourney": "journey-e01-walk-a-no"
+    },
+    {
+      "id": "pmr",
+      "label": "3. PMR (Personas con Movilidad Reducida)",
+      "color": "#F4772B",
+      "defaultJourney": "e01-pmr-n",
+      "videoId": "e01-pmr-n"
+    }
+  ],
+  "routes": [
+    {
+      "id": "e01-s2-91",
+      "family": "walk",
+      "label": "A · flecha 91",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          -9.99482,
+          -9.02,
+          -33.11352
+        ],
+        [
+          -13.50394,
+          -9.02,
+          -39.69873
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 7.461830467016786,
+      "sourcePoints": [
+        [
+          647.839,
+          814.243
+        ],
+        [
+          567.467,
+          814.243
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s2-92",
+      "family": "walk",
+      "label": "A · flecha 92",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          29.41,
+          -9.02,
+          27.1218
+        ],
+        [
+          23.62197,
+          -9.02,
+          30.16987
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 6.541561129103663,
+      "sourcePoints": [
+        [
+          1420.009,
+          744.791
+        ],
+        [
+          1419.674,
+          815.247
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s2-93",
+      "family": "walk",
+      "label": "A · flecha 93",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          23.62583,
+          -9.02,
+          30.16782
+        ],
+        [
+          27.93024,
+          -9.02,
+          38.87723
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 9.715027946238754,
+      "sourcePoints": [
+        [
+          1419.674,
+          815.2
+        ],
+        [
+          1524.267,
+          818.4
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s2-96",
+      "family": "pmr",
+      "label": "A · flecha 96",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          25.80405,
+          -9.02,
+          61.77767
+        ],
+        [
+          30.91395,
+          -9.02,
+          59.0556
+        ]
+      ],
+      "color": "#F4772B",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 5.789710104564823,
+      "sourcePoints": [
+        [
+          1731.2,
+          954.605
+        ],
+        [
+          1731.2,
+          892.246
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s2-99",
+      "family": "pmr",
+      "label": "A · flecha 99",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          30.91395,
+          -9.02,
+          59.0556
+        ],
+        [
+          43.5664,
+          -9.02,
+          52.31556
+        ]
+      ],
+      "color": "#F4772B",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 14.335711709018847,
+      "sourcePoints": [
+        [
+          1731.2,
+          892.246
+        ],
+        [
+          1731.2,
+          737.841
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s2-100",
+      "family": "pmr",
+      "label": "A · flecha 100",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          30.91395,
+          -9.02,
+          59.0556
+        ],
+        [
+          32.35769,
+          -9.02,
+          61.76491
+        ]
+      ],
+      "color": "#F4772B",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 3.069974896265441,
+      "sourcePoints": [
+        [
+          1731.2,
+          892.246
+        ],
+        [
+          1764.267,
+          892.246
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s2-5",
+      "family": "bike",
+      "label": "A · flecha 5",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          5.53317,
+          -9.02,
+          -20.38696
+        ],
+        [
+          -0.26964,
+          -9.02,
+          -17.29576
+        ]
+      ],
+      "color": "#55AA26",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 6.574809604551297,
+      "sourcePoints": [
+        [
+          847.458,
+          731.107
+        ],
+        [
+          847.458,
+          801.922
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s2-13",
+      "family": "bike",
+      "label": "A · flecha 13",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          5.04456,
+          -9.02,
+          -21.30388
+        ],
+        [
+          -2.21665,
+          -9.02,
+          -34.93025
+        ]
+      ],
+      "color": "#55AA26",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 15.440308612233114,
+      "sourcePoints": [
+        [
+          836.267,
+          731.107
+        ],
+        [
+          669.958,
+          731.107
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s2-16",
+      "family": "bike",
+      "label": "A · flecha 16",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          -2.21665,
+          -9.02,
+          -34.93025
+        ],
+        [
+          -9.36973,
+          -9.02,
+          -31.11976
+        ]
+      ],
+      "color": "#55AA26",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 8.104713907751465,
+      "sourcePoints": [
+        [
+          669.958,
+          731.107
+        ],
+        [
+          669.958,
+          818.4
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s2-20",
+      "family": "walk",
+      "label": "A · flecha 20",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          -3.6105,
+          -9.02,
+          -36.21648
+        ],
+        [
+          -9.93669,
+          -9.02,
+          -32.84648
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 7.167815560971138,
+      "sourcePoints": [
+        [
+          650.672,
+          737.841
+        ],
+        [
+          650.672,
+          815.043
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s2-22",
+      "family": "walk",
+      "label": "A · flecha 22",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          -18.30047,
+          -9.02,
+          -28.07021
+        ],
+        [
+          -14.46249,
+          -9.02,
+          -30.11472
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 4.34857581519513,
+      "sourcePoints": [
+        [
+          653.722,
+          918.736
+        ],
+        [
+          653.722,
+          871.899
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s2-23",
+      "family": "walk",
+      "label": "A · flecha 23",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          -15.25625,
+          -9.02,
+          -30.37353
+        ],
+        [
+          -18.7393,
+          -9.02,
+          -36.90982
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 7.406397522858199,
+      "sourcePoints": [
+        [
+          647.242,
+          878.133
+        ],
+        [
+          567.467,
+          878.133
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s2-28",
+      "family": "walk",
+      "label": "A · flecha 28",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          14.69974,
+          -9.02,
+          34.9228
+        ],
+        [
+          18.53764,
+          -9.02,
+          32.87833
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 4.3484864022898835,
+      "sourcePoints": [
+        [
+          1419.674,
+          924.13
+        ],
+        [
+          1419.674,
+          877.294
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s2-29",
+      "family": "walk",
+      "label": "A · flecha 29",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          18.67277,
+          -9.02,
+          33.81619
+        ],
+        [
+          22.82026,
+          -9.02,
+          41.59935
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 8.819254667243715,
+      "sourcePoints": [
+        [
+          1429.274,
+          880.76
+        ],
+        [
+          1524.267,
+          880.76
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-80",
+      "family": "walk",
+      "label": "I · flecha 80",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          2.73463,
+          -1.42,
+          -37.97824
+        ],
+        [
+          -0.82075,
+          -1.42,
+          -44.65143
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 7.561229511164171,
+      "sourcePoints": [
+        [
+          711.68,
+          596.87
+        ],
+        [
+          626.192,
+          596.87
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-86",
+      "family": "walk",
+      "label": "I · flecha 86",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          1.32134,
+          -1.42,
+          -40.9455
+        ],
+        [
+          -1.63788,
+          -1.42,
+          -35.54192
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 6.160816490109087,
+      "sourcePoints": [
+        [
+          674.56,
+          595.2
+        ],
+        [
+          712.697,
+          653.363
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-88",
+      "family": "walk",
+      "label": "I · flecha 88",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          -1.51615,
+          -1.42,
+          -35.70888
+        ],
+        [
+          -12.14434,
+          -1.42,
+          -30.03481
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 12.047966344616007,
+      "sourcePoints": [
+        [
+          711.68,
+          651.264
+        ],
+        [
+          711.68,
+          787.265
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-89",
+      "family": "walk",
+      "label": "I · flecha 89",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          -11.95475,
+          -1.42,
+          -30.13602
+        ],
+        [
+          -17.41822,
+          -1.42,
+          -30.55239
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 5.479312768751206,
+      "sourcePoints": [
+        [
+          711.68,
+          784.839
+        ],
+        [
+          678.436,
+          837.059
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-92",
+      "family": "walk",
+      "label": "I · flecha 92",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          -15.85574,
+          -1.42,
+          -27.48953
+        ],
+        [
+          -19.41111,
+          -1.42,
+          -34.16272
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 7.561224809050451,
+      "sourcePoints": [
+        [
+          717.304,
+          837.75
+        ],
+        [
+          631.816,
+          837.75
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-94",
+      "family": "walk",
+      "label": "I · flecha 94",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          -27.24686,
+          -1.42,
+          -52.93252
+        ],
+        [
+          -16.47918,
+          -1.42,
+          -58.68106
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 12.20609047623358,
+      "sourcePoints": [
+        [
+          402.888,
+          816.186
+        ],
+        [
+          402.888,
+          678.4
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-96",
+      "family": "walk",
+      "label": "I · flecha 96",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          -16.47918,
+          -1.42,
+          -58.68106
+        ],
+        [
+          -8.701,
+          -1.42,
+          -44.08196
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 16.541880332126695,
+      "sourcePoints": [
+        [
+          402.888,
+          678.4
+        ],
+        [
+          589.912,
+          678.4
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-98",
+      "family": "walk",
+      "label": "I · flecha 98",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          -9.89817,
+          -1.42,
+          -39.80527
+        ],
+        [
+          -8.701,
+          -1.42,
+          -44.08196
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 4.441091461003705,
+      "sourcePoints": [
+        [
+          626.192,
+          713.027
+        ],
+        [
+          589.912,
+          678.4
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-100",
+      "family": "walk",
+      "label": "I · flecha 100",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          -9.89817,
+          -1.42,
+          -39.80527
+        ],
+        [
+          -6.3428,
+          -1.42,
+          -33.13208
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 7.561224809050447,
+      "sourcePoints": [
+        [
+          626.192,
+          713.027
+        ],
+        [
+          711.68,
+          713.027
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-104",
+      "family": "walk",
+      "label": "I · flecha 104",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          32.52476,
+          -1.42,
+          58.46607
+        ],
+        [
+          43.11615,
+          -1.42,
+          52.81165
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 12.006248692597532,
+      "sourcePoints": [
+        [
+          1832.214,
+          812.0
+        ],
+        [
+          1832.214,
+          676.47
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-106",
+      "family": "walk",
+      "label": "I · flecha 106",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          43.11615,
+          -1.42,
+          52.81165
+        ],
+        [
+          28.66748,
+          -1.42,
+          25.69251
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 30.72802986051172,
+      "sourcePoints": [
+        [
+          1832.214,
+          676.47
+        ],
+        [
+          1484.8,
+          676.47
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-111",
+      "family": "walk",
+      "label": "I · flecha 111",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          19.7394,
+          -1.42,
+          30.45894
+        ],
+        [
+          32.64287,
+          -1.42,
+          23.57017
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 14.627190097684519,
+      "sourcePoints": [
+        [
+          1484.8,
+          790.716
+        ],
+        [
+          1484.8,
+          625.6
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-114",
+      "family": "walk",
+      "label": "I · flecha 114",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          32.51402,
+          -1.42,
+          23.77842
+        ],
+        [
+          30.47808,
+          -1.42,
+          14.97659
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 9.03422730688685,
+      "sourcePoints": [
+        [
+          1486.191,
+          627.989
+        ],
+        [
+          1387.563,
+          601.553
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-116",
+      "family": "walk",
+      "label": "I · flecha 116",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          19.7394,
+          -1.42,
+          30.45894
+        ],
+        [
+          12.99288,
+          -1.42,
+          24.31141
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 9.127302844285381,
+      "sourcePoints": [
+        [
+          1484.8,
+          790.716
+        ],
+        [
+          1387.563,
+          825.298
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-121",
+      "family": "walk",
+      "label": "I · flecha 121",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          19.79725,
+          -1.42,
+          30.56752
+        ],
+        [
+          18.96723,
+          -1.42,
+          36.45554
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 5.946235172005897,
+      "sourcePoints": [
+        [
+          1486.191,
+          790.716
+        ],
+        [
+          1540.497,
+          830.238
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-125",
+      "family": "walk",
+      "label": "I · flecha 125",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          32.58717,
+          -1.42,
+          23.73937
+        ],
+        [
+          37.21828,
+          -1.42,
+          27.25689
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 5.815507439811248,
+      "sourcePoints": [
+        [
+          1486.191,
+          627.053
+        ],
+        [
+          1545.933,
+          599.586
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-128",
+      "family": "pmr",
+      "label": "I · flecha 128",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          29.87548,
+          -1.42,
+          58.03019
+        ],
+        [
+          31.29995,
+          -1.42,
+          60.70382
+        ]
+      ],
+      "color": "#F4772B",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 3.0294243938081724,
+      "sourcePoints": [
+        [
+          1813.76,
+          836.08
+        ],
+        [
+          1848.011,
+          836.08
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-131",
+      "family": "pmr",
+      "label": "I · flecha 131",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          29.87548,
+          -1.42,
+          58.03019
+        ],
+        [
+          41.19754,
+          -1.42,
+          51.98568
+        ]
+      ],
+      "color": "#F4772B",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 12.83452935575356,
+      "sourcePoints": [
+        [
+          1813.76,
+          836.08
+        ],
+        [
+          1813.76,
+          691.2
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-133",
+      "family": "pmr",
+      "label": "I · flecha 133",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          41.14431,
+          -1.42,
+          51.88577
+        ],
+        [
+          26.87755,
+          -1.42,
+          25.10805
+        ]
+      ],
+      "color": "#F4772B",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 30.34117218065248,
+      "sourcePoints": [
+        [
+          1812.48,
+          691.2
+        ],
+        [
+          1469.44,
+          691.2
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-135",
+      "family": "pmr",
+      "label": "I · flecha 135",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          33.1794,
+          -1.42,
+          21.74369
+        ],
+        [
+          17.40481,
+          -1.42,
+          30.08696
+        ]
+      ],
+      "color": "#F4772B",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 17.845107003349685,
+      "sourcePoints": [
+        [
+          1469.44,
+          610.56
+        ],
+        [
+          1468.659,
+          812.0
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-6",
+      "family": "walk",
+      "label": "I · flecha 6",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          -15.04736,
+          -1.42,
+          -42.94644
+        ],
+        [
+          -21.89115,
+          -1.42,
+          -55.79177
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 14.55472309503001,
+      "sourcePoints": [
+        [
+          567.445,
+          747.653
+        ],
+        [
+          402.888,
+          747.653
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-11",
+      "family": "walk",
+      "label": "I · flecha 11",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          29.3597,
+          -1.42,
+          40.40255
+        ],
+        [
+          37.55335,
+          -1.42,
+          55.78147
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 17.425472179797598,
+      "sourcePoints": [
+        [
+          1635.2,
+          747.653
+        ],
+        [
+          1832.214,
+          747.653
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-13",
+      "family": "walk",
+      "label": "I · flecha 13",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          -20.40307,
+          -1.42,
+          -40.08719
+        ],
+        [
+          -27.24686,
+          -1.42,
+          -52.93252
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 14.55472309503001,
+      "sourcePoints": [
+        [
+          567.445,
+          816.186
+        ],
+        [
+          402.888,
+          816.186
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s3-25",
+      "family": "walk",
+      "label": "I · flecha 25",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          22.55365,
+          -1.42,
+          40.53961
+        ],
+        [
+          32.19764,
+          -1.42,
+          58.64072
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 20.50991775586143,
+      "sourcePoints": [
+        [
+          1600.327,
+          816.186
+        ],
+        [
+          1832.214,
+          816.186
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s4-46",
+      "family": "walk",
+      "label": "P · flecha 46",
+      "level": "P",
+      "preferredPage": 4,
+      "points": [
+        [
+          19.82199,
+          8.32,
+          -4.43803
+        ],
+        [
+          12.87098,
+          8.32,
+          -17.48567
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 4,
+      "sourceRevision": 20,
+      "length": 14.783688632736416,
+      "sourcePoints": [
+        [
+          1084.267,
+          621.289
+        ],
+        [
+          923.2,
+          621.289
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s4-58",
+      "family": "walk",
+      "label": "P · flecha 58",
+      "level": "P",
+      "preferredPage": 4,
+      "points": [
+        [
+          -13.96592,
+          8.32,
+          -67.86087
+        ],
+        [
+          -16.39677,
+          8.32,
+          -64.11922
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 4,
+      "sourceRevision": 20,
+      "length": 4.461947606707193,
+      "sourcePoints": [
+        [
+          301.342,
+          621.289
+        ],
+        [
+          324.898,
+          663.789
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s4-61",
+      "family": "walk",
+      "label": "P · flecha 61",
+      "level": "P",
+      "preferredPage": 4,
+      "points": [
+        [
+          47.62783,
+          8.32,
+          47.81085
+        ],
+        [
+          41.45049,
+          8.32,
+          45.90618
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 4,
+      "sourceRevision": 20,
+      "length": 6.464309497889161,
+      "sourcePoints": [
+        [
+          1729.105,
+          621.57
+        ],
+        [
+          1679.182,
+          671.164
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s4-63",
+      "family": "walk",
+      "label": "P · flecha 63",
+      "level": "P",
+      "preferredPage": 4,
+      "points": [
+        [
+          16.79503,
+          8.32,
+          -10.2856
+        ],
+        [
+          13.27881,
+          8.32,
+          -8.41558
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 4,
+      "sourceRevision": 20,
+      "length": 3.9825592134706556,
+      "sourcePoints": [
+        [
+          1012.533,
+          620.441
+        ],
+        [
+          1012.533,
+          663.789
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s4-69",
+      "family": "walk",
+      "label": "P · flecha 69",
+      "level": "P",
+      "preferredPage": 4,
+      "points": [
+        [
+          2.67181,
+          8.32,
+          4.65516
+        ],
+        [
+          -4.2792,
+          8.32,
+          -8.39248
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 4,
+      "sourceRevision": 20,
+      "length": 14.78368863273642,
+      "sourcePoints": [
+        [
+          1084.0,
+          832.575
+        ],
+        [
+          922.933,
+          832.575
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s4-71",
+      "family": "walk",
+      "label": "P · flecha 71",
+      "level": "P",
+      "preferredPage": 4,
+      "points": [
+        [
+          -0.4239,
+          8.32,
+          -1.15575
+        ],
+        [
+          3.09231,
+          8.32,
+          -3.02577
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 4,
+      "sourceRevision": 20,
+      "length": 3.9825503844270447,
+      "sourcePoints": [
+        [
+          1012.267,
+          832.575
+        ],
+        [
+          1012.267,
+          789.227
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s4-73",
+      "family": "walk",
+      "label": "P · flecha 73",
+      "level": "P",
+      "preferredPage": 4,
+      "points": [
+        [
+          -31.68512,
+          8.32,
+          -59.52607
+        ],
+        [
+          -27.33536,
+          8.32,
+          -59.83319
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 4,
+      "sourceRevision": 20,
+      "length": 4.3605888079478445,
+      "sourcePoints": [
+        [
+          290.869,
+          834.16
+        ],
+        [
+          310.167,
+          790.803
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s4-79",
+      "family": "walk",
+      "label": "P · flecha 79",
+      "level": "P",
+      "preferredPage": 4,
+      "points": [
+        [
+          30.69402,
+          8.32,
+          56.79863
+        ],
+        [
+          32.11485,
+          8.32,
+          51.81706
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 4,
+      "sourceRevision": 20,
+      "length": 5.180231418942598,
+      "sourcePoints": [
+        [
+          1728.931,
+          830.238
+        ],
+        [
+          1688.281,
+          791.095
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s4-82",
+      "family": "pmr",
+      "label": "P · flecha 82",
+      "level": "P",
+      "preferredPage": 4,
+      "points": [
+        [
+          32.98211,
+          8.32,
+          22.12293
+        ],
+        [
+          31.07557,
+          8.32,
+          23.13689
+        ]
+      ],
+      "color": "#F4772B",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 4,
+      "sourceRevision": 20,
+      "length": 2.1594002994350077,
+      "sourcePoints": [
+        [
+          1407.085,
+          630.799
+        ],
+        [
+          1407.085,
+          654.303
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s4-84",
+      "family": "pmr",
+      "label": "P · flecha 84",
+      "level": "P",
+      "preferredPage": 4,
+      "points": [
+        [
+          17.29452,
+          8.32,
+          30.2235
+        ],
+        [
+          19.20099,
+          8.32,
+          29.20958
+        ]
+      ],
+      "color": "#F4772B",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 4,
+      "sourceRevision": 20,
+      "length": 2.1593197140071716,
+      "sourcePoints": [
+        [
+          1404.752,
+          822.955
+        ],
+        [
+          1404.752,
+          799.452
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s4-4",
+      "family": "walk",
+      "label": "P · flecha 4",
+      "level": "P",
+      "preferredPage": 4,
+      "points": [
+        [
+          -20.06163,
+          8.32,
+          -37.58973
+        ],
+        [
+          -31.73325,
+          8.32,
+          -59.49839
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 4,
+      "sourceRevision": 20,
+      "length": 24.82370029669227,
+      "sourcePoints": [
+        [
+          561.341,
+          834.764
+        ],
+        [
+          290.889,
+          834.764
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s4-10",
+      "family": "walk",
+      "label": "P · flecha 10",
+      "level": "P",
+      "preferredPage": 4,
+      "points": [
+        [
+          -2.37292,
+          8.32,
+          -46.09981
+        ],
+        [
+          -14.04455,
+          8.32,
+          -68.00847
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 4,
+      "sourceRevision": 20,
+      "length": 24.82370499849892,
+      "sourcePoints": [
+        [
+          569.972,
+          621.289
+        ],
+        [
+          299.52,
+          621.289
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s4-17",
+      "family": "walk",
+      "label": "P · flecha 17",
+      "level": "P",
+      "preferredPage": 4,
+      "points": [
+        [
+          29.09764,
+          8.32,
+          12.97317
+        ],
+        [
+          19.89078,
+          8.32,
+          -4.47461
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 4,
+      "sourceRevision": 20,
+      "length": 19.727931923747104,
+      "sourcePoints": [
+        [
+          1299.2,
+          621.289
+        ],
+        [
+          1084.267,
+          620.441
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s4-20",
+      "family": "walk",
+      "label": "P · flecha 20",
+      "level": "P",
+      "preferredPage": 4,
+      "points": [
+        [
+          11.81451,
+          8.32,
+          22.13707
+        ],
+        [
+          2.60765,
+          8.32,
+          4.68929
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 4,
+      "sourceRevision": 20,
+      "length": 19.727931923747104,
+      "sourcePoints": [
+        [
+          1298.933,
+          834.214
+        ],
+        [
+          1084.0,
+          833.366
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s4-23",
+      "family": "walk",
+      "label": "P · flecha 23",
+      "level": "P",
+      "preferredPage": 4,
+      "points": [
+        [
+          4.21652,
+          8.32,
+          -33.89655
+        ],
+        [
+          12.92825,
+          8.32,
+          -17.54388
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 4,
+      "sourceRevision": 20,
+      "length": 18.528466091983972,
+      "sourcePoints": [
+        [
+          721.067,
+          620.441
+        ],
+        [
+          922.933,
+          620.441
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s4-25",
+      "family": "walk",
+      "label": "P · flecha 25",
+      "level": "P",
+      "preferredPage": 4,
+      "points": [
+        [
+          -13.14156,
+          8.32,
+          -24.66504
+        ],
+        [
+          -4.42983,
+          8.32,
+          -8.31237
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 4,
+      "sourceRevision": 20,
+      "length": 18.52846609198398,
+      "sourcePoints": [
+        [
+          721.067,
+          834.432
+        ],
+        [
+          922.933,
+          834.432
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s4-27",
+      "family": "walk",
+      "label": "P · flecha 27",
+      "level": "P",
+      "preferredPage": 4,
+      "points": [
+        [
+          38.25855,
+          8.32,
+          29.72464
+        ],
+        [
+          47.83508,
+          8.32,
+          47.70063
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 4,
+      "sourceRevision": 20,
+      "length": 20.36777217373073,
+      "sourcePoints": [
+        [
+          1507.2,
+          619.015
+        ],
+        [
+          1729.105,
+          619.015
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-s4-29",
+      "family": "walk",
+      "label": "P · flecha 29",
+      "level": "P",
+      "preferredPage": 4,
+      "points": [
+        [
+          20.90039,
+          8.32,
+          38.9562
+        ],
+        [
+          30.47692,
+          8.32,
+          56.93218
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 4,
+      "sourceRevision": 20,
+      "length": 20.367763348028667,
+      "sourcePoints": [
+        [
+          1507.2,
+          833.007
+        ],
+        [
+          1729.105,
+          833.007
+        ]
+      ],
+      "originalArrow": true
+    },
+    {
+      "id": "e01-pmr-a-n",
+      "family": "pmr",
+      "label": "Acceso · entrada lado Calle 43 Sur → ascensor",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          43.5664,
+          -9.02,
+          52.31556
+        ],
+        [
+          30.91395,
+          -9.02,
+          59.0556
+        ],
+        [
+          32.71064,
+          -9.02,
+          62.88938
+        ]
+      ],
+      "color": "#F4772B",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 18.569618184662826
+    },
+    {
+      "id": "e01-pmr-a-s",
+      "family": "pmr",
+      "label": "Acceso · entrada lado Parque → ascensor",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          25.80405,
+          -9.02,
+          61.77767
+        ],
+        [
+          30.91395,
+          -9.02,
+          59.0556
+        ],
+        [
+          32.71064,
+          -9.02,
+          62.88938
+        ]
+      ],
+      "color": "#F4772B",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 10.023616580208802
+    },
+    {
+      "id": "e01-pmr-i-n",
+      "family": "pmr",
+      "label": "Intermedio · validación PMR → ascensor lado Calle 43 Sur",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          32.71064,
+          -1.42,
+          62.88938
+        ],
+        [
+          29.87548,
+          -1.42,
+          58.03019
+        ],
+        [
+          41.197540994878025,
+          -1.42,
+          51.98568231868376
+        ],
+        [
+          32.09949208325901,
+          -1.42,
+          34.90926997295753
+        ],
+        [
+          33.11505173647801,
+          -1.42,
+          31.860512521022088
+        ],
+        [
+          30.411755067730354,
+          -1.42,
+          26.786610516669356
+        ],
+        [
+          27.483093156628396,
+          -1.42,
+          26.244606550139792
+        ],
+        [
+          26.863414381792392,
+          -1.42,
+          25.08151209068049
+        ],
+        [
+          33.1794,
+          -1.42,
+          21.74369
+        ],
+        [
+          35.68974,
+          -1.42,
+          19.86308
+        ]
+      ],
+      "color": "#F4772B",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 61.34840042944536,
+      "correction": "Paso por la vía ancha PMR del banco de validación; hojas deslizantes abiertas para la simulación."
+    },
+    {
+      "id": "e01-pmr-i-s",
+      "family": "pmr",
+      "label": "Intermedio · validación PMR → ascensor lado Parque",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          32.71064,
+          -1.42,
+          62.88938
+        ],
+        [
+          29.87548,
+          -1.42,
+          58.03019
+        ],
+        [
+          41.197540994878025,
+          -1.42,
+          51.98568231868376
+        ],
+        [
+          32.09949208325901,
+          -1.42,
+          34.90926997295753
+        ],
+        [
+          33.11505173647801,
+          -1.42,
+          31.860512521022088
+        ],
+        [
+          30.411755067730354,
+          -1.42,
+          26.786610516669356
+        ],
+        [
+          27.483093156628396,
+          -1.42,
+          26.244606550139792
+        ],
+        [
+          26.863414381792392,
+          -1.42,
+          25.08151209068049
+        ],
+        [
+          17.40481,
+          -1.42,
+          30.08696
+        ],
+        [
+          15.199265,
+          -1.42,
+          31.301105
+        ]
+      ],
+      "color": "#F4772B",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 64.2870833589041,
+      "correction": "Paso por la vía ancha PMR del banco de validación; hojas deslizantes abiertas para la simulación."
+    },
+    {
+      "id": "e01-pmr-p-n",
+      "family": "pmr",
+      "label": "Plataforma · ascensor → abordaje lado Calle 43 Sur",
+      "level": "P",
+      "preferredPage": 4,
+      "points": [
+        [
+          35.68974,
+          8.32,
+          19.86308
+        ],
+        [
+          32.98211,
+          8.32,
+          22.12293
+        ],
+        [
+          31.07557,
+          8.32,
+          23.13689
+        ]
+      ],
+      "color": "#F4772B",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 4,
+      "sourceRevision": 20,
+      "length": 5.686181018362683
+    },
+    {
+      "id": "e01-pmr-p-s",
+      "family": "pmr",
+      "label": "Plataforma · ascensor → abordaje lado Parque",
+      "level": "P",
+      "preferredPage": 4,
+      "points": [
+        [
+          15.199265,
+          8.32,
+          31.301105
+        ],
+        [
+          17.29452,
+          8.32,
+          30.2235
+        ],
+        [
+          19.20099,
+          8.32,
+          29.20958
+        ]
+      ],
+      "color": "#F4772B",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 4,
+      "sourceRevision": 20,
+      "length": 4.5154449337376485
+    },
+    {
+      "id": "e01-bike-validation",
+      "family": "bike",
+      "label": "Biciusuarios · entrada → validación",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          5.53317,
+          -9.02,
+          -20.38696
+        ],
+        [
+          -0.26964,
+          -9.02,
+          -17.29576
+        ]
+      ],
+      "color": "#55AA26",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 6.574809604551297
+    },
+    {
+      "id": "e01-bike-circulation",
+      "family": "bike",
+      "label": "Biciusuarios · validación → circulación de acceso",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          -0.26964,
+          -9.02,
+          -17.29576
+        ],
+        [
+          5.53317,
+          -9.02,
+          -20.38696
+        ],
+        [
+          5.04456,
+          -9.02,
+          -21.30388
+        ],
+        [
+          -2.21665,
+          -9.02,
+          -34.93025
+        ],
+        [
+          -9.36973,
+          -9.02,
+          -31.11976
+        ]
+      ],
+      "color": "#55AA26",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 31.158813365223118
+    },
+    {
+      "id": "e01-walk-a-no",
+      "family": "walk",
+      "label": "Acceso · entrada noroccidental",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          -3.6105,
+          -9.02,
+          -36.21648
+        ],
+        [
+          -9.87113,
+          -9.02,
+          -32.8814
+        ],
+        [
+          -13.50394,
+          -9.02,
+          -39.69873
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 14.818384857886771
+    },
+    {
+      "id": "e01-walk-a-so",
+      "family": "walk",
+      "label": "Acceso · entrada suroccidental",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          -18.30047,
+          -9.02,
+          -28.07021
+        ],
+        [
+          -14.97332,
+          -9.02,
+          -29.8426
+        ],
+        [
+          -18.7393,
+          -9.02,
+          -36.90982
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 11.77779565595517
+    },
+    {
+      "id": "e01-walk-a-ne",
+      "family": "walk",
+      "label": "Acceso · entrada nororiental",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          29.41,
+          -9.02,
+          27.1218
+        ],
+        [
+          23.62583,
+          -9.02,
+          30.16782
+        ],
+        [
+          27.93024,
+          -9.02,
+          38.87723
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 16.252218507121924
+    },
+    {
+      "id": "e01-walk-a-se",
+      "family": "walk",
+      "label": "Acceso · entrada suroriental",
+      "level": "A",
+      "preferredPage": 2,
+      "points": [
+        [
+          14.69974,
+          -9.02,
+          34.9228
+        ],
+        [
+          18.25362,
+          -9.02,
+          33.02963
+        ],
+        [
+          22.82026,
+          -9.02,
+          41.59935
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 2,
+      "sourceRevision": 20,
+      "length": 13.737205790448726
+    },
+    {
+      "id": "e01-walk-i-o",
+      "family": "walk",
+      "label": "Intermedio · validación occidental",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          -15.04736,
+          -1.42,
+          -42.94644
+        ],
+        [
+          -21.89115,
+          -1.42,
+          -55.79177
+        ],
+        [
+          -16.47918,
+          -1.42,
+          -58.68106
+        ],
+        [
+          -8.701,
+          -1.42,
+          -44.08196
+        ],
+        [
+          -9.89817,
+          -1.42,
+          -39.80527
+        ],
+        [
+          -6.3428,
+          -1.42,
+          -33.13208
+        ],
+        [
+          -1.51615,
+          -1.42,
+          -35.70888
+        ],
+        [
+          1.32134,
+          -1.42,
+          -40.9455
+        ],
+        [
+          -0.82075,
+          -1.42,
+          -44.65143
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 64.94171651824855
+    },
+    {
+      "id": "e01-walk-i-e",
+      "family": "walk",
+      "label": "Intermedio · validación oriental",
+      "level": "I",
+      "preferredPage": 3,
+      "points": [
+        [
+          29.3597,
+          -1.42,
+          40.40255
+        ],
+        [
+          37.55335,
+          -1.42,
+          55.78147
+        ],
+        [
+          43.11615,
+          -1.42,
+          52.81165
+        ],
+        [
+          28.66748,
+          -1.42,
+          25.69251
+        ],
+        [
+          32.64287,
+          -1.42,
+          23.57017
+        ],
+        [
+          30.47808,
+          -1.42,
+          14.97659
+        ]
+      ],
+      "color": "#000000",
+      "bidirectional": false,
+      "directionFromAnimation": true,
+      "slide": 3,
+      "sourceRevision": 20,
+      "length": 67.82791372990893
+    }
+  ],
+  "links": [
+    {
+      "id": "e01-pmr-lift-a-i-n",
+      "family": "pmr",
+      "label": "Ascensor · Acceso a Intermedio · cabina esquemática",
+      "points": [
+        [
+          32.71064,
+          -9.02,
+          62.88938
+        ],
+        [
+          32.71064,
+          -1.42,
+          62.88938
+        ]
+      ],
+      "fromLevel": "A",
+      "toLevel": "I",
+      "schematic": true,
+      "connectionType": "elevator",
+      "color": "#F4772B",
+      "directionFromAnimation": true,
+      "length": 7.6,
+      "representation": "Cabina esquemática animada aprobada por el usuario; no geometría de fabricación del ascensor."
+    },
+    {
+      "id": "e01-pmr-lift-i-p-n",
+      "family": "pmr",
+      "label": "Ascensor · Intermedio a Plataforma · cabina esquemática",
+      "points": [
+        [
+          35.68974,
+          -1.42,
+          19.86308
+        ],
+        [
+          35.68974,
+          8.32,
+          19.86308
+        ]
+      ],
+      "fromLevel": "I",
+      "toLevel": "P",
+      "schematic": true,
+      "connectionType": "elevator",
+      "color": "#F4772B",
+      "directionFromAnimation": true,
+      "length": 9.74,
+      "representation": "Cabina esquemática animada aprobada por el usuario; no geometría de fabricación del ascensor."
+    },
+    {
+      "id": "e01-pmr-lift-a-i-s",
+      "family": "pmr",
+      "label": "Ascensor · Acceso a Intermedio · cabina esquemática",
+      "points": [
+        [
+          32.71064,
+          -9.02,
+          62.88938
+        ],
+        [
+          32.71064,
+          -1.42,
+          62.88938
+        ]
+      ],
+      "fromLevel": "A",
+      "toLevel": "I",
+      "schematic": true,
+      "connectionType": "elevator",
+      "color": "#F4772B",
+      "directionFromAnimation": true,
+      "length": 7.6,
+      "representation": "Cabina esquemática animada aprobada por el usuario; no geometría de fabricación del ascensor."
+    },
+    {
+      "id": "e01-pmr-lift-i-p-s",
+      "family": "pmr",
+      "label": "Ascensor · Intermedio a Plataforma · cabina esquemática",
+      "points": [
+        [
+          15.199265,
+          -1.42,
+          31.301105
+        ],
+        [
+          15.199265,
+          8.32,
+          31.301105
+        ]
+      ],
+      "fromLevel": "I",
+      "toLevel": "P",
+      "schematic": true,
+      "connectionType": "elevator",
+      "color": "#F4772B",
+      "directionFromAnimation": true,
+      "length": 9.74,
+      "representation": "Cabina esquemática animada aprobada por el usuario; no geometría de fabricación del ascensor."
+    }
+  ],
+  "journeys": [
+    {
+      "id": "e01-pmr-n",
+      "family": "pmr",
+      "label": "PMR · Calle 43 Sur → abordaje",
+      "legs": [
+        "e01-pmr-a-n",
+        "e01-pmr-lift-a-i-n",
+        "e01-pmr-i-n",
+        "e01-pmr-lift-i-p-n",
+        "e01-pmr-p-n"
+      ],
+      "bidirectional": false,
+      "videoSync": {
+        "videoId": "e01-pmr-n",
+        "keys": [
+          {
+            "time": 0,
+            "leg": "e01-pmr-a-n",
+            "fraction": 0
+          },
+          {
+            "time": 2,
+            "leg": "e01-pmr-a-n",
+            "fraction": 0
+          },
+          {
+            "time": 20.569618184662826,
+            "leg": "e01-pmr-a-n",
+            "fraction": 1
+          },
+          {
+            "time": 28.169618184662824,
+            "leg": "e01-pmr-lift-a-i-n",
+            "fraction": 1
+          },
+          {
+            "time": 89.51801861410819,
+            "leg": "e01-pmr-i-n",
+            "fraction": 1
+          },
+          {
+            "time": 99.25801861410818,
+            "leg": "e01-pmr-lift-i-p-n",
+            "fraction": 1
+          },
+          {
+            "time": 104.94419963247087,
+            "leg": "e01-pmr-p-n",
+            "fraction": 1
+          },
+          {
+            "time": 106.96666666666667,
+            "leg": "e01-pmr-p-n",
+            "fraction": 1
+          }
+        ],
+        "method": "Video del modelo HD 1280×720, 30 fps y 1 m/s. Plantas y avatar sincronizados con el tiempo del video; cabinas esquemáticas identificadas."
+      }
+    },
+    {
+      "id": "e01-pmr-s",
+      "family": "pmr",
+      "label": "PMR · Parque → abordaje",
+      "legs": [
+        "e01-pmr-a-s",
+        "e01-pmr-lift-a-i-s",
+        "e01-pmr-i-s",
+        "e01-pmr-lift-i-p-s",
+        "e01-pmr-p-s"
+      ],
+      "bidirectional": false,
+      "videoSync": {
+        "videoId": "e01-pmr-s",
+        "keys": [
+          {
+            "time": 0,
+            "leg": "e01-pmr-a-s",
+            "fraction": 0
+          },
+          {
+            "time": 2,
+            "leg": "e01-pmr-a-s",
+            "fraction": 0
+          },
+          {
+            "time": 12.023616580208802,
+            "leg": "e01-pmr-a-s",
+            "fraction": 1
+          },
+          {
+            "time": 19.623616580208804,
+            "leg": "e01-pmr-lift-a-i-s",
+            "fraction": 1
+          },
+          {
+            "time": 83.9106999391129,
+            "leg": "e01-pmr-i-s",
+            "fraction": 1
+          },
+          {
+            "time": 93.6506999391129,
+            "leg": "e01-pmr-lift-i-p-s",
+            "fraction": 1
+          },
+          {
+            "time": 98.16614487285055,
+            "leg": "e01-pmr-p-s",
+            "fraction": 1
+          },
+          {
+            "time": 100.16666666666667,
+            "leg": "e01-pmr-p-s",
+            "fraction": 1
+          }
+        ],
+        "method": "Video del modelo HD 1280×720, 30 fps y 1 m/s. Plantas y avatar sincronizados con el tiempo del video; cabinas esquemáticas identificadas."
+      }
+    },
+    {
+      "id": "e01-bike",
+      "family": "bike",
+      "label": "Biciusuarios · acceso y validación",
+      "legs": [
+        "e01-bike-validation",
+        "e01-bike-circulation"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "journey-e01-walk-a-no",
+      "family": "walk",
+      "label": "Acceso · entrada noroccidental",
+      "legs": [
+        "e01-walk-a-no"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "journey-e01-walk-a-so",
+      "family": "walk",
+      "label": "Acceso · entrada suroccidental",
+      "legs": [
+        "e01-walk-a-so"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "journey-e01-walk-a-ne",
+      "family": "walk",
+      "label": "Acceso · entrada nororiental",
+      "legs": [
+        "e01-walk-a-ne"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "journey-e01-walk-a-se",
+      "family": "walk",
+      "label": "Acceso · entrada suroriental",
+      "legs": [
+        "e01-walk-a-se"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "journey-e01-walk-i-o",
+      "family": "walk",
+      "label": "Intermedio · validación occidental",
+      "legs": [
+        "e01-walk-i-o"
+      ],
+      "bidirectional": false
+    },
+    {
+      "id": "journey-e01-walk-i-e",
+      "family": "walk",
+      "label": "Intermedio · validación oriental",
+      "legs": [
+        "e01-walk-i-e"
+      ],
+      "bidirectional": false
+    }
+  ],
+  "measurementNote": "Trazados registrados desde E1_Recorridos. Trayectos PMR ajustados a los pasos del modelo y comprobados con arquitectura, instalaciones y estructura reutilizada. Cabinas esquemáticas animadas; hojas del paso PMR abiertas para la simulación.",
+  "simulation": {
+    "gateOpening": [
+      {
+        "file": "0000-0004-2.bin.gz",
+        "vertices": [
+          80,
+          81,
+          82,
+          83,
+          84,
+          85,
+          86,
+          87
+        ],
+        "delta": [
+          -0.44544289371990675,
+          0,
+          0.23780848220054063
+        ],
+        "faces": [
+          120,
+          121,
+          122,
+          123,
+          124,
+          125,
+          126,
+          127,
+          128,
+          129,
+          130,
+          131
+        ]
+      },
+      {
+        "file": "0000-0004-2.bin.gz",
+        "vertices": [
+          88,
+          89,
+          90,
+          91,
+          92,
+          93,
+          94,
+          95
+        ],
+        "delta": [
+          0.44544289371990675,
+          0,
+          -0.23780848220054063
+        ],
+        "faces": [
+          132,
+          133,
+          134,
+          135,
+          136,
+          137,
+          138,
+          139,
+          140,
+          141,
+          142,
+          143
+        ]
+      }
+    ],
+    "cabins": "schematic",
+    "note": "Cabinas de ascensor esquemáticas animadas. Hojas PMR abiertas durante la simulación."
+  },
+  "eyeOffset": 1.52
+}

@@ -1,5 +1,5 @@
 {
-  "version": 16,
+  "version": 20,
   "videos": [
     {
       "id": "e09-ruta-1",
@@ -17,6 +17,22 @@
       "title": "BRT-Metro/PMR (Personas con movilidad Reducida)",
       "file": "brt-metro-pmr-v16.mp4",
       "sourceUpdated": "2026-10-27"
+    },
+    {
+      "id": "e01-pmr-n",
+      "title": "E01 · PMR · Calle 43 Sur → abordaje",
+      "file": "e01-pmr-n-hd30.mp4",
+      "width": 1280,
+      "height": 720,
+      "fps": 30
+    },
+    {
+      "id": "e01-pmr-s",
+      "title": "E01 · PMR · Parque → abordaje",
+      "file": "e01-pmr-s-hd30.mp4",
+      "width": 1280,
+      "height": 720,
+      "fps": 30
     }
   ]
 }
