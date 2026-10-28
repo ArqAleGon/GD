@@ -3,6 +3,15 @@ import * as THREE from 'three';
 const $=s=>document.querySelector(s),ns='http://www.w3.org/2000/svg';
 const svg=(tag,attrs)=>{const e=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))e.setAttribute(k,v);return e;};
 const area=n=>Number.isFinite(n)?n.toLocaleString('es-CO',{minimumFractionDigits:2,maximumFractionDigits:2}):'No consignada';
+const spaceTooltip=(record,data)=>{
+ const name=`${record.code} · ${record.name}`;
+ if(Number.isFinite(record.area))return `${name} · ${area(record.area)} m²`;
+ const linked=data.areaRecords?.find(r=>r.locationId===record.id&&Number.isFinite(r.area));
+ if(linked)return `${name} · ${area(linked.area)} m² (referencia VDD · pág. ${linked.pdfPage})`;
+ const values=record.referenceAreas?.filter(Number.isFinite);
+ if(values?.length)return `${name} · ${values.length===1?'Área':'Áreas'} de referencia VDD del código: ${values.map(area).join(' / ')} m² · pág. ${record.referencePage} · Sin asignación individual confirmada`;
+ return `${name} · Área no consignada para este código y nivel`;
+};
 export class SpaceStudy{
  constructor({scene,plan,data,onSelectPlan}){
   Object.assign(this,{scene,plan,data,onSelectPlan});this.filter='all';this.selected=null;this.enabled=false;this.labelsEnabled=false;this.group=new THREE.Group();this.group.visible=false;scene.scene.add(this.group);scene.spaces=this;this.items=[];document.body.append($('#space-labels'));
@@ -20,7 +29,7 @@ export class SpaceStudy{
    const mesh=new THREE.Mesh(geometry,material);mesh.renderOrder=40;mesh.userData.spaceId=record.id;
    const lines=record.edges.flatMap(edge=>edge.flatMap(i=>[record.points[i][0],record.floor-2550+.16,-record.points[i][1]]));
    const outline=new THREE.LineSegments(new THREE.BufferGeometry().setAttribute('position',new THREE.Float32BufferAttribute(lines,3)),new THREE.LineBasicMaterial({color:record.color,transparent:true,opacity:.85,depthTest:false,depthWrite:false}));outline.renderOrder=41;this.group.add(mesh,outline);
-   const label=document.createElement('button');label.className='space-label';label.style.setProperty('--space-color',record.color);label.textContent=record.code;label.title=`${record.code} · ${record.name}${Number.isFinite(record.area)?' · '+area(record.area)+' m²':''}`;label.setAttribute('aria-label',label.title);label.hidden=true;label.addEventListener('click',()=>this.select(record.id));$('#space-labels').append(label);
+   const label=document.createElement('button');label.className='space-label';label.style.setProperty('--space-color',record.color);label.textContent=record.code;label.title=spaceTooltip(record,data);label.setAttribute('aria-label',label.title);label.hidden=true;label.addEventListener('click',()=>this.select(record.id));$('#space-labels').append(label);
    this.items.push({record,mesh,outline,label,anchor:new THREE.Vector3(record.center[0],record.floor-2550+.35,-record.center[1])});
   }
   const control=document.createElement('label');control.textContent='Tipo de espacio';this.quick=document.createElement('select');this.quick.id='space-type';this.quick.setAttribute('aria-label','Tipo de espacio a resaltar');control.append(this.quick);$('#spaces-summary').before(control);this.quick.addEventListener('change',()=>this.setFilter(this.quick.value));

@@ -4,7 +4,7 @@ import {PlanViewer} from './study-plans.js?v=20261028-e01media23';
 import {StudyScene} from './study-scene.js?v=20261028-e01media23';
 import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261028-e01media23';
 import {RouteStudy} from './study-routes.js?v=20261028-e01media23';
-import {SpaceStudy} from './study-spaces.js?v=20261028-areas25';
+import {SpaceStudy} from './study-spaces.js?v=20261028-tooltips26';
 const $=s=>document.querySelector(s);
 const levels=station.levels;
 let records=[],types={},architecture=[],inventory=[],modelManifest,scene,active=null,level=levels[1],started=false,modelsReady=false,loadingPromise;
