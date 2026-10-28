@@ -1,5 +1,5 @@
 {
-  "version": 20,
+  "version": 23,
   "videos": [
     {
       "id": "e09-ruta-1",
@@ -19,20 +19,24 @@
       "sourceUpdated": "2026-10-27"
     },
     {
-      "id": "e01-pmr-n",
-      "title": "E01 · PMR · Calle 43 Sur → abordaje",
-      "file": "e01-pmr-n-hd30.mp4",
-      "width": 1280,
-      "height": 720,
-      "fps": 30
+      "id": "e01-bici-v23",
+      "title": "EM1 BICI · líneas negra y verde",
+      "file": "e01-bici-v23.mp4",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration": 86.7,
+      "sourceUpdated": "2026-10-28"
     },
     {
-      "id": "e01-pmr-s",
-      "title": "E01 · PMR · Parque → abordaje",
-      "file": "e01-pmr-s-hd30.mp4",
-      "width": 1280,
-      "height": 720,
-      "fps": 30
+      "id": "e01-pmr-v23",
+      "title": "EM1 PMR · línea naranja",
+      "file": "e01-pmr-v23.mp4",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration": 72.87,
+      "sourceUpdated": "2026-10-28"
     }
   ]
 }

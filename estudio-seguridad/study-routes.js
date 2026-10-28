@@ -1,10 +1,10 @@
-import {RouteVideo} from './study-videotours.js?v=20261027-play22';
-import {RouteAvatar} from './study-route-avatar.js?v=20261027-play22';
-import {RouteSimulation} from './study-route-simulation.js?v=20261027-play22';
+import {RouteVideo} from './study-videotours.js?v=20261028-e01media23';
+import {RouteAvatar} from './study-route-avatar.js?v=20261028-e01media23';
+import {RouteSimulation} from './study-route-simulation.js?v=20261028-e01media23';
 import * as THREE from 'three';
-import {createRouteTimeline,routeTransitionAt} from './study-route-timeline.js?v=20261027-play22';
+import {createRouteTimeline,routeTransitionAt} from './study-route-timeline.js?v=20261028-e01media23';
 import {OrbitControls} from './vendor/OrbitControls.js';
-import {distanceAtTime,timeAtDistance,speedAtTime,planAnimationStarted} from './study-video-clock.js?v=20261027-play22';
+import {distanceAtTime,timeAtDistance,speedAtTime,planAnimationStarted} from './study-video-clock.js?v=20261028-e01media23';
 const $=s=>document.querySelector(s), ns='http://www.w3.org/2000/svg';
 const svg=(tag,attrs={})=>{const n=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);return n;};
 const option=(value,text)=>{const n=document.createElement('option');n.value=value;n.textContent=text;return n;};
@@ -68,7 +68,7 @@ export class RouteStudy{
   this.contextParts=[];if(this.data.station==='E01'&&!source.hideContext){const selected=new Set(legs.map(r=>r.id));for(const leg of this.data.routes.filter(r=>r.family===this.family.id&&!r.superseded&&!selected.has(r.id)&&(this.family.id==='pmr'?r.id.startsWith('e01-pmr-'):r.originalArrow))){const points=leg.points.map(p=>new THREE.Vector3(...p)),group=new THREE.Group(),line=new THREE.Line(new THREE.BufferGeometry().setFromPoints(points),new THREE.LineBasicMaterial({color:leg.color,depthTest:false,transparent:true,opacity:.7}));line.renderOrder=78;group.add(line);this.group.add(group);this.contextParts.push({leg,points,group,arrows:[]});}}
   if(this.simulation){this.simulation.setJourney(this.parts);this.simulation.setOpen(this.active&&this.family.id==='pmr');this.simulation.group.visible=this.active&&this.family.id==='pmr';this.caches.forEach(c=>c.state=null);}
   this.leader=new THREE.Group();const ring=new THREE.Mesh(new THREE.SphereGeometry(.65,12,8),new THREE.MeshBasicMaterial({color:0xffffff,depthTest:false}));ring.renderOrder=89;this.leader.add(ring);this.group.add(this.leader);
-  $('#route-source').textContent=(source.note||this.data.measurementNote)+(this.videoProfile?' '+this.videoProfile.method:'');$('#route-source-pages').textContent=source.id==='e01-bike-walk-v21'?'Marcas del usuario · Acceso, Intermedio y Plataforma':this.data.station==='E01'?'E1_Recorridos · diapositivas '+[...new Set(legs.map(x=>x.slide).filter(Boolean))].sort().join(', '):[['Actualización',13],['Base anterior',12]].map(([label,rev])=>{const pages=[...new Set(legs.filter(x=>x.slide&&(x.sourceRevision||12)===rev).map(x=>x.slide))].sort((a,b)=>a-b);return pages.length?label+': diapositivas '+pages.join(', '):'';}).filter(Boolean).join(' · ');
+  $('#route-source').textContent=(source.note||this.data.measurementNote)+(this.videoProfile?' '+this.videoProfile.method:'');$('#route-source-pages').textContent=source.sourceRevision===23?'E1_Recorridos · actualización 28/10/2026 · diapositivas 2–4':source.id==='e01-bike-walk-v21'?'Marcas del usuario · Acceso, Intermedio y Plataforma':this.data.station==='E01'?'E1_Recorridos · diapositivas '+[...new Set(legs.map(x=>x.slide).filter(Boolean))].sort().join(', '):[['Actualización',13],['Base anterior',12]].map(([label,rev])=>{const pages=[...new Set(legs.filter(x=>x.slide&&(x.sourceRevision||12)===rev).map(x=>x.slide))].sort((a,b)=>a-b);return pages.length?label+': diapositivas '+pages.join(', '):'';}).filter(Boolean).join(' · ');
   $('#route-measure').textContent=`Trayecto: ${metres(this.planLength)} · enlaces estimados: ${metres(this.linkLength)}`;
   $('#route-live small').textContent=source.transitions?.length?'Distancia aproximada · transición 1A / 1 sin sumar distancia':'Distancia aproximada · enlaces discontinuos esquemáticos';
   this.updatePosition(true);this.setPov(true);this.scene.dirty=true;
@@ -103,7 +103,7 @@ export class RouteStudy{
   $('#route-speed-value').textContent=this.speed.toLocaleString('es-CO',{maximumFractionDigits:2})+' m/s';
  }
  readVideoClock(){
-  const v=this.video.video;this.distance=distanceAtTime(this.videoKeys,v.currentTime);this.speed=speedAtTime(this.videoKeys,v.currentTime)*v.playbackRate;
+  const v=this.video.video,start=this.videoProfile?.startTime||0;if(v.currentTime<start-.03){v.currentTime=start;return;}this.distance=distanceAtTime(this.videoKeys,v.currentTime);this.speed=speedAtTime(this.videoKeys,v.currentTime)*v.playbackRate;
   if(v.ended)this.playing=false;this.updatePosition();
  }
  syncVideoClock(seek=false){
@@ -150,7 +150,7 @@ export class RouteStudy{
   $('#route-plan-label').textContent=this.family.label;$('#route-plan-label').style.borderColor=this.family.color;
   const text=`${metres(this.distance)} / ${metres(this.total)}`;$('#route-distance').textContent=text;$('#route-live-distance').textContent=text;$('#route-live-label').textContent=this.family.label+(this.current?.leg.schematic?' · enlace esquemático':'');
   $('#route-progress').value=this.total?Math.round(this.distance/this.total*1000):0;$('#route-play').textContent=this.playing?'Ⅱ Pausar':'▶ Reproducir';$('#route-play').setAttribute('aria-pressed',String(this.playing));$('#route-current').textContent=this.current?.leg.schematic?'Enlace esquemático · '+this.current.leg.fromLevel+' → '+this.current.leg.toLevel:this.current?.leg.label||'';
-  if(this.currentTransition){$('#route-current').textContent=this.currentTransition.label;$('#route-live-label').textContent=this.currentTransition.label;}else if(!this.planAnimationStarted())$('#route-current').textContent='Animación en espera · inicia en 2:08 del POV';
+  if(this.currentTransition){$('#route-current').textContent=this.currentTransition.label;$('#route-live-label').textContent=this.currentTransition.label;}else if(!this.planAnimationStarted())$('#route-current').textContent=this.videoProfile?.waitingLabel||'Animación en espera · inicia en 2:08 del POV';
  }
  onSheet(part,y){if(this.plan.page.unified||this.data.station==='E01')return true;const boundary={14:480,16:460,17:400}[part.leg.slide];return this.plan.page.part==='A'?y<=boundary:y>=boundary;}
  clippedSegments(part){if(this.plan.page.unified||this.data.station==='E01')return part.points.slice(1).map((p,i)=>[part.points[i],p]);
