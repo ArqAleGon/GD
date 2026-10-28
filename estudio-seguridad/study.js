@@ -4,7 +4,7 @@ import {PlanViewer} from './study-plans.js?v=20261028-e01media23';
 import {StudyScene} from './study-scene.js?v=20261028-e01media23';
 import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261028-e01media23';
 import {RouteStudy} from './study-routes.js?v=20261028-e01media23';
-import {SpaceStudy} from './study-spaces.js?v=20261028-tooltips26';
+import {SpaceStudy} from './study-spaces.js?v=20261028-vb127';
 const $=s=>document.querySelector(s);
 const levels=station.levels;
 let records=[],types={},architecture=[],inventory=[],modelManifest,scene,active=null,level=levels[1],started=false,modelsReady=false,loadingPromise;
@@ -15,7 +15,7 @@ const defaults=()=>({fov:90,range:25,yaw:0,tilt:0});
 initDrawers();initFullscreen(()=>{window.dispatchEvent(new Event('resize'));});
 const canView=r=>!!r&&typeOf(r)==='F';
 const typeOf=r=>Object.keys(types).find(k=>(r.ifcTypeName||'').includes(types[k].ifcFamilyToken));
-async function json(url){const request=new URL(url,location.href);request.searchParams.set('v','20261028-areas25');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
+async function json(url){const request=new URL(url,location.href);request.searchParams.set('v','20261028-vb127');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
 function options(select,items){select.replaceChildren(...items.map(([value,text])=>{const o=document.createElement('option');o.value=value;o.textContent=text;return o;}));}
 for(const selector of ['#entry-level','#level-select']){options($(selector),levels.map(l=>[l.id,l.name]));$(selector).value=level.id;}
 $('#entry-dialog').showModal();

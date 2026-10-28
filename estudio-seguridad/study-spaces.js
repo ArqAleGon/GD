@@ -7,9 +7,9 @@ const spaceTooltip=(record,data)=>{
  const name=`${record.code} · ${record.name}`;
  if(Number.isFinite(record.area))return `${name} · ${area(record.area)} m²`;
  const linked=data.areaRecords?.find(r=>r.locationId===record.id&&Number.isFinite(r.area));
- if(linked)return `${name} · ${area(linked.area)} m² (referencia VDD · pág. ${linked.pdfPage})`;
+ if(linked)return `${name} · ${area(linked.area)} m² (${linked.areaSourceLabel||'referencia VDD · pág. '+linked.pdfPage})`;
  const values=record.referenceAreas?.filter(Number.isFinite);
- if(values?.length)return `${name} · ${values.length===1?'Área':'Áreas'} de referencia VDD del código: ${values.map(area).join(' / ')} m² · pág. ${record.referencePage} · Sin asignación individual confirmada`;
+ if(values?.length)return `${name} · ${values.length===1?'Área':'Áreas'} de referencia ${record.referenceRevision||'VDD'} del código: ${[...new Set(values)].map(area).join(' / ')} m² · pág. ${record.referencePage} · Sin asignación individual confirmada`;
  return `${name} · Área no consignada para este código y nivel`;
 };
 export class SpaceStudy{
@@ -34,7 +34,7 @@ export class SpaceStudy{
   }
   const control=document.createElement('label');control.textContent='Tipo de espacio';this.quick=document.createElement('select');this.quick.id='space-type';this.quick.setAttribute('aria-label','Tipo de espacio a resaltar');control.append(this.quick);$('#spaces-summary').before(control);this.quick.addEventListener('change',()=>this.setFilter(this.quick.value));
   this.tableMode='areas';
-  if(data.areaRecords){const label=document.createElement('label');label.className='space-table-source';label.textContent='Información de espacios ';const select=document.createElement('select');select.id='space-table-source';select.setAttribute('aria-label','Información de espacios');for(const [value,text] of [['areas','Cuadro de áreas PDF VDD'],['plan','Etiquetas del plano actual']]){const o=document.createElement('option');o.value=value;o.textContent=text;select.append(o);}label.append(select);$('#space-filters').before(label);select.addEventListener('change',()=>{this.tableMode=select.value;this.refresh();});}
+  if(data.areaRecords){const label=document.createElement('label');label.className='space-table-source';label.textContent='Información de espacios ';const select=document.createElement('select');select.id='space-table-source';select.setAttribute('aria-label','Información de espacios');for(const [value,text] of [['areas',data.areaTableLabel||'Cuadro de áreas PDF VDD'],['plan','Etiquetas del plano actual']]){const o=document.createElement('option');o.value=value;o.textContent=text;select.append(o);}label.append(select);$('#space-filters').before(label);select.addEventListener('change',()=>{this.tableMode=select.value;this.refresh();});}
   for(const b of document.querySelectorAll('[data-open-spaces],#open-spaces'))b.addEventListener('click',()=>{$('#spaces-dialog').showModal();});$('#close-spaces').addEventListener('click',()=>$('#spaces-dialog').close());
   $('#toggle-space-colors').addEventListener('click',()=>this.setColors(!this.enabled));
   $('#toggle-space-labels').addEventListener('click',()=>this.setLabels(!this.labelsEnabled));
@@ -62,7 +62,7 @@ export class SpaceStudy{
   for(const item of this.rasterItems){item.mesh.visible=!!item.mesh.material.map&&item.layer.level===this.level.id;item.mesh.material.opacity=(this.filter==='all'||item.layer.type===this.filter) ? .75 : .035;}
   if(this.data.mode==='plan-raster')$('#spaces-summary').textContent=`${this.level.name} · ${matching.length} etiquetas del plano · colores registrados en Planta 3D`;
   const tableMatches=this.data.areaRecords&&this.tableMode==='areas'?this.data.areaRecords.filter(r=>r.level===this.level.id&&this.matches(r)).map(record=>({record})):matching;
-  if(this.data.areaRecords){$('#spaces-source').textContent=this.tableMode==='areas'?`${this.level.name}. ${this.data.sourceNote}`:this.data.currentPlanNote;$('#spaces-summary').textContent=`${this.level.name} · ${matching.length} etiquetas · ${this.data.areaRecords.filter(r=>r.level===this.level.id&&Number.isFinite(r.area)).length} áreas PDF disponibles`;}
+  if(this.data.areaRecords){$('#spaces-source').textContent=(this.data.levelSourceNotes?.[this.level.id]||'')+' '+(this.tableMode==='areas'?this.data.sourceNote:this.data.currentPlanNote);$('#spaces-summary').textContent=`${this.level.name} · ${matching.length} etiquetas · ${this.data.areaRecords.filter(r=>r.level===this.level.id&&Number.isFinite(r.area)).length} áreas PDF disponibles`;}
   const buttons=[{name:'Todos los tipos',value:'all',color:'#ffffff'},...this.data.categories.map(c=>({...c,value:c.name})),...(this.data.mode==='plan-raster'?[]:[{name:'Administrativas · oficinas y reuniones',value:'administrative',color:this.data.categories.find(c=>c.name==='ÁREA OPERATIVA')?.color||'#68b7f4'}])];
   $('#space-filters').replaceChildren(...buttons.map(c=>{const b=document.createElement('button'),dot=document.createElement('i');dot.className='space-swatch';dot.style.background=c.color;b.append(dot,document.createTextNode(c.name));b.setAttribute('aria-pressed',String(this.filter===c.value));b.addEventListener('click',()=>this.setFilter(c.value));return b;}));
   $('#space-rows').replaceChildren(...tableMatches.sort((a,b)=>a.record.code.localeCompare(b.record.code,undefined,{numeric:true})).map(({record:r})=>{
@@ -86,6 +86,11 @@ export class SpaceStudy{
    }
    const selected=this.items.find(i=>i.record.id===this.selected&&i.record.level===this.level.id);
    if(selected){const [cx,cy]=project(selected.record.center);layer.append(svg('circle',{cx,cy,r:22,fill:'#ffffff55',stroke:'#e83e21','stroke-width':3,'vector-effect':'non-scaling-stroke','pointer-events':'none','aria-label':'Espacio seleccionado '+selected.record.code}));}
+   for(const {record:r} of this.items){
+    if(r.level!==this.level.id||!this.matches(r))continue;
+    const [cx,cy]=project(r.center),titleText=spaceTooltip(r,this.data),hit=svg('rect',{x:cx-28,y:cy-12,width:Math.max(56,r.code.length*12),height:24,fill:'transparent',class:'space-plan-label',role:'button',tabindex:0,'aria-label':titleText});
+    const title=svg('title',{});title.textContent=titleText;hit.append(title);hit.addEventListener('click',()=>this.select(r.id));hit.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();this.select(r.id);}});layer.append(hit);
+   }
   }
   // Architectural plan conventions remain independent of the 3D display toggles.
   for(const {record:r} of this.items){if(r.level!==this.level.id||!r.points.length)continue;const points=r.points.map(([x,y])=>[m[0][0]*x+m[0][1]*y+m[0][2],m[1][0]*x+m[1][1]*y+m[1][2]]),[cx,cy]=[m[0][0]*r.center[0]+m[0][1]*r.center[1]+m[0][2],m[1][0]*r.center[0]+m[1][1]*r.center[1]+m[1][2]];

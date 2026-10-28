@@ -24,73 +24,73 @@
         850
       ],
       "rotation": 0,
-      "status": "Correspondencia visual por columnas y rasgos del plano · no topográfica"
+      "status": "Correspondencia visual por columnas y rasgos del plano Â· no topogrÃ¡fica"
     },
     "2": {
       "matrix": [
         [
-          23.816896115877693,
-          12.689859535019298,
-          1451.481070104055
+          11.144376526998899,
+          -20.949853128915333,
+          2388.629353017597
         ],
         [
-          12.705180731300684,
-          -23.817016567473132,
-          2378.6637898645517
+          -20.96567067855755,
+          -11.173932890814255,
+          1487.6972978655822
         ]
       ],
       "crop": [
-        1060.8,
-        200.0,
-        1485.12,
-        4650.0
+        280,
+        640,
+        4240,
+        1440
       ],
-      "rotation": 0,
-      "status": "Correspondencia visual por columnas y rasgos del plano · no topográfica"
+      "rotation": 90,
+      "status": "Plano VB1 · registro visual verificado con el modelo IFC"
     },
     "3": {
       "matrix": [
         [
-          24.667498542715556,
-          13.143312584655334,
-          1579.6723991717395
+          11.203018286226882,
+          -20.981146444070877,
+          2473.4142058773764
         ],
         [
-          13.195576068760579,
-          -24.710853869905144,
-          2584.6038509686923
+          -20.965441804769576,
+          -11.17519218212758,
+          1479.8700079588098
         ]
       ],
       "crop": [
-        1060.8,
-        200.0,
-        1485.12,
-        4650.0
+        280,
+        640,
+        4240,
+        1440
       ],
-      "rotation": 0,
-      "status": "Correspondencia visual por columnas y rasgos del plano · no topográfica"
+      "rotation": 90,
+      "status": "Plano VB1 · registro visual verificado con el modelo IFC"
     },
     "4": {
       "matrix": [
         [
-          24.288861880788605,
-          12.938796596264353,
-          1591.9709132527855
+          11.130127216217181,
+          -20.96717450699776,
+          2478.805914160492
         ],
         [
-          12.938764177006137,
-          -24.31786435815087,
-          2575.7502922325857
+          -20.9322631262227,
+          -11.15745738976016,
+          1468.812102403927
         ]
       ],
       "crop": [
-        1060.8,
-        200.0,
-        1485.12,
-        4650.0
+        280,
+        640,
+        4240,
+        1440
       ],
-      "rotation": 0,
-      "status": "Registro visual por ejes CN y 97 rasgos de planta · no topográfico"
+      "rotation": 90,
+      "status": "Plano VB1 · registro visual verificado con el modelo IFC"
     }
   },
   "inventory": {
@@ -114,7 +114,7 @@
         736.2441043712129
       ],
       "rotation": 90,
-      "status": "Correspondencia visual por columnas y rasgos del plano · no topográfica"
+      "status": "Correspondencia visual por columnas y rasgos del plano Â· no topogrÃ¡fica"
     },
     "2": {
       "matrix": [
@@ -136,7 +136,7 @@
         1000.1999999999999
       ],
       "rotation": 90,
-      "status": "Correspondencia visual por columnas y rasgos del plano · no topográfica"
+      "status": "Correspondencia visual por columnas y rasgos del plano Â· no topogrÃ¡fica"
     },
     "3": {
       "matrix": [
@@ -158,7 +158,7 @@
         1000.1999999999999
       ],
       "rotation": 90,
-      "status": "Correspondencia visual por columnas y rasgos del plano · no topográfica"
+      "status": "Correspondencia visual por columnas y rasgos del plano Â· no topogrÃ¡fica"
     },
     "4": {
       "matrix": [
@@ -180,7 +180,7 @@
         1000
       ],
       "rotation": 90,
-      "status": "Alineación por ejes CN del PDF y columnas IFC · no topográfica",
+      "status": "AlineaciÃ³n por ejes CN del PDF y columnas IFC Â· no topogrÃ¡fica",
       "gridTranslationPixels": [
         23.092638888888956,
         -75.15191666666693
