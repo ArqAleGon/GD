@@ -1,0 +1,18 @@
+body.model-only .study-layout{display:grid;grid-template-columns:minmax(0,1fr) 260px;margin-right:0;gap:12px}
+body.model-only .views{display:block;min-width:0}
+body.model-only #axon-panel{height:calc(100dvh - 240px);min-height:450px;display:flex;flex-direction:column}
+body.model-only #axon-art{position:relative;flex:1;min-height:0;overflow:hidden;background:#08141e}
+body.model-only #axon-art canvas{position:absolute;inset:0;width:100%;height:100%;display:block}
+body.model-only #model-loading{z-index:4;background:#071219e8;pointer-events:none}
+body.model-only .model-information{border:1px solid #36576a;border-radius:5px;background:#0c1c27;padding:18px;overflow:auto;font-size:12px;line-height:1.7}
+body.model-only .model-information h2{font-size:18px;margin:8px 0 16px}
+body.model-only .model-information p{color:#b6cedb}
+body.model-only .model-information ul{padding-left:18px;overflow-wrap:anywhere}
+body.model-only .model-information li{margin-bottom:10px}
+body.model-only .model-information details{font-size:11px}
+body.model-only #model-packages label{display:flex;gap:8px;margin:10px 0;align-items:start}
+body.model-only #model-detail[aria-pressed=true]{background:#22506a;border-color:#81d6ff}
+body.model-only #axon-panel.is-expanded{position:fixed;inset:8px;height:auto;z-index:10}
+body.model-only .context-status{font-size:12px}
+body.model-only [hidden]{display:none!important}
+@media(max-width:850px){body.model-only .study-layout{grid-template-columns:1fr}body.model-only #axon-panel{height:65dvh}body.model-only .model-information{max-height:300px}}

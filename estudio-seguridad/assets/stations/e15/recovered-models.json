@@ -1,0 +1,59 @@
+{
+  "station": "E15",
+  "name": "E15 · Calle 63",
+  "sourceCommit": "8dbfe01f55996d40c4074f75b47407b0c77fefd0",
+  "bounds": {
+    "min": [
+      101355.578,
+      2509.9700007629376,
+      -105893.812
+    ],
+    "max": [
+      101484.3268261026,
+      2596.2361925703403,
+      -105731.86073491149
+    ]
+  },
+  "levels": [
+    {
+      "id": "all",
+      "name": "Estación completa"
+    }
+  ],
+  "files": [
+    {
+      "file": "e15-architecture-web.glb",
+      "source": "L1T1-0000-315-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E15",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 91464,
+      "missing": 1,
+      "label": "IFC · E15 · ARQ + EST",
+      "role": "detail",
+      "gitBlobSha": "c9089ccfbe0237957b68f75fc5470189ecaf95a2",
+      "expectedBytes": 2884928,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/e15-architecture-web.glb"
+    },
+    {
+      "file": "e15-1100.glb",
+      "source": "L1T1-1100-315-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E15",
+      "discipline": "EST",
+      "version": "V00",
+      "converted": 297,
+      "missing": 0,
+      "label": "IFC · E15 · ARQ + EST",
+      "role": "detail",
+      "gitBlobSha": "6d516b6cfe48e037195e612b37d164ff1a86b1ae",
+      "expectedBytes": 1001668,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/e15-1100.glb"
+    }
+  ],
+  "geometryReconverted": false,
+  "legacyGrouped": true,
+  "sourceIfcFiles": [
+    "L1T1-0000-315-CON-ED-ARQ-MO-0001_V00.ifc",
+    "L1T1-1100-315-CON-ED-EST-MO-0001_V00.ifc"
+  ]
+}

@@ -1,0 +1,3218 @@
+{
+  "station": "E02",
+  "name": "E02 · Portal de las Américas",
+  "sourceCommit": "8dbfe01f55996d40c4074f75b47407b0c77fefd0",
+  "bounds": {
+    "min": [
+      89458.7064805083,
+      2535.2499999999995,
+      -103818.09524980363
+    ],
+    "max": [
+      89582.40667504277,
+      2570.193854004974,
+      -103606.47789492003
+    ]
+  },
+  "levels": [
+    {
+      "id": "all",
+      "name": "Estación completa"
+    },
+    {
+      "id": "2ETtm7SOz8X97Oi4m3d5Eh",
+      "name": "ARQ_PL_00_SÓTANO",
+      "cutMin": 2535.7000000000003,
+      "cutMax": 2541.200000000001,
+      "elevation": 2536.0000000000005
+    },
+    {
+      "id": "2ETtm7SOz8X97Oi4m3dwfY",
+      "name": "ARQ_PL_01_ACCESO",
+      "cutMin": 2541.100000000001,
+      "cutMax": 2549.250000000002,
+      "elevation": 2541.400000000001
+    },
+    {
+      "id": "2ETtm7SOz8X97Oi4m3d5HO",
+      "name": "ARQ_PL_02_INTERMEDIO",
+      "cutMin": 2549.1500000000015,
+      "cutMax": 2558.740000000001,
+      "elevation": 2549.4500000000016
+    },
+    {
+      "id": "2ETtm7SOz8X97Oi4m3d5G1",
+      "name": "ARQ_PL_03_PLATAFORMA",
+      "cutMin": 2558.640000000001,
+      "cutMax": 2567.000866920512,
+      "elevation": 2558.940000000001
+    },
+    {
+      "id": "2ETtm7SOz8X97Oi4m3d5Fl",
+      "name": "ARQ_PL_04.1_CUB_NVC",
+      "cutMin": 2566.900866920512,
+      "cutMax": 2568.1438540049744,
+      "elevation": 2567.200866920512
+    },
+    {
+      "id": "2ETtm7SOz8X97Oi4m33JH0",
+      "name": "ARQ_PL_05_CUB_NVC",
+      "cutMin": 2568.043854004974,
+      "cutMax": 2570.4938540049743,
+      "elevation": 2568.343854004974
+    }
+  ],
+  "files": [
+    {
+      "file": "assets/models/stations/e02-0000-p001.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "3d30023a4f92d27fa537d587de21b79913dcfb9d",
+      "expectedBytes": 799394,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p001.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p002.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "392ec67d4ca8c0d7e072fef69176bdae7d6f0b17",
+      "expectedBytes": 489435,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p002.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p003.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "996b4d628de25512fb363905e41ac83cdc24e52d",
+      "expectedBytes": 53895,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p003.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p004.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "1d86b49b1c636f6445244a90cfc786f687e91c6d",
+      "expectedBytes": 36568,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p004.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p005.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "7eae662b12ed8c2156281f0e155935bc1d7cdf85",
+      "expectedBytes": 33224,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p005.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p006.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "14375691263f400c03ca372aaa64fbe8505a0999",
+      "expectedBytes": 140187,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p006.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p007.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "34ef18187346c18d27b5d5bc03affe82d260e9ee",
+      "expectedBytes": 40151,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p007.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p008.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "a59eb4d77b01a77da621a3c2580b67c866fbaf44",
+      "expectedBytes": 291842,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p008.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p009.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "ec10cede36496ce7e0a279d0dc9d105f42f1f8b4",
+      "expectedBytes": 111149,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p009.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p010.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "97044621eeded03f5e34daf6bc7698c14aaa8a19",
+      "expectedBytes": 286524,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p010.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p011.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "f886a58fa67ce76e4481c75570f2fca783003350",
+      "expectedBytes": 433222,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p011.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p012.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "cafe60dfc9cbb322c8155e6bd56eb607ddabc7a9",
+      "expectedBytes": 29620,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p012.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p013.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 271,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "124ed9c4d32583900ecd319a1e6371a9d1be91b8",
+      "expectedBytes": 1678509,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p013.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p014.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 62,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "41c933d0186dc6e2d8c35262ab7549c5b57dda30",
+      "expectedBytes": 1172125,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p014.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p015.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "85e2cef1cd3579a452614b7bea6141c5e7521aed",
+      "expectedBytes": 269148,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p015.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p016.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "4ac0de3a6000f9cd3861b507d1fbaf37690293a7",
+      "expectedBytes": 21179,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p016.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p017.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "d413632e3bb9aa60c7d41556c204a4e19224816d",
+      "expectedBytes": 28084,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p017.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p018.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "7fdd7a89cae4f9e406636040e3a729ab879ab3f7",
+      "expectedBytes": 26574,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p018.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p019.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "65ea2c08337aecf5cd9c1604ba79230c6f5e2a93",
+      "expectedBytes": 22118,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p019.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p020.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "5756eaf7400823fde70fbc51b792d143f47dca99",
+      "expectedBytes": 18354,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p020.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p021.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "5e6b2abd08d44fd1f9448992684f88007d3338c7",
+      "expectedBytes": 17898,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p021.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p022.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "f429176169d1bd88926dfd6d50c91a0ad03176c5",
+      "expectedBytes": 18403,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p022.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p023.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "8a90f884aaabd52aba76ba56599e252d607a7ceb",
+      "expectedBytes": 23563,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p023.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p024.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "79fbe318ea5a4407fcca98940b4d384bfcc5dcc6",
+      "expectedBytes": 20677,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p024.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p025.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "b9b5f0eb83d72b42ae43901eb39a5da9a34ab8b8",
+      "expectedBytes": 18974,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p025.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p026.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "116b106b7b606df210002db4f05d512f5a122713",
+      "expectedBytes": 18432,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p026.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p027.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "ded5f2930cc384bd46d4be80587e9ba57b8e1de6",
+      "expectedBytes": 18340,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p027.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p028.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "f7f50aceadcdbe538127f13f9ab26cbae427acc0",
+      "expectedBytes": 23122,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p028.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p029.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "b94d9f278cc0115af8e11bd9fb51cb8509e4fe91",
+      "expectedBytes": 21651,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p029.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p030.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "5498918e7d987b7189489d28da416d2d18c96acc",
+      "expectedBytes": 19360,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p030.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p031.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "a478a979b9c2e2c02422cdeda3daf9e429904395",
+      "expectedBytes": 25447,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p031.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p032.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "0494b7bd19c711052017e882a01a75dc85774588",
+      "expectedBytes": 17507,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p032.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p033.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "d2142ec6e7e9e1d5a00b0e10c88819ea865e2298",
+      "expectedBytes": 27442,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p033.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p034.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "abd0a904b31ba9588a7c9d7cdea6f087e9bbf8a2",
+      "expectedBytes": 31765,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p034.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p035.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "4f30ff5dbca22538c3d02c1b728c812100d8f99e",
+      "expectedBytes": 24552,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p035.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p036.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "612c6485754b1f9fe75f7c21a9d1326e7709dc46",
+      "expectedBytes": 73298,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p036.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p037.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "545c1e3155563eb631723e6957be2609c236f513",
+      "expectedBytes": 16464,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p037.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p038.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "5acaac77bb6ee8f7d9adc5bd8b3ab279906c1589",
+      "expectedBytes": 16350,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p038.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p039.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "bf1c364984db1b5f398573154c2808a9fcca8c88",
+      "expectedBytes": 17711,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p039.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p040.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "d8b687a248d0939695fe82a426a44ec9e363ac74",
+      "expectedBytes": 17418,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p040.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p041.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "4bfa81a8a42f630f491c4c0b2af4715eb00b813e",
+      "expectedBytes": 16668,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p041.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p042.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "184c10c8d1087c85d021bb901e9a5e303aa0fabb",
+      "expectedBytes": 16755,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p042.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p043.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "1a89407b7d36c40ddf226c57afd7b92067ecce5b",
+      "expectedBytes": 16841,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p043.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p044.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "9f4ee617ef1dd018f70f3f950832f26a2667b509",
+      "expectedBytes": 16592,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p044.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p045.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "8980c2df0f3cbdaf93ba10706d340ea6accad0e1",
+      "expectedBytes": 16469,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p045.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p046.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "d190f2254a4c34410c888a3d673f65ad80cd66bc",
+      "expectedBytes": 16479,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p046.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p047.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "121636e8f929c2cba78a2ffe9f6ea203fe9649ae",
+      "expectedBytes": 17173,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p047.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p048.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "0e408c08469e94f3fc72ef442855b6e4ff277c41",
+      "expectedBytes": 18493,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p048.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p049.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "9a25153d1b083439c9b191574e258acc0c932822",
+      "expectedBytes": 17291,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p049.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p050.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "150a271fba238997c8e2fdcb092381ffa64fc70b",
+      "expectedBytes": 18398,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p050.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p051.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "b10008e87c951d6f429b7b133aa569e9ddc3f4ae",
+      "expectedBytes": 17084,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p051.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p052.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "33ccf86292280bdb267385a6badbc8cfc99ab400",
+      "expectedBytes": 16803,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p052.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p053.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "03585e5cb3f1bfbba4ec10be45318b7b9362f5e2",
+      "expectedBytes": 16539,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p053.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p054.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "54a4aa3c35e0eb128db9e6f6a11e365973c93c0f",
+      "expectedBytes": 16205,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p054.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p055.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "26abe6a43baf3b88eb71ab119e7d998613e17754",
+      "expectedBytes": 16055,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p055.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p056.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "8069f3af63f9b412fb80fa406072ecb1ed5456e7",
+      "expectedBytes": 16340,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p056.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p057.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "0b0c7321dfd776b95017552ed32c759e47181143",
+      "expectedBytes": 15983,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p057.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p058.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "956ae33ec9d8bcd2f6d199fd554daf4f6ef0a195",
+      "expectedBytes": 16217,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p058.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p059.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "9a832a9187ea6da505daa09b7b83847e031bbf3a",
+      "expectedBytes": 16085,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p059.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p060.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "3629013ab5bc928530afa3c496f3b5ef6906b6a5",
+      "expectedBytes": 16377,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p060.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p061.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "c50c4b11c2ab8876637e786b183cdde7944db9da",
+      "expectedBytes": 29208,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p061.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p062.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "13c1c1f380456578f4e6b73960f5eac8bb66ed57",
+      "expectedBytes": 168309,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p062.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p063.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 295,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "3e970e2af0c77c3ab6039808db8d04205fa242a7",
+      "expectedBytes": 92589,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p063.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p064.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 550,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "48d7eb88191904e19247b552fbb0725598f00324",
+      "expectedBytes": 220310,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p064.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p065.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "27df0a4dd4dbfc925887d0b7d5667ed53699121b",
+      "expectedBytes": 41394,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p065.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p066.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "ed1e380c83bbd8bab227bea72e3738b3d4febfcb",
+      "expectedBytes": 40521,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p066.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p067.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "dffb85a643361a41132af62978c88aef7cad8d77",
+      "expectedBytes": 249094,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p067.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p068.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "020d657be3e6566a640ad5d41431566691307492",
+      "expectedBytes": 128732,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p068.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p069.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "acfb847741c9619a1acd1eb335bf1a7b05540c9f",
+      "expectedBytes": 290268,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p069.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p070.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "2e51949ce308a701a23094f0e3377fceb1dd9591",
+      "expectedBytes": 16547,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p070.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p071.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "f260962795be373d43f4ca625899e865fbc74227",
+      "expectedBytes": 31868,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p071.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p072.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "d8df2365a365c464581b0acb1d936ba1dd9b9ee6",
+      "expectedBytes": 42203,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p072.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p073.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "c144b35fdeb6b225ba985c5365e20073969d2c45",
+      "expectedBytes": 41610,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p073.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p074.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "04cc84195c22b3e551356ac3828444cd24ea7622",
+      "expectedBytes": 41029,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p074.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p075.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 240,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "f7e999e42dec8ca87e13a76792e747cf658e7e33",
+      "expectedBytes": 1681782,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p075.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p076.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "b26d72483a8dcbb2128fe08a7597f73b2d209f06",
+      "expectedBytes": 597240,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p076.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p077.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "eb374c486a489d6d9d3a2f9ee91ef7669b57810f",
+      "expectedBytes": 186446,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p077.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p078.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 260,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "3438ea28ff9795978afeb6e680d6afa6d2c26444",
+      "expectedBytes": 814176,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p078.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p079.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "774b46a27682b02cf1c99488ddda813ec68d75b3",
+      "expectedBytes": 316489,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p079.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p080.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "7e1148f464eaef010a2f962b373f631da78f8d3a",
+      "expectedBytes": 298389,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p080.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p081.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 664,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "3b9a48e6dfe0b898f0ee45a18177003bc3ca423c",
+      "expectedBytes": 578025,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p081.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p082.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 146,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "c30656ba60016c378d9718c6c689b351bc8ba92e",
+      "expectedBytes": 579684,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p082.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p083.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 337,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "eb70d01eabd5c658cc23f7c74feed5b74d793bb0",
+      "expectedBytes": 793047,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p083.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p084.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 99,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "e1229d8141aa04320bad78e5d6c78c21544160b4",
+      "expectedBytes": 862045,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p084.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p085.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "8f03439ea5ccf0e66325cca289520502142dc87d",
+      "expectedBytes": 374672,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p085.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p086.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "07d227b41dbc6a8cca51350aed96df0d4a61ed03",
+      "expectedBytes": 336788,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p086.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p087.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "2c2a9302145c261534bbced43d9ff39708e88984",
+      "expectedBytes": 309882,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p087.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p088.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "8752cb02e8e75912b2664f116f414af971539c4c",
+      "expectedBytes": 487892,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p088.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p089.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "914c8c440ba0e2827346ce1dda645fb747ae840c",
+      "expectedBytes": 261338,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p089.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p090.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "c2b7342b35d8fee4bfa11eb420de039a1de576f9",
+      "expectedBytes": 207820,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p090.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p091.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "d056d0b96f6213fd606d5ffea1c95a42486da048",
+      "expectedBytes": 247905,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p091.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p092.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "e616f804e188199c52213a576d2b493bebbcab61",
+      "expectedBytes": 307480,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p092.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p093.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "a33fca952b4e4169fd1279572df446a8fb4f890d",
+      "expectedBytes": 380140,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p093.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p094.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "e75e8a81682f50b40e13900dc86411c22633a52b",
+      "expectedBytes": 351452,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p094.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p095.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "ea8face338ea2b5fd6472983acb1d3d0e54bdd11",
+      "expectedBytes": 413575,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p095.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p096.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "c159aa813294a72742de68b34b84cb569c03e07c",
+      "expectedBytes": 101098,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p096.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p097.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "49c05a594b2b1514d420a2f0461b1b9f46e77de6",
+      "expectedBytes": 28222,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p097.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p098.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "f58ea2b112758fe3634390a8c9e063a1fd1f62ac",
+      "expectedBytes": 27610,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p098.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p099.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "758c69613fcbb6e5f92cf68a09e89909edcc2205",
+      "expectedBytes": 30927,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p099.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p100.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "a6991cdb97adc03c555fe257063ff05ee2fbce74",
+      "expectedBytes": 33364,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p100.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p101.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "488d8cbd7248493b75a86101f4c0281909cf46bc",
+      "expectedBytes": 30879,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p101.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p102.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "3e96762f7884cba5ca5a97e2301f3cbf68f05a99",
+      "expectedBytes": 29531,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p102.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p103.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "caf3eb18c2960f8d2d64f22101a1cb3793f4ef27",
+      "expectedBytes": 30780,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p103.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p104.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "31cfe89f926fcc6ebe647d6f375e0698a68c3fdf",
+      "expectedBytes": 36426,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p104.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p105.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "cd1c38e9965ce0b749c00d3cad3b244cf3f89880",
+      "expectedBytes": 36444,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p105.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p106.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "be9c2d0b32e5969b31d3aab95fcdd6a4fa9f1dec",
+      "expectedBytes": 33774,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p106.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p107.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "b350f851f36003c8c7505ab9f14a4f3167d0221c",
+      "expectedBytes": 50267,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p107.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p108.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "7b3a25c05dab6d40f33b601c262e68edc4a5d6f4",
+      "expectedBytes": 235789,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p108.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p109.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "75d16752b40b47eb4de5a263666852ec07875b70",
+      "expectedBytes": 84522,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p109.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p110.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "b32f6cf0ac80987f7d25d9eabc6389c1bef1b866",
+      "expectedBytes": 74146,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p110.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p111.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "3b16488b4b4c207aae56f6adcbe3d125b2a85399",
+      "expectedBytes": 32450,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p111.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p112.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "a4bd12107793c0e6d9afc5bc37305e89f8d58009",
+      "expectedBytes": 27973,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p112.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p113.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "c4a0a8da99aa04380b902a988917f46f00bcbb44",
+      "expectedBytes": 48587,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p113.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p114.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "2b9cf4dd282677e51ec675372cd79ef494178196",
+      "expectedBytes": 37731,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p114.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p115.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "f12afde7a608ed18ab7c1d6461f749a7101dfbc6",
+      "expectedBytes": 38006,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p115.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p116.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 607,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "2092a18bd30147f3b42906791bcfa00aee00dd70",
+      "expectedBytes": 729252,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p116.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p117.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "74d9b3bd76accb2ccf13e57ec5bce6bd5681bfbb",
+      "expectedBytes": 172075,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p117.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p118.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 220,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "9d9db4cd213598b3a608336f9675932d7b465490",
+      "expectedBytes": 755691,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p118.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p119.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 15,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "3aae6d8f79b35cdc32f2e4105a44c3227bf406cd",
+      "expectedBytes": 694865,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p119.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p120.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 65,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "61788c20097a3c082301b54ef1648eb78b9f1fe4",
+      "expectedBytes": 407162,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p120.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p121.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 46,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "45e4b9a476a88da3ea584579e1f68731a4924700",
+      "expectedBytes": 685236,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p121.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p122.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 20,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "7ab051164ee4509b3dab3608169e186743d796e2",
+      "expectedBytes": 662823,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p122.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p123.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 24,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "afae028226252adb57abaf4dd0cf7a4020b22057",
+      "expectedBytes": 781882,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p123.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p124.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 9,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "edc3687f9bf6b05737d8032e3caf6df7227b93ce",
+      "expectedBytes": 819581,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p124.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p125.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 12,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "f56e2e580d9dab0075395c64c9624a191d04aea4",
+      "expectedBytes": 789694,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p125.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p126.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 27,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "5dd0870cd0b0a05fe40da2331412c6455855aa40",
+      "expectedBytes": 809790,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p126.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p127.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 32,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "39f736c6a71acfbcecbfc64988e2883319f83972",
+      "expectedBytes": 680010,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p127.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-0000-p128.glb.gz",
+      "source": "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 8,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "072b61bd768d94aa9d554fa77e08c06f71b2480c",
+      "expectedBytes": 350097,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-0000-p128.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1150-p001.glb.gz",
+      "source": "L1T1-1150-302-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V00",
+      "converted": 56,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "4c44ca33acc6c4d0d80437d45e8c155e0bf176b4",
+      "expectedBytes": 379841,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1150-p001.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1150-p002.glb.gz",
+      "source": "L1T1-1150-302-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V00",
+      "converted": 14,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "5d0dc70f02a63a1ed0b7f6978b32feaead98dff7",
+      "expectedBytes": 790489,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1150-p002.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1150-p003.glb.gz",
+      "source": "L1T1-1150-302-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V00",
+      "converted": 14,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "cef6c8603649c48c72f0555add7121d366cb5fd1",
+      "expectedBytes": 792092,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1150-p003.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1150-p004.glb.gz",
+      "source": "L1T1-1150-302-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V00",
+      "converted": 4,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "a629afe3d2d095a8fd65b448e2a847039ae456f3",
+      "expectedBytes": 225110,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1150-p004.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p001.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 573,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "a80c0edc2885ebdd5bda0019c24a9c29cbfc67e8",
+      "expectedBytes": 818989,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p001.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p002.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 139,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "6e31cc5bc26deffb976b03ea88ab9028cf431e6b",
+      "expectedBytes": 988262,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p002.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p003.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 136,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "b94285b5c13a85e05d0bd88584a7709dd1f533ab",
+      "expectedBytes": 988268,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p003.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p004.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 134,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "ee96d76188568ec61656d4c3705319fae5e4219d",
+      "expectedBytes": 981746,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p004.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p005.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 135,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "9d2d252331f0d868c13dec68aabe6950f652d72f",
+      "expectedBytes": 984516,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p005.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p006.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 140,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "f03a55d276540285c875714dc44ecf87c698fb77",
+      "expectedBytes": 982758,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p006.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p007.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 91,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "55c22ed669cafcbdd4aaf2a707b9d33003169852",
+      "expectedBytes": 1085811,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p007.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p008.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 641,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "93791e6059984b4626cc7ba30ee6e2e19c674220",
+      "expectedBytes": 835637,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p008.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p009.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 138,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "92dc2d6f816621fbdea4971238984a46e5749b0d",
+      "expectedBytes": 1058148,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p009.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p010.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 447,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "a1df7b744dafc8c22df914c2ceffadd3566bc33a",
+      "expectedBytes": 914020,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p010.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p011.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 89,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "6764fb7201ae037a13284bb4d5c507747baa518a",
+      "expectedBytes": 981116,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p011.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p012.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 85,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "db243d34fa6fca06383a67e5842c2752f4a315f7",
+      "expectedBytes": 1102510,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p012.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p013.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 91,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "8ba4a69e198e3bdd5235e782b4bf19b3d7063ef6",
+      "expectedBytes": 1060858,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p013.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p014.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 87,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "e8c175d4ef27c91d9fd633f4699fecafaa63bc1c",
+      "expectedBytes": 1097272,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p014.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p015.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 178,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "2f277f888ea401562ddaa9ecdb5d471095a4135c",
+      "expectedBytes": 861072,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p015.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p016.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "1a9d2e6c1746b6fe93c0b9196ee2af31e39a1a01",
+      "expectedBytes": 552606,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p016.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p017.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 396,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "3ffa58abfb0989264f47484ea6b01bb0fd604efc",
+      "expectedBytes": 567177,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p017.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p018.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "9f769b44ec1c35605553902d72791814fe03efcd",
+      "expectedBytes": 242351,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p018.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p019.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "9bcda0be554232bda7c72273478672b43c497263",
+      "expectedBytes": 92356,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p019.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p020.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "f9ad304b5af439990f30a4deb21fefee5b25326d",
+      "expectedBytes": 93313,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p020.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p021.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "a7a763bc172ecacefa2b1b924d270f349b99c878",
+      "expectedBytes": 191436,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p021.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p022.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 700,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "332708f5800a5730eb7642dd4d32437e25827433",
+      "expectedBytes": 90718,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p022.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p023.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 319,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "340a834c067619d07b8b23cc2c78bb8ff3c594c3",
+      "expectedBytes": 263618,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p023.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-1200-p024.glb.gz",
+      "source": "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "version": "V01",
+      "converted": 1,
+      "label": "IFC · E02 · ARQ + EST",
+      "status": "ready",
+      "instanceIdentity": "ifc-globalid",
+      "labelAnchor": [
+        89520.55657777554,
+        103712.28657236183
+      ],
+      "streetDatum": 2552.28,
+      "role": "detail",
+      "gitBlobSha": "a5f92293901e4f01843b58acd22e4645d71a1f36",
+      "expectedBytes": 751,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-1200-p024.glb.gz"
+    },
+    {
+      "file": "assets/models/stations/e02-overview.glb.gz",
+      "bounds": {
+        "min": [
+          89458.7064805083,
+          2535.2499999999995,
+          -103818.09524980363
+        ],
+        "max": [
+          89582.40667504277,
+          2570.193854004974,
+          -103606.47789492003
+        ]
+      },
+      "sourceTriangles": 12925041,
+      "triangles": 593923,
+      "bytes": 2792128,
+      "displayGridMeters": 0.5,
+      "section": "E02",
+      "role": "overview",
+      "gitBlobSha": "14f8e5c4046137cf4e722437d6c709b497b16d66",
+      "expectedBytes": 2792128,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-overview.glb.gz"
+    }
+  ],
+  "geometryReconverted": false,
+  "legacyGrouped": false,
+  "sourceIfcFiles": [
+    "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
+    "L1T1-1150-302-CON-ED-EST-MO-0001_V00.ifc",
+    "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc"
+  ]
+}

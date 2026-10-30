@@ -1,0 +1,89 @@
+{
+  "station": "E16",
+  "name": "E16 · Calle 72",
+  "sourceCommit": "8dbfe01f55996d40c4074f75b47407b0c77fefd0",
+  "bounds": {
+    "min": [
+      101689.75,
+      2499.07007,
+      -107200.078
+    ],
+    "max": [
+      101822.8087161361,
+      2593.9389578549003,
+      -107022.3357517439
+    ]
+  },
+  "levels": [
+    {
+      "id": "all",
+      "name": "Estación completa"
+    }
+  ],
+  "files": [
+    {
+      "file": "e16-arq-0000-web.glb",
+      "source": "L1T1-0000-316-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E16",
+      "discipline": "ARQ",
+      "version": "V00",
+      "converted": 127525,
+      "missing": 1,
+      "label": "IFC · E16 · ARQ + EST",
+      "role": "detail",
+      "gitBlobSha": "ab9c1ebe48e7b2961c9085ecd5fc13b711f9c618",
+      "expectedBytes": 6070312,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/e16-arq-0000-web.glb"
+    },
+    {
+      "file": "e16-est-1100-web.glb",
+      "source": "L1T1-1100-316-CON-CN-EST-MO-0001_V09.ifc",
+      "section": "E16",
+      "discipline": "EST",
+      "version": "V09",
+      "converted": 844,
+      "missing": 0,
+      "label": "IFC · E16 · ARQ + EST",
+      "role": "detail",
+      "gitBlobSha": "6b6989541d83838cf4cc02d4fdfe9165428a62cb",
+      "expectedBytes": 83064,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/e16-est-1100-web.glb"
+    },
+    {
+      "file": "e16-est-1150-web.glb",
+      "source": "L1T1-1150-316-CON-CN-EST-MO-0001_V00.ifc",
+      "section": "E16",
+      "discipline": "EST",
+      "version": "V00",
+      "converted": 55,
+      "missing": 0,
+      "label": "IFC · E16 · ARQ + EST",
+      "role": "detail",
+      "gitBlobSha": "1f56184e78c08d307acc7391ead289e8950441d1",
+      "expectedBytes": 67616,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/e16-est-1150-web.glb"
+    },
+    {
+      "file": "e16-est-1200-web.glb",
+      "source": "L1T1-1200-316-CON-CN-EST-MO-0001_V00.ifc",
+      "section": "E16",
+      "discipline": "EST",
+      "version": "V00",
+      "converted": 4832,
+      "missing": 0,
+      "label": "IFC · E16 · ARQ + EST",
+      "role": "detail",
+      "gitBlobSha": "15c666c2158411dfdac00f2b36c10755d79930fe",
+      "expectedBytes": 543720,
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/e16-est-1200-web.glb"
+    }
+  ],
+  "geometryReconverted": false,
+  "legacyGrouped": true,
+  "sourceIfcFiles": [
+    "L1T1-0000-316-CON-ED-ARQ-MO-0001_V00.ifc",
+    "L1T1-1100-316-CON-CN-EST-MO-0001_V09.ifc",
+    "L1T1-1150-316-CON-CN-EST-MO-0001_V00.ifc",
+    "L1T1-1200-316-CON-CN-EST-MO-0001_V00.ifc"
+  ]
+}

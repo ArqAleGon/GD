@@ -1,4 +1,4 @@
-import {station,stations} from './study-stations.js?v=20261028-e01media23';
+import {station,stations} from './study-stations.js?v=20261030-stations';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261028-e01media23';
 import {PlanViewer} from './study-plans.js?v=20261028-e01media23';
 import {StudyScene} from './study-scene.js?v=20261028-e01media23';
@@ -131,11 +131,11 @@ function showReference(){const p=profiles.find(p=>p.id===$('#reference-select').
 json('./assets/reference-cameras.json').then(data=>{profiles=data;options($('#reference-select'),[['','Sin perfil · parámetros de evaluación'],...profiles.map(p=>[p.id,p.name])]);$('#reference-select').value=settings.profile||'';$('#reference-select').addEventListener('change',()=>{if(!active)return;const id=$('#reference-select').value,o=opticsProfiles[id];if(o){settings.profile=id;settings.optics={...o};settings.fov=o.fov;}else{delete settings.profile;delete settings.optics;settings.fov=90;}configureProfile();$('#fov').value=settings.fov;updateOptics();updatePovMessage();});showReference();}).catch(()=>{$('#reference-info').textContent='Catálogo de referencia no disponible.';});
 
 function updateEntry(config,selected='A'){
- options($('#entry-level'),config.levels.map(l=>[l.id,l.name]));$('#entry-level').value=selected;
- $('.entry-caption .eyebrow').textContent=config.name;$('.entry-caption p').textContent=config.description;
- $('.entry-steps').replaceChildren(...[`${config.fixed} cámaras Fixed con perspectiva`,`${config.cameras} cámaras IFC`].map(text=>{const span=document.createElement('span');span.textContent=text;return span;}));
+ options($('#entry-level'),config.levels.map(l=>[l.id,l.name]));$('#entry-level').value=config.levels.some(l=>l.id===selected)?selected:config.levels[0].id;
+ $('.entry-caption h2').textContent=config.modelOnly?'Explora los modelos de la estación.':'Conoce lo que ve cada cámara.';$('.entry-info p').textContent=config.modelOnly?'Vista 3D disponible. Planos, cámaras y recorridos pendientes de incorporación.':'Vista 3D disponible para Fixed Camera. Domos y PTZ conservan su ficha y posición.';$('.entry-caption .eyebrow').textContent=config.name;$('.entry-caption p').textContent=config.description;
+ $('.entry-steps').replaceChildren(...(config.modelOnly?[`${config.sourceCount} modelos de origen IFC`,'Planos, cámaras y recorridos pendientes']:[`${config.fixed} cámaras Fixed con perspectiva`,`${config.cameras} cámaras IFC`]).map(text=>{const span=document.createElement('span');span.textContent=text;return span;}));
 }
-options($('#entry-building'),Object.values(stations).map(s=>[s.id,s.name+' — conjunto de estación']));$('#entry-building').value=station.id;updateEntry(station,new URLSearchParams(location.search).get('level')||'A');
+options($('#entry-building'),Object.values(stations).sort((a,b)=>a.id.localeCompare(b.id)).map(s=>[s.id,s.name+' — conjunto de estación']));$('#entry-building').value=station.id;updateEntry(station,new URLSearchParams(location.search).get('level')||'A');
 $('#entry-building').addEventListener('change',()=>updateEntry(stations[$('#entry-building').value]));
 document.title='Estudio de Seguridad · '+station.name;document.body.dataset.station=station.id;
 $('.prototype').lastChild.textContent=' '+station.summary;$('.context-bar .context-item b').textContent=station.name;$('.loading-card > span').textContent=station.name;
