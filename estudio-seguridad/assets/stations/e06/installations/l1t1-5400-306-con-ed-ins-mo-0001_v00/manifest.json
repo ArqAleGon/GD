@@ -1,0 +1,139 @@
+{
+  "station": "E06",
+  "source": "L1T1-5400-306-CON-ED-INS-MO-0001_V00.ifc",
+  "sourceSha256": "783d0c98efcae3aa6d429c87264e665963901a25c70913bdf57c19c970736b4d",
+  "sourceSchema": "IFC2X3",
+  "converter": "IfcOpenShell 0.8.5",
+  "ifcLengthUnitToMetres": 1,
+  "files": [
+    {
+      "file": "e06-ins-5400-p001.glb.gz",
+      "source": "L1T1-5400-306-CON-ED-INS-MO-0001_V00.ifc",
+      "section": "E06",
+      "discipline": "INS",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "01a6ec6e034434f68577671737054d899a50653122e444ca7a13a058cbd41632",
+      "compressedBytes": 412372,
+      "boundsGltfMetres": {
+        "min": [
+          92921.62822129046,
+          2551.000000000001,
+          -102502.52846375809
+        ],
+        "max": [
+          93071.54354410632,
+          2578.4269796925814,
+          -102417.52203081598
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e06-ins-5400-p002.glb.gz",
+      "source": "L1T1-5400-306-CON-ED-INS-MO-0001_V00.ifc",
+      "section": "E06",
+      "discipline": "INS",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "7c95e2f623ae4fa25928b94c3f920de5f59c58ddca83dcd12550087b760c9e5d",
+      "compressedBytes": 1086495,
+      "boundsGltfMetres": {
+        "min": [
+          92922.43316370185,
+          2551.1874999998145,
+          -102501.54919590184
+        ],
+        "max": [
+          93068.11388544372,
+          2578.4759999978573,
+          -102419.00504459855
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e06-ins-5400-p003.glb.gz",
+      "source": "L1T1-5400-306-CON-ED-INS-MO-0001_V00.ifc",
+      "section": "E06",
+      "discipline": "INS",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "5c62d36893ded9b9a0c54e3de65be5db791e60bea1963b0ba89e82a5886dc9c9",
+      "compressedBytes": 106871,
+      "boundsGltfMetres": {
+        "min": [
+          92923.30125453543,
+          2554.224000002446,
+          -102500.87507273375
+        ],
+        "max": [
+          93067.80613202494,
+          2576.8990615272555,
+          -102419.21291353811
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e06-ins-5400-p004.glb.gz",
+      "source": "L1T1-5400-306-CON-ED-INS-MO-0001_V00.ifc",
+      "section": "E06",
+      "discipline": "INS",
+      "role": "detail",
+      "converted": 295,
+      "sha256": "d728307db6292396858536f781199f35c323ed1f4b2740a91f82761816add849",
+      "compressedBytes": 344934,
+      "boundsGltfMetres": {
+        "min": [
+          92923.00469008199,
+          2554.2909383296987,
+          -102496.29148293813
+        ],
+        "max": [
+          93067.63663007945,
+          2576.2600000017915,
+          -102428.09951615549
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    }
+  ],
+  "expectedRepresentedElements": 1795,
+  "convertedElements": 1795,
+  "cameraCandidates": 160,
+  "bounds": {
+    "min": [
+      92921.62822129046,
+      2551.000000000001,
+      -102502.52846375809
+    ],
+    "max": [
+      93071.54354410632,
+      2578.4759999978573,
+      -102417.52203081598
+    ]
+  },
+  "audit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 4.440892098500626e-16,
+    "representedMissing": [],
+    "overlapWithRecoveredStationMetres": [
+      149.91532281585387,
+      27.475999997856434,
+      85.00643294211477
+    ],
+    "triangles": 5655096,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ]
+  },
+  "seconds": 68.5,
+  "coordinateConvention": "glTF metres [IFC X, IFC Z, -IFC Y]; native placement preserved",
+  "simplification": false
+}

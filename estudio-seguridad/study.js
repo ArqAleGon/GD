@@ -1,4 +1,4 @@
-import {station,stations} from './study-stations.js?v=20261030-stations';
+import {station,stations} from './study-stations.js?v=20261030-ins31';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261028-e01media23';
 import {PlanViewer} from './study-plans.js?v=20261028-e01media23';
 import {StudyScene} from './study-scene.js?v=20261028-e01media23';

@@ -3613,6 +3613,81 @@
       "gitBlobSha": "92c790401f42e86c2d71a4da51c722fd603b73c3",
       "expectedBytes": 2355922,
       "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e03-overview.glb.gz"
+    },
+    {
+      "file": "assets/stations/e03/installations/l1t1-5400-303-con-ed-ins-mo-0001_vdd/e03-ins-5400-p001.glb.gz",
+      "source": "L1T1-5400-303-CON-ED-INS-MO-0001_VDD.ifc",
+      "section": "E03",
+      "discipline": "INS",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "290cdfd5e121d3c7cf922180f0362fade7ac2f776c6cb92f235418f1b0f90491",
+      "compressedBytes": 364220,
+      "boundsGltfMetres": {
+        "min": [
+          90034.0067132379,
+          2539.8499999999954,
+          -102946.42051263891
+        ],
+        "max": [
+          90165.35415638411,
+          2568.4369569683017,
+          -102811.03720643953
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "url": "./assets/stations/e03/installations/l1t1-5400-303-con-ed-ins-mo-0001_vdd/e03-ins-5400-p001.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "file": "assets/stations/e03/installations/l1t1-5400-303-con-ed-ins-mo-0001_vdd/e03-ins-5400-p002.glb.gz",
+      "source": "L1T1-5400-303-CON-ED-INS-MO-0001_VDD.ifc",
+      "section": "E03",
+      "discipline": "INS",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "d7db14e1fb8d8c7811b587fbde9b2203ee38257e967ea1b811bb8e466a1f38bb",
+      "compressedBytes": 622547,
+      "boundsGltfMetres": {
+        "min": [
+          90036.2106862664,
+          2539.6958166315508,
+          -102946.78953922342
+        ],
+        "max": [
+          90163.92292846537,
+          2568.236956968302,
+          -102811.29615311237
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "url": "./assets/stations/e03/installations/l1t1-5400-303-con-ed-ins-mo-0001_vdd/e03-ins-5400-p002.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "file": "assets/stations/e03/installations/l1t1-5400-303-con-ed-ins-mo-0001_vdd/e03-ins-5400-p003.glb.gz",
+      "source": "L1T1-5400-303-CON-ED-INS-MO-0001_VDD.ifc",
+      "section": "E03",
+      "discipline": "INS",
+      "role": "detail",
+      "converted": 438,
+      "sha256": "dee9cd9c5f35e9356cc439020fe4786d3ba566fc9f39d15946e63bee74b34644",
+      "compressedBytes": 2274749,
+      "boundsGltfMetres": {
+        "min": [
+          90033.40405835072,
+          2540.7499999999955,
+          -102944.81498185624
+        ],
+        "max": [
+          90165.36598592895,
+          2570.454999999997,
+          -102812.7568944699
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "url": "./assets/stations/e03/installations/l1t1-5400-303-con-ed-ins-mo-0001_vdd/e03-ins-5400-p003.glb.gz",
+      "initialOverlay": true
     }
   ],
   "geometryReconverted": false,
@@ -3620,6 +3695,19 @@
   "sourceIfcFiles": [
     "L1T1-0000-303-CON-CN-ARQ-MO-0001_V01.ifc",
     "L1T1-1150-303-CON-ED-EST-MO-0001_V00.ifc",
-    "L1T1-1200-303-CON-ED-EST-MO-0001_V01.ifc"
-  ]
+    "L1T1-1200-303-CON-ED-EST-MO-0001_V01.ifc",
+    "L1T1-5400-303-CON-ED-INS-MO-0001_VDD.ifc"
+  ],
+  "installations": {
+    "source": "L1T1-5400-303-CON-ED-INS-MO-0001_VDD.ifc",
+    "sourceSha256": "4cdaeb07e31e88f28d8f18d342bbc959b512a8e385319e71ee565dad904bcf94",
+    "convertedElements": 1438,
+    "audit": "./assets/stations/e03/installations/l1t1-5400-303-con-ed-ins-mo-0001_vdd/integration-audit.json",
+    "calibratedCameraInventory": false
+  },
+  "newGeometryConverted": [
+    "L1T1-5400-303-CON-ED-INS-MO-0001_VDD.ifc"
+  ],
+  "integrationNotes": [],
+  "reusedGeometryReconverted": false
 }

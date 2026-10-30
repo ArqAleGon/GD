@@ -1,4 +1,4 @@
-import {recoveredStations} from './study-model-stations.js?v=20261030-stations';
+import {recoveredStations} from './study-model-stations.js?v=20261030-ins31';
 const commonLevels=[['B','Sótano','BASEMENT'],['A','Acceso','ACCESS'],['I','Intermedio','INTERMEDIATE'],['P','Plataforma','PLATFORM']];
 const makeLevels=cuts=>commonLevels.map(([id,name,suffix],i)=>({id,name,ifc:`ARC_PL_0${i}_${suffix}`,cutMin:cuts[i][0],cutMax:cuts[i][1]}));
 export const stations={

@@ -1,0 +1,70 @@
+{
+  "station": "E13",
+  "source": "L1T1-5400-313-CON-ED-INS-MO-0001_VDD.ifc",
+  "convertedElements": 1452,
+  "nativeCoordinatesPreserved": true,
+  "presentationElevationOffsetMetres": 0,
+  "offsetEvidence": null,
+  "overlapMetres": [
+    143.16154007641308,
+    40.3700000011936,
+    138.53859388867568
+  ],
+  "levelComparison": [
+    {
+      "installation": "ARC_PL_00",
+      "architecture": "ARQ_PL_00_SÓTANO",
+      "installationElevation": 2582.750000000001,
+      "architectureElevation": 2582.1999999999985,
+      "differenceMetres": 0.55
+    },
+    {
+      "installation": "ARC_PL_01",
+      "architecture": "ARQ_PL_01_ACCESO",
+      "installationElevation": 2591.300000000001,
+      "architectureElevation": 2591.299999999999,
+      "differenceMetres": 0.0
+    },
+    {
+      "installation": "ARC_PL_02",
+      "architecture": "ARQ_PL_02_INTERMEDIO",
+      "installationElevation": 2597.900000000002,
+      "architectureElevation": 2597.8999999999987,
+      "differenceMetres": 0.0
+    },
+    {
+      "installation": "ARC_PL_03",
+      "architecture": "ARQ_PL_03_PLATAFORMA",
+      "installationElevation": 2606.640000000002,
+      "architectureElevation": 2606.6399999999985,
+      "differenceMetres": 0.0
+    },
+    {
+      "installation": "ARC_PL_04",
+      "architecture": "ARQ_PL_04_CUB_ASC",
+      "installationElevation": 2613.2406713655214,
+      "architectureElevation": 2613.2399999999984,
+      "differenceMetres": 0.0007
+    }
+  ],
+  "geometryAudit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 1.4551915228366852e-11,
+    "representedMissing": [],
+    "overlapWithRecoveredStationMetres": [
+      143.16154007641308,
+      40.3700000011936,
+      138.53859388867568
+    ],
+    "triangles": 8371903,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ]
+  },
+  "status": "passed"
+}

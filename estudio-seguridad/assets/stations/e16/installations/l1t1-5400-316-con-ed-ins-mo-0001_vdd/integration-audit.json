@@ -1,0 +1,34 @@
+{
+  "station": "E16",
+  "source": "L1T1-5400-316-CON-ED-INS-MO-0001_VDD.ifc",
+  "convertedElements": 1350,
+  "nativeCoordinatesPreserved": true,
+  "presentationElevationOffsetMetres": 0,
+  "offsetEvidence": null,
+  "overlapMetres": [
+    125.35734168556519,
+    24.986956968307368,
+    163.5247465499997
+  ],
+  "levelComparison": [],
+  "geometryAudit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 3.3306690738754696e-16,
+    "representedMissing": [],
+    "overlapWithRecoveredStationMetres": [
+      125.35734168556519,
+      24.986956968307368,
+      163.5247465499997
+    ],
+    "triangles": 5813188,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ]
+  },
+  "status": "passed"
+}

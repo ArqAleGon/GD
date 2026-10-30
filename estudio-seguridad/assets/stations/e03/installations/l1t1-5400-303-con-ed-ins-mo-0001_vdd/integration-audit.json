@@ -1,0 +1,63 @@
+{
+  "station": "E03",
+  "source": "L1T1-5400-303-CON-ED-INS-MO-0001_VDD.ifc",
+  "convertedElements": 1438,
+  "nativeCoordinatesPreserved": true,
+  "presentationElevationOffsetMetres": 0,
+  "offsetEvidence": null,
+  "overlapMetres": [
+    131.96192757823155,
+    30.75918336844643,
+    135.75233278388623
+  ],
+  "levelComparison": [
+    {
+      "installation": "ARC_PL_00_BASEMENT",
+      "architecture": "ARQ_PL_00_SÓTANO",
+      "installationElevation": 2539.8499999999954,
+      "architectureElevation": 2539.2499999999914,
+      "differenceMetres": 0.6
+    },
+    {
+      "installation": "ARC_PL_01_ACCESS",
+      "architecture": "ARQ_PL_01_ACCESO",
+      "installationElevation": 2547.7499999999945,
+      "architectureElevation": 2547.7499999999977,
+      "differenceMetres": -0.0
+    },
+    {
+      "installation": "ARC_PL_02_",
+      "architecture": "ARQ_PL_02_INTERMEDIO",
+      "installationElevation": 2555.3499999999967,
+      "architectureElevation": 2555.3499999999976,
+      "differenceMetres": -0.0
+    },
+    {
+      "installation": "ARC_PL_03_PLATFORM",
+      "architecture": "ARQ_PL_03_PLATAFORMA",
+      "installationElevation": 2564.0899999999942,
+      "architectureElevation": 2564.089999999998,
+      "differenceMetres": -0.0
+    }
+  ],
+  "geometryAudit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 2.220446049250313e-16,
+    "representedMissing": [],
+    "overlapWithRecoveredStationMetres": [
+      131.96192757823155,
+      30.75918336844643,
+      135.75233278388623
+    ],
+    "triangles": 7756883,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ]
+  },
+  "status": "passed"
+}

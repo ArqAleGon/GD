@@ -1,0 +1,70 @@
+{
+  "station": "E02",
+  "source": "L1T1-5400-302-CON-ED-INS-MO-0001_V00.ifc",
+  "convertedElements": 2561,
+  "nativeCoordinatesPreserved": true,
+  "presentationElevationOffsetMetres": 2542.73,
+  "offsetEvidence": {
+    "entity": "IfcSite",
+    "globalId": "3ppDJHVQf2Zxx$82ONLqju",
+    "attribute": "RefElevation",
+    "valueMetres": 2542.73,
+    "nativeSiteElevationMetres": 0.0,
+    "reason": "Relative vertical placement in source IFC; absolute elevation declared by the same site"
+  },
+  "overlapMetres": [
+    119.76637573465996,
+    27.320607973785172,
+    206.98144384133047
+  ],
+  "levelComparison": [
+    {
+      "installation": "ARC_PL_00_BASEMENT",
+      "architecture": "ARQ_PL_00_SÓTANO",
+      "installationElevation": 2536.0,
+      "architectureElevation": 2536.0000000000005,
+      "differenceMetres": -0.0
+    },
+    {
+      "installation": "ARC_PL_01_ACCESS",
+      "architecture": "ARQ_PL_01_ACCESO",
+      "installationElevation": 2542.000000000001,
+      "architectureElevation": 2541.400000000001,
+      "differenceMetres": 0.6
+    },
+    {
+      "installation": "ARC_PL_02",
+      "architecture": "ARQ_PL_02_INTERMEDIO",
+      "installationElevation": 2549.450000000001,
+      "architectureElevation": 2549.4500000000016,
+      "differenceMetres": -0.0
+    },
+    {
+      "installation": "ARC_PL_03",
+      "architecture": "ARQ_PL_03_PLATAFORMA",
+      "installationElevation": 2558.940000000001,
+      "architectureElevation": 2558.940000000001,
+      "differenceMetres": 0.0
+    }
+  ],
+  "geometryAudit": {
+    "status": "review",
+    "maxPlacementMatrixDifference": 1.759703494030873e-14,
+    "representedMissing": [],
+    "overlapWithRecoveredStationMetres": [
+      119.76637573465996,
+      -2514.693043031691,
+      206.98144384133047
+    ],
+    "triangles": 6560784,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ]
+  },
+  "status": "passed"
+}

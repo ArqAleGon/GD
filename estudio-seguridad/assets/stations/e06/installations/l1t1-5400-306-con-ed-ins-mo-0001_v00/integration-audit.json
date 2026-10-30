@@ -1,0 +1,70 @@
+{
+  "station": "E06",
+  "source": "L1T1-5400-306-CON-ED-INS-MO-0001_V00.ifc",
+  "convertedElements": 1795,
+  "nativeCoordinatesPreserved": true,
+  "presentationElevationOffsetMetres": 0,
+  "offsetEvidence": null,
+  "overlapMetres": [
+    149.91532281585387,
+    27.475999997856434,
+    85.00643294211477
+  ],
+  "levelComparison": [
+    {
+      "installation": "ARC_PL_00",
+      "architecture": "ARQ_PL_00_SÓTANO",
+      "installationElevation": 2549.7000000000007,
+      "architectureElevation": 2549.700000000001,
+      "differenceMetres": -0.0
+    },
+    {
+      "installation": "ARC_PL_00_BASEMENT",
+      "architecture": "ARQ_PL_00_SÓTANO",
+      "installationElevation": 2550.700000000002,
+      "architectureElevation": 2549.700000000001,
+      "differenceMetres": 1.0
+    },
+    {
+      "installation": "ARC_PL_01",
+      "architecture": "ARQ_PL_01_ACCESO",
+      "installationElevation": 2555.5,
+      "architectureElevation": 2555.5000000000014,
+      "differenceMetres": -0.0
+    },
+    {
+      "installation": "ARC_PL_02_INTERMEDIATE",
+      "architecture": "ARQ_PL_02_INTERMEDIO",
+      "installationElevation": 2563.100000000002,
+      "architectureElevation": 2563.1000000000026,
+      "differenceMetres": -0.0
+    },
+    {
+      "installation": "ARC_PL_03",
+      "architecture": "ARQ_PL_03_PLATAFORMA",
+      "installationElevation": 2572.5900000000033,
+      "architectureElevation": 2572.5900000000024,
+      "differenceMetres": 0.0
+    }
+  ],
+  "geometryAudit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 4.440892098500626e-16,
+    "representedMissing": [],
+    "overlapWithRecoveredStationMetres": [
+      149.91532281585387,
+      27.475999997856434,
+      85.00643294211477
+    ],
+    "triangles": 5655096,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ]
+  },
+  "status": "passed"
+}

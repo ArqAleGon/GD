@@ -3206,6 +3206,264 @@
       "gitBlobSha": "14f8e5c4046137cf4e722437d6c709b497b16d66",
       "expectedBytes": 2792128,
       "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e02-overview.glb.gz"
+    },
+    {
+      "file": "assets/stations/e02/installations/l1t1-5400-302-con-ed-ins-mo-0001_v00/e02-ins-5400-p001.glb.gz",
+      "source": "L1T1-5400-302-CON-ED-INS-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "INS",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "ecfe34a3556bd6794ce93c5296bdfd5a7a408e2341dc089116dfa827d77f5332",
+      "compressedBytes": 93526,
+      "boundsGltfMetres": {
+        "min": [
+          89464.1829910451,
+          -5.42999999999982,
+          -103811.4173869365
+        ],
+        "max": [
+          89577.6611315325,
+          19.806979692579116,
+          -103608.6470746377
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "url": "./assets/stations/e02/installations/l1t1-5400-302-con-ed-ins-mo-0001_v00/e02-ins-5400-p001.glb.gz",
+      "initialOverlay": true,
+      "displayTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2542.73,
+        0,
+        1
+      ]
+    },
+    {
+      "file": "assets/stations/e02/installations/l1t1-5400-302-con-ed-ins-mo-0001_v00/e02-ins-5400-p002.glb.gz",
+      "source": "L1T1-5400-302-CON-ED-INS-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "INS",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "af1b682c81d61be4dd8f9590de15055c1601abb4fb5946673624b7a4d40384c0",
+      "compressedBytes": 453313,
+      "boundsGltfMetres": {
+        "min": [
+          89469.55124831879,
+          -6.763651005476533,
+          -103813.26753652944
+        ],
+        "max": [
+          89579.60806137421,
+          19.752500000447835,
+          -103614.37670497225
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "url": "./assets/stations/e02/installations/l1t1-5400-302-con-ed-ins-mo-0001_v00/e02-ins-5400-p002.glb.gz",
+      "initialOverlay": true,
+      "displayTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2542.73,
+        0,
+        1
+      ]
+    },
+    {
+      "file": "assets/stations/e02/installations/l1t1-5400-302-con-ed-ins-mo-0001_v00/e02-ins-5400-p003.glb.gz",
+      "source": "L1T1-5400-302-CON-ED-INS-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "INS",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "bfc610f93272be51e04a5b387d195ce8b8d76a08b6c77bcdfdcac38e9a7274d7",
+      "compressedBytes": 1322281,
+      "boundsGltfMetres": {
+        "min": [
+          89459.84168563955,
+          -3.2059999975560296,
+          -103815.0788974274
+        ],
+        "max": [
+          89578.62469453285,
+          20.556956968308295,
+          -103608.09745358607
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "url": "./assets/stations/e02/installations/l1t1-5400-302-con-ed-ins-mo-0001_v00/e02-ins-5400-p003.glb.gz",
+      "initialOverlay": true,
+      "displayTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2542.73,
+        0,
+        1
+      ]
+    },
+    {
+      "file": "assets/stations/e02/installations/l1t1-5400-302-con-ed-ins-mo-0001_v00/e02-ins-5400-p004.glb.gz",
+      "source": "L1T1-5400-302-CON-ED-INS-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "INS",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "1c3f0a8bbd6e3b7c08fb2f39460428f1cf90fd381d68c2e93dac4a4ba8b9afc3",
+      "compressedBytes": 115205,
+      "boundsGltfMetres": {
+        "min": [
+          89472.34972402934,
+          2.8495130729683513,
+          -103815.01963063319
+        ],
+        "max": [
+          89579.50822023246,
+          19.97874238997778,
+          -103608.43287983183
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "url": "./assets/stations/e02/installations/l1t1-5400-302-con-ed-ins-mo-0001_v00/e02-ins-5400-p004.glb.gz",
+      "initialOverlay": true,
+      "displayTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2542.73,
+        0,
+        1
+      ]
+    },
+    {
+      "file": "assets/stations/e02/installations/l1t1-5400-302-con-ed-ins-mo-0001_v00/e02-ins-5400-p005.glb.gz",
+      "source": "L1T1-5400-302-CON-ED-INS-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "INS",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "45ff9a573d35c2f0df5ce8efb4651994a810dd17996d2e5b07f43fa2a4e299d9",
+      "compressedBytes": 242395,
+      "boundsGltfMetres": {
+        "min": [
+          89465.92998810516,
+          9.42000000000124,
+          -103804.75377997074
+        ],
+        "max": [
+          89572.93638051907,
+          20.03599999755701,
+          -103619.02470373167
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "url": "./assets/stations/e02/installations/l1t1-5400-302-con-ed-ins-mo-0001_v00/e02-ins-5400-p005.glb.gz",
+      "initialOverlay": true,
+      "displayTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2542.73,
+        0,
+        1
+      ]
+    },
+    {
+      "file": "assets/stations/e02/installations/l1t1-5400-302-con-ed-ins-mo-0001_v00/e02-ins-5400-p006.glb.gz",
+      "source": "L1T1-5400-302-CON-ED-INS-MO-0001_V00.ifc",
+      "section": "E02",
+      "discipline": "INS",
+      "role": "detail",
+      "converted": 61,
+      "sha256": "00bc79ba9502be470cde20818fe05c8c62ba3f83dd69f44960ba39ac1ae582b0",
+      "compressedBytes": 217223,
+      "boundsGltfMetres": {
+        "min": [
+          89488.78718817595,
+          1.3705219884923499,
+          -103803.65632289446
+        ],
+        "max": [
+          89565.41549517983,
+          11.066956968308734,
+          -103608.7610322047
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "url": "./assets/stations/e02/installations/l1t1-5400-302-con-ed-ins-mo-0001_v00/e02-ins-5400-p006.glb.gz",
+      "initialOverlay": true,
+      "displayTransform": [
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        2542.73,
+        0,
+        1
+      ]
     }
   ],
   "geometryReconverted": false,
@@ -3213,6 +3471,19 @@
   "sourceIfcFiles": [
     "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
     "L1T1-1150-302-CON-ED-EST-MO-0001_V00.ifc",
-    "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc"
-  ]
+    "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
+    "L1T1-5400-302-CON-ED-INS-MO-0001_V00.ifc"
+  ],
+  "installations": {
+    "source": "L1T1-5400-302-CON-ED-INS-MO-0001_V00.ifc",
+    "sourceSha256": "dc4e1f652d7ac85c321b9eecb72cc99775f3b14df407dee9ebabc13aae16678a",
+    "convertedElements": 2561,
+    "audit": "./assets/stations/e02/installations/l1t1-5400-302-con-ed-ins-mo-0001_v00/integration-audit.json",
+    "calibratedCameraInventory": false
+  },
+  "newGeometryConverted": [
+    "L1T1-5400-302-CON-ED-INS-MO-0001_V00.ifc"
+  ],
+  "integrationNotes": [],
+  "reusedGeometryReconverted": false
 }

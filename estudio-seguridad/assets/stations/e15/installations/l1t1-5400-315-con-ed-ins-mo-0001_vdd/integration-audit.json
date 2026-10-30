@@ -1,0 +1,34 @@
+{
+  "station": "E15",
+  "source": "L1T1-5400-315-CON-ED-INS-MO-0001_VDD.ifc",
+  "convertedElements": 1591,
+  "nativeCoordinatesPreserved": true,
+  "presentationElevationOffsetMetres": 0,
+  "offsetEvidence": null,
+  "overlapMetres": [
+    123.80217588404776,
+    26.83695696830864,
+    155.86373000421736
+  ],
+  "levelComparison": [],
+  "geometryAudit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 1.4551915228366852e-11,
+    "representedMissing": [],
+    "overlapWithRecoveredStationMetres": [
+      123.80217588404776,
+      26.83695696830864,
+      155.86373000421736
+    ],
+    "triangles": 8269783,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ]
+  },
+  "status": "passed"
+}

@@ -1,0 +1,93 @@
+{
+  "station": "E08",
+  "source": "L1T1-5400-308-CON-ED-INS-MO-0001_VDD.ifc",
+  "sourceSha256": "95c7e38d153eddc0ddfba9d9a801bac205b9927be68444d9d214327ac98a33c5",
+  "sourceSchema": "IFC2X3",
+  "converter": "IfcOpenShell 0.8.5",
+  "ifcLengthUnitToMetres": 1,
+  "files": [
+    {
+      "file": "e08-ins-5400-p001.glb.gz",
+      "source": "L1T1-5400-308-CON-ED-INS-MO-0001_VDD.ifc",
+      "section": "E08",
+      "discipline": "INS",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "0588135b14596b21b67405bf8a6ce53c87846fa189096d9521e89e89fda942bc",
+      "compressedBytes": 1189902,
+      "boundsGltfMetres": {
+        "min": [
+          95070.91393415569,
+          2549.0869999999995,
+          -100755.45469100085
+        ],
+        "max": [
+          95204.16859129364,
+          2577.0869569683077,
+          -100659.62101421208
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e08-ins-5400-p002.glb.gz",
+      "source": "L1T1-5400-308-CON-ED-INS-MO-0001_VDD.ifc",
+      "section": "E08",
+      "discipline": "INS",
+      "role": "detail",
+      "converted": 313,
+      "sha256": "41340e6a35fae248718a7d803d93236cafb4eada3c40c21e3e4ff369bf740986",
+      "compressedBytes": 1508653,
+      "boundsGltfMetres": {
+        "min": [
+          95069.50960031166,
+          2549.807499999552,
+          -100757.39941286053
+        ],
+        "max": [
+          95207.17148616561,
+          2575.8369796925786,
+          -100655.54487898582
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    }
+  ],
+  "expectedRepresentedElements": 813,
+  "convertedElements": 813,
+  "cameraCandidates": 144,
+  "bounds": {
+    "min": [
+      95069.50960031166,
+      2549.0869999999995,
+      -100757.39941286053
+    ],
+    "max": [
+      95207.17148616561,
+      2577.0869569683077,
+      -100655.54487898582
+    ]
+  },
+  "audit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 3.3306690738754696e-16,
+    "representedMissing": [],
+    "overlapWithRecoveredStationMetres": [
+      137.6618858539441,
+      27.999956968308197,
+      101.85453387470625
+    ],
+    "triangles": 3897215,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ]
+  },
+  "seconds": 47.79,
+  "coordinateConvention": "glTF metres [IFC X, IFC Z, -IFC Y]; native placement preserved",
+  "simplification": false
+}
