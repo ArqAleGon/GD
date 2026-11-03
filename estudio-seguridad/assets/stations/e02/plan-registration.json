@@ -1,0 +1,97 @@
+{
+  "originIfc": [
+    89520,
+    103710
+  ],
+  "architecture": {
+    "1": {
+      "matrix": [
+        [
+          31.501263092034996,
+          -59.12539948758116,
+          -1520.1599999999996
+        ],
+        [
+          -59.12539948758116,
+          -31.501263092034996,
+          1519.2
+        ]
+      ],
+      "crop": [
+        696,
+        1704,
+        2280,
+        1128
+      ],
+      "rotation": 90,
+      "status": "Correspondencia visual con columnas, ejes y muros IFC · no topográfica"
+    },
+    "2": {
+      "matrix": [
+        [
+          12.708842342978816,
+          -23.848677766237376,
+          3001.332114380117
+        ],
+        [
+          -23.929305610335216,
+          -12.754150325756605,
+          2168.105876816049
+        ]
+      ],
+      "crop": [
+        192,
+        936,
+        5760,
+        2304
+      ],
+      "rotation": 90,
+      "status": "Correspondencia visual con columnas, ejes y muros IFC · no topográfica"
+    },
+    "3": {
+      "matrix": [
+        [
+          12.54729864396352,
+          -23.515662572014783,
+          2956.3767453382134
+        ],
+        [
+          -23.539419189618936,
+          -12.53814676285919,
+          2221.1198335464273
+        ]
+      ],
+      "crop": [
+        264,
+        1032,
+        5640,
+        2232
+      ],
+      "rotation": 90,
+      "status": "Correspondencia visual con columnas, ejes y muros IFC · no topográfica"
+    },
+    "4": {
+      "matrix": [
+        [
+          12.594290595656734,
+          -23.639321380018323,
+          3025.1667979464223
+        ],
+        [
+          -23.517320290420848,
+          -12.52970959452458,
+          2231.415047687059
+        ]
+      ],
+      "crop": [
+        228,
+        1044,
+        5688,
+        2268
+      ],
+      "rotation": 90,
+      "status": "Correspondencia visual con columnas, ejes y muros IFC · no topográfica"
+    }
+  },
+  "inventory": {}
+}

@@ -1,0 +1,60 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "level": "Sótano",
+      "levelId": "B",
+      "buildings": [
+        "Estación Portal de las Américas"
+      ],
+      "imageUrl": "./assets/stations/e02/plans/architecture-B.jpg",
+      "width": 6000,
+      "height": 4243,
+      "source": "PLANO SOTANO E2 A.pdf",
+      "sourcePage": 1,
+      "sourceSha256": "66e568bb876a5f4eef9cd2fe6f428e0c188e62d5d3a06776878bc19cb3d24c9d"
+    },
+    {
+      "page": 2,
+      "level": "Acceso",
+      "levelId": "A",
+      "buildings": [
+        "Estación Portal de las Américas"
+      ],
+      "imageUrl": "./assets/stations/e02/plans/architecture-A.jpg",
+      "width": 6000,
+      "height": 4243,
+      "source": "PLANO ACCESO E2 A.pdf",
+      "sourcePage": 1,
+      "sourceSha256": "ef88793d3eb2b30d85226e61e0324ca760e49b1681a29ab08b6b3a46baf333ac"
+    },
+    {
+      "page": 3,
+      "level": "Intermedio",
+      "levelId": "I",
+      "buildings": [
+        "Estación Portal de las Américas"
+      ],
+      "imageUrl": "./assets/stations/e02/plans/architecture-I.jpg",
+      "width": 6000,
+      "height": 4243,
+      "source": "PLANO INT E2 A.pdf",
+      "sourcePage": 1,
+      "sourceSha256": "bca94daf0a49c602681a7ce8cd7a73fa57a0f1be106323a1d453cbd65a182200"
+    },
+    {
+      "page": 4,
+      "level": "Plataforma",
+      "levelId": "P",
+      "buildings": [
+        "Estación Portal de las Américas"
+      ],
+      "imageUrl": "./assets/stations/e02/plans/architecture-P.jpg",
+      "width": 6000,
+      "height": 4243,
+      "source": "PLANO PLA E2 A.pdf",
+      "sourcePage": 1,
+      "sourceSha256": "431f26ba908b5a1182ad1c1df463c6aa8aa185bcce1c6c171f78fa821d9b1c90"
+    }
+  ]
+}

@@ -1,0 +1,4282 @@
+{
+  "station": "E02",
+  "mode": "plan-raster",
+  "categories": [
+    {
+      "name": "Área técnica",
+      "color": "#d5d9e3"
+    },
+    {
+      "name": "Área pública",
+      "color": "#81bdcd"
+    },
+    {
+      "name": "Área no paga",
+      "color": "#fff8b8"
+    },
+    {
+      "name": "Área paga",
+      "color": "#fbd976"
+    },
+    {
+      "name": "Área operacional",
+      "color": "#66b5fa"
+    },
+    {
+      "name": "Servicio público",
+      "color": "#7dc3b1"
+    },
+    {
+      "name": "Servicios adicionales · área no paga",
+      "color": "#cfe7ce"
+    },
+    {
+      "name": "Servicios adicionales · área paga",
+      "color": "#86bd89"
+    },
+    {
+      "name": "Zona de refugio (PMR)",
+      "color": "#648bc8"
+    },
+    {
+      "name": "Área cultural",
+      "color": "#ff9898"
+    },
+    {
+      "name": "Jardín · sin color en plano",
+      "color": "#b8c0c2"
+    }
+  ],
+  "records": [
+    {
+      "id": "E02-B-0",
+      "code": "T-16",
+      "name": "Espacio T-16",
+      "level": "B",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2536.0,
+      "center": [
+        11.614804,
+        -37.34231
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO SOTANO E2 A.pdf"
+    },
+    {
+      "id": "E02-B-1",
+      "code": "T-00-1",
+      "name": "Espacio T-00-1",
+      "level": "B",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2536.0,
+      "center": [
+        15.612007,
+        -43.168623
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO SOTANO E2 A.pdf"
+    },
+    {
+      "id": "E02-B-2",
+      "code": "T-25-1",
+      "name": "Espacio T-25-1",
+      "level": "B",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2536.0,
+      "center": [
+        13.904697,
+        -44.078256
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO SOTANO E2 A.pdf"
+    },
+    {
+      "id": "E02-B-3",
+      "code": "T-13",
+      "name": "Espacio T-13",
+      "level": "B",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2536.0,
+      "center": [
+        17.204255,
+        -50.195081
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO SOTANO E2 A.pdf"
+    },
+    {
+      "id": "E02-B-4",
+      "code": "T-15",
+      "name": "Espacio T-15",
+      "level": "B",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2536.0,
+      "center": [
+        9.275937,
+        -46.666176
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO SOTANO E2 A.pdf"
+    },
+    {
+      "id": "E02-B-5",
+      "code": "T-14-1",
+      "name": "Espacio T-14-1",
+      "level": "B",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2536.0,
+      "center": [
+        11.196274,
+        -50.270497
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO SOTANO E2 A.pdf"
+    },
+    {
+      "id": "E02-B-6",
+      "code": "T-14-2",
+      "name": "Espacio T-14-2",
+      "level": "B",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2536.0,
+      "center": [
+        12.493343,
+        -52.704995
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO SOTANO E2 A.pdf"
+    },
+    {
+      "id": "E02-B-7",
+      "code": "T-18",
+      "name": "Espacio T-18",
+      "level": "B",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2536.0,
+      "center": [
+        16.665215,
+        -54.135527
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO SOTANO E2 A.pdf"
+    },
+    {
+      "id": "E02-B-8",
+      "code": "T-17",
+      "name": "Espacio T-17",
+      "level": "B",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2536.0,
+      "center": [
+        21.179689,
+        -57.65666
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO SOTANO E2 A.pdf"
+    },
+    {
+      "id": "E02-B-9",
+      "code": "T-19-1",
+      "name": "Espacio T-19-1",
+      "level": "B",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2536.0,
+      "center": [
+        19.124594,
+        -58.751588
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO SOTANO E2 A.pdf"
+    },
+    {
+      "id": "E02-B-10",
+      "code": "T-19-2",
+      "name": "Espacio T-19-2",
+      "level": "B",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2536.0,
+      "center": [
+        16.468778,
+        -60.166574
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO SOTANO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-0",
+      "code": "T-03-1",
+      "name": "Espacio T-03-1",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        7.08167,
+        -43.711424
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-1",
+      "code": "C-01",
+      "name": "Espacio C-01",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        42.947092,
+        -92.240977
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#ff9898",
+      "type": "Área cultural",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-2",
+      "code": "P-08",
+      "name": "Espacio P-08",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        17.633973,
+        -58.410902
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#81bdcd",
+      "type": "Área pública",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-3",
+      "code": "P-07",
+      "name": "Espacio P-07",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        24.697887,
+        -71.579689
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#81bdcd",
+      "type": "Área pública",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-4",
+      "code": "P-05",
+      "name": "Espacio P-05",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        27.656307,
+        -76.933083
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#81bdcd",
+      "type": "Área pública",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-5",
+      "code": "T-25-2",
+      "name": "Espacio T-25-2",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        32.144051,
+        -77.916157
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-6",
+      "code": "T-20-L-1",
+      "name": "Espacio T-20-L-1",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        17.871024,
+        -51.475177
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-7",
+      "code": "T-06-1",
+      "name": "Espacio T-06-1",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        6.722328,
+        -37.741312
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-8",
+      "code": "T-00-2",
+      "name": "Espacio T-00-2",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        15.81265,
+        -38.486257
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-9",
+      "code": "T-00-1",
+      "name": "Espacio T-00-1",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        28.143154,
+        -39.929997
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-10",
+      "code": "T-20-L-1",
+      "name": "Espacio T-20-L-1",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        29.404715,
+        -42.240596
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-11",
+      "code": "T-21-3",
+      "name": "Espacio T-21-3",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        24.054669,
+        -45.724341
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-12",
+      "code": "R-00-1",
+      "name": "Espacio R-00-1",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        16.513128,
+        8.905035
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Servicios adicionales · área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-13",
+      "code": "R-10",
+      "name": "Espacio R-10",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        11.923124,
+        17.516788
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Servicios adicionales · área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-14",
+      "code": "R-07",
+      "name": "Espacio R-07",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        11.046988,
+        13.554809
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Servicios adicionales · área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-15",
+      "code": "R-09",
+      "name": "Espacio R-09",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        12.060041,
+        11.654122
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Servicios adicionales · área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-16",
+      "code": "R-04-1",
+      "name": "Espacio R-04-1",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        14.35278,
+        10.028618
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Servicios adicionales · área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-17",
+      "code": "R-08",
+      "name": "Espacio R-08",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        15.290402,
+        6.551099
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Servicios adicionales · área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-18",
+      "code": "R-06",
+      "name": "Espacio R-06",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        16.722433,
+        3.864326
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Servicios adicionales · área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-19",
+      "code": "R-05-1",
+      "name": "Espacio R-05-1",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        19.095787,
+        4.059457
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Servicios adicionales · área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-20",
+      "code": "P-04",
+      "name": "Espacio P-04",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        -8.614037,
+        50.02023
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#81bdcd",
+      "type": "Área pública",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-21",
+      "code": "P-02",
+      "name": "Espacio P-02",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        -6.606692,
+        46.254055
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#81bdcd",
+      "type": "Área pública",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-22",
+      "code": "P-03",
+      "name": "Espacio P-03",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        -9.140462,
+        42.387959
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#81bdcd",
+      "type": "Área pública",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-23",
+      "code": "NPA-01",
+      "name": "Espacio NPA-01",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        -21.170521,
+        -23.635189
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fff8b8",
+      "type": "Área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-24",
+      "code": "R-302",
+      "name": "Espacio R-302",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        -18.01043,
+        -22.493534
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Servicios adicionales · área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-25",
+      "code": "T-25-2",
+      "name": "Espacio T-25-2",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        30.479491,
+        -28.425678
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-26",
+      "code": "P-01",
+      "name": "Espacio P-01",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        5.035332,
+        29.453706
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#81bdcd",
+      "type": "Área pública",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-27",
+      "code": "NPA-02",
+      "name": "Espacio NPA-02",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        37.851642,
+        -94.624886
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fff8b8",
+      "type": "Área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-28",
+      "code": "R-01",
+      "name": "Espacio R-01",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        41.271408,
+        -38.447822
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Servicios adicionales · área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-29",
+      "code": "T-20-W-1",
+      "name": "Espacio T-20-W-1",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        35.450952,
+        -37.753122
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-30",
+      "code": "T-08-2",
+      "name": "Espacio T-08-2",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        34.244044,
+        -35.488724
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-31",
+      "code": "T-00-1",
+      "name": "Espacio T-00-1",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        33.368632,
+        -40.776041
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-32",
+      "code": "T-30",
+      "name": "Espacio T-30",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        32.376602,
+        -41.590925
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-33",
+      "code": "T-20-G",
+      "name": "Espacio T-20-G",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        27.216299,
+        -45.93772
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-34",
+      "code": "O-21-1",
+      "name": "Espacio O-21-1",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        26.442292,
+        -43.668607
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-35",
+      "code": "NPA-01",
+      "name": "Espacio NPA-01",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        34.608943,
+        -75.216644
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fff8b8",
+      "type": "Área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-36",
+      "code": "T-08-3",
+      "name": "Espacio T-08-3",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        34.2752,
+        -29.265322
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-37",
+      "code": "R-204",
+      "name": "Espacio R-204",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        31.317337,
+        -23.715786
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Servicios adicionales · área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-38",
+      "code": "R-203",
+      "name": "Espacio R-203",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        29.485088,
+        -20.278124
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Servicios adicionales · área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-39",
+      "code": "R-202",
+      "name": "Espacio R-202",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        27.402702,
+        -16.371156
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Servicios adicionales · área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-40",
+      "code": "R-201",
+      "name": "Espacio R-201",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        25.357836,
+        -12.534585
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Servicios adicionales · área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-41",
+      "code": "T-21-5",
+      "name": "Espacio T-21-5",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        22.400274,
+        -6.563067
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-42",
+      "code": "T-21-4",
+      "name": "Espacio T-21-4",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        24.463565,
+        -7.391875
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-43",
+      "code": "R-04-2",
+      "name": "Espacio R-04-2",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        23.551816,
+        -3.343163
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Servicios adicionales · área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-44",
+      "code": "R-02",
+      "name": "Espacio R-02",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        20.774086,
+        -3.934564
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Servicios adicionales · área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-45",
+      "code": "R-03",
+      "name": "Espacio R-03",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        18.804261,
+        -0.238784
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Servicios adicionales · área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-46",
+      "code": "R-00-2",
+      "name": "Espacio R-00-2",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        21.547124,
+        -0.539736
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Servicios adicionales · área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-47",
+      "code": "R-05-2",
+      "name": "Espacio R-05-2",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        20.132738,
+        1.719554
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Servicios adicionales · área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-48",
+      "code": "O-07-1",
+      "name": "Espacio O-07-1",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        11.136876,
+        7.893057
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-49",
+      "code": "T-21-2",
+      "name": "Espacio T-21-2",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        -25.337342,
+        76.692104
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-50",
+      "code": "P-01",
+      "name": "Espacio P-01",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        -15.198656,
+        65.613799
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#81bdcd",
+      "type": "Área pública",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-51",
+      "code": "R-301",
+      "name": "Espacio R-301",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        -54.968757,
+        52.93226
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#cfe7ce",
+      "type": "Servicios adicionales · área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-52",
+      "code": "NPA-03",
+      "name": "Espacio NPA-03",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        -56.500554,
+        52.115973
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fff8b8",
+      "type": "Área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-53",
+      "code": "NPA-02",
+      "name": "Espacio NPA-02",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        -38.210107,
+        14.36277
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fff8b8",
+      "type": "Área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-54",
+      "code": "P-06",
+      "name": "Espacio P-06",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        37.363154,
+        -80.567379
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#81bdcd",
+      "type": "Área pública",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-55",
+      "code": "T-20-W-1",
+      "name": "Espacio T-20-W-1",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        20.876901,
+        -57.351047
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-56",
+      "code": "NPA-01",
+      "name": "Espacio NPA-01",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        -2.068785,
+        42.528154
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fff8b8",
+      "type": "Área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-57",
+      "code": "T-21-1",
+      "name": "Espacio T-21-1",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        -34.766837,
+        12.423576
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-A-58",
+      "code": "T-25-1",
+      "name": "Espacio T-25-1",
+      "level": "A",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2541.9,
+      "center": [
+        -26.557394,
+        78.688571
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO ACCESO E2 A.pdf"
+    },
+    {
+      "id": "E02-I-0",
+      "code": "T-12",
+      "name": "Espacio T-12",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -12.593287,
+        96.853108
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-1",
+      "code": "T-22",
+      "name": "Espacio T-22",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -18.187848,
+        93.765948
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-2",
+      "code": "T-00-2",
+      "name": "Espacio T-00-2",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -13.276746,
+        90.671034
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-3",
+      "code": "T-11",
+      "name": "Espacio T-11",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -6.460575,
+        85.530823
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-4",
+      "code": "T-10",
+      "name": "Espacio T-10",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -5.604136,
+        77.414786
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-5",
+      "code": "T-04",
+      "name": "Espacio T-04",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -3.44526,
+        73.36166
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-6",
+      "code": "T-24",
+      "name": "Espacio T-24",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -18.882383,
+        83.393518
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-7",
+      "code": "T-02-1",
+      "name": "Espacio T-02-1",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -16.046213,
+        78.068824
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-8",
+      "code": "T-02",
+      "name": "Espacio T-02",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -12.744403,
+        71.869926
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-9",
+      "code": "T-23",
+      "name": "Espacio T-23",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -10.839512,
+        68.293638
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-10",
+      "code": "T-03",
+      "name": "Espacio T-03",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -5.167172,
+        57.644249
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-11",
+      "code": "T-00-2",
+      "name": "Espacio T-00-2",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -8.388513,
+        73.07145
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-12",
+      "code": "T-00-2",
+      "name": "Espacio T-00-2",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -16.386115,
+        67.987677
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-13",
+      "code": "T-05",
+      "name": "Espacio T-05",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -18.127489,
+        66.854409
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-14",
+      "code": "T-21-6",
+      "name": "Espacio T-21-6",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -25.789382,
+        81.239032
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-15",
+      "code": "T-21-7",
+      "name": "Espacio T-21-7",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -23.33419,
+        76.629595
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-16",
+      "code": "ZDR-02",
+      "name": "Espacio ZDR-02",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -21.513961,
+        73.212254
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#648bc8",
+      "type": "Zona de refugio (PMR)",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-17",
+      "code": "T-25-3",
+      "name": "Espacio T-25-3",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -20.413358,
+        71.145954
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-18",
+      "code": "T-09",
+      "name": "Espacio T-09",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -25.848775,
+        71.205497
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-19",
+      "code": "T-07",
+      "name": "Espacio T-07",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -32.309058,
+        87.353922
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-20",
+      "code": "T-06",
+      "name": "Espacio T-06",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -32.500712,
+        77.760114
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-21",
+      "code": "R-301",
+      "name": "Espacio R-301",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -0.447186,
+        49.548498
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#86bd89",
+      "type": "Servicios adicionales · área paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-22",
+      "code": "R-101",
+      "name": "Espacio R-101",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        17.18695,
+        44.77129
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#86bd89",
+      "type": "Servicios adicionales · área paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-23",
+      "code": "PA-01",
+      "name": "Espacio PA-01",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        5.56907,
+        38.062016
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fbd976",
+      "type": "Área paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-24",
+      "code": "R-302",
+      "name": "Espacio R-302",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        19.285896,
+        26.091659
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#86bd89",
+      "type": "Servicios adicionales · área paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-25",
+      "code": "R-303",
+      "name": "Espacio R-303",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        7.059397,
+        19.567942
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#86bd89",
+      "type": "Servicios adicionales · área paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-26",
+      "code": "R-103",
+      "name": "Espacio R-103",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        29.325381,
+        22.365139
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#86bd89",
+      "type": "Servicios adicionales · área paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-27",
+      "code": "R-102",
+      "name": "Espacio R-102",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        12.265202,
+        2.137805
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#86bd89",
+      "type": "Servicios adicionales · área paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-28",
+      "code": "O-21-2",
+      "name": "Espacio O-21-2",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        30.155834,
+        18.317621
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-29",
+      "code": "O-03",
+      "name": "Espacio O-03",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        32.272379,
+        14.343968
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#7dc3b1",
+      "type": "Servicio público",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-30",
+      "code": "O-02",
+      "name": "Espacio O-02",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        33.796291,
+        11.482938
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#7dc3b1",
+      "type": "Servicio público",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-31",
+      "code": "O-23",
+      "name": "Espacio O-23",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        26.625128,
+        13.269887
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#7dc3b1",
+      "type": "Servicio público",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-32",
+      "code": "O-25",
+      "name": "Espacio O-25",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        28.741673,
+        9.296234
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#7dc3b1",
+      "type": "Servicio público",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-33",
+      "code": "O-04",
+      "name": "Espacio O-04",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        32.859205,
+        8.839683
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#7dc3b1",
+      "type": "Servicio público",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-34",
+      "code": "O-24",
+      "name": "Espacio O-24",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        38.130567,
+        8.896724
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#7dc3b1",
+      "type": "Servicio público",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-35",
+      "code": "T-20-L-2",
+      "name": "Espacio T-20-L-2",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        36.647372,
+        -2.100631
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-36",
+      "code": "R-304",
+      "name": "Espacio R-304",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        35.995885,
+        -6.428572
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#86bd89",
+      "type": "Servicios adicionales · área paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-37",
+      "code": "T-21-8",
+      "name": "Espacio T-21-8",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        23.611138,
+        -8.444042
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-38",
+      "code": "O-06",
+      "name": "Espacio O-06",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        40.504753,
+        -9.533987
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-39",
+      "code": "O-17",
+      "name": "Espacio O-17",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        25.727325,
+        -15.479676
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-40",
+      "code": "T-25-4",
+      "name": "Espacio T-25-4",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        27.801539,
+        -19.373855
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-41",
+      "code": "O-09",
+      "name": "Espacio O-09",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        50.983354,
+        -14.659161
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-42",
+      "code": "O-11",
+      "name": "Espacio O-11",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        47.887033,
+        -16.311271
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-43",
+      "code": "O-10",
+      "name": "Espacio O-10",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        53.904186,
+        -20.142802
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-44",
+      "code": "O-12",
+      "name": "Espacio O-12",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        50.807865,
+        -21.794912
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-45",
+      "code": "O-00-1",
+      "name": "Espacio O-00-1",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        47.531683,
+        -22.726514
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-46",
+      "code": "O-18",
+      "name": "Espacio O-18",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        44.763471,
+        -24.611793
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#b8c0c2",
+      "type": "Jardín · sin color en plano",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-47",
+      "code": "O-19",
+      "name": "Espacio O-19",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        39.53426,
+        -26.279297
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-48",
+      "code": "O-26",
+      "name": "Espacio O-26",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        39.81968,
+        -29.494973
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-49",
+      "code": "O-07",
+      "name": "Espacio O-07",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        53.749773,
+        -28.083784
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-50",
+      "code": "O-20",
+      "name": "Espacio O-20",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        57.941429,
+        -28.296666
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-51",
+      "code": "O-08",
+      "name": "Espacio O-08",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        55.480071,
+        -31.140872
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-52",
+      "code": "O-15",
+      "name": "Espacio O-15",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        49.27725,
+        -30.980496
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-53",
+      "code": "O-16",
+      "name": "Espacio O-16",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        46.275949,
+        -34.725158
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-54",
+      "code": "O-22",
+      "name": "Espacio O-22",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        43.412538,
+        -36.048875
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-55",
+      "code": "ZDR-01",
+      "name": "Espacio ZDR-01",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        40.374892,
+        -33.791411
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#648bc8",
+      "type": "Zona de refugio (PMR)",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-56",
+      "code": "O-13",
+      "name": "Espacio O-13",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        36.182878,
+        -36.64051
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-57",
+      "code": "O-14",
+      "name": "Espacio O-14",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        37.373054,
+        -42.129044
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-58",
+      "code": "O-01-5",
+      "name": "Espacio O-01-5",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        33.324735,
+        -38.165535
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-59",
+      "code": "O-01-1",
+      "name": "Espacio O-01-1",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -51.487754,
+        54.259348
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-60",
+      "code": "O-01-2",
+      "name": "Espacio O-01-2",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -28.362214,
+        30.367317
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-61",
+      "code": "O-01-3",
+      "name": "Espacio O-01-3",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -20.642183,
+        15.299297
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-62",
+      "code": "O-01-4",
+      "name": "Espacio O-01-4",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -11.908362,
+        -20.047958
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-63",
+      "code": "T-25-1",
+      "name": "Espacio T-25-1",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -16.751933,
+        17.375025
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-64",
+      "code": "NPA-01",
+      "name": "Espacio NPA-01",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        -23.726891,
+        22.430512
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fff8b8",
+      "type": "Área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-65",
+      "code": "PA-01",
+      "name": "Espacio PA-01",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        6.708669,
+        -37.772594
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fbd976",
+      "type": "Área paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-66",
+      "code": "T-25-3",
+      "name": "Espacio T-25-3",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        2.612213,
+        -38.121275
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-67",
+      "code": "O-05",
+      "name": "Espacio O-05",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        20.679121,
+        -53.281771
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-68",
+      "code": "T-21-1",
+      "name": "Espacio T-21-1",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        22.763873,
+        -57.578566
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-69",
+      "code": "C-02",
+      "name": "Espacio C-02",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        28.436752,
+        -63.634985
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#ff9898",
+      "type": "Área cultural",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-70",
+      "code": "C-03",
+      "name": "Espacio C-03",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        20.726362,
+        -56.624532
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#ff9898",
+      "type": "Área cultural",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-71",
+      "code": "NPA-03",
+      "name": "Espacio NPA-03",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        18.307336,
+        -59.548211
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fff8b8",
+      "type": "Área no paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-I-72",
+      "code": "O-01-6",
+      "name": "Espacio O-01-6",
+      "level": "I",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2549.45,
+      "center": [
+        13.819005,
+        -61.840999
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#66b5fa",
+      "type": "Área operacional",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO INT E2 A.pdf"
+    },
+    {
+      "id": "E02-P-0",
+      "code": "PA-03",
+      "name": "Espacio PA-03",
+      "level": "P",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2558.94,
+      "center": [
+        10.918941,
+        46.883034
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fbd976",
+      "type": "Área paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO PLA E2 A.pdf"
+    },
+    {
+      "id": "E02-P-1",
+      "code": "PA-04",
+      "name": "Espacio PA-04",
+      "level": "P",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2558.94,
+      "center": [
+        -4.184018,
+        38.83665
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#fbd976",
+      "type": "Área paga",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO PLA E2 A.pdf"
+    },
+    {
+      "id": "E02-P-2",
+      "code": "T-21-9",
+      "name": "Espacio T-21-9",
+      "level": "P",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2558.94,
+      "center": [
+        16.925302,
+        44.803696
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO PLA E2 A.pdf"
+    },
+    {
+      "id": "E02-P-3",
+      "code": "T-25-5",
+      "name": "Espacio T-25-5",
+      "level": "P",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2558.94,
+      "center": [
+        14.93807,
+        43.744961
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO PLA E2 A.pdf"
+    },
+    {
+      "id": "E02-P-4",
+      "code": "T-25-6",
+      "name": "Espacio T-25-6",
+      "level": "P",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2558.94,
+      "center": [
+        -5.172713,
+        33.030565
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO PLA E2 A.pdf"
+    },
+    {
+      "id": "E02-P-5",
+      "code": "T-21-10",
+      "name": "Espacio T-21-10",
+      "level": "P",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2558.94,
+      "center": [
+        -7.318923,
+        31.887132
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO PLA E2 A.pdf"
+    },
+    {
+      "id": "E02-P-6",
+      "code": "T-25-8",
+      "name": "Espacio T-25-8",
+      "level": "P",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2558.94,
+      "center": [
+        36.074125,
+        4.648814
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO PLA E2 A.pdf"
+    },
+    {
+      "id": "E02-P-7",
+      "code": "T-25-7",
+      "name": "Espacio T-25-7",
+      "level": "P",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2558.94,
+      "center": [
+        14.135089,
+        -7.039618
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#d5d9e3",
+      "type": "Área técnica",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO PLA E2 A.pdf"
+    },
+    {
+      "id": "E02-P-8",
+      "code": "ZDR-03",
+      "name": "Espacio ZDR-03",
+      "level": "P",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2558.94,
+      "center": [
+        -16.932153,
+        102.605244
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#648bc8",
+      "type": "Zona de refugio (PMR)",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO PLA E2 A.pdf"
+    },
+    {
+      "id": "E02-P-9",
+      "code": "ZDR-04",
+      "name": "Espacio ZDR-04",
+      "level": "P",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2558.94,
+      "center": [
+        -36.009576,
+        92.44139
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#648bc8",
+      "type": "Zona de refugio (PMR)",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO PLA E2 A.pdf"
+    },
+    {
+      "id": "E02-P-10",
+      "code": "ZDR-06",
+      "name": "Espacio ZDR-06",
+      "level": "P",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2558.94,
+      "center": [
+        55.661682,
+        -33.647912
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#648bc8",
+      "type": "Zona de refugio (PMR)",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO PLA E2 A.pdf"
+    },
+    {
+      "id": "E02-P-11",
+      "code": "ZDR-05",
+      "name": "Espacio ZDR-05",
+      "level": "P",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2558.94,
+      "center": [
+        36.584259,
+        -43.811766
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#648bc8",
+      "type": "Zona de refugio (PMR)",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO PLA E2 A.pdf"
+    },
+    {
+      "id": "E02-P-12",
+      "code": "J-01",
+      "name": "Espacio J-01",
+      "level": "P",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2558.94,
+      "center": [
+        -21.304062,
+        100.276028
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#b8c0c2",
+      "type": "Jardín · sin color en plano",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO PLA E2 A.pdf"
+    },
+    {
+      "id": "E02-P-13",
+      "code": "J-02",
+      "name": "Espacio J-02",
+      "level": "P",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2558.94,
+      "center": [
+        59.874613,
+        -31.403394
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#b8c0c2",
+      "type": "Jardín · sin color en plano",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO PLA E2 A.pdf"
+    },
+    {
+      "id": "E02-P-14",
+      "code": "J-03",
+      "name": "Espacio J-03",
+      "level": "P",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2558.94,
+      "center": [
+        -39.984039,
+        90.323921
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#b8c0c2",
+      "type": "Jardín · sin color en plano",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO PLA E2 A.pdf"
+    },
+    {
+      "id": "E02-P-15",
+      "code": "J-04",
+      "name": "Espacio J-04",
+      "level": "P",
+      "building": "E02 · Portal de las Américas",
+      "floor": 2558.94,
+      "center": [
+        40.558723,
+        -41.694296
+      ],
+      "points": [],
+      "triangles": [],
+      "edges": [],
+      "color": "#b8c0c2",
+      "type": "Jardín · sin color en plano",
+      "area": null,
+      "areaSource": "No consignada en el plano suministrado",
+      "areaSourceLabel": "Plano E02 · sin cuadro de áreas",
+      "pdfPage": 1,
+      "status": "Código localizado en plano E02",
+      "source": "PLANO PLA E2 A.pdf"
+    }
+  ],
+  "rasterLayers": [
+    {
+      "level": "B",
+      "type": "Área técnica",
+      "color": "#d5d9e3",
+      "floor": 2536.0,
+      "image": "./assets/stations/e02/spaces/B-0.png",
+      "corners": [
+        [
+          13.120231,
+          -30.492076
+        ],
+        [
+          29.123039,
+          -60.52809
+        ],
+        [
+          14.263116,
+          -68.445268
+        ],
+        [
+          -1.739692,
+          -38.409254
+        ]
+      ]
+    },
+    {
+      "level": "A",
+      "type": "Área técnica",
+      "color": "#d5d9e3",
+      "floor": 2541.9,
+      "image": "./assets/stations/e02/spaces/A-0.png",
+      "corners": [
+        [
+          -8.797472,
+          113.110104
+        ],
+        [
+          91.457215,
+          -74.987493
+        ],
+        [
+          16.471687,
+          -114.94691
+        ],
+        [
+          -83.782999,
+          73.150688
+        ]
+      ]
+    },
+    {
+      "level": "A",
+      "type": "Área pública",
+      "color": "#81bdcd",
+      "floor": 2541.9,
+      "image": "./assets/stations/e02/spaces/A-1.png",
+      "corners": [
+        [
+          -8.797472,
+          113.110104
+        ],
+        [
+          91.457215,
+          -74.987493
+        ],
+        [
+          16.471687,
+          -114.94691
+        ],
+        [
+          -83.782999,
+          73.150688
+        ]
+      ]
+    },
+    {
+      "level": "A",
+      "type": "Área no paga",
+      "color": "#fff8b8",
+      "floor": 2541.9,
+      "image": "./assets/stations/e02/spaces/A-2.png",
+      "corners": [
+        [
+          -8.797472,
+          113.110104
+        ],
+        [
+          91.457215,
+          -74.987493
+        ],
+        [
+          16.471687,
+          -114.94691
+        ],
+        [
+          -83.782999,
+          73.150688
+        ]
+      ]
+    },
+    {
+      "level": "A",
+      "type": "Área operacional",
+      "color": "#66b5fa",
+      "floor": 2541.9,
+      "image": "./assets/stations/e02/spaces/A-4.png",
+      "corners": [
+        [
+          -8.797472,
+          113.110104
+        ],
+        [
+          91.457215,
+          -74.987493
+        ],
+        [
+          16.471687,
+          -114.94691
+        ],
+        [
+          -83.782999,
+          73.150688
+        ]
+      ]
+    },
+    {
+      "level": "A",
+      "type": "Servicio público",
+      "color": "#7dc3b1",
+      "floor": 2541.9,
+      "image": "./assets/stations/e02/spaces/A-5.png",
+      "corners": [
+        [
+          -8.797472,
+          113.110104
+        ],
+        [
+          91.457215,
+          -74.987493
+        ],
+        [
+          16.471687,
+          -114.94691
+        ],
+        [
+          -83.782999,
+          73.150688
+        ]
+      ]
+    },
+    {
+      "level": "A",
+      "type": "Servicios adicionales · área no paga",
+      "color": "#cfe7ce",
+      "floor": 2541.9,
+      "image": "./assets/stations/e02/spaces/A-6.png",
+      "corners": [
+        [
+          -8.797472,
+          113.110104
+        ],
+        [
+          91.457215,
+          -74.987493
+        ],
+        [
+          16.471687,
+          -114.94691
+        ],
+        [
+          -83.782999,
+          73.150688
+        ]
+      ]
+    },
+    {
+      "level": "A",
+      "type": "Zona de refugio (PMR)",
+      "color": "#648bc8",
+      "floor": 2541.9,
+      "image": "./assets/stations/e02/spaces/A-8.png",
+      "corners": [
+        [
+          -8.797472,
+          113.110104
+        ],
+        [
+          91.457215,
+          -74.987493
+        ],
+        [
+          16.471687,
+          -114.94691
+        ],
+        [
+          -83.782999,
+          73.150688
+        ]
+      ]
+    },
+    {
+      "level": "A",
+      "type": "Área cultural",
+      "color": "#ff9898",
+      "floor": 2541.9,
+      "image": "./assets/stations/e02/spaces/A-9.png",
+      "corners": [
+        [
+          -8.797472,
+          113.110104
+        ],
+        [
+          91.457215,
+          -74.987493
+        ],
+        [
+          16.471687,
+          -114.94691
+        ],
+        [
+          -83.782999,
+          73.150688
+        ]
+      ]
+    },
+    {
+      "level": "I",
+      "type": "Área técnica",
+      "color": "#d5d9e3",
+      "floor": 2549.45,
+      "image": "./assets/stations/e02/spaces/I-0.png",
+      "corners": [
+        [
+          -8.151301,
+          110.143609
+        ],
+        [
+          91.326316,
+          -76.61807
+        ],
+        [
+          17.490967,
+          -116.014544
+        ],
+        [
+          -81.98665,
+          70.747135
+        ]
+      ]
+    },
+    {
+      "level": "I",
+      "type": "Área pública",
+      "color": "#81bdcd",
+      "floor": 2549.45,
+      "image": "./assets/stations/e02/spaces/I-1.png",
+      "corners": [
+        [
+          -8.151301,
+          110.143609
+        ],
+        [
+          91.326316,
+          -76.61807
+        ],
+        [
+          17.490967,
+          -116.014544
+        ],
+        [
+          -81.98665,
+          70.747135
+        ]
+      ]
+    },
+    {
+      "level": "I",
+      "type": "Área no paga",
+      "color": "#fff8b8",
+      "floor": 2549.45,
+      "image": "./assets/stations/e02/spaces/I-2.png",
+      "corners": [
+        [
+          -8.151301,
+          110.143609
+        ],
+        [
+          91.326316,
+          -76.61807
+        ],
+        [
+          17.490967,
+          -116.014544
+        ],
+        [
+          -81.98665,
+          70.747135
+        ]
+      ]
+    },
+    {
+      "level": "I",
+      "type": "Área paga",
+      "color": "#fbd976",
+      "floor": 2549.45,
+      "image": "./assets/stations/e02/spaces/I-3.png",
+      "corners": [
+        [
+          -8.151301,
+          110.143609
+        ],
+        [
+          91.326316,
+          -76.61807
+        ],
+        [
+          17.490967,
+          -116.014544
+        ],
+        [
+          -81.98665,
+          70.747135
+        ]
+      ]
+    },
+    {
+      "level": "I",
+      "type": "Área operacional",
+      "color": "#66b5fa",
+      "floor": 2549.45,
+      "image": "./assets/stations/e02/spaces/I-4.png",
+      "corners": [
+        [
+          -8.151301,
+          110.143609
+        ],
+        [
+          91.326316,
+          -76.61807
+        ],
+        [
+          17.490967,
+          -116.014544
+        ],
+        [
+          -81.98665,
+          70.747135
+        ]
+      ]
+    },
+    {
+      "level": "I",
+      "type": "Servicio público",
+      "color": "#7dc3b1",
+      "floor": 2549.45,
+      "image": "./assets/stations/e02/spaces/I-5.png",
+      "corners": [
+        [
+          -8.151301,
+          110.143609
+        ],
+        [
+          91.326316,
+          -76.61807
+        ],
+        [
+          17.490967,
+          -116.014544
+        ],
+        [
+          -81.98665,
+          70.747135
+        ]
+      ]
+    },
+    {
+      "level": "I",
+      "type": "Servicios adicionales · área no paga",
+      "color": "#cfe7ce",
+      "floor": 2549.45,
+      "image": "./assets/stations/e02/spaces/I-6.png",
+      "corners": [
+        [
+          -8.151301,
+          110.143609
+        ],
+        [
+          91.326316,
+          -76.61807
+        ],
+        [
+          17.490967,
+          -116.014544
+        ],
+        [
+          -81.98665,
+          70.747135
+        ]
+      ]
+    },
+    {
+      "level": "I",
+      "type": "Servicios adicionales · área paga",
+      "color": "#86bd89",
+      "floor": 2549.45,
+      "image": "./assets/stations/e02/spaces/I-7.png",
+      "corners": [
+        [
+          -8.151301,
+          110.143609
+        ],
+        [
+          91.326316,
+          -76.61807
+        ],
+        [
+          17.490967,
+          -116.014544
+        ],
+        [
+          -81.98665,
+          70.747135
+        ]
+      ]
+    },
+    {
+      "level": "I",
+      "type": "Zona de refugio (PMR)",
+      "color": "#648bc8",
+      "floor": 2549.45,
+      "image": "./assets/stations/e02/spaces/I-8.png",
+      "corners": [
+        [
+          -8.151301,
+          110.143609
+        ],
+        [
+          91.326316,
+          -76.61807
+        ],
+        [
+          17.490967,
+          -116.014544
+        ],
+        [
+          -81.98665,
+          70.747135
+        ]
+      ]
+    },
+    {
+      "level": "P",
+      "type": "Área técnica",
+      "color": "#d5d9e3",
+      "floor": 2558.94,
+      "image": "./assets/stations/e02/spaces/P-0.png",
+      "corners": [
+        [
+          -9.776723,
+          113.118134
+        ],
+        [
+          90.076667,
+          -74.29915
+        ],
+        [
+          14.959314,
+          -114.319324
+        ],
+        [
+          -84.894075,
+          73.097959
+        ]
+      ]
+    },
+    {
+      "level": "P",
+      "type": "Área no paga",
+      "color": "#fff8b8",
+      "floor": 2558.94,
+      "image": "./assets/stations/e02/spaces/P-2.png",
+      "corners": [
+        [
+          -9.776723,
+          113.118134
+        ],
+        [
+          90.076667,
+          -74.29915
+        ],
+        [
+          14.959314,
+          -114.319324
+        ],
+        [
+          -84.894075,
+          73.097959
+        ]
+      ]
+    },
+    {
+      "level": "P",
+      "type": "Área paga",
+      "color": "#fbd976",
+      "floor": 2558.94,
+      "image": "./assets/stations/e02/spaces/P-3.png",
+      "corners": [
+        [
+          -9.776723,
+          113.118134
+        ],
+        [
+          90.076667,
+          -74.29915
+        ],
+        [
+          14.959314,
+          -114.319324
+        ],
+        [
+          -84.894075,
+          73.097959
+        ]
+      ]
+    },
+    {
+      "level": "P",
+      "type": "Servicios adicionales · área no paga",
+      "color": "#cfe7ce",
+      "floor": 2558.94,
+      "image": "./assets/stations/e02/spaces/P-6.png",
+      "corners": [
+        [
+          -9.776723,
+          113.118134
+        ],
+        [
+          90.076667,
+          -74.29915
+        ],
+        [
+          14.959314,
+          -114.319324
+        ],
+        [
+          -84.894075,
+          73.097959
+        ]
+      ]
+    }
+  ],
+  "unmappedPdfSpaces": [],
+  "sources": [
+    {
+      "file": "PLANO SOTANO E2 A.pdf",
+      "sha256": "66e568bb876a5f4eef9cd2fe6f428e0c188e62d5d3a06776878bc19cb3d24c9d"
+    },
+    {
+      "file": "PLANO ACCESO E2 A.pdf",
+      "sha256": "ef88793d3eb2b30d85226e61e0324ca760e49b1681a29ab08b6b3a46baf333ac"
+    },
+    {
+      "file": "PLANO INT E2 A.pdf",
+      "sha256": "bca94daf0a49c602681a7ce8cd7a73fa57a0f1be106323a1d453cbd65a182200"
+    },
+    {
+      "file": "PLANO PLA E2 A.pdf",
+      "sha256": "431f26ba908b5a1182ad1c1df463c6aa8aa185bcce1c6c171f78fa821d9b1c90"
+    }
+  ],
+  "sourceNote": "Códigos y colores de los cuatro planos arquitectónicos E02. Registro visual con columnas, ejes y muros del modelo IFC. Los planos suministrados no incluyen nombres completos ni valores de área; se muestran como no consignados hasta incorporar el cuadro de áreas E02. No se calculan áreas a partir de píxeles.",
+  "currentPlanNote": "Códigos del plano y colores registrados sobre el modelo IFC."
+}
