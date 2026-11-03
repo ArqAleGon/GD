@@ -156,8 +156,8 @@ if(station.packages){
  if(station.id==='E01'){$('#routes-drawer h2').textContent='Recorridos · E01';$('#routes-drawer > p').textContent='Selecciona Biciusuarios, Biciusuarios-Acceso Peatonal o PMR. EM1 BICI sigue la línea negra desde Plataforma hasta Acceso y continúa por la línea verde. EM1 PMR sigue la línea naranja.';$('#routes-drawer .micro-note').textContent='Verde: Biciusuarios. Negro: Acceso Peatonal. Naranja: PMR. Videos originales vinculados a los trazados actualizados del 28/10/2026.';} 
 }
 if(station.cameraInventoryPending){
- $('#pov-panel h2').textContent='Vista 3D · estación completa';$('#pov-panel .view-heading p').textContent='Modelo completo · POV: En construcción';
- $('#fov-summary').textContent='Arquitectura, estructura e instalaciones';$('#resolution-summary').textContent='Cámaras y POV · En construcción';
+ $('#pov-panel h2').textContent='Vista 3D · estación completa';$('#pov-panel .view-heading p').textContent=station.povVideo?'Modelo completo · video POV disponible en Recorridos':'Modelo completo · POV: En construcción';
+ $('#fov-summary').textContent='Arquitectura, estructura e instalaciones';$('#resolution-summary').textContent=station.povVideo?'Cámaras IFC · En construcción':'Cámaras y POV · En construcción';
  $('#active-title').textContent='En construcción';$('#camera-location').textContent='Inventario interactivo de cámaras';
  for(const id of ['applied-profile','observer-info','camera-description','axis-note'])$('#'+id).textContent='En construcción';
  for(const control of document.querySelectorAll('#optics input,#optics button,#frame-camera,[data-toggle-cameras],#show-cone')){control.disabled=true;control.title='En construcción';}
