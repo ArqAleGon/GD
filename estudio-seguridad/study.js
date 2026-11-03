@@ -1,5 +1,6 @@
 import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
-import {station,stations} from './study-stations.js?v=20261103-quality36';
+import {station,stations} from './study-stations.js?v=20261103-e03video38';
+import {StationVideo} from './study-station-video.js?v=20261103-e03video38';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
 import {PlanViewer} from './study-plans.js?v=20261028-e01media23';
 import {StudyScene} from './study-scene.js?v=20261103-quality36';
@@ -9,7 +10,7 @@ import {SpaceStudy} from './study-spaces.js?v=20261103-quality36';
 const $=s=>document.querySelector(s);
 const levels=station.levels;
 let records=[],types={},architecture=[],inventory=[],modelManifest,scene,active=null,level=levels.find(l=>l.id==='A')||levels[0],started=false,modelsReady=false,loadingPromise;
-let spacesData,spaces,routes,areaRegister;let securityContext;
+let spacesData,spaces,routes,areaRegister,stationVideo;let securityContext;
 let zoom=1,planToken=0;const settingsById=new Map();let settings={fov:90,range:25,yaw:0,tilt:0};let profiles=[],loadStart=0,loadTimer;
 const planErrors={};const planView=new PlanViewer({svg:$('#plan-svg'),container:$('#plan-scroll'),onSelect:selectCamera});
 const defaults=()=>({fov:90,range:25,yaw:0,tilt:0});
@@ -72,7 +73,7 @@ async function start(){
  }catch(error){clearInterval(loadTimer);showError('#resource-status','No se completó la carga: '+error.message);$('#model-loading').textContent='No se pudo cargar el paquete. Usa «Reintentar modelos».';$('#retry-model').hidden=false;updatePovMessage();document.body.dataset.ready='error';console.error(error);}
 }
 $('#entry-form').addEventListener('submit',e=>{e.preventDefault();const selected=$('#entry-building').value;if(selected!==station.id){const url=new URL(location.href);url.searchParams.set('station',selected);url.searchParams.set('level',$('#entry-level').value);url.searchParams.set('start','1');location.assign(url);return;}$('#entry-dialog').close();start();});
-$('#change-context').addEventListener('click',()=>{if(routes?.active)routes.enable(false);$('#entry-building').value=station.id;updateEntry(station,level.id);$('#entry-dialog').showModal();if(scene)scene.dirty=true;});
+$('#change-context').addEventListener('click',()=>{if(routes?.active)routes.enable(false);if(stationVideo?.active)stationVideo.enable(false);$('#entry-building').value=station.id;updateEntry(station,level.id);$('#entry-dialog').showModal();if(scene)scene.dirty=true;});
 $('#entry-dialog').addEventListener('cancel',e=>{if(!started)e.preventDefault();else if(scene)scene.dirty=true;});
 $('#retry-model').addEventListener('click',()=>location.reload());
 $('#level-select').addEventListener('change',e=>changeLevel(e.target.value));$('#camera-select').addEventListener('change',e=>selectCamera(e.target.value));
@@ -166,6 +167,7 @@ if(!station.assets.routes){
  $('#routes-tab').disabled=false;$('#routes-drawer h2').textContent='Recorridos · '+station.id;
  $('#routes-drawer > p').textContent='En construcción';$('#routes-drawer .micro-note').textContent='Trazados y videos de esta estación: En construcción';
  $('#routes-enter').disabled=true;$('#routes-enter').textContent='En construcción';
+ if(station.povVideo)stationVideo=new StationVideo({config:station.povVideo,getScene:()=>scene,onEnter:()=>expandPanel(null)});
 }
 if(new URLSearchParams(location.search).get('start')==='1'){const url=new URL(location.href);url.searchParams.delete('start');history.replaceState(null,'',url);$('#entry-dialog').close();start();}
 

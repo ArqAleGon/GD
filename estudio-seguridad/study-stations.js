@@ -18,4 +18,5 @@ for(const config of Object.values(stations))if(config.modelOnly){
   return {...level,name:label,sourceName:level.name,cutMax:label!==level.name?Math.min(level.cutMax,level.elevation+3.5):level.cutMax};
  });
 }
+stations.E03.povVideo={id:'e03-biciusuario-v38',title:'E03 · Biciusuarios'};
 export const station=stations[new URLSearchParams(location.search).get('station')]||stations.E09;

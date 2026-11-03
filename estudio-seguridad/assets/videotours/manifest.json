@@ -1,5 +1,5 @@
 {
-  "version": 23,
+  "version": 38,
   "videos": [
     {
       "id": "e09-ruta-1",
@@ -37,6 +37,16 @@
       "fps": 30,
       "duration": 72.87,
       "sourceUpdated": "2026-10-28"
+    },
+    {
+      "id": "e03-biciusuario-v38",
+      "title": "E03 · Biciusuarios",
+      "file": "e03-biciusuario-v38.mp4",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration": 147.033,
+      "sourceUpdated": "2026-11-03"
     }
   ]
 }

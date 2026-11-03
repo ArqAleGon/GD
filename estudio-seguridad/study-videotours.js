@@ -1,6 +1,7 @@
 // Route-specific media shares the POV viewport with the simulated camera.
 export class RouteVideo{
- constructor(){
+ constructor({manifestUrl='./assets/videotours/manifest.json?v=20261028-e01media23'}={}){
+  this.manifestUrl=manifestUrl;
   this.panel=document.querySelector('#route-video-panel');this.video=document.querySelector('#route-video');this.status=document.querySelector('#route-video-status');this.retry=document.querySelector('#route-video-retry');this.visible=false;
   document.body.append(this.panel);
   this.retry.addEventListener('click',()=>{this.retry.hidden=true;this.load(true);});
@@ -16,7 +17,7 @@ export class RouteVideo{
   const ticket=this.ticket=(this.ticket||0)+1;
   try{
    this.message('Cargando video…');this.retry.hidden=true;
-   if(!this.manifest)this.manifest=fetch('./assets/videotours/manifest.json?v=20261028-e01media23').then(r=>{if(!r.ok)throw Error('Catálogo no disponible');return r.json();}).catch(error=>{this.manifest=null;throw error;});
+   if(!this.manifest)this.manifest=fetch(this.manifestUrl).then(r=>{if(!r.ok)throw Error('Catálogo no disponible');return r.json();}).catch(error=>{this.manifest=null;throw error;});
    const data=await this.manifest;if(ticket!==this.ticket||id!==this.videoId)return;
    const item=data.videos?.find(v=>v.id===id);if(!item)throw Error('Video no disponible');
    this.video.src=new URL(item.file,new URL('./assets/videotours/',location.href)).href;this.loadedId=id;this.video.load();
