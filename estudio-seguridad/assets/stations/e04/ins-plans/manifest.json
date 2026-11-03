@@ -1,0 +1,298 @@
+{
+  "station": "E04",
+  "documents": [
+    {
+      "id": "l1t1-5445-304-con-ed-ins-pl-0009_v00",
+      "name": "L1T1-5445-304-CON-ED-INS-PL-0009_V00.pdf",
+      "pdf": "https://github.com/ArqAleGon/GD/releases/download/estudio-ins-e03-e04-20261103/L1T1-5445-304-CON-ED-INS-PL-0009_V00.pdf",
+      "revision": "V00",
+      "stage": "Diseño detallado",
+      "sha256": "1ed25868015be07be76ac32a66a2ab6ceb22058aadc1bf7ef87612b9c5bd48ea",
+      "pages": [
+        {
+          "page": 1,
+          "label": "Índice y localización",
+          "level": null,
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0009_v00-p01.png",
+          "width": 1683.78,
+          "height": 1190.55
+        },
+        {
+          "page": 2,
+          "label": "Sótano · Disposición de cámaras",
+          "level": "B",
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0009_v00-p02.png",
+          "width": 5669.29,
+          "height": 2004.09
+        },
+        {
+          "page": 3,
+          "label": "Sótano · Cobertura CCTV",
+          "level": "B",
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0009_v00-p03.png",
+          "width": 5669.29,
+          "height": 2004.09
+        },
+        {
+          "page": 4,
+          "label": "Acceso · Disposición de cámaras · Parte 1",
+          "level": "A",
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0009_v00-p04.png",
+          "width": 5669.29,
+          "height": 2004.09
+        },
+        {
+          "page": 5,
+          "label": "Acceso · Cobertura CCTV · Parte 1",
+          "level": "A",
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0009_v00-p05.png",
+          "width": 5669.29,
+          "height": 2004.09
+        },
+        {
+          "page": 6,
+          "label": "Acceso · Disposición de cámaras · Parte 2",
+          "level": "A",
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0009_v00-p06.png",
+          "width": 5669.29,
+          "height": 2004.09
+        },
+        {
+          "page": 7,
+          "label": "Acceso · Cobertura CCTV · Parte 2",
+          "level": "A",
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0009_v00-p07.png",
+          "width": 5669.29,
+          "height": 2004.09
+        },
+        {
+          "page": 8,
+          "label": "Intermedio · Disposición de cámaras · Parte 1",
+          "level": "I",
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0009_v00-p08.png",
+          "width": 5669.29,
+          "height": 2004.09
+        },
+        {
+          "page": 9,
+          "label": "Intermedio · Cobertura CCTV · Parte 1",
+          "level": "I",
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0009_v00-p09.png",
+          "width": 5669.29,
+          "height": 2004.09
+        },
+        {
+          "page": 10,
+          "label": "Intermedio · Disposición de cámaras · Parte 2",
+          "level": "I",
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0009_v00-p10.png",
+          "width": 5669.29,
+          "height": 2004.09
+        },
+        {
+          "page": 11,
+          "label": "Intermedio · Cobertura CCTV · Parte 2",
+          "level": "I",
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0009_v00-p11.png",
+          "width": 5669.29,
+          "height": 2004.09
+        },
+        {
+          "page": 12,
+          "label": "Plataforma · Disposición de cámaras · Parte 1",
+          "level": "P",
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0009_v00-p12.png",
+          "width": 5669.29,
+          "height": 2004.09
+        },
+        {
+          "page": 13,
+          "label": "Plataforma · Cobertura CCTV · Parte 1",
+          "level": "P",
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0009_v00-p13.png",
+          "width": 5669.29,
+          "height": 2004.09
+        },
+        {
+          "page": 14,
+          "label": "Plataforma · Disposición de cámaras · Parte 2",
+          "level": "P",
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0009_v00-p14.png",
+          "width": 5669.29,
+          "height": 2004.09
+        },
+        {
+          "page": 15,
+          "label": "Plataforma · Cobertura CCTV · Parte 2",
+          "level": "P",
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0009_v00-p15.png",
+          "width": 5669.29,
+          "height": 2004.09
+        },
+        {
+          "page": 16,
+          "label": "Cuadro de espacios",
+          "level": null,
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0009_v00-p16.png",
+          "width": 1683.78,
+          "height": 1190.55
+        },
+        {
+          "page": 17,
+          "label": "Listado de equipos",
+          "level": null,
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0009_v00-p17.png",
+          "width": 1683.78,
+          "height": 1190.55
+        }
+      ],
+      "pdfDownload": true
+    },
+    {
+      "id": "l1t1-5445-304-con-ed-ins-pl-0001_vbb",
+      "name": "L1T1-5445-304-CON-ED-INS-PL-0001_VBB.pdf",
+      "pdf": "./assets/stations/e04/ins-plans/L1T1-5445-304-CON-ED-INS-PL-0001_VBB.pdf",
+      "revision": "VBB",
+      "stage": "Diseño preliminar",
+      "sha256": "68765dd938e60ccf00e5249b4c57554473b8d3d02581e985de28d5f018c3b7e0",
+      "pages": [
+        {
+          "page": 1,
+          "label": "Planta 1 · Cobertura CCTV · Preliminar",
+          "level": null,
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0001_vbb-p01.png",
+          "width": 3574.0,
+          "height": 1984.0
+        }
+      ]
+    },
+    {
+      "id": "l1t1-5445-304-con-ed-ins-pl-0002_vbb",
+      "name": "L1T1-5445-304-CON-ED-INS-PL-0002_VBB.pdf",
+      "pdf": "./assets/stations/e04/ins-plans/L1T1-5445-304-CON-ED-INS-PL-0002_VBB.pdf",
+      "revision": "VBB",
+      "stage": "Diseño preliminar",
+      "sha256": "a67e2e841b974841c1b4edac2c20afc80091a2b64ade74c31ef893e6b5f22675",
+      "pages": [
+        {
+          "page": 1,
+          "label": "Planta 1 · Cobertura CCTV · Preliminar",
+          "level": null,
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0002_vbb-p01.png",
+          "width": 3574.0,
+          "height": 2004.0
+        }
+      ]
+    },
+    {
+      "id": "l1t1-5445-304-con-ed-ins-pl-0003_vbb",
+      "name": "L1T1-5445-304-CON-ED-INS-PL-0003_VBB.pdf",
+      "pdf": "./assets/stations/e04/ins-plans/L1T1-5445-304-CON-ED-INS-PL-0003_VBB.pdf",
+      "revision": "VBB",
+      "stage": "Diseño preliminar",
+      "sha256": "42a32ecda7f85cce2bf6fdde892ad844a8d83b373f6b0213f93c879e69eaf0d9",
+      "pages": [
+        {
+          "page": 1,
+          "label": "Planta 1 · Cobertura CCTV · Preliminar",
+          "level": null,
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0003_vbb-p01.png",
+          "width": 3574.0,
+          "height": 2004.0
+        }
+      ]
+    },
+    {
+      "id": "l1t1-5445-304-con-ed-ins-pl-0004_vbb",
+      "name": "L1T1-5445-304-CON-ED-INS-PL-0004_VBB.pdf",
+      "pdf": "./assets/stations/e04/ins-plans/L1T1-5445-304-CON-ED-INS-PL-0004_VBB.pdf",
+      "revision": "VBB",
+      "stage": "Diseño preliminar",
+      "sha256": "e514472e6c0701944ffd70e9482a4d1a09d6f90c6b9d9fd044a8afcadec24045",
+      "pages": [
+        {
+          "page": 1,
+          "label": "Planta 2 · Cobertura CCTV · Preliminar",
+          "level": null,
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0004_vbb-p01.png",
+          "width": 3574.0,
+          "height": 1984.0
+        }
+      ]
+    },
+    {
+      "id": "l1t1-5445-304-con-ed-ins-pl-0005_vbb",
+      "name": "L1T1-5445-304-CON-ED-INS-PL-0005_VBB.pdf",
+      "pdf": "./assets/stations/e04/ins-plans/L1T1-5445-304-CON-ED-INS-PL-0005_VBB.pdf",
+      "revision": "VBB",
+      "stage": "Diseño preliminar",
+      "sha256": "15e2dafa17a6253d1d57de76742daea6e66eb1ccb0b11893a3e0ff76890715cb",
+      "pages": [
+        {
+          "page": 1,
+          "label": "Planta 2 · Cobertura CCTV · Preliminar",
+          "level": null,
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0005_vbb-p01.png",
+          "width": 3574.0,
+          "height": 1984.0
+        }
+      ]
+    },
+    {
+      "id": "l1t1-5445-304-con-ed-ins-pl-0006_vbb",
+      "name": "L1T1-5445-304-CON-ED-INS-PL-0006_VBB.pdf",
+      "pdf": "./assets/stations/e04/ins-plans/L1T1-5445-304-CON-ED-INS-PL-0006_VBB.pdf",
+      "revision": "VBB",
+      "stage": "Diseño preliminar",
+      "sha256": "c559f1d4a88c5f12f1b59946c958db6449729b8368d3248186e47f5c9739f8a6",
+      "pages": [
+        {
+          "page": 1,
+          "label": "Planta 3 · Cobertura CCTV · Preliminar",
+          "level": null,
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0006_vbb-p01.png",
+          "width": 3574.0,
+          "height": 1984.0
+        }
+      ]
+    },
+    {
+      "id": "l1t1-5445-304-con-ed-ins-pl-0007_vbb",
+      "name": "L1T1-5445-304-CON-ED-INS-PL-0007_VBB.pdf",
+      "pdf": "./assets/stations/e04/ins-plans/L1T1-5445-304-CON-ED-INS-PL-0007_VBB.pdf",
+      "revision": "VBB",
+      "stage": "Diseño preliminar",
+      "sha256": "6e801d5e64124bf6b426b5d86a46b6f922a0853a1849425c56bade8c1a134c56",
+      "pages": [
+        {
+          "page": 1,
+          "label": "Planta 3 · Cobertura CCTV · Preliminar",
+          "level": null,
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0007_vbb-p01.png",
+          "width": 3574.0,
+          "height": 1984.0
+        }
+      ]
+    },
+    {
+      "id": "l1t1-5445-304-con-ed-ins-pl-0008_vbb",
+      "name": "L1T1-5445-304-CON-ED-INS-PL-0008_VBB.pdf",
+      "pdf": "./assets/stations/e04/ins-plans/L1T1-5445-304-CON-ED-INS-PL-0008_VBB.pdf",
+      "revision": "VBB",
+      "stage": "Diseño preliminar",
+      "sha256": "de8f2a4b94e9048d48b61eee0e8297b1e55e51c03ecf6549a2dba90f2e5bfb9d",
+      "pages": [
+        {
+          "page": 1,
+          "label": "Planta 3 · Cobertura CCTV · Preliminar",
+          "level": null,
+          "image": "./assets/stations/e04/ins-plans/l1t1-5445-304-con-ed-ins-pl-0008_vbb-p01.png",
+          "width": 3574.0,
+          "height": 1984.0
+        }
+      ]
+    }
+  ],
+  "defaultDocument": "l1t1-5445-304-con-ed-ins-pl-0009_v00",
+  "sourceNote": "Láminas INS originales. Los símbolos y códigos de cámaras corresponden al PDF; no son marcadores interactivos vinculados al IFC."
+}

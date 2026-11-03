@@ -5,7 +5,7 @@
   "bounds": {
     "min": [
       90029.89158291034,
-      2538.498499989501,
+      2493.400001525881,
       -102949.56453133981
     ],
     "max": [
@@ -3688,6 +3688,306 @@
       "instanceIdentity": "ifc-globalid",
       "url": "./assets/stations/e03/installations/l1t1-5400-303-con-ed-ins-mo-0001_vdd/e03-ins-5400-p003.glb.gz",
       "initialOverlay": true
+    },
+    {
+      "source": "L1T1-1300-403-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E03",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "dd69be27d695d868638737072ef85031b86afe3794c645fcaeb9767ed59bde06",
+      "compressedBytes": 294613,
+      "boundsGltfMetres": {
+        "min": [
+          90030.49031825605,
+          2506.2999992370605,
+          -102913.68073391654
+        ],
+        "max": [
+          90111.03998505759,
+          2570.590000011921,
+          -102808.54843006651
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e03/structures/l1t1-1300-403-con-ed-est-mo-0001_v01/e03-l1t1-1300-403-con-ed-est-mo-0001_v01-p001.glb.gz",
+      "url": "./assets/stations/e03/structures/l1t1-1300-403-con-ed-est-mo-0001_v01/e03-l1t1-1300-403-con-ed-est-mo-0001_v01-p001.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-1300-403-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E03",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "ba5e870509b24b72e648696b028d98385dd8038005d81cd3419315673f881689",
+      "compressedBytes": 258779,
+      "boundsGltfMetres": {
+        "min": [
+          90030.49031825605,
+          2506.2999992370605,
+          -102913.67806781454
+        ],
+        "max": [
+          90111.03998505759,
+          2573.7899999046326,
+          -102808.48123351793
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e03/structures/l1t1-1300-403-con-ed-est-mo-0001_v01/e03-l1t1-1300-403-con-ed-est-mo-0001_v01-p002.glb.gz",
+      "url": "./assets/stations/e03/structures/l1t1-1300-403-con-ed-est-mo-0001_v01/e03-l1t1-1300-403-con-ed-est-mo-0001_v01-p002.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-1300-403-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E03",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "ded7b7bd40c212b7746dad568f157e10fa8793a02175b18deb1433d0474868b2",
+      "compressedBytes": 126166,
+      "boundsGltfMetres": {
+        "min": [
+          90030.49031825605,
+          2540.299999999999,
+          -102913.68055341786
+        ],
+        "max": [
+          90111.03998505759,
+          2573.6650009155273,
+          -102808.5514127905
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e03/structures/l1t1-1300-403-con-ed-est-mo-0001_v01/e03-l1t1-1300-403-con-ed-est-mo-0001_v01-p003.glb.gz",
+      "url": "./assets/stations/e03/structures/l1t1-1300-403-con-ed-est-mo-0001_v01/e03-l1t1-1300-403-con-ed-est-mo-0001_v01-p003.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-1300-403-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E03",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 223,
+      "sha256": "f1015f61562d5b6bd669c3b5d8df115ace4161d97aac9751353dae905db8e14c",
+      "compressedBytes": 42636,
+      "boundsGltfMetres": {
+        "min": [
+          90032.55992936576,
+          2544.9999999999986,
+          -102912.6626341574
+        ],
+        "max": [
+          90105.93459671662,
+          2573.6650177394013,
+          -102810.96956531859
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e03/structures/l1t1-1300-403-con-ed-est-mo-0001_v01/e03-l1t1-1300-403-con-ed-est-mo-0001_v01-p004.glb.gz",
+      "url": "./assets/stations/e03/structures/l1t1-1300-403-con-ed-est-mo-0001_v01/e03-l1t1-1300-403-con-ed-est-mo-0001_v01-p004.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-1300-403-CON-ED-EST-MO-0002_V01.ifc",
+      "section": "E03",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "9b811e7b7defee4ee1aa823a64fee19eb194482197244ea97d9276f15533e510",
+      "compressedBytes": 291983,
+      "boundsGltfMetres": {
+        "min": [
+          90093.67350566093,
+          2537.2999999523186,
+          -102948.74569932901
+        ],
+        "max": [
+          90168.19613626231,
+          2570.590000047686,
+          -102849.14093232859
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e03/structures/l1t1-1300-403-con-ed-est-mo-0002_v01/e03-l1t1-1300-403-con-ed-est-mo-0002_v01-p001.glb.gz",
+      "url": "./assets/stations/e03/structures/l1t1-1300-403-con-ed-est-mo-0002_v01/e03-l1t1-1300-403-con-ed-est-mo-0002_v01-p001.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-1300-403-CON-ED-EST-MO-0002_V01.ifc",
+      "section": "E03",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "33475cfe16154ff8a3187666e9e21de5be6d49fde3777cb4691c0bb2cbe2cdcb",
+      "compressedBytes": 193940,
+      "boundsGltfMetres": {
+        "min": [
+          90093.67365012846,
+          2493.400001525881,
+          -102948.74550198368
+        ],
+        "max": [
+          90168.19563752688,
+          2573.799999895098,
+          -102849.14126841899
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e03/structures/l1t1-1300-403-con-ed-est-mo-0002_v01/e03-l1t1-1300-403-con-ed-est-mo-0002_v01-p002.glb.gz",
+      "url": "./assets/stations/e03/structures/l1t1-1300-403-con-ed-est-mo-0002_v01/e03-l1t1-1300-403-con-ed-est-mo-0002_v01-p002.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-1300-403-CON-ED-EST-MO-0002_V01.ifc",
+      "section": "E03",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "ff8181baffe2dd54009f81d13d526656c2e4b44d21adf9abac524dcbeaf070e4",
+      "compressedBytes": 160780,
+      "boundsGltfMetres": {
+        "min": [
+          90095.40692706386,
+          2493.400001525881,
+          -102946.87059273043
+        ],
+        "max": [
+          90167.23517550225,
+          2570.764999997022,
+          -102850.34305139126
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e03/structures/l1t1-1300-403-con-ed-est-mo-0002_v01/e03-l1t1-1300-403-con-ed-est-mo-0002_v01-p003.glb.gz",
+      "url": "./assets/stations/e03/structures/l1t1-1300-403-con-ed-est-mo-0002_v01/e03-l1t1-1300-403-con-ed-est-mo-0002_v01-p003.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-1300-403-CON-ED-EST-MO-0002_V01.ifc",
+      "section": "E03",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "2c175068f8045d8cee3c4eb4528c341194c7f80f4558b9087f9b3b75e9bd3774",
+      "compressedBytes": 229931,
+      "boundsGltfMetres": {
+        "min": [
+          90094.44816776064,
+          2527.100000000002,
+          -102948.5305168586
+        ],
+        "max": [
+          90167.92033190234,
+          2573.670000019076,
+          -102849.65785202317
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e03/structures/l1t1-1300-403-con-ed-est-mo-0002_v01/e03-l1t1-1300-403-con-ed-est-mo-0002_v01-p004.glb.gz",
+      "url": "./assets/stations/e03/structures/l1t1-1300-403-con-ed-est-mo-0002_v01/e03-l1t1-1300-403-con-ed-est-mo-0002_v01-p004.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-1300-403-CON-ED-EST-MO-0002_V01.ifc",
+      "section": "E03",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 230,
+      "sha256": "cc9d2aad75ea875d6255a0fdffca53b5bac91402bed6c5b4e71d9b7bfe84ea17",
+      "compressedBytes": 79556,
+      "boundsGltfMetres": {
+        "min": [
+          90093.6735053326,
+          2536.450000047686,
+          -102948.74569913482
+        ],
+        "max": [
+          90168.19563752688,
+          2573.8584999465966,
+          -102849.14265817702
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e03/structures/l1t1-1300-403-con-ed-est-mo-0002_v01/e03-l1t1-1300-403-con-ed-est-mo-0002_v01-p005.glb.gz",
+      "url": "./assets/stations/e03/structures/l1t1-1300-403-con-ed-est-mo-0002_v01/e03-l1t1-1300-403-con-ed-est-mo-0002_v01-p005.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-1310-403-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E03",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "becbd0c51be430f418eb55156dca66c07c543cfa9b0c6529b248822a641edfc7",
+      "compressedBytes": 2219369,
+      "boundsGltfMetres": {
+        "min": [
+          90058.2048927543,
+          2554.0099999999975,
+          -102933.24808444938
+        ],
+        "max": [
+          90145.0956729077,
+          2568.4531234557653,
+          -102825.36615059104
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e03/structures/l1t1-1310-403-con-ed-est-mo-0001_v01/e03-l1t1-1310-403-con-ed-est-mo-0001_v01-p001.glb.gz",
+      "url": "./assets/stations/e03/structures/l1t1-1310-403-con-ed-est-mo-0001_v01/e03-l1t1-1310-403-con-ed-est-mo-0001_v01-p001.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-1310-403-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E03",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "1cc487842931972f3efdb0fbd119d39304b974a352489827a7563b2a26f43ec4",
+      "compressedBytes": 2680402,
+      "boundsGltfMetres": {
+        "min": [
+          90058.71585272558,
+          2553.600000001785,
+          -102933.05807292838
+        ],
+        "max": [
+          90144.83863213782,
+          2568.452404965534,
+          -102825.61913588337
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e03/structures/l1t1-1310-403-con-ed-est-mo-0001_v01/e03-l1t1-1310-403-con-ed-est-mo-0001_v01-p002.glb.gz",
+      "url": "./assets/stations/e03/structures/l1t1-1310-403-con-ed-est-mo-0001_v01/e03-l1t1-1310-403-con-ed-est-mo-0001_v01-p002.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-1310-403-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E03",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 255,
+      "sha256": "c420ef71ab8a6afb34e18f9c338c123851426e91404b2aef714dcfd5b59160e9",
+      "compressedBytes": 633452,
+      "boundsGltfMetres": {
+        "min": [
+          90059.34841483549,
+          2554.1696999999904,
+          -102933.03644589809
+        ],
+        "max": [
+          90141.95229174521,
+          2568.6020941614647,
+          -102826.6902457245
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e03/structures/l1t1-1310-403-con-ed-est-mo-0001_v01/e03-l1t1-1310-403-con-ed-est-mo-0001_v01-p003.glb.gz",
+      "url": "./assets/stations/e03/structures/l1t1-1310-403-con-ed-est-mo-0001_v01/e03-l1t1-1310-403-con-ed-est-mo-0001_v01-p003.glb.gz",
+      "initialOverlay": true
     }
   ],
   "geometryReconverted": false,
@@ -3696,7 +3996,10 @@
     "L1T1-0000-303-CON-CN-ARQ-MO-0001_V01.ifc",
     "L1T1-1150-303-CON-ED-EST-MO-0001_V00.ifc",
     "L1T1-1200-303-CON-ED-EST-MO-0001_V01.ifc",
-    "L1T1-5400-303-CON-ED-INS-MO-0001_VDD.ifc"
+    "L1T1-5400-303-CON-ED-INS-MO-0001_VDD.ifc",
+    "L1T1-1300-403-CON-ED-EST-MO-0001_V01.ifc",
+    "L1T1-1300-403-CON-ED-EST-MO-0002_V01.ifc",
+    "L1T1-1310-403-CON-ED-EST-MO-0001_V01.ifc"
   ],
   "installations": {
     "source": "L1T1-5400-303-CON-ED-INS-MO-0001_VDD.ifc",
@@ -3706,8 +4009,87 @@
     "calibratedCameraInventory": false
   },
   "newGeometryConverted": [
-    "L1T1-5400-303-CON-ED-INS-MO-0001_VDD.ifc"
+    "L1T1-5400-303-CON-ED-INS-MO-0001_VDD.ifc",
+    "L1T1-1300-403-CON-ED-EST-MO-0001_V01.ifc",
+    "L1T1-1300-403-CON-ED-EST-MO-0002_V01.ifc",
+    "L1T1-1310-403-CON-ED-EST-MO-0001_V01.ifc"
   ],
-  "integrationNotes": [],
-  "reusedGeometryReconverted": false
+  "integrationNotes": [
+    "Coordenadas y orientación nativas de los IFC conservadas. Arquitectura, estructuras existentes e instalaciones 5400 reutilizadas; incorporadas estructuras de accesos 1300 y pasarelas 1310."
+  ],
+  "reusedGeometryReconverted": false,
+  "additionalStructures": [
+    {
+      "source": "L1T1-1300-403-CON-ED-EST-MO-0001_V01.ifc",
+      "sha256": "0cc12754d4d9ef6391d18849611d7c68ae7b9c8b95c78ab2f3df641d87f1815c",
+      "elements": 1723,
+      "audit": {
+        "status": "passed",
+        "maxPlacementMatrixDifference": 1.4551915228366852e-11,
+        "representedMissing": [],
+        "overlapWithRecoveredStationMetres": [
+          80.5496668015403,
+          35.29149991513168,
+          105.1995003986085
+        ],
+        "triangles": 199510,
+        "checks": [
+          "Source SHA256",
+          "All converted GlobalIds",
+          "Native IFC placement matrices in metres",
+          "Finite coordinates",
+          "Index bounds",
+          "Coordinate overlap"
+        ]
+      }
+    },
+    {
+      "source": "L1T1-1300-403-CON-ED-EST-MO-0002_V01.ifc",
+      "sha256": "ad56564f24eed37009e3551ba3e9650c869d8ab33d33601ec65e7ebdaf7c6098",
+      "elements": 2230,
+      "audit": {
+        "status": "passed",
+        "maxPlacementMatrixDifference": 1.4551915228366852e-11,
+        "representedMissing": [],
+        "overlapWithRecoveredStationMetres": [
+          74.52263092971407,
+          35.359999957095624,
+          99.60476700041909
+        ],
+        "triangles": 195903,
+        "checks": [
+          "Source SHA256",
+          "All converted GlobalIds",
+          "Native IFC placement matrices in metres",
+          "Finite coordinates",
+          "Index bounds",
+          "Coordinate overlap"
+        ]
+      }
+    },
+    {
+      "source": "L1T1-1310-403-CON-ED-EST-MO-0001_V01.ifc",
+      "sha256": "34c167dfeda8c80914589ef5c511df5582787e1e7cb911380b9f6acb6ddcace9",
+      "elements": 1255,
+      "audit": {
+        "status": "passed",
+        "maxPlacementMatrixDifference": 1.4551915228366852e-11,
+        "representedMissing": [],
+        "overlapWithRecoveredStationMetres": [
+          86.89078015340783,
+          15.002094159679928,
+          107.88193385834165
+        ],
+        "triangles": 625034,
+        "checks": [
+          "Source SHA256",
+          "All converted GlobalIds",
+          "Native IFC placement matrices in metres",
+          "Finite coordinates",
+          "Index bounds",
+          "Coordinate overlap"
+        ]
+      }
+    }
+  ]
 }

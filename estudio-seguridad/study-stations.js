@@ -1,5 +1,5 @@
-import {e02Study} from './study-e02.js?v=20261103-e02cctv33';
-import {recoveredStations} from './study-model-stations.js?v=20261030-ins31';
+import {e02Study} from './study-e02.js?v=20261103-estins34';
+import {recoveredStations} from './study-model-stations.js?v=20261103-estins34';
 const commonLevels=[['B','Sótano','BASEMENT'],['A','Acceso','ACCESS'],['I','Intermedio','INTERMEDIATE'],['P','Plataforma','PLATFORM']];
 const makeLevels=cuts=>commonLevels.map(([id,name,suffix],i)=>({id,name,ifc:`ARC_PL_0${i}_${suffix}`,cutMin:cuts[i][0],cutMax:cuts[i][1]}));
 export const stations={
