@@ -1,3 +1,145 @@
 {
-  "pages": []
+  "station": "E02",
+  "source": "L1T1-5445-302-CON-ED-INS-PL-0009_V00.pdf",
+  "sourceSha256": "e9288d8ac5aa57983f841a7825ef5733e00e297386a71a41f05fe214fdbadc63",
+  "selectionNote": "Detailed V00 inventory used; preliminary VBB coverage sheets are retained as source references, not mixed with current design.",
+  "pages": [
+    {
+      "page": 1,
+      "level": "Sótano",
+      "levelId": "B",
+      "buildings": [
+        "Todas las edificaciones"
+      ],
+      "imageUrl": "./assets/stations/e02/plans/inventory-p2.jpg",
+      "width": 6000,
+      "height": 4000,
+      "source": "L1T1-5445-302-CON-ED-INS-PL-0009_V00.pdf",
+      "sourcePage": 2,
+      "sourceSha256": "e9288d8ac5aa57983f841a7825ef5733e00e297386a71a41f05fe214fdbadc63"
+    },
+    {
+      "page": 2,
+      "level": "Acceso",
+      "levelId": "A",
+      "buildings": [
+        "Todas las edificaciones"
+      ],
+      "imageUrl": "./assets/stations/e02/plans/inventory-p4.jpg",
+      "width": 6000,
+      "height": 4000,
+      "source": "L1T1-5445-302-CON-ED-INS-PL-0009_V00.pdf",
+      "sourcePage": 4,
+      "sourceSha256": "e9288d8ac5aa57983f841a7825ef5733e00e297386a71a41f05fe214fdbadc63"
+    },
+    {
+      "page": 3,
+      "level": "Intermedio",
+      "levelId": "I",
+      "buildings": [
+        "Todas las edificaciones"
+      ],
+      "width": 6000,
+      "height": 4243,
+      "layers": [
+        {
+          "imageUrl": "./assets/stations/e02/plans/inventory-p6.jpg",
+          "width": 6000,
+          "height": 4000,
+          "source": "L1T1-5445-302-CON-ED-INS-PL-0009_V00.pdf",
+          "sourcePage": 6,
+          "sourceSha256": "e9288d8ac5aa57983f841a7825ef5733e00e297386a71a41f05fe214fdbadc63",
+          "crop": [
+            84.0,
+            1200.0,
+            4164.0,
+            972.0
+          ],
+          "transform": [
+            [
+              1.0154981243034644,
+              0.00173624660072282,
+              176.42439005792858
+            ],
+            [
+              0.00016069729275593704,
+              1.016375342330602,
+              -73.98218019441902
+            ]
+          ]
+        },
+        {
+          "imageUrl": "./assets/stations/e02/plans/inventory-p6.jpg",
+          "width": 6000,
+          "height": 4000,
+          "source": "L1T1-5445-302-CON-ED-INS-PL-0009_V00.pdf",
+          "sourcePage": 6,
+          "sourceSha256": "e9288d8ac5aa57983f841a7825ef5733e00e297386a71a41f05fe214fdbadc63",
+          "crop": [
+            3528.0,
+            2160.0,
+            2064.0,
+            588.0
+          ],
+          "transform": [
+            [
+              1.0154981243034644,
+              0.00173624660072282,
+              176.42439005792858
+            ],
+            [
+              0.00016069729275593704,
+              1.016375342330602,
+              -73.98218019441902
+            ]
+          ]
+        },
+        {
+          "imageUrl": "./assets/stations/e02/plans/inventory-p7.jpg",
+          "width": 6000,
+          "height": 4000,
+          "source": "L1T1-5445-302-CON-ED-INS-PL-0009_V00.pdf",
+          "sourcePage": 7,
+          "sourceSha256": "e9288d8ac5aa57983f841a7825ef5733e00e297386a71a41f05fe214fdbadc63",
+          "crop": [
+            552.0,
+            859.1999999999999,
+            4488.0,
+            1896.0
+          ],
+          "transform": [
+            [
+              0.5327760583254362,
+              -0.0003255119138998402,
+              665.3547143417572
+            ],
+            [
+              -5.922644542547808e-05,
+              0.533109134589581,
+              1662.5055866699638
+            ]
+          ]
+        }
+      ],
+      "source": "L1T1-5445-302-CON-ED-INS-PL-0009_V00.pdf",
+      "sourcePages": [
+        6,
+        7
+      ]
+    },
+    {
+      "page": 4,
+      "level": "Plataforma",
+      "levelId": "P",
+      "buildings": [
+        "Todas las edificaciones"
+      ],
+      "imageUrl": "./assets/stations/e02/plans/inventory-p10.jpg",
+      "width": 6000,
+      "height": 4000,
+      "source": "L1T1-5445-302-CON-ED-INS-PL-0009_V00.pdf",
+      "sourcePage": 10,
+      "sourceSha256": "e9288d8ac5aa57983f841a7825ef5733e00e297386a71a41f05fe214fdbadc63"
+    }
+  ]
 }

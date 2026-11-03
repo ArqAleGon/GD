@@ -1,1 +1,1265 @@
-{"records": [], "method": "Inventario calibrado pendiente"}
+{
+  "records": [
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1iR",
+      "building": "Acceso 02 · E02",
+      "level": "Sótano",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1iO",
+      "building": "Acceso 02 · E02",
+      "level": "Sótano",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1kt",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1kq",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1kr",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1X9",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1XE",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1X6",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1X4",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1XR",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1XO",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1XP",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1XV",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1XS",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1XT",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1XI",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1XJ",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1XG",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1Xf",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1XZ",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1XW",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1Xc",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1Xw",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1a8",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1a9",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1aE",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1aC",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1a0",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1a1",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1aO",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1aS",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1aG",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1aH",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1aM",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1aN",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1aL",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1ah",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1ae",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1af",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1ak",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1al",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1aj",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1aZ",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1aW",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1ac",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1ad",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1aa",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1ab",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1aw",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1au",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1av",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1ay",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1am",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1at",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1ar",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1dB",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1d8",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1d9",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1dF",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1dC",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1dD",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1d2",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1d3",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1d0",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1d1",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1d6",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1d7",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1d4",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1d5",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1dR",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1dO",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uF",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uC",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uD",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1u3",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1u0",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1u1",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1u7",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1u4",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1u5",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uQ",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uR",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uO",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uP",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uU",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uT",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uI",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uJ",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uH",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uM",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uN",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uK",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uL",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uh",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1ue",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uk",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1ul",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uZ",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uW",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1mnPdY1nD94x6vTp7ut1uc",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br55z",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br54J",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br5xD",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br5xR",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br5u$",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br5$F",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br4L8",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br4Lj",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br4L$",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br4Ef",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br4DP",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br42N",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br40f",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br3Iq",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br3G3",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br3Gd",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br3Nj",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br3Lj",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br3B_",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br3Dd",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3ec4znhebEUgxeLc_br3CR",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1Ktkz98$H2Ygdd409EoUrv",
+      "building": "Acceso 01 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1Ktkz98$H2Ygdd409EoUrt",
+      "building": "Acceso 01 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1Ktkz98$H2Ygdd409EoUrj",
+      "building": "Acceso 01 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5oU",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5pv",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5pK",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5ni",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5n3",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5nU",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5qb",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5qa",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5qh",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5qf",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5ql",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5qk",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5rW",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5r$",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5wx",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5wN",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5xr",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5ur",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5vq",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5$w",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5$8",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5yw",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5Yz",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5Y7",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5Y4",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5Xq",
+      "building": "Acceso 01 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5XN",
+      "building": "Acceso 01 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "3Ynpcyz_jDzucm798kj5cj",
+      "building": "Acceso 01 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "2_LQoa3Dj2XAStl3H7hjWG",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "2_LQoa3Dj2XAStl3H7hjW_",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "2_LQoa3Dj2XAStl3H7hjlO",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKe76",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKe70",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKe4X",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKe48",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKe4L",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKe3Z",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKe3C",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKe$0",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKe_Z",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKe_P",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKezi",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKez_",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKeyY",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKewe",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKewU",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKeve",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKetE",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKet1",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKetO",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKesk",
+      "building": "Nave central · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKese",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKesg",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKesa",
+      "building": "Acceso 02 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKerk",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKerZ",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKerm",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKer1",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKer3",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKerT",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKerV",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKerN",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKeqz",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKeqn",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKeqp",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKeqo",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKeqP",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKepj",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKepi",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKepu",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKep1",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKep3",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKepM",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "25FMOrY8j4pQ$3LizOKeoX",
+      "building": "Acceso 01 · E02",
+      "level": "Intermedio",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "2iciD6ZPn19h9e52cSzHfZ",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "2iciD6ZPn19h9e52cSzHiJ",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "2iciD6ZPn19h9e52cSzHiX",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "2iciD6ZPn19h9e52cSzHjH",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "2iciD6ZPn19h9e52cSzHW$",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "0P8lMG3cX2Cx0RodEuPDhA",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "0P8lMG3cX2Cx0RodEuPDgu",
+      "building": "Acceso 02 · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "1i7wqhZr50A9OKyrJVAspk",
+      "building": "Nave central · E02",
+      "level": "Acceso",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "0f_wI6x79AZOjt51hJwu$D",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "0f_wI6x79AZOjt51hJwu$5",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "0f_wI6x79AZOjt51hJwu_y",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    },
+    {
+      "id": "0f_wI6x79AZOjt51hJwu_q",
+      "building": "Nave central · E02",
+      "level": "Plataforma",
+      "source": "Spatial association with architectural plan footprints"
+    }
+  ],
+  "method": "210 cámaras únicas por archivo IFC y GlobalId. Nivel original del IFC; edificación asociada espacialmente con las plantas de E02. Cota de sitio aplicada igual que en el modelo de instalaciones."
+}

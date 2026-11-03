@@ -7,36 +7,36 @@ export const e02Study={
     2550,
     -103710
   ],
-  "cameras": 0,
-  "fixed": 0,
-  "cameraInventoryPending": true,
+  "cameras": 210,
+  "fixed": 32,
+  "cameraInventoryPending": false,
   "sourceCount": 4,
   "levels": [
     {
       "id": "B",
       "name": "Sótano",
-      "ifc": "E02-B",
+      "ifc": "ARC_PL_00_BASEMENT",
       "cutMin": 2535.7,
       "cutMax": 2539.1
     },
     {
       "id": "A",
       "name": "Acceso",
-      "ifc": "E02-A",
+      "ifc": "ARC_PL_01_ACCESS",
       "cutMin": 2541.1,
       "cutMax": 2545.0
     },
     {
       "id": "I",
       "name": "Intermedio",
-      "ifc": "E02-I",
+      "ifc": "ARC_PL_02",
       "cutMin": 2549.15,
       "cutMax": 2553.0
     },
     {
       "id": "P",
       "name": "Plataforma",
-      "ifc": "E02-P",
+      "ifc": "ARC_PL_03",
       "cutMin": 2558.64,
       "cutMax": 2562.5
     }
@@ -52,7 +52,7 @@ export const e02Study={
   },
   "modelBase": "./assets/stations/e02/models/",
   "cameraBase": null,
-  "description": "Modelos recuperados de arquitectura, estructuras e instalaciones. Cuatro plantas arquitectónicas, etiquetas y colores de espacios vinculados por nivel. Inventario calibrado de cámaras y recorridos pendientes.",
+  "description": "Arquitectura, estructuras e instalaciones de E02. Cuatro plantas arquitectónicas e inventario CCTV, 210 cámaras del IFC y 32 perspectivas Fixed. Recorridos pendientes.",
   "packages": [
     [
       "e02-0000",

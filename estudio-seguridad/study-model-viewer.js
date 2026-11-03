@@ -3,11 +3,11 @@ import {OrbitControls} from './vendor/OrbitControls.js';
 import {GLTFLoader} from './vendor/GLTFLoader.js';
 import {mergeGeometries} from './vendor/BufferGeometryUtils.js';
 import {MeshoptDecoder} from './vendor/meshopt_decoder.module.js';
-import {station,stations} from './study-stations.js?v=20261103-e02plans32';
+import {station,stations} from './study-stations.js?v=20261103-e02cctv33';
 import {initFullscreen} from './study-controls.js?v=20261028-e01media23';
 
 const $=s=>document.querySelector(s),link=document.createElement('link');
-link.rel='stylesheet';link.href='./study-model-viewer.css?v=20261103-e02plans32';document.head.append(link);
+link.rel='stylesheet';link.href='./study-model-viewer.css?v=20261103-e02cctv33';document.head.append(link);
 document.body.classList.add('model-only');document.body.dataset.station=station.id;
 document.title='Estudio de Seguridad · '+station.name;
 $('#pov-panel').remove();$('#plan-panel').remove();$('.inspector').remove();$('.side-tools').remove();

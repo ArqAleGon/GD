@@ -93,5 +93,94 @@
       "status": "Correspondencia visual con columnas, ejes y muros IFC · no topográfica"
     }
   },
-  "inventory": {}
+  "inventory": {
+    "1": {
+      "matrix": [
+        [
+          42.70455352235141,
+          -79.98528710521866,
+          -1785.2109352116659
+        ],
+        [
+          -79.9427651520992,
+          -42.60020954864498,
+          805.3945915160922
+        ]
+      ],
+      "crop": [
+        1308.0,
+        1152.0,
+        2856.0,
+        1272.0
+      ],
+      "rotation": 90,
+      "status": "Inventario CCTV · registro visual con muros y estructura IFC"
+    },
+    "2": {
+      "matrix": [
+        [
+          12.459159837571475,
+          -23.112071990174954,
+          2706.193884430218
+        ],
+        [
+          -23.185919714658198,
+          -12.514172071605635,
+          1846.8653118399407
+        ]
+      ],
+      "crop": [
+        132.0,
+        1272.0,
+        5460.0,
+        1464.0
+      ],
+      "rotation": 90,
+      "status": "Inventario CCTV · registro visual con muros y estructura IFC"
+    },
+    "3": {
+      "matrix": [
+        [
+          12.54729864396352,
+          -23.515662572014783,
+          2956.3767453382134
+        ],
+        [
+          -23.539419189618936,
+          -12.53814676285919,
+          2221.1198335464273
+        ]
+      ],
+      "crop": [
+        264,
+        1032,
+        5640,
+        2232
+      ],
+      "rotation": 90,
+      "status": "Inventario CCTV unificado · páginas 6 y 7 · registro visual IFC"
+    },
+    "4": {
+      "matrix": [
+        [
+          14.176493902757231,
+          -26.53476023347531,
+          3403.855214248965
+        ],
+        [
+          -26.57095367552908,
+          -14.153058795993447,
+          2502.5826786763787
+        ]
+      ],
+      "crop": [
+        312.0,
+        1272.0,
+        4896.0,
+        1200.0
+      ],
+      "rotation": 90,
+      "status": "Inventario CCTV · registro visual con muros y estructura IFC"
+    }
+  }
 }
