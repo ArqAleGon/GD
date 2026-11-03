@@ -1,13 +1,13 @@
-import {station,stations} from './study-stations.js?v=20261103-estins34';
-import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261028-e01media23';
+import {station,stations} from './study-stations.js?v=20261103-quality36';
+import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
 import {PlanViewer} from './study-plans.js?v=20261028-e01media23';
-import {StudyScene} from './study-scene.js?v=20261103-estins34';
+import {StudyScene} from './study-scene.js?v=20261103-quality36';
 import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261028-e01media23';
 import {RouteStudy} from './study-routes.js?v=20261028-e01media23';
-import {SpaceStudy} from './study-spaces.js?v=20261103-areas35';
+import {SpaceStudy} from './study-spaces.js?v=20261103-quality36';
 const $=s=>document.querySelector(s);
 const levels=station.levels;
-let records=[],types={},architecture=[],inventory=[],modelManifest,scene,active=null,level=levels[1],started=false,modelsReady=false,loadingPromise;
+let records=[],types={},architecture=[],inventory=[],modelManifest,scene,active=null,level=levels.find(l=>l.id==='A')||levels[0],started=false,modelsReady=false,loadingPromise;
 let spacesData,spaces,routes;let securityContext;
 let zoom=1,planToken=0;const settingsById=new Map();let settings={fov:90,range:25,yaw:0,tilt:0};let profiles=[],loadStart=0,loadTimer;
 const planErrors={};const planView=new PlanViewer({svg:$('#plan-svg'),container:$('#plan-scroll'),onSelect:selectCamera});
@@ -15,18 +15,18 @@ const defaults=()=>({fov:90,range:25,yaw:0,tilt:0});
 initDrawers();initFullscreen(()=>{window.dispatchEvent(new Event('resize'));});
 const canView=r=>!!r&&typeOf(r)==='F';
 const typeOf=r=>Object.keys(types).find(k=>(r.ifcTypeName||'').includes(types[k].ifcFamilyToken));
-async function json(url){const request=new URL(url,location.href);request.searchParams.set('v','20261103-areas35');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
+async function json(url){const request=new URL(url,location.href);request.searchParams.set('v','20261103-quality36');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
 function options(select,items){select.replaceChildren(...items.map(([value,text])=>{const o=document.createElement('option');o.value=value;o.textContent=text;return o;}));}
 for(const selector of ['#entry-level','#level-select']){options($(selector),levels.map(l=>[l.id,l.name]));$(selector).value=level.id;}
 $('#entry-dialog').showModal();
-function setRows(target,rows){target.replaceChildren(...rows.map(([name,value])=>{const row=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=name;dd.textContent=value===null||value===undefined||value===''?'No declarado en IFC':String(value);row.append(dt,dd);return row;}));}
+function setRows(target,rows){target.replaceChildren(...rows.map(([name,value])=>{const row=document.createElement('div'),dt=document.createElement('dt'),dd=document.createElement('dd');dt.textContent=name;dd.textContent=value===null||value===undefined||value===''?'En construcción':String(value);row.append(dt,dd);return row;}));}
 const prop=(r,set,prefix)=>Object.entries(r.properties?.[set]||{}).find(([k])=>k.startsWith(prefix))?.[1];
 const frameRate=r=>{const raw=prop(r,'Data','Frame_rate-');if(!raw)return null;const values=[...new Set([...String(raw).matchAll(/(\d+)\s*fps/gi)].map(m=>Number(m[1])))].sort((a,b)=>a-b);return values.length?values.join(' / ')+' fps · según flujo':raw;};
 function cameraLabel(r){const type=types[typeOf(r)]?.label||'Cámara';const variant=r.ifcTypeName.includes('OUTDOOR')?' exterior':r.ifcTypeName.includes('INDOOR')?' interior':'';return `${type}${variant} · Marca IFC ${r.mark||r.ifcGlobalId.slice(-6)}`;}
-function updateCameraMenu(){const cams=records.filter(r=>r.ifcStorey===level.ifc).sort((a,b)=>(typeOf(a)==='F'?0:1)-(typeOf(b)==='F'?0:1)||String(a.mark||'').localeCompare(String(b.mark||''),undefined,{numeric:true}));options($('#camera-select'),cams.map(r=>[r.ifcGlobalId,cameraLabel(r)]));$('#camera-select').disabled=!cams.length;$('#camera-count').textContent=station.cameraInventoryPending?'Inventario de cámaras · pendiente de calibración':`${cams.length} cámaras · ${cams.filter(r=>typeOf(r)==='F').length} fijas en este nivel`;return cams;}
+function updateCameraMenu(){const cams=records.filter(r=>r.ifcStorey===level.ifc).sort((a,b)=>(typeOf(a)==='F'?0:1)-(typeOf(b)==='F'?0:1)||String(a.mark||'').localeCompare(String(b.mark||''),undefined,{numeric:true}));options($('#camera-select'),cams.map(r=>[r.ifcGlobalId,cameraLabel(r)]));if(!cams.length)$('#camera-select').append(new Option('En construcción',''));$('#camera-select').disabled=!cams.length;$('#camera-count').textContent=station.cameraInventoryPending?'Inventario de cámaras · En construcción':`${cams.length} cámaras · ${cams.filter(r=>typeOf(r)==='F').length} fijas en este nivel`;return cams;}
 function selectCamera(id){
  if(routes?.active)routes.enable(false);
- const record=records.find(r=>r.ifcGlobalId===id);if(!record)return;
+ const record=records.find(r=>r.ifcGlobalId===id);if(!record){active=null;scene?.select(null,settings);planView.select(null);updatePovMessage();return;}
  if(record.ifcStorey!==level.ifc){level=levels.find(l=>l.ifc===record.ifcStorey);$('#level-select').value=level.id;updateCameraMenu();populateSheets();scene?.setLevel(level);spaces?.setLevel(level);syncAxonView();}
  active=record;$('#camera-select').value=id;settings=settingsById.get(id)||defaults();settingsById.set(id,settings);
  $('#active-title').textContent=cameraLabel(record);$('#camera-location').textContent=`${record.displayBuilding} · ${level.name} · ${record.ifcGlobalId}`;
@@ -45,9 +45,10 @@ function updatePovMessage(){if(station.cameraInventoryPending){$('#pov-message')
 function changeLevel(id){level=levels.find(l=>l.id===id)||levels[1];$('#level-select').value=level.id;const cams=updateCameraMenu();populateSheets();scene?.setLevel(level);spaces?.setLevel(level);syncAxonView();if(routes?.active){$('#route-follow').checked=false;routes.drawPlan();return;}selectCamera(cams[0]?.ifcGlobalId);}
 function showError(where,text){$(where).textContent=text;$(where).classList.add('resources-error');}
 async function loadData(){
+ if(station.modelOnly){await loadRecoveredData();return;}
  const results=await Promise.allSettled([json('./assets/camera-types.json'),json(station.assets.cameras),json(station.assets.architecture),json(station.assets.inventory),json(station.assets.models),json(station.assets.registration),station.assets.spaces?json(station.assets.spaces):Promise.resolve(null),json(station.assets.locations)]);
  for(const i of [0,1,4,5,7])if(results[i].status==='rejected')throw results[i].reason;
- types=results[0].value;records=results[1].value.cameras;modelManifest=results[4].value;planView.configure(results[5].value,records,types);const locations=initCameraDashboard(records,types,levels,results[7].value,station.name);for(const r of records)r.displayBuilding=locations.get(r.ifcGlobalId)?.building||'Exterior / por asignar';
+ types=results[0].value;records=results[1].value.cameras;modelManifest=results[4].value;if(station.id==='E02'){modelManifest.preserveFlatFaces=true;modelManifest.frameDirection=[.863,.65,.505];}planView.configure(results[5].value,records,types);const locations=initCameraDashboard(records,types,levels,results[7].value,station.name);for(const r of records)r.displayBuilding=locations.get(r.ifcGlobalId)?.building||'Exterior / por asignar';
  architecture=results[2].status==='fulfilled'?results[2].value.pages:[];inventory=results[3].status==='fulfilled'?results[3].value.pages:[];
  if(results[6].status==='fulfilled'&&results[6].value)spacesData=results[6].value;else{$('#spaces-summary').textContent=station.spaceNote||'No se pudo cargar el catálogo de espacios. Recarga para reintentar.';for(const b of document.querySelectorAll('[data-open-spaces],#open-spaces,#show-spaces,#show-space-labels')){b.disabled=true;b.title=station.spaceNote||'Catálogo no disponible';}}
  for(const [i,key] of [[2,'architecture'],[3,'inventory']])if(results[i].status==='rejected')planErrors[key]=results[i].reason.message;
@@ -61,9 +62,9 @@ async function start(){
   scene=new StudyScene({origin:station.origin,modelBase:station.modelBase,cameraBase:station.cameraBase,axon:$('#axon-art'),pov:$('#pov-art'),onSelect:selectCamera,onProgress:(done,total)=>{const percent=Math.floor(done/total*100);$('#load-percent').textContent=percent+'%';$('#load-progress').value=percent;$('#load-parts').textContent=`Partes cargadas: ${done} de ${total}`;$('#resource-status').textContent=`Paquete ${station.id} · ${done}/${total} partes de geometría`;}});
   if(spacesData)spaces=new SpaceStudy({scene,plan:planView,data:spacesData,onSelectPlan:r=>{if(scene.fullStation)showLevelView();const page=architecture.find(p=>p.level===level.name);if(page){if($('#plan-kind').value!=='architecture'){$('#plan-kind').value='architecture';populateSheets();}$('#plan-sheet').value=page.page;zoom=1;drawPlan();}}});scene.showMarkers=camerasVisible;
   changeLevel($('#entry-level').value);
-  await scene.load(modelManifest,records,types);scene.setLevel(level);scene.select(active,settings);modelsReady=true;if(station.cameraInventoryPending)scene.enableStationOverview();$('#frame-station').disabled=false;$('#model-loading').hidden=true;updatePovMessage();
+  await scene.load(modelManifest,records,types);scene.setLevel(level);scene.select(active,settings);modelsReady=true;if(station.cameraInventoryPending)scene.enableStationOverview();$('#frame-station').disabled=false;syncAxonView();$('#model-loading').hidden=true;updatePovMessage();
   $('#resource-status').textContent=`${station.summary} · arquitectura, estructura e instalaciones · ${records.length} cámaras · ${records.filter(canView).length} perspectivas Fixed${station.id==='E01'?' · 3 tipos de recorrido · 2 videos originales Full HD':''}`;
-  if(station.cameraInventoryPending){$('#resource-status').textContent=`${station.summary} · 4 modelos recuperados · 4 plantas arquitectónicas · ${spacesData.records.length} etiquetas`;$('#open-camera-dashboard').disabled=true;}
+  if(station.cameraInventoryPending){$('#resource-status').textContent=`${station.summary} · ${station.sourceCount} modelos · detalle completo · recursos de seguridad: En construcción`;}
   clearInterval(loadTimer);document.body.dataset.ready='true';
   if(station.assets.routes)try{const routeData=await json(station.assets.routes);routes=new RouteStudy({scene,plan:planView,data:routeData,onEnter:()=>expandPanel(null),setContext:(id,page)=>{if(!securityContext)securityContext={level:level.id,camera:active?.ifcGlobalId};level=levels.find(l=>l.id===id)||level;$('#level-select').value=level.id;scene.setLevel(level);spaces?.setLevel(level);syncAxonView();$('#plan-kind').value='architecture';populateSheets();if(page)$('#plan-sheet').value=String(page);drawPlan();},onExit:()=>{const saved=securityContext;securityContext=null;if(saved){changeLevel(saved.level);selectCamera(saved.camera);}else changeLevel(level.id);}});document.body.dataset.routesReady='true';}catch(error){$('#routes-tab').disabled=true;$('#resource-status').textContent+=' · No se pudieron cargar los recorridos: '+error.message;console.error(error);}
 
@@ -75,13 +76,13 @@ $('#entry-dialog').addEventListener('cancel',e=>{if(!started)e.preventDefault();
 $('#retry-model').addEventListener('click',()=>location.reload());
 $('#level-select').addEventListener('change',e=>changeLevel(e.target.value));$('#camera-select').addEventListener('change',e=>selectCamera(e.target.value));
 for(const k of ['fov','range','yaw','tilt'])$('#'+k).addEventListener('input',e=>{settings[k]=Number(e.target.value);updateOptics();});
-$('#reset-optics').addEventListener('click',()=>{settingsById.delete(active.ifcGlobalId);selectCamera(active.ifcGlobalId);});
+$('#reset-optics').addEventListener('click',()=>{if(!active)return;settingsById.delete(active.ifcGlobalId);selectCamera(active.ifcGlobalId);});
 $('#show-installations').addEventListener('change',e=>{if(scene){scene.installations=e.target.checked;scene.filter();}});$('#show-cone').addEventListener('change',e=>{if(scene){scene.showCone=e.target.checked;scene.dirty=true;planView.select(active,canView(active)?scene.pose:null,settings);}});
 $('#show-brt').addEventListener('change',e=>{if(scene){scene.showBrt=e.target.checked;scene.filter();}});
 for(const code of ['1100','1310'])$('#show-structure-'+code).addEventListener('change',e=>{if(scene){scene.hiddenPackages ||= new Set();const key='e09-est-complementary-'+code;if(e.target.checked)scene.hiddenPackages.delete(key);else scene.hiddenPackages.add(key);scene.filter();}});
 $('#show-structure-914').addEventListener('change',e=>{if(scene){scene.hiddenPackages ||= new Set();if(e.target.checked)scene.hiddenPackages.delete('e09-str-914');else scene.hiddenPackages.add('e09-str-914');scene.filter();}});
 $('#show-structure-1300').addEventListener('change',e=>{if(scene){scene.showStructure1300=e.target.checked;scene.filter();}});
-function syncAxonView(){const full=!!scene?.fullStation;$('#frame-station').setAttribute('aria-pressed',String(full));$('#axon-title').textContent=full?'Estación completa · 3D':'Planta 3D';$('#axon-subtitle').textContent=full?'Todos los niveles · sin cortes · modelos cargados':`${level.name} · corte de ${level.cutMin.toFixed(1)} a ${level.cutMax.toFixed(1)} m`;document.body.dataset.axonMode=full?'station':'level';}
+function syncAxonView(){const full=!!scene?.fullStation||level.id==='all';$('#frame-station').setAttribute('aria-pressed',String(full));$('#axon-title').textContent=full?'Estación completa · 3D':'Planta 3D';$('#axon-subtitle').textContent=full?'Todos los niveles · sin cortes · modelos cargados':`${level.name} · corte de ${level.cutMin.toFixed(1)} a ${level.cutMax.toFixed(1)} m`;document.body.dataset.axonMode=full?'station':'level';}
 function showLevelView(){scene?.setLevel(level);syncAxonView();}
 $('#frame-station').addEventListener('click',()=>{if(!modelsReady)return;for(const id of ['show-installations','show-brt','show-structure-1300','show-structure-1100','show-structure-1310','show-structure-914'])$('#'+id).checked=true;scene.showFullStation();syncAxonView();});
 $('#frame-level').addEventListener('click',showLevelView);$('#frame-camera').addEventListener('click',()=>{showLevelView();scene?.focusSelected();});$('#help-button').addEventListener('click',()=>$('#help-dialog').showModal());
@@ -101,7 +102,8 @@ for(const button of document.querySelectorAll('[data-toggle-cameras]'))button.ad
  planView.setMarkersVisible(camerasVisible);if(scene){scene.showMarkers=camerasVisible;scene.dirty=true;}
 });
 function svgElement(tag,attrs={}){const e=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const [k,v] of Object.entries(attrs))e.setAttribute(k,v);return e;}
-function populateSheets(){const hasArchitecture=architecture.some(p=>p.level===level.name);$('#plan-kind option[value="architecture"]').disabled=!hasArchitecture;if(!hasArchitecture&&$('#plan-kind').value==='architecture')$('#plan-kind').value='inventory';const pages=$('#plan-kind').value==='architecture'?architecture:inventory;const filtered=pages.filter(p=>p.level===level.name);options($('#plan-sheet'),filtered.map(p=>[p.page,`${p.level} · ${p.buildings?.length===1?p.buildings[0]:'Todas las edificaciones'}`]));$('#plan-sheet').disabled=!filtered.length;zoom=1;drawPlan();}
+function pagesForLevel(pages){return pages.filter(p=>level.id==='all'||!p.level||p.level===level.name).sort((a,b)=>Number(!a.level)-Number(!b.level));}
+function populateSheets(){const hasArchitecture=architecture.some(p=>p.level===level.name);$('#plan-kind option[value="architecture"]').disabled=false;if(!hasArchitecture&&inventory.length&&$('#plan-kind').value==='architecture'&&!station.modelOnly)$('#plan-kind').value='inventory';const pages=$('#plan-kind').value==='architecture'?architecture:inventory;const filtered=pagesForLevel(pages);options($('#plan-sheet'),filtered.map(p=>[p.page,p.label||`${p.level} · ${p.buildings?.length===1?p.buildings[0]:'Todas las edificaciones'}`]));if(!filtered.length)$('#plan-sheet').append(new Option('En construcción',''));$('#plan-sheet').disabled=!filtered.length;zoom=1;drawPlan();}
 function syncPlan(){
  if(routes?.active){routes.drawPlan();return;}
  const kind=$('#plan-kind').value,pages=(kind==='architecture'?architecture:inventory).filter(p=>p.level===level.name),current=Number($('#plan-sheet').value),preferred=planView.choosePage(kind,pages,active,current);
@@ -109,12 +111,12 @@ function syncPlan(){
 }
 function drawPlan(){
  const token=++planToken,kind=$('#plan-kind').value,pages=kind==='architecture'?architecture:inventory,page=pages.find(p=>p.page===Number($('#plan-sheet').value));$('#plan-retry').hidden=true;$('#plan-loading').hidden=true;
- if(!page){$('#plan-svg').replaceChildren();$('#plan-status').textContent=planErrors[kind]?'Error al cargar catálogo: '+planErrors[kind]:'No hay láminas disponibles para este nivel.';$('#plan-retry').hidden=!planErrors[kind];return;}
- $('#plan-loading').hidden=false;planView.zoom=zoom;
- planView.draw(kind,page,level,active,()=>{if(token===planToken){$('#plan-loading').hidden=true;$('#plan-status').textContent=station.cameraInventoryPending?`Planta arquitectónica · ${level.name} · espacios del plano`:`${kind==='architecture'?'Planta arquitectónica':'Inventario CCTV'} · nivel completo · ${planView.markers.length} cámaras IFC`;$('#plan-status').classList.remove('resources-error');}},()=>{if(token===planToken){$('#plan-loading').hidden=true;showError('#plan-status','No se pudo cargar esta lámina.');$('#plan-retry').hidden=false;}});
- routes?.drawPlan();$('#plan-registration').textContent=planView.reg?.status||'Sin registro espacial';planView.select(active,canView(active)?scene?.pose:null,settings);
+ $('#plan-empty')?.remove();$('#plan-original')?.remove();if(!page){const empty=document.createElement('div');empty.id='plan-empty';empty.className='viewport-message';empty.textContent=planErrors[kind]?'No se pudo cargar el plano. Reintenta la carga.':'En construcción';$('#plan-scroll').append(empty);$('#plan-registration').textContent='';$('#plan-svg').replaceChildren();$('#plan-status').textContent=planErrors[kind]?'Error al cargar catálogo: '+planErrors[kind]:'En construcción';$('#plan-retry').hidden=!planErrors[kind];return;}
+ if(page.pdf){const link=document.createElement('a');link.id='plan-original';link.href=page.pdf;link.target='_blank';link.rel='noopener';link.textContent='Abrir PDF original ↗';$('#plan-panel .zoom-controls').append(link);}$('#plan-loading').hidden=false;planView.zoom=zoom;
+ planView.draw(kind,page,level,active,()=>{if(token===planToken){$('#plan-loading').hidden=true;$('#plan-status').textContent=station.cameraInventoryPending?(page.label||`Planta arquitectónica · ${level.name}`):`${kind==='architecture'?'Planta arquitectónica':'Inventario CCTV'} · nivel completo · ${planView.markers.length} cámaras IFC`;$('#plan-status').classList.remove('resources-error');}},()=>{if(token===planToken){$('#plan-loading').hidden=true;showError('#plan-status','No se pudo cargar esta lámina.');$('#plan-retry').hidden=false;}});
+ routes?.drawPlan();$('#plan-registration').textContent=planView.reg?.status||(station.modelOnly?'Indicadores interactivos · En construcción':'Sin registro espacial');planView.select(active,canView(active)?scene?.pose:null,settings);
 }
-$('#plan-kind').addEventListener('change',()=>{populateSheets();syncPlan();});$('#plan-sheet').addEventListener('change',()=>{zoom=1;drawPlan();});$('#plan-retry').addEventListener('click',async()=>{const kind=$('#plan-kind').value;if(planErrors[kind]){try{const data=await json(station.assets[kind]);if(kind==='architecture')architecture=data.pages;else inventory=data.pages;delete planErrors[kind];populateSheets();}catch(error){showError('#plan-status',error.message);}}else drawPlan();});
+$('#plan-kind').addEventListener('change',()=>{populateSheets();syncPlan();});$('#plan-sheet').addEventListener('change',()=>{const id=Number($('#plan-sheet').value),page=inventory.find(p=>p.page===id);if(station.modelOnly&&$('#plan-kind').value==='inventory'&&page?.levelId&&level.id!==page.levelId){changeLevel(page.levelId);$('#plan-sheet').value=String(id);}zoom=1;drawPlan();});$('#plan-retry').addEventListener('click',async()=>{const kind=$('#plan-kind').value;if(planErrors[kind]){try{const data=await json(station.assets[kind]);if(kind==='architecture')architecture=data.pages;else inventory=data.pages;delete planErrors[kind];populateSheets();}catch(error){showError('#plan-status',error.message);}}else drawPlan();});
 for(const [id,fn] of [['zoom-in',()=>Math.min(8,zoom*1.5)],['zoom-out',()=>Math.max(1,zoom/1.5)],['zoom-fit',()=>1]])$('#'+id).addEventListener('click',()=>{zoom=fn();planView.zoom=zoom;planView.fit();});
 function configureProfile(){
  const id=settings.profile,p=profiles.find(p=>p.id===id),o=opticsProfiles[id];
@@ -125,17 +127,17 @@ function configureProfile(){
  $('#observer-info').textContent=canView(active)?'Referencia a 8 m de la dirección de evaluación, sobre la cota del nivel IFC.':'Vista POV solo activa para cámaras Fixed.';
  showReference();
 }
-function showReference(){const p=profiles.find(p=>p.id===$('#reference-select').value);$('#reference-link').hidden=!p?.url;if(p?.url)$('#reference-link').href=p.url;$('#reference-info').textContent=p?`${p.type}. ${p.description}`:'Elige un equipo para evaluar sus características en la cámara activa.';
+function showReference(){const p=profiles.find(p=>p.id===$('#reference-select').value);$('#reference-link').hidden=!p?.url;if(p?.url)$('#reference-link').href=p.url;$('#reference-info').textContent=p?`${p.type}. ${p.description}`:'Elige un equipo para consultar sus características.';
  setRows($('#reference-specs'),p?[['Resolución',p.resolution],['Campo visual',p.fov],['Óptica',p.lens],['Fotogramas',p.fps],['Protección',p.protection]]:[]);
- $('#reference-feedback').textContent=p?'Perfil asignado a esta cámara. En cámaras Fixed, la apertura, proyección y formato de imagen se usan en la simulación. Alcance = extensión de evaluación; FPS y protección son datos nominales. No se simulan enfoque, iluminación IR ni compresión.'+(active&&typeOf(active)!=='F'?' La vista POV permanece disponible solo para cámaras Fixed.':''):'';
+ $('#reference-feedback').textContent=!active?'Aplicación a cámara activa: En construcción':p?'Perfil asignado a esta cámara. En cámaras Fixed, la apertura, proyección y formato de imagen se usan en la simulación. Alcance = extensión de evaluación; FPS y protección son datos nominales. No se simulan enfoque, iluminación IR ni compresión.'+(active&&typeOf(active)!=='F'?' La vista POV permanece disponible solo para cámaras Fixed.':''):'';
 }
-json('./assets/reference-cameras.json').then(data=>{profiles=data;options($('#reference-select'),[['','Sin perfil · parámetros de evaluación'],...profiles.map(p=>[p.id,p.name])]);$('#reference-select').value=settings.profile||'';$('#reference-select').addEventListener('change',()=>{if(!active)return;const id=$('#reference-select').value,o=opticsProfiles[id];if(o){settings.profile=id;settings.optics={...o};settings.fov=o.fov;}else{delete settings.profile;delete settings.optics;settings.fov=90;}configureProfile();$('#fov').value=settings.fov;updateOptics();updatePovMessage();});showReference();}).catch(()=>{$('#reference-info').textContent='Catálogo de referencia no disponible.';});
+json('./assets/reference-cameras.json').then(data=>{profiles=data;options($('#reference-select'),[['','Sin perfil · parámetros de evaluación'],...profiles.map(p=>[p.id,p.name])]);$('#reference-select').value=settings.profile||'';$('#reference-select').addEventListener('change',()=>{if(!active){showReference();return;}const id=$('#reference-select').value,o=opticsProfiles[id];if(o){settings.profile=id;settings.optics={...o};settings.fov=o.fov;}else{delete settings.profile;delete settings.optics;settings.fov=90;}configureProfile();$('#fov').value=settings.fov;updateOptics();updatePovMessage();});showReference();}).catch(()=>{$('#reference-info').textContent='Catálogo de referencia no disponible.';});
 
 function updateEntry(config,selected='A'){
  options($('#entry-level'),config.levels.map(l=>[l.id,l.name]));$('#entry-level').value=config.levels.some(l=>l.id===selected)?selected:config.levels[0].id;
  $('.entry-caption h2').textContent=config.modelOnly?'Explora los modelos de la estación.':'Conoce lo que ve cada cámara.';$('.entry-info p').textContent=config.modelOnly?'Vista 3D disponible. Planos, cámaras y recorridos pendientes de incorporación.':'Vista 3D disponible para Fixed Camera. Domos y PTZ conservan su ficha y posición.';$('.entry-caption .eyebrow').textContent=config.name;$('.entry-caption p').textContent=config.description;
- if(config.cameraInventoryPending){$('.entry-caption h2').textContent='Explora los espacios de la estación.';$('.entry-info p').textContent='Plantas 2D y 3D, etiquetas, colores y convenciones por nivel. Inventario calibrado y recorridos pendientes.';}
- $('.entry-steps').replaceChildren(...(config.cameraInventoryPending?['4 plantas arquitectónicas','Espacios vinculados en 2D y 3D']:config.modelOnly?[`${config.sourceCount} modelos de origen IFC`,'Planos, cámaras y recorridos pendientes']:[`${config.fixed} cámaras Fixed con perspectiva`,`${config.cameras} cámaras IFC`]).map(text=>{const span=document.createElement('span');span.textContent=text;return span;}));
+ if(config.cameraInventoryPending){$('.entry-caption h2').textContent='Explora los espacios de la estación.';$('.entry-info p').textContent='Modelos 3D detallados. Los recursos sin información se indican como En construcción.';}
+ $('.entry-steps').replaceChildren(...(config.cameraInventoryPending?[`${config.sourceCount} modelos de origen IFC`,'Recursos de seguridad · En construcción']:config.modelOnly?[`${config.sourceCount} modelos de origen IFC`,'Planos, cámaras y recorridos pendientes']:[`${config.fixed} cámaras Fixed con perspectiva`,`${config.cameras} cámaras IFC`]).map(text=>{const span=document.createElement('span');span.textContent=text;return span;}));
 }
 options($('#entry-building'),Object.values(stations).sort((a,b)=>a.id.localeCompare(b.id)).map(s=>[s.id,s.name+' — conjunto de estación']));$('#entry-building').value=station.id;updateEntry(station,new URLSearchParams(location.search).get('level')||'A');
 $('#entry-building').addEventListener('change',()=>updateEntry(stations[$('#entry-building').value]));
@@ -152,11 +154,45 @@ if(station.packages){
  if(station.id==='E01'){$('#routes-drawer h2').textContent='Recorridos · E01';$('#routes-drawer > p').textContent='Selecciona Biciusuarios, Biciusuarios-Acceso Peatonal o PMR. EM1 BICI sigue la línea negra desde Plataforma hasta Acceso y continúa por la línea verde. EM1 PMR sigue la línea naranja.';$('#routes-drawer .micro-note').textContent='Verde: Biciusuarios. Negro: Acceso Peatonal. Naranja: PMR. Videos originales vinculados a los trazados actualizados del 28/10/2026.';} 
 }
 if(station.cameraInventoryPending){
- $('#plan-panel .view-heading p').textContent='Plantas, etiquetas y colores por nivel';$('#axon-art .scene-note').textContent='Arrastra: orbitar · rueda: acercar · selecciona un espacio para ubicarlo';
- $('#pov-panel h2').textContent='Vista 3D · estación completa';$('#pov-panel .view-heading p').textContent='Modelo completo · arrastra para orbitar';$('#fov-summary').textContent='Arquitectura, estructura e instalaciones';$('#resolution-summary').textContent='POV e inventario calibrado pendientes';
- $('#camera-count').textContent='Inventario de cámaras · pendiente de calibración';$('#active-title').textContent='Espacios de E02';$('#camera-location').textContent='Selecciona un nivel y consulta sus convenciones.';$('.inspector-header .eyebrow').textContent='PLANTAS ARQUITECTÓNICAS';
- $('#optics').hidden=true;$('.observer-card').hidden=true;$('#frame-camera').disabled=true;$('#show-cone').closest('label').hidden=true;$('#show-cone').closest('section').querySelector('.micro-note').hidden=true;
- for(const b of document.querySelectorAll('[data-toggle-cameras],.drawer-tab:not(#routes-tab)')){b.disabled=true;b.title='Inventario de cámaras pendiente de calibración';}
- $('#plan-kind option[value="inventory"]').disabled=true;$('.camera-menu').hidden=true;$('#routes-tab').title='Recorridos E02 pendientes de incorporación';$('#type-legend').hidden=true;
+ $('#pov-panel h2').textContent='Vista 3D · estación completa';$('#pov-panel .view-heading p').textContent='Modelo completo · POV: En construcción';
+ $('#fov-summary').textContent='Arquitectura, estructura e instalaciones';$('#resolution-summary').textContent='Cámaras y POV · En construcción';
+ $('#active-title').textContent='En construcción';$('#camera-location').textContent='Inventario interactivo de cámaras';
+ for(const id of ['applied-profile','observer-info','camera-description','axis-note'])$('#'+id).textContent='En construcción';
+ for(const control of document.querySelectorAll('#optics input,#optics button,#frame-camera,[data-toggle-cameras],#show-cone')){control.disabled=true;control.title='En construcción';}
+ $('#camera-select').replaceChildren(new Option('En construcción',''));
+}
+if(!station.assets.routes){
+ $('#routes-tab').disabled=false;$('#routes-drawer h2').textContent='Recorridos · '+station.id;
+ $('#routes-drawer > p').textContent='En construcción';$('#routes-drawer .micro-note').textContent='Trazados y videos de esta estación: En construcción';
+ $('#routes-enter').disabled=true;$('#routes-enter').textContent='En construcción';
 }
 if(new URLSearchParams(location.search).get('start')==='1'){const url=new URL(location.href);url.searchParams.delete('start');history.replaceState(null,'',url);$('#entry-dialog').close();start();}
+
+async function loadRecoveredData(){
+ const source=await json(station.modelManifest);types=await json('./assets/camera-types.json');
+ station.origin=source.bounds.min.map((v,i)=>(v+source.bounds.max[i])/2);
+ modelManifest={...source,recovered:true};
+ const size=source.bounds.max.map((v,i)=>v-source.bounds.min[i]);modelManifest.frameDirection=size[2]>size[0]?[1,.8,.35]:[.35,.8,1];
+ planView.configure({},records,types);
+ if(station.insDocuments){
+  const documents=await json(station.insDocuments);let pageId=0;
+  inventory=documents.documents.flatMap(doc=>doc.pages.map(page=>({page:++pageId,levelId:station.insLevelIds[page.level],level:station.levels.find(l=>l.id===station.insLevelIds[page.level])?.name||null,label:doc.revision+' · '+doc.name.split('-PL-')[1]+' · '+page.label,imageUrl:page.image,width:page.width,height:page.height,pdf:doc.pdf})));
+ }
+ const packageTarget=$('#show-cone').closest('label');
+ for(const source of modelManifest.sourceIfcFiles){
+  const label=document.createElement('label'),input=document.createElement('input');input.type='checkbox';input.checked=true;input.dataset.modelPackage=source;
+  input.addEventListener('change',()=>{if(!scene)return;scene.hiddenPackages ||= new Set();if(input.checked)scene.hiddenPackages.delete(source);else scene.hiddenPackages.add(source);scene.filter();});
+  label.title=source;label.append(input,document.createTextNode(' '+(source.includes('-INS-')?'Instalaciones':source.includes('-ARQ-')?'Arquitectura':'Estructura')+' · '+source.split('-')[1]+' · '+source.split('-MO-')[1]));packageTarget.before(label);
+ }
+ $('#plan-kind option[value="architecture"]').textContent='Planta arquitectónica · En construcción';if(!inventory.length)$('#plan-kind option[value="inventory"]').textContent='Inventario CCTV · En construcción';$('#type-legend').textContent='Arquitectura · estructura · instalaciones';
+ $('#spaces-summary').textContent='En construcción';$('#spaces-source').textContent='Etiquetas, colores y áreas de esta estación: En construcción';
+ $('#space-rows').innerHTML='<tr><td colspan="4">En construcción</td></tr>';
+ for(const button of document.querySelectorAll('[data-open-spaces]'))button.addEventListener('click',()=>$('#spaces-dialog').showModal());
+ $('#close-spaces').addEventListener('click',()=>$('#spaces-dialog').close());
+ for(const button of document.querySelectorAll('#toggle-space-labels,#toggle-space-colors,#show-spaces,#show-space-labels')){button.disabled=true;button.title='En construcción';}
+ initCameraDashboard([],types,levels,{records:[],method:'En construcción',pending:true},station.name);
+ $('#open-camera-dashboard').addEventListener('click',()=>{
+  for(const id of ['dashboard-total','dashboard-fixed','dashboard-unassigned','dashboard-scope','dashboard-method'])$('#'+id).textContent='En construcción';
+  for(const list of document.querySelectorAll('[id^="dashboard-by-"]'))list.textContent='En construcción';
+ });
+}

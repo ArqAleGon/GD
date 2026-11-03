@@ -1,6 +1,7 @@
 import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
 import {GLTFLoader} from './vendor/GLTFLoader.js';
+import {loadRecoveredGeometry} from './study-recovered-geometry.js?v=20261103-quality36';
 export const ORIGIN=new THREE.Vector3(96310,2550,-100150);
 export function fixedPose(record,yaw=0,tilt=0){
  const m=new THREE.Matrix4().fromArray(record.placementMatrixIfcColumnMajor);
@@ -44,7 +45,7 @@ export class StudyScene{
   this.cone=new THREE.Group();this.scene.add(this.cone);
   this.observer=new THREE.Group();const mat=new THREE.MeshBasicMaterial({color:0xf3d189});const head=new THREE.Mesh(new THREE.SphereGeometry(.18,10,8),mat);head.position.y=1.55;const body=new THREE.Mesh(new THREE.CylinderGeometry(.18,.25,1.2,10),mat);body.position.y=.8;this.observer.add(head,body);this.scene.add(this.observer);this.observer.visible=false;
   this.activeRing=new THREE.Mesh(new THREE.SphereGeometry(.60,12,8),new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,depthTest:false}));this.activeRing.renderOrder=61;this.scene.add(this.activeRing);this.activeRing.visible=false;
-  new ResizeObserver(()=>{if(this.fullStation)this.frame();this.dirty=true;}).observe(axon);new ResizeObserver(()=>this.dirty=true).observe(pov);
+  new ResizeObserver(()=>{if(this.ready)this.frame();this.dirty=true;}).observe(axon);new ResizeObserver(()=>{if(this.overviewCamera)this.frame(this.overviewCamera,this.overviewControls,this.pov,true);this.dirty=true;}).observe(pov);
   window.addEventListener('resize',()=>{this.renderer.setSize(innerWidth,innerHeight);this.dirty=true;});window.addEventListener('scroll',()=>this.dirty=true,true);
   this.renderer.setAnimationLoop(time=>{this.routes?.tick(time);if(this.dirty){this.dirty=false;this.render();this.updateCameraTag();}});
  }
@@ -53,7 +54,7 @@ export class StudyScene{
   for(let attempt=0;attempt<4;attempt++){
    let response;
    try{response=await fetch(url,attempt?{cache:'reload'}:undefined);}catch(error){if(attempt===3)throw error;}
-   if(response?.ok)return new Response(response.body.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer();
+   if(response?.ok){const buffer=await response.arrayBuffer(),bytes=new Uint8Array(buffer);return bytes[0]===31&&bytes[1]===139?new Response(new Blob([buffer]).stream().pipeThrough(new DecompressionStream('gzip'))).arrayBuffer():buffer;}
    if(response&&!([408,429,500,502,503,504].includes(response.status)&&attempt<3))throw Error(`${response.status}: ${url}`);
    await new Promise(resolve=>setTimeout(resolve,1000*2**attempt));
   }
@@ -75,13 +76,14 @@ export class StudyScene{
    this.onProgress(++cameraDone,total);
   }
   for(const record of records){const mat=new THREE.MeshBasicMaterial({color:colorFor(record),transparent:true,depthTest:false});const marker=new THREE.Mesh(this.markerGeometry,mat);marker.position.fromArray(record.positionGltfMetres).sub(ORIGIN);marker.userData.record=record;marker.renderOrder=60;this.markerGroup.add(marker);this.markers.push(marker);}
+  if(manifest.recovered){await loadRecoveredGeometry(this,manifest,ORIGIN);this.alignFrameToStation();this.ready=true;this.dirty=true;return;}
   let next=0,done=0;
   const worker=async()=>{while(next<manifest.files.length){const file=manifest.files[next++];const buffer=await this.binary(this.modelBase+file.file);if(token!==this.generation)return;
    const header=new Uint32Array(buffer,0,2),nv=header[0],ni=header[1];if(buffer.byteLength!==8+nv*24+ni*4)throw Error('Paquete geométrico incompleto');
    const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.BufferAttribute(new Float32Array(buffer,8,nv*3),3));geometry.setAttribute('color',new THREE.BufferAttribute(new Float32Array(buffer,8+nv*12,nv*3),3));geometry.setIndex(new THREE.BufferAttribute(new Uint32Array(buffer,8+nv*24,ni),1));
    let object;
    if(file.mode===1)object=new THREE.LineSegments(geometry,new THREE.LineBasicMaterial({vertexColors:true,transparent:file.opacity<1,opacity:file.opacity}));
-   else{geometry.computeVertexNormals();object=new THREE.Mesh(geometry,new THREE.MeshStandardMaterial({vertexColors:true,roughness:.85,metalness:0,side:THREE.DoubleSide,transparent:file.opacity<1,opacity:file.opacity,depthWrite:file.opacity>=1}));}
+   else{geometry.computeVertexNormals();object=new THREE.Mesh(geometry,new THREE.MeshStandardMaterial({vertexColors:true,roughness:.85,metalness:0,flatShading:!!manifest.preserveFlatFaces,side:THREE.DoubleSide,transparent:file.opacity<1,opacity:file.opacity,depthWrite:file.opacity>=1}));}
    geometry.computeBoundingSphere();object.userData.file=file.file;object.userData.package=file.package;object.userData.bounds=file.bounds;object.userData.detachedAxis=!!file.detachedAxis;this.staticGroup.add(object);this.staticMeshes.push(object);done++;this.onProgress(done+cameraDone,total);this.dirty=true;
    await new Promise(resolve=>setTimeout(resolve,0));
   }};
@@ -106,23 +108,36 @@ export class StudyScene{
    if(identities.size!==pkg.renderableElements)throw Error(`Cobertura IFC incompleta: ${pkg.package} ${identities.size}/${pkg.renderableElements}`);
    this.brtCounts[pkg.package]=identities.size;
   }
-  document.body.dataset.brtElements=String(Object.entries(this.brtCounts).filter(([k])=>k.startsWith('e09-brt-')).reduce((n,[,v])=>n+v,0));document.body.dataset.structure1300Elements=String(Object.entries(this.brtCounts).filter(([k])=>k.startsWith('e09-est-1300-')).reduce((n,[,v])=>n+v,0));document.body.dataset.complementaryStructureElements=String(Object.entries(this.brtCounts).filter(([k])=>k.startsWith('e09-est-complementary-')).reduce((n,[,v])=>n+v,0));document.body.dataset.structure914Elements=String(this.brtCounts['e09-str-914']||0);this.ready=true;this.dirty=true;
+  document.body.dataset.brtElements=String(Object.entries(this.brtCounts).filter(([k])=>k.startsWith('e09-brt-')).reduce((n,[,v])=>n+v,0));document.body.dataset.structure1300Elements=String(Object.entries(this.brtCounts).filter(([k])=>k.startsWith('e09-est-1300-')).reduce((n,[,v])=>n+v,0));document.body.dataset.complementaryStructureElements=String(Object.entries(this.brtCounts).filter(([k])=>k.startsWith('e09-est-complementary-')).reduce((n,[,v])=>n+v,0));document.body.dataset.structure914Elements=String(this.brtCounts['e09-str-914']||0);if(manifest.preserveFlatFaces)this.alignFrameToStation();this.ready=true;this.dirty=true;
+ }
+ alignFrameToStation(){
+  let n=0,x=0,z=0,xx=0,zz=0,xz=0;
+  for(const mesh of this.staticMeshes){if(!mesh.isMesh||mesh.userData.detachedAxis)continue;const p=mesh.geometry.attributes.position;if(!p)continue;const step=Math.max(1,Math.ceil(p.count/256));for(let i=0;i<p.count;i+=step){const a=p.getX(i),b=p.getZ(i);n++;x+=a;z+=b;xx+=a*a;zz+=b*b;xz+=a*b;}}
+  if(!n)return;const angle=.5*Math.atan2(2*(xz-x*z/n),xx-x*x/n-zz+z*z/n),sign=Math.cos(angle)<0?-1:1;this.frameDirection=[-Math.sin(angle)*sign,.65,Math.cos(angle)*sign];
+  const horizontal=new THREE.Vector3(this.frameDirection[0],0,this.frameDirection[2]).normalize(),right=new THREE.Vector3(horizontal.z,0,-horizontal.x);
+  this.frameAxes={horizontal,right};
+  for(const mesh of this.staticMeshes){const p=mesh.geometry.attributes.position;if(!p)continue;let u0=Infinity,u1=-Infinity,v0=Infinity,v1=-Infinity;
+   for(let i=0;i<p.count;i++){const x=p.getX(i),z=p.getZ(i),u=x*right.x+z*right.z,v=x*horizontal.x+z*horizontal.z;u0=Math.min(u0,u);u1=Math.max(u1,u);v0=Math.min(v0,v);v1=Math.max(v1,v);}
+   mesh.userData.frameBounds={u0,u1,v0,v1};
+  }
  }
  enableStationOverview(){
   const level=this.level;this.fullStation=true;this.filter();this.frame();
-  this.overviewCamera=this.axonCamera.clone();this.overviewControls=new OrbitControls(this.overviewCamera,this.pov);this.overviewControls.target.copy(this.controls.target);this.overviewControls.update();this.overviewControls.addEventListener('change',()=>this.dirty=true);
+  this.overviewCamera=this.axonCamera.clone();this.overviewControls=new OrbitControls(this.overviewCamera,this.pov);this.overviewControls.target.copy(this.controls.target);this.overviewControls.update();this.overviewControls.addEventListener('change',()=>this.dirty=true);this.frame(this.overviewCamera,this.overviewControls,this.pov,true);
   this.setLevel(level);
  }
  showFullStation(){this.fullStation=true;this.installations=true;this.showBrt=true;this.showStructure1300=true;this.hiddenPackages?.clear();this.filter();this.frame();}
- setLevel(level){this.fullStation=false;this.level=level;this.filter();this.frame();}
+ setLevel(level){this.fullStation=level.id==='all';this.level=level;this.filter();this.frame();}
  filter(){if(!this.level)return;for(const m of this.markers)m.visible=this.fullStation||m.userData.record.ifcStorey===this.level.ifc;for(const n of this.cameraNodes)n.visible=this.fullStation||n.userData.ifcStorey===this.level.ifc;for(const mesh of this.staticMeshes)mesh.visible=!mesh.userData.detachedAxis&&(mesh.userData.package!=='e09-ins'||this.installations!==false)&&(!mesh.userData.package.startsWith('e09-brt-')||this.showBrt!==false)&&(!mesh.userData.package.startsWith('e09-est-1300-')||this.showStructure1300!==false)&&!this.hiddenPackages?.has(mesh.userData.package);this.dirty=true;}
- frame(){const visible=this.records?.filter(r=>this.fullStation||r.ifcStorey===this.level?.ifc)||[];const box=new THREE.Box3();for(const r of visible)box.expandByPoint(new THREE.Vector3().fromArray(r.positionGltfMetres).sub(ORIGIN));
-  const floor=this.fullStation?-Infinity:this.level.cutMin-ORIGIN.y,ceiling=this.fullStation?Infinity:this.level.cutMax-ORIGIN.y;
+ frame(camera=this.axonCamera,controls=this.controls,element=this.axon,fullStation=this.fullStation){const visible=this.records?.filter(r=>fullStation||r.ifcStorey===this.level?.ifc)||[];const box=new THREE.Box3();for(const r of visible)box.expandByPoint(new THREE.Vector3().fromArray(r.positionGltfMetres).sub(ORIGIN));
+  const floor=fullStation?-Infinity:this.level.cutMin-ORIGIN.y,ceiling=fullStation?Infinity:this.level.cutMax-ORIGIN.y;
   for(const mesh of this.staticMeshes){const b=mesh.userData.bounds;if(!b||!mesh.visible||b.max[1]<floor||b.min[1]>ceiling)continue;box.expandByPoint(new THREE.Vector3(b.min[0],Math.max(b.min[1],floor),b.min[2]));box.expandByPoint(new THREE.Vector3(b.max[0],Math.min(b.max[1],ceiling),b.max[2]));}
   if(box.isEmpty())return;
-  const center=box.getCenter(new THREE.Vector3()),back=new THREE.Vector3().fromArray(this.frameDirection||[.8,.9,1]).normalize(),right=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),back).normalize(),up=new THREE.Vector3().crossVectors(back,right),rect=this.axon.getBoundingClientRect(),tanV=Math.tan(THREE.MathUtils.degToRad(this.axonCamera.fov/2)),tanH=tanV*Math.max(.1,rect.width/rect.height);let distance=40;
-  for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z]){const v=new THREE.Vector3(x,y,z).sub(center);distance=Math.max(distance,Math.abs(v.dot(right))/tanH+v.dot(back),Math.abs(v.dot(up))/tanV+v.dot(back));}
-  document.body.dataset.axonFrame=JSON.stringify({min:box.min.toArray(),max:box.max.toArray(),distance,viewport:[rect.width,rect.height]});this.axonCamera.far=Math.max(1500,distance*3+box.getSize(new THREE.Vector3()).length());this.axonCamera.updateProjectionMatrix();this.controls.target.copy(center);this.axonCamera.position.copy(center).addScaledVector(back,distance*1.12);this.controls.update();this.dirty=true;
+  const center=box.getCenter(new THREE.Vector3()),back=new THREE.Vector3().fromArray(this.frameDirection||[.8,.9,1]).normalize(),right=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),back).normalize(),up=new THREE.Vector3().crossVectors(back,right),rect=element.getBoundingClientRect(),tanV=Math.tan(THREE.MathUtils.degToRad(camera.fov/2)),tanH=tanV*Math.max(.1,rect.width/rect.height);let distance=40;
+  const fitPoint=p=>{const v=p.sub(center);distance=Math.max(distance,Math.abs(v.dot(right))/tanH+v.dot(back),Math.abs(v.dot(up))/tanV+v.dot(back));};
+  if(this.frameAxes){for(const mesh of this.staticMeshes){const b=mesh.userData.bounds,f=mesh.userData.frameBounds;if(!mesh.visible||!f||b.max[1]<floor||b.min[1]>ceiling)continue;for(const u of [f.u0,f.u1])for(const v of [f.v0,f.v1])for(const y of [Math.max(b.min[1],floor),Math.min(b.max[1],ceiling)])fitPoint(this.frameAxes.right.clone().multiplyScalar(u).addScaledVector(this.frameAxes.horizontal,v).setY(y));}for(const record of visible)fitPoint(new THREE.Vector3().fromArray(record.positionGltfMetres).sub(ORIGIN));}
+  else for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z])fitPoint(new THREE.Vector3(x,y,z));
+  if(camera===this.axonCamera)document.body.dataset.axonFrame=JSON.stringify({min:box.min.toArray(),max:box.max.toArray(),distance,viewport:[rect.width,rect.height]});camera.far=Math.max(1500,distance*3+box.getSize(new THREE.Vector3()).length());camera.updateProjectionMatrix();controls.target.copy(center);camera.position.copy(center).addScaledVector(back,distance*1.12);controls.update();this.dirty=true;
  }
  focusSelected(){if(!this.selected)return;const center=new THREE.Vector3().fromArray(this.selected.positionGltfMetres).sub(ORIGIN);this.controls.target.copy(center);this.axonCamera.position.copy(center).add(new THREE.Vector3(26,32,34));this.controls.update();this.dirty=true;}
  select(record,settings){this.selected=record;this.settings=settings;this.updateOptics();this.dirty=true;}

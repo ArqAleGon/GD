@@ -6,6 +6,12 @@ export function initCameraDashboard(records,types,levels,locations,stationName='
  const filters=['building','level','type'];
  for(const key of filters){const select=$('#dashboard-'+key);select.append(new Option('Todos',''),...[...new Set(rows.map(r=>r[key]))].sort().map(v=>new Option(v,v)));select.addEventListener('change',draw);}
  function draw(){
+  if(locations.pending){
+   for(const id of ['dashboard-total','dashboard-fixed','dashboard-unassigned','dashboard-scope','dashboard-method'])$('#'+id).textContent='En construcción';
+   for(const key of ['station',...filters])$('#dashboard-by-'+key).textContent='En construcción';
+   for(const key of filters)$('#dashboard-'+key).disabled=true;
+   $('#dashboard-rows').replaceChildren();return;
+  }
   const selected=rows.filter(r=>filters.every(k=>!$('#dashboard-'+k).value||r[k]===$('#dashboard-'+k).value));
   $('#dashboard-total').textContent=selected.length;$('#dashboard-scope').textContent=`de ${rows.length} cámaras únicas del IFC · ${stationName}`;
   $('#dashboard-fixed').textContent=selected.filter(r=>r.record.ifcTypeName.includes('FIXED-CAMERA')).length;
