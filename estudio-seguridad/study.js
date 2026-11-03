@@ -1,3 +1,4 @@
+import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
 import {station,stations} from './study-stations.js?v=20261103-quality36';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
 import {PlanViewer} from './study-plans.js?v=20261028-e01media23';
@@ -8,14 +9,14 @@ import {SpaceStudy} from './study-spaces.js?v=20261103-quality36';
 const $=s=>document.querySelector(s);
 const levels=station.levels;
 let records=[],types={},architecture=[],inventory=[],modelManifest,scene,active=null,level=levels.find(l=>l.id==='A')||levels[0],started=false,modelsReady=false,loadingPromise;
-let spacesData,spaces,routes;let securityContext;
+let spacesData,spaces,routes,areaRegister;let securityContext;
 let zoom=1,planToken=0;const settingsById=new Map();let settings={fov:90,range:25,yaw:0,tilt:0};let profiles=[],loadStart=0,loadTimer;
 const planErrors={};const planView=new PlanViewer({svg:$('#plan-svg'),container:$('#plan-scroll'),onSelect:selectCamera});
 const defaults=()=>({fov:90,range:25,yaw:0,tilt:0});
 initDrawers();initFullscreen(()=>{window.dispatchEvent(new Event('resize'));});
 const canView=r=>!!r&&typeOf(r)==='F';
 const typeOf=r=>Object.keys(types).find(k=>(r.ifcTypeName||'').includes(types[k].ifcFamilyToken));
-async function json(url){const request=new URL(url,location.href);request.searchParams.set('v','20261103-quality36');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
+async function json(url){const request=new URL(url,location.href);request.searchParams.set('v','20261103-areas37');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
 function options(select,items){select.replaceChildren(...items.map(([value,text])=>{const o=document.createElement('option');o.value=value;o.textContent=text;return o;}));}
 for(const selector of ['#entry-level','#level-select']){options($(selector),levels.map(l=>[l.id,l.name]));$(selector).value=level.id;}
 $('#entry-dialog').showModal();
@@ -42,7 +43,7 @@ function selectCamera(id){
 }
 function updateOptics(){for(const k of ['fov','range','yaw','tilt'])$('#'+k+'-value').textContent=settings[k]+(k==='range'?' m':'°');$('#fov-summary').textContent=canView(active)?`Evaluación: ${settings.fov}° H · cono ${settings.range} m`:'Perspectiva solo para Fixed Camera';scene?.select(active,settings);planView.select(active,canView(active)?scene?.pose:null,settings);if(scene?.pose&&canView(active)){const d=scene.pose.direction,heading=(Math.atan2(d.x,-d.z)*180/Math.PI+360)%360,pitch=Math.asin(Math.max(-1,Math.min(1,d.y)))*180/Math.PI;const rows=$('#position-specs').lastElementChild;if(rows)rows.querySelector('dd').textContent=`${heading.toFixed(1)}° / ${pitch.toFixed(1)}°`;}}
 function updatePovMessage(){if(station.cameraInventoryPending){$('#pov-message').hidden=modelsReady;$('#pov-message').textContent='Cargando estación completa…';return;}const fixed=canView(active);$('#pov-message').hidden=!!(fixed&&modelsReady);$('#pov-badge').hidden=!(fixed&&modelsReady);$('#pov-badge').textContent=fixed?cameraLabel(active):'';$('#pov-message').textContent=!active?'Selecciona una cámara fija.':!fixed?'Vista POV solo activa para cámaras Fixed. Esta cámara conserva su ubicación, ficha y perfil seleccionado.':!modelsReady?'Cargando geometría detallada para la perspectiva…':'';}
-function changeLevel(id){level=levels.find(l=>l.id===id)||levels[1];$('#level-select').value=level.id;const cams=updateCameraMenu();populateSheets();scene?.setLevel(level);spaces?.setLevel(level);syncAxonView();if(routes?.active){$('#route-follow').checked=false;routes.drawPlan();return;}selectCamera(cams[0]?.ifcGlobalId);}
+function changeLevel(id){level=levels.find(l=>l.id===id)||levels[1];$('#level-select').value=level.id;areaRegister?.setLevel(level);const cams=updateCameraMenu();populateSheets();scene?.setLevel(level);spaces?.setLevel(level);syncAxonView();if(routes?.active){$('#route-follow').checked=false;routes.drawPlan();return;}selectCamera(cams[0]?.ifcGlobalId);}
 function showError(where,text){$(where).textContent=text;$(where).classList.add('resources-error');}
 async function loadData(){
  if(station.modelOnly){await loadRecoveredData();return;}
@@ -185,10 +186,15 @@ async function loadRecoveredData(){
   label.title=source;label.append(input,document.createTextNode(' '+(source.includes('-INS-')?'Instalaciones':source.includes('-ARQ-')?'Arquitectura':'Estructura')+' · '+source.split('-')[1]+' · '+source.split('-MO-')[1]));packageTarget.before(label);
  }
  $('#plan-kind option[value="architecture"]').textContent='Planta arquitectónica · En construcción';if(!inventory.length)$('#plan-kind option[value="inventory"]').textContent='Inventario CCTV · En construcción';$('#type-legend').textContent='Arquitectura · estructura · instalaciones';
+ if(['E03','E04'].includes(station.id)){
+  try{areaRegister=new AreaRegister(await json('./assets/stations/'+station.id.toLowerCase()+'/area-register.json'));}
+  catch(error){$('#spaces-summary').textContent='No se pudo cargar el cuadro de áreas';$('#spaces-source').textContent='Recarga para reintentar la consulta del registro PDF.';console.error(error);}
+ }else{
  $('#spaces-summary').textContent='En construcción';$('#spaces-source').textContent='Etiquetas, colores y áreas de esta estación: En construcción';
  $('#space-rows').innerHTML='<tr><td colspan="4">En construcción</td></tr>';
  for(const button of document.querySelectorAll('[data-open-spaces]'))button.addEventListener('click',()=>$('#spaces-dialog').showModal());
  $('#close-spaces').addEventListener('click',()=>$('#spaces-dialog').close());
+ }
  for(const button of document.querySelectorAll('#toggle-space-labels,#toggle-space-colors,#show-spaces,#show-space-labels')){button.disabled=true;button.title='En construcción';}
  initCameraDashboard([],types,levels,{records:[],method:'En construcción',pending:true},station.name);
  $('#open-camera-dashboard').addEventListener('click',()=>{
