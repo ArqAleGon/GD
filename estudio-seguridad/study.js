@@ -1,12 +1,12 @@
 import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
-import {station,stations} from './study-stations.js?v=20261104-structures41';
+import {station,stations} from './study-stations.js?v=20261104-spaces43';
 import {StationVideo} from './study-station-video.js?v=20261103-e03video38';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
 import {PlanViewer} from './study-plans.js?v=20261028-e01media23';
 import {StudyScene} from './study-scene.js?v=20261104-structures41';
 import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261028-e01media23';
 import {RouteStudy} from './study-routes.js?v=20261104-structures41';
-import {SpaceStudy} from './study-spaces.js?v=20261103-quality36';
+import {SpaceStudy} from './study-spaces.js?v=20261104-spaces43';
 const $=s=>document.querySelector(s);
 const levels=station.levels;
 let records=[],types={},architecture=[],inventory=[],modelManifest,scene,active=null,level=levels.find(l=>l.id==='A')||levels[0],started=false,modelsReady=false,loadingPromise;
@@ -62,7 +62,7 @@ async function start(){
  try{
   await (loadingPromise ||= loadData());
   scene=new StudyScene({origin:station.origin,modelBase:station.modelBase,cameraBase:station.cameraBase,axon:$('#axon-art'),pov:$('#pov-art'),onSelect:selectCamera,onProgress:(done,total)=>{const percent=Math.floor(done/total*100);$('#load-percent').textContent=percent+'%';$('#load-progress').value=percent;$('#load-parts').textContent=`Partes cargadas: ${done} de ${total}`;$('#resource-status').textContent=`Paquete ${station.id} · ${done}/${total} partes de geometría`;}});
-  if(spacesData)spaces=new SpaceStudy({scene,plan:planView,data:spacesData,onSelectPlan:r=>{if(scene.fullStation)showLevelView();const page=architecture.find(p=>p.level===level.name);if(page){if($('#plan-kind').value!=='architecture'){$('#plan-kind').value='architecture';populateSheets();}$('#plan-sheet').value=page.page;zoom=1;drawPlan();}}});scene.showMarkers=camerasVisible;
+  if(spacesData)spaces=new SpaceStudy({scene,plan:planView,data:spacesData,onSelectPlan:r=>{if(r.level!==level.id)changeLevel(r.level);if(scene.fullStation)showLevelView();const page=architecture.find(p=>p.level===level.name);if(page){if($('#plan-kind').value!=='architecture'){$('#plan-kind').value='architecture';populateSheets();}$('#plan-sheet').value=page.page;zoom=1;drawPlan();}}});scene.showMarkers=camerasVisible;
   changeLevel($('#entry-level').value);
   await scene.load(modelManifest,records,types);scene.setLevel(level);scene.select(active,settings);modelsReady=true;if(station.cameraInventoryPending)scene.enableStationOverview();$('#frame-station').disabled=false;syncAxonView();$('#model-loading').hidden=true;updatePovMessage();
   $('#resource-status').textContent=`${station.summary} · arquitectura, estructura e instalaciones · ${records.length} cámaras · ${records.filter(canView).length} perspectivas Fixed${station.id==='E01'?' · 3 tipos de recorrido · 2 videos originales Full HD':''}`;
@@ -193,7 +193,9 @@ async function loadRecoveredData(){
   label.title=source;label.append(input,document.createTextNode(' '+(source.includes('-INS-')?'Instalaciones':source.includes('-ARQ-')?'Arquitectura':'Estructura')+' · '+source.split('-')[1]+' · '+source.split('-MO-')[1]));packageTarget.before(label);
  }
  $('#plan-kind option[value="architecture"]').textContent=station.assets.architecture?'Planta arquitectónica':'Planta arquitectónica · En construcción';if(!inventory.length)$('#plan-kind option[value="inventory"]').textContent='Inventario CCTV · En construcción';$('#type-legend').textContent='Arquitectura · estructura · instalaciones';
- if(['E03','E04'].includes(station.id)){
+ if(station.assets.spaces){
+  spacesData=await json(station.assets.spaces);
+ }else if(['E03','E04'].includes(station.id)){
   try{areaRegister=new AreaRegister(await json('./assets/stations/'+station.id.toLowerCase()+'/area-register.json'));}
   catch(error){$('#spaces-summary').textContent='No se pudo cargar el cuadro de áreas';$('#spaces-source').textContent='Recarga para reintentar la consulta del registro PDF.';console.error(error);}
  }else{
@@ -202,7 +204,7 @@ async function loadRecoveredData(){
  for(const button of document.querySelectorAll('[data-open-spaces]'))button.addEventListener('click',()=>$('#spaces-dialog').showModal());
  $('#close-spaces').addEventListener('click',()=>$('#spaces-dialog').close());
  }
- for(const button of document.querySelectorAll('#toggle-space-labels,#toggle-space-colors,#show-spaces,#show-space-labels')){button.disabled=true;button.title='En construcción';}
+ if(!spacesData)for(const button of document.querySelectorAll('#toggle-space-labels,#toggle-space-colors,#show-spaces,#show-space-labels')){button.disabled=true;button.title='En construcción';}
  initCameraDashboard([],types,levels,{records:[],method:'En construcción',pending:true},station.name);
  $('#open-camera-dashboard').addEventListener('click',()=>{
   for(const id of ['dashboard-total','dashboard-fixed','dashboard-unassigned','dashboard-scope','dashboard-method'])$('#'+id).textContent='En construcción';
