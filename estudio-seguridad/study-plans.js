@@ -9,7 +9,7 @@ export class PlanViewer{
  choosePage(kind,pages,active,current){const available=pages.filter(p=>this.visible(active,this.registration?.[kind]?.[p.page]));return available.find(p=>p.page===current)||available[0];}
  draw(kind,page,level,active,onLoad,onError){
   this.kind=kind;this.page=page;this.level=level;this.active=active;this.svg.replaceChildren();this.markers=[];this.reg=this.registration?.[kind]?.[page.page];
-  const reg=this.reg,[x,y,w,h]=reg?.crop||[0,0,page.width,page.height],rotation=reg?.rotation??90;this.dimensions=rotation===90?[h,w]:[w,h];this.svg.setAttribute('viewBox',`0 0 ${this.dimensions[0]} ${this.dimensions[1]}`);this.svg.setAttribute('data-page',page.page);this.svg.setAttribute('data-kind',kind);
+  const reg=this.reg,[x,y,w,h]=reg?.crop||page.crop||[0,0,page.width,page.height],rotation=reg?.rotation??page.rotation??90;this.dimensions=rotation===90?[h,w]:[w,h];this.svg.setAttribute('viewBox',`0 0 ${this.dimensions[0]} ${this.dimensions[1]}`);this.svg.setAttribute('data-page',page.page);this.svg.setAttribute('data-kind',kind);
   this.layer=el('g',{transform:rotation===90?`translate(${h} 0) rotate(90) translate(${-x} ${-y})`:`translate(${-x} ${-y})`});this.svg.append(this.layer);
   const layers=page.layers||[page];let loaded=0,failed=false;
   this.layer.append(el('rect',{x,y,width:w,height:h,fill:'#fff'}));
@@ -21,7 +21,7 @@ export class PlanViewer{
   for(const label of page.buildingLabels||[]){const text=el('text',{class:'building-plan-label',x:label.position[0],y:label.position[1],'text-anchor':'middle','pointer-events':'none'});text.textContent=label.name;this.layer.append(text);}
   this.coneLayer=el('g',{'pointer-events':'none',class:'camera-cone','aria-label':'Cono visual de la cámara activa'});this.layer.append(this.coneLayer);
   const radius=Math.min(w,h)/210;this.radius=radius;
-  for(const record of this.records||[]){if(record.ifcStorey!==level.ifc||!this.visible(record,reg))continue;const [cx,cy]=this.project(record,reg),type=Object.keys(this.types).find(k=>record.ifcTypeName.includes(this.types[k].ifcFamilyToken)),color=this.types[type].color;
+  for(const record of this.records||[]){if((level.id!=='all'&&record.ifcStorey!==level.ifc)||!this.visible(record,reg))continue;const [cx,cy]=this.project(record,reg),type=Object.keys(this.types).find(k=>record.ifcTypeName.includes(this.types[k].ifcFamilyToken)),color=this.types[type].color;
    const group=el('g',{class:'plan-marker',role:'button',tabindex:0,'data-camera-id':record.ifcGlobalId,'aria-label':`${this.types[type].label} · Marca IFC ${record.mark} · ${kind==='architecture'?'planta arquitectónica':'inventario'}`,transform:`translate(${cx} ${cy}) rotate(${-rotation})`,'aria-pressed':String(record.ifcGlobalId===active?.ifcGlobalId)});
    group.append(el('circle',{class:'marker-hit',r:radius*3,fill:'transparent'}),el('circle',{class:'marker-ring',r:radius*1.5}),el('circle',{class:'marker-dot',r:radius,fill:color}));
    const title=el('title');title.textContent=`${this.types[type].label} · Marca IFC ${record.mark}`;group.append(title);

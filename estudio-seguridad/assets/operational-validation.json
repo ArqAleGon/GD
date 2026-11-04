@@ -1,0 +1,182 @@
+{
+  "revision": 45,
+  "checkedAt": "2026-11-04T20:03:27.589Z",
+  "method": "Posiciones IFC y correspondencia de paredes en PDF. Pruebas de selección y switches en navegador; cobertura de todos los identificadores por nivel.",
+  "stations": {
+    "E02": {
+      "cameras": 210,
+      "architectureMapped": 210,
+      "inventoryMapped": 210,
+      "interactiveVerified": true,
+      "resourceDigests": {
+        "cameras": "e865dc717a78ee0c4a7802519c79c8e9c452e43b82d76afe2d02aa0bf2dae3ee",
+        "inventory": "f2e992b906d4dadf3bd9038d0c4f84c2a3250e5f7b6c24e12a7021f66d0c1548",
+        "architecture": "c2e4397abb5c2842409ae42b8ca556e0ff5b64c1edf38049bb54120715e33cc5",
+        "registration": "cf7b4917a5bfda3ddf51f6aff9a215604ceedf664fe463eb61ff07c00b0d93ed"
+      },
+      "status": "Verificado"
+    },
+    "E03": {
+      "cameras": 261,
+      "architectureMapped": 261,
+      "inventoryMapped": 261,
+      "interactiveVerified": true,
+      "resourceDigests": {
+        "cameras": "a89d418abf542d4cb72504cbfbda527c64b04dd19238d685cc5b734c30a10870",
+        "inventory": "7e218dc00c4a5b357580078dcfd1d9c6ec070f0ef408ba0a1bf36c702859d606",
+        "architecture": "6c98fbe5aa48218df0316bbe6be93a9e7094213169956085b69641a86c97bdc8",
+        "registration": "716db7856ddafa492d12a202fd736ce4462756df570072ebb5a3d93733ac4c59"
+      },
+      "status": "Verificado"
+    },
+    "E04": {
+      "cameras": 262,
+      "architectureMapped": 262,
+      "inventoryMapped": 262,
+      "interactiveVerified": true,
+      "resourceDigests": {
+        "cameras": "7bb73bb904165ca8aab643478cdbd03118184f455e7d9412ea1e704970ed1986",
+        "inventory": "ec60f664fbc48636df94fb5b8fb73fc6373b7be1a0ca4b39eb463dd6b3e932dc",
+        "architecture": "71818cefbaf00c1e35968d2e4a27448b7f11a13c199232ae38a13bf542ff5e7c",
+        "registration": "27407436fa278739e36de4ad43f9cc6604ad734ac4eb6763bdcb29e7bf3011dc"
+      },
+      "status": "Verificado"
+    },
+    "E05": {
+      "cameras": 245,
+      "architectureMapped": 0,
+      "inventoryMapped": 0,
+      "interactiveVerified": false,
+      "resourceDigests": {
+        "cameras": "2c060fa906e5aa5c5587993cf5cb107ff7f130033e844c8386be93688757bca7"
+      },
+      "status": "En construcción"
+    },
+    "E06": {
+      "cameras": 160,
+      "architectureMapped": 0,
+      "inventoryMapped": 0,
+      "interactiveVerified": false,
+      "resourceDigests": {
+        "cameras": "3b684d5fad85dd51c076274bd1ef19d73a9203da4b575341a7b49bf08c07a4c6"
+      },
+      "status": "En construcción"
+    },
+    "E07": {
+      "cameras": 219,
+      "architectureMapped": 0,
+      "inventoryMapped": 0,
+      "interactiveVerified": false,
+      "resourceDigests": {
+        "cameras": "bd39c2d64537e44994087d7493a52b0ca0c526be24dddfcbc68a635a30a1e929"
+      },
+      "status": "En construcción"
+    },
+    "E08": {
+      "cameras": 144,
+      "architectureMapped": 0,
+      "inventoryMapped": 0,
+      "interactiveVerified": false,
+      "resourceDigests": {
+        "cameras": "a48d128f6c2064b2d0c1d4546d6c1733228f8977cedadfa7b5bcca55f429c5ee"
+      },
+      "status": "En construcción"
+    },
+    "E10": {
+      "cameras": 230,
+      "architectureMapped": 0,
+      "inventoryMapped": 0,
+      "interactiveVerified": false,
+      "resourceDigests": {
+        "cameras": "6d1fa20c9586d48117e1aae6fafc84381b24daf5b7aeaaf1d580af21e0d90018"
+      },
+      "status": "En construcción"
+    },
+    "E11": {
+      "cameras": 290,
+      "architectureMapped": 0,
+      "inventoryMapped": 0,
+      "interactiveVerified": false,
+      "resourceDigests": {
+        "cameras": "6a6f19300be9fc5bbc85a829deac818e8f0b754f1c5ac9d731602ab59f9fecc9"
+      },
+      "status": "En construcción"
+    },
+    "E12": {
+      "cameras": 309,
+      "architectureMapped": 0,
+      "inventoryMapped": 0,
+      "interactiveVerified": false,
+      "resourceDigests": {
+        "cameras": "a0569fa69b7c05374cb7569a81b359165cfd8f22d47c17ad3d204c4fd7771cac"
+      },
+      "status": "En construcción"
+    },
+    "E13": {
+      "cameras": 265,
+      "architectureMapped": 0,
+      "inventoryMapped": 0,
+      "interactiveVerified": false,
+      "resourceDigests": {
+        "cameras": "764485013ee287b602fb67a0df742eea61d4a5b1ac9851066c8431a717e6d6f2"
+      },
+      "status": "En construcción"
+    },
+    "E14": {
+      "cameras": 294,
+      "architectureMapped": 0,
+      "inventoryMapped": 0,
+      "interactiveVerified": false,
+      "resourceDigests": {
+        "cameras": "fad8572570b735b351bb2707c937caa3936bfe0a7913bba3991010fdc7a6e24f"
+      },
+      "status": "En construcción"
+    },
+    "E15": {
+      "cameras": 288,
+      "architectureMapped": 0,
+      "inventoryMapped": 0,
+      "interactiveVerified": false,
+      "resourceDigests": {
+        "cameras": "a2bbf7d2f5ca76b995314b765a8c685ca6cc00c62592a563dd682fba82c1ea07"
+      },
+      "status": "En construcción"
+    },
+    "E16": {
+      "cameras": 300,
+      "architectureMapped": 0,
+      "inventoryMapped": 0,
+      "interactiveVerified": false,
+      "resourceDigests": {
+        "cameras": "fc74eed3120d5e1aa007c85208acfbd499affe19775d24a6a592014733ea5280"
+      },
+      "status": "En construcción"
+    },
+    "E09": {
+      "cameras": 250,
+      "architectureMapped": 250,
+      "inventoryMapped": 250,
+      "interactiveVerified": true,
+      "resourceDigests": {
+        "cameras": "6da5b513623d60fd22a586042ae68b846f64cd432f06eca4443d43b83a45c777",
+        "inventory": "fa192706c1c84b4d775764081ec392378c5267ccd940e34b073f9986f89cd13b",
+        "architecture": "69d9a88ec687b01858be8aa1e73d94a7d12b488aa902384cbd80b5585d6324ed",
+        "registration": "0826896ea6c133f75ed93d2533110f80f6d56d8724c87724ae36e4299a451ca0"
+      },
+      "status": "Verificado"
+    },
+    "E01": {
+      "cameras": 157,
+      "architectureMapped": 157,
+      "inventoryMapped": 157,
+      "interactiveVerified": true,
+      "resourceDigests": {
+        "cameras": "201317d9f384dc1a3444812fa419dfa63a586f56830e0c1811da1fa390440012",
+        "inventory": "e58535fdc3bbdff84ceec4adc7f5532fd45982aa8770509f010f32e1a4e0f6f2",
+        "architecture": "57194cf6941e213104462182f1c20677f4e34797e4d360ffd58f31cf6547a771",
+        "registration": "b4eca4c68504045d861a51fedab5579674482535b7441b3734b790a34ffe78e5"
+      },
+      "status": "Verificado"
+    }
+  }
+}

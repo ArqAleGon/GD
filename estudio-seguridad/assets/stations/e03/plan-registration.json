@@ -1,0 +1,547 @@
+{
+  "originIfc": [
+    90099.354295585,
+    102878.75857297893,
+    2534.645000762939
+  ],
+  "architecture": {
+    "1": {
+      "matrix": [
+        [
+          25.570296158445622,
+          -43.235846596682734,
+          3062.2882951216534
+        ],
+        [
+          -43.235846596682734,
+          -25.570296158445622,
+          4040.2862336216963
+        ]
+      ],
+      "crop": [
+        0,
+        0,
+        6000,
+        4243
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · recorrido sincronizado con POV",
+      "method": "Wall sections registered against architectural sheet; trimmed chamfer fit at 1600 px",
+      "wallFitPixels1600": 0.28526148969889065
+    },
+    "2": {
+      "matrix": [
+        [
+          18.096782947522545,
+          -30.59916578846975,
+          2969.8639585855367
+        ],
+        [
+          -30.59916578846975,
+          -18.096782947522545,
+          2148.4113517904952
+        ]
+      ],
+      "crop": [
+        0,
+        0,
+        6000,
+        4243
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · recorrido sincronizado con POV",
+      "method": "Wall sections registered against architectural sheet; trimmed chamfer fit at 1600 px",
+      "wallFitPixels1600": 0.19400953029271614
+    },
+    "3": {
+      "matrix": [
+        [
+          17.93134119061833,
+          -30.319426579433106,
+          3022.6860092454435
+        ],
+        [
+          -30.319426579433106,
+          -17.93134119061833,
+          2146.150339080736
+        ]
+      ],
+      "crop": [
+        0,
+        0,
+        6000,
+        4243
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · recorrido sincronizado con POV",
+      "method": "Wall sections registered against architectural sheet; trimmed chamfer fit at 1600 px",
+      "wallFitPixels1600": 0.03578767123287671
+    },
+    "4": {
+      "matrix": [
+        [
+          17.912251757129386,
+          -30.28714897839042,
+          3019.658265090818
+        ],
+        [
+          -30.28714897839042,
+          -17.912251757129386,
+          2121.1682991526877
+        ]
+      ],
+      "crop": [
+        0,
+        0,
+        6000,
+        4243
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · recorrido sincronizado con POV",
+      "method": "Wall sections registered against architectural sheet; trimmed chamfer fit at 1600 px",
+      "wallFitPixels1600": 0.1571676802780191
+    }
+  },
+  "inventory": {
+    "2": {
+      "matrix": [
+        [
+          14.399898814606008,
+          -24.348244240042675,
+          2768.0585382974027
+        ],
+        [
+          -24.348244240042675,
+          -14.399898814606008,
+          1935.4200227786625
+        ]
+      ],
+      "crop": [
+        1116.14146875,
+        407.48021875,
+        3188.975625,
+        938.97615625
+      ],
+      "rotation": 90,
+      "allowedCameraIds": [
+        "3ddl_iKVrDQQf1ScX72nJs",
+        "3ddl_iKVrDQQf1ScX72nJt",
+        "3ddl_iKVrDQQf1ScX72nJq",
+        "3ddl_iKVrDQQf1ScX72nJr",
+        "3ddl_iKVrDQQf1ScX72nJp",
+        "3ddl_iKVrDQQf1ScX72nJm",
+        "3ddl_iKVrDQQf1ScX72nJE",
+        "3ddl_iKVrDQQf1ScX72nJC",
+        "3ddl_iKVrDQQf1ScX72nJD",
+        "3ddl_iKVrDQQf1ScX72nJA",
+        "3ddl_iKVrDQQf1ScX72nJB",
+        "3ddl_iKVrDQQf1ScX72nJ8",
+        "3ddl_iKVrDQQf1ScX72nJ6",
+        "3ddl_iKVrDQQf1ScX72nJ7",
+        "3ddl_iKVrDQQf1ScX72nJ4",
+        "3ddl_iKVrDQQf1ScX72nJ5",
+        "3ddl_iKVrDQQf1ScX72nJ3",
+        "3ddl_iKVrDQQf1ScX72nJ1",
+        "1xsKIrrWX5dxK9MMach6ek",
+        "3xA9wzMBf2UOHKRrZpFXXY",
+        "3xA9wzMBf2UOHKRrZpFXXk",
+        "3xA9wzMBf2UOHKRrZpFXWx",
+        "3xA9wzMBf2UOHKRrZpFXUD",
+        "3xA9wzMBf2UOHKRrZpFXUY",
+        "3xA9wzMBf2UOHKRrZpFXUn",
+        "3xA9wzMBf2UOHKRrZpFXT5",
+        "3xA9wzMBf2UOHKRrZpFXSN",
+        "3xA9wzMBf2UOHKRrZpFXSl",
+        "2hr453JRH158UGJ3hbVANI",
+        "2hr453JRH158UGJ3hbVALo",
+        "1DcOF5levEnPRK2n3Byf3s",
+        "1DcOF5levEnPRK2n3ByfDU"
+      ],
+      "status": "Posiciones IFC sobre inventario CCTV · registro visual de paredes",
+      "wallFitPixels1600": 0.23072216670405646
+    },
+    "4": {
+      "matrix": [
+        [
+          14.431824757249451,
+          -24.40222660888319,
+          2711.430074175437
+        ],
+        [
+          -24.40222660888319,
+          -14.431824757249451,
+          -244.80457834582373
+        ]
+      ],
+      "crop": [
+        1187.00759375,
+        230.31490625,
+        3135.82603125,
+        1009.84228125
+      ],
+      "rotation": 90,
+      "allowedCameraIds": [
+        "3ddl_iKVrDQQf1ScX72nGi",
+        "3ddl_iKVrDQQf1ScX72nGg",
+        "3ddl_iKVrDQQf1ScX72nGZ",
+        "3ddl_iKVrDQQf1ScX72nGy",
+        "3ddl_iKVrDQQf1ScX72nGz",
+        "3ddl_iKVrDQQf1ScX72nGx",
+        "3ddl_iKVrDQQf1ScX72nGu",
+        "3ddl_iKVrDQQf1ScX72nGt",
+        "3ddl_iKVrDQQf1ScX72nGr",
+        "3ddl_iKVrDQQf1ScX72nGo",
+        "3ddl_iKVrDQQf1ScX72nGp",
+        "3ddl_iKVrDQQf1ScX72nGm",
+        "3ddl_iKVrDQQf1ScX72nGn",
+        "3BThM8b791$hl$gleDAOfK",
+        "3BThM8b791$hl$gleDAOeq",
+        "3BThM8b791$hl$gleDAOeL",
+        "3BThM8b791$hl$gleDAOdM",
+        "3BThM8b791$hl$gleDAOc6",
+        "3BThM8b791$hl$gleDAOaS",
+        "3BThM8b791$hl$gleDAOaA",
+        "0hjQEc6qH1r9phJjpLrjfc",
+        "0hjQEc6qH1r9phJjpLrjep"
+      ],
+      "status": "Posiciones IFC sobre inventario CCTV · registro visual de paredes",
+      "wallFitPixels1600": 0.31755946146668446
+    },
+    "6": {
+      "matrix": [
+        [
+          14.431824757249451,
+          -24.40222660888319,
+          2790.0741461578746
+        ],
+        [
+          -24.40222660888319,
+          -14.431824757249451,
+          2088.2947408621135
+        ]
+      ],
+      "crop": [
+        1240.1571875,
+        566.929,
+        3029.52684375,
+        885.8265625
+      ],
+      "rotation": 90,
+      "allowedCameraIds": [
+        "3ddl_iKVrDQQf1ScX72nHH",
+        "3ddl_iKVrDQQf1ScX72nGk",
+        "3ddl_iKVrDQQf1ScX72nGl",
+        "3ddl_iKVrDQQf1ScX72nGh",
+        "3ddl_iKVrDQQf1ScX72nGe",
+        "3ddl_iKVrDQQf1ScX72nGf",
+        "3ddl_iKVrDQQf1ScX72nGc",
+        "3ddl_iKVrDQQf1ScX72nGd",
+        "3ddl_iKVrDQQf1ScX72nGa",
+        "3ddl_iKVrDQQf1ScX72nGb",
+        "3ddl_iKVrDQQf1ScX72nGY",
+        "3ddl_iKVrDQQf1ScX72nGW",
+        "3ddl_iKVrDQQf1ScX72nG_",
+        "3ddl_iKVrDQQf1ScX72nG$",
+        "1R5jG11Or5LBKORhcp6gT3",
+        "1R5jG11Or5LBKORhcp6gTr",
+        "1R5jG11Or5LBKORhcp6gSJ",
+        "1R5jG11Or5LBKORhcp6gS8",
+        "1R5jG11Or5LBKORhcp6gS$",
+        "1R5jG11Or5LBKORhcp6gSd",
+        "1R5jG11Or5LBKORhcp6gSl",
+        "1R5jG11Or5LBKORhcp6gVN",
+        "1R5jG11Or5LBKORhcp6gV1",
+        "3U2p1sgGz7TAFVgmKLDu7L",
+        "3U2p1sgGz7TAFVgmKLDuwu"
+      ],
+      "status": "Posiciones IFC sobre inventario CCTV · registro visual de paredes",
+      "wallFitPixels1600": 0.24629938014617447
+    },
+    "8": {
+      "matrix": [
+        [
+          14.435432208395605,
+          -24.408326311577035,
+          2759.3690932479244
+        ],
+        [
+          -24.408326311577035,
+          -14.435432208395605,
+          202.51397318902747
+        ]
+      ],
+      "crop": [
+        1062.991875,
+        28.34645,
+        3330.707875,
+        1647.6374062500001
+      ],
+      "rotation": 90,
+      "allowedCameraIds": [
+        "3ddl_iKVrDQQf1ScX72nAd",
+        "3ddl_iKVrDQQf1ScX72nAa",
+        "3ddl_iKVrDQQf1ScX72nAb",
+        "3ddl_iKVrDQQf1ScX72nAY",
+        "3ddl_iKVrDQQf1ScX72nAZ",
+        "3ddl_iKVrDQQf1ScX72nAF",
+        "3ddl_iKVrDQQf1ScX72nAC",
+        "3ddl_iKVrDQQf1ScX72nAB",
+        "3ddl_iKVrDQQf1ScX72nA8",
+        "3ddl_iKVrDQQf1ScX72nA6",
+        "3ddl_iKVrDQQf1ScX72nA7",
+        "3ddl_iKVrDQQf1ScX72nA4",
+        "3ddl_iKVrDQQf1ScX72nA2",
+        "3ddl_iKVrDQQf1ScX72nA3",
+        "3ddl_iKVrDQQf1ScX72nA0",
+        "2QLKDWlJDC_xB2bPUV6N4t",
+        "2QLKDWlJDC_xB2bPUV6N4$",
+        "2QLKDWlJDC_xB2bPUV6MvP",
+        "2QLKDWlJDC_xB2bPUV6Mv3",
+        "2QLKDWlJDC_xB2bPUV6Mvr",
+        "2QLKDWlJDC_xB2bPUV6Mv$",
+        "2QLKDWlJDC_xB2bPUV6MvX",
+        "2QLKDWlJDC_xB2bPUV6Mvf",
+        "2QLKDWlJDC_xB2bPUV6MuH",
+        "2QLKDWlJDC_xB2bPUV6MuP",
+        "2QLKDWlJDC_xB2bPUV6Mu1",
+        "2QLKDWlJDC_xB2bPUV6MuB",
+        "2QLKDWlJDC_xB2bPUV6MyG",
+        "2QLKDWlJDC_xB2bPUV6MyO",
+        "2QLKDWlJDC_xB2bPUV6My0",
+        "2QLKDWlJDC_xB2bPUV6MpC",
+        "2QLKDWlJDC_xB2bPUV6Mo4",
+        "2QLKDWlJDC_xB2bPUV6MoA",
+        "2QLKDWlJDC_xB2bPUV6Moo",
+        "2QLKDWlJDC_xB2bPUV6Moc",
+        "2QLKDWlJDC_xB2bPUV6Mnk",
+        "0fO3OtsOjCzR5pRP12OY6N",
+        "0fO3OtsOjCzR5pRP12OY6n",
+        "0fO3OtsOjCzR5pRP12OY6x",
+        "0fO3OtsOjCzR5pRP12OY57",
+        "0fO3OtsOjCzR5pRP12OY5H",
+        "0fO3OtsOjCzR5pRP12OY5x",
+        "0fO3OtsOjCzR5pRP12OY47",
+        "0fO3OtsOjCzR5pRP12OY4F"
+      ],
+      "status": "Posiciones IFC sobre inventario CCTV · registro visual de paredes",
+      "wallFitPixels1600": 0.20363209939148072
+    },
+    "10": {
+      "matrix": [
+        [
+          14.435432208395605,
+          -24.408326311577035,
+          2756.659526958549
+        ],
+        [
+          -24.408326311577035,
+          -14.435432208395605,
+          1712.9780889925275
+        ]
+      ],
+      "crop": [
+        1151.57453125,
+        159.44878125,
+        3153.5425625000003,
+        1647.6374062500001
+      ],
+      "rotation": 90,
+      "allowedCameraIds": [
+        "3ddl_iKVrDQQf1ScX72nAc",
+        "3ddl_iKVrDQQf1ScX72nA$",
+        "3ddl_iKVrDQQf1ScX72nAy",
+        "3ddl_iKVrDQQf1ScX72nAz",
+        "3ddl_iKVrDQQf1ScX72nAw",
+        "3ddl_iKVrDQQf1ScX72nAu",
+        "3ddl_iKVrDQQf1ScX72nAs",
+        "3ddl_iKVrDQQf1ScX72nAo",
+        "3ddl_iKVrDQQf1ScX72nA1",
+        "3ddl_iKVrDQQf1ScX72nAU",
+        "3ddl_iKVrDQQf1ScX72nAS",
+        "3ddl_iKVrDQQf1ScX72nAT",
+        "2QLKDWlJDC_xB2bPUV6NTQ",
+        "2QLKDWlJDC_xB2bPUV6NIt",
+        "2QLKDWlJDC_xB2bPUV6NIf",
+        "2QLKDWlJDC_xB2bPUV6NHH",
+        "2QLKDWlJDC_xB2bPUV6NGa",
+        "2QLKDWlJDC_xB2bPUV6NM1",
+        "2QLKDWlJDC_xB2bPUV6NMn",
+        "2QLKDWlJDC_xB2bPUV6NKb",
+        "2QLKDWlJDC_xB2bPUV6NKj",
+        "2QLKDWlJDC_xB2bPUV6NBN",
+        "2QLKDWlJDC_xB2bPUV6NBV",
+        "2QLKDWlJDC_xB2bPUV6NB3",
+        "2QLKDWlJDC_xB2bPUV6NBB",
+        "2QLKDWlJDC_xB2bPUV6NBp",
+        "2QLKDWlJDC_xB2bPUV6NBx",
+        "2QLKDWlJDC_xB2bPUV6NBl",
+        "2QLKDWlJDC_xB2bPUV6NAH",
+        "2QLKDWlJDC_xB2bPUV6NA7",
+        "2QLKDWlJDC_xB2bPUV6NAF",
+        "2QLKDWlJDC_xB2bPUV6NAn",
+        "2QLKDWlJDC_xB2bPUV6NAv",
+        "2QLKDWlJDC_xB2bPUV6NAX",
+        "2QLKDWlJDC_xB2bPUV6NAf",
+        "2QLKDWlJDC_xB2bPUV6N91",
+        "2QLKDWlJDC_xB2bPUV6N2Z",
+        "2QLKDWlJDC_xB2bPUV6N1L",
+        "2QLKDWlJDC_xB2bPUV6N1V",
+        "2QLKDWlJDC_xB2bPUV6N11",
+        "2QLKDWlJDC_xB2bPUV6N1r",
+        "2QLKDWlJDC_xB2bPUV6N1$",
+        "2QLKDWlJDC_xB2bPUV6N1d",
+        "2QLKDWlJDC_xB2bPUV6N1l",
+        "2QLKDWlJDC_xB2bPUV6N0N",
+        "2QLKDWlJDC_xB2bPUV6N0R",
+        "2QLKDWlJDC_xB2bPUV6N0D",
+        "2QLKDWlJDC_xB2bPUV6N45",
+        "2QLKDWlJDC_xB2bPUV6N4F",
+        "0fO3OtsOjCzR5pRP12OY0$",
+        "0fO3OtsOjCzR5pRP12OY79",
+        "0fO3OtsOjCzR5pRP12OY7L"
+      ],
+      "status": "Posiciones IFC sobre inventario CCTV · registro visual de paredes",
+      "wallFitPixels1600": 0.19658297498497249
+    },
+    "12": {
+      "matrix": [
+        [
+          14.436989424807031,
+          -24.410959349906545,
+          2708.5271794998425
+        ],
+        [
+          -24.410959349906545,
+          -14.436989424807031,
+          223.28418036097113
+        ]
+      ],
+      "crop": [
+        531.4959375,
+        28.34645,
+        4499.9989375000005,
+        1665.3539375
+      ],
+      "rotation": 90,
+      "allowedCameraIds": [
+        "3ddl_iKVrDQQf1ScX72n57",
+        "3ddl_iKVrDQQf1ScX72n54",
+        "3ddl_iKVrDQQf1ScX72n50",
+        "3ddl_iKVrDQQf1ScX72n51",
+        "3ddl_iKVrDQQf1ScX72n5U",
+        "3ddl_iKVrDQQf1ScX72n5V",
+        "3ddl_iKVrDQQf1ScX72n5S",
+        "3ddl_iKVrDQQf1ScX72n5T",
+        "3ddl_iKVrDQQf1ScX72n5Q",
+        "3ddl_iKVrDQQf1ScX72n5R",
+        "3ddl_iKVrDQQf1ScX72n5O",
+        "3ddl_iKVrDQQf1ScX72n5P",
+        "3ddl_iKVrDQQf1ScX72n5M",
+        "3ddl_iKVrDQQf1ScX72n5J",
+        "3ddl_iKVrDQQf1ScX72n5H",
+        "3ddl_iKVrDQQf1ScX72n4k",
+        "3ddl_iKVrDQQf1ScX72n4g",
+        "3ddl_iKVrDQQf1ScX72n4Z",
+        "3ddl_iKVrDQQf1ScX72n4W",
+        "3ddl_iKVrDQQf1ScX72n4X",
+        "3ddl_iKVrDQQf1ScX72n4_",
+        "3ddl_iKVrDQQf1ScX72n4$",
+        "3ddl_iKVrDQQf1ScX72n4y",
+        "3ddl_iKVrDQQf1ScX72n4z",
+        "3ddl_iKVrDQQf1ScX72n4w",
+        "3ddl_iKVrDQQf1ScX72n4x",
+        "3ddl_iKVrDQQf1ScX72n4u",
+        "3ddl_iKVrDQQf1ScX72n4E",
+        "3ssjAL3jv5vf9R0JtXDTq4",
+        "3ssjAL3jv5vf9R0JtXDTxy",
+        "3ssjAL3jv5vf9R0JtXDTx4",
+        "3ssjAL3jv5vf9R0JtXDTw4",
+        "3ssjAL3jv5vf9R0JtXDTue",
+        "3ssjAL3jv5vf9R0JtXDTum",
+        "3ssjAL3jv5vf9R0JtXDTuw",
+        "3ssjAL3jv5vf9R0JtXDTu4",
+        "3ssjAL3jv5vf9R0JtXDTuE",
+        "3ssjAL3jv5vf9R0JtXDTzq",
+        "3ssjAL3jv5vf9R0JtXDTzy",
+        "3ssjAL3jv5vf9R0JtXDTz6",
+        "3ssjAL3jv5vf9R0JtXDTXY",
+        "3ssjAL3jv5vf9R0JtXDTXg",
+        "3ssjAL3jv5vf9R0JtXDTXq",
+        "3ssjAL3jv5vf9R0JtXDTX0",
+        "3ssjAL3jv5vf9R0JtXDTXA"
+      ],
+      "status": "Posiciones IFC sobre inventario CCTV · registro visual de paredes",
+      "wallFitPixels1600": 0.2580239144115796
+    },
+    "14": {
+      "matrix": [
+        [
+          14.436989424807031,
+          -24.410959349906545,
+          2766.9569373574677
+        ],
+        [
+          -24.410959349906545,
+          -14.436989424807031,
+          1827.5294433130334
+        ]
+      ],
+      "crop": [
+        531.4959375,
+        248.0314375,
+        4499.9989375000005,
+        1559.05475
+      ],
+      "rotation": 90,
+      "allowedCameraIds": [
+        "3ddl_iKVrDQQf1ScX72n59",
+        "3ddl_iKVrDQQf1ScX72n56",
+        "3ddl_iKVrDQQf1ScX72n55",
+        "3ddl_iKVrDQQf1ScX72n52",
+        "3ddl_iKVrDQQf1ScX72n53",
+        "3ddl_iKVrDQQf1ScX72n5V",
+        "3ddl_iKVrDQQf1ScX72n5S",
+        "3ddl_iKVrDQQf1ScX72n5R",
+        "3ddl_iKVrDQQf1ScX72n5M",
+        "3ddl_iKVrDQQf1ScX72n5N",
+        "3ddl_iKVrDQQf1ScX72n5L",
+        "3ddl_iKVrDQQf1ScX72n5I",
+        "3ddl_iKVrDQQf1ScX72n4l",
+        "3ddl_iKVrDQQf1ScX72n4j",
+        "3ddl_iKVrDQQf1ScX72n4h",
+        "3ddl_iKVrDQQf1ScX72n4e",
+        "3ddl_iKVrDQQf1ScX72n4f",
+        "3ddl_iKVrDQQf1ScX72n4c",
+        "3ddl_iKVrDQQf1ScX72n4d",
+        "3ddl_iKVrDQQf1ScX72n4a",
+        "3ddl_iKVrDQQf1ScX72n4b",
+        "3ddl_iKVrDQQf1ScX72n4Y",
+        "3ddl_iKVrDQQf1ScX72n4v",
+        "3ddl_iKVrDQQf1ScX72n4s",
+        "3ddl_iKVrDQQf1ScX72n4t",
+        "3ddl_iKVrDQQf1ScX72n4q",
+        "3ddl_iKVrDQQf1ScX72n4r",
+        "3ddl_iKVrDQQf1ScX72n4o",
+        "3ddl_iKVrDQQf1ScX72n4p",
+        "3ddl_iKVrDQQf1ScX72n4n",
+        "3ssjAL3jv5vf9R0JtXDS5Z",
+        "3ssjAL3jv5vf9R0JtXDSBi",
+        "3ssjAL3jv5vf9R0JtXDSBq",
+        "3ssjAL3jv5vf9R0JtXDSBy",
+        "3ssjAL3jv5vf9R0JtXDSAQ",
+        "3ssjAL3jv5vf9R0JtXDToV",
+        "3ssjAL3jv5vf9R0JtXDTnd",
+        "3ssjAL3jv5vf9R0JtXDTsE",
+        "3ssjAL3jv5vf9R0JtXDTsO",
+        "3ssjAL3jv5vf9R0JtXDTra",
+        "3ssjAL3jv5vf9R0JtXDTrk",
+        "3ssjAL3jv5vf9R0JtXDTrw",
+        "3ssjAL3jv5vf9R0JtXDTxE",
+        "3ssjAL3jv5vf9R0JtXDTwy",
+        "3ssjAL3jv5vf9R0JtXDTfI"
+      ],
+      "status": "Posiciones IFC sobre inventario CCTV · registro visual de paredes",
+      "wallFitPixels1600": 0.2973573359599304
+    }
+  }
+}

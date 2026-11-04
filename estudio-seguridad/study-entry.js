@@ -1,2 +1,2 @@
-import {station} from './study-stations.js?v=20261104-pmr44';
-await import('./study.js?v=20261104-pmr44');
+import {station} from './study-stations.js?v=20261104-integrity45';
+await import('./study.js?v=20261104-integrity45');

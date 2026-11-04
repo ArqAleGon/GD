@@ -1,0 +1,132 @@
+{
+  "source": "L1T1-5445-303-CON-ED-INS-PL-0009_V00.pdf",
+  "pages": [
+    {
+      "page": 2,
+      "level": "Sótano",
+      "levelId": "2SCB_wEvLD9uWO8$uQSWQR",
+      "label": "Sótano · Disposición de cámaras",
+      "imageUrl": "./assets/stations/e03/ins-plans/l1t1-5445-303-con-ed-ins-pl-0009_v00-p02.png",
+      "width": 5669.29,
+      "height": 2004.09,
+      "crop": [
+        1116.14146875,
+        407.48021875,
+        3188.975625,
+        938.97615625
+      ],
+      "rotation": 90,
+      "pdf": "https://github.com/ArqAleGon/GD/releases/download/estudio-ins-e03-e04-20261103/L1T1-5445-303-CON-ED-INS-PL-0009_V00.pdf",
+      "sourcePage": 2
+    },
+    {
+      "page": 4,
+      "level": "Acceso",
+      "levelId": "3PCk_hamv00BOIK_fyvCfM",
+      "label": "Acceso · Disposición de cámaras · Parte 1",
+      "imageUrl": "./assets/stations/e03/ins-plans/l1t1-5445-303-con-ed-ins-pl-0009_v00-p04.png",
+      "width": 5669.29,
+      "height": 2004.09,
+      "crop": [
+        1187.00759375,
+        230.31490625,
+        3135.82603125,
+        1009.84228125
+      ],
+      "rotation": 90,
+      "pdf": "https://github.com/ArqAleGon/GD/releases/download/estudio-ins-e03-e04-20261103/L1T1-5445-303-CON-ED-INS-PL-0009_V00.pdf",
+      "sourcePage": 4
+    },
+    {
+      "page": 6,
+      "level": "Acceso",
+      "levelId": "3PCk_hamv00BOIK_fyvCfM",
+      "label": "Acceso · Disposición de cámaras · Parte 2",
+      "imageUrl": "./assets/stations/e03/ins-plans/l1t1-5445-303-con-ed-ins-pl-0009_v00-p06.png",
+      "width": 5669.29,
+      "height": 2004.09,
+      "crop": [
+        1240.1571875,
+        566.929,
+        3029.52684375,
+        885.8265625
+      ],
+      "rotation": 90,
+      "pdf": "https://github.com/ArqAleGon/GD/releases/download/estudio-ins-e03-e04-20261103/L1T1-5445-303-CON-ED-INS-PL-0009_V00.pdf",
+      "sourcePage": 6
+    },
+    {
+      "page": 8,
+      "level": "Intermedio",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · Disposición de cámaras · Parte 1",
+      "imageUrl": "./assets/stations/e03/ins-plans/l1t1-5445-303-con-ed-ins-pl-0009_v00-p08.png",
+      "width": 5669.29,
+      "height": 2004.09,
+      "crop": [
+        1062.991875,
+        28.34645,
+        3330.707875,
+        1647.6374062500001
+      ],
+      "rotation": 90,
+      "pdf": "https://github.com/ArqAleGon/GD/releases/download/estudio-ins-e03-e04-20261103/L1T1-5445-303-CON-ED-INS-PL-0009_V00.pdf",
+      "sourcePage": 8
+    },
+    {
+      "page": 10,
+      "level": "Intermedio",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · Disposición de cámaras · Parte 2",
+      "imageUrl": "./assets/stations/e03/ins-plans/l1t1-5445-303-con-ed-ins-pl-0009_v00-p10.png",
+      "width": 5669.29,
+      "height": 2004.09,
+      "crop": [
+        1151.57453125,
+        159.44878125,
+        3153.5425625000003,
+        1647.6374062500001
+      ],
+      "rotation": 90,
+      "pdf": "https://github.com/ArqAleGon/GD/releases/download/estudio-ins-e03-e04-20261103/L1T1-5445-303-CON-ED-INS-PL-0009_V00.pdf",
+      "sourcePage": 10
+    },
+    {
+      "page": 12,
+      "level": "Plataforma",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · Disposición de cámaras · Parte 1",
+      "imageUrl": "./assets/stations/e03/ins-plans/l1t1-5445-303-con-ed-ins-pl-0009_v00-p12.png",
+      "width": 5669.29,
+      "height": 2004.09,
+      "crop": [
+        531.4959375,
+        28.34645,
+        4499.9989375000005,
+        1665.3539375
+      ],
+      "rotation": 90,
+      "pdf": "https://github.com/ArqAleGon/GD/releases/download/estudio-ins-e03-e04-20261103/L1T1-5445-303-CON-ED-INS-PL-0009_V00.pdf",
+      "sourcePage": 12
+    },
+    {
+      "page": 14,
+      "level": "Plataforma",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · Disposición de cámaras · Parte 2",
+      "imageUrl": "./assets/stations/e03/ins-plans/l1t1-5445-303-con-ed-ins-pl-0009_v00-p14.png",
+      "width": 5669.29,
+      "height": 2004.09,
+      "crop": [
+        531.4959375,
+        248.0314375,
+        4499.9989375000005,
+        1559.05475
+      ],
+      "rotation": 90,
+      "pdf": "https://github.com/ArqAleGon/GD/releases/download/estudio-ins-e03-e04-20261103/L1T1-5445-303-CON-ED-INS-PL-0009_V00.pdf",
+      "sourcePage": 14
+    }
+  ],
+  "method": "Láminas de disposición 5445; índices, tablas, coberturas duplicadas y revisiones anteriores disponibles en PDF original."
+}

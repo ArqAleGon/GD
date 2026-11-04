@@ -141,7 +141,7 @@ export class StudyScene{
   if(camera===this.axonCamera)document.body.dataset.axonFrame=JSON.stringify({min:box.min.toArray(),max:box.max.toArray(),distance,viewport:[rect.width,rect.height]});camera.far=Math.max(1500,distance*3+box.getSize(new THREE.Vector3()).length());camera.updateProjectionMatrix();controls.target.copy(center);camera.position.copy(center).addScaledVector(back,distance*1.12);controls.update();this.dirty=true;
  }
  focusSelected(){if(!this.selected)return;const center=new THREE.Vector3().fromArray(this.selected.positionGltfMetres).sub(ORIGIN);this.controls.target.copy(center);this.axonCamera.position.copy(center).add(new THREE.Vector3(26,32,34));this.controls.update();this.dirty=true;}
- select(record,settings){this.selected=record;this.settings=settings;this.updateOptics();this.dirty=true;}
+ select(record,settings){if(this.overviewControls)this.overviewControls.enabled=!this.routes?.active&&!record;this.selected=record;this.settings=settings;this.updateOptics();this.dirty=true;}
  updateOptics(){
   const record=this.selected;this.activeRing.visible=!!record;
   if(record)this.activeRing.position.fromArray(record.positionGltfMetres).sub(ORIGIN);
@@ -178,14 +178,14 @@ export class StudyScene{
   this.filter();this.dirty=false;
   this.cone.visible=false;this.markerGroup.visible=false;this.activeRing.visible=false;this.observer.visible=false;this.spaces?.beforePov();
   r.clippingPlanes=[];this.setModelClipping([]);for(const n of this.cameraNodes)n.visible=n.userData.ifcGlobalId!==this.selected?.ifcGlobalId;
-  if(this.ready&&this.overviewCamera&&(!expanded||expanded==='pov-panel'))view(this.pov,this.overviewCamera);
+  if(this.ready&&this.overviewCamera&&!this.isFixed&&(!expanded||expanded==='pov-panel'))view(this.pov,this.overviewCamera);
   if(this.ready&&this.isFixed&&(!expanded||expanded==='pov-panel')){
    if(this.mode==='fisheye'){r.setScissorTest(false);r.autoClear=true;this.cubeCamera.update(r,this.scene);r.autoClear=false;r.setScissorTest(true);view(this.pov,this.fishCamera,1,null,this.fishScene);}
    else if(this.mode==='multi')for(let i=0;i<4;i++)view(this.pov,this.sensorCameras[i],this.imageAspect,[(i%2)/2,Math.floor(i/2)/2,.5,.5]);
    else view(this.pov,this.povCamera,this.imageAspect);
   }
-  this.filter();this.dirty=false;this.markerGroup.visible=this.showMarkers!==false;this.activeRing.visible=!!this.selected&&this.showMarkers!==false;this.cone.visible=this.isFixed&&this.showCone!==false&&this.showMarkers!==false;this.observer.visible=this.isFixed;
+  this.filter();this.dirty=false;this.markerGroup.visible=this.showMarkers!==false;this.activeRing.visible=!!this.selected&&this.showMarkers!==false;this.cone.visible=this.isFixed&&this.showCone!==false&&this.showMarkers!==false;this.observer.visible=this.isFixed&&this.showMarkers!==false&&this.showCone!==false;
   if(this.level&&!this.fullStation){this.setModelClipping([new THREE.Plane(new THREE.Vector3(0,-1,0),this.level.cutMax-ORIGIN.y),new THREE.Plane(new THREE.Vector3(0,1,0),-(this.level.cutMin-ORIGIN.y))]);for(const mesh of this.staticMeshes){const b=mesh.userData.bounds;mesh.visible=mesh.visible&&b.max[1]>=this.level.cutMin-ORIGIN.y&&b.min[1]<=this.level.cutMax-ORIGIN.y;}}
-  this.spaces?.beforeAxon();if(!expanded||expanded==='axon-panel')view(this.axon,this.axonCamera);this.spaces?.afterAxon(expanded);r.clippingPlanes=[];r.setScissorTest(false);
+  document.body.dataset.cameraVisibility=JSON.stringify({markers:this.markerGroup.visible,visibleCount:this.markerGroup.visible?this.markers.filter(m=>m.visible).length:0,cone:this.cone.visible,ring:this.activeRing.visible,selected:this.selected?.ifcGlobalId||null});this.spaces?.beforeAxon();if(!expanded||expanded==='axon-panel')view(this.axon,this.axonCamera);this.spaces?.afterAxon(expanded);r.clippingPlanes=[];r.setScissorTest(false);
  }
 }

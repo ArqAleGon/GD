@@ -1,4 +1,5 @@
 import {e02Study} from './study-e02.js?v=20261104-structures41';
+import {cameraIntegration} from './study-camera-config.js?v=20261104-integrity45';
 import {recoveredStations} from './study-model-stations.js?v=20261104-structures41';
 const commonLevels=[['B','Sótano','BASEMENT'],['A','Acceso','ACCESS'],['I','Intermedio','INTERMEDIATE'],['P','Plataforma','PLATFORM']];
 const makeLevels=cuts=>commonLevels.map(([id,name,suffix],i)=>({id,name,ifc:`ARC_PL_0${i}_${suffix}`,cutMin:cuts[i][0],cutMax:cuts[i][1]}));
@@ -21,6 +22,19 @@ for(const config of Object.values(stations))if(config.modelOnly){
 stations.E03.povVideo={id:'e03-biciusuario-v38',title:'E03 · Biciusuarios'};
 for(const id of ['E03','E04'])stations[id].assets.architecture='./assets/stations/'+id.toLowerCase()+'/architecture.json';
 stations.E03.assets.routes='./assets/stations/e03/routes.json?v=20261104-pmr44';
-stations.E03.assets.registration='./assets/stations/e03/route-registration.json?v=20261104-structures41';
+for(const id of ['E03','E04']){
+ stations[id].assets.registration='./assets/stations/'+id.toLowerCase()+'/plan-registration.json?v=20261104-integrity45';
+ stations[id].assets.inventory='./assets/stations/'+id.toLowerCase()+'/inventory.json?v=20261104-integrity45';
+}
 stations.E03.assets.spaces='./assets/stations/e03/spaces.json?v=20261104-spaces43';
+for(const [id,meta] of Object.entries(cameraIntegration)){
+ const config=stations[id];if(!config)continue;
+ Object.assign(config,{cameras:meta.count,fixed:meta.fixed,cameraInventoryPending:false});
+ config.assets.cameras=meta.url;
+ for(const storey of meta.storeys){
+  let level=config.levels.find(l=>l.sourceName?.match(/_PL_(\d+)/)?.[1]===String(storey.index).padStart(2,'0'));
+  if(!level){level={id:'ins-'+storey.index,name:['Sótano','Acceso','Intermedio','Plataforma'][storey.index]||'Nivel IFC '+storey.index,cutMin:storey.elevation-.3,cutMax:storey.elevation+3.5,elevation:storey.elevation};config.levels.push(level);}
+  level.ifc=storey.name;
+ }
+}
 export const station=stations[new URLSearchParams(location.search).get('station')]||stations.E09;
