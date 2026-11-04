@@ -1,0 +1,68 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "level": "Sótano",
+      "levelId": "2SCB_wEvLD9uWO8$uQSWQR",
+      "label": "Sótano · E03 · Carrera 80",
+      "buildings": [
+        "E03 · Carrera 80"
+      ],
+      "imageUrl": "./assets/stations/e03/architecture/B.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/stations/e03/architecture/B.pdf",
+      "source": "PLANO SOTANO E3 A.pdf",
+      "sourcePage": 1,
+      "sourceSha256": "d3098dc10afffe52cd67befcd549e005a81f67939a9becc2c056c70281779472"
+    },
+    {
+      "page": 2,
+      "level": "Acceso",
+      "levelId": "3PCk_hamv00BOIK_fyvCfM",
+      "label": "Acceso · E03 · Carrera 80",
+      "buildings": [
+        "E03 · Carrera 80"
+      ],
+      "imageUrl": "./assets/stations/e03/architecture/A.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/stations/e03/architecture/A.pdf",
+      "source": "PLANO ACCESO E3 A.pdf",
+      "sourcePage": 1,
+      "sourceSha256": "fec32278c13ab1544b2227690431daef090495e1599929f53736ecac1ed17cd7"
+    },
+    {
+      "page": 3,
+      "level": "Intermedio",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · E03 · Carrera 80",
+      "buildings": [
+        "E03 · Carrera 80"
+      ],
+      "imageUrl": "./assets/stations/e03/architecture/I.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/stations/e03/architecture/I.pdf",
+      "source": "PLANO INT E3 A.pdf",
+      "sourcePage": 1,
+      "sourceSha256": "c3d03b9cf80bca84df62aaf7abc83104f7467a5a8357ee38e2cbce59db5da030"
+    },
+    {
+      "page": 4,
+      "level": "Plataforma",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · E03 · Carrera 80",
+      "buildings": [
+        "E03 · Carrera 80"
+      ],
+      "imageUrl": "./assets/stations/e03/architecture/P.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/stations/e03/architecture/P.pdf",
+      "source": "PLANO PLA E3 A.pdf",
+      "sourcePage": 1,
+      "sourceSha256": "82ab4a2837a3c67edeebba2f7c549a03343575d0ebcba0bbcffc278a37d6a121"
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
-import {station,stations} from './study-stations.js?v=20261103-e03video38';
+import {station,stations} from './study-stations.js?v=20261104-architecture39';
 import {StationVideo} from './study-station-video.js?v=20261103-e03video38';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
 import {PlanViewer} from './study-plans.js?v=20261028-e01media23';
@@ -118,7 +118,7 @@ function drawPlan(){
  planView.draw(kind,page,level,active,()=>{if(token===planToken){$('#plan-loading').hidden=true;$('#plan-status').textContent=station.cameraInventoryPending?(page.label||`Planta arquitectónica · ${level.name}`):`${kind==='architecture'?'Planta arquitectónica':'Inventario CCTV'} · nivel completo · ${planView.markers.length} cámaras IFC`;$('#plan-status').classList.remove('resources-error');}},()=>{if(token===planToken){$('#plan-loading').hidden=true;showError('#plan-status','No se pudo cargar esta lámina.');$('#plan-retry').hidden=false;}});
  routes?.drawPlan();$('#plan-registration').textContent=planView.reg?.status||(station.modelOnly?'Indicadores interactivos · En construcción':'Sin registro espacial');planView.select(active,canView(active)?scene?.pose:null,settings);
 }
-$('#plan-kind').addEventListener('change',()=>{populateSheets();syncPlan();});$('#plan-sheet').addEventListener('change',()=>{const id=Number($('#plan-sheet').value),page=inventory.find(p=>p.page===id);if(station.modelOnly&&$('#plan-kind').value==='inventory'&&page?.levelId&&level.id!==page.levelId){changeLevel(page.levelId);$('#plan-sheet').value=String(id);}zoom=1;drawPlan();});$('#plan-retry').addEventListener('click',async()=>{const kind=$('#plan-kind').value;if(planErrors[kind]){try{const data=await json(station.assets[kind]);if(kind==='architecture')architecture=data.pages;else inventory=data.pages;delete planErrors[kind];populateSheets();}catch(error){showError('#plan-status',error.message);}}else drawPlan();});
+$('#plan-kind').addEventListener('change',()=>{populateSheets();syncPlan();});$('#plan-sheet').addEventListener('change',()=>{const id=Number($('#plan-sheet').value),page=($('#plan-kind').value==='architecture'?architecture:inventory).find(p=>p.page===id);if(station.modelOnly&&page?.levelId&&level.id!==page.levelId){changeLevel(page.levelId);$('#plan-sheet').value=String(id);}zoom=1;drawPlan();});$('#plan-retry').addEventListener('click',async()=>{const kind=$('#plan-kind').value;if(planErrors[kind]){try{const data=await json(station.assets[kind]);if(kind==='architecture')architecture=data.pages;else inventory=data.pages;delete planErrors[kind];populateSheets();}catch(error){showError('#plan-status',error.message);}}else drawPlan();});
 for(const [id,fn] of [['zoom-in',()=>Math.min(8,zoom*1.5)],['zoom-out',()=>Math.max(1,zoom/1.5)],['zoom-fit',()=>1]])$('#'+id).addEventListener('click',()=>{zoom=fn();planView.zoom=zoom;planView.fit();});
 function configureProfile(){
  const id=settings.profile,p=profiles.find(p=>p.id===id),o=opticsProfiles[id];
@@ -177,6 +177,10 @@ async function loadRecoveredData(){
  modelManifest={...source,recovered:true};
  const size=source.bounds.max.map((v,i)=>v-source.bounds.min[i]);modelManifest.frameDirection=size[2]>size[0]?[1,.8,.35]:[.35,.8,1];
  planView.configure({},records,types);
+ if(station.assets.architecture){
+  try{architecture=(await json(station.assets.architecture)).pages;}
+  catch(error){planErrors.architecture=error.message;console.error(error);}
+ }
  if(station.insDocuments){
   const documents=await json(station.insDocuments);let pageId=0;
   inventory=documents.documents.flatMap(doc=>doc.pages.map(page=>({page:++pageId,levelId:station.insLevelIds[page.level],level:station.levels.find(l=>l.id===station.insLevelIds[page.level])?.name||null,label:doc.revision+' · '+doc.name.split('-PL-')[1]+' · '+page.label,imageUrl:page.image,width:page.width,height:page.height,pdf:doc.pdf})));
@@ -187,7 +191,7 @@ async function loadRecoveredData(){
   input.addEventListener('change',()=>{if(!scene)return;scene.hiddenPackages ||= new Set();if(input.checked)scene.hiddenPackages.delete(source);else scene.hiddenPackages.add(source);scene.filter();});
   label.title=source;label.append(input,document.createTextNode(' '+(source.includes('-INS-')?'Instalaciones':source.includes('-ARQ-')?'Arquitectura':'Estructura')+' · '+source.split('-')[1]+' · '+source.split('-MO-')[1]));packageTarget.before(label);
  }
- $('#plan-kind option[value="architecture"]').textContent='Planta arquitectónica · En construcción';if(!inventory.length)$('#plan-kind option[value="inventory"]').textContent='Inventario CCTV · En construcción';$('#type-legend').textContent='Arquitectura · estructura · instalaciones';
+ $('#plan-kind option[value="architecture"]').textContent=station.assets.architecture?'Planta arquitectónica':'Planta arquitectónica · En construcción';if(!inventory.length)$('#plan-kind option[value="inventory"]').textContent='Inventario CCTV · En construcción';$('#type-legend').textContent='Arquitectura · estructura · instalaciones';
  if(['E03','E04'].includes(station.id)){
   try{areaRegister=new AreaRegister(await json('./assets/stations/'+station.id.toLowerCase()+'/area-register.json'));}
   catch(error){$('#spaces-summary').textContent='No se pudo cargar el cuadro de áreas';$('#spaces-source').textContent='Recarga para reintentar la consulta del registro PDF.';console.error(error);}

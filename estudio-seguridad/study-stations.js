@@ -19,4 +19,5 @@ for(const config of Object.values(stations))if(config.modelOnly){
  });
 }
 stations.E03.povVideo={id:'e03-biciusuario-v38',title:'E03 · Biciusuarios'};
+for(const id of ['E03','E04'])stations[id].assets.architecture='./assets/stations/'+id.toLowerCase()+'/architecture.json';
 export const station=stations[new URLSearchParams(location.search).get('station')]||stations.E09;

@@ -1,0 +1,68 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "level": "Sótano",
+      "levelId": "3a4SSUck96NwxncguDK08Q",
+      "label": "Sótano · E04 · Calle 42 Sur",
+      "buildings": [
+        "E04 · Calle 42 Sur"
+      ],
+      "imageUrl": "./assets/stations/e04/architecture/B.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/stations/e04/architecture/B.pdf",
+      "source": "PLANO SOTANO E4 A.pdf",
+      "sourcePage": 1,
+      "sourceSha256": "e81f5c2ac659c3652426fe8b1a33cf340592d5244aefe86d53f8eee3c6fb7ae8"
+    },
+    {
+      "page": 2,
+      "level": "Acceso",
+      "levelId": "3a4SSUck96NwxncguDK$lJ",
+      "label": "Acceso · E04 · Calle 42 Sur",
+      "buildings": [
+        "E04 · Calle 42 Sur"
+      ],
+      "imageUrl": "./assets/stations/e04/architecture/A.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/stations/e04/architecture/A.pdf",
+      "source": "PLANO ACCESO E4 A.pdf",
+      "sourcePage": 1,
+      "sourceSha256": "df6604659496652017473d55b73760ad4e9445c35d9c47047d5bbafe36652334"
+    },
+    {
+      "page": 3,
+      "level": "Intermedio",
+      "levelId": "3a4SSUck96NwxncguDK0Nf",
+      "label": "Intermedio · E04 · Calle 42 Sur",
+      "buildings": [
+        "E04 · Calle 42 Sur"
+      ],
+      "imageUrl": "./assets/stations/e04/architecture/I.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/stations/e04/architecture/I.pdf",
+      "source": "PLANO INT E4 A.pdf",
+      "sourcePage": 1,
+      "sourceSha256": "1c1c55cfb0324e1e917e38d657b59ed4e32cb120360dc0ceddaecd4a64a24f2c"
+    },
+    {
+      "page": 4,
+      "level": "Plataforma",
+      "levelId": "3a4SSUck96NwxncguDK0Mm",
+      "label": "Plataforma · E04 · Calle 42 Sur",
+      "buildings": [
+        "E04 · Calle 42 Sur"
+      ],
+      "imageUrl": "./assets/stations/e04/architecture/P.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/stations/e04/architecture/P.pdf",
+      "source": "PLANO PLA E4 A.pdf",
+      "sourcePage": 1,
+      "sourceSha256": "69d4adbd8666de0398d9755083922b0d8d6afe39fdbdb8c6a136b9477548d95a"
+    }
+  ]
+}
