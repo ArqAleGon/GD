@@ -1,0 +1,82 @@
+{
+  "templateDate": "2026-11-04",
+  "year": 2026,
+  "weeks": {
+    "E01": "Semana 1",
+    "E09": "Semana 1",
+    "E02": "Semana 2",
+    "E03": "Semana 2",
+    "E04": "Semana 2",
+    "E05": "Semana 3",
+    "E06": "Semana 3",
+    "E07": "Semana 3",
+    "E08": "Semana 4",
+    "E10": "Semana 4",
+    "E11": "Semana 4",
+    "E12": "Semana 5",
+    "E13": "Semana 5",
+    "E14": "Semana 5",
+    "E15": "Semana 6",
+    "E16": "Semana 6"
+  },
+  "reservedAsOf": "2026-11-03",
+  "reservedAreas": {
+    "E03": {
+      "records": 238,
+      "note": "Cuadro de áreas disponible; ubicación pendiente"
+    },
+    "E04": {
+      "records": 236,
+      "note": "Cuadro de áreas disponible; ubicación pendiente"
+    },
+    "E05": {
+      "records": 256,
+      "note": "Reservado para incorporación de planos limpios"
+    },
+    "E06": {
+      "records": 134,
+      "note": "Reservado para incorporación de planos limpios"
+    },
+    "E07": {
+      "records": 226,
+      "note": "Reservado para incorporación de planos limpios"
+    },
+    "E08": {
+      "records": 139,
+      "note": "Reservado para incorporación de planos limpios"
+    },
+    "E09": {
+      "records": 0,
+      "note": "En construcción"
+    },
+    "E10": {
+      "records": 228,
+      "note": "Reservado para incorporación de planos limpios"
+    },
+    "E11": {
+      "records": 246,
+      "note": "Reservado para incorporación de planos limpios"
+    },
+    "E12": {
+      "records": 253,
+      "note": "Reservado para incorporación de planos limpios"
+    },
+    "E13": {
+      "records": 204,
+      "note": "Reservado para incorporación de planos limpios"
+    },
+    "E14": {
+      "records": 0,
+      "note": "En construcción"
+    },
+    "E15": {
+      "records": 250,
+      "note": "Reservado para incorporación de planos limpios"
+    },
+    "E16": {
+      "records": 265,
+      "note": "Reservado para incorporación de planos limpios"
+    }
+  },
+  "basis": "Actividades incorporadas / 11 actividades por estación. Todas tienen el mismo peso. No mide avance de obra ni certifica la terminación integral de cada disciplina."
+}
