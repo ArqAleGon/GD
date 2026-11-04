@@ -1,4 +1,4 @@
-import {originalPlan} from './study-plan-originals.js?v=20261104-originals47';
+import {originalSheets} from './study-plan-originals.js?v=20261104-originals48';
 import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
 import {station,stations} from './study-stations.js?v=20261104-integrity45';
 import {StationVideo} from './study-station-video.js?v=20261103-e03video38';
@@ -114,12 +114,25 @@ function syncPlan(){
  const kind=$('#plan-kind').value,pages=(kind==='architecture'?architecture:inventory).filter(p=>p.level===level.name),current=Number($('#plan-sheet').value),preferred=planView.choosePage(kind,pages,active,current);
  if(preferred&&preferred.page!==current){$('#plan-sheet').value=preferred.page;zoom=1;drawPlan();}else planView.select(active,canView(active)?scene?.pose:null,settings);
 }
+const originalSelection=new Map();
+function renderOriginalLinks(kind,page){
+ $('#plan-original')?.remove();$('#plan-original-sheet')?.closest('label')?.remove();$('#plan-original-status')?.remove();
+ const sheets=originalSheets(station.id,kind,page,level),controls=$('#plan-panel .zoom-controls');
+ if(!sheets.length){
+  if(kind!=='architecture'&&page?.pdf){const link=document.createElement('a');link.id='plan-original';link.href=page.pdf;link.target='_blank';link.rel='noopener';link.textContent='Abrir PDF original ↗';controls.append(link);return;}
+  if(kind==='architecture'){const status=document.createElement('span');status.id='plan-original-status';status.textContent=level.id==='all'&&!page?'PDF original · selecciona un nivel':'PDF original · En construcción';controls.append(status);}return;
+ }
+ const key=station.id+'|'+(page?.level||level.name),chosen=originalSelection.get(key),link=document.createElement('a');link.id='plan-original';link.target='_blank';link.rel='noopener';link.textContent='Abrir PDF original ↗';
+ const setLink=sheet=>{originalSelection.set(key,sheet.pdf);link.href=sheet.pdf;link.title=`${sheet.level} · ${sheet.attachment||sheet.source} · página ${sheet.sourcePage} · PDF de una sola página`;link.setAttribute('aria-label',`Abrir PDF original de ${sheet.level}${sheet.building&&sheet.building!=='General'?' · '+sheet.building:''}, página ${sheet.sourcePage}`);};
+ const selected=sheets.find(sheet=>sheet.pdf===chosen)||sheets[0];setLink(selected);
+ if(sheets.length>1){const label=document.createElement('label'),caption=document.createElement('span'),select=document.createElement('select');label.className='original-sheet-control';caption.textContent='Hoja original';select.id='plan-original-sheet';select.setAttribute('aria-label','Hoja técnica original');options(select,sheets.map(sheet=>[sheet.pdf,`${sheet.building||sheet.level} · página ${sheet.sourcePage}`]));select.value=selected.pdf;select.addEventListener('change',()=>setLink(sheets.find(sheet=>sheet.pdf===select.value)));label.append(caption,select);controls.append(label);}
+ controls.append(link);
+}
 function drawPlan(){
  $('#plan-panel h2').textContent=$('#plan-kind').value==='inventory'?'Plano de inventario de cámaras 2D':'Plano de planta arquitectónica 2D';
  const token=++planToken,kind=$('#plan-kind').value,pages=kind==='architecture'?architecture:inventory,page=pages.find(p=>p.page===Number($('#plan-sheet').value));$('#plan-retry').hidden=true;$('#plan-loading').hidden=true;
- $('#plan-empty')?.remove();$('#plan-original')?.remove();if(!page){const empty=document.createElement('div');empty.id='plan-empty';empty.className='viewport-message';empty.textContent=planErrors[kind]?'No se pudo cargar el plano. Reintenta la carga.':'En construcción';$('#plan-scroll').append(empty);$('#plan-registration').textContent='';$('#plan-svg').replaceChildren();planView.layer=null;planView.page=null;planView.reg=null;planView.markers=[];if(routes)routes.planLeader=null;$('#plan-status').textContent=planErrors[kind]?'Error al cargar catálogo: '+planErrors[kind]:'En construcción';$('#plan-retry').hidden=!planErrors[kind];return;}
- const original=originalPlan(station.id,kind,page),pdf=original?.pdf||page.pdf;
- if(pdf){const link=document.createElement('a');link.id='plan-original';link.href=pdf;link.target='_blank';link.rel='noopener';link.textContent='Abrir PDF original ↗';if(original){link.title=`${original.level} · ${original.source} · página ${original.sourcePage} · PDF de una sola página`;link.setAttribute('aria-label',`Abrir PDF original de ${original.level}, página ${original.sourcePage}`);}$('#plan-panel .zoom-controls').append(link);}$('#plan-loading').hidden=false;planView.zoom=zoom;
+ $('#plan-empty')?.remove();renderOriginalLinks(kind,page);if(!page){const empty=document.createElement('div');empty.id='plan-empty';empty.className='viewport-message';empty.textContent=planErrors[kind]?'No se pudo cargar el plano. Reintenta la carga.':'En construcción';$('#plan-scroll').append(empty);$('#plan-registration').textContent='';$('#plan-svg').replaceChildren();planView.layer=null;planView.page=null;planView.reg=null;planView.markers=[];if(routes)routes.planLeader=null;$('#plan-status').textContent=planErrors[kind]?'Error al cargar catálogo: '+planErrors[kind]:'En construcción';$('#plan-retry').hidden=!planErrors[kind];return;}
+ $('#plan-loading').hidden=false;planView.zoom=zoom;
  planView.draw(kind,page,level.id==='all'?(levels.find(l=>l.id===page.levelId||l.name===page.level)||level):level,active,()=>{if(token===planToken){$('#plan-loading').hidden=true;$('#plan-status').textContent=station.cameraInventoryPending?(page.label||`Planta arquitectónica · ${level.name}`):`${kind==='architecture'?'Planta arquitectónica':'Inventario CCTV'} · nivel completo · ${planView.markers.length} cámaras IFC`;$('#plan-status').classList.remove('resources-error');}},()=>{if(token===planToken){$('#plan-loading').hidden=true;showError('#plan-status','No se pudo cargar esta lámina.');$('#plan-retry').hidden=false;}});
  routes?.drawPlan();$('#plan-registration').textContent=planView.reg?.status||(station.modelOnly?'Indicadores interactivos · En construcción':'Sin registro espacial');planView.select(active,canView(active)?scene?.pose:null,settings);
 }
