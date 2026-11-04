@@ -1,5 +1,5 @@
 import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
-import {station,stations} from './study-stations.js?v=20261104-spaces43';
+import {station,stations} from './study-stations.js?v=20261104-pmr44';
 import {StationVideo} from './study-station-video.js?v=20261103-e03video38';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
 import {PlanViewer} from './study-plans.js?v=20261028-e01media23';
@@ -163,7 +163,7 @@ if(station.cameraInventoryPending){
  for(const control of document.querySelectorAll('#optics input,#optics button,#frame-camera,[data-toggle-cameras],#show-cone')){control.disabled=true;control.title='En construcción';}
  $('#camera-select').replaceChildren(new Option('En construcción',''));
 }
-if(station.id==='E03'&&station.assets.routes){$('#routes-drawer h2').textContent='Recorridos · E03';$('#routes-drawer > p').textContent='Biciusuarios · acceso Gibraltar, sótano, intermedio y plataforma.';$('#routes-drawer .micro-note').textContent='Línea negra · avance sincronizado con el video. Los cortes de edición se indican durante la reproducción.';}
+if(station.id==='E03'&&station.assets.routes){$('#routes-drawer h2').textContent='Recorridos · E03';$('#routes-drawer > p').textContent='Biciusuarios y PMR · recorridos por los niveles de E03.';$('#routes-drawer .micro-note').textContent='Negro: Biciusuarios. Naranja: PMR. Avance sincronizado con cada video; transiciones de edición identificadas.';}
 if(!station.assets.routes){
  $('#routes-tab').disabled=false;$('#routes-drawer h2').textContent='Recorridos · '+station.id;
  $('#routes-drawer > p').textContent='En construcción';$('#routes-drawer .micro-note').textContent='Trazados y videos de esta estación: En construcción';

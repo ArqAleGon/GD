@@ -20,7 +20,7 @@ for(const config of Object.values(stations))if(config.modelOnly){
 }
 stations.E03.povVideo={id:'e03-biciusuario-v38',title:'E03 · Biciusuarios'};
 for(const id of ['E03','E04'])stations[id].assets.architecture='./assets/stations/'+id.toLowerCase()+'/architecture.json';
-stations.E03.assets.routes='./assets/stations/e03/routes.json?v=20261104-structures41';
+stations.E03.assets.routes='./assets/stations/e03/routes.json?v=20261104-pmr44';
 stations.E03.assets.registration='./assets/stations/e03/route-registration.json?v=20261104-structures41';
 stations.E03.assets.spaces='./assets/stations/e03/spaces.json?v=20261104-spaces43';
 export const station=stations[new URLSearchParams(location.search).get('station')]||stations.E09;

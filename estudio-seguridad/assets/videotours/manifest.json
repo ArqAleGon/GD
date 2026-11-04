@@ -1,5 +1,5 @@
 {
-  "version": 38,
+  "version": 44,
   "videos": [
     {
       "id": "e09-ruta-1",
@@ -47,6 +47,16 @@
       "fps": 30,
       "duration": 147.033,
       "sourceUpdated": "2026-11-03"
+    },
+    {
+      "id": "e03-pmr-v44",
+      "title": "E03 · PMR · Plataforma, Intermedio y Acceso",
+      "file": "e03-pmr-v44.mp4",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration": 81,
+      "sourceUpdated": "2026-11-04"
     }
   ]
 }

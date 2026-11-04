@@ -9,10 +9,10 @@
   },
   "originY": 2534.645000762939,
   "videoClockIn3D": true,
-  "videoManifestUrl": "./assets/videotours/manifest.json?v=20261104-route40",
+  "videoManifestUrl": "./assets/videotours/manifest.json?v=20261104-pmr44",
   "hideSegments": true,
   "measurementNote": "Reconstrucción visual del POV sobre plantas registradas con muros IFC. Distancias aproximadas; los cortes de edición no representan movimiento continuo.",
-  "sourceLabel": "EM3-BICIUSUARIO.mp4 · 2:27 · plantas E03",
+  "sourceLabel": "EM3-BICIUSUARIO.mp4 y EM3-PMR.mp4 · plantas E03",
   "pageByLevel": {
     "2SCB_wEvLD9uWO8$uQSWQR": 1,
     "3PCk_hamv00BOIK_fyvCfM": 2,
@@ -25,6 +25,12 @@
       "label": "E03 · Biciusuarios / acceso a plataforma",
       "color": "#000000",
       "defaultJourney": "e03-pov"
+    },
+    {
+      "id": "pmr",
+      "label": "E03 · PMR (Personas con movilidad reducida)",
+      "color": "#f58220",
+      "defaultJourney": "e03-pmr-pov"
     }
   ],
   "routes": [
@@ -464,6 +470,326 @@
         ]
       ],
       "directionFromAnimation": true
+    },
+    {
+      "id": "e03-pmr-platform",
+      "family": "pmr",
+      "level": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · pasarela norte y acceso al ascensor",
+      "color": "#f58220",
+      "points": [
+        [
+          -29.51546998511185,
+          29.52499923706091,
+          -36.43359554161725
+        ],
+        [
+          -34.7480352287821,
+          29.52499923706091,
+          -32.71990740080946
+        ],
+        [
+          -39.46769833759754,
+          29.52499923706091,
+          -29.185742006418877
+        ],
+        [
+          -42.990929619089,
+          29.52499923706091,
+          -26.97823790095572
+        ],
+        [
+          -40.06139666448871,
+          29.52499923706091,
+          -22.024801435429254
+        ],
+        [
+          -37.186114320138586,
+          29.52499923706091,
+          -17.163095274823718
+        ],
+        [
+          -40.675803770383936,
+          29.52499923706091,
+          -14.480168729147408
+        ],
+        [
+          -43.102209256278,
+          29.52499923706091,
+          -12.302268591534812
+        ],
+        [
+          -38.81641104489972,
+          29.52499923706091,
+          -5.055574503086973
+        ],
+        [
+          -35.56137442866748,
+          29.52499923706091,
+          0.4482437919359654
+        ],
+        [
+          -32.57759086378792,
+          29.52499923706091,
+          5.49341056238336
+        ],
+        [
+          -29.59380729890836,
+          29.52499923706091,
+          10.538577332816203
+        ],
+        [
+          -27.152529836734175,
+          29.52499923706091,
+          14.666441054083407
+        ],
+        [
+          -24.439999323207303,
+          29.52499923706091,
+          19.252956299940706
+        ],
+        [
+          -21.72746880968043,
+          29.52499923706091,
+          23.839471545783454
+        ],
+        [
+          -20.642456604269682,
+          29.52499923706091,
+          25.674077644129284
+        ],
+        [
+          -19.286191347506247,
+          29.52499923706091,
+          27.967335267050657
+        ],
+        [
+          -17.92992609074281,
+          29.52499923706091,
+          30.260592889986583
+        ],
+        [
+          -17.582694188065943,
+          29.52499923706091,
+          33.1506072258926
+        ],
+        [
+          -15.909820458502509,
+          29.52499923706091,
+          34.51372874742083
+        ],
+        [
+          -15.421564966076403,
+          29.52499923706091,
+          35.33930149166554
+        ]
+      ],
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e03-pmr-lift-p-i",
+      "family": "pmr",
+      "level": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Ascensor · Plataforma → Intermedio",
+      "color": "#f58220",
+      "points": [
+        [
+          -15.421564966076403,
+          29.52499923706091,
+          35.33930149166554
+        ],
+        [
+          -15.421564966076403,
+          20.784999237060674,
+          35.33930149166554
+        ]
+      ],
+      "directionFromAnimation": true,
+      "connectionType": "elevator",
+      "schematic": true,
+      "fromLevel": "Plataforma",
+      "toLevel": "Intermedio",
+      "nextLevel": "2SCB_wEvLD9uWO8$uQSW5e"
+    },
+    {
+      "id": "e03-pmr-intermediate",
+      "family": "pmr",
+      "level": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · validación Metro, zona no paga y segundo ascensor",
+      "color": "#f58220",
+      "points": [
+        [
+          -15.421564966076403,
+          20.784999237060674,
+          35.33930149166554
+        ],
+        [
+          -16.405097928844043,
+          20.784999237060674,
+          34.309006348019466
+        ],
+        [
+          -19.305873366451124,
+          20.784999237060674,
+          31.07724318606779
+        ],
+        [
+          -20.389730484355823,
+          20.784999237060674,
+          29.244590181522653
+        ],
+        [
+          -22.118949825046002,
+          20.784999237060674,
+          28.41202898704796
+        ],
+        [
+          -22.852011026872788,
+          20.784999237060674,
+          28.84557183421566
+        ],
+        [
+          -24.684664031417924,
+          20.784999237060674,
+          29.92942895210581
+        ],
+        [
+          -27.29175170333474,
+          20.784999237060674,
+          32.21339624210668
+        ],
+        [
+          -29.874218971279333,
+          20.784999237060674,
+          33.49333805081551
+        ],
+        [
+          -35.45608312843251,
+          20.784999237060674,
+          24.05517507735931
+        ],
+        [
+          -40.4418258707592,
+          20.784999237060674,
+          15.624971256416757
+        ],
+        [
+          -35.95182600960834,
+          20.784999237060674,
+          12.969521317572799
+        ],
+        [
+          -32.46585162974952,
+          20.784999237060674,
+          10.289450974742067
+        ],
+        [
+          -33.05017203096941,
+          20.784999237060674,
+          7.419266365774092
+        ],
+        [
+          -35.50662198451755,
+          20.784999237060674,
+          0.3379135175346164
+        ],
+        [
+          -38.758193338202545,
+          20.784999237060674,
+          -5.160045496115345
+        ],
+        [
+          -40.329786159156356,
+          20.784999237060674,
+          -7.817392352721072
+        ],
+        [
+          -42.105331013328396,
+          20.784999237060674,
+          -9.983069835056085
+        ],
+        [
+          -43.08080241944117,
+          20.784999237060674,
+          -11.632457539162715
+        ],
+        [
+          -43.460152410698356,
+          20.784999237060674,
+          -12.273886090755695
+        ]
+      ],
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e03-pmr-lift-i-a",
+      "family": "pmr",
+      "level": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Ascensor · Intermedio → Acceso",
+      "color": "#f58220",
+      "points": [
+        [
+          -43.460152410698356,
+          20.784999237060674,
+          -12.273886090755695
+        ],
+        [
+          -43.460152410698356,
+          13.184999237060765,
+          -12.273886090755695
+        ]
+      ],
+      "directionFromAnimation": true,
+      "connectionType": "elevator",
+      "schematic": true,
+      "fromLevel": "Intermedio",
+      "toLevel": "Acceso",
+      "nextLevel": "3PCk_hamv00BOIK_fyvCfM"
+    },
+    {
+      "id": "e03-pmr-access",
+      "family": "pmr",
+      "level": "3PCk_hamv00BOIK_fyvCfM",
+      "label": "Acceso · salida por Carrera 80 B",
+      "color": "#f58220",
+      "points": [
+        [
+          -43.460152410698356,
+          13.184999237060765,
+          -12.273886090755695
+        ],
+        [
+          -44.34981548434007,
+          13.184999237060765,
+          -13.841062757419422
+        ],
+        [
+          -45.15527681299136,
+          13.184999237060765,
+          -15.202986852047616
+        ],
+        [
+          -46.76619947027939,
+          13.184999237060765,
+          -17.926835041304003
+        ],
+        [
+          -49.17767668017768,
+          13.184999237060765,
+          -19.93211913217965
+        ],
+        [
+          -51.13128148249234,
+          13.184999237060765,
+          -22.820957296527922
+        ],
+        [
+          -51.56086085776042,
+          13.184999237060765,
+          -23.54731681366684
+        ]
+      ],
+      "directionFromAnimation": true
     }
   ],
   "links": [],
@@ -893,6 +1219,318 @@
         ],
         "waitingLabel": "Transición de edición del video",
         "method": "Reloj maestro: tiempo real del video. Hitos visuales por tramo, pausas y cortes de edición conservados."
+      }
+    },
+    {
+      "id": "e03-pmr-pov",
+      "family": "pmr",
+      "label": "POV PMR · Plataforma → Intermedio → Acceso",
+      "legs": [
+        "e03-pmr-platform",
+        "e03-pmr-lift-p-i",
+        "e03-pmr-intermediate",
+        "e03-pmr-lift-i-a",
+        "e03-pmr-access"
+      ],
+      "videoSync": {
+        "videoId": "e03-pmr-v44",
+        "keys": [
+          {
+            "time": 0,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.0
+          },
+          {
+            "time": 2,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.0
+          },
+          {
+            "time": 4,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.07050060895380707
+          },
+          {
+            "time": 6,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.13528502188600555
+          },
+          {
+            "time": 8,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.1809671354407821
+          },
+          {
+            "time": 10,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.24419850996678133
+          },
+          {
+            "time": 12,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.3062589331127468
+          },
+          {
+            "time": 14,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.3546236195233764
+          },
+          {
+            "time": 16,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.3904478431433071
+          },
+          {
+            "time": 18,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.48295300217211634
+          },
+          {
+            "time": 20,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.5532100849787752
+          },
+          {
+            "time": 22,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.6176124108849709
+          },
+          {
+            "time": 24,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.6820147367910291
+          },
+          {
+            "time": 26,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.7347075488960232
+          },
+          {
+            "time": 28,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.7932551179016182
+          },
+          {
+            "time": 30,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.8518026869070755
+          },
+          {
+            "time": 31,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.875221714509341
+          },
+          {
+            "time": 32,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.9044954990120697
+          },
+          {
+            "time": 33,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.933769283514936
+          },
+          {
+            "time": 34,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.9657514792244603
+          },
+          {
+            "time": 35,
+            "leg": "e03-pmr-platform",
+            "fraction": 0.9894614375791325
+          },
+          {
+            "time": 35.5,
+            "leg": "e03-pmr-platform",
+            "fraction": 1.0
+          },
+          {
+            "time": 35.5,
+            "leg": "e03-pmr-lift-p-i",
+            "fraction": 0.0
+          },
+          {
+            "time": 36.5,
+            "leg": "e03-pmr-lift-p-i",
+            "fraction": 1.0
+          },
+          {
+            "time": 36.5,
+            "leg": "e03-pmr-intermediate",
+            "fraction": 0.0
+          },
+          {
+            "time": 37,
+            "leg": "e03-pmr-intermediate",
+            "fraction": 0.019022442126602458
+          },
+          {
+            "time": 39,
+            "leg": "e03-pmr-intermediate",
+            "fraction": 0.07701853618292998
+          },
+          {
+            "time": 40,
+            "leg": "e03-pmr-intermediate",
+            "fraction": 0.10545346073149951
+          },
+          {
+            "time": 41,
+            "leg": "e03-pmr-intermediate",
+            "fraction": 0.13108435534992788
+          },
+          {
+            "time": 42,
+            "leg": "e03-pmr-intermediate",
+            "fraction": 0.14245832516949564
+          },
+          {
+            "time": 43,
+            "leg": "e03-pmr-intermediate",
+            "fraction": 0.17089324971796624
+          },
+          {
+            "time": 44,
+            "leg": "e03-pmr-intermediate",
+            "fraction": 0.2171819532570169
+          },
+          {
+            "time": 46,
+            "leg": "e03-pmr-intermediate",
+            "fraction": 0.2556742718637196
+          },
+          {
+            "time": 48,
+            "leg": "e03-pmr-intermediate",
+            "fraction": 0.4021141332890323
+          },
+          {
+            "time": 50,
+            "leg": "e03-pmr-intermediate",
+            "fraction": 0.5329147862126162
+          },
+          {
+            "time": 52,
+            "leg": "e03-pmr-intermediate",
+            "fraction": 0.6025803513566339
+          },
+          {
+            "time": 54,
+            "leg": "e03-pmr-intermediate",
+            "fraction": 0.6613038061585723
+          },
+          {
+            "time": 56,
+            "leg": "e03-pmr-intermediate",
+            "fraction": 0.7004212100569874
+          },
+          {
+            "time": 58,
+            "leg": "e03-pmr-intermediate",
+            "fraction": 0.8005206261174701
+          },
+          {
+            "time": 60,
+            "leg": "e03-pmr-intermediate",
+            "fraction": 0.8858253997631482
+          },
+          {
+            "time": 61,
+            "leg": "e03-pmr-intermediate",
+            "fraction": 0.9270560403586952
+          },
+          {
+            "time": 62,
+            "leg": "e03-pmr-intermediate",
+            "fraction": 0.9644563443141532
+          },
+          {
+            "time": 63,
+            "leg": "e03-pmr-intermediate",
+            "fraction": 0.9900477764080399
+          },
+          {
+            "time": 63.6,
+            "leg": "e03-pmr-intermediate",
+            "fraction": 1.0
+          },
+          {
+            "time": 63.6,
+            "leg": "e03-pmr-lift-i-a",
+            "fraction": 0.0
+          },
+          {
+            "time": 65,
+            "leg": "e03-pmr-lift-i-a",
+            "fraction": 1.0
+          },
+          {
+            "time": 65,
+            "leg": "e03-pmr-access",
+            "fraction": 0.0
+          },
+          {
+            "time": 70,
+            "leg": "e03-pmr-access",
+            "fraction": 0.0
+          },
+          {
+            "time": 71,
+            "leg": "e03-pmr-access",
+            "fraction": 0.12856936168032776
+          },
+          {
+            "time": 72,
+            "leg": "e03-pmr-access",
+            "fraction": 0.24145610608630624
+          },
+          {
+            "time": 74,
+            "leg": "e03-pmr-access",
+            "fraction": 0.4672295948977348
+          },
+          {
+            "time": 76,
+            "leg": "e03-pmr-access",
+            "fraction": 0.6909872086311187
+          },
+          {
+            "time": 78,
+            "leg": "e03-pmr-access",
+            "fraction": 0.9397937363170312
+          },
+          {
+            "time": 79,
+            "leg": "e03-pmr-access",
+            "fraction": 1.0
+          },
+          {
+            "time": 81,
+            "leg": "e03-pmr-access",
+            "fraction": 1.0
+          }
+        ],
+        "hiddenWindows": [
+          [
+            0,
+            0.4
+          ],
+          [
+            35.5,
+            36.5
+          ],
+          [
+            63.6,
+            65
+          ],
+          [
+            80.5,
+            81.01
+          ]
+        ],
+        "waitingLabel": "Transición de edición del video · cambio de nivel por ascensor",
+        "method": "Reloj maestro del video; hitos de pasarela, giros, validación y ascensores. Los dos viajes verticales no se muestran en el video: enlaces esquemáticos en los pozos correspondientes."
       }
     }
   ]
