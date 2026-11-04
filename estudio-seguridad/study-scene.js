@@ -45,7 +45,7 @@ export class StudyScene{
   this.cone=new THREE.Group();this.scene.add(this.cone);
   this.observer=new THREE.Group();const mat=new THREE.MeshBasicMaterial({color:0xf3d189});const head=new THREE.Mesh(new THREE.SphereGeometry(.18,10,8),mat);head.position.y=1.55;const body=new THREE.Mesh(new THREE.CylinderGeometry(.18,.25,1.2,10),mat);body.position.y=.8;this.observer.add(head,body);this.scene.add(this.observer);this.observer.visible=false;
   this.activeRing=new THREE.Mesh(new THREE.SphereGeometry(.60,12,8),new THREE.MeshBasicMaterial({color:0xffffff,wireframe:true,transparent:true,depthTest:false}));this.activeRing.renderOrder=61;this.scene.add(this.activeRing);this.activeRing.visible=false;
-  new ResizeObserver(()=>{if(this.ready)this.frame();this.dirty=true;}).observe(axon);new ResizeObserver(()=>{if(this.overviewCamera)this.frame(this.overviewCamera,this.overviewControls,this.pov,true);this.dirty=true;}).observe(pov);
+  new ResizeObserver(()=>{if(this.ready){if(this.routes?.active)this.routes.focusLevel();else this.frame();}this.dirty=true;}).observe(axon);new ResizeObserver(()=>{if(this.overviewCamera)this.frame(this.overviewCamera,this.overviewControls,this.pov,true);this.dirty=true;}).observe(pov);
   window.addEventListener('resize',()=>{this.renderer.setSize(innerWidth,innerHeight);this.dirty=true;});window.addEventListener('scroll',()=>this.dirty=true,true);
   this.renderer.setAnimationLoop(time=>{this.routes?.tick(time);if(this.dirty){this.dirty=false;this.render();this.updateCameraTag();}});
  }

@@ -1,10 +1,10 @@
-import {RouteVideo} from './study-videotours.js?v=20261028-e01media23';
+import {RouteVideo} from './study-videotours.js?v=20261103-e03video38';
 import {RouteAvatar} from './study-route-avatar.js?v=20261028-e01media23';
 import {RouteSimulation} from './study-route-simulation.js?v=20261028-e01media23';
 import * as THREE from 'three';
 import {createRouteTimeline,routeTransitionAt} from './study-route-timeline.js?v=20261028-e01media23';
 import {OrbitControls} from './vendor/OrbitControls.js';
-import {distanceAtTime,timeAtDistance,speedAtTime,planAnimationStarted} from './study-video-clock.js?v=20261028-e01media23';
+import {distanceAtTime,timeAtDistance,speedAtTime,planAnimationStarted} from './study-video-clock.js?v=20261104-route40';
 const $=s=>document.querySelector(s), ns='http://www.w3.org/2000/svg';
 const svg=(tag,attrs={})=>{const n=document.createElementNS(ns,tag);for(const [k,v] of Object.entries(attrs))n.setAttribute(k,v);return n;};
 const option=(value,text)=>{const n=document.createElement('option');n.value=value;n.textContent=text;return n;};
@@ -14,7 +14,7 @@ export class RouteStudy{
   Object.assign(this,{scene,plan,data,setContext,onExit,onEnter});scene.routes=this;plan.routes=this;this.active=false;this.playing=false;this.distance=0;this.speed=2;this.opacity=.22;this.parts=[];this.materials=new Map();
   this.camera=new THREE.PerspectiveCamera(42,1,.1,5000);this.controls=new OrbitControls(this.camera,scene.pov);this.controls.enabled=false;this.controls.addEventListener('change',()=>scene.dirty=true);
   this.povCamera=new THREE.PerspectiveCamera(65,1,.06,5000);this.povMode=true;
-  this.video=new RouteVideo();this.bindVideoClock();$('#route-view').addEventListener('change',e=>this.setPov(e.target.value==='pov'));
+  this.video=new RouteVideo({manifestUrl:data.videoManifestUrl});this.bindVideoClock();$('#route-view').addEventListener('change',e=>this.setPov(e.target.value==='pov'));
   document.body.append($('#route-live'));this.group=new THREE.Group();scene.scene.add(this.group);this.group.visible=false;this.caches=new Map();
   this.lookup=new Map([...data.routes,...data.links].map(r=>[r.id,r]));
   this.avatar=data.station==='E01'?new RouteAvatar(scene.scene):null;
@@ -40,7 +40,7 @@ export class RouteStudy{
   const journeys=this.data.journeys.filter(r=>r.family===family),legs=this.data.routes.filter(r=>r.family===family&&!r.superseded&&!r.id.endsWith('-reverse'));
   const all=document.createElement('optgroup');all.label='Recorridos completos';all.append(...journeys.map(r=>option(r.id,r.label)));
   const parts=document.createElement('optgroup');parts.label='Tramos por nivel';parts.append(...legs.map(r=>option(r.id,r.label)));
-  $('#route-path').replaceChildren(all,parts);if(this.family.defaultJourney)$('#route-path').value=this.family.defaultJourney;this.choosePath();
+  $('#route-path').replaceChildren(...(this.data.hideSegments?[all]:[all,parts]));if(this.family.defaultJourney)$('#route-path').value=this.family.defaultJourney;this.choosePath();
  }
  choosePath(){
   const id=$('#route-path').value,journey=this.data.journeys.find(r=>r.id===id),single=this.lookup.get(id),source=journey||single;if(!source)return;
@@ -62,29 +62,29 @@ export class RouteStudy{
    const line=new THREE.Line(new THREE.BufferGeometry().setFromPoints(points),leg.schematic?new THREE.LineDashedMaterial({color,dashSize:.9,gapSize:.65,depthTest:false,transparent:true,opacity:.85}):new THREE.LineBasicMaterial({color,depthTest:false}));line.computeLineDistances();line.renderOrder=80;group.add(line);
    if(!leg.schematic)for(let i=1;i<points.length;i++){const d=points[i].clone().sub(points[i-1]),len=d.length();if(len<.01)continue;const mesh=new THREE.Mesh(new THREE.CylinderGeometry(.16,.16,len,6),new THREE.MeshBasicMaterial({color,depthTest:false}));mesh.position.copy(points[i]).add(points[i-1]).multiplyScalar(.5);mesh.quaternion.setFromUnitVectors(new THREE.Vector3(0,1,0),d.normalize());mesh.renderOrder=79;group.add(mesh);if(color==='#000000'){const halo=new THREE.Mesh(mesh.geometry.clone(),new THREE.MeshBasicMaterial({color:0xffffff,depthTest:false}));halo.position.copy(mesh.position);halo.quaternion.copy(mesh.quaternion);halo.scale.set(1.8,1,1.8);halo.renderOrder=78;group.add(halo);}}
    const part={leg,points,lengths,length,offset,group,arrows:[]};offset+=length;this.parts.push(part);if(leg.schematic)this.linkLength+=length;else this.planLength+=length;
-   for(let i=0;i<Math.max(1,Math.ceil(length/14));i++){const arrow=new THREE.ArrowHelper(new THREE.Vector3(1,0,0),new THREE.Vector3(),2.4,color,1.15,.85);arrow.traverse(n=>{if(n.material){n.material.depthTest=false;n.material.depthWrite=false;}n.renderOrder=85;});group.add(arrow);part.arrows.push(arrow);}
+   for(let i=0;i<(leg.directionFromAnimation?1:Math.max(1,Math.ceil(length/14)));i++){const arrow=new THREE.ArrowHelper(new THREE.Vector3(1,0,0),new THREE.Vector3(),2.4,color,1.15,.85);arrow.traverse(n=>{if(n.material){n.material.depthTest=false;n.material.depthWrite=false;}n.renderOrder=85;});group.add(arrow);part.arrows.push(arrow);}
   }
   this.total=offset;if(source.transitions?.length)this.localTimeline=createRouteTimeline(this.parts,source.transitions);this.videoKeys=(this.videoProfile?.keys||[]).map(key=>{const part=this.parts.find(p=>p.leg.id===key.leg);if(!part)throw Error('Hito de video sin tramo: '+key.leg);return {...key,distance:part.offset+part.length*key.fraction};});this.distance=0;this.followKey=null;this.playing=false;
   this.contextParts=[];if(this.data.station==='E01'&&!source.hideContext){const selected=new Set(legs.map(r=>r.id));for(const leg of this.data.routes.filter(r=>r.family===this.family.id&&!r.superseded&&!selected.has(r.id)&&(this.family.id==='pmr'?r.id.startsWith('e01-pmr-'):r.originalArrow))){const points=leg.points.map(p=>new THREE.Vector3(...p)),group=new THREE.Group(),line=new THREE.Line(new THREE.BufferGeometry().setFromPoints(points),new THREE.LineBasicMaterial({color:leg.color,depthTest:false,transparent:true,opacity:.7}));line.renderOrder=78;group.add(line);this.group.add(group);this.contextParts.push({leg,points,group,arrows:[]});}}
   if(this.simulation){this.simulation.setJourney(this.parts);this.simulation.setOpen(this.active&&this.family.id==='pmr');this.simulation.group.visible=this.active&&this.family.id==='pmr';this.caches.forEach(c=>c.state=null);}
   this.leader=new THREE.Group();const ring=new THREE.Mesh(new THREE.SphereGeometry(.65,12,8),new THREE.MeshBasicMaterial({color:0xffffff,depthTest:false}));ring.renderOrder=89;this.leader.add(ring);this.group.add(this.leader);
-  $('#route-source').textContent=(source.note||this.data.measurementNote)+(this.videoProfile?' '+this.videoProfile.method:'');$('#route-source-pages').textContent=source.sourceRevision===23?'E1_Recorridos · actualización 28/10/2026 · diapositivas 2–4':source.id==='e01-bike-walk-v21'?'Marcas del usuario · Acceso, Intermedio y Plataforma':this.data.station==='E01'?'E1_Recorridos · diapositivas '+[...new Set(legs.map(x=>x.slide).filter(Boolean))].sort().join(', '):[['Actualización',13],['Base anterior',12]].map(([label,rev])=>{const pages=[...new Set(legs.filter(x=>x.slide&&(x.sourceRevision||12)===rev).map(x=>x.slide))].sort((a,b)=>a-b);return pages.length?label+': diapositivas '+pages.join(', '):'';}).filter(Boolean).join(' · ');
+  $('#route-source').textContent=(source.note||this.data.measurementNote)+(this.videoProfile?' '+this.videoProfile.method:'');$('#route-source-pages').textContent=this.data.sourceLabel|| (source.sourceRevision===23?'E1_Recorridos · actualización 28/10/2026 · diapositivas 2–4':source.id==='e01-bike-walk-v21'?'Marcas del usuario · Acceso, Intermedio y Plataforma':this.data.station==='E01'?'E1_Recorridos · diapositivas '+[...new Set(legs.map(x=>x.slide).filter(Boolean))].sort().join(', '):[['Actualización',13],['Base anterior',12]].map(([label,rev])=>{const pages=[...new Set(legs.filter(x=>x.slide&&(x.sourceRevision||12)===rev).map(x=>x.slide))].sort((a,b)=>a-b);return pages.length?label+': diapositivas '+pages.join(', '):'';}).filter(Boolean).join(' · '));
   $('#route-measure').textContent=`Trayecto: ${metres(this.planLength)} · enlaces estimados: ${metres(this.linkLength)}`;
-  $('#route-live small').textContent=source.transitions?.length?'Distancia aproximada · transición 1A / 1 sin sumar distancia':'Distancia aproximada · enlaces discontinuos esquemáticos';
+  $('#route-live small').textContent=source.transitions?.length?'Distancia aproximada · transición 1A / 1 sin sumar distancia':(this.data.station==='E03'?'Distancia aproximada · reconstrucción del video':'Distancia aproximada · enlaces discontinuos esquemáticos');
   this.updatePosition(true);this.setPov(true);this.scene.dirty=true;
  }
  enable(active){
   if(this.active===active)return;if(active)this.onEnter?.();this.active=active;$('#plan-kind').disabled=active;this.controls.enabled=active&&!this.povMode;this.group.visible=active;document.body.classList.toggle('routes-mode',active);$('#routes-controls').hidden=!active;$('#route-view-control').hidden=!active;$('#route-plan-label').hidden=!active;$('#routes-tab').setAttribute('aria-pressed',String(active));
   $('#pov-panel h2').textContent=active?'Vista 3D · estación completa':'Vista 3D';$('#pov-panel .view-heading p').textContent=active?'Recorridos · todos los modelos en transparencia':'Vista POV solo activa para cámaras Fixed';
-  this.setTransparency(active);if(active){$('#routes-controls').scrollTop=0;this.scene.fullStation=false;this.fit();this.choosePath();}else{this.video.keepPlayingHidden=false;this.clockMode=false;this.video.setVisible(false);this.playing=false;this.plan.routeLayer?.remove();delete document.body.dataset.routePose;this.onExit();}
+  if(this.scene.overviewControls)this.scene.overviewControls.enabled=!active;this.setTransparency(active);if(active){$('#routes-controls').scrollTop=0;this.scene.fullStation=false;this.fit();this.choosePath();}else{this.video.keepPlayingHidden=false;this.clockMode=false;this.video.setVisible(false);this.playing=false;this.plan.routeLayer?.remove();delete document.body.dataset.routePose;this.onExit();}
   if(this.simulation){this.simulation.setOpen(this.active&&this.family.id==='pmr');this.simulation.group.visible=this.active&&this.family.id==='pmr';this.caches.forEach(c=>c.state=null);}if(this.avatar&&!this.active)this.avatar.group.visible=false;
   this.scene.dirty=true;
  }
  setPov(enabled){
-  if(this.videoClockReady())this.readVideoClock();
+  const preserveTime=this.videoClockReady();if(preserveTime)this.readVideoClock();
   this.povMode=enabled;this.controls.enabled=this.active&&!enabled;$('#route-view').value=enabled?'pov':'3d';
-  this.videoMode=!!this.videoProfile&&enabled;this.clockMode=!!this.videoProfile&&(enabled||!!this.avatar);this.video.keepPlayingHidden=!!this.avatar&&this.active&&this.clockMode;this.video.setVisible(this.active&&this.videoMode,this.videoProfile?.videoId,this.family?.label);if(this.active&&this.clockMode&&!this.videoMode)this.video.load();this.updateSpeedText();
-  this.syncVideoClock(true);
+  this.videoMode=!!this.videoProfile&&enabled;this.clockMode=!!this.videoProfile&&(enabled||!!this.avatar||!!this.data.videoClockIn3D);this.video.keepPlayingHidden=(!!this.avatar||!!this.data.videoClockIn3D)&&this.active&&this.clockMode;this.video.setVisible(this.active&&this.videoMode,this.videoProfile?.videoId,this.family?.label);if(this.active&&this.clockMode&&!this.videoMode)this.video.load();this.updateSpeedText();
+  this.syncVideoClock(!preserveTime);
   if(this.active){$('#pov-panel h2').textContent=enabled?'POV · '+this.family.label:'Vista 3D · estación completa';$('#pov-panel .view-heading p').textContent=this.videoMode?'Video y plantas · hitos y cambios de nivel':enabled?'POV geométrico · este tramo no tiene video correspondiente':'Recorridos · todos los modelos en transparencia';}
   this.scene.dirty=true;
  }
@@ -135,13 +135,13 @@ export class RouteStudy{
  tick(time){if(!this.active||document.hidden){this.last=time;return;}const dt=Math.min(.1,(time-(this.last??time))/1000);this.last=time;if(this.clockMode){if(this.videoClockReady()&&(!this.video.video.paused||this.video.video.seeking))this.readVideoClock();return;}if(this.playing){if(this.localTimeline){this.localTime=Math.min(this.localTimeline.duration,this.localTime+dt*this.speed);this.distance=distanceAtTime(this.localTimeline.keys,this.localTime);}else this.distance=Math.min(this.total,this.distance+dt*this.speed);if(this.distance===this.total)this.playing=false;this.updatePosition();this.scene.dirty=true;}}
  updatePosition(force=false){
   if(!this.parts.length)return;this.currentTransition=routeTransitionAt(this.localTimeline,this.localTime);const cut=this.currentTransition;const part=(cut?this.parts.find(p=>p.leg.id===cut.leg):null)||this.parts.find(p=>this.distance<p.offset+p.length)||this.parts.at(-1);this.current=part;this.currentSample=this.sample(part,cut?(cut.atEnd?part.length:0):this.distance-part.offset);this.leader.position.copy(this.currentSample.point);
-  const direction=this.currentSample.direction.clone();if(part.leg.connectionType==='elevator'){const previous=this.parts[this.parts.indexOf(part)-1];if(previous)direction.copy(previous.points.at(-1)).sub(previous.points.at(-2));}direction.y=0;if(direction.lengthSq()<.001)direction.set(0,0,-1);direction.normalize();
+  const direction=this.currentSample.direction.clone();if(part.leg.connectionType==='elevator'){const previous=this.parts[this.parts.indexOf(part)-1];if(previous)direction.copy(previous.points.at(-1)).sub(previous.points.at(-2));}direction.y=0;if(direction.lengthSq()<.001)direction.set(0,0,-1);direction.normalize();this.planDirection=direction;
   this.povCamera.position.copy(this.currentSample.point).add(new THREE.Vector3(0,this.data.eyeOffset??1.28,0));this.povCamera.lookAt(this.povCamera.position.clone().add(direction));
   this.avatar?.update({point:this.currentSample.point,direction,distance:this.distance,moving:this.playing&&this.speed>0&&!this.currentTransition,elevator:part.leg.connectionType==='elevator'});
   this.simulation?.update(this.distance);
   if(this.avatar&&this.followAvatar&&!this.povMode){const target=this.currentSample.point.clone().add(new THREE.Vector3(0,1,0));this.controls.target.copy(target);this.camera.position.copy(target).addScaledVector(direction,-5).add(new THREE.Vector3(0,2.4,0));this.controls.update();}
   if(this.active)document.body.dataset.routePose=JSON.stringify({path:$('#route-path').value,leg:part.leg.id,videoTime:this.clockMode?this.video.video.currentTime:null,routeTime:this.localTimeline?this.localTime:null,transition:this.currentTransition?.label||null,animationStarted:this.planAnimationStarted(),level:part.leg.level||null,schematic:!!part.leg.schematic,distance:this.distance,point:this.currentSample.point.toArray(),eye:this.povCamera.position.toArray(),direction:direction.toArray()});
-  for(const p of this.parts)for(let i=0;i<p.arrows.length;i++){const s=this.sample(p,(Math.max(0,Math.min(p.length,this.distance-p.offset))+i*14)%p.length);p.arrows[i].position.copy(s.point);p.arrows[i].setDirection(s.direction);}
+  for(const p of this.parts)for(let i=0;i<p.arrows.length;i++){const s=p.leg.directionFromAnimation&&p===part?this.currentSample:this.sample(p,(Math.max(0,Math.min(p.length,this.distance-p.offset))+i*14)%p.length);p.arrows[i].position.copy(s.point);p.arrows[i].setDirection(s.direction);}
   if(this.active&&$('#route-follow').checked&&!part.leg.schematic){const page=(this.data.pageByLevel||{A:1,I:3,P:5,B:7})[part.leg.level];const key=part.leg.level+':'+page;if(force||key!==this.followKey){this.followKey=key;this.setContext(part.leg.level,page);this.focusLevel();}}
   this.updateText();this.updatePlanLeader();this.scene.dirty=true;
  }
@@ -152,8 +152,8 @@ export class RouteStudy{
   $('#route-progress').value=this.total?Math.round(this.distance/this.total*1000):0;$('#route-play').textContent=this.playing?'Ⅱ Pausar':'▶ Reproducir';$('#route-play').setAttribute('aria-pressed',String(this.playing));$('#route-current').textContent=this.current?.leg.schematic?'Enlace esquemático · '+this.current.leg.fromLevel+' → '+this.current.leg.toLevel:this.current?.leg.label||'';
   if(this.currentTransition){$('#route-current').textContent=this.currentTransition.label;$('#route-live-label').textContent=this.currentTransition.label;}else if(!this.planAnimationStarted())$('#route-current').textContent=this.videoProfile?.waitingLabel||'Animación en espera · inicia en 2:08 del POV';
  }
- onSheet(part,y){if(this.plan.page.unified||this.data.station==='E01')return true;const boundary={14:480,16:460,17:400}[part.leg.slide];return this.plan.page.part==='A'?y<=boundary:y>=boundary;}
- clippedSegments(part){if(this.plan.page.unified||this.data.station==='E01')return part.points.slice(1).map((p,i)=>[part.points[i],p]);
+ onSheet(part,y){if(this.plan.page.unified||this.data.unifiedPlans||this.data.station==='E01')return true;const boundary={14:480,16:460,17:400}[part.leg.slide];return this.plan.page.part==='A'?y<=boundary:y>=boundary;}
+ clippedSegments(part){if(this.plan.page.unified||this.data.unifiedPlans||this.data.station==='E01')return part.points.slice(1).map((p,i)=>[part.points[i],p]);
   const result=[],boundary={14:480,16:460,17:400}[part.leg.slide];
   for(let i=1;i<part.points.length;i++){
    let a=part.points[i-1],b=part.points[i];const ya=part.leg.sourcePoints[i-1][1],yb=part.leg.sourcePoints[i][1],insideA=this.onSheet(part,ya),insideB=this.onSheet(part,yb);
@@ -164,7 +164,7 @@ export class RouteStudy{
  }
  drawPlan(){
   this.plan.routeLayer?.remove();this.planLeader=null;if(!this.active||!this.plan.layer||this.plan.kind!=='architecture')return;
-  const layer=svg('g',{'aria-label':this.family.label+' · recorrido sobre planta','pointer-events':'none'});this.plan.routeLayer=layer;this.plan.layer.append(layer);const m=this.plan.reg.matrix;
+  const layer=svg('g',{'aria-label':this.family.label+' · recorrido sobre planta','pointer-events':'none'});this.plan.routeLayer=layer;this.plan.layer.append(layer);const m=this.plan.reg?.matrix;if(!m)return;
   this.project=p=>[m[0][0]*p.x-m[0][1]*p.z+m[0][2],m[1][0]*p.x-m[1][1]*p.z+m[1][2]];
   for(const p of [...this.parts,...(this.contextParts||[])]){if(p.leg.schematic||p.leg.level!==this.plan.level.id)continue;const d=this.clippedSegments(p).map(([a,b])=>'M'+this.project(a).join(',')+'L'+this.project(b).join(',')).join(' ');if(!d)continue;layer.append(svg('path',{d,fill:'none',stroke:'#fff','stroke-width':7,'vector-effect':'non-scaling-stroke'}),svg('path',{d,fill:'none',stroke:p.leg.color||this.family.color,'stroke-width':3.5,'vector-effect':'non-scaling-stroke'}));
    if(!p.leg.directionFromAnimation)for(let dist=0;dist<p.length;dist+=12){const s=this.sample(p,dist);if(!this.onSheet(p,s.sourceY))continue;const a=this.project(s.point),b=this.project(s.point.clone().add(s.direction)),angle=Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI;layer.append(svg('path',{d:'M-20,-12 L0,0 L-20,12',transform:`translate(${a}) rotate(${angle})`,fill:'none',stroke:p.leg.color||this.family.color,'stroke-width':3,'vector-effect':'non-scaling-stroke'}));}
@@ -172,7 +172,7 @@ export class RouteStudy{
   for(const mark of this.routeSource?.waypoints||[]){if(mark.level!==this.plan.level.id)continue;const [x,y]=this.project(new THREE.Vector3(...mark.point)),g=svg('g',{transform:`translate(${x},${y})`}),text=svg('text',{x:12,y:-12,fill:'#101820',stroke:'white','stroke-width':5,'paint-order':'stroke','font-size':30,'font-weight':700});text.textContent=mark.label;g.append(svg('circle',{r:7,fill:'white',stroke:'#101820','stroke-width':2}),text);layer.append(g);}
   this.planLeader=svg('g');this.planLeader.append(svg('path',{d:'M30,0 L-20,-20 L-10,0 L-20,20 Z',fill:this.family.color,stroke:'#fff','stroke-width':2,'vector-effect':'non-scaling-stroke'}));layer.append(this.planLeader);this.updatePlanLeader();
  }
- updatePlanLeader(){if(!this.planLeader||!this.current)return;const visible=this.planAnimationStarted()&&!this.current.leg.schematic&&this.current.leg.level===this.plan.level.id&&this.onSheet(this.current,this.currentSample.sourceY);this.planLeader.style.display=visible?'':'none';if(!visible)return;const s=this.currentSample,a=this.project(s.point),b=this.project(s.point.clone().add(s.direction));this.planLeader.firstElementChild.setAttribute('fill',this.current.leg.color||this.family.color);this.planLeader.setAttribute('transform',`translate(${a}) rotate(${Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI})`);}
+ updatePlanLeader(){if(!this.planLeader||!this.current)return;const visible=this.planAnimationStarted()&&!this.current.leg.schematic&&this.current.leg.level===this.plan.level.id&&this.onSheet(this.current,this.currentSample.sourceY);this.planLeader.style.display=visible?'':'none';if(!visible)return;const s=this.currentSample,a=this.project(s.point),b=this.project(s.point.clone().add(this.planDirection||s.direction));this.planLeader.firstElementChild.setAttribute('fill',this.current.leg.color||this.family.color);this.planLeader.setAttribute('transform',`translate(${a}) rotate(${Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI})`);}
  sizeArrows(camera,element){const height=Math.max(1,element.clientHeight),scale=2*Math.tan(camera.fov*Math.PI/360)/height;for(const p of this.parts){for(const arrow of p.arrows){const length=Math.max(1.8,Math.min(9,camera.position.distanceTo(arrow.position)*scale*12));arrow.setLength(length,length*.5,length*.38);}const width=Math.max(1,Math.min(5,camera.position.distanceTo(p.points[0])*scale*1.3/.16));for(const n of p.group.children)if(n.isMesh)n.scale.set(width*(n.renderOrder===78?1.8:1),1,width*(n.renderOrder===78?1.8:1));}this.leader.scale.setScalar(Math.max(1,Math.min(4,camera.position.distanceTo(this.leader.position)*scale*3/.65)));}
  cachedView(view,element,camera,key){
   const s=this.scene,r=s.renderer,rect=element.getBoundingClientRect();if(rect.width<=0||rect.height<=0)return;
@@ -188,7 +188,7 @@ export class RouteStudy{
   const spacesVisible=s.spaces?.group.visible,markersVisible=s.markerGroup.visible;s.staticGroup.visible=s.cameraGroup.visible=s.markerGroup.visible=false;if(s.spaces)s.spaces.group.visible=false;
   const bg=s.scene.background;s.scene.background=null;view(element,camera,null,null,s.scene,false);s.scene.background=bg;s.staticGroup.visible=s.cameraGroup.visible=true;s.markerGroup.visible=markersVisible;if(s.spaces)s.spaces.group.visible=spacesVisible;
  }
- focusLevel(){const box=new THREE.Box3();for(const p of this.parts)if(!p.leg.schematic&&p.leg.level===this.scene.level.id)for(const v of p.points)box.expandByPoint(v);if(box.isEmpty())return;const center=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3()),rect=this.scene.axon.getBoundingClientRect(),distance=Math.max(55,size.length()*1.4,size.length()/Math.max(.4,rect.width/rect.height));this.scene.controls.target.copy(center);this.scene.axonCamera.position.copy(center).addScaledVector(new THREE.Vector3(.8,1,1).normalize(),distance);this.scene.controls.update();}
+ focusLevel(){const box=new THREE.Box3();for(const p of this.parts)if(!p.leg.schematic&&p.leg.level===this.scene.level.id)for(const v of p.points)box.expandByPoint(v);if(box.isEmpty())return;const center=box.getCenter(new THREE.Vector3()),size=box.getSize(new THREE.Vector3()),rect=this.scene.axon.getBoundingClientRect(),distance=Math.max(55,size.length()*1.4,size.length()/Math.max(.4,rect.width/rect.height));this.scene.controls.target.copy(center);this.scene.axonCamera.position.copy(center).addScaledVector(new THREE.Vector3(.8,1,1).normalize(),distance);this.scene.controls.update();this.scene.dirty=true;}
  renderViews(view,expanded){
   const rect=this.scene.pov.getBoundingClientRect(),hud=$('#route-live');hud.style.left=(rect.left+10)+'px';hud.style.top=(rect.bottom-hud.offsetHeight-10)+'px';hud.style.maxWidth=Math.max(100,rect.width-20)+'px';hud.style.visibility=this.videoMode||(expanded&&expanded!=='pov-panel')?'hidden':'visible';this.video.layout(rect,expanded);const s=this.scene;s.cone.visible=s.observer.visible=s.activeRing.visible=s.markerGroup.visible=false;s.spaces?.beforePov();s.setModelClipping([]);for(const mesh of s.staticMeshes)mesh.visible=true;for(const node of s.cameraNodes)node.visible=true;
   for(const p of this.parts){p.group.visible=true;for(const arrow of p.arrows)arrow.visible=this.planAnimationStarted(p)&&(!p.leg.directionFromAnimation||p===this.current);}this.leader.visible=this.planAnimationStarted();this.group.visible=true;
@@ -201,7 +201,7 @@ export class RouteStudy{
   }
   if(this.avatar){this.avatar.group.visible=false;for(const p of this.parts)for(const arrow of p.arrows)arrow.visible=this.planAnimationStarted(p)&&(!p.leg.directionFromAnimation||p===this.current);}
   if(this.simulation)this.simulation.group.visible=false;for(const p of this.contextParts||[])p.group.visible=p.leg.level===s.level.id;
-  s.fullStation=false;const floor=s.level.cutMin-2550,ceiling=s.level.cutMax-2550;s.setModelClipping([new THREE.Plane(new THREE.Vector3(0,-1,0),ceiling),new THREE.Plane(new THREE.Vector3(0,1,0),-floor)]);
+  s.fullStation=false;const originY=this.data.originY??2550,extra=this.data.routeCuts?.[s.level.id];const floor=(extra?.min??s.level.cutMin)-originY,ceiling=(extra?.max??s.level.cutMax)-originY;s.setModelClipping([new THREE.Plane(new THREE.Vector3(0,-1,0),ceiling),new THREE.Plane(new THREE.Vector3(0,1,0),-floor)]);
   for(const mesh of s.staticMeshes){const b=mesh.userData.bounds;mesh.visible=!b||b.max[1]>=floor&&b.min[1]<=ceiling;}
   for(const p of this.parts)p.group.visible=!p.leg.schematic&&p.leg.level===s.level.id;this.leader.visible=this.planAnimationStarted()&&!this.current?.leg.schematic&&this.current?.leg.level===s.level.id;
   s.markerGroup.visible=s.showMarkers!==false;for(const marker of s.markers)marker.visible=marker.userData.record.ifcStorey===s.level.ifc;

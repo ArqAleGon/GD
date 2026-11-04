@@ -1,0 +1,899 @@
+{
+  "station": "E03",
+  "unifiedPlans": true,
+  "routeCuts": {
+    "3PCk_hamv00BOIK_fyvCfM": {
+      "min": 2538.95,
+      "max": 2549
+    }
+  },
+  "originY": 2534.645000762939,
+  "videoClockIn3D": true,
+  "videoManifestUrl": "./assets/videotours/manifest.json?v=20261104-route40",
+  "hideSegments": true,
+  "measurementNote": "Reconstrucción visual del POV sobre plantas registradas con muros IFC. Distancias aproximadas; los cortes de edición no representan movimiento continuo.",
+  "sourceLabel": "EM3-BICIUSUARIO.mp4 · 2:27 · plantas E03",
+  "pageByLevel": {
+    "2SCB_wEvLD9uWO8$uQSWQR": 1,
+    "3PCk_hamv00BOIK_fyvCfM": 2,
+    "2SCB_wEvLD9uWO8$uQSW5e": 3,
+    "2SCB_wEvLD9uWO8$uQSW4n": 4
+  },
+  "families": [
+    {
+      "id": "biciusuarios",
+      "label": "E03 · Biciusuarios / acceso a plataforma",
+      "color": "#000000",
+      "defaultJourney": "e03-pov"
+    }
+  ],
+  "routes": [
+    {
+      "id": "e03-access-descent",
+      "family": "biciusuarios",
+      "level": "3PCk_hamv00BOIK_fyvCfM",
+      "label": "Acceso Gibraltar · descenso al sótano",
+      "color": "#000000",
+      "points": [
+        [
+          20.973854785159347,
+          11.65499923706102,
+          -15.587377757372451
+        ],
+        [
+          21.192255522997584,
+          11.65499923706102,
+          -17.575417273503263
+        ],
+        [
+          21.756441818579333,
+          11.604999237060838,
+          -18.919847942554043
+        ],
+        [
+          18.941386693404638,
+          10.974999237060729,
+          -23.679718176310416
+        ],
+        [
+          11.305613297838136,
+          9.284999237060674,
+          -36.59075859338918
+        ],
+        [
+          3.669839902257081,
+          7.604999237060838,
+          -49.50179901046795
+        ],
+        [
+          0.8700563238671748,
+          7.004999237060929,
+          -54.235847163392464
+        ],
+        [
+          0.10647898432216607,
+          7.004999237060929,
+          -55.526951205101795
+        ],
+        [
+          3.5063862941460684,
+          7.004999237060929,
+          -57.53770486594294
+        ],
+        [
+          4.692476428259397,
+          6.984999237060947,
+          -55.532189921155805
+        ],
+        [
+          9.869530790456338,
+          5.84499923706062,
+          -46.77850451837003
+        ],
+        [
+          15.22984371415805,
+          4.684999237060765,
+          -37.7149541455874
+        ]
+      ],
+      "directionFromAnimation": true,
+      "connectionType": "stairs",
+      "nextLevel": "2SCB_wEvLD9uWO8$uQSWQR"
+    },
+    {
+      "id": "e03-basement-entry",
+      "family": "biciusuarios",
+      "level": "2SCB_wEvLD9uWO8$uQSWQR",
+      "label": "Sótano · validación del cicloparqueadero",
+      "color": "#000000",
+      "points": [
+        [
+          15.22984371415805,
+          4.684999237060765,
+          -37.7149541455874
+        ],
+        [
+          18.868962138469215,
+          4.684999237060765,
+          -35.25484904744371
+        ],
+        [
+          22.43232305640413,
+          4.684999237060765,
+          -29.229696852809866
+        ],
+        [
+          26.504735534035717,
+          4.684999237060765,
+          -22.343808630364947
+        ],
+        [
+          28.540941772866063,
+          4.684999237060765,
+          -18.900864519149764
+        ],
+        [
+          32.904830315252184,
+          4.684999237060765,
+          -17.41544310095196
+        ],
+        [
+          31.539694351435173,
+          4.684999237060765,
+          -15.79482476208068
+        ],
+        [
+          28.95748626801651,
+          4.684999237060765,
+          -14.267670082961558
+        ],
+        [
+          26.805646198496106,
+          4.684999237060765,
+          -12.995041183690773
+        ]
+      ],
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e03-basement-exit",
+      "family": "biciusuarios",
+      "level": "2SCB_wEvLD9uWO8$uQSWQR",
+      "label": "Sótano · salida del cicloparqueadero y ascensor",
+      "color": "#000000",
+      "points": [
+        [
+          34.81062260942417,
+          4.684999237060765,
+          -6.924592051989748
+        ],
+        [
+          35.357581049218425,
+          4.684999237060765,
+          -9.33930455353402
+        ],
+        [
+          37.489989381079795,
+          4.684999237060765,
+          -10.251902332514874
+        ],
+        [
+          39.3734801519895,
+          4.684999237060765,
+          -7.067179029632825
+        ],
+        [
+          43.10611848987173,
+          4.684999237060765,
+          -8.80999601331132
+        ],
+        [
+          45.45049409780768,
+          4.684999237060765,
+          -7.989080056009698
+        ],
+        [
+          49.522906575439265,
+          4.684999237060765,
+          -1.1031918335647788
+        ],
+        [
+          53.49350874114316,
+          4.684999237060765,
+          5.610549183315015
+        ],
+        [
+          51.185258175231866,
+          4.684999237060765,
+          7.208040756042465
+        ],
+        [
+          52.559697386444896,
+          4.684999237060765,
+          9.532028031127993
+        ]
+      ],
+      "directionFromAnimation": true,
+      "discontinuousStart": true
+    },
+    {
+      "id": "e03-lift",
+      "family": "biciusuarios",
+      "level": "2SCB_wEvLD9uWO8$uQSWQR",
+      "label": "Ascensor · Sótano → Intermedio",
+      "color": "#000000",
+      "points": [
+        [
+          52.559697386444896,
+          4.684999237060765,
+          9.532028031127993
+        ],
+        [
+          52.559697386444896,
+          20.784999237060674,
+          9.532028031127993
+        ]
+      ],
+      "directionFromAnimation": true,
+      "connectionType": "elevator",
+      "nextLevel": "2SCB_wEvLD9uWO8$uQSW5e"
+    },
+    {
+      "id": "e03-intermediate",
+      "family": "biciusuarios",
+      "level": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio Gibraltar · zona no paga y validación Metro",
+      "color": "#000000",
+      "points": [
+        [
+          52.559697386444896,
+          20.784999237060674,
+          9.532028031127993
+        ],
+        [
+          51.185258175231866,
+          20.784999237060674,
+          7.208040756042465
+        ],
+        [
+          49.14905193641607,
+          20.784999237060674,
+          3.765096644827281
+        ],
+        [
+          44.56758789905871,
+          20.784999237060674,
+          -3.9815276054141577
+        ],
+        [
+          39.986123861715896,
+          20.784999237060674,
+          -11.728151855670149
+        ],
+        [
+          35.50647013631533,
+          20.784999237060674,
+          -19.302628900346463
+        ],
+        [
+          30.169906763912877,
+          20.784999237060674,
+          -16.146509230180527
+        ],
+        [
+          26.55481544713257,
+          20.784999237060674,
+          -14.008492679407937
+        ]
+      ],
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e03-bridge",
+      "family": "biciusuarios",
+      "level": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · pasarela hacia Calle 72",
+      "color": "#000000",
+      "points": [
+        [
+          26.55481544713257,
+          20.784999237060674,
+          -14.008492679407937
+        ],
+        [
+          20.271442444165586,
+          20.784999237060674,
+          -10.29241629356693
+        ],
+        [
+          10.372978124403744,
+          20.784999237060674,
+          -4.438323356953333
+        ],
+        [
+          7.240116572706029,
+          20.784999237060674,
+          0.08662730552896392
+        ],
+        [
+          0.3542283502611099,
+          20.784999237060674,
+          4.1590397831605515
+        ],
+        [
+          -2.2279797331575537,
+          20.784999237060674,
+          5.686194462279673
+        ],
+        [
+          -15.879470723652048,
+          20.784999237060674,
+          11.087749214057112
+        ],
+        [
+          -18.0313107931579,
+          20.784999237060674,
+          12.360378113313345
+        ],
+        [
+          -21.94861631488311,
+          20.784999237060674,
+          12.121176421191194
+        ],
+        [
+          -24.524417206994258,
+          20.784999237060674,
+          7.765852120501222
+        ]
+      ],
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e03-platform-stair",
+      "family": "biciusuarios",
+      "level": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Calle 72 · ascenso por escalera a plataforma",
+      "color": "#000000",
+      "points": [
+        [
+          -24.524417206994258,
+          20.784999237060674,
+          7.765852120501222
+        ],
+        [
+          -24.526308742322726,
+          20.79979923706287,
+          7.762653794939979
+        ],
+        [
+          -26.40954041822988,
+          23.05739913940215,
+          4.578368586022407
+        ],
+        [
+          -27.254825102354516,
+          23.05739913940215,
+          3.14910868590232
+        ],
+        [
+          -29.13805677824712,
+          25.3297990417459,
+          -0.035176523015252315
+        ],
+        [
+          -29.983341447805287,
+          25.3297990417459,
+          -1.4644363985134987
+        ],
+        [
+          -31.724038701548125,
+          27.427399024961232,
+          -4.407715544264647
+        ],
+        [
+          -32.569456500481465,
+          27.427399024961232,
+          -5.83720052317949
+        ],
+        [
+          -34.3101537542243,
+          29.524999008176565,
+          -8.78047966894519
+        ]
+      ],
+      "directionFromAnimation": true,
+      "connectionType": "stairs",
+      "nextLevel": "2SCB_wEvLD9uWO8$uQSW4n"
+    },
+    {
+      "id": "e03-platform",
+      "family": "biciusuarios",
+      "level": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · conexión hacia Calle 72",
+      "color": "#000000",
+      "points": [
+        [
+          -34.30838818452321,
+          29.52499923706091,
+          -8.777494333917275
+        ],
+        [
+          -35.183956867214874,
+          29.52499923706091,
+          -10.257960301736603
+        ],
+        [
+          -37.72921466574189,
+          29.52499923706091,
+          -14.561640440762858
+        ],
+        [
+          -41.80162714338803,
+          29.52499923706091,
+          -21.447528663207777
+        ],
+        [
+          -44.34688494191505,
+          29.52499923706091,
+          -25.751208802234032
+        ],
+        [
+          -40.2583888098452,
+          29.52499923706091,
+          -28.169203710829606
+        ],
+        [
+          -37.50033849237661,
+          29.52499923706091,
+          -30.381252183695324
+        ],
+        [
+          -34.311920161009766,
+          29.52499923706091,
+          -32.84782643642393
+        ],
+        [
+          -31.225312141585164,
+          29.52499923706091,
+          -35.48654789470311
+        ],
+        [
+          -27.074347470465,
+          29.52499923706091,
+          -38.29002650157781
+        ]
+      ],
+      "directionFromAnimation": true
+    }
+  ],
+  "links": [],
+  "journeys": [
+    {
+      "id": "e03-pov",
+      "family": "biciusuarios",
+      "label": "POV completo · Gibraltar → Sótano → Intermedio → Plataforma",
+      "legs": [
+        "e03-access-descent",
+        "e03-basement-entry",
+        "e03-basement-exit",
+        "e03-lift",
+        "e03-intermediate",
+        "e03-bridge",
+        "e03-platform-stair",
+        "e03-platform"
+      ],
+      "videoSync": {
+        "videoId": "e03-biciusuario-v38",
+        "keys": [
+          {
+            "time": 0,
+            "leg": "e03-access-descent",
+            "fraction": 0.0
+          },
+          {
+            "time": 1,
+            "leg": "e03-access-descent",
+            "fraction": 0.0
+          },
+          {
+            "time": 3,
+            "leg": "e03-access-descent",
+            "fraction": 0.02726525113623511
+          },
+          {
+            "time": 5,
+            "leg": "e03-access-descent",
+            "fraction": 0.047153471763839584
+          },
+          {
+            "time": 7,
+            "leg": "e03-access-descent",
+            "fraction": 0.12302953544703985
+          },
+          {
+            "time": 12,
+            "leg": "e03-access-descent",
+            "fraction": 0.32881269757801884
+          },
+          {
+            "time": 17,
+            "leg": "e03-access-descent",
+            "fraction": 0.5345806414441467
+          },
+          {
+            "time": 19,
+            "leg": "e03-access-descent",
+            "fraction": 0.6100049211501367
+          },
+          {
+            "time": 20,
+            "leg": "e03-access-descent",
+            "fraction": 0.6304538595022801
+          },
+          {
+            "time": 21,
+            "leg": "e03-access-descent",
+            "fraction": 0.6843027304964048
+          },
+          {
+            "time": 23,
+            "leg": "e03-access-descent",
+            "fraction": 0.7160679182310891
+          },
+          {
+            "time": 27,
+            "leg": "e03-access-descent",
+            "fraction": 0.8555800414507184
+          },
+          {
+            "time": 32,
+            "leg": "e03-access-descent",
+            "fraction": 1.0
+          },
+          {
+            "time": 32,
+            "leg": "e03-basement-entry",
+            "fraction": 0.0
+          },
+          {
+            "time": 34,
+            "leg": "e03-basement-entry",
+            "fraction": 0.12331476463291267
+          },
+          {
+            "time": 37,
+            "leg": "e03-basement-entry",
+            "fraction": 0.3198259840970284
+          },
+          {
+            "time": 40,
+            "leg": "e03-basement-entry",
+            "fraction": 0.5444102349131925
+          },
+          {
+            "time": 42,
+            "leg": "e03-basement-entry",
+            "fraction": 0.6567023603213067
+          },
+          {
+            "time": 44,
+            "leg": "e03-basement-entry",
+            "fraction": 0.7861126406218263
+          },
+          {
+            "time": 46,
+            "leg": "e03-basement-entry",
+            "fraction": 0.8455983275634295
+          },
+          {
+            "time": 48,
+            "leg": "e03-basement-entry",
+            "fraction": 0.9298174216196389
+          },
+          {
+            "time": 50,
+            "leg": "e03-basement-entry",
+            "fraction": 1.0
+          },
+          {
+            "time": 50.8,
+            "leg": "e03-basement-entry",
+            "fraction": 1.0
+          },
+          {
+            "time": 51,
+            "leg": "e03-basement-exit",
+            "fraction": 0.0
+          },
+          {
+            "time": 53,
+            "leg": "e03-basement-exit",
+            "fraction": 0.06800773191514199
+          },
+          {
+            "time": 55,
+            "leg": "e03-basement-exit",
+            "fraction": 0.1317194316780766
+          },
+          {
+            "time": 56,
+            "leg": "e03-basement-exit",
+            "fraction": 0.2333512692541006
+          },
+          {
+            "time": 57,
+            "leg": "e03-basement-exit",
+            "fraction": 0.34650502543466133
+          },
+          {
+            "time": 58,
+            "leg": "e03-basement-exit",
+            "fraction": 0.4147342814935184
+          },
+          {
+            "time": 59,
+            "leg": "e03-basement-exit",
+            "fraction": 0.6344787951711892
+          },
+          {
+            "time": 60,
+            "leg": "e03-basement-exit",
+            "fraction": 0.8487296960070067
+          },
+          {
+            "time": 61,
+            "leg": "e03-basement-exit",
+            "fraction": 0.925836226633368
+          },
+          {
+            "time": 63,
+            "leg": "e03-basement-exit",
+            "fraction": 1.0
+          },
+          {
+            "time": 64,
+            "leg": "e03-basement-exit",
+            "fraction": 1.0
+          },
+          {
+            "time": 64,
+            "leg": "e03-lift",
+            "fraction": 0.0
+          },
+          {
+            "time": 71,
+            "leg": "e03-lift",
+            "fraction": 0.0
+          },
+          {
+            "time": 77,
+            "leg": "e03-lift",
+            "fraction": 1.0
+          },
+          {
+            "time": 77,
+            "leg": "e03-intermediate",
+            "fraction": 0.0
+          },
+          {
+            "time": 78,
+            "leg": "e03-intermediate",
+            "fraction": 0.0
+          },
+          {
+            "time": 79,
+            "leg": "e03-intermediate",
+            "fraction": 0.061503416856803744
+          },
+          {
+            "time": 82,
+            "leg": "e03-intermediate",
+            "fraction": 0.15261958997733815
+          },
+          {
+            "time": 87,
+            "leg": "e03-intermediate",
+            "fraction": 0.35763097949893635
+          },
+          {
+            "time": 92,
+            "leg": "e03-intermediate",
+            "fraction": 0.5626423690206511
+          },
+          {
+            "time": 94.5,
+            "leg": "e03-intermediate",
+            "fraction": 0.7630979498859514
+          },
+          {
+            "time": 96,
+            "leg": "e03-intermediate",
+            "fraction": 0.9043280182231677
+          },
+          {
+            "time": 97,
+            "leg": "e03-intermediate",
+            "fraction": 1.0
+          },
+          {
+            "time": 107,
+            "leg": "e03-intermediate",
+            "fraction": 1.0
+          },
+          {
+            "time": 107,
+            "leg": "e03-bridge",
+            "fraction": 0.0
+          },
+          {
+            "time": 109,
+            "leg": "e03-bridge",
+            "fraction": 0.11875804917533439
+          },
+          {
+            "time": 110,
+            "leg": "e03-bridge",
+            "fraction": 0.3058426471916651
+          },
+          {
+            "time": 111,
+            "leg": "e03-bridge",
+            "fraction": 0.39537702736315344
+          },
+          {
+            "time": 112,
+            "leg": "e03-bridge",
+            "fraction": 0.5255228346787836
+          },
+          {
+            "time": 112.5,
+            "leg": "e03-bridge",
+            "fraction": 0.5743275124222305
+          },
+          {
+            "time": 112.5,
+            "leg": "e03-bridge",
+            "fraction": 0.8131659019055738
+          },
+          {
+            "time": 113,
+            "leg": "e03-bridge",
+            "fraction": 0.8538364666915634
+          },
+          {
+            "time": 114,
+            "leg": "e03-bridge",
+            "fraction": 0.9176827768728782
+          },
+          {
+            "time": 117,
+            "leg": "e03-bridge",
+            "fraction": 0.9176827768728782
+          },
+          {
+            "time": 118,
+            "leg": "e03-bridge",
+            "fraction": 0.9176827768728782
+          },
+          {
+            "time": 120,
+            "leg": "e03-bridge",
+            "fraction": 1.0
+          },
+          {
+            "time": 120,
+            "leg": "e03-platform-stair",
+            "fraction": 0.0
+          },
+          {
+            "time": 120,
+            "leg": "e03-platform-stair",
+            "fraction": 0.0007033303782656729
+          },
+          {
+            "time": 122.7,
+            "leg": "e03-platform-stair",
+            "fraction": 0.2004622819954238
+          },
+          {
+            "time": 123.4,
+            "leg": "e03-platform-stair",
+            "fraction": 0.27699816562178453
+          },
+          {
+            "time": 125.6,
+            "leg": "e03-platform-stair",
+            "fraction": 0.47711330941353236
+          },
+          {
+            "time": 126.3,
+            "leg": "e03-platform-stair",
+            "fraction": 0.5536491917212988
+          },
+          {
+            "time": 128.1,
+            "leg": "e03-platform-stair",
+            "fraction": 0.7385506276399729
+          },
+          {
+            "time": 128.8,
+            "leg": "e03-platform-stair",
+            "fraction": 0.8150985640808337
+          },
+          {
+            "time": 131,
+            "leg": "e03-platform-stair",
+            "fraction": 1.0
+          },
+          {
+            "time": 131,
+            "leg": "e03-platform",
+            "fraction": 0.0
+          },
+          {
+            "time": 132,
+            "leg": "e03-platform",
+            "fraction": 0.04184258921532655
+          },
+          {
+            "time": 134,
+            "leg": "e03-platform",
+            "fraction": 0.1634780229812166
+          },
+          {
+            "time": 137,
+            "leg": "e03-platform",
+            "fraction": 0.3580947170067377
+          },
+          {
+            "time": 138.5,
+            "leg": "e03-platform",
+            "fraction": 0.4797301507726277
+          },
+          {
+            "time": 140,
+            "leg": "e03-platform",
+            "fraction": 0.5952838128500536
+          },
+          {
+            "time": 141,
+            "leg": "e03-platform",
+            "fraction": 0.6812930528984482
+          },
+          {
+            "time": 142,
+            "leg": "e03-platform",
+            "fraction": 0.7793586747331553
+          },
+          {
+            "time": 143,
+            "leg": "e03-platform",
+            "fraction": 0.8781458191486465
+          },
+          {
+            "time": 145,
+            "leg": "e03-platform",
+            "fraction": 1.0
+          },
+          {
+            "time": 147.033,
+            "leg": "e03-platform",
+            "fraction": 1.0
+          }
+        ],
+        "hiddenWindows": [
+          [
+            50.8,
+            51
+          ],
+          [
+            112.2,
+            112.8
+          ]
+        ],
+        "waitingLabel": "Transición de edición del video",
+        "method": "Reloj maestro: tiempo real del video. Hitos visuales por tramo, pausas y cortes de edición conservados."
+      }
+    }
+  ]
+}

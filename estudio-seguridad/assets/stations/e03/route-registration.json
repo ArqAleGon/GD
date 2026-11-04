@@ -1,0 +1,105 @@
+{
+  "originIfc": [
+    90099.354295585,
+    102878.75857297893,
+    2534.645000762939
+  ],
+  "architecture": {
+    "1": {
+      "matrix": [
+        [
+          25.570296158445622,
+          -43.235846596682734,
+          3062.2882951216534
+        ],
+        [
+          -43.235846596682734,
+          -25.570296158445622,
+          4040.2862336216963
+        ]
+      ],
+      "crop": [
+        0,
+        0,
+        6000,
+        4243
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · recorrido sincronizado con POV",
+      "method": "Wall sections registered against architectural sheet; trimmed chamfer fit at 1600 px",
+      "wallFitPixels1600": 0.28526148969889065
+    },
+    "2": {
+      "matrix": [
+        [
+          18.096782947522545,
+          -30.59916578846975,
+          2969.8639585855367
+        ],
+        [
+          -30.59916578846975,
+          -18.096782947522545,
+          2148.4113517904952
+        ]
+      ],
+      "crop": [
+        0,
+        0,
+        6000,
+        4243
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · recorrido sincronizado con POV",
+      "method": "Wall sections registered against architectural sheet; trimmed chamfer fit at 1600 px",
+      "wallFitPixels1600": 0.19400953029271614
+    },
+    "3": {
+      "matrix": [
+        [
+          17.93134119061833,
+          -30.319426579433106,
+          3022.6860092454435
+        ],
+        [
+          -30.319426579433106,
+          -17.93134119061833,
+          2146.150339080736
+        ]
+      ],
+      "crop": [
+        0,
+        0,
+        6000,
+        4243
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · recorrido sincronizado con POV",
+      "method": "Wall sections registered against architectural sheet; trimmed chamfer fit at 1600 px",
+      "wallFitPixels1600": 0.03578767123287671
+    },
+    "4": {
+      "matrix": [
+        [
+          17.912251757129386,
+          -30.28714897839042,
+          3019.658265090818
+        ],
+        [
+          -30.28714897839042,
+          -17.912251757129386,
+          2121.1682991526877
+        ]
+      ],
+      "crop": [
+        0,
+        0,
+        6000,
+        4243
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · recorrido sincronizado con POV",
+      "method": "Wall sections registered against architectural sheet; trimmed chamfer fit at 1600 px",
+      "wallFitPixels1600": 0.1571676802780191
+    }
+  }
+}
