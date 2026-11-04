@@ -10,7 +10,7 @@ export const e02Study={
   "cameras": 210,
   "fixed": 32,
   "cameraInventoryPending": false,
-  "sourceCount": 4,
+  "sourceCount": 5,
   "levels": [
     {
       "id": "B",
@@ -43,7 +43,7 @@ export const e02Study={
   ],
   "assets": {
     "cameras": "./assets/stations/e02/cameras.json",
-    "models": "./assets/stations/e02/models/manifest.json",
+    "models": "./assets/stations/e02/models/manifest.json?v=20261104-structures41",
     "architecture": "./assets/stations/e02/architecture.json",
     "inventory": "./assets/stations/e02/inventory.json",
     "registration": "./assets/stations/e02/plan-registration.json",
@@ -69,6 +69,10 @@ export const e02Study={
     [
       "e02-ins",
       "Instalaciones · 5400"
+    ],
+    [
+      "e02-est-1100",
+      "Estructura · 1100"
     ]
   ]
 };

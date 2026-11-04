@@ -5,7 +5,7 @@
   "bounds": {
     "min": [
       89458.7064805083,
-      2535.2499999999995,
+      2497.620001220701,
       -103818.09524980363
     ],
     "max": [
@@ -3464,6 +3464,31 @@
         0,
         1
       ]
+    },
+    {
+      "source": "L1T1-1100-302-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E02",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 352,
+      "sha256": "7d2fcfc41d843093c3a35973dad7f263c3f08aa4e65265e604cecdc06eac600d",
+      "compressedBytes": 257559,
+      "boundsGltfMetres": {
+        "min": [
+          89481.7601210417,
+          2497.620001220701,
+          -103812.40383025342
+        ],
+        "max": [
+          89573.9190233073,
+          2542.1400000095346,
+          -103665.18693447109
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e02/structures/l1t1-1100-302-con-ed-est-mo-0001_v01/e02-l1t1-1100-302-con-ed-est-mo-0001_v01-p001.glb.gz",
+      "url": "./assets/stations/e02/structures/l1t1-1100-302-con-ed-est-mo-0001_v01/e02-l1t1-1100-302-con-ed-est-mo-0001_v01-p001.glb.gz",
+      "initialOverlay": true
     }
   ],
   "geometryReconverted": false,
@@ -3472,7 +3497,8 @@
     "L1T1-0000-302-CON-ED-ARQ-MO-0001_V00.ifc",
     "L1T1-1150-302-CON-ED-EST-MO-0001_V00.ifc",
     "L1T1-1200-302-CON-ED-EST-MO-0001_V01.ifc",
-    "L1T1-5400-302-CON-ED-INS-MO-0001_V00.ifc"
+    "L1T1-5400-302-CON-ED-INS-MO-0001_V00.ifc",
+    "L1T1-1100-302-CON-ED-EST-MO-0001_V01.ifc"
   ],
   "installations": {
     "source": "L1T1-5400-302-CON-ED-INS-MO-0001_V00.ifc",
@@ -3485,5 +3511,35 @@
     "L1T1-5400-302-CON-ED-INS-MO-0001_V00.ifc"
   ],
   "integrationNotes": [],
-  "reusedGeometryReconverted": false
+  "reusedGeometryReconverted": false,
+  "renderOriginGltfMetres": [
+    89520.55657777554,
+    2552.721927002487,
+    -103712.28657236183
+  ],
+  "structure1100": {
+    "source": "L1T1-1100-302-CON-ED-EST-MO-0001_V01.ifc",
+    "sha256": "5ad2d2737aa21cf5fef521daed760da47c239dcee650c78c7d1c8bd5906722ff",
+    "elements": 348,
+    "audit": {
+      "status": "passed",
+      "maxPlacementMatrixDifference": 1.4551915228366852e-11,
+      "representedMissing": [],
+      "overlapWithRecoveredStationMetres": [
+        92.15890226559713,
+        6.890000009535015,
+        147.21689578233054
+      ],
+      "triangles": 117114,
+      "checks": [
+        "Source SHA256",
+        "All converted GlobalIds",
+        "Native IFC placement matrices in metres",
+        "Finite coordinates",
+        "Index bounds",
+        "Coordinate overlap"
+      ]
+    },
+    "nativePlacementPreserved": true
+  }
 }

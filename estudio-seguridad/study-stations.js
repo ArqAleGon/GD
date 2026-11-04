@@ -1,5 +1,5 @@
-import {e02Study} from './study-e02.js?v=20261103-quality36';
-import {recoveredStations} from './study-model-stations.js?v=20261103-quality36';
+import {e02Study} from './study-e02.js?v=20261104-structures41';
+import {recoveredStations} from './study-model-stations.js?v=20261104-structures41';
 const commonLevels=[['B','Sótano','BASEMENT'],['A','Acceso','ACCESS'],['I','Intermedio','INTERMEDIATE'],['P','Plataforma','PLATFORM']];
 const makeLevels=cuts=>commonLevels.map(([id,name,suffix],i)=>({id,name,ifc:`ARC_PL_0${i}_${suffix}`,cutMin:cuts[i][0],cutMax:cuts[i][1]}));
 export const stations={
@@ -20,6 +20,6 @@ for(const config of Object.values(stations))if(config.modelOnly){
 }
 stations.E03.povVideo={id:'e03-biciusuario-v38',title:'E03 · Biciusuarios'};
 for(const id of ['E03','E04'])stations[id].assets.architecture='./assets/stations/'+id.toLowerCase()+'/architecture.json';
-stations.E03.assets.routes='./assets/stations/e03/routes.json?v=20261104-route40';
-stations.E03.assets.registration='./assets/stations/e03/route-registration.json?v=20261104-route40';
+stations.E03.assets.routes='./assets/stations/e03/routes.json?v=20261104-structures41';
+stations.E03.assets.registration='./assets/stations/e03/route-registration.json?v=20261104-structures41';
 export const station=stations[new URLSearchParams(location.search).get('station')]||stations.E09;

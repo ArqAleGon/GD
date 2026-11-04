@@ -36,20 +36,6 @@
       "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/e15-architecture-web.glb"
     },
     {
-      "file": "e15-1100.glb",
-      "source": "L1T1-1100-315-CON-ED-EST-MO-0001_V00.ifc",
-      "section": "E15",
-      "discipline": "EST",
-      "version": "V00",
-      "converted": 297,
-      "missing": 0,
-      "label": "IFC · E15 · ARQ + EST",
-      "role": "detail",
-      "gitBlobSha": "6d516b6cfe48e037195e612b37d164ff1a86b1ae",
-      "expectedBytes": 1001668,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/e15-1100.glb"
-    },
-    {
       "file": "assets/stations/e15/installations/l1t1-5400-315-con-ed-ins-mo-0001_vdd/e15-ins-5400-p001.glb.gz",
       "source": "L1T1-5400-315-CON-ED-INS-MO-0001_VDD.ifc",
       "section": "E15",
@@ -148,14 +134,39 @@
       "instanceIdentity": "ifc-globalid",
       "url": "./assets/stations/e15/installations/l1t1-5400-315-con-ed-ins-mo-0001_vdd/e15-ins-5400-p004.glb.gz",
       "initialOverlay": true
+    },
+    {
+      "source": "L1T1-1100-315-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E15",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 297,
+      "sha256": "95a874327cb306cac79e2a0561f20393723ecce0134ce55c12b2ab7f51d0cec9",
+      "compressedBytes": 254682,
+      "boundsGltfMetres": {
+        "min": [
+          101390.38089185876,
+          2509.9700007629376,
+          -105886.9802237342
+        ],
+        "max": [
+          101436.76352670099,
+          2582.295000095366,
+          -105731.86073491149
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e15/structures/l1t1-1100-315-con-ed-est-mo-0001_v00/e15-l1t1-1100-315-con-ed-est-mo-0001_v00-p001.glb.gz",
+      "url": "./assets/stations/e15/structures/l1t1-1100-315-con-ed-est-mo-0001_v00/e15-l1t1-1100-315-con-ed-est-mo-0001_v00-p001.glb.gz",
+      "initialOverlay": true
     }
   ],
   "geometryReconverted": false,
   "legacyGrouped": true,
   "sourceIfcFiles": [
     "L1T1-0000-315-CON-ED-ARQ-MO-0001_V00.ifc",
-    "L1T1-1100-315-CON-ED-EST-MO-0001_V00.ifc",
-    "L1T1-5400-315-CON-ED-INS-MO-0001_VDD.ifc"
+    "L1T1-5400-315-CON-ED-INS-MO-0001_VDD.ifc",
+    "L1T1-1100-315-CON-ED-EST-MO-0001_V00.ifc"
   ],
   "installations": {
     "source": "L1T1-5400-315-CON-ED-INS-MO-0001_VDD.ifc",
@@ -168,5 +179,35 @@
   "reusedGeometryReconverted": false,
   "newGeometryConverted": [
     "L1T1-5400-315-CON-ED-INS-MO-0001_VDD.ifc"
-  ]
+  ],
+  "renderOriginGltfMetres": [
+    101419.9524130513,
+    2553.103096666639,
+    -105812.83636745575
+  ],
+  "structure1100": {
+    "source": "L1T1-1100-315-CON-ED-EST-MO-0001_V00.ifc",
+    "sha256": "89dbbda1fa10e5b2058d54d63126fef28364056465bcab4b291260caa829914d",
+    "elements": 297,
+    "audit": {
+      "status": "passed",
+      "maxPlacementMatrixDifference": 1.4551915228366852e-11,
+      "representedMissing": [],
+      "overlapWithRecoveredStationMetres": [
+        46.38263484222989,
+        72.32499933242843,
+        155.11948882270372
+      ],
+      "triangles": 55792,
+      "checks": [
+        "Source SHA256",
+        "All converted GlobalIds",
+        "Native IFC placement matrices in metres",
+        "Finite coordinates",
+        "Index bounds",
+        "Coordinate overlap"
+      ]
+    },
+    "nativePlacementPreserved": true
+  }
 }

@@ -14035,5 +14035,38 @@
     "L1T1-5400-302-CON-ED-INS-MO-0001_V00.ifc"
   ],
   "geometryReconverted": false,
-  "method": "Existing native GLB triangles repackaged without simplification"
+  "method": "Existing native GLB triangles repackaged without simplification",
+  "additionalModels": [
+    {
+      "package": "e02-est-1100",
+      "source": "L1T1-1100-302-CON-ED-EST-MO-0001_V01.ifc",
+      "baseUrl": "./assets/stations/e02/structures/l1t1-1100-302-con-ed-est-mo-0001_v01/",
+      "files": [
+        {
+          "file": "e02-l1t1-1100-302-con-ed-est-mo-0001_v01-p001.glb.gz",
+          "source": "L1T1-1100-302-CON-ED-EST-MO-0001_V01.ifc",
+          "section": "E02",
+          "discipline": "EST",
+          "role": "detail",
+          "converted": 352,
+          "sha256": "7d2fcfc41d843093c3a35973dad7f263c3f08aa4e65265e604cecdc06eac600d",
+          "compressedBytes": 257559,
+          "boundsGltfMetres": {
+            "min": [
+              89481.7601210417,
+              2497.620001220701,
+              -103812.40383025342
+            ],
+            "max": [
+              89573.9190233073,
+              2542.1400000095346,
+              -103665.18693447109
+            ]
+          },
+          "instanceIdentity": "ifc-globalid"
+        }
+      ],
+      "renderableElements": 348
+    }
+  ]
 }

@@ -112,11 +112,12 @@ export class StudyScene{
  }
  alignFrameToStation(){
   let n=0,x=0,z=0,xx=0,zz=0,xz=0;
-  for(const mesh of this.staticMeshes){if(!mesh.isMesh||mesh.userData.detachedAxis)continue;const p=mesh.geometry.attributes.position;if(!p)continue;const step=Math.max(1,Math.ceil(p.count/256));for(let i=0;i<p.count;i+=step){const a=p.getX(i),b=p.getZ(i);n++;x+=a;z+=b;xx+=a*a;zz+=b*b;xz+=a*b;}}
+  for(const mesh of this.staticMeshes){if(!mesh.isMesh||mesh.isInstancedMesh||mesh.userData.detachedAxis)continue;const p=mesh.geometry.attributes.position;if(!p)continue;const step=Math.max(1,Math.ceil(p.count/256));for(let i=0;i<p.count;i+=step){const a=p.getX(i),b=p.getZ(i);n++;x+=a;z+=b;xx+=a*a;zz+=b*b;xz+=a*b;}}
   if(!n)return;const angle=.5*Math.atan2(2*(xz-x*z/n),xx-x*x/n-zz+z*z/n),sign=Math.cos(angle)<0?-1:1;this.frameDirection=[-Math.sin(angle)*sign,.65,Math.cos(angle)*sign];
   const horizontal=new THREE.Vector3(this.frameDirection[0],0,this.frameDirection[2]).normalize(),right=new THREE.Vector3(horizontal.z,0,-horizontal.x);
   this.frameAxes={horizontal,right};
   for(const mesh of this.staticMeshes){const p=mesh.geometry.attributes.position;if(!p)continue;let u0=Infinity,u1=-Infinity,v0=Infinity,v1=-Infinity;
+   if(mesh.isInstancedMesh){const b=mesh.userData.bounds;for(const x of [b.min[0],b.max[0]])for(const z of [b.min[2],b.max[2]]){const u=x*right.x+z*right.z,v=x*horizontal.x+z*horizontal.z;u0=Math.min(u0,u);u1=Math.max(u1,u);v0=Math.min(v0,v);v1=Math.max(v1,v);}mesh.userData.frameBounds={u0,u1,v0,v1};continue;}
    for(let i=0;i<p.count;i++){const x=p.getX(i),z=p.getZ(i),u=x*right.x+z*right.z,v=x*horizontal.x+z*horizontal.z;u0=Math.min(u0,u);u1=Math.max(u1,u);v0=Math.min(v0,v);v1=Math.max(v1,v);}
    mesh.userData.frameBounds={u0,u1,v0,v1};
   }

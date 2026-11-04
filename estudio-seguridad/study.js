@@ -1,11 +1,11 @@
 import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
-import {station,stations} from './study-stations.js?v=20261104-route40';
+import {station,stations} from './study-stations.js?v=20261104-structures41';
 import {StationVideo} from './study-station-video.js?v=20261103-e03video38';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
 import {PlanViewer} from './study-plans.js?v=20261028-e01media23';
-import {StudyScene} from './study-scene.js?v=20261104-route40';
+import {StudyScene} from './study-scene.js?v=20261104-structures41';
 import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261028-e01media23';
-import {RouteStudy} from './study-routes.js?v=20261104-route40';
+import {RouteStudy} from './study-routes.js?v=20261104-structures41';
 import {SpaceStudy} from './study-spaces.js?v=20261103-quality36';
 const $=s=>document.querySelector(s);
 const levels=station.levels;
@@ -17,7 +17,7 @@ const defaults=()=>({fov:90,range:25,yaw:0,tilt:0});
 initDrawers();initFullscreen(()=>{window.dispatchEvent(new Event('resize'));});
 const canView=r=>!!r&&typeOf(r)==='F';
 const typeOf=r=>Object.keys(types).find(k=>(r.ifcTypeName||'').includes(types[k].ifcFamilyToken));
-async function json(url){const request=new URL(url,location.href);if(!request.searchParams.has('v'))request.searchParams.set('v','20261104-route40');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
+async function json(url){const request=new URL(url,location.href);if(!request.searchParams.has('v'))request.searchParams.set('v','20261104-structures41');const r=await fetch(request);if(!r.ok)throw Error(`${r.status}: ${url}`);return r.json();}
 function options(select,items){select.replaceChildren(...items.map(([value,text])=>{const o=document.createElement('option');o.value=value;o.textContent=text;return o;}));}
 for(const selector of ['#entry-level','#level-select']){options($(selector),levels.map(l=>[l.id,l.name]));$(selector).value=level.id;}
 $('#entry-dialog').showModal();
@@ -174,7 +174,7 @@ if(new URLSearchParams(location.search).get('start')==='1'){const url=new URL(lo
 
 async function loadRecoveredData(){
  const source=await json(station.modelManifest);types=await json('./assets/camera-types.json');
- station.origin=source.bounds.min.map((v,i)=>(v+source.bounds.max[i])/2);
+ station.origin=source.renderOriginGltfMetres||source.bounds.min.map((v,i)=>(v+source.bounds.max[i])/2);
  modelManifest={...source,recovered:true};
  const size=source.bounds.max.map((v,i)=>v-source.bounds.min[i]);modelManifest.frameDirection=size[2]>size[0]?[1,.8,.35]:[.35,.8,1];
  planView.configure(station.assets.registration?await json(station.assets.registration):{},records,types);
