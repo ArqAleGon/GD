@@ -48,11 +48,12 @@ export const e02Study={
     "inventory": "./assets/stations/e02/inventory.json",
     "registration": "./assets/stations/e02/plan-registration.json",
     "spaces": "./assets/stations/e02/spaces.json",
-    "locations": "./assets/stations/e02/camera-locations.json"
+    "locations": "./assets/stations/e02/camera-locations.json",
+    "routes": "./assets/stations/e02/routes.json?v=20261105-e02routes49"
   },
   "modelBase": "./assets/stations/e02/models/",
   "cameraBase": null,
-  "description": "Arquitectura, estructuras e instalaciones de E02. Cuatro plantas arquitectónicas e inventario CCTV, 210 cámaras del IFC y 32 perspectivas Fixed. Recorridos pendientes.",
+  "description": "Arquitectura, estructuras e instalaciones de E02. Cuatro plantas arquitectónicas e inventario CCTV, 210 cámaras del IFC y 32 perspectivas Fixed. Recorridos Biciusuarios y PMR sincronizados con sus videos POV.",
   "packages": [
     [
       "e02-0000",
