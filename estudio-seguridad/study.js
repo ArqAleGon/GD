@@ -1,7 +1,7 @@
 import {originalSheets} from './study-plan-originals.js?v=20261104-originals48';
 import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
-import {station,stations} from './study-stations.js?v=20261106-e04videos50';
-import {StationVideo} from './study-station-video.js?v=20261103-e03video38';
+import {station,stations} from './study-stations.js?v=20261106-e04embedded51';
+import {StationVideo} from './study-station-video.js?v=20261106-e04embedded51';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
 import {PlanViewer} from './study-plans.js?v=20261104-integrity45';
 import {StudyScene} from './study-scene.js?v=20261104-integrity45';
@@ -31,6 +31,7 @@ function cameraLabel(r){const type=types[typeOf(r)]?.label||'Cámara';const vari
 function updateCameraMenu(){const cams=records.filter(r=>level.id==='all'||r.ifcStorey===level.ifc).sort((a,b)=>(typeOf(a)==='F'?0:1)-(typeOf(b)==='F'?0:1)||String(a.mark||'').localeCompare(String(b.mark||''),undefined,{numeric:true}));options($('#camera-select'),[...(cams.length?[['','Selecciona una cámara']]:[]),...cams.map(r=>[r.ifcGlobalId,cameraLabel(r)])]);if(active&&cams.includes(active))$('#camera-select').value=active.ifcGlobalId;if(!cams.length)$('#camera-select').append(new Option('En construcción',''));$('#camera-select').disabled=!cams.length;$('#camera-count').textContent=station.cameraInventoryPending?'Inventario de cámaras · En construcción':`${cams.length} cámaras · ${cams.filter(r=>typeOf(r)==='F').length} fijas ${level.id==='all'?'en la estación':'en este nivel'}`;return cams;}
 function selectCamera(id){
  if(routes?.active)routes.enable(false);
+ if(id&&stationVideo?.active)stationVideo.enable(false);
  const record=records.find(r=>r.ifcGlobalId===id);if(!record){active=null;scene?.select(null,settings);planView.select(null);$('#camera-select').value='';$('#active-title').textContent='Selecciona una cámara';$('#camera-location').textContent=station.name+' · '+level.name;for(const target of ['#specs','#raw-properties','#position-specs'])$(target).replaceChildren();$('#camera-description').textContent='Selecciona un indicador en planta o una cámara del listado.';$('#optics').hidden=true;$('#pov-badge').hidden=true;$('#resolution-summary').textContent='Propiedades de la cámara seleccionada';updatePovMessage();return;}
  if(record.ifcStorey!==level.ifc){level=levels.find(l=>l.ifc===record.ifcStorey)||level;syncLevelSelectors();updateCameraMenu();populateSheets();scene?.setLevel(level);spaces?.setLevel(level);areaRegister?.setLevel(level);syncAxonView();}
  active=record;$('#camera-select').value=id;settings=settingsById.get(id)||defaults();settingsById.set(id,settings);
@@ -187,7 +188,7 @@ if(!station.assets.routes){
  $('#routes-drawer > p').textContent='En construcción';$('#routes-drawer .micro-note').textContent='Trazados y videos de esta estación: En construcción';
  $('#routes-enter').disabled=true;$('#routes-enter').textContent='En construcción';
  if(station.povVideo)stationVideo=new StationVideo({config:station.povVideo,getScene:()=>scene,onEnter:()=>expandPanel(null)});
- if(station.externalVideos?.length){
+ if(!station.povVideo&&station.externalVideos?.length){
   $('#routes-drawer > p').textContent='Videorecorridos originales de '+station.id+' disponibles en SharePoint.';
   $('#routes-drawer .micro-note').textContent='Los videos se abren en otra pestaña con los permisos de SharePoint. Trazado y sincronización con plantas 2D/3D: En construcción.';
   $('#routes-enter').hidden=true;
@@ -200,7 +201,6 @@ if(!station.assets.routes){
   }
   $('#route-legend').replaceChildren(list);
  }
-
 }
 if(new URLSearchParams(location.search).get('start')==='1'){const url=new URL(location.href);url.searchParams.delete('start');history.replaceState(null,'',url);$('#entry-dialog').close();start();}
 

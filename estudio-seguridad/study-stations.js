@@ -19,21 +19,11 @@ for(const config of Object.values(stations))if(config.modelOnly){
   return {...level,name:label,sourceName:level.name,cutMax:label!==level.name?Math.min(level.cutMax,level.elevation+3.5):level.cutMax};
  });
 }
-stations.E04.externalVideos=[
-  {
-    "title": "Biciusuarios",
-    "filename": "EM4-BICI.mp4",
-    "duration": "2:54",
-    "url": "https://metrodebogotagovco-my.sharepoint.com/personal/raul_gonzalez_metrodebogota_gov_co/_layouts/15/stream.aspx?id=%2Fpersonal%2Fraul_gonzalez_metrodebogota_gov_co%2FDocuments%2F_0_Complementarios%2F00_GemeloDigital%2F00_EstudioRecorridos%2FVideorecorridos%2FE04%2FEM4-BICI.mp4"
-  },
-  {
-    "title": "PMR · Personas con movilidad reducida",
-    "filename": "EM4-PMR.mp4",
-    "duration": "1:48",
-    "url": "https://metrodebogotagovco-my.sharepoint.com/personal/raul_gonzalez_metrodebogota_gov_co/_layouts/15/stream.aspx?id=%2Fpersonal%2Fraul_gonzalez_metrodebogota_gov_co%2FDocuments%2F_0_Complementarios%2F00_GemeloDigital%2F00_EstudioRecorridos%2FVideorecorridos%2FE04%2FEM4-PMR.mp4"
-  }
-];
 stations.E03.povVideo={id:'e03-biciusuario-v38',title:'E03 · Biciusuarios'};
+stations.E04.povVideo={title:'E04',videos:[
+ {id:'e04-bici-v50',title:'E04 · Biciusuarios',label:'Biciusuarios'},
+ {id:'e04-pmr-v50',title:'E04 · PMR',label:'PMR (Personas con movilidad reducida)'}
+]};
 for(const id of ['E03','E04'])stations[id].assets.architecture='./assets/stations/'+id.toLowerCase()+'/architecture.json';
 stations.E03.assets.routes='./assets/stations/e03/routes.json?v=20261104-pmr44';
 for(const id of ['E03','E04']){

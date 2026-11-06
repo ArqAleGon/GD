@@ -1,4 +1,4 @@
-import {activities,inspectProgress,summarize} from './avance-data.js?v=20261104-integrity45';
+import {activities,inspectProgress,summarize} from './avance-data.js?v=20261106-e04embedded51';
 const $=s=>document.querySelector(s),fmt=new Intl.NumberFormat('es-CO',{style:'percent',maximumFractionDigits:1});
 let data=[],context,selected='E02',busy=false,lastRead;
 const element=(tag,text,cls)=>{const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(cls)e.className=cls;return e;};

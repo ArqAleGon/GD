@@ -5,16 +5,19 @@ const clock=t=>Number.isFinite(t)?`${Math.floor(t/60)}:${String(Math.floor(t%60)
 export class StationVideo{
  constructor({config,getScene,onEnter}){
   Object.assign(this,{config,getScene,onEnter});this.active=false;
-  this.media=new RouteVideo({manifestUrl:'./assets/videotours/manifest.json?v=20261103-e03video38'});
+  this.choices=config.videos||[config];this.selected=this.choices[0];this.playTicket=0;
+  this.media=new RouteVideo({manifestUrl:config.manifestUrl||'./assets/videotours/manifest.json?v=20261106-e04embedded51'});
   this.video=this.media.video;
-  $('#routes-drawer > p').textContent=`${config.title} · video POV disponible.`;
+  $('#routes-drawer > p').textContent=`${config.title} · selecciona un video POV para reproducirlo dentro del estudio.`;
   $('#routes-drawer .micro-note').textContent='Trazado y sincronización con las plantas: En construcción.';
   $('#routes-enter').disabled=false;$('#routes-enter').textContent='Abrir vista de recorridos';
   $('#routes-enter').addEventListener('click',()=>{this.enable(true);$('#routes-drawer .drawer-close').click();$('#route-view').focus();});
   $('#routes-exit').textContent='← Volver al estudio';$('#routes-exit').addEventListener('click',()=>this.enable(false));
   $('#route-view').addEventListener('change',e=>this.setPov(e.target.value==='pov'));
-  $('#route-family').replaceChildren(new Option('Biciusuarios','biciusuarios'));
-  $('#route-path').replaceChildren(new Option(config.title,config.id));
+  $('#route-family').replaceChildren(...this.choices.map(v=>new Option(v.label||v.title,v.id)));
+  $('#route-path').replaceChildren(...this.choices.map(v=>new Option(v.title,v.id)));
+  for(const id of ['route-family','route-path'])$('#'+id).addEventListener('change',e=>this.select(e.target.value));
+  $('#route-legend').replaceChildren(...this.choices.map(v=>{const p=document.createElement('p');p.textContent=v.label||v.title;return p;}));
   $('#route-current').textContent='Trazado en plantas 2D y 3D: En construcción.';
   for(const id of ['route-opacity','route-follow','route-reverse'])$('#'+id).closest('label').style.display='none';
   for(const id of ['route-fit','route-measure','route-source-pages'])$('#'+id).hidden=true;
@@ -25,15 +28,21 @@ export class StationVideo{
   $('#route-play').addEventListener('click',async()=>{
    if(!this.active)return;this.setPov(true);
    if(!this.video.paused){this.video.pause();return;}
-   await this.media.load();if(!this.active)return;
+   const ticket=++this.playTicket;await this.media.load();if(!this.active||ticket!==this.playTicket||$('#route-view').value!=='pov')return;
    if(this.video.ended)this.video.currentTime=0;
    try{await this.video.play();}catch{this.media.message('Pulsa Play en el reproductor para iniciar el video.');}
   });
-  $('#route-reset').addEventListener('click',()=>{this.video.pause();if(this.video.readyState)this.video.currentTime=0;this.update();});
+  $('#route-reset').addEventListener('click',()=>{this.playTicket++;this.video.pause();if(this.video.readyState)this.video.currentTime=0;this.update();});
   $('#route-progress').addEventListener('input',e=>{if(Number.isFinite(this.video.duration))this.video.currentTime=this.video.duration*Number(e.target.value)/1000;});
   $('#route-speed').addEventListener('input',e=>{this.video.playbackRate=Number(e.target.value);this.update();});
   for(const event of ['loadedmetadata','timeupdate','play','pause','ended','ratechange'])this.video.addEventListener(event,()=>this.update());
   this.update();
+ }
+ select(id){
+  const choice=this.choices.find(v=>v.id===id);if(!choice)return;
+  this.playTicket++;this.video.pause();this.selected=choice;
+  $('#route-family').value=id;$('#route-path').value=id;
+  this.setPov(true);this.update();
  }
  update(){
   $('#route-distance').textContent=`${clock(this.video.currentTime)} / ${clock(this.video.duration)}`;
@@ -43,6 +52,7 @@ export class StationVideo{
   $('#route-speed').value=this.video.playbackRate;
  }
  enable(active){
+  this.playTicket++;
   if(active){this.onEnter?.();this.video.pause();if(this.video.readyState)this.video.currentTime=0;}
   this.active=active;document.body.classList.toggle('routes-mode',active);
   $('#routes-controls').hidden=!active;$('#route-view-control').hidden=!active;$('#routes-tab').setAttribute('aria-pressed',String(active));
@@ -51,8 +61,9 @@ export class StationVideo{
   const scene=this.getScene();if(scene)scene.dirty=true;
  }
  setPov(enabled){
-  $('#route-view').value=enabled?'pov':'3d';this.media.setVisible(this.active&&enabled,this.config.id,this.config.title);
-  if(this.active){$('#pov-panel h2').textContent=enabled?'POV · '+this.config.title:'Vista 3D · estación completa';$('#pov-panel .view-heading p').textContent=enabled?'Video original · inicia con Play':'Trazado del recorrido · En construcción';}
+  if(!enabled)this.playTicket++;
+  $('#route-view').value=enabled?'pov':'3d';this.media.setVisible(this.active&&enabled,this.selected.id,this.selected.title);
+  if(this.active){$('#pov-panel h2').textContent=enabled?'POV · '+this.selected.title:'Vista 3D · estación completa';$('#pov-panel .view-heading p').textContent=enabled?'Video original · inicia con Play':'Trazado del recorrido · En construcción';}
   const scene=this.getScene();if(scene)scene.dirty=true;
  }
 }

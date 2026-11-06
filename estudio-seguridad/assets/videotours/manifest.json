@@ -1,5 +1,5 @@
 {
-  "version": 49,
+  "version": 50,
   "videos": [
     {
       "id": "e09-ruta-1",
@@ -77,6 +77,26 @@
       "fps": 30,
       "duration": 78.4,
       "sourceUpdated": "2026-11-05"
+    },
+    {
+      "id": "e04-bici-v50",
+      "title": "E04 · Biciusuarios",
+      "file": "e04-bici-v50.mp4",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration": 174.033333,
+      "sourceUpdated": "2026-11-06"
+    },
+    {
+      "id": "e04-pmr-v50",
+      "title": "E04 · PMR",
+      "file": "e04-pmr-v50.mp4",
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "duration": 108.133333,
+      "sourceUpdated": "2026-11-06"
     }
   ]
 }

@@ -35,6 +35,7 @@ export async function inspectProgress(config,read,context={}){
  const linkedSchedule=array(spaces?.areaRecords).filter(r=>array(r.locationIds).length||r.locationId);
  const areaCount=array(spaces?.areaRecords).length||records.length;
  const ids=videoIds(routes);if(config.povVideo?.id)ids.add(config.povVideo.id);
+ for(const video of array(config.povVideo?.videos))if(video.id)ids.add(video.id);
  const videoManifest=await read('./assets/videotours/manifest.json');
  const videos=array(videoManifest.videos).filter(v=>ids.has(v.id));
  const documentList=array(documents?.documents).filter(d=>/5445/.test(d.name||d.pdf||''));
