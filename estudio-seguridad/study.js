@@ -1,6 +1,6 @@
 import {originalSheets} from './study-plan-originals.js?v=20261104-originals48';
 import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
-import {station,stations} from './study-stations.js?v=20261105-e02routes49';
+import {station,stations} from './study-stations.js?v=20261106-e04videos50';
 import {StationVideo} from './study-station-video.js?v=20261103-e03video38';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
 import {PlanViewer} from './study-plans.js?v=20261104-integrity45';
@@ -187,6 +187,20 @@ if(!station.assets.routes){
  $('#routes-drawer > p').textContent='En construcción';$('#routes-drawer .micro-note').textContent='Trazados y videos de esta estación: En construcción';
  $('#routes-enter').disabled=true;$('#routes-enter').textContent='En construcción';
  if(station.povVideo)stationVideo=new StationVideo({config:station.povVideo,getScene:()=>scene,onEnter:()=>expandPanel(null)});
+ if(station.externalVideos?.length){
+  $('#routes-drawer > p').textContent='Videorecorridos originales de '+station.id+' disponibles en SharePoint.';
+  $('#routes-drawer .micro-note').textContent='Los videos se abren en otra pestaña con los permisos de SharePoint. Trazado y sincronización con plantas 2D/3D: En construcción.';
+  $('#routes-enter').hidden=true;
+  const list=document.createElement('ul');list.className='external-videotours';list.setAttribute('aria-label','Videorecorridos de '+station.id);
+  for(const video of station.externalVideos){
+   const item=document.createElement('li'),link=document.createElement('a'),title=document.createElement('strong'),detail=document.createElement('span');
+   link.href=video.url;link.target='_blank';link.rel='noopener noreferrer';
+   title.textContent=video.title+' ↗';detail.textContent=video.filename+' · '+video.duration+' · Abrir en SharePoint';
+   link.append(title,detail);item.append(link);list.append(item);
+  }
+  $('#route-legend').replaceChildren(list);
+ }
+
 }
 if(new URLSearchParams(location.search).get('start')==='1'){const url=new URL(location.href);url.searchParams.delete('start');history.replaceState(null,'',url);$('#entry-dialog').close();start();}
 
