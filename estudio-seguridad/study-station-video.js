@@ -6,7 +6,7 @@ export class StationVideo{
  constructor({config,getScene,onEnter}){
   Object.assign(this,{config,getScene,onEnter});this.active=false;
   this.choices=config.videos||[config];this.selected=this.choices[0];this.playTicket=0;
-  this.media=new RouteVideo({manifestUrl:config.manifestUrl||'./assets/videotours/manifest.json?v=20261106-e04embedded51'});
+  this.media=new RouteVideo({manifestUrl:config.manifestUrl||'./assets/videotours/manifest.json?v=20261106-e04delivery52'});
   this.video=this.media.video;
   $('#routes-drawer > p').textContent=`${config.title} · selecciona un video POV para reproducirlo dentro del estudio.`;
   $('#routes-drawer .micro-note').textContent='Trazado y sincronización con las plantas: En construcción.';

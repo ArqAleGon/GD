@@ -1,5 +1,5 @@
 {
-  "version": 50,
+  "version": 52,
   "videos": [
     {
       "id": "e09-ruta-1",
@@ -81,7 +81,7 @@
     {
       "id": "e04-bici-v50",
       "title": "E04 · Biciusuarios",
-      "file": "e04-bici-v50.mp4",
+      "file": "https://raw.githubusercontent.com/ArqAleGon/GD/84743f826de851430ec51a2f92bed5f4a8a69dff/estudio-seguridad/assets/videotours/e04-bici-v50.mp4",
       "width": 1920,
       "height": 1080,
       "fps": 30,
@@ -91,7 +91,7 @@
     {
       "id": "e04-pmr-v50",
       "title": "E04 · PMR",
-      "file": "e04-pmr-v50.mp4",
+      "file": "https://raw.githubusercontent.com/ArqAleGon/GD/84743f826de851430ec51a2f92bed5f4a8a69dff/estudio-seguridad/assets/videotours/e04-pmr-v50.mp4",
       "width": 1920,
       "height": 1080,
       "fps": 30,
