@@ -26,6 +26,7 @@ stations.E04.povVideo={title:'E04',videos:[
 ]};
 for(const id of ['E03','E04'])stations[id].assets.architecture='./assets/stations/'+id.toLowerCase()+'/architecture.json';
 stations.E03.assets.routes='./assets/stations/e03/routes.json?v=20261104-pmr44';
+stations.E04.assets.routes='./assets/stations/e04/routes.json?v=20261106-e04routes54';
 for(const id of ['E03','E04']){
  stations[id].assets.registration='./assets/stations/'+id.toLowerCase()+'/plan-registration.json?v=20261104-integrity45';
  stations[id].assets.inventory='./assets/stations/'+id.toLowerCase()+'/inventory.json?v=20261104-integrity45';
