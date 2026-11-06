@@ -49,7 +49,7 @@ export const e02Study={
     "registration": "./assets/stations/e02/plan-registration.json",
     "spaces": "./assets/stations/e02/spaces.json",
     "locations": "./assets/stations/e02/camera-locations.json",
-    "routes": "./assets/stations/e02/routes.json?v=20261105-e02routes49"
+    "routes": "./assets/stations/e02/routes.json?v=20261106-e02pmr53"
   },
   "modelBase": "./assets/stations/e02/models/",
   "cameraBase": null,

@@ -1,4 +1,4 @@
-import {e02Study} from './study-e02.js?v=20261105-e02routes49';
+import {e02Study} from './study-e02.js?v=20261106-e02pmr53';
 import {cameraIntegration} from './study-camera-config.js?v=20261104-integrity45';
 import {recoveredStations} from './study-model-stations.js?v=20261104-structures41';
 const commonLevels=[['B','Sótano','BASEMENT'],['A','Acceso','ACCESS'],['I','Intermedio','INTERMEDIATE'],['P','Plataforma','PLATFORM']];
