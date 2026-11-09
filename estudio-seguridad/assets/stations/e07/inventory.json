@@ -1,0 +1,204 @@
+{
+  "source": "L1T1-5445-307-CON-ED-INS-PL-0009_VDD.pdf",
+  "pages": [
+    {
+      "page": 2,
+      "level": "Sótano",
+      "levelId": "2SCB_wEvLD9uWO8$uQSWQR",
+      "label": "Sótano · Edificio Ascendente · CCTV VDD",
+      "imageUrl": "./assets/stations/e07/inventory/p2.jpg",
+      "width": 5600,
+      "height": 3734,
+      "crop": [
+        1301.085205194462,
+        1031.277595905066,
+        2375.4094798877395,
+        1164.2618369842608
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e07/inventory/L1T1-5445-307-CON-ED-INS-PL-0009_VDD.pdf",
+      "sourcePage": 2
+    },
+    {
+      "page": 4,
+      "level": "Sótano",
+      "levelId": "2SCB_wEvLD9uWO8$uQSWQR",
+      "label": "Sótano · Nave Central · CCTV VDD",
+      "imageUrl": "./assets/stations/e07/inventory/p4.jpg",
+      "width": 5600,
+      "height": 3734,
+      "crop": [
+        2585.8523900499285,
+        1599.513601745293,
+        674.9843963153362,
+        421.36572391152595
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e07/inventory/L1T1-5445-307-CON-ED-INS-PL-0009_VDD.pdf",
+      "sourcePage": 4
+    },
+    {
+      "page": 6,
+      "level": "Acceso",
+      "levelId": "2$$nrowlz5pRYHTy8bRROI",
+      "label": "Acceso · Edificio Ascendente · CCTV VDD",
+      "imageUrl": "./assets/stations/e07/inventory/p6.jpg",
+      "width": 5600,
+      "height": 3734,
+      "crop": [
+        1115.0568327131118,
+        1028.9053636915085,
+        2429.749112127862,
+        1147.1018322535904
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e07/inventory/L1T1-5445-307-CON-ED-INS-PL-0009_VDD.pdf",
+      "sourcePage": 6
+    },
+    {
+      "page": 8,
+      "level": "Acceso",
+      "levelId": "2$$nrowlz5pRYHTy8bRROI",
+      "label": "Acceso · Nave Central · CCTV VDD",
+      "imageUrl": "./assets/stations/e07/inventory/p8.jpg",
+      "width": 5600,
+      "height": 3734,
+      "crop": [
+        1891.0750754643464,
+        1048.4881647452112,
+        1509.1038687777232,
+        1060.2506935999877
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e07/inventory/L1T1-5445-307-CON-ED-INS-PL-0009_VDD.pdf",
+      "sourcePage": 8
+    },
+    {
+      "page": 10,
+      "level": "Acceso",
+      "levelId": "2$$nrowlz5pRYHTy8bRROI",
+      "label": "Acceso · Edificio Descendente · CCTV VDD",
+      "imageUrl": "./assets/stations/e07/inventory/p10.jpg",
+      "width": 5600,
+      "height": 3734,
+      "crop": [
+        1175.1693921910369,
+        1117.3765601564974,
+        1507.1169266744378,
+        868.855103836624
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e07/inventory/L1T1-5445-307-CON-ED-INS-PL-0009_VDD.pdf",
+      "sourcePage": 10
+    },
+    {
+      "page": 12,
+      "level": "Intermedio",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · Edificio Ascendente · CCTV VDD",
+      "imageUrl": "./assets/stations/e07/inventory/p12.jpg",
+      "width": 5600,
+      "height": 3734,
+      "crop": [
+        1237.0131567281483,
+        967.877022430361,
+        2457.3082133143785,
+        1269.720353693691
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e07/inventory/L1T1-5445-307-CON-ED-INS-PL-0009_VDD.pdf",
+      "sourcePage": 12
+    },
+    {
+      "page": 14,
+      "level": "Intermedio",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · Nave Central · CCTV VDD",
+      "imageUrl": "./assets/stations/e07/inventory/p14.jpg",
+      "width": 5600,
+      "height": 3734,
+      "crop": [
+        1382.3999999999999,
+        1210.0,
+        2840.0,
+        920.5572143025183
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e07/inventory/L1T1-5445-307-CON-ED-INS-PL-0009_VDD.pdf",
+      "sourcePage": 14
+    },
+    {
+      "page": 16,
+      "level": "Plataforma",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · Edificio Descendente · CCTV VDD",
+      "imageUrl": "./assets/stations/e07/inventory/p16.jpg",
+      "width": 5600,
+      "height": 3734,
+      "crop": [
+        2273.143119702627,
+        1432.4602099642264,
+        1436.2001944896565,
+        835.6291094092364
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e07/inventory/L1T1-5445-307-CON-ED-INS-PL-0009_VDD.pdf",
+      "sourcePage": 16
+    },
+    {
+      "page": 18,
+      "level": "Plataforma",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · Edificio Ascendente · CCTV VDD",
+      "imageUrl": "./assets/stations/e07/inventory/p18.jpg",
+      "width": 5600,
+      "height": 3734,
+      "crop": [
+        1690.7891577704056,
+        977.8771518042595,
+        2486.869303337169,
+        1287.395811214135
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e07/inventory/L1T1-5445-307-CON-ED-INS-PL-0009_VDD.pdf",
+      "sourcePage": 18
+    },
+    {
+      "page": 20,
+      "level": "Plataforma",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · Nave Central · CCTV VDD",
+      "imageUrl": "./assets/stations/e07/inventory/p20.jpg",
+      "width": 5600,
+      "height": 3734,
+      "crop": [
+        211.24965049301773,
+        1239.6000000000001,
+        4908.750349506982,
+        996.7884040348515
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e07/inventory/L1T1-5445-307-CON-ED-INS-PL-0009_VDD.pdf",
+      "sourcePage": 20
+    },
+    {
+      "page": 22,
+      "level": "Intermedio",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · Edificio Descendente · CCTV VDD",
+      "imageUrl": "./assets/stations/e07/inventory/p22.jpg",
+      "width": 5600,
+      "height": 3734,
+      "crop": [
+        1681.1269753151244,
+        1244.7584868086342,
+        1572.5340015987742,
+        921.6438224397402
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e07/inventory/L1T1-5445-307-CON-ED-INS-PL-0009_VDD.pdf",
+      "sourcePage": 22
+    }
+  ],
+  "method": "Indicadores procedentes del IFC sobre hojas CCTV VDD, con recorte del área útil. Diferencias de distribución interior entre revisiones ARQ e INS."
+}

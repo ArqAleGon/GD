@@ -10,7 +10,7 @@ const spaceTooltip=(record,data)=>{
  if(linked)return `${name} · ${area(linked.area)} m² (${linked.areaSourceLabel||'referencia VDD · pág. '+linked.pdfPage})`;
  const values=record.referenceAreas?.filter(Number.isFinite);
  if(values?.length)return `${name} · ${values.length===1?'Área':'Áreas'} de referencia ${record.referenceRevision||'VDD'} del código: ${[...new Set(values)].map(area).join(' / ')} m² · pág. ${record.referencePage} · Sin asignación individual confirmada`;
- return `${name} · Área no consignada para este código y nivel`;
+ return `${name} · En construcción · área sin correspondencia confirmada`;
 };
 export class SpaceStudy{
  constructor({scene,plan,data,onSelectPlan}){

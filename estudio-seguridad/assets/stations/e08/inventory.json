@@ -1,0 +1,78 @@
+{
+  "source": "L1T1-5445-308-CON-ED-INS-PL-0009_VDD.pdf",
+  "pages": [
+    {
+      "page": 2,
+      "level": "Sótano",
+      "levelId": "1k3q6JTYT4Du6v6y0vI9q8",
+      "label": "Sótano · Nave Central · CCTV VDD",
+      "imageUrl": "./assets/stations/e08/inventory/p2.jpg",
+      "width": 5600,
+      "height": 3734,
+      "crop": [
+        1836.2093265284834,
+        1049.776381621574,
+        2061.5995172476673,
+        1023.832232378563
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e08/inventory/L1T1-5445-308-CON-ED-INS-PL-0009_VDD.pdf",
+      "sourcePage": 2
+    },
+    {
+      "page": 4,
+      "level": "Acceso",
+      "levelId": "1k3q6JTYT4Du6v6y0v3tWv",
+      "label": "Acceso · Nave Central · CCTV VDD",
+      "imageUrl": "./assets/stations/e08/inventory/p4.jpg",
+      "width": 5600,
+      "height": 3734,
+      "crop": [
+        678.0204700718095,
+        1107.6276650992781,
+        3342.1620239997837,
+        1034.6550562903312
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e08/inventory/L1T1-5445-308-CON-ED-INS-PL-0009_VDD.pdf",
+      "sourcePage": 4
+    },
+    {
+      "page": 6,
+      "level": "Intermedio",
+      "levelId": "1k3q6JTYT4Du6v6y0v38O3",
+      "label": "Intermedio · Nave Central · CCTV VDD",
+      "imageUrl": "./assets/stations/e08/inventory/p6.jpg",
+      "width": 5600,
+      "height": 3734,
+      "crop": [
+        297.8,
+        1115.2,
+        4572.0,
+        1032.6190032507564
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e08/inventory/L1T1-5445-308-CON-ED-INS-PL-0009_VDD.pdf",
+      "sourcePage": 6
+    },
+    {
+      "page": 8,
+      "level": "Plataforma",
+      "levelId": "1k3q6JTYT4Du6v6y0v38PQ",
+      "label": "Plataforma · Nave Central · CCTV VDD",
+      "imageUrl": "./assets/stations/e08/inventory/p8.jpg",
+      "width": 5600,
+      "height": 3734,
+      "crop": [
+        263.2,
+        1176.4,
+        4800.0,
+        1066.4621180871118
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e08/inventory/L1T1-5445-308-CON-ED-INS-PL-0009_VDD.pdf",
+      "sourcePage": 8
+    }
+  ],
+  "method": "Indicadores procedentes del IFC sobre hojas CCTV VDD, con recorte del área útil. Diferencias de distribución interior entre revisiones ARQ e INS."
+}

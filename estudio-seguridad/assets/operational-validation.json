@@ -68,23 +68,31 @@
     },
     "E07": {
       "cameras": 219,
-      "architectureMapped": 0,
-      "inventoryMapped": 0,
-      "interactiveVerified": false,
+      "architectureMapped": 219,
+      "inventoryMapped": 219,
+      "interactiveVerified": true,
+      "checkedAt": "2026-11-09T20:54:01.042Z",
       "resourceDigests": {
-        "cameras": "bd39c2d64537e44994087d7493a52b0ca0c526be24dddfcbc68a635a30a1e929"
+        "cameras": "bd39c2d64537e44994087d7493a52b0ca0c526be24dddfcbc68a635a30a1e929",
+        "inventory": "35b0d73266b3a48d13773549e83a8b311723b990bb7d80b3da9df6048c341609",
+        "architecture": "3a1a9a582389640566aa84369932c8f5092a8608015506b8fb7f6a204cdf3b4d",
+        "registration": "9af574f5d0d9cb3be220506f439f958d5775d36e6f74b569dac7273d02100788"
       },
-      "status": "En construcción"
+      "status": "Verificado · posiciones IFC y registro visual PDF"
     },
     "E08": {
       "cameras": 144,
-      "architectureMapped": 0,
-      "inventoryMapped": 0,
-      "interactiveVerified": false,
+      "architectureMapped": 144,
+      "inventoryMapped": 144,
+      "interactiveVerified": true,
+      "checkedAt": "2026-11-09T20:54:01.042Z",
       "resourceDigests": {
-        "cameras": "a48d128f6c2064b2d0c1d4546d6c1733228f8977cedadfa7b5bcca55f429c5ee"
+        "cameras": "a48d128f6c2064b2d0c1d4546d6c1733228f8977cedadfa7b5bcca55f429c5ee",
+        "inventory": "6278d3a31c6543eb02ec6daf4c7b86eeaf3821b522550f0860b9d804eee6a72c",
+        "architecture": "277a504a9a8ecfc80fa42f2c62082f3c4df6d3d39b3fbac6b11f14b0c06a6ef7",
+        "registration": "4a13241ecb7fc38599f7aeb9c2507b5ccabff7200dd4d792f4b2828e19f4157a"
       },
-      "status": "En construcción"
+      "status": "Verificado · posiciones IFC y registro visual PDF"
     },
     "E10": {
       "cameras": 230,

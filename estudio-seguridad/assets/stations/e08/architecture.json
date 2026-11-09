@@ -1,0 +1,52 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "level": "Sótano",
+      "levelId": "1k3q6JTYT4Du6v6y0vI9q8",
+      "label": "Sótano · E08 · Carrera 50",
+      "imageUrl": "./assets/stations/e08/architecture/B.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/stations/e08/architecture/B.pdf",
+      "source": "PLANO SOTANO E8 A.pdf",
+      "sourceSha256": "03df5c32793fbd82a9214729c26cb1c21b454c5f6fdb499ce6a8c77889dee208"
+    },
+    {
+      "page": 2,
+      "level": "Acceso",
+      "levelId": "1k3q6JTYT4Du6v6y0v3tWv",
+      "label": "Acceso · E08 · Carrera 50",
+      "imageUrl": "./assets/stations/e08/architecture/A.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/stations/e08/architecture/A.pdf",
+      "source": "PLANO ACCESO E8 A.pdf",
+      "sourceSha256": "70544e840557b733ff94255358a8c92cac5254c22b4b4b5466b51a3a2f537ced"
+    },
+    {
+      "page": 3,
+      "level": "Intermedio",
+      "levelId": "1k3q6JTYT4Du6v6y0v38O3",
+      "label": "Intermedio · E08 · Carrera 50",
+      "imageUrl": "./assets/stations/e08/architecture/I.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/stations/e08/architecture/I.pdf",
+      "source": "PLANO INT E8 A.pdf",
+      "sourceSha256": "25cfd888618ce71d8c7ec806873b2400a4abd2b96f9e6dde8f42fe02fc579f65"
+    },
+    {
+      "page": 4,
+      "level": "Plataforma",
+      "levelId": "1k3q6JTYT4Du6v6y0v38PQ",
+      "label": "Plataforma · E08 · Carrera 50",
+      "imageUrl": "./assets/stations/e08/architecture/P.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/stations/e08/architecture/P.pdf",
+      "source": "PLANO PLA E8 A.pdf",
+      "sourceSha256": "95e539d26d5bb4b15c74a5a8cd9a5d77ad20dad2a836f638c0b212fa4e94aad9"
+    }
+  ]
+}

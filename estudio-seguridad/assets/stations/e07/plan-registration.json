@@ -1,0 +1,839 @@
+{
+  "originIfc": [
+    94358.57166269525,
+    101343.90363218375,
+    2567.4199999999983
+  ],
+  "architecture": {
+    "1": {
+      "matrix": [
+        [
+          17.1003856257567,
+          -16.839739055294576,
+          3502.5
+        ],
+        [
+          -16.839739055294576,
+          -17.1003856257567,
+          2062.5
+        ]
+      ],
+      "crop": [
+        562.5,
+        1087.5,
+        5343.75,
+        2081.25
+      ],
+      "rotation": 90,
+      "status": "Registro visual de muros y ejes PDF–IFC · E07",
+      "method": "Secciones de la geometría IFC y plantas arquitectónicas",
+      "sourceSha256": "3b229a92916625e7d7751f914c922543e2c3e454b8b258f5cac4d92be6fcd166",
+      "allowedCameraIds": [
+        "2VUrmzFqT07PCqC5uMs0XD",
+        "2VUrmzFqT07PCqC5uMs0X2",
+        "2VUrmzFqT07PCqC5uMs0X3",
+        "2VUrmzFqT07PCqC5uMs0X0",
+        "2VUrmzFqT07PCqC5uMs0X7",
+        "2VUrmzFqT07PCqC5uMs0XQ",
+        "2VUrmzFqT07PCqC5uMs0XR",
+        "2VUrmzFqT07PCqC5uMs0XO",
+        "2VUrmzFqT07PCqC5uMs0XP",
+        "2VUrmzFqT07PCqC5uMs0XU",
+        "2VUrmzFqT07PCqC5uMs0XV",
+        "2VUrmzFqT07PCqC5uMs0XT",
+        "2VUrmzFqT07PCqC5uMs0XI",
+        "2VUrmzFqT07PCqC5uMs0XG",
+        "2VUrmzFqT07PCqC5uMs0XH",
+        "2VUrmzFqT07PCqC5uMs0XK",
+        "08Jz6q4t5BeuX6rkzC8LUx",
+        "08Jz6q4t5BeuX6rkzC8LVG",
+        "08Jz6q4t5BeuX6rkzC8LVk",
+        "08Jz6q4t5BeuX6rkzC8LSJ",
+        "08Jz6q4t5BeuX6rkzC8LSW",
+        "08Jz6q4t5BeuX6rkzC8LSt",
+        "08Jz6q4t5BeuX6rkzC8LT5",
+        "08Jz6q4t5BeuX6rkzC8LTY",
+        "08Jz6q4t5BeuX6rkzC8LTr",
+        "08Jz6q4t5BeuX6rkzC8LI1",
+        "08Jz6q4t5BeuX6rkzC8LIS",
+        "08Jz6q4t5BeuX6rkzC8LIk",
+        "08Jz6q4t5BeuX6rkzC8LMM"
+      ]
+    },
+    "2": {
+      "matrix": [
+        [
+          19.070937875599757,
+          -18.780255860494538,
+          3035.4283593750006
+        ],
+        [
+          -18.780255860494538,
+          -19.070937875599757,
+          2491.31765625
+        ]
+      ],
+      "crop": [
+        56.25,
+        356.25,
+        5775.0,
+        3375.0
+      ],
+      "rotation": 90,
+      "status": "Registro visual de muros y ejes PDF–IFC · E07",
+      "method": "Secciones de la geometría IFC y plantas arquitectónicas",
+      "sourceSha256": "f8b8dec8e43fb78192add561e39182452fcd626fd79acf31e88a340fc1e1c953",
+      "allowedCameraIds": [
+        "2VUrmzFqT07PCqC5uMs0Yh",
+        "2VUrmzFqT07PCqC5uMs0Ye",
+        "2VUrmzFqT07PCqC5uMs0Yv",
+        "0navFDEnL0dwnsnfhcRQnD",
+        "0navFDEnL0dwnsnfhcRQn3",
+        "0navFDEnL0dwnsnfhcRQom",
+        "0navFDEnL0dwnsnfhcRQoe",
+        "0navFDEnL0dwnsnfhcRQoI",
+        "0navFDEnL0dwnsnfhcRQoJ",
+        "0navFDEnL0dwnsnfhcRQpt",
+        "0navFDEnL0dwnsnfhcRQpW",
+        "0navFDEnL0dwnsnfhcRQpA",
+        "0navFDEnL0dwnsnfhcRQqk",
+        "0navFDEnL0dwnsnfhcRQqV",
+        "0navFDEnL0dwnsnfhcRQq7",
+        "0navFDEnL0dwnsnfhcRQrn",
+        "0navFDEnL0dwnsnfhcRQrU",
+        "0navFDEnL0dwnsnfhcRQrA",
+        "0navFDEnL0dwnsnfhcRQss",
+        "0navFDEnL0dwnsnfhcRQsc",
+        "0navFDEnL0dwnsnfhcRQsD",
+        "0navFDEnL0dwnsnfhcRQtv",
+        "0navFDEnL0dwnsnfhcRQtA",
+        "0navFDEnL0dwnsnfhcRQue",
+        "0navFDEnL0dwnsnfhcRQvP",
+        "0navFDEnL0dwnsnfhcRQv4",
+        "0navFDEnL0dwnsnfhcRQwm",
+        "0navFDEnL0dwnsnfhcRQwX",
+        "0navFDEnL0dwnsnfhcRQwE",
+        "0navFDEnL0dwnsnfhcRQxt",
+        "0navFDEnL0dwnsnfhcRQxl",
+        "0navFDEnL0dwnsnfhcRQxN",
+        "0navFDEnL0dwnsnfhcRQzk",
+        "0navFDEnL0dwnsnfhcRQzO",
+        "0navFDEnL0dwnsnfhcRQzA",
+        "0navFDEnL0dwnsnfhcRQ_r",
+        "0navFDEnL0dwnsnfhcRQ_c",
+        "0navFDEnL0dwnsnfhcRQ_U",
+        "0navFDEnL0dwnsnfhcRQ_M",
+        "0navFDEnL0dwnsnfhcRQ_E",
+        "0navFDEnL0dwnsnfhcRQ_0",
+        "0navFDEnL0dwnsnfhcRQ$u",
+        "0navFDEnL0dwnsnfhcRQ$m",
+        "0navFDEnL0dwnsnfhcRQ$e",
+        "0navFDEnL0dwnsnfhcRQ$W"
+      ]
+    },
+    "3": {
+      "matrix": [
+        [
+          19.070937875599757,
+          -18.780255860494538,
+          3171.0018749999995
+        ],
+        [
+          -18.780255860494538,
+          -19.070937875599757,
+          2613.4303125
+        ]
+      ],
+      "crop": [
+        187.5,
+        356.25,
+        5718.75,
+        3525.0
+      ],
+      "rotation": 90,
+      "status": "Registro visual de muros y ejes PDF–IFC · E07",
+      "method": "Secciones de la geometría IFC y plantas arquitectónicas",
+      "sourceSha256": "6aa48d7d21b89e5982771f1f53e64addde8ad68d3e82770c8e4527a64260b543",
+      "allowedCameraIds": [
+        "2VUrmzFqT07PCqC5uMs0cr",
+        "2VUrmzFqT07PCqC5uMs0fZ",
+        "2VUrmzFqT07PCqC5uMs0fW",
+        "3LeRF4YWzFqg8118W5jDck",
+        "3LeRF4YWzFqg8118W5jDb0",
+        "3LeRF4YWzFqg8118W5jDbI",
+        "3LeRF4YWzFqg8118W5jDbo",
+        "3LeRF4YWzFqg8118W5jDa7",
+        "3LeRF4YWzFqg8118W5jDaW",
+        "3LeRF4YWzFqg8118W5jDap",
+        "3LeRF4YWzFqg8118W5jDZ5",
+        "3LeRF4YWzFqg8118W5jDZL",
+        "3LeRF4YWzFqg8118W5jDZd",
+        "3LeRF4YWzFqg8118W5jDZt",
+        "3LeRF4YWzFqg8118W5jDY9",
+        "3LeRF4YWzFqg8118W5jDYS",
+        "3LeRF4YWzFqg8118W5jDYt",
+        "3LeRF4YWzFqg8118W5jDXK",
+        "3LeRF4YWzFqg8118W5jDXc",
+        "3LeRF4YWzFqg8118W5jDXt",
+        "3LeRF4YWzFqg8118W5jDWB",
+        "3LeRF4YWzFqg8118W5jDWs",
+        "3LeRF4YWzFqg8118W5jDlP",
+        "3LeRF4YWzFqg8118W5jDkH",
+        "3LeRF4YWzFqg8118W5jDkd",
+        "3LeRF4YWzFqg8118W5jDku",
+        "3LeRF4YWzFqg8118W5jDjB",
+        "3LeRF4YWzFqg8118W5jDjS",
+        "3LeRF4YWzFqg8118W5jDjf",
+        "3LeRF4YWzFqg8118W5jDjv",
+        "3LeRF4YWzFqg8118W5jDiB",
+        "3LeRF4YWzFqg8118W5jDiU",
+        "3LeRF4YWzFqg8118W5jDik",
+        "3LeRF4YWzFqg8118W5jDiu",
+        "3LeRF4YWzFqg8118W5jDhN",
+        "3LeRF4YWzFqg8118W5jDhV",
+        "3LeRF4YWzFqg8118W5jDhq",
+        "3LeRF4YWzFqg8118W5jDfA",
+        "1kE2flDrT0lw8Q$J_ZHh7G",
+        "1kE2flDrT0lw8Q$J_ZHh76",
+        "1kE2flDrT0lw8Q$J_ZHh6c",
+        "1kE2flDrT0lw8Q$J_ZHh6L",
+        "1kE2flDrT0lw8Q$J_ZHh6F",
+        "1kE2flDrT0lw8Q$J_ZHhvz",
+        "1kE2flDrT0lw8Q$J_ZHhvG",
+        "1kE2flDrT0lw8Q$J_ZHhvO",
+        "1kE2flDrT0lw8Q$J_ZHhv6",
+        "1kE2flDrT0lw8Q$J_ZHhus",
+        "1kE2flDrT0lw8Q$J_ZHhuf",
+        "1kE2flDrT0lw8Q$J_ZHhuS",
+        "1kE2flDrT0lw8Q$J_ZHhxp",
+        "1kE2flDrT0lw8Q$J_ZHhxv",
+        "1kE2flDrT0lw8Q$J_ZHhxX",
+        "1kE2flDrT0lw8Q$J_ZHhxP",
+        "1kE2flDrT0lw8Q$J_ZHhws",
+        "1kE2flDrT0lw8Q$J_ZHhwa",
+        "1kE2flDrT0lw8Q$J_ZHhwi",
+        "1kE2flDrT0lw8Q$J_ZHhwQ",
+        "1kE2flDrT0lw8Q$J_ZHhw2",
+        "1kE2flDrT0lw8Q$J_ZHhwA",
+        "1kE2flDrT0lw8Q$J_ZHhzo",
+        "1kE2flDrT0lw8Q$J_ZHhzw",
+        "1kE2flDrT0lw8Q$J_ZHhzW",
+        "1kE2flDrT0lw8Q$J_ZHhzk",
+        "1kE2flDrT0lw8Q$J_ZHhzM"
+      ]
+    },
+    "4": {
+      "matrix": [
+        [
+          19.037538684924453,
+          -18.74736574515217,
+          3132.84375
+        ],
+        [
+          -18.74736574515217,
+          -19.037538684924453,
+          2600.908125
+        ]
+      ],
+      "crop": [
+        562.5,
+        356.25,
+        5343.75,
+        3525.0
+      ],
+      "rotation": 90,
+      "status": "Registro visual de muros y ejes PDF–IFC · E07",
+      "method": "Secciones de la geometría IFC y plantas arquitectónicas",
+      "sourceSha256": "828f3d2c88e3d8d37cf0fa27a3b031fcc5f84a2f71fbc26d642297b35711dea1",
+      "allowedCameraIds": [
+        "2VUrmzFqT07PCqC5uMs0iM",
+        "2VUrmzFqT07PCqC5uMs0l7",
+        "2VUrmzFqT07PCqC5uMs0l4",
+        "33xbfa_fLBJAzc4ZjPIjKt",
+        "33xbfa_fLBJAzc4ZjPIjNF",
+        "33xbfa_fLBJAzc4ZjPIjN7",
+        "33xbfa_fLBJAzc4ZjPIjNV",
+        "33xbfa_fLBJAzc4ZjPIjNL",
+        "33xbfa_fLBJAzc4ZjPIjNj",
+        "33xbfa_fLBJAzc4ZjPIjNb",
+        "33xbfa_fLBJAzc4ZjPIjNx",
+        "33xbfa_fLBJAzc4ZjPIjNp",
+        "33xbfa_fLBJAzc4ZjPIjMB",
+        "33xbfa_fLBJAzc4ZjPIjMJ",
+        "33xbfa_fLBJAzc4ZjPIjMh",
+        "33xbfa_fLBJAzc4ZjPIjMZ",
+        "33xbfa_fLBJAzc4ZjPIjMv",
+        "33xbfa_fLBJAzc4ZjPIjHD",
+        "33xbfa_fLBJAzc4ZjPIjH5",
+        "33xbfa_fLBJAzc4ZjPIjHK",
+        "33xbfa_fLBJAzc4ZjPIjHi",
+        "33xbfa_fLBJAzc4ZjPIjHa",
+        "33xbfa_fLBJAzc4ZjPIjHy",
+        "33xbfa_fLBJAzc4ZjPIjHq",
+        "33xbfa_fLBJAzc4ZjPIjG8",
+        "33xbfa_fLBJAzc4ZjPIjGS",
+        "33xbfa_fLBJAzc4ZjPIjGK",
+        "33xbfa_fLBJAzc4ZjPIjGc",
+        "33xbfa_fLBJAzc4ZjPIjG_",
+        "33xbfa_fLBJAzc4ZjPIjGs",
+        "33xbfa_fLBJAzc4ZjPIjJE",
+        "33xbfa_fLBJAzc4ZjPIjJ6",
+        "33xbfa_fLBJAzc4ZjPIjJU",
+        "33xbfa_fLBJAzc4ZjPIjJM",
+        "33xbfa_fLBJAzc4ZjPIjJi",
+        "33xbfa_fLBJAzc4ZjPIjJY",
+        "33xbfa_fLBJAzc4ZjPIjJw",
+        "33xbfa_fLBJAzc4ZjPIjJo",
+        "33xbfa_fLBJAzc4ZjPIjIA",
+        "33xbfa_fLBJAzc4ZjPIjI2",
+        "33xbfa_fLBJAzc4ZjPIjIQ",
+        "33xbfa_fLBJAzc4ZjPIjII",
+        "33xbfa_fLBJAzc4ZjPIjIc",
+        "33xbfa_fLBJAzc4ZjPIjIy",
+        "33xbfa_fLBJAzc4ZjPIjIq",
+        "33xbfa_fLBJAzc4ZjPIjTC",
+        "33xbfa_fLBJAzc4ZjPIjT4",
+        "33xbfa_fLBJAzc4ZjPIjTQ",
+        "33xbfa_fLBJAzc4ZjPIjTG",
+        "33xbfa_fLBJAzc4ZjPIjTq",
+        "33xbfa_fLBJAzc4ZjPIjSC",
+        "33xbfa_fLBJAzc4ZjPIjS4",
+        "33xbfa_fLBJAzc4ZjPIjSS",
+        "33xbfa_fLBJAzc4ZjPIjSI",
+        "33xbfa_fLBJAzc4ZjPIjSg",
+        "33xbfa_fLBJAzc4ZjPIjSW",
+        "33xbfa_fLBJAzc4ZjPIjSq",
+        "33xbfa_fLBJAzc4ZjPIjVA",
+        "33xbfa_fLBJAzc4ZjPIjVU",
+        "33xbfa_fLBJAzc4ZjPIjVM",
+        "33xbfa_fLBJAzc4ZjPIjVk",
+        "33xbfa_fLBJAzc4ZjPIjVc",
+        "33xbfa_fLBJAzc4ZjPIjVw",
+        "33xbfa_fLBJAzc4ZjPIjVm",
+        "33xbfa_fLBJAzc4ZjPIjU8",
+        "33xbfa_fLBJAzc4ZjPIjUU",
+        "33xbfa_fLBJAzc4ZjPIjUM",
+        "33xbfa_fLBJAzc4ZjPIjUk",
+        "33xbfa_fLBJAzc4ZjPIjUa",
+        "33xbfa_fLBJAzc4ZjPIjUy",
+        "33xbfa_fLBJAzc4ZjPIjUq",
+        "33xbfa_fLBJAzc4ZjPIjPC",
+        "33xbfa_fLBJAzc4ZjPIjP0",
+        "33xbfa_fLBJAzc4ZjPIjPM",
+        "33xbfa_fLBJAzc4ZjPIjQz",
+        "33xbfa_fLBJAzc4ZjPIjQr",
+        "33xbfa_fLBJAzc4ZjPIjbT",
+        "33xbfa_fLBJAzc4ZjPIjbh",
+        "33xbfa_fLBJAzc4ZjPIjbx",
+        "33xbfa_fLBJAzc4ZjPIja6"
+      ]
+    }
+  },
+  "inventory": {
+    "2": {
+      "matrix": [
+        [
+          19.799676410949,
+          -19.497886856858443,
+          940.3638275052981
+        ],
+        [
+          -19.497886856858443,
+          -19.799676410949,
+          996.6695695194148
+        ]
+      ],
+      "crop": [
+        1301.085205194462,
+        1031.277595905066,
+        2375.4094798877395,
+        1164.2618369842608
+      ],
+      "rotation": 90,
+      "allowedCameraIds": [
+        "2VUrmzFqT07PCqC5uMs0XD",
+        "2VUrmzFqT07PCqC5uMs0X2",
+        "2VUrmzFqT07PCqC5uMs0X3",
+        "2VUrmzFqT07PCqC5uMs0X0",
+        "2VUrmzFqT07PCqC5uMs0X7",
+        "2VUrmzFqT07PCqC5uMs0XQ",
+        "2VUrmzFqT07PCqC5uMs0XR",
+        "2VUrmzFqT07PCqC5uMs0XO",
+        "2VUrmzFqT07PCqC5uMs0XP",
+        "2VUrmzFqT07PCqC5uMs0XU",
+        "2VUrmzFqT07PCqC5uMs0XV",
+        "2VUrmzFqT07PCqC5uMs0XT",
+        "2VUrmzFqT07PCqC5uMs0XI",
+        "2VUrmzFqT07PCqC5uMs0XG",
+        "2VUrmzFqT07PCqC5uMs0XH",
+        "2VUrmzFqT07PCqC5uMs0XK",
+        "08Jz6q4t5BeuX6rkzC8LUx",
+        "08Jz6q4t5BeuX6rkzC8LVG",
+        "08Jz6q4t5BeuX6rkzC8LVk",
+        "08Jz6q4t5BeuX6rkzC8LSJ",
+        "08Jz6q4t5BeuX6rkzC8LSW",
+        "08Jz6q4t5BeuX6rkzC8LSt",
+        "08Jz6q4t5BeuX6rkzC8LT5",
+        "08Jz6q4t5BeuX6rkzC8LTY",
+        "08Jz6q4t5BeuX6rkzC8LTr",
+        "08Jz6q4t5BeuX6rkzC8LI1",
+        "08Jz6q4t5BeuX6rkzC8LMM"
+      ],
+      "status": "Posiciones IFC · registro visual CCTV VDD",
+      "method": "Ejes y envolventes; las revisiones ARQ e INS presentan diferencias interiores",
+      "wallFitPixels1400": 0.0
+    },
+    "4": {
+      "matrix": [
+        [
+          14.965960512149602,
+          -14.73784716040811,
+          5133.535634977895
+        ],
+        [
+          -14.73784716040811,
+          -14.965960512149602,
+          1979.6529018091396
+        ]
+      ],
+      "crop": [
+        2585.8523900499285,
+        1599.513601745293,
+        674.9843963153362,
+        421.36572391152595
+      ],
+      "rotation": 90,
+      "allowedCameraIds": [
+        "08Jz6q4t5BeuX6rkzC8LIS",
+        "08Jz6q4t5BeuX6rkzC8LIk"
+      ],
+      "status": "Posiciones IFC · registro visual CCTV VDD",
+      "method": "Ejes y envolventes; las revisiones ARQ e INS presentan diferencias interiores",
+      "wallFitPixels1400": 0.0
+    },
+    "6": {
+      "matrix": [
+        [
+          19.944994112008175,
+          -19.640989604334848,
+          764.5420252684548
+        ],
+        [
+          -19.640989604334848,
+          -19.944994112008175,
+          983.7200344211171
+        ]
+      ],
+      "crop": [
+        1115.0568327131118,
+        1028.9053636915085,
+        2429.749112127862,
+        1147.1018322535904
+      ],
+      "rotation": 90,
+      "allowedCameraIds": [
+        "0navFDEnL0dwnsnfhcRQzk",
+        "0navFDEnL0dwnsnfhcRQzO",
+        "0navFDEnL0dwnsnfhcRQzA",
+        "0navFDEnL0dwnsnfhcRQ_r",
+        "0navFDEnL0dwnsnfhcRQ_c",
+        "0navFDEnL0dwnsnfhcRQ_U",
+        "0navFDEnL0dwnsnfhcRQ_M",
+        "0navFDEnL0dwnsnfhcRQ_E",
+        "0navFDEnL0dwnsnfhcRQ_0",
+        "0navFDEnL0dwnsnfhcRQ$u",
+        "0navFDEnL0dwnsnfhcRQ$m",
+        "0navFDEnL0dwnsnfhcRQ$e",
+        "0navFDEnL0dwnsnfhcRQ$W"
+      ],
+      "status": "Posiciones IFC · registro visual CCTV VDD",
+      "method": "Ejes y envolventes; las revisiones ARQ e INS presentan diferencias interiores",
+      "wallFitPixels1400": 0.957416711521639
+    },
+    "8": {
+      "matrix": [
+        [
+          20.44404540264294,
+          -20.13243428245014,
+          5057.27320125
+        ],
+        [
+          -20.13243428245014,
+          -20.44404540264294,
+          2096.3239274999996
+        ]
+      ],
+      "crop": [
+        1891.0750754643464,
+        1048.4881647452112,
+        1509.1038687777232,
+        1060.2506935999877
+      ],
+      "rotation": 90,
+      "allowedCameraIds": [
+        "2VUrmzFqT07PCqC5uMs0Yh",
+        "2VUrmzFqT07PCqC5uMs0Ye",
+        "2VUrmzFqT07PCqC5uMs0Yv",
+        "0navFDEnL0dwnsnfhcRQnD",
+        "0navFDEnL0dwnsnfhcRQn3",
+        "0navFDEnL0dwnsnfhcRQom",
+        "0navFDEnL0dwnsnfhcRQoe",
+        "0navFDEnL0dwnsnfhcRQoI",
+        "0navFDEnL0dwnsnfhcRQoJ",
+        "0navFDEnL0dwnsnfhcRQpt",
+        "0navFDEnL0dwnsnfhcRQpW",
+        "0navFDEnL0dwnsnfhcRQpA",
+        "0navFDEnL0dwnsnfhcRQqk",
+        "0navFDEnL0dwnsnfhcRQqV",
+        "0navFDEnL0dwnsnfhcRQq7",
+        "0navFDEnL0dwnsnfhcRQrn",
+        "0navFDEnL0dwnsnfhcRQrU",
+        "0navFDEnL0dwnsnfhcRQrA",
+        "0navFDEnL0dwnsnfhcRQss",
+        "0navFDEnL0dwnsnfhcRQsc",
+        "0navFDEnL0dwnsnfhcRQsD",
+        "0navFDEnL0dwnsnfhcRQtv",
+        "0navFDEnL0dwnsnfhcRQtA",
+        "0navFDEnL0dwnsnfhcRQue"
+      ],
+      "status": "Posiciones IFC · registro visual CCTV VDD",
+      "method": "Ejes y envolventes; las revisiones ARQ e INS presentan diferencias interiores",
+      "wallFitPixels1400": 0.3220556969659365
+    },
+    "10": {
+      "matrix": [
+        [
+          19.596796159515513,
+          -19.298098935791533,
+          1577.398257213205
+        ],
+        [
+          -19.298098935791533,
+          -19.596796159515513,
+          3303.674536072106
+        ]
+      ],
+      "crop": [
+        1175.1693921910369,
+        1117.3765601564974,
+        1507.1169266744378,
+        868.855103836624
+      ],
+      "rotation": 90,
+      "allowedCameraIds": [
+        "0navFDEnL0dwnsnfhcRQvP",
+        "0navFDEnL0dwnsnfhcRQv4",
+        "0navFDEnL0dwnsnfhcRQwm",
+        "0navFDEnL0dwnsnfhcRQwX",
+        "0navFDEnL0dwnsnfhcRQwE",
+        "0navFDEnL0dwnsnfhcRQxt",
+        "0navFDEnL0dwnsnfhcRQxl",
+        "0navFDEnL0dwnsnfhcRQxN"
+      ],
+      "status": "Posiciones IFC · registro visual CCTV VDD",
+      "method": "Ejes y envolventes; las revisiones ARQ e INS presentan diferencias interiores",
+      "wallFitPixels1400": 0.0
+    },
+    "12": {
+      "matrix": [
+        [
+          19.676596537255886,
+          -19.37668298454174,
+          924.0961835209391
+        ],
+        [
+          -19.37668298454174,
+          -19.676596537255886,
+          1015.5231435215867
+        ]
+      ],
+      "crop": [
+        1237.0131567281483,
+        967.877022430361,
+        2457.3082133143785,
+        1269.720353693691
+      ],
+      "rotation": 90,
+      "allowedCameraIds": [
+        "2VUrmzFqT07PCqC5uMs0fZ",
+        "2VUrmzFqT07PCqC5uMs0fW",
+        "3LeRF4YWzFqg8118W5jDfA",
+        "1kE2flDrT0lw8Q$J_ZHh7G",
+        "1kE2flDrT0lw8Q$J_ZHh76",
+        "1kE2flDrT0lw8Q$J_ZHh6c",
+        "1kE2flDrT0lw8Q$J_ZHh6L",
+        "1kE2flDrT0lw8Q$J_ZHh6F",
+        "1kE2flDrT0lw8Q$J_ZHhvz",
+        "1kE2flDrT0lw8Q$J_ZHhvG",
+        "1kE2flDrT0lw8Q$J_ZHhvO",
+        "1kE2flDrT0lw8Q$J_ZHhv6",
+        "1kE2flDrT0lw8Q$J_ZHhus",
+        "1kE2flDrT0lw8Q$J_ZHhuf",
+        "1kE2flDrT0lw8Q$J_ZHhuS",
+        "1kE2flDrT0lw8Q$J_ZHhxp",
+        "1kE2flDrT0lw8Q$J_ZHhxv",
+        "1kE2flDrT0lw8Q$J_ZHhxX",
+        "1kE2flDrT0lw8Q$J_ZHhxP",
+        "1kE2flDrT0lw8Q$J_ZHhws",
+        "1kE2flDrT0lw8Q$J_ZHhwa",
+        "1kE2flDrT0lw8Q$J_ZHhwi",
+        "1kE2flDrT0lw8Q$J_ZHhwQ",
+        "1kE2flDrT0lw8Q$J_ZHhw2",
+        "1kE2flDrT0lw8Q$J_ZHhwA",
+        "1kE2flDrT0lw8Q$J_ZHhzo",
+        "1kE2flDrT0lw8Q$J_ZHhzw",
+        "1kE2flDrT0lw8Q$J_ZHhzW",
+        "1kE2flDrT0lw8Q$J_ZHhzk",
+        "1kE2flDrT0lw8Q$J_ZHhzM"
+      ],
+      "status": "Posiciones IFC · registro visual CCTV VDD",
+      "method": "Ejes y envolventes; las revisiones ARQ e INS presentan diferencias interiores",
+      "wallFitPixels1400": 0.0
+    },
+    "14": {
+      "matrix": [
+        [
+          20.844597614274626,
+          -20.526881218882917,
+          4220.193177969117
+        ],
+        [
+          -20.526881218882917,
+          -20.844597614274626,
+          2271.4931341163983
+        ]
+      ],
+      "crop": [
+        1382.3999999999999,
+        1210.0,
+        2840.0,
+        920.5572143025183
+      ],
+      "rotation": 90,
+      "allowedCameraIds": [
+        "2VUrmzFqT07PCqC5uMs0cr",
+        "3LeRF4YWzFqg8118W5jDck",
+        "3LeRF4YWzFqg8118W5jDb0",
+        "3LeRF4YWzFqg8118W5jDbI",
+        "3LeRF4YWzFqg8118W5jDbo",
+        "3LeRF4YWzFqg8118W5jDa7",
+        "3LeRF4YWzFqg8118W5jDaW",
+        "3LeRF4YWzFqg8118W5jDap",
+        "3LeRF4YWzFqg8118W5jDZ5",
+        "3LeRF4YWzFqg8118W5jDZL",
+        "3LeRF4YWzFqg8118W5jDZd",
+        "3LeRF4YWzFqg8118W5jDZt",
+        "3LeRF4YWzFqg8118W5jDY9",
+        "3LeRF4YWzFqg8118W5jDYS",
+        "3LeRF4YWzFqg8118W5jDYt",
+        "3LeRF4YWzFqg8118W5jDXK",
+        "3LeRF4YWzFqg8118W5jDXc",
+        "3LeRF4YWzFqg8118W5jDXt",
+        "3LeRF4YWzFqg8118W5jDWB",
+        "3LeRF4YWzFqg8118W5jDWs",
+        "3LeRF4YWzFqg8118W5jDlP"
+      ],
+      "status": "Posiciones IFC · registro visual CCTV VDD",
+      "method": "Ejes y envolventes; las revisiones ARQ e INS presentan diferencias interiores",
+      "wallFitPixels1400": 1.7748901411433975
+    },
+    "16": {
+      "matrix": [
+        [
+          17.551252521560244,
+          -17.283733772148597,
+          2692.6330242343315
+        ],
+        [
+          -17.283733772148597,
+          -17.551252521560244,
+          3442.7062130831027
+        ]
+      ],
+      "crop": [
+        2273.143119702627,
+        1432.4602099642264,
+        1436.2001944896565,
+        835.6291094092364
+      ],
+      "rotation": 90,
+      "allowedCameraIds": [
+        "33xbfa_fLBJAzc4ZjPIjTq",
+        "33xbfa_fLBJAzc4ZjPIjSC",
+        "33xbfa_fLBJAzc4ZjPIjS4",
+        "33xbfa_fLBJAzc4ZjPIjSS",
+        "33xbfa_fLBJAzc4ZjPIjSI",
+        "33xbfa_fLBJAzc4ZjPIjSg"
+      ],
+      "status": "Posiciones IFC · registro visual CCTV VDD",
+      "method": "Ejes y envolventes; las revisiones ARQ e INS presentan diferencias interiores",
+      "wallFitPixels1400": 0.5983417841338526
+    },
+    "18": {
+      "matrix": [
+        [
+          19.69619169902955,
+          -19.39597947400323,
+          1394.2754848333855
+        ],
+        [
+          -19.39597947400323,
+          -19.69619169902955,
+          1025.3692727060993
+        ]
+      ],
+      "crop": [
+        1690.7891577704056,
+        977.8771518042595,
+        2486.869303337169,
+        1287.395811214135
+      ],
+      "rotation": 90,
+      "allowedCameraIds": [
+        "33xbfa_fLBJAzc4ZjPIjSW",
+        "33xbfa_fLBJAzc4ZjPIjSq",
+        "33xbfa_fLBJAzc4ZjPIjVA",
+        "33xbfa_fLBJAzc4ZjPIjVU",
+        "33xbfa_fLBJAzc4ZjPIjVM",
+        "33xbfa_fLBJAzc4ZjPIjVk",
+        "33xbfa_fLBJAzc4ZjPIjVc",
+        "33xbfa_fLBJAzc4ZjPIjVw",
+        "33xbfa_fLBJAzc4ZjPIjVm",
+        "33xbfa_fLBJAzc4ZjPIjU8",
+        "33xbfa_fLBJAzc4ZjPIjUU",
+        "33xbfa_fLBJAzc4ZjPIjUM",
+        "33xbfa_fLBJAzc4ZjPIjUk",
+        "33xbfa_fLBJAzc4ZjPIjUa",
+        "33xbfa_fLBJAzc4ZjPIjUy",
+        "33xbfa_fLBJAzc4ZjPIjUq",
+        "33xbfa_fLBJAzc4ZjPIjPC",
+        "33xbfa_fLBJAzc4ZjPIjP0",
+        "33xbfa_fLBJAzc4ZjPIjPM"
+      ],
+      "status": "Posiciones IFC · registro visual CCTV VDD",
+      "method": "Ejes y envolventes; las revisiones ARQ e INS presentan diferencias interiores",
+      "wallFitPixels1400": 0.0
+    },
+    "20": {
+      "matrix": [
+        [
+          21.937361901686014,
+          -21.60298943373134,
+          3228.7911781672387
+        ],
+        [
+          -21.60298943373134,
+          -21.937361901686014,
+          2370.5902328905513
+        ]
+      ],
+      "crop": [
+        211.24965049301773,
+        1239.6000000000001,
+        4908.750349506982,
+        996.7884040348515
+      ],
+      "rotation": 90,
+      "allowedCameraIds": [
+        "2VUrmzFqT07PCqC5uMs0iM",
+        "2VUrmzFqT07PCqC5uMs0l7",
+        "2VUrmzFqT07PCqC5uMs0l4",
+        "33xbfa_fLBJAzc4ZjPIjKt",
+        "33xbfa_fLBJAzc4ZjPIjNF",
+        "33xbfa_fLBJAzc4ZjPIjN7",
+        "33xbfa_fLBJAzc4ZjPIjNV",
+        "33xbfa_fLBJAzc4ZjPIjNL",
+        "33xbfa_fLBJAzc4ZjPIjNj",
+        "33xbfa_fLBJAzc4ZjPIjNb",
+        "33xbfa_fLBJAzc4ZjPIjNx",
+        "33xbfa_fLBJAzc4ZjPIjNp",
+        "33xbfa_fLBJAzc4ZjPIjMB",
+        "33xbfa_fLBJAzc4ZjPIjMJ",
+        "33xbfa_fLBJAzc4ZjPIjMh",
+        "33xbfa_fLBJAzc4ZjPIjMZ",
+        "33xbfa_fLBJAzc4ZjPIjMv",
+        "33xbfa_fLBJAzc4ZjPIjHD",
+        "33xbfa_fLBJAzc4ZjPIjH5",
+        "33xbfa_fLBJAzc4ZjPIjHK",
+        "33xbfa_fLBJAzc4ZjPIjHi",
+        "33xbfa_fLBJAzc4ZjPIjHa",
+        "33xbfa_fLBJAzc4ZjPIjHy",
+        "33xbfa_fLBJAzc4ZjPIjHq",
+        "33xbfa_fLBJAzc4ZjPIjG8",
+        "33xbfa_fLBJAzc4ZjPIjGS",
+        "33xbfa_fLBJAzc4ZjPIjGK",
+        "33xbfa_fLBJAzc4ZjPIjGc",
+        "33xbfa_fLBJAzc4ZjPIjG_",
+        "33xbfa_fLBJAzc4ZjPIjGs",
+        "33xbfa_fLBJAzc4ZjPIjJE",
+        "33xbfa_fLBJAzc4ZjPIjJ6",
+        "33xbfa_fLBJAzc4ZjPIjJU",
+        "33xbfa_fLBJAzc4ZjPIjJM",
+        "33xbfa_fLBJAzc4ZjPIjJi",
+        "33xbfa_fLBJAzc4ZjPIjJY",
+        "33xbfa_fLBJAzc4ZjPIjJw",
+        "33xbfa_fLBJAzc4ZjPIjJo",
+        "33xbfa_fLBJAzc4ZjPIjIA",
+        "33xbfa_fLBJAzc4ZjPIjI2",
+        "33xbfa_fLBJAzc4ZjPIjIQ",
+        "33xbfa_fLBJAzc4ZjPIjII",
+        "33xbfa_fLBJAzc4ZjPIjIc",
+        "33xbfa_fLBJAzc4ZjPIjIy",
+        "33xbfa_fLBJAzc4ZjPIjIq",
+        "33xbfa_fLBJAzc4ZjPIjTC",
+        "33xbfa_fLBJAzc4ZjPIjT4",
+        "33xbfa_fLBJAzc4ZjPIjTQ",
+        "33xbfa_fLBJAzc4ZjPIjTG",
+        "33xbfa_fLBJAzc4ZjPIjQz",
+        "33xbfa_fLBJAzc4ZjPIjQr",
+        "33xbfa_fLBJAzc4ZjPIjbT",
+        "33xbfa_fLBJAzc4ZjPIjbh",
+        "33xbfa_fLBJAzc4ZjPIjbx",
+        "33xbfa_fLBJAzc4ZjPIja6"
+      ],
+      "status": "Posiciones IFC · registro visual CCTV VDD",
+      "method": "Ejes y envolventes; las revisiones ARQ e INS presentan diferencias interiores",
+      "wallFitPixels1400": 0.4776142308324909
+    },
+    "22": {
+      "matrix": [
+        [
+          19.78815050277975,
+          -19.486536628261664,
+          2122.6753184121926
+        ],
+        [
+          -19.486536628261664,
+          -19.78815050277975,
+          3451.353874773936
+        ]
+      ],
+      "crop": [
+        1681.1269753151244,
+        1244.7584868086342,
+        1572.5340015987742,
+        921.6438224397402
+      ],
+      "rotation": 90,
+      "allowedCameraIds": [
+        "3LeRF4YWzFqg8118W5jDkH",
+        "3LeRF4YWzFqg8118W5jDkd",
+        "3LeRF4YWzFqg8118W5jDku",
+        "3LeRF4YWzFqg8118W5jDjB",
+        "3LeRF4YWzFqg8118W5jDjS",
+        "3LeRF4YWzFqg8118W5jDjf",
+        "3LeRF4YWzFqg8118W5jDjv",
+        "3LeRF4YWzFqg8118W5jDiB",
+        "3LeRF4YWzFqg8118W5jDiU",
+        "3LeRF4YWzFqg8118W5jDik",
+        "3LeRF4YWzFqg8118W5jDiu",
+        "3LeRF4YWzFqg8118W5jDhN",
+        "3LeRF4YWzFqg8118W5jDhV",
+        "3LeRF4YWzFqg8118W5jDhq"
+      ],
+      "status": "Posiciones IFC · registro visual CCTV VDD",
+      "method": "Ejes y envolventes; las revisiones ARQ e INS presentan diferencias interiores",
+      "wallFitPixels1400": 0.3221161335166422
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "level": "Sótano",
+      "levelId": "2SCB_wEvLD9uWO8$uQSWQR",
+      "label": "Sótano · E07 · Av. 68",
+      "imageUrl": "./assets/stations/e07/architecture/B.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/stations/e07/architecture/B.pdf",
+      "source": "PLANO SOTANO E7 A.pdf",
+      "sourceSha256": "3b229a92916625e7d7751f914c922543e2c3e454b8b258f5cac4d92be6fcd166"
+    },
+    {
+      "page": 2,
+      "level": "Acceso",
+      "levelId": "2$$nrowlz5pRYHTy8bRROI",
+      "label": "Acceso · E07 · Av. 68",
+      "imageUrl": "./assets/stations/e07/architecture/A.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/stations/e07/architecture/A.pdf",
+      "source": "PLANO ACCESO E7 A.pdf",
+      "sourceSha256": "f8b8dec8e43fb78192add561e39182452fcd626fd79acf31e88a340fc1e1c953"
+    },
+    {
+      "page": 3,
+      "level": "Intermedio",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · E07 · Av. 68",
+      "imageUrl": "./assets/stations/e07/architecture/I.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/stations/e07/architecture/I.pdf",
+      "source": "PLANO INT E7 A.pdf",
+      "sourceSha256": "6aa48d7d21b89e5982771f1f53e64addde8ad68d3e82770c8e4527a64260b543"
+    },
+    {
+      "page": 4,
+      "level": "Plataforma",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · E07 · Av. 68",
+      "imageUrl": "./assets/stations/e07/architecture/P.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/stations/e07/architecture/P.pdf",
+      "source": "PLANO PLA E7 A.pdf",
+      "sourceSha256": "828f3d2c88e3d8d37cf0fa27a3b031fcc5f84a2f71fbc26d642297b35711dea1"
+    }
+  ]
+}

@@ -46,4 +46,10 @@ for(const [id,meta] of Object.entries(cameraIntegration)){
 // E05 uses the shared camera, plan and space controls.
 for(const key of ['architecture','registration','inventory','spaces','locations'])stations.E05.assets[key]='./assets/stations/e05/'+({registration:'plan-registration',locations:'camera-locations'}[key]||key)+'.json?v=20261109-e05integration55';
 stations.E05.description='Arquitectura, estructura e instalaciones; cuatro plantas, espacios y cámaras IFC vinculados. Videorrecorridos: En construcción.';
+
+// E07 and E08 use the same architectural, camera and space controls.
+for(const id of ['E07','E08']){
+ for(const key of ['architecture','registration','inventory','spaces','locations'])stations[id].assets[key]='./assets/stations/'+id.toLowerCase()+'/'+({registration:'plan-registration',locations:'camera-locations'}[key]||key)+'.json?v=20261109-e0708integration57';
+ stations[id].description='Arquitectura, estructura e instalaciones; cuatro plantas, espacios y cámaras IFC vinculados. Videorrecorridos: En construcción.';
+}
 export const station=stations[new URLSearchParams(location.search).get('station')]||stations.E09;
