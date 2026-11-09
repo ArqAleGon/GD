@@ -1,13 +1,13 @@
 import {originalSheets} from './study-plan-originals.js?v=20261104-originals48';
 import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
-import {station,stations} from './study-stations.js?v=20261106-e04routes54';
+import {station,stations} from './study-stations.js?v=20261109-e05integration55';
 import {StationVideo} from './study-station-video.js?v=20261106-e04delivery52';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
 import {PlanViewer} from './study-plans.js?v=20261104-integrity45';
 import {StudyScene} from './study-scene.js?v=20261104-integrity45';
 import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261028-e01media23';
 import {RouteStudy} from './study-routes.js?v=20261106-e02pmr53';
-import {SpaceStudy} from './study-spaces.js?v=20261104-spaces43';
+import {SpaceStudy} from './study-spaces.js?v=20261109-e05integration55';
 const $=s=>document.querySelector(s);
 const levels=station.levels;
 let records=[],types={},architecture=[],inventory=[],modelManifest,scene,active=null,level=levels.find(l=>l.id==='A')||levels[0],started=false,modelsReady=false,loadingPromise;
@@ -210,7 +210,9 @@ async function loadRecoveredData(){
  modelManifest={...source,recovered:true};
  const size=source.bounds.max.map((v,i)=>v-source.bounds.min[i]);modelManifest.frameDirection=size[2]>size[0]?[1,.8,.35]:[.35,.8,1];
  records=station.assets.cameras?(await json(station.assets.cameras)).cameras:[];
- for(const r of records)r.displayBuilding=station.name+' · edificación por asignar';
+ const locations=station.assets.locations?await json(station.assets.locations):{records:[],method:'Posiciones y tipologías del IFC. Edificación pendiente de asignación.',pending:!records.length};
+ const buildingLookup=new Map(locations.records.map(r=>[r.id,r.building]));
+ for(const r of records)r.displayBuilding=buildingLookup.get(r.ifcGlobalId)||station.name+' · edificación por asignar';
  planView.configure(station.assets.registration?await json(station.assets.registration):{},records,types);
  if(station.assets.architecture){
   try{architecture=(await json(station.assets.architecture)).pages;}
@@ -240,6 +242,6 @@ async function loadRecoveredData(){
  $('#close-spaces').addEventListener('click',()=>$('#spaces-dialog').close());
  }
  if(!spacesData)for(const button of document.querySelectorAll('#toggle-space-labels,#toggle-space-colors,#show-spaces,#show-space-labels')){button.disabled=true;button.title='En construcción';}
- initCameraDashboard(records,types,levels,{records:[],method:'Posiciones y tipologías del IFC. Edificación pendiente de asignación.',pending:!records.length},station.name);
+ initCameraDashboard(records,types,levels,locations,station.name);
  $('#type-legend').replaceChildren(...Object.entries(types).map(([key,type])=>{const span=document.createElement('span');span.className='legend-chip';const dot=document.createElement('i');dot.style.background=type.color;span.append(dot,document.createTextNode(key+' · '+type.label));return span;}));
 }

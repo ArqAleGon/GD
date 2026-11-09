@@ -44,13 +44,17 @@
     },
     "E05": {
       "cameras": 245,
-      "architectureMapped": 0,
-      "inventoryMapped": 0,
-      "interactiveVerified": false,
+      "architectureMapped": 245,
+      "inventoryMapped": 245,
+      "interactiveVerified": true,
+      "checkedAt": "2026-11-09T18:59:31.171Z",
       "resourceDigests": {
-        "cameras": "2c060fa906e5aa5c5587993cf5cb107ff7f130033e844c8386be93688757bca7"
+        "cameras": "2c060fa906e5aa5c5587993cf5cb107ff7f130033e844c8386be93688757bca7",
+        "inventory": "83454a13f31b9cdd84436f19f5d4558b4e986aabca6a4db6dcd0607570845e5b",
+        "architecture": "39433b036116020f097f877323fc57cd86d6189585ed964afa4057a631d59432",
+        "registration": "0531371753b1704610d80044d85ae853a55a86fe31d0eaa37029cac08952a50a"
       },
-      "status": "En construcción"
+      "status": "Verificado · posiciones IFC y registro visual PDF"
     },
     "E06": {
       "cameras": 160,

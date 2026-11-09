@@ -1,0 +1,52 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "level": "Sótano",
+      "levelId": "2SCB_wEvLD9uWO8$uQSWQR",
+      "label": "Sótano · E05 · Kennedy",
+      "imageUrl": "./assets/stations/e05/architecture/B.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/stations/e05/architecture/B.pdf",
+      "source": "PLANO SOTANO E5 A.pdf",
+      "sourceSha256": "0c08a8ef170aa98322e185be50b8c35983ae00818b31ada94cb0bfd1e9399b91"
+    },
+    {
+      "page": 2,
+      "level": "Acceso",
+      "levelId": "1ZvOeQwd10lPlZWEpLLxYV",
+      "label": "Acceso · E05 · Kennedy",
+      "imageUrl": "./assets/stations/e05/architecture/A.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/stations/e05/architecture/A.pdf",
+      "source": "PLANO ACCESO E5 A.pdf",
+      "sourceSha256": "0831cf917d9bc8ba92f7dcf65f1c88a9f555dac78981c57f4d9d99e532c60247"
+    },
+    {
+      "page": 3,
+      "level": "Intermedio",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · E05 · Kennedy",
+      "imageUrl": "./assets/stations/e05/architecture/I.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/stations/e05/architecture/I.pdf",
+      "source": "PLANO INT E5 A.pdf",
+      "sourceSha256": "d12358583598e1bba3a508090d87191a53e01b87d18c0a7aab9ce85e152d4a82"
+    },
+    {
+      "page": 4,
+      "level": "Plataforma",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · E05 · Kennedy",
+      "imageUrl": "./assets/stations/e05/architecture/P.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/stations/e05/architecture/P.pdf",
+      "source": "PLANO PLA E5 A.pdf",
+      "sourceSha256": "63132795f39b16a53e1c61d9ae3b22a5c02cb7e8bb578f433d81492fc7b96bd1"
+    }
+  ]
+}

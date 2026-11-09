@@ -1,0 +1,132 @@
+{
+  "source": "L1T1-5445-305-CON-ED-INS-PL-0009_VCC.pdf",
+  "pages": [
+    {
+      "page": 2,
+      "level": "Sótano",
+      "levelId": "2SCB_wEvLD9uWO8$uQSWQR",
+      "label": "Sótano · Descendente · CCTV VCC",
+      "imageUrl": "./assets/stations/e05/inventory/p2.jpg",
+      "width": 5600,
+      "height": 1980,
+      "crop": [
+        20.0,
+        160.0,
+        5180.0,
+        1460.0
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e05/inventory/L1T1-5445-305-CON-ED-INS-PL-0009_VCC.pdf",
+      "sourcePage": 2
+    },
+    {
+      "page": 4,
+      "level": "Acceso",
+      "levelId": "1ZvOeQwd10lPlZWEpLLxYV",
+      "label": "Acceso · Descendente · CCTV VCC",
+      "imageUrl": "./assets/stations/e05/inventory/p4.jpg",
+      "width": 5600,
+      "height": 1980,
+      "crop": [
+        1040.0,
+        400.0,
+        3480.0,
+        1000.0
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e05/inventory/L1T1-5445-305-CON-ED-INS-PL-0009_VCC.pdf",
+      "sourcePage": 4
+    },
+    {
+      "page": 6,
+      "level": "Acceso",
+      "levelId": "1ZvOeQwd10lPlZWEpLLxYV",
+      "label": "Acceso · Ascendente · CCTV VCC",
+      "imageUrl": "./assets/stations/e05/inventory/p6.jpg",
+      "width": 5600,
+      "height": 1980,
+      "crop": [
+        140.0,
+        120.0,
+        4940.0,
+        1520.0
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e05/inventory/L1T1-5445-305-CON-ED-INS-PL-0009_VCC.pdf",
+      "sourcePage": 6
+    },
+    {
+      "page": 8,
+      "level": "Intermedio",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · Descendente · CCTV VCC",
+      "imageUrl": "./assets/stations/e05/inventory/p8.jpg",
+      "width": 5600,
+      "height": 1980,
+      "crop": [
+        920.0,
+        72.0,
+        3400.0,
+        1700.0
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e05/inventory/L1T1-5445-305-CON-ED-INS-PL-0009_VCC.pdf",
+      "sourcePage": 8
+    },
+    {
+      "page": 10,
+      "level": "Intermedio",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · Ascendente · CCTV VCC",
+      "imageUrl": "./assets/stations/e05/inventory/p10.jpg",
+      "width": 5600,
+      "height": 1980,
+      "crop": [
+        880.0,
+        80.0,
+        3460.0,
+        1700.0
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e05/inventory/L1T1-5445-305-CON-ED-INS-PL-0009_VCC.pdf",
+      "sourcePage": 10
+    },
+    {
+      "page": 12,
+      "level": "Plataforma",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · Descendente · CCTV VCC",
+      "imageUrl": "./assets/stations/e05/inventory/p12.jpg",
+      "width": 5600,
+      "height": 1980,
+      "crop": [
+        460.0,
+        80.0,
+        4480.0,
+        1692.0
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e05/inventory/L1T1-5445-305-CON-ED-INS-PL-0009_VCC.pdf",
+      "sourcePage": 12
+    },
+    {
+      "page": 14,
+      "level": "Plataforma",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · Ascendente · CCTV VCC",
+      "imageUrl": "./assets/stations/e05/inventory/p14.jpg",
+      "width": 5600,
+      "height": 1980,
+      "crop": [
+        320.0,
+        80.0,
+        4740.0,
+        1700.0
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e05/inventory/L1T1-5445-305-CON-ED-INS-PL-0009_VCC.pdf",
+      "sourcePage": 14
+    }
+  ],
+  "method": "Disposición CCTV VCC. Indicadores procedentes del IFC; registro visual de ejes. Las revisiones de distribución interior ARQ e INS presentan diferencias."
+}
