@@ -1,12 +1,12 @@
 import {originalSheets} from './study-plan-originals.js?v=20261104-originals48';
 import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
-import {station,stations} from './study-stations.js?v=20261110-e07brt61b';
+import {station,stations} from './study-stations.js?v=20261110-e07routes62';
 import {StationVideo} from './study-station-video.js?v=20261106-e04delivery52';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
 import {PlanViewer} from './study-plans.js?v=20261104-integrity45';
 import {StudyScene} from './study-scene.js?v=20261104-integrity45';
 import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261028-e01media23';
-import {RouteStudy} from './study-routes.js?v=20261110-e07brt61c';
+import {RouteStudy} from './study-routes.js?v=20261110-e07routes62';
 import {SpaceStudy} from './study-spaces.js?v=20261109-e0708integration57';
 const $=s=>document.querySelector(s);
 const levels=station.levels;
@@ -246,4 +246,4 @@ async function loadRecoveredData(){
  $('#type-legend').replaceChildren(...Object.entries(types).map(([key,type])=>{const span=document.createElement('span');span.className='legend-chip';const dot=document.createElement('i');dot.style.background=type.color;span.append(dot,document.createTextNode(key+' · '+type.label));return span;}));
 }
 
-if(station.id==='E07'&&station.assets.routes){$('#routes-drawer h2').textContent='Recorridos · E07';$('#routes-drawer > p').textContent='BRT–Metro · recorrido azul sincronizado con el POV.';$('#routes-drawer .micro-note').textContent='Usuarios y PMR: videos disponibles; trazados En construcción.';}
+if(station.id==='E07'&&station.assets.routes){$('#routes-drawer h2').textContent='Recorridos · E07';$('#routes-drawer > p').textContent='BRT–Metro, Usuarios y PMR · recorridos sincronizados con el POV.';$('#routes-drawer .micro-note').textContent='Azul: BRT–Metro · Negro: Usuarios · Naranja: PMR.';}

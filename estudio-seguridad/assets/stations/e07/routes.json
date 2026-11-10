@@ -1,6 +1,6 @@
 {
   "station": "E07",
-  "revision": 61,
+  "revision": 62,
   "unifiedPlans": true,
   "originY": 2567.4199999999983,
   "videoClockIn3D": true,
@@ -12,7 +12,7 @@
     "2SCB_wEvLD9uWO8$uQSW5e": 3,
     "2SCB_wEvLD9uWO8$uQSW4n": 4
   },
-  "sourceLabel": "BRT-EM7 · cuatro imágenes de referencia y video POV",
+  "sourceLabel": "E07 · BRT, Usuarios y PMR · referencias gráficas, IFC y videos POV",
   "measurementNote": "Registro visual sobre planos e IFC; distancias aproximadas. Altura del descenso exterior BRT estimada entre niveles: pendiente de contraste con su modelo.",
   "families": [
     {
@@ -256,9 +256,476 @@
       ],
       "color": "#0066ff",
       "directionFromAnimation": true
+    },
+    {
+      "id": "e07-pmr-access",
+      "family": "pmr",
+      "level": "2$$nrowlz5pRYHTy8bRROI",
+      "label": "Acceso · Calle 27 Sur y ascensor",
+      "points": [
+        [
+          -12.067139763265272,
+          -10.289999999999054,
+          31.33166792873064
+        ],
+        [
+          -8.716310948951197,
+          -10.289999999999054,
+          34.63170993972525
+        ],
+        [
+          -4.862857812489997,
+          -10.289999999999054,
+          38.426758252369034
+        ],
+        [
+          -2.0375073818167997,
+          -10.289999999999054,
+          38.238902090325524
+        ],
+        [
+          1.6230109122689393,
+          -10.289999999999054,
+          38.54351288976525
+        ],
+        [
+          4.953525005255241,
+          -10.289999999999054,
+          39.183206570636386
+        ],
+        [
+          8.129194358355683,
+          -10.289999999999054,
+          41.32061585728496
+        ],
+        [
+          9.30198444336561,
+          -10.289999999999054,
+          42.475630561133066
+        ]
+      ],
+      "color": "#f58220",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e07-pmr-intermediate",
+      "family": "pmr",
+      "level": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · zona no paga, validación y ascensor",
+      "points": [
+        [
+          8.106756518114311,
+          -2.9399999999996,
+          42.48540926710304
+        ],
+        [
+          9.447478049516683,
+          -2.9399999999996,
+          43.80585842247658
+        ],
+        [
+          12.634225733600932,
+          -2.9399999999996,
+          47.274571502335775
+        ],
+        [
+          17.496875331938114,
+          -2.9399999999996,
+          52.39384602641187
+        ],
+        [
+          22.524581074696997,
+          -2.9399999999996,
+          57.345530359062685
+        ],
+        [
+          27.387230673034168,
+          -2.9399999999996,
+          62.46480488313879
+        ],
+        [
+          31.912165841517165,
+          -2.9399999999996,
+          66.92132078252452
+        ],
+        [
+          34.08323618903522,
+          -2.9399999999996,
+          68.06911165246557
+        ],
+        [
+          35.403685344408785,
+          -2.9399999999996,
+          66.72839012106321
+        ],
+        [
+          39.86020124379449,
+          -2.9399999999996,
+          62.2034549525802
+        ],
+        [
+          44.48177328760193,
+          -2.9399999999996,
+          57.51092959267193
+        ],
+        [
+          41.46514984194657,
+          -2.9399999999996,
+          54.539918993081436
+        ],
+        [
+          38.78370677914185,
+          -2.9399999999996,
+          51.899020682334324
+        ],
+        [
+          38.448526396291264,
+          -2.9399999999996,
+          51.56890839349094
+        ]
+      ],
+      "color": "#f58220",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e07-pmr-platform",
+      "family": "pmr",
+      "level": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · pasarela y puertas hacia Calle 72",
+      "points": [
+        [
+          36.022738495237725,
+          6.100000000000364,
+          49.20594232770414
+        ],
+        [
+          32.66462360511389,
+          6.100000000000364,
+          45.899586725538015
+        ],
+        [
+          28.466979992459066,
+          6.100000000000364,
+          41.766642222830356
+        ],
+        [
+          24.605147868816644,
+          6.100000000000364,
+          37.964333280339325
+        ],
+        [
+          20.07169276714945,
+          6.100000000000364,
+          33.50075321741506
+        ],
+        [
+          15.03452043196368,
+          6.100000000000364,
+          28.541219814165885
+        ],
+        [
+          14.194991709432708,
+          6.100000000000364,
+          27.71463091362434
+        ],
+        [
+          17.336029531490535,
+          6.100000000000364,
+          24.52442176800668
+        ],
+        [
+          21.468974034198187,
+          6.100000000000364,
+          20.326778155351878
+        ],
+        [
+          26.097871877230762,
+          6.100000000000364,
+          15.625417309178484
+        ],
+        [
+          30.396134160046714,
+          6.100000000000364,
+          11.259867952017492
+        ],
+        [
+          32.5452653014547,
+          6.100000000000364,
+          9.077093273436985
+        ]
+      ],
+      "color": "#f58220",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e07-usuarios-p",
+      "family": "usuarios",
+      "level": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Usuarios · plataforma, pasarela y descenso a intermedio",
+      "points": [
+        [
+          13.004231269961778,
+          6.100000000000364,
+          -18.417962589399448
+        ],
+        [
+          17.14671771311241,
+          6.100000000000364,
+          -21.282803843960718
+        ],
+        [
+          26.714558257790102,
+          6.100000000000364,
+          -12.195040159048144
+        ],
+        [
+          40.986302306068154,
+          6.100000000000364,
+          1.853739434984813
+        ],
+        [
+          60.276818215779265,
+          6.100000000000364,
+          -23.788183849840244
+        ],
+        [
+          67.73539230243155,
+          6.100000000000364,
+          -28.678352003181715
+        ],
+        [
+          64.87317415909669,
+          6.100000000000364,
+          -32.48765581524635
+        ],
+        [
+          64.03667954113602,
+          6.0999999618535,
+          -33.21294836472128
+        ],
+        [
+          61.724627598237014,
+          3.7750001525883636,
+          -35.840168542306195
+        ],
+        [
+          60.49515858846064,
+          3.7750001525883636,
+          -37.23628396377445
+        ],
+        [
+          58.183106645428694,
+          1.5149999237065277,
+          -39.863504141031804
+        ],
+        [
+          56.95363763576286,
+          1.5149999237065277,
+          -41.2596195627511
+        ],
+        [
+          54.64158569267189,
+          -0.7450000667567293,
+          -43.886839739863035
+        ],
+        [
+          53.41209966301229,
+          -0.7450000667567293,
+          -45.28291322750997
+        ],
+        [
+          51.10008175993885,
+          -2.926153846606139,
+          -47.9102172728856
+        ]
+      ],
+      "color": "#000000",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e07-usuarios-i",
+      "family": "usuarios",
+      "level": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Usuarios · validación, circulación y descenso a acceso",
+      "points": [
+        [
+          51.10008175993885,
+          -2.926153846606139,
+          -47.9102172728856
+        ],
+        [
+          45.29590044008801,
+          -2.9399999999996,
+          -54.26213650655039
+        ],
+        [
+          41.170228273923094,
+          -2.9399999999996,
+          -50.072027279068315
+        ],
+        [
+          36.21942167452519,
+          -2.9399999999996,
+          -45.04389620608985
+        ],
+        [
+          48.78974935697137,
+          -2.9399999999996,
+          -32.66687970759507
+        ],
+        [
+          55.49392412094268,
+          -2.9399999999996,
+          -26.065804241731204
+        ],
+        [
+          61.32141480262729,
+          -2.9399999999996,
+          -25.27933204528851
+        ],
+        [
+          68.425303375789,
+          -2.9399999999996,
+          -31.48842614932001
+        ],
+        [
+          61.55469590809938,
+          -2.940000095366413,
+          -36.03152137552749
+        ],
+        [
+          59.79781329034677,
+          -4.79768280029195,
+          -38.02898811493098
+        ],
+        [
+          58.56818943330151,
+          -4.79768280029195,
+          -39.42433423228253
+        ],
+        [
+          56.81130681501878,
+          -6.590365924834186,
+          -41.42180096975412
+        ],
+        [
+          55.58168295781025,
+          -6.590365924834186,
+          -42.81714708649606
+        ],
+        [
+          53.8248003403842,
+          -8.383048810957844,
+          -44.814613827089666
+        ],
+        [
+          52.59519667887166,
+          -8.383048810957844,
+          -46.210113131972655
+        ],
+        [
+          50.65326877406574,
+          -10.270731707065279,
+          -48.41744780641326
+        ]
+      ],
+      "color": "#000000",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e07-usuarios-a",
+      "family": "usuarios",
+      "level": "2$$nrowlz5pRYHTy8bRROI",
+      "label": "Usuarios · salida Parque El Tejar",
+      "points": [
+        [
+          50.65326877406574,
+          -10.270731707065279,
+          -48.41744780641326
+        ],
+        [
+          48.15606594921177,
+          -10.289999999999054,
+          -52.96050655346277
+        ],
+        [
+          53.76720105454337,
+          -10.289999999999054,
+          -58.658161604817074
+        ]
+      ],
+      "color": "#000000",
+      "directionFromAnimation": true
     }
   ],
-  "links": [],
+  "links": [
+    {
+      "id": "e07-pmr-lift-a-i",
+      "family": "pmr",
+      "label": "Ascensor · Acceso → Intermedio",
+      "points": [
+        [
+          9.30198444336561,
+          -10.289999999999054,
+          42.475630561133066
+        ],
+        [
+          7.77,
+          -10.289999999999054,
+          41.53
+        ],
+        [
+          7.77,
+          -2.9399999999996,
+          41.53
+        ],
+        [
+          8.106756518114311,
+          -2.9399999999996,
+          42.48540926710304
+        ]
+      ],
+      "fromLevel": "2$$nrowlz5pRYHTy8bRROI",
+      "toLevel": "2SCB_wEvLD9uWO8$uQSW5e",
+      "schematic": true,
+      "connectionType": "elevator",
+      "color": "#f58220",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e07-pmr-lift-i-p",
+      "family": "pmr",
+      "label": "Ascensor · Intermedio → Plataforma",
+      "points": [
+        [
+          38.448526396291264,
+          -2.9399999999996,
+          51.56890839349094
+        ],
+        [
+          38.28,
+          -2.9399999999996,
+          50.51
+        ],
+        [
+          38.28,
+          6.100000000000364,
+          50.51
+        ],
+        [
+          36.022738495237725,
+          6.100000000000364,
+          49.20594232770414
+        ]
+      ],
+      "fromLevel": "2SCB_wEvLD9uWO8$uQSW5e",
+      "toLevel": "2SCB_wEvLD9uWO8$uQSW4n",
+      "schematic": true,
+      "connectionType": "elevator",
+      "color": "#f58220",
+      "directionFromAnimation": true
+    }
+  ],
   "journeys": [
     {
       "id": "e07-brt-pov",
@@ -479,42 +946,464 @@
       "id": "e07-usuarios-pov",
       "family": "usuarios",
       "label": "POV · Usuarios",
-      "legs": [],
-      "videoOnly": true,
-      "note": "Video disponible. Trazado: En construcción.",
+      "legs": [
+        "e07-usuarios-p",
+        "e07-usuarios-i",
+        "e07-usuarios-a"
+      ],
+      "note": "Plataforma → Intermedio → Acceso. Descenso por escaleras del modelo y salida a Parque El Tejar.",
       "videoSync": {
         "videoId": "e07-usuario-v58",
         "duration": 81.03,
         "keys": [
           {
-            "time": 0
+            "time": 0,
+            "leg": "e07-usuarios-p",
+            "fraction": 0.0
           },
           {
-            "time": 81.03
+            "time": 5,
+            "leg": "e07-usuarios-p",
+            "fraction": 0.0
+          },
+          {
+            "time": 8,
+            "leg": "e07-usuarios-p",
+            "fraction": 0.0469065489537322
+          },
+          {
+            "time": 11,
+            "leg": "e07-usuarios-p",
+            "fraction": 0.16980110390632616
+          },
+          {
+            "time": 15,
+            "leg": "e07-usuarios-p",
+            "fraction": 0.3563077479386104
+          },
+          {
+            "time": 20,
+            "leg": "e07-usuarios-p",
+            "fraction": 0.6551456180545677
+          },
+          {
+            "time": 24,
+            "leg": "e07-usuarios-p",
+            "fraction": 0.7382068708171685
+          },
+          {
+            "time": 27,
+            "leg": "e07-usuarios-p",
+            "fraction": 0.782581734897764
+          },
+          {
+            "time": 30.0,
+            "leg": "e07-usuarios-p",
+            "fraction": 0.7928927045645795
+          },
+          {
+            "time": 31.889359097417966,
+            "leg": "e07-usuarios-p",
+            "fraction": 0.8320227098418337
+          },
+          {
+            "time": 32.725892282826045,
+            "leg": "e07-usuarios-p",
+            "fraction": 0.8493479223990181
+          },
+          {
+            "time": 34.599235590187455,
+            "leg": "e07-usuarios-p",
+            "fraction": 0.8881462289799849
+          },
+          {
+            "time": 35.435768775647404,
+            "leg": "e07-usuarios-p",
+            "fraction": 0.9054714415382434
+          },
+          {
+            "time": 37.309112024821616,
+            "leg": "e07-usuarios-p",
+            "fraction": 0.9442697469141109
+          },
+          {
+            "time": 38.14563611710049,
+            "leg": "e07-usuarios-p",
+            "fraction": 0.9615947711459557
+          },
+          {
+            "time": 40.0,
+            "leg": "e07-usuarios-p",
+            "fraction": 1.0
+          },
+          {
+            "time": 40,
+            "leg": "e07-usuarios-i",
+            "fraction": 0.0
+          },
+          {
+            "time": 43,
+            "leg": "e07-usuarios-i",
+            "fraction": 0.09468243871124268
+          },
+          {
+            "time": 45,
+            "leg": "e07-usuarios-i",
+            "fraction": 0.15938929003198743
+          },
+          {
+            "time": 47,
+            "leg": "e07-usuarios-i",
+            "fraction": 0.15938929003198743
+          },
+          {
+            "time": 50,
+            "leg": "e07-usuarios-i",
+            "fraction": 0.23703751161688102
+          },
+          {
+            "time": 55,
+            "leg": "e07-usuarios-i",
+            "fraction": 0.43115806557911507
+          },
+          {
+            "time": 59,
+            "leg": "e07-usuarios-i",
+            "fraction": 0.5346890276923066
+          },
+          {
+            "time": 61,
+            "leg": "e07-usuarios-i",
+            "fraction": 0.5993958790130512
+          },
+          {
+            "time": 63,
+            "leg": "e07-usuarios-i",
+            "fraction": 0.7032176136317525
+          },
+          {
+            "time": 65.0,
+            "leg": "e07-usuarios-i",
+            "fraction": 0.7938551228829437
+          },
+          {
+            "time": 66.7319651028281,
+            "leg": "e07-usuarios-i",
+            "fraction": 0.8295586962122964
+          },
+          {
+            "time": 67.72473760387177,
+            "leg": "e07-usuarios-i",
+            "fraction": 0.8500241927355805
+          },
+          {
+            "time": 69.43707366631122,
+            "leg": "e07-usuarios-i",
+            "fraction": 0.885323123453049
+          },
+          {
+            "time": 70.42984616716838,
+            "leg": "e07-usuarios-i",
+            "fraction": 0.9057886199724882
+          },
+          {
+            "time": 72.14218215927247,
+            "leg": "e07-usuarios-i",
+            "fraction": 0.9410875492400291
+          },
+          {
+            "time": 73.135008884056,
+            "leg": "e07-usuarios-i",
+            "fraction": 0.9615541635579323
+          },
+          {
+            "time": 75.0,
+            "leg": "e07-usuarios-i",
+            "fraction": 1.0
+          },
+          {
+            "time": 75,
+            "leg": "e07-usuarios-a",
+            "fraction": 0.0
+          },
+          {
+            "time": 77,
+            "leg": "e07-usuarios-a",
+            "fraction": 0.3933091740781582
+          },
+          {
+            "time": 80,
+            "leg": "e07-usuarios-a",
+            "fraction": 1.0
+          },
+          {
+            "time": 81.03,
+            "leg": "e07-usuarios-a",
+            "fraction": 1.0
           }
         ],
-        "method": ""
+        "hiddenWindows": [
+          [
+            0,
+            0.5
+          ]
+        ],
+        "method": "Imágenes registradas sobre plantas; escaleras IFC y tiempos de giro, validación y cambios de nivel del video."
       }
     },
     {
       "id": "e07-pmr-pov",
       "family": "pmr",
       "label": "POV · PMR (Personas con movilidad reducida)",
-      "legs": [],
-      "videoOnly": true,
-      "note": "Video disponible. Trazado: En construcción.",
+      "legs": [
+        "e07-pmr-access",
+        "e07-pmr-lift-a-i",
+        "e07-pmr-intermediate",
+        "e07-pmr-lift-i-p",
+        "e07-pmr-platform"
+      ],
+      "note": "Acceso → Intermedio → Plataforma. Ascensores representados como enlaces verticales aproximados durante el viaje del POV.",
       "videoSync": {
         "videoId": "e07-pmr-v58",
-        "duration": 81.0,
+        "duration": 81,
         "keys": [
           {
-            "time": 0
+            "time": 0,
+            "leg": "e07-pmr-access",
+            "fraction": 0.0
           },
           {
-            "time": 81.0
+            "time": 0.5,
+            "leg": "e07-pmr-access",
+            "fraction": 0.0
+          },
+          {
+            "time": 3,
+            "leg": "e07-pmr-access",
+            "fraction": 0.184564638490978
+          },
+          {
+            "time": 5,
+            "leg": "e07-pmr-access",
+            "fraction": 0.3968139727556027
+          },
+          {
+            "time": 7,
+            "leg": "e07-pmr-access",
+            "fraction": 0.5079366002700886
+          },
+          {
+            "time": 9,
+            "leg": "e07-pmr-access",
+            "fraction": 0.6520861910658872
+          },
+          {
+            "time": 11,
+            "leg": "e07-pmr-access",
+            "fraction": 0.7851776446092267
+          },
+          {
+            "time": 13,
+            "leg": "e07-pmr-access",
+            "fraction": 0.9354023765281579
+          },
+          {
+            "time": 14.5,
+            "leg": "e07-pmr-access",
+            "fraction": 1.0
+          },
+          {
+            "time": 15,
+            "leg": "e07-pmr-access",
+            "fraction": 1.0
+          },
+          {
+            "time": 15,
+            "leg": "e07-pmr-lift-a-i",
+            "fraction": 0
+          },
+          {
+            "time": 20,
+            "leg": "e07-pmr-lift-a-i",
+            "fraction": 1
+          },
+          {
+            "time": 20,
+            "leg": "e07-pmr-intermediate",
+            "fraction": 0.0
+          },
+          {
+            "time": 21,
+            "leg": "e07-pmr-intermediate",
+            "fraction": 0.031434355745103504
+          },
+          {
+            "time": 23,
+            "leg": "e07-pmr-intermediate",
+            "fraction": 0.031434355745103504
+          },
+          {
+            "time": 25,
+            "leg": "e07-pmr-intermediate",
+            "fraction": 0.11011841615096454
+          },
+          {
+            "time": 28,
+            "leg": "e07-pmr-intermediate",
+            "fraction": 0.2280627202551593
+          },
+          {
+            "time": 31,
+            "leg": "e07-pmr-intermediate",
+            "fraction": 0.34594155429929757
+          },
+          {
+            "time": 34,
+            "leg": "e07-pmr-intermediate",
+            "fraction": 0.4638858584034923
+          },
+          {
+            "time": 36,
+            "leg": "e07-pmr-intermediate",
+            "fraction": 0.5699768090432167
+          },
+          {
+            "time": 38,
+            "leg": "e07-pmr-intermediate",
+            "fraction": 0.6109998476543437
+          },
+          {
+            "time": 40,
+            "leg": "e07-pmr-intermediate",
+            "fraction": 0.6424342033994472
+          },
+          {
+            "time": 41.5,
+            "leg": "e07-pmr-intermediate",
+            "fraction": 0.6424342033994472
+          },
+          {
+            "time": 43,
+            "leg": "e07-pmr-intermediate",
+            "fraction": 0.7485251540391715
+          },
+          {
+            "time": 45,
+            "leg": "e07-pmr-intermediate",
+            "fraction": 0.8585453991470338
+          },
+          {
+            "time": 47,
+            "leg": "e07-pmr-intermediate",
+            "fraction": 0.9292726995735172
+          },
+          {
+            "time": 49,
+            "leg": "e07-pmr-intermediate",
+            "fraction": 0.9921414110637242
+          },
+          {
+            "time": 50.5,
+            "leg": "e07-pmr-intermediate",
+            "fraction": 1.0
+          },
+          {
+            "time": 54,
+            "leg": "e07-pmr-intermediate",
+            "fraction": 1.0
+          },
+          {
+            "time": 54,
+            "leg": "e07-pmr-lift-i-p",
+            "fraction": 0
+          },
+          {
+            "time": 58,
+            "leg": "e07-pmr-lift-i-p",
+            "fraction": 1
+          },
+          {
+            "time": 58,
+            "leg": "e07-pmr-platform",
+            "fraction": 0.0
+          },
+          {
+            "time": 60,
+            "leg": "e07-pmr-platform",
+            "fraction": 0.08298755186721983
+          },
+          {
+            "time": 62,
+            "leg": "e07-pmr-platform",
+            "fraction": 0.18672199170124493
+          },
+          {
+            "time": 64,
+            "leg": "e07-pmr-platform",
+            "fraction": 0.28215767634854766
+          },
+          {
+            "time": 66,
+            "leg": "e07-pmr-platform",
+            "fraction": 0.39419087136929454
+          },
+          {
+            "time": 68,
+            "leg": "e07-pmr-platform",
+            "fraction": 0.5186721991701242
+          },
+          {
+            "time": 70,
+            "leg": "e07-pmr-platform",
+            "fraction": 0.5394190871369294
+          },
+          {
+            "time": 72,
+            "leg": "e07-pmr-platform",
+            "fraction": 0.6182572614107885
+          },
+          {
+            "time": 74,
+            "leg": "e07-pmr-platform",
+            "fraction": 0.7219917012448133
+          },
+          {
+            "time": 76,
+            "leg": "e07-pmr-platform",
+            "fraction": 0.8381742738589213
+          },
+          {
+            "time": 78,
+            "leg": "e07-pmr-platform",
+            "fraction": 0.9460580912863069
+          },
+          {
+            "time": 79,
+            "leg": "e07-pmr-platform",
+            "fraction": 1.0
+          },
+          {
+            "time": 81,
+            "leg": "e07-pmr-platform",
+            "fraction": 1.0
           }
         ],
-        "method": ""
+        "hiddenWindows": [
+          [
+            0,
+            0.5
+          ],
+          [
+            15,
+            20
+          ],
+          [
+            54,
+            58
+          ]
+        ],
+        "waitingLabel": "Ascensor · transición entre niveles",
+        "method": "Tres imágenes registradas sobre plantas e IFC; hitos de giro, pausas, validación y ascensores del video original."
       }
     }
   ]
