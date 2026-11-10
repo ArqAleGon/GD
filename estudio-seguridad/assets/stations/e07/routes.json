@@ -1,0 +1,521 @@
+{
+  "station": "E07",
+  "revision": 61,
+  "unifiedPlans": true,
+  "originY": 2567.4199999999983,
+  "videoClockIn3D": true,
+  "hideSegments": true,
+  "videoManifestUrl": "./assets/videotours/manifest.json?v=20261109-e0507videos58",
+  "pageByLevel": {
+    "2SCB_wEvLD9uWO8$uQSWQR": 1,
+    "2$$nrowlz5pRYHTy8bRROI": 2,
+    "2SCB_wEvLD9uWO8$uQSW5e": 3,
+    "2SCB_wEvLD9uWO8$uQSW4n": 4
+  },
+  "sourceLabel": "BRT-EM7 · cuatro imágenes de referencia y video POV",
+  "measurementNote": "Registro visual sobre planos e IFC; distancias aproximadas. Altura del descenso exterior BRT estimada entre niveles: pendiente de contraste con su modelo.",
+  "families": [
+    {
+      "id": "brt",
+      "label": "E07 · BRT–Metro",
+      "color": "#0066ff"
+    },
+    {
+      "id": "usuarios",
+      "label": "E07 · Usuarios",
+      "color": "#000000"
+    },
+    {
+      "id": "pmr",
+      "label": "E07 · PMR (Personas con movilidad reducida)",
+      "color": "#f58220"
+    }
+  ],
+  "routes": [
+    {
+      "id": "e07-brt-b",
+      "family": "brt",
+      "level": "2SCB_wEvLD9uWO8$uQSWQR",
+      "label": "BRT · descenso e ingreso por sótano",
+      "points": [
+        [
+          -93.68453492861138,
+          -10.289999999999054,
+          -71.85189770178938
+        ],
+        [
+          -92.33319127856954,
+          -10.289999999999054,
+          -73.22929344448448
+        ],
+        [
+          -89.63050397848583,
+          -10.289999999999054,
+          -75.98408492987467
+        ],
+        [
+          -87.60348850342307,
+          -11.964999999999236,
+          -78.05017854391731
+        ],
+        [
+          -84.35635592942462,
+          -15.3149999999996,
+          -80.946617417475
+        ],
+        [
+          -81.92263475471663,
+          -16.98999999999978,
+          -83.28949278468933
+        ],
+        [
+          -79.42264900213921,
+          -16.98999999999978,
+          -85.83767490867524
+        ],
+        [
+          -78.61184281211408,
+          -16.98999999999978,
+          -86.66411235429231
+        ],
+        [
+          -76.27678307269574,
+          -16.98999999999978,
+          -85.0490129974054
+        ],
+        [
+          -73.93521031011407,
+          -16.98999999999978,
+          -82.75172879233426
+        ],
+        [
+          -72.2134656317452,
+          -16.3928124996268,
+          -81.06254922978194
+        ],
+        [
+          -68.0071981979945,
+          -14.703125033377928,
+          -76.3952032186069
+        ],
+        [
+          -64.3570994798525,
+          -12.866249952315611,
+          -72.81414254599599
+        ],
+        [
+          -61.384143449760415,
+          -11.038907545242512,
+          -75.84441317992521
+        ]
+      ],
+      "color": "#0066ff",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e07-brt-a",
+      "family": "brt",
+      "level": "2$$nrowlz5pRYHTy8bRROI",
+      "label": "Acceso · validación Metro y ascenso",
+      "points": [
+        [
+          -61.384143449760415,
+          -11.038907545242512,
+          -75.84441317992521
+        ],
+        [
+          -60.464536232648385,
+          -10.289999999999054,
+          -77.08170416929332
+        ],
+        [
+          -55.35059155627863,
+          -10.289999999999054,
+          -82.60920666731079
+        ],
+        [
+          -50.49845427511719,
+          -10.289999999999054,
+          -78.82070068691317
+        ],
+        [
+          -52.13628384177748,
+          -10.289999999999054,
+          -75.48181220924286
+        ],
+        [
+          -50.46304584228133,
+          -10.722727272435277,
+          -74.16396103459265
+        ],
+        [
+          -46.44120462643299,
+          -9.514620706614311,
+          -70.20281998932005
+        ],
+        [
+          -42.251786693257664,
+          -6.9049999618522815,
+          -66.07663140049443
+        ],
+        [
+          -34.90089135515341,
+          -2.9399999999996,
+          -58.974537626709505
+        ]
+      ],
+      "color": "#0066ff",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e07-brt-i",
+      "family": "brt",
+      "level": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · circulación y escalera a plataforma",
+      "points": [
+        [
+          -34.90089135515341,
+          -2.9399999999996,
+          -58.974537626709505
+        ],
+        [
+          -31.548290353373464,
+          -2.9399999999996,
+          -55.67241725288887
+        ],
+        [
+          -25.681238600258553,
+          -2.9399999999996,
+          -49.893706598702764
+        ],
+        [
+          -16.29900385807062,
+          -2.9399999999996,
+          -41.31324168956504
+        ],
+        [
+          -13.436672849567849,
+          -2.9399999999996,
+          -36.84275902791734
+        ],
+        [
+          -14.394496553540492,
+          -2.9399999999996,
+          -31.511409833242976
+        ],
+        [
+          -13.210990077325643,
+          -2.922745097949628,
+          -29.02472342728563
+        ],
+        [
+          -9.858389075545704,
+          -1.0480353080979214,
+          -25.722603053464987
+        ],
+        [
+          -5.1,
+          1.7405322861038728,
+          -21.3
+        ],
+        [
+          0.8,
+          5.315766833761817,
+          -15.4
+        ],
+        [
+          2.051076331607512,
+          6.100000000000364,
+          -14.33295146076839
+        ]
+      ],
+      "color": "#0066ff",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e07-brt-p",
+      "family": "brt",
+      "level": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · puertas hacia Calle 72",
+      "points": [
+        [
+          2.051076331607512,
+          6.100000000000364,
+          -14.33295146076839
+        ],
+        [
+          4.568838731566092,
+          6.100000000000364,
+          -11.853526750953462
+        ],
+        [
+          8.711436631962643,
+          6.100000000000364,
+          -14.717214188278163
+        ]
+      ],
+      "color": "#0066ff",
+      "directionFromAnimation": true
+    }
+  ],
+  "links": [],
+  "journeys": [
+    {
+      "id": "e07-brt-pov",
+      "family": "brt",
+      "label": "POV · BRT–Metro",
+      "legs": [
+        "e07-brt-b",
+        "e07-brt-a",
+        "e07-brt-i",
+        "e07-brt-p"
+      ],
+      "videoSync": {
+        "videoId": "e07-brt-v58",
+        "duration": 96.43,
+        "keys": [
+          {
+            "time": 0,
+            "leg": "e07-brt-b",
+            "fraction": 0.0
+          },
+          {
+            "time": 4,
+            "leg": "e07-brt-b",
+            "fraction": 0.03996004311691527
+          },
+          {
+            "time": 8,
+            "leg": "e07-brt-b",
+            "fraction": 0.119880129350746
+          },
+          {
+            "time": 12,
+            "leg": "e07-brt-b",
+            "fraction": 0.1891335698376317
+          },
+          {
+            "time": 16,
+            "leg": "e07-brt-b",
+            "fraction": 0.30285544250231133
+          },
+          {
+            "time": 20,
+            "leg": "e07-brt-b",
+            "fraction": 0.3809415176481645
+          },
+          {
+            "time": 24,
+            "leg": "e07-brt-b",
+            "fraction": 0.4548675974144575
+          },
+          {
+            "time": 26,
+            "leg": "e07-brt-b",
+            "fraction": 0.4788436232846073
+          },
+          {
+            "time": 28,
+            "leg": "e07-brt-b",
+            "fraction": 0.5376405868489437
+          },
+          {
+            "time": 30,
+            "leg": "e07-brt-b",
+            "fraction": 0.6055726601476995
+          },
+          {
+            "time": 32,
+            "leg": "e07-brt-b",
+            "fraction": 0.6570309384498125
+          },
+          {
+            "time": 36,
+            "leg": "e07-brt-b",
+            "fraction": 0.7917697487918004
+          },
+          {
+            "time": 38,
+            "leg": "e07-brt-b",
+            "fraction": 0.9042890497586947
+          },
+          {
+            "time": 40,
+            "leg": "e07-brt-b",
+            "fraction": 1.0
+          },
+          {
+            "time": 40,
+            "leg": "e07-brt-a",
+            "fraction": 0.0
+          },
+          {
+            "time": 44,
+            "leg": "e07-brt-a",
+            "fraction": 0.0385473244671876
+          },
+          {
+            "time": 46,
+            "leg": "e07-brt-a",
+            "fraction": 0.20791244153882368
+          },
+          {
+            "time": 48,
+            "leg": "e07-brt-a",
+            "fraction": 0.34636701936225817
+          },
+          {
+            "time": 50,
+            "leg": "e07-brt-a",
+            "fraction": 0.4300104887480965
+          },
+          {
+            "time": 52,
+            "leg": "e07-brt-a",
+            "fraction": 0.4788928492220305
+          },
+          {
+            "time": 56,
+            "leg": "e07-brt-a",
+            "fraction": 0.6087297149245333
+          },
+          {
+            "time": 60,
+            "leg": "e07-brt-a",
+            "fraction": 0.7534206587903096
+          },
+          {
+            "time": 64,
+            "leg": "e07-brt-a",
+            "fraction": 1.0
+          },
+          {
+            "time": 64,
+            "leg": "e07-brt-i",
+            "fraction": 0.0
+          },
+          {
+            "time": 68,
+            "leg": "e07-brt-i",
+            "fraction": 0.07569353826740258
+          },
+          {
+            "time": 72,
+            "leg": "e07-brt-i",
+            "fraction": 0.20815723023535704
+          },
+          {
+            "time": 76,
+            "leg": "e07-brt-i",
+            "fraction": 0.41266990873892273
+          },
+          {
+            "time": 78,
+            "leg": "e07-brt-i",
+            "fraction": 0.4980561118594844
+          },
+          {
+            "time": 80,
+            "leg": "e07-brt-i",
+            "fraction": 0.5851859176061767
+          },
+          {
+            "time": 82,
+            "leg": "e07-brt-i",
+            "fraction": 0.629485294626039
+          },
+          {
+            "time": 84,
+            "leg": "e07-brt-i",
+            "fraction": 0.7109645036491627
+          },
+          {
+            "time": 86,
+            "leg": "e07-brt-i",
+            "fraction": 0.8246800840424465
+          },
+          {
+            "time": 88,
+            "leg": "e07-brt-i",
+            "fraction": 0.9706963052855763
+          },
+          {
+            "time": 90,
+            "leg": "e07-brt-i",
+            "fraction": 1.0
+          },
+          {
+            "time": 90,
+            "leg": "e07-brt-p",
+            "fraction": 0.0
+          },
+          {
+            "time": 92,
+            "leg": "e07-brt-p",
+            "fraction": 0.41234213317447826
+          },
+          {
+            "time": 94,
+            "leg": "e07-brt-p",
+            "fraction": 1.0
+          },
+          {
+            "time": 96.43,
+            "leg": "e07-brt-p",
+            "fraction": 1.0
+          }
+        ],
+        "hiddenWindows": [
+          [
+            0,
+            0.4
+          ]
+        ],
+        "waitingLabel": "Inicio del video",
+        "method": "Hitos temporales del POV y vuelos de escaleras IFC."
+      }
+    },
+    {
+      "id": "e07-usuarios-pov",
+      "family": "usuarios",
+      "label": "POV · Usuarios",
+      "legs": [],
+      "videoOnly": true,
+      "note": "Video disponible. Trazado: En construcción.",
+      "videoSync": {
+        "videoId": "e07-usuario-v58",
+        "duration": 81.03,
+        "keys": [
+          {
+            "time": 0
+          },
+          {
+            "time": 81.03
+          }
+        ],
+        "method": ""
+      }
+    },
+    {
+      "id": "e07-pmr-pov",
+      "family": "pmr",
+      "label": "POV · PMR (Personas con movilidad reducida)",
+      "legs": [],
+      "videoOnly": true,
+      "note": "Video disponible. Trazado: En construcción.",
+      "videoSync": {
+        "videoId": "e07-pmr-v58",
+        "duration": 81.0,
+        "keys": [
+          {
+            "time": 0
+          },
+          {
+            "time": 81.0
+          }
+        ],
+        "method": ""
+      }
+    }
+  ]
+}
