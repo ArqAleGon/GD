@@ -57,7 +57,9 @@ stations.E05.povVideo={"title": "E05", "manifestUrl": "./assets/videotours/manif
 stations.E05.description='Arquitectura, estructura e instalaciones; cuatro plantas, espacios y cámaras IFC vinculados. Videos POV integrados. Trazados: En construcción.';
 stations.E07.povVideo={"title": "E07", "manifestUrl": "./assets/videotours/manifest.json?v=20261109-e0507videos58", "videos": [{"id": "e07-brt-v58", "title": "E07 · BRT–Metro", "label": "BRT–Metro"}, {"id": "e07-usuario-v58", "title": "E07 · Usuarios", "label": "Usuarios"}, {"id": "e07-pmr-v58", "title": "E07 · PMR (Personas con movilidad reducida)", "label": "PMR (Personas con movilidad reducida)"}]};
 stations.E07.description='Arquitectura, estructura e instalaciones; cuatro plantas, espacios y cámaras IFC vinculados. Recorridos BRT, Usuarios y PMR sincronizados con sus videos POV.';
-stations.E05.assets.routes='./assets/stations/e05/routes.json?v=20261110-e07routes62';
+stations.E05.assets.routes='./assets/stations/e05/routes.json?v=20261110-e08plans63';
 stations.E05.description='Arquitectura, estructura e instalaciones; plantas, espacios, cámaras IFC y recorridos Biciusuarios y PMR sincronizados con sus videos POV.';
 export const station=stations[new URLSearchParams(location.search).get('station')]||stations.E09;
-stations.E07.assets.routes='./assets/stations/e07/routes.json?v=20261110-e07routes62';
+stations.E07.assets.routes='./assets/stations/e07/routes.json?v=20261110-e08plans63';
+
+for(const key of ['architecture','registration','spaces'])stations.E08.assets[key]=stations.E08.assets[key].split('?')[0]+'?v=20261110-e08plans63';

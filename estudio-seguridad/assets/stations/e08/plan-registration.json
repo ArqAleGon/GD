@@ -8,26 +8,26 @@
     "1": {
       "matrix": [
         [
-          34.08105985976545,
-          -21.87125266891999,
-          2844.2654062500005
+          29.110349186481383,
+          -18.66073383925301,
+          3032.3779281838733
         ],
         [
-          -21.87125266891999,
-          -34.08105985976545,
-          1878.7728984374999
+          -18.66073383925301,
+          -29.110349186481383,
+          2143.8082441710076
         ]
       ],
       "crop": [
-        431.25,
-        1162.5,
-        4350.0,
-        1706.25
+        851.5391575946854,
+        1381.1670447811562,
+        3955.089267074735,
+        1808.7878817584292
       ],
       "rotation": 90,
       "status": "Registro visual de muros y ejes PDF–IFC · E08",
-      "method": "Secciones de la geometría IFC y plantas arquitectónicas",
-      "sourceSha256": "03df5c32793fbd82a9214729c26cb1c21b454c5f6fdb499ce6a8c77889dee208",
+      "method": "Registro de la planta actualizada mediante elementos comunes; conserva el sistema local IFC",
+      "sourceSha256": "dd9264ef5d4f2e4ba560ea735522a73f8a95a06756aa0f3e1689d54d7227cdf7",
       "allowedCameraIds": [
         "2D$kW9Fe54AA1V8fJHu3PB",
         "2D$kW9Fe54AA1V8fJHu3QI",
@@ -50,31 +50,32 @@
         "2D$kW9Fe54AA1V8fJHu3hl",
         "2D$kW9Fe54AA1V8fJHu3jJ",
         "2D$kW9Fe54AA1V8fJHu3qx"
-      ]
+      ],
+      "revision": "20261110-e08plans63"
     },
     "2": {
       "matrix": [
         [
-          27.41791480789095,
-          -17.595231629701807,
-          2953.34953125
+          27.4137012650298,
+          -17.59276185750295,
+          2953.197791478955
         ],
         [
-          -17.595231629701807,
-          -27.41791480789095,
-          2094.1978124999996
+          -17.59276185750295,
+          -27.4137012650298,
+          2224.0028470511147
         ]
       ],
       "crop": [
-        375.0,
-        1443.75,
-        5006.25,
-        1425.0
+        255.2305486762736,
+        1423.6377769985875,
+        5245.508710623028,
+        1974.816835250433
       ],
       "rotation": 90,
       "status": "Registro visual de muros y ejes PDF–IFC · E08",
-      "method": "Secciones de la geometría IFC y plantas arquitectónicas",
-      "sourceSha256": "70544e840557b733ff94255358a8c92cac5254c22b4b4b5466b51a3a2f537ced",
+      "method": "Registro de la planta actualizada mediante elementos comunes; conserva el sistema local IFC",
+      "sourceSha256": "1093fe16e799b41fa285b8466b6bd5ac8b62ae7506abea6c89bb1fec4267aa7c",
       "allowedCameraIds": [
         "1_EvwlkIHAUOAOXGV_5PEF",
         "1_EvwlkIHAUOAOXGV_5PCs",
@@ -84,31 +85,32 @@
         "1_EvwlkIHAUOAOXGV_5Os9",
         "1_EvwlkIHAUOAOXGV_5OsC",
         "1_EvwlkIHAUOAOXGV_5OsJ"
-      ]
+      ],
+      "revision": "20261110-e08plans63"
     },
     "3": {
       "matrix": [
         [
-          23.823998205014885,
-          -15.288863857808519,
-          2832.0615
+          26.968327405116927,
+          -17.305293930306565,
+          3098.637779991856
         ],
         [
-          -15.288863857808519,
-          -23.823998205014885,
-          2142.2017968749997
+          -17.30529393030657,
+          -26.968327405116924,
+          2338.522295659622
         ]
       ],
       "crop": [
-        468.75,
-        1556.25,
-        4725.0,
-        1312.5
+        303.4459873507174,
+        1525.1518383107725,
+        5588.540493703111,
+        1835.8895848294935
       ],
       "rotation": 90,
       "status": "Registro visual de muros y ejes PDF–IFC · E08",
-      "method": "Secciones de la geometría IFC y plantas arquitectónicas",
-      "sourceSha256": "25cfd888618ce71d8c7ec806873b2400a4abd2b96f9e6dde8f42fe02fc579f65",
+      "method": "Registro de la planta actualizada mediante elementos comunes; conserva el sistema local IFC",
+      "sourceSha256": "6d85722d683925441acbbe6eaa7cfe49119d69a7254ac22a14e48afb49e14cd4",
       "allowedCameraIds": [
         "1_EvwlkIHAUOAOXGV_5OcB",
         "1_EvwlkIHAUOAOXGV_5Od0",
@@ -179,31 +181,32 @@
         "2PDuzJIcv6Egz4lJww607H",
         "2PDuzJIcv6Egz4lJww6067",
         "2PDuzJIcv6Egz4lJww60Or"
-      ]
+      ],
+      "revision": "20261110-e08plans63"
     },
     "4": {
       "matrix": [
         [
-          28.561971684766974,
-          -18.32942115094116,
-          2923.8975
+          26.67294382213473,
+          -17.123015637492905,
+          2862.747936124281
         ],
         [
-          -18.32942115094116,
-          -28.561971684766974,
-          2184.45
+          -17.123015637492905,
+          -26.672943822134734,
+          2344.461098260604
         ]
       ],
       "crop": [
-        112.5,
-        1500.0,
-        5700.0,
-        1387.5
+        116.92841472399974,
+        1554.7952862991478,
+        5563.747777349069,
+        1646.691969436612
       ],
       "rotation": 90,
       "status": "Registro visual de muros y ejes PDF–IFC · E08",
-      "method": "Secciones de la geometría IFC y plantas arquitectónicas",
-      "sourceSha256": "95e539d26d5bb4b15c74a5a8cd9a5d77ad20dad2a836f638c0b212fa4e94aad9",
+      "method": "Registro de la planta actualizada mediante elementos comunes; conserva el sistema local IFC",
+      "sourceSha256": "7de0d6c9ee03c63a923ee96abf9be4b508176194aed54ffd1b9775848c03be65",
       "allowedCameraIds": [
         "14vl8_q$zBaQ4kMVekk6wk",
         "14vl8_q$zBaQ4kMVekk6wl",
@@ -251,7 +254,8 @@
         "1k$d58z7LEYeg7$AuZWrgD",
         "1k$d58z7LEYeg7$AuZWrgx",
         "1k$d58z7LEYeg7$AuZWrfE"
-      ]
+      ],
+      "revision": "20261110-e08plans63"
     }
   },
   "inventory": {

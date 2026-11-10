@@ -85,14 +85,14 @@
       "architectureMapped": 144,
       "inventoryMapped": 144,
       "interactiveVerified": true,
-      "checkedAt": "2026-11-09T20:54:01.042Z",
+      "checkedAt": "2026-11-10T21:18:13.046513+00:00",
       "resourceDigests": {
-        "cameras": "a48d128f6c2064b2d0c1d4546d6c1733228f8977cedadfa7b5bcca55f429c5ee",
-        "inventory": "6278d3a31c6543eb02ec6daf4c7b86eeaf3821b522550f0860b9d804eee6a72c",
-        "architecture": "277a504a9a8ecfc80fa42f2c62082f3c4df6d3d39b3fbac6b11f14b0c06a6ef7",
-        "registration": "4a13241ecb7fc38599f7aeb9c2507b5ccabff7200dd4d792f4b2828e19f4157a"
+        "cameras": "ee73e28a15295ae59d34a5e2e7e8cdf8992f4bbb7fd7c28a42f6a8b71ea6076c",
+        "inventory": "79ba3128c937c8c534d192cf1f038b9d42cead28d34e217fd7a01ce82a3b1cb1",
+        "architecture": "78d9e3ce197f1bc348fa929a2ef33760adb58f80146d20edce1db060a0af3eba",
+        "registration": "bf64d42754322c767125e001f8db2606355ee955e09fc0ac90110cc89e85cb5b"
       },
-      "status": "Verificado · posiciones IFC y registro visual PDF"
+      "status": "Verificado · planos actualizados, posiciones IFC y controles compartidos"
     },
     "E10": {
       "cameras": 230,
