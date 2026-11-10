@@ -52,4 +52,9 @@ for(const id of ['E07','E08']){
  for(const key of ['architecture','registration','inventory','spaces','locations'])stations[id].assets[key]='./assets/stations/'+id.toLowerCase()+'/'+({registration:'plan-registration',locations:'camera-locations'}[key]||key)+'.json?v=20261109-e0708integration57';
  stations[id].description='Arquitectura, estructura e instalaciones; cuatro plantas, espacios y cámaras IFC vinculados. Videorrecorridos: En construcción.';
 }
+// E05 and E07 embedded POV videos (58).
+stations.E05.povVideo={"title": "E05", "manifestUrl": "./assets/videotours/manifest.json?v=20261109-e0507videos58", "videos": [{"id": "e05-bici-v58", "title": "E05 · Biciusuarios", "label": "Biciusuarios"}, {"id": "e05-pmr-v58", "title": "E05 · PMR (Personas con movilidad reducida)", "label": "PMR (Personas con movilidad reducida)"}]};
+stations.E05.description='Arquitectura, estructura e instalaciones; cuatro plantas, espacios y cámaras IFC vinculados. Videos POV integrados. Trazados: En construcción.';
+stations.E07.povVideo={"title": "E07", "manifestUrl": "./assets/videotours/manifest.json?v=20261109-e0507videos58", "videos": [{"id": "e07-brt-v58", "title": "E07 · BRT–Metro", "label": "BRT–Metro"}, {"id": "e07-usuario-v58", "title": "E07 · Usuarios", "label": "Usuarios"}, {"id": "e07-pmr-v58", "title": "E07 · PMR (Personas con movilidad reducida)", "label": "PMR (Personas con movilidad reducida)"}]};
+stations.E07.description='Arquitectura, estructura e instalaciones; cuatro plantas, espacios y cámaras IFC vinculados. Videos POV integrados. Trazados: En construcción.';
 export const station=stations[new URLSearchParams(location.search).get('station')]||stations.E09;

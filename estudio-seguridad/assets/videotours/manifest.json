@@ -1,5 +1,5 @@
 {
-  "version": 52,
+  "version": 58,
   "videos": [
     {
       "id": "e09-ruta-1",
@@ -97,6 +97,56 @@
       "fps": 30,
       "duration": 108.133333,
       "sourceUpdated": "2026-11-06"
+    },
+    {
+      "id": "e05-bici-v58",
+      "title": "E05 · Biciusuarios",
+      "file": "https://raw.githubusercontent.com/ArqAleGon/GD/72862511346bc4f53065a71809cb2b31b54bc921/estudio-seguridad/assets/videotours/e05-bici-v58.mp4",
+      "duration": 150.27,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "sourceUpdated": "2026-11-09"
+    },
+    {
+      "id": "e05-pmr-v58",
+      "title": "E05 · PMR (Personas con movilidad reducida)",
+      "file": "https://raw.githubusercontent.com/ArqAleGon/GD/72862511346bc4f53065a71809cb2b31b54bc921/estudio-seguridad/assets/videotours/e05-pmr-v58.mp4",
+      "duration": 121.37,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "sourceUpdated": "2026-11-09"
+    },
+    {
+      "id": "e07-brt-v58",
+      "title": "E07 · BRT–Metro",
+      "file": "https://raw.githubusercontent.com/ArqAleGon/GD/72862511346bc4f53065a71809cb2b31b54bc921/estudio-seguridad/assets/videotours/e07-brt-v58.mp4",
+      "duration": 96.43,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "sourceUpdated": "2026-11-09"
+    },
+    {
+      "id": "e07-usuario-v58",
+      "title": "E07 · Usuarios",
+      "file": "https://raw.githubusercontent.com/ArqAleGon/GD/72862511346bc4f53065a71809cb2b31b54bc921/estudio-seguridad/assets/videotours/e07-usuario-v58.mp4",
+      "duration": 81.03,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "sourceUpdated": "2026-11-09"
+    },
+    {
+      "id": "e07-pmr-v58",
+      "title": "E07 · PMR (Personas con movilidad reducida)",
+      "file": "https://raw.githubusercontent.com/ArqAleGon/GD/72862511346bc4f53065a71809cb2b31b54bc921/estudio-seguridad/assets/videotours/e07-pmr-v58.mp4",
+      "duration": 81.0,
+      "width": 1920,
+      "height": 1080,
+      "fps": 30,
+      "sourceUpdated": "2026-11-09"
     }
   ]
 }
