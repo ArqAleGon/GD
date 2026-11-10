@@ -4,14 +4,14 @@
   "sourceCommit": "8dbfe01f55996d40c4074f75b47407b0c77fefd0",
   "bounds": {
     "min": [
-      95063.05918968431,
+      95048.66316698739,
       2490.550001525877,
-      -100761.85526545055
+      -100779.2164293358
     ],
     "max": [
-      95213.67093160628,
+      95236.95985810383,
       2583.9408758722743,
-      -100650.84366475025
+      -100624.78093587358
     ]
   },
   "levels": [
@@ -56,1566 +56,6 @@
     }
   ],
   "files": [
-    {
-      "file": "assets/models/stations/e08-0000-p001.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 233,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "edb5ea1938b2b464f13fc3bc0692ff9215e229d3",
-      "expectedBytes": 790963,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p001.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p002.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "d266a3ac960a3d7f632579efafaba1ef9acfa71f",
-      "expectedBytes": 132883,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p002.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p003.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "77a4eff060454868e24ade04b3ad3efbc52ddf78",
-      "expectedBytes": 45422,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p003.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p004.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "24a95544eb972d008ea5ca6a900df5710de75ccd",
-      "expectedBytes": 24355,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p004.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p005.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "a09a838a8835b878c342cc782783bdbffa597afb",
-      "expectedBytes": 23950,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p005.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p006.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "3c3b8c58806a6acb8205a3f0fcd55a5378b68076",
-      "expectedBytes": 21705,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p006.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p007.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "76da3655df9035b174dea9057bdc2752043999d0",
-      "expectedBytes": 24298,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p007.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p008.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "fa35d32ec118cfd39781a482f09fc6f548227fcb",
-      "expectedBytes": 29621,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p008.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p009.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "867a0b153cabe53409b4a69706891313c001686b",
-      "expectedBytes": 26059,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p009.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p010.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "766429aff65607003f741c9b1a34cfe728a9ef04",
-      "expectedBytes": 18386,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p010.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p011.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "985c160cbedc248ed45bfa9e39f9ec75d3d7ffdd",
-      "expectedBytes": 18461,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p011.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p012.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "a98987182184434cccc6ab2fb6ef8ee452b6501a",
-      "expectedBytes": 16098,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p012.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p013.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "d7c4a6f54eb90240e7cefbc86b92ede7ea2989bf",
-      "expectedBytes": 20181,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p013.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p014.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "477453fde13111df77b9f4bee9e1f99a72b136e8",
-      "expectedBytes": 23083,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p014.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p015.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "b3befdc451976ee6a365b3806b5b0e83ddc7c88a",
-      "expectedBytes": 33886,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p015.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p016.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "ce1b130f457e1f4654a4d1151b7ca15a470313ef",
-      "expectedBytes": 32637,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p016.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p017.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "41b8f345b7ff21264dab77538e1df866f67e45af",
-      "expectedBytes": 31775,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p017.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p018.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "7caae7052cbc2eaf443e738161734e5fa6378282",
-      "expectedBytes": 32323,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p018.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p019.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "b67f290d52bc492ccf3906ad5080d163abf5bd7a",
-      "expectedBytes": 28594,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p019.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p020.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "681803b947160b9c9f4ac74447e17cebda87f98c",
-      "expectedBytes": 43196,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p020.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p021.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "ece6844fe8ea2652eae693e6d470fe0b1dc9aa32",
-      "expectedBytes": 31427,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p021.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p022.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "cbe46edba6aec149c8707effe9d96575cf22429f",
-      "expectedBytes": 32667,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p022.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p023.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "33e9ed7db05cc44113e260573874d8db181f798a",
-      "expectedBytes": 31258,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p023.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p024.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "46306b1e9c587c6040d6554ece2f869ec711c712",
-      "expectedBytes": 38392,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p024.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p025.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "f33bb77e9a9ef4e1eb9f00092e0d0ca053808052",
-      "expectedBytes": 19990,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p025.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p026.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "a9afcdffb13f2e3a38f3a62ac7c640fbc70b5b3f",
-      "expectedBytes": 19816,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p026.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p027.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "a474fc5b04d155dee4fbfd9ca309288b849d779f",
-      "expectedBytes": 21110,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p027.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p028.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "e1a2539a5b3487a334d1154815bd8e743742285f",
-      "expectedBytes": 27345,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p028.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p029.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "2339a79750276dbd1b7f400bcc19ce1dcc94d097",
-      "expectedBytes": 28823,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p029.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p030.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "da0d875e0a82636655ac7c2fa9fb2f0b6fd62bbb",
-      "expectedBytes": 30632,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p030.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p031.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "7ebcfc72de00f10db498f885467decb08dc19045",
-      "expectedBytes": 29126,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p031.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p032.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "076ddbc26aefdee4fe87990613b8c7dc96fccd96",
-      "expectedBytes": 37476,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p032.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p033.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "497852c8f33ffbeb4034c273bd665935bd362f34",
-      "expectedBytes": 26322,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p033.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p034.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "dabe91c73ee38d476ccbd2c62176877d8240de89",
-      "expectedBytes": 29561,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p034.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p035.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "9e577ac89367d0167093047e68ca9bca1cd2f98c",
-      "expectedBytes": 27084,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p035.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p036.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "c2280c309b6f8093da65a2b9c386f3f42e71f4e0",
-      "expectedBytes": 16980,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p036.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p037.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "b8af2d99d3e2c01be3b55169baefb7c51b9ec845",
-      "expectedBytes": 20800,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p037.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p038.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "773811e6928824ac85d91d4bc49143a1e6259e4c",
-      "expectedBytes": 15961,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p038.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p039.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "c494c7ab2233e53c3de8c4ca0531a1aefbfbaf2b",
-      "expectedBytes": 23510,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p039.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p040.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "fb18affb66472eb74b96d957e18ac5f284e20696",
-      "expectedBytes": 19034,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p040.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p041.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "51408a293af5832bde166a3c9850c74380d1a9e1",
-      "expectedBytes": 45432,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p041.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p042.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 571,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "dd769c9f4d53dd869c818473da84aa7d2d8bde73",
-      "expectedBytes": 71933,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p042.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p043.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 260,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "8ccd443dca7c211958e50d2bacc10f47b4a12300",
-      "expectedBytes": 48843,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p043.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p044.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 503,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "39ff27e3266bd9cbd515aed81529550afdf9647d",
-      "expectedBytes": 713139,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p044.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p045.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "4bce95636acded4d40841f8ba0e31c0b32eac13b",
-      "expectedBytes": 935121,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p045.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p046.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "6f3d09bac7c9971c83955c29dc8532151abcfe36",
-      "expectedBytes": 259034,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p046.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p047.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "e88634706d7dbfb8551173f9503fac9e06b355f0",
-      "expectedBytes": 263152,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p047.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p048.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "357e4126273077bdc6f4e2f3ec74b4a4fe76264e",
-      "expectedBytes": 308239,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p048.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p049.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "909007d9ea2efc6373bdf27112afefc353029083",
-      "expectedBytes": 442534,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p049.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p050.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "0d823ef3f99e7cfcd06670d41bf13340fb17d39e",
-      "expectedBytes": 414867,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p050.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p051.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "b0495d04f373fa6ec331799584e6cb3df8bf7fb1",
-      "expectedBytes": 308418,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p051.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p052.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "022d0f03d963671e2ab80ce7ed1118b02226df8d",
-      "expectedBytes": 523995,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p052.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p053.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 278,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "141feb6e457fd428c501f4543fae93ebffd889cb",
-      "expectedBytes": 707113,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p053.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p054.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 285,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "fb923460603ed86f982e0130676eaf40eab87920",
-      "expectedBytes": 789207,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p054.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p055.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 27,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "b7024d23a104687dbfdf6d92a468b5373c9a35b2",
-      "expectedBytes": 1158472,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p055.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p056.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "8b7e722a5f0c3eecb46f4b0db9fd341d161d79e1",
-      "expectedBytes": 721946,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p056.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p057.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "10f8ebc05e2cf796ae12b7e6cafbeddcddbc87c3",
-      "expectedBytes": 106206,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p057.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p058.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "1ed0f18267b88a6b217aefc9dd3408b22524dd34",
-      "expectedBytes": 78115,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p058.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p059.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "9a6089b89acc433e8c7480da9220ae692fc3d829",
-      "expectedBytes": 152948,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p059.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p060.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "492836871c3c92fa3eedc659f6610893afcb14ce",
-      "expectedBytes": 103732,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p060.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p061.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "8d3455d2f4d27af4d07c3aa70e6ddd02812c38e8",
-      "expectedBytes": 322797,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p061.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p062.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "b95338c6e2ebd3084495f8b205cbc5c17c283fce",
-      "expectedBytes": 274466,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p062.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p063.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "aa83a0c95b7b8ca9d5fd14ddf732ff888d0af053",
-      "expectedBytes": 390016,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p063.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p064.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "fcad949b40fd9c3224d5cbbcbbf374231902dd68",
-      "expectedBytes": 35668,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p064.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p065.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "df70989183146fb0d478464145cefaa1b6e8f5e2",
-      "expectedBytes": 37460,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p065.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p066.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "4ecb4e6811c9f800f66cde65188cb42de6567630",
-      "expectedBytes": 131629,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p066.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p067.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "2597254e9d847b90bda82c84f011daa24527fb63",
-      "expectedBytes": 52605,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p067.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p068.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "589fe0d8307997664adac12f1f7a5b06fc8278f0",
-      "expectedBytes": 215883,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p068.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p069.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "5249665c230f5276d121fcfe18e42b17cecf600b",
-      "expectedBytes": 380489,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p069.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p070.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 700,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "1dc1f241fee43bd006794b162e628e11c1789803",
-      "expectedBytes": 407003,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p070.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p071.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 531,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "fdb99c5ab1a61d747efa28b7642af797665d350a",
-      "expectedBytes": 737494,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p071.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p072.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 76,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "b7fc64074dfd909991ccc694f2a5fd4545305419",
-      "expectedBytes": 377422,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p072.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p073.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 9,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "a1fd2f24c2793d2dbc5e3f045f31381fe70d7af5",
-      "expectedBytes": 802036,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p073.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p074.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 8,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "14f6ce2548332b15ad2bf119ac3bc9aa99e304a6",
-      "expectedBytes": 767487,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p074.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p075.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 12,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "f22fe8816339b568149c611f80d17a8c54b1c6e3",
-      "expectedBytes": 775408,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p075.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p076.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 13,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "432c772b816cfdb43aa73b6899666a05850eb3e0",
-      "expectedBytes": 721262,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p076.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p077.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 58,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "ae1d040af4ee5eba1dd05c914205a9b172062dd4",
-      "expectedBytes": 647355,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p077.glb.gz"
-    },
-    {
-      "file": "assets/models/stations/e08-0000-p078.glb.gz",
-      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
-      "section": "E08",
-      "discipline": "ARQ",
-      "version": "VEE",
-      "converted": 14,
-      "label": "IFC · E08 · ARQ + EST",
-      "status": "ready",
-      "instanceIdentity": "ifc-globalid",
-      "labelAnchor": [
-        95138.3650606453,
-        100706.3494651004
-      ],
-      "streetDatum": 2550.3,
-      "role": "detail",
-      "gitBlobSha": "ae9e3b4ec47469d7eac3e0004d2a03daaf211a75",
-      "expectedBytes": 416451,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-0000-p078.glb.gz"
-    },
     {
       "file": "assets/models/stations/e08-1150-p001.glb.gz",
       "source": "L1T1-1150-308-CON-ED-EST-MO-0001_V00.ifc",
@@ -2157,30 +597,6 @@
       "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-1200-p023.glb.gz"
     },
     {
-      "file": "assets/models/stations/e08-overview.glb.gz",
-      "bounds": {
-        "min": [
-          95063.05918968431,
-          2547.749999999998,
-          -100761.85526545055
-        ],
-        "max": [
-          95213.67093160628,
-          2583.9408758722743,
-          -100650.84366475025
-        ]
-      },
-      "sourceTriangles": 9157390,
-      "triangles": 490850,
-      "bytes": 2299528,
-      "displayGridMeters": 0.5,
-      "section": "E08",
-      "role": "overview",
-      "gitBlobSha": "81599ca9a979bbb8ecc1e57890ec7fcadd41d5bf",
-      "expectedBytes": 2299528,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e08-overview.glb.gz"
-    },
-    {
       "file": "assets/stations/e08/installations/l1t1-5400-308-con-ed-ins-mo-0001_vdd/e08-ins-5400-p001.glb.gz",
       "source": "L1T1-5400-308-CON-ED-INS-MO-0001_VDD.ifc",
       "section": "E08",
@@ -2254,16 +670,2742 @@
       "file": "assets/stations/e08/structures/l1t1-1100-308-con-ed-est-mo-0001_v01/e08-l1t1-1100-308-con-ed-est-mo-0001_v01-p001.glb.gz",
       "url": "./assets/stations/e08/structures/l1t1-1100-308-con-ed-est-mo-0001_v01/e08-l1t1-1100-308-con-ed-est-mo-0001_v01-p001.glb.gz",
       "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "f117151aaf27b10981bc1aefd86443f1d038a8ccbc56fa96c4655b2e539d63c5",
+      "compressedBytes": 2032050,
+      "boundsGltfMetres": {
+        "min": [
+          95064.01763749066,
+          2555.549999999999,
+          -100761.08446196895
+        ],
+        "max": [
+          95212.70796088269,
+          2580.0847579383826,
+          -100651.15021062623
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p001.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p001.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "ed1faf40f9dbecc88c891b11cb14e930aa98b0b59260e7fbed9c0173a6f3383b",
+      "compressedBytes": 758079,
+      "boundsGltfMetres": {
+        "min": [
+          95067.69105127915,
+          2569.539999999999,
+          -100734.980301832
+        ],
+        "max": [
+          95196.897870826,
+          2575.5380000019063,
+          -100651.88976717972
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p002.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p002.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "70b0f6bae74fad0da1d34a7f68df3224c6806ea6703e15a8559aa844fc118562",
+      "compressedBytes": 21776,
+      "boundsGltfMetres": {
+        "min": [
+          95067.48959141788,
+          2561.049999999999,
+          -100760.94952279532
+        ],
+        "max": [
+          95196.81357828062,
+          2573.1400000119197,
+          -100651.81462884767
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p003.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p003.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "659484452550eef56f40e3d21563a85c0e8aaa43fb4712e057d64013dd5b9823",
+      "compressedBytes": 16884,
+      "boundsGltfMetres": {
+        "min": [
+          95068.70360519941,
+          2561.054999999887,
+          -100760.68084511146
+        ],
+        "max": [
+          95196.81357828062,
+          2573.1400000119197,
+          -100652.08330653152
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p004.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p004.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "31c221c1a357fc0cd5f9afb9d05af6e67dc07f16b21e9927515884abf715a88f",
+      "compressedBytes": 20074,
+      "boundsGltfMetres": {
+        "min": [
+          95067.47883762997,
+          2561.049999988078,
+          -100760.3121641451
+        ],
+        "max": [
+          95194.79378934654,
+          2573.1549999976146,
+          -100653.1291143675
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p005.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p005.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "20cb2a80b9bed821301827d388b49773b069f6ebe32fe89908cdf831a61b17fc",
+      "compressedBytes": 21191,
+      "boundsGltfMetres": {
+        "min": [
+          95067.48959141788,
+          2561.049999999999,
+          -100734.72618002363
+        ],
+        "max": [
+          95196.74758144245,
+          2569.84000001192,
+          -100651.79197512513
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p006.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p006.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "67a4b7a3d59a6cefee1472a1161e39e6764efa1de68544c6ed7e45434226ac5f",
+      "compressedBytes": 18386,
+      "boundsGltfMetres": {
+        "min": [
+          95067.48959141788,
+          2563.454999999887,
+          -100734.72618002363
+        ],
+        "max": [
+          95138.18656481228,
+          2569.164999997615,
+          -100689.34319139748
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p007.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p007.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "a2d37bafd2a06d06986d721e10df9c4e81eca94ce5624144bd210da223a2d705",
+      "compressedBytes": 17135,
+      "boundsGltfMetres": {
+        "min": [
+          95067.48959141788,
+          2561.954999999887,
+          -100734.72618002363
+        ],
+        "max": [
+          95193.64660418671,
+          2569.4649999976145,
+          -100653.74833176091
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p008.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p008.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "be891cda267e6408dc039b8b6565d3ae206ea886db04528374c87693d4d1bc43",
+      "compressedBytes": 20281,
+      "boundsGltfMetres": {
+        "min": [
+          95067.48959141788,
+          2568.254999999887,
+          -100734.72618002363
+        ],
+        "max": [
+          95193.64660418671,
+          2571.354999997615,
+          -100653.74833176091
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p009.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p009.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "5bd261afc52bccf0ec3407d9b539f89a6cbc7541d76891af101b0e744cd6d35a",
+      "compressedBytes": 18432,
+      "boundsGltfMetres": {
+        "min": [
+          95067.48959141788,
+          2569.5449999998873,
+          -100734.72618002363
+        ],
+        "max": [
+          95193.64660418671,
+          2572.2549999976145,
+          -100653.74833176091
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p010.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p010.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "c191dd67c478ec69291dfd0d1f968568d8efc26e7d895a343333fcc3452ea53f",
+      "compressedBytes": 21992,
+      "boundsGltfMetres": {
+        "min": [
+          95068.48873212568,
+          2561.049999999999,
+          -100760.3121641451
+        ],
+        "max": [
+          95196.74758144245,
+          2573.1400000119197,
+          -100651.79197512513
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p011.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p011.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "aa93aec929e46f30c0f02feb62f8e6b991e8a69b16902fb1aeb7832e42acfcdc",
+      "compressedBytes": 27341,
+      "boundsGltfMetres": {
+        "min": [
+          95063.43175881756,
+          2561.349999999999,
+          -100761.61514994605
+        ],
+        "max": [
+          95208.67569783506,
+          2573.0814183758903,
+          -100653.73648071689
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p012.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p012.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "6461669dc117a3d17d92adf1805a64010f801a6ee8d05b94cfe6fe0ec096f4e7",
+      "compressedBytes": 15134,
+      "boundsGltfMetres": {
+        "min": [
+          95080.60746607099,
+          2562.2499999999986,
+          -100726.40620815901
+        ],
+        "max": [
+          95150.37655886359,
+          2567.3500000119197,
+          -100681.55340440857
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p013.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p013.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "e6c6d0494a73434cd012e55ba149e7aa299bf4b9b2c1d4ea765b300cb9fcfcbe",
+      "compressedBytes": 17256,
+      "boundsGltfMetres": {
+        "min": [
+          95068.48873212568,
+          2561.349999999999,
+          -100734.1841441039
+        ],
+        "max": [
+          95150.37655886359,
+          2569.15000001192,
+          -100681.55340440857
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p014.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p014.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "69e4a37df44ff8f599ebf211a573d7b03ab4fdea2a444bf13600ddc39ffb1a73",
+      "compressedBytes": 12592,
+      "boundsGltfMetres": {
+        "min": [
+          95068.48873212568,
+          2562.849999999999,
+          -100734.1841441039
+        ],
+        "max": [
+          95136.23803592741,
+          2569.15000001192,
+          -100690.62766301094
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p015.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p015.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "a9e7b66674bf6bbf49a420c0ab73cd464da2892817fdd5856e71fd89c8e8b042",
+      "compressedBytes": 13479,
+      "boundsGltfMetres": {
+        "min": [
+          95071.51841561201,
+          2561.349999999999,
+          -100732.23966011767
+        ],
+        "max": [
+          95193.71786429273,
+          2569.15000001192,
+          -100653.73648071689
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p016.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p016.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "9a6741bda9abd756bc45c682961e2ae2b920a3a177050f355f40716bffe1c233",
+      "compressedBytes": 13304,
+      "boundsGltfMetres": {
+        "min": [
+          95157.2752898497,
+          2562.849999999999,
+          -100677.19996061888
+        ],
+        "max": [
+          95188.66839181552,
+          2569.15000001192,
+          -100656.97728736061
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p017.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p017.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "97bbe4c5603ca52a24a459a48710fc6799ad6bad6db2c33325107bd5f9277df7",
+      "compressedBytes": 19038,
+      "boundsGltfMetres": {
+        "min": [
+          95082.62725506186,
+          2561.349999999999,
+          -100725.10988550152
+        ],
+        "max": [
+          95185.63870832919,
+          2572.84000001192,
+          -100658.92177134682
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p018.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p018.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "31a5024853cb140a3b3a1c35b57baa81b52bdd6e91cb7955459d3daf481a4318",
+      "compressedBytes": 17700,
+      "boundsGltfMetres": {
+        "min": [
+          95068.48873212568,
+          2569.839999999999,
+          -100734.1841441039
+        ],
+        "max": [
+          95193.71786429273,
+          2572.84000001192,
+          -100653.73648071689
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p019.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p019.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "f36383c92e08a10d88d158e7c9ea1db5524dffc6eb5f8c9604de7ffb66e7fe70",
+      "compressedBytes": 20192,
+      "boundsGltfMetres": {
+        "min": [
+          95063.44162181138,
+          2561.0459126427486,
+          -100761.53384188007
+        ],
+        "max": [
+          95213.28397775191,
+          2573.0831015760145,
+          -100651.79197512513
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p020.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p020.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "7576b00710f43c2680d9e553388c4cbd663f930ccbcfabb1900fe6b652d53bf6",
+      "compressedBytes": 23317,
+      "boundsGltfMetres": {
+        "min": [
+          95063.51277242499,
+          2561.045912648321,
+          -100761.54146106775
+        ],
+        "max": [
+          95213.2128271383,
+          2572.7878781843297,
+          -100651.51171926894
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p021.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p021.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "5f43d66eb02758ca5e4e6d128d2a5f00b134045c7d1addd016526f8b673809c1",
+      "compressedBytes": 22702,
+      "boundsGltfMetres": {
+        "min": [
+          95064.61685154305,
+          2561.0459126483215,
+          -100761.62724628416
+        ],
+        "max": [
+          95212.10874802026,
+          2572.787878185258,
+          -100652.51322978588
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p022.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p022.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "ddebdffeecffa3354559171831577dae47f9e412e6a7071dba54ac0610d774ec",
+      "compressedBytes": 32994,
+      "boundsGltfMetres": {
+        "min": [
+          95063.3830586554,
+          2561.045912648321,
+          -100761.59027396842
+        ],
+        "max": [
+          95213.3425409079,
+          2573.0752423450954,
+          -100651.1358545309
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p023.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p023.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "49782f4e70855f9ca3e629bfcf69a4dc451b2ee8f8a597f1f0faa1975dbc52b9",
+      "compressedBytes": 26918,
+      "boundsGltfMetres": {
+        "min": [
+          95064.08978313919,
+          2561.049999999999,
+          -100760.58037947271
+        ],
+        "max": [
+          95212.6358164241,
+          2572.498226492598,
+          -100652.17495152164
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p024.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p024.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "d7c487782a559b554009a5f20a0b317586def1235c9630a3ae424134b72312b4",
+      "compressedBytes": 22150,
+      "boundsGltfMetres": {
+        "min": [
+          95065.57186918063,
+          2561.343895221214,
+          -100759.59183064535
+        ],
+        "max": [
+          95211.97873545783,
+          2569.1255535111495,
+          -100652.60013991181
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p025.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p025.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "86bfa385940adb0bc95b7f266e43a76243fe1b8ca01ed8e0a86fbcbb8b191591",
+      "compressedBytes": 23740,
+      "boundsGltfMetres": {
+        "min": [
+          95064.75198499685,
+          2561.049999999999,
+          -100760.1556277524
+        ],
+        "max": [
+          95202.9751813115,
+          2569.1255535111495,
+          -100654.67424500856
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p026.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p026.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "8632e608d79ec901eb8ef573168688c04a82d587a1f8be9bc995f9b9f7e7a75d",
+      "compressedBytes": 25192,
+      "boundsGltfMetres": {
+        "min": [
+          95067.52415562751,
+          2561.049999999999,
+          -100735.03431526334
+        ],
+        "max": [
+          95208.19154944071,
+          2567.845000002977,
+          -100653.8326307627
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p027.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p027.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "1125b9ab7c3e13af93db06efa3b5f8a30699ae0dfc13ac192910ab487a38e7e4",
+      "compressedBytes": 26867,
+      "boundsGltfMetres": {
+        "min": [
+          95067.52415562751,
+          2563.150000005959,
+          -100735.03431526334
+        ],
+        "max": [
+          95209.20144393577,
+          2567.845000002977,
+          -100653.1860898372
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p028.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p028.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "47ff00258ad5d08e3a322f026a46dbbac1c11ec4a2f00d51c5884bc67c49c883",
+      "compressedBytes": 28461,
+      "boundsGltfMetres": {
+        "min": [
+          95067.52415562751,
+          2561.049999999999,
+          -100745.74626581029
+        ],
+        "max": [
+          95208.19154944071,
+          2573.1400000119197,
+          -100653.8326307627
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p029.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p029.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "7f65d901f378b18d1853ab8a7b2f28cb5288622a67ab4d072d284aa058cfeddf",
+      "compressedBytes": 25527,
+      "boundsGltfMetres": {
+        "min": [
+          95103.09699109945,
+          2563.349999999999,
+          -100745.74626581681
+        ],
+        "max": [
+          95194.793923962,
+          2569.590000000744,
+          -100653.37954275295
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p030.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p030.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "addb4ba73af9101aba302b60d709c9401fbc9cb47b27f72c37fc6f70fdf77e5a",
+      "compressedBytes": 41249,
+      "boundsGltfMetres": {
+        "min": [
+          95063.70714827224,
+          2561.049999999999,
+          -100761.5325016876
+        ],
+        "max": [
+          95211.86411002975,
+          2573.1400000119197,
+          -100651.2316499554
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p031.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p031.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "3b4e366acec5c084d278ea64cf7f2f758f5678063e2f74a03f3d8c821b326717",
+      "compressedBytes": 14772,
+      "boundsGltfMetres": {
+        "min": [
+          95064.31507051853,
+          2561.049999999999,
+          -100736.86288907286
+        ],
+        "max": [
+          95190.56368010367,
+          2572.84000001192,
+          -100689.922852396
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p032.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p032.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "6c53665f979d3c8dcfd428e60080c6875cbd200812e709fe057c841e7e2d8af8",
+      "compressedBytes": 21365,
+      "boundsGltfMetres": {
+        "min": [
+          95063.84317925866,
+          2561.349999999999,
+          -100759.0158414861
+        ],
+        "max": [
+          95212.47004671098,
+          2573.1400000119197,
+          -100675.96042548871
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p033.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p033.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "e51bbde3438b9d5b24f6d2c65a01cbb903a43cdec7a9f1428def23938f2531d8",
+      "compressedBytes": 16599,
+      "boundsGltfMetres": {
+        "min": [
+          95083.07896171276,
+          2564.054999999887,
+          -100759.0158414861
+        ],
+        "max": [
+          95153.77593510714,
+          2568.5649999976144,
+          -100713.63285285996
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p034.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p034.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "0dfc4cc9ef147d6dc20652fae1129862903f9f0975fa2cf9e65a6ca1c5be05f8",
+      "compressedBytes": 18229,
+      "boundsGltfMetres": {
+        "min": [
+          95083.07896171276,
+          2561.954999999887,
+          -100759.0158414861
+        ],
+        "max": [
+          95208.22875620655,
+          2569.4649999976145,
+          -100678.68443692461
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p035.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p035.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "7737539bb3b998e6b4c2dc4464daa14ae09e3ea0cd80906b4274f3c446d32918",
+      "compressedBytes": 18896,
+      "boundsGltfMetres": {
+        "min": [
+          95084.09153242873,
+          2567.054999999887,
+          -100758.36596252976
+        ],
+        "max": [
+          95208.22875620655,
+          2571.0549999976147,
+          -100678.68443692461
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p036.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p036.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "b3da74049fba4519a2f5b62a5a5978bfeb966ce385e7d9d5a29c8df26aa9b037",
+      "compressedBytes": 19508,
+      "boundsGltfMetres": {
+        "min": [
+          95084.09153242873,
+          2569.5449999998873,
+          -100758.36596252976
+        ],
+        "max": [
+          95208.22875620655,
+          2572.2549999976145,
+          -100678.68443692461
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p037.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p037.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "daf1c18aa11f0f541b2deb65b59f97cf01dfcadda1d004be824905f1e9703b2e",
+      "compressedBytes": 22875,
+      "boundsGltfMetres": {
+        "min": [
+          95063.58382761905,
+          2561.049999999999,
+          -100758.35515985124
+        ],
+        "max": [
+          95213.14177194425,
+          2573.1400000119197,
+          -100675.54485807904
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p038.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p038.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "17922a3624b2e76fa21f0d550c304cad418a8c8f7cfb5d9144448962b0a8a541",
+      "compressedBytes": 28508,
+      "boundsGltfMetres": {
+        "min": [
+          95082.85488748747,
+          2561.049999999999,
+          -100758.93152087904
+        ],
+        "max": [
+          95212.06423175092,
+          2573.1400000119197,
+          -100653.8326307627
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p039.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p039.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "d646d5a84d99c76cff575f2d88c2828daab0735ed81afa3c11e629965534a6fb",
+      "compressedBytes": 24036,
+      "boundsGltfMetres": {
+        "min": [
+          95064.49699687572,
+          2561.049999999999,
+          -100758.73806797454
+        ],
+        "max": [
+          95212.23112742299,
+          2573.139999999999,
+          -100675.78535239285
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p040.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p040.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "739f5923732b6d9560ddbc8e063d1934d06e32c89764f7c1fa76c2017c47cafe",
+      "compressedBytes": 24031,
+      "boundsGltfMetres": {
+        "min": [
+          95082.85488748747,
+          2561.049999999999,
+          -100758.93152087904
+        ],
+        "max": [
+          95170.90961098304,
+          2569.449999999999,
+          -100702.30595342633
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p041.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p041.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "fd9aaa98ac457429748c6dfa77fd2cdbf21b9fc3042dfbb0d6ef5df5c273bf77",
+      "compressedBytes": 27697,
+      "boundsGltfMetres": {
+        "min": [
+          95082.85488748747,
+          2561.049999952315,
+          -100758.93152087904
+        ],
+        "max": [
+          95170.90961098367,
+          2569.449999999999,
+          -100702.30595342592
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p042.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p042.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "f254da19d17fb80b8733214bfbcfaa5cd0cbaccf98a3e142679c84db46cbab9e",
+      "compressedBytes": 33909,
+      "boundsGltfMetres": {
+        "min": [
+          95063.86967664644,
+          2561.049999999999,
+          -100761.19066799512
+        ],
+        "max": [
+          95212.85592291603,
+          2573.139999999999,
+          -100675.33124979168
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p043.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p043.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "b482bd5f4218c883ff32b5a2ba76fb5aa493b709c434af1482ea2dca85cfb190",
+      "compressedBytes": 18365,
+      "boundsGltfMetres": {
+        "min": [
+          95082.94170475722,
+          2561.054999999887,
+          -100759.00503881488
+        ],
+        "max": [
+          95210.2317473139,
+          2572.8400000238407,
+          -100677.13567770066
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p044.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p044.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "532d0b4262b33c87169b4433c4c45a90cb9c2433096f1faa75f88c7924fea2da",
+      "compressedBytes": 19903,
+      "boundsGltfMetres": {
+        "min": [
+          95083.0077016066,
+          2561.049999988078,
+          -100759.0276925302
+        ],
+        "max": [
+          95210.22236310091,
+          2573.1549999976146,
+          -100677.13739529483
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p045.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p045.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "0033eaaf1644f057c3e9b35b558e13aab5fbaa3602069d1a507c41718be25c41",
+      "compressedBytes": 24645,
+      "boundsGltfMetres": {
+        "min": [
+          95082.94170475722,
+          2561.049999999999,
+          -100759.0276925302
+        ],
+        "max": [
+          95212.2764454199,
+          2573.1549999976146,
+          -100675.9873622238
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p046.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p046.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "01f0688b65e82cbc65df3d08e4ca7ef09845070f2ba46660c172aeae08fec5aa",
+      "compressedBytes": 38833,
+      "boundsGltfMetres": {
+        "min": [
+          95064.13962378899,
+          2561.0754468917826,
+          -100761.160301767
+        ],
+        "max": [
+          95212.54103620605,
+          2573.0718340529934,
+          -100651.38249589452
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p047.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p047.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "8178bde9bc028ee5cc9dac2705f4b44d3a87f3a0cab750924e825ec9f47d235f",
+      "compressedBytes": 17810,
+      "boundsGltfMetres": {
+        "min": [
+          95096.13633004761,
+          2561.349999999999,
+          -100750.60159525639
+        ],
+        "max": [
+          95169.94500082199,
+          2569.15000001192,
+          -100703.15614619099
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p048.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p048.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "5e30ac0af17eb15d3ed613123cb475cbbf844a002ae5fc3e3ffacdb3d7168025",
+      "compressedBytes": 14357,
+      "boundsGltfMetres": {
+        "min": [
+          95096.13633004761,
+          2563.449999999999,
+          -100750.60159525639
+        ],
+        "max": [
+          95165.90542284022,
+          2566.75000001192,
+          -100705.74879150595
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p049.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p049.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "725a36653e829ffbe68ead69d48ce32473e18420e79a2c5103c0f988fbd61319",
+      "compressedBytes": 19644,
+      "boundsGltfMetres": {
+        "min": [
+          95096.13633004761,
+          2566.449999999999,
+          -100750.60159525639
+        ],
+        "max": [
+          95165.90542284022,
+          2569.15000001192,
+          -100705.74879150595
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p050.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p050.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "5499019a6a4331007fe4ff57fbceb7c01baecf42f4e14f2c55dc505b96b439f0",
+      "compressedBytes": 13556,
+      "boundsGltfMetres": {
+        "min": [
+          95084.0175961023,
+          2561.349999999999,
+          -100758.3795312013
+        ],
+        "max": [
+          95208.23950999432,
+          2569.15000001192,
+          -100678.5783115155
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p051.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p051.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "8a3df1476305e27f6dd1f97dd66e890f384b170ed7c6eb00992922243d451409",
+      "compressedBytes": 13661,
+      "boundsGltfMetres": {
+        "min": [
+          95166.83162094897,
+          2561.949999999999,
+          -100705.22858461697
+        ],
+        "max": [
+          95204.19993201255,
+          2571.6400000119197,
+          -100681.17095683048
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p052.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p052.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "c154c261da29f9a2bedffc74404678c42b9aeb12668f1ba708647b00e37d46b8",
+      "compressedBytes": 19536,
+      "boundsGltfMetres": {
+        "min": [
+          95098.1587952589,
+          2569.839999999999,
+          -100749.3035549714
+        ],
+        "max": [
+          95169.94767704241,
+          2572.84000001192,
+          -100703.15442856346
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p053.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p053.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "8c4e4767db13714fb9086fea4345ac4197b3d208068ee0bb2a822433a8a2e194",
+      "compressedBytes": 16314,
+      "boundsGltfMetres": {
+        "min": [
+          95084.02027232273,
+          2569.839999999999,
+          -100758.37781357378
+        ],
+        "max": [
+          95208.23950999432,
+          2572.84000001192,
+          -100678.5783115155
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p054.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p054.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "37fa9bd118b6430485ed64f5c857b34542291ded1b8c98fef96de47f74e319ed",
+      "compressedBytes": 34004,
+      "boundsGltfMetres": {
+        "min": [
+          95172.80683004674,
+          2561.075447055759,
+          -100701.39363008874
+        ],
+        "max": [
+          95213.29384073807,
+          2573.0718340529934,
+          -100651.31493850696
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p055.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p055.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "1cb898e97029e265041a15544d594a407e2920cc62f8bbde47ccc1d260b5413c",
+      "compressedBytes": 5280421,
+      "boundsGltfMetres": {
+        "min": [
+          95068.06254965875,
+          2555.8019999995818,
+          -100761.48624494358
+        ],
+        "max": [
+          95213.25481451202,
+          2574.7880000495898,
+          -100651.97730405655
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p056.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p056.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "032768330ab009d04148f3ebc5ae3a99cb537aefb31d3bd7350c7a558c5c113b",
+      "compressedBytes": 8883185,
+      "boundsGltfMetres": {
+        "min": [
+          95063.47191744047,
+          2549.299999999997,
+          -100761.19276269499
+        ],
+        "max": [
+          95213.03876073577,
+          2573.4007598106828,
+          -100651.5721003309
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p057.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p057.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "7c606dcac85c53f752110ead2f6b880965806d4a03880c905fd161cb6a48a636",
+      "compressedBytes": 3799853,
+      "boundsGltfMetres": {
+        "min": [
+          95065.77595498845,
+          2549.299999999997,
+          -100760.82670532027
+        ],
+        "max": [
+          95210.949643947,
+          2580.7678465524987,
+          -100651.93744514068
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p058.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p058.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "4106ddfd9fd19499313209c7595069f810432d262c0c6200970e433a1f06fef3",
+      "compressedBytes": 1324013,
+      "boundsGltfMetres": {
+        "min": [
+          95066.83836630425,
+          2549.299999998509,
+          -100757.90792025052
+        ],
+        "max": [
+          95210.63702875038,
+          2572.7410000000464,
+          -100652.22159124243
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p059.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p059.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "917d008df4c4d07e681ab0befee5bc637ad0a59c1c96f993abeae47baa4f4cca",
+      "compressedBytes": 8085325,
+      "boundsGltfMetres": {
+        "min": [
+          95065.72404748312,
+          2549.299999998509,
+          -100761.42851933811
+        ],
+        "max": [
+          95211.00155072486,
+          2583.940875872272,
+          -100651.33562729244
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p060.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p060.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "6c1a8bc746cb17069f4f01d4d64661b4421b64173d7b0a0b7fac2e7f7f3d6e0b",
+      "compressedBytes": 77084,
+      "boundsGltfMetres": {
+        "min": [
+          95071.92506842983,
+          2549.2999999999993,
+          -100750.41212952381
+        ],
+        "max": [
+          95210.2225274593,
+          2569.449999999999,
+          -100653.1860898372
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p061.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p061.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "4156bcbe4ce50423f07cb5d00ffd597136ec67ece37498346d8dbcad68576e6b",
+      "compressedBytes": 751856,
+      "boundsGltfMetres": {
+        "min": [
+          95077.66054443887,
+          2555.5499999985086,
+          -100750.16844954765
+        ],
+        "max": [
+          95210.77485626865,
+          2569.344999976157,
+          -100655.39295342713
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p062.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p062.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "c5e74ef93bf13acccc10d542f1651b4d8757aa7d1de603d77edbf6f0daaaaf47",
+      "compressedBytes": 761765,
+      "boundsGltfMetres": {
+        "min": [
+          95095.57952769136,
+          2549.2999999999993,
+          -100740.47047637746
+        ],
+        "max": [
+          95194.09047515776,
+          2569.3491430034637,
+          -100668.84660432402
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p063.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p063.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "9d7adaf6d4e4eee66b11415fe0251aeb12ea7ba12f5f297fac9f012914fe0f1e",
+      "compressedBytes": 56900,
+      "boundsGltfMetres": {
+        "min": [
+          95110.86242156997,
+          2549.299999999998,
+          -100729.65847471026
+        ],
+        "max": [
+          95173.7422138189,
+          2571.486603736876,
+          -100677.29938172785
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p064.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p064.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "0914d3612ce92e57147364368fc4c60a48956c678e659d73be992ba5d8e9f164",
+      "compressedBytes": 104499,
+      "boundsGltfMetres": {
+        "min": [
+          95069.59355471192,
+          2551.7999999999993,
+          -100758.4349739456
+        ],
+        "max": [
+          95208.71657534441,
+          2578.3899999999976,
+          -100654.32936315972
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p065.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p065.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "d83904489c4a54d8e49d12ee80fda102c11dd06092a0e0a1da09aebef1686641",
+      "compressedBytes": 272475,
+      "boundsGltfMetres": {
+        "min": [
+          95064.48737074848,
+          2555.6499999999987,
+          -100757.96723817791
+        ],
+        "max": [
+          95207.01169914247,
+          2578.3900000953663,
+          -100651.88976717972
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p066.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p066.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "0be08e8ded937496b392958388571b9cf138ec937c4b900dcb3576e24e7ca6e1",
+      "compressedBytes": 342016,
+      "boundsGltfMetres": {
+        "min": [
+          95064.92761271012,
+          2549.361613163351,
+          -100760.41268931112
+        ],
+        "max": [
+          95211.79798561192,
+          2575.2880000495898,
+          -100652.35146040964
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p067.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p067.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "5314d38bb1191819b73d81820a44e7d7d43c8c3e70f349784333698f37289508",
+      "compressedBytes": 293878,
+      "boundsGltfMetres": {
+        "min": [
+          95068.3746529831,
+          2549.399999999999,
+          -100756.55689365875
+        ],
+        "max": [
+          95208.35072103197,
+          2580.080572929381,
+          -100655.470246665
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p068.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p068.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "7bab7ac1f57de81bb431e68db819e36c5f4a5f4e7e091bd58874b02b1108a66b",
+      "compressedBytes": 253163,
+      "boundsGltfMetres": {
+        "min": [
+          95066.00475490504,
+          2549.2999999999993,
+          -100759.30748731623
+        ],
+        "max": [
+          95210.4026300213,
+          2582.242509558808,
+          -100653.52028288429
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p069.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p069.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "dda58b309a727694b8cb86fcf5eb675ca5dfc6679edb030dedc92b3a4baaba18",
+      "compressedBytes": 172022,
+      "boundsGltfMetres": {
+        "min": [
+          95070.16340177415,
+          2555.6499999046314,
+          -100757.62320400216
+        ],
+        "max": [
+          95206.56219659798,
+          2582.220793915167,
+          -100655.14094578543
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p070.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p070.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "c331b05f866f020f673c6fc6ed6676e279d453e4e4d889b4098edfa066c34d12",
+      "compressedBytes": 28259,
+      "boundsGltfMetres": {
+        "min": [
+          95070.56540726943,
+          2573.5412552701523,
+          -100755.46266623966
+        ],
+        "max": [
+          95206.16019110268,
+          2576.7450660134255,
+          -100657.3014835479
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p071.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p071.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "837a22bea00bb0a30a98de5ff463038297d5b436ea0f646f10ded4193a977911",
+      "compressedBytes": 27127,
+      "boundsGltfMetres": {
+        "min": [
+          95073.57179568383,
+          2573.5412552701523,
+          -100750.71094306707
+        ],
+        "max": [
+          95203.1538026883,
+          2576.7612524218207,
+          -100662.05320672045
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p072.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p072.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "a809ea2705b69e726e1acb8bd6de2ecfb098cfb0ec55644bea05e3d8d7f53cba",
+      "compressedBytes": 29714,
+      "boundsGltfMetres": {
+        "min": [
+          95085.99423578204,
+          2573.5412552701514,
+          -100757.66427117218
+        ],
+        "max": [
+          95190.73136259052,
+          2576.7612523862026,
+          -100655.09987861541
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p073.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p073.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "a271dbe0e9de157fe843a3583bb6f4fa2ec8e0257be777cb6e14b2497f57d190",
+      "compressedBytes": 237835,
+      "boundsGltfMetres": {
+        "min": [
+          95071.16303881098,
+          2549.299999998509,
+          -100759.74611348136
+        ],
+        "max": [
+          95210.45167161933,
+          2581.3024343401544,
+          -100653.14099035124
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p074.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p074.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "00ecd2ff7acf250ace025fbf662fc90ed955cef57ce23d5791716975ffee9273",
+      "compressedBytes": 32895,
+      "boundsGltfMetres": {
+        "min": [
+          95070.85410305913,
+          2563.150200001894,
+          -100744.69481863276
+        ],
+        "max": [
+          95210.78911200886,
+          2573.3811311726136,
+          -100655.10433699211
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p075.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p075.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "bc34214e9395b0435e9156dd7daa8f58bd5c51bd8677a225eb6fb49b06e21428",
+      "compressedBytes": 1265298,
+      "boundsGltfMetres": {
+        "min": [
+          95063.34287202908,
+          2553.499999999999,
+          -100761.34960620153
+        ],
+        "max": [
+          95213.37281767763,
+          2580.4161451459786,
+          -100651.39910498064
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p076.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p076.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "ef4c6bac3f0024c02284955fa3966372564c7dec0f522840bf15ffeca0e13f42",
+      "compressedBytes": 1379366,
+      "boundsGltfMetres": {
+        "min": [
+          95066.02528354604,
+          2548.149499999997,
+          -100759.7253875285
+        ],
+        "max": [
+          95202.29114807988,
+          2573.7441301250446,
+          -100653.88863711923
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p077.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p077.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "8679632d147500ab8aa3013d989bf47e1a146fcc040399e749e4fba19ed6517a",
+      "compressedBytes": 502077,
+      "boundsGltfMetres": {
+        "min": [
+          95064.82117812597,
+          2548.1450000047676,
+          -100760.9381044655
+        ],
+        "max": [
+          95211.9057595474,
+          2575.329999999105,
+          -100651.8260687827
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p078.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p078.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "3eaf86dc59fad448b98edd216f7b8727d2b53b2c53b9798c765c8fc139515629",
+      "compressedBytes": 299985,
+      "boundsGltfMetres": {
+        "min": [
+          95065.9205969782,
+          2549.2999999999993,
+          -100755.00681780507
+        ],
+        "max": [
+          95206.93772826975,
+          2576.239999999999,
+          -100658.73132698504
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p079.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p079.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "ad15b6bf0dc7357ca233fe3c1e583105a81996725e163bd5d1b7c9f974e3dfdc",
+      "compressedBytes": 389992,
+      "boundsGltfMetres": {
+        "min": [
+          95069.78787010271,
+          2549.299999998509,
+          -100750.7636958301
+        ],
+        "max": [
+          95204.74912476863,
+          2574.5099999809254,
+          -100657.75733198186
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p080.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p080.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "d18407bbad69815078f1bfe7acb0e91a74ad3ead8080a4901260837ff3463f29",
+      "compressedBytes": 799758,
+      "boundsGltfMetres": {
+        "min": [
+          95064.13769431671,
+          2548.770000028608,
+          -100761.0062012471
+        ],
+        "max": [
+          95212.63530658418,
+          2577.5399999999986,
+          -100651.76301891758
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p081.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p081.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "284c7ce39301e0fdd67428741688c6a2a016d23f87e66d087405d6528ab74300",
+      "compressedBytes": 1404686,
+      "boundsGltfMetres": {
+        "min": [
+          95063.29056181124,
+          2548.149499999997,
+          -100761.78283870406
+        ],
+        "max": [
+          95213.43503671764,
+          2579.9399993896463,
+          -100650.99481435106
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p082.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p082.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "8628ba7a74c4161af3b813e279f9f752f865b9257b610f3dddb1d96172531f98",
+      "compressedBytes": 161111,
+      "boundsGltfMetres": {
+        "min": [
+          95094.75522786756,
+          2549.299999998509,
+          -100749.03508859652
+        ],
+        "max": [
+          95206.55494364093,
+          2572.740000001489,
+          -100660.04166050121
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p083.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p083.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "baee3f890eb14f7f3da35605e155cb19bb5593e16f6344b91791f77f78acf573",
+      "compressedBytes": 108091,
+      "boundsGltfMetres": {
+        "min": [
+          95064.58519684039,
+          2549.299999998509,
+          -100760.25283460744
+        ],
+        "max": [
+          95212.66747114215,
+          2578.389999999999,
+          -100652.51131703453
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p084.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p084.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "306536a38672ecda7a1de015002c4f1a01f192789ea23780a559b897a20a302f",
+      "compressedBytes": 359763,
+      "boundsGltfMetres": {
+        "min": [
+          95064.05812843653,
+          2561.947003450905,
+          -100756.32386167921
+        ],
+        "max": [
+          95206.14343869248,
+          2580.710745301604,
+          -100653.37762158885
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p085.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p085.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "3d1ca6ea43615405de74bc68ac99552d04ae4864c53f429dc488f9af42468df6",
+      "compressedBytes": 313598,
+      "boundsGltfMetres": {
+        "min": [
+          95067.57171406213,
+          2578.706514986652,
+          -100755.68429170818
+        ],
+        "max": [
+          95206.96034553414,
+          2580.726042192582,
+          -100654.80526409623
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p086.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p086.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "0dc7090479e24c32af1bd6df7d01d11046ef05c91c181a34b3fd92f51892bd52",
+      "compressedBytes": 263076,
+      "boundsGltfMetres": {
+        "min": [
+          95069.61984782298,
+          2578.8680059282374,
+          -100754.40516085226
+        ],
+        "max": [
+          95206.13938538932,
+          2580.7631371311195,
+          -100658.00221616458
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p087.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p087.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "90e0d1cf1c2baa17412fe99b1dfbb761e8b49c75db5d1ba3369cbc67d9dff797",
+      "compressedBytes": 267863,
+      "boundsGltfMetres": {
+        "min": [
+          95071.26176965826,
+          2578.898364524736,
+          -100752.48646315266
+        ],
+        "max": [
+          95204.90794420132,
+          2580.7832551778247,
+          -100660.56047980319
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p088.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p088.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "95fe9c71821406864a726f08f0bf535d9fb2af257cb3715f16fa3d1ac054205f",
+      "compressedBytes": 287664,
+      "boundsGltfMetres": {
+        "min": [
+          95072.70925320606,
+          2578.9251612764347,
+          -100749.94835665236
+        ],
+        "max": [
+          95204.01634516622,
+          2580.798540618599,
+          -100662.81579313493
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p089.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p089.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "963749769c01076afeac8b9a4788ce3f455c99a660058c9134c9ce2216494632",
+      "compressedBytes": 357399,
+      "boundsGltfMetres": {
+        "min": [
+          95076.81417130875,
+          2578.8602372606133,
+          -100755.40149999158
+        ],
+        "max": [
+          95207.51623004526,
+          2580.7832551778247,
+          -100669.5482437691
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p090.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p090.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "214691d0759b2274450a5960dc6fa4d00fd0ff7c4495641821fe65e96fb6a4c5",
+      "compressedBytes": 446242,
+      "boundsGltfMetres": {
+        "min": [
+          95080.3140583123,
+          2578.4885202481687,
+          -100759.21708325781
+        ],
+        "max": [
+          95209.66338525439,
+          2580.7035926807803,
+          -100675.02154284973
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p091.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p091.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "a23fad8649c562ce17b0fa8042fb652af31231368e9671b3b0c6981244d90ba1",
+      "compressedBytes": 321367,
+      "boundsGltfMetres": {
+        "min": [
+          95065.80032090165,
+          2578.005174701279,
+          -100760.7998469008
+        ],
+        "max": [
+          95210.92527747057,
+          2580.7716669032984,
+          -100651.96430288638
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p092.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p092.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "7139dda32eab49850cf34b43ad399071493f7046a67d56ba62244ce57190a14e",
+      "compressedBytes": 449881,
+      "boundsGltfMetres": {
+        "min": [
+          95066.17836186023,
+          2578.3641079139175,
+          -100760.00729610115
+        ],
+        "max": [
+          95209.87943903152,
+          2580.798558828363,
+          -100653.04099008239
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p093.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p093.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "6e730691b18e231e9885cce20b33b2e53f144b5d9dd5f1a07a2ec2bd9d0e5044",
+      "compressedBytes": 556621,
+      "boundsGltfMetres": {
+        "min": [
+          95065.80032088983,
+          2549.299999998509,
+          -100760.38418018489
+        ],
+        "max": [
+          95210.92527748251,
+          2582.1306594934017,
+          -100652.37996960313
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p094.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p094.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "432c97164d1a168b620f4dda2545701e2c53be781a6dde189fc8e2b90cae147e",
+      "compressedBytes": 237864,
+      "boundsGltfMetres": {
+        "min": [
+          95066.81090948959,
+          2549.299999998509,
+          -100757.55645885892
+        ],
+        "max": [
+          95211.44316343578,
+          2578.389999999999,
+          -100652.53243158427
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p095.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p095.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "18b33c00d4b0285f0cffcc62867095f4c2d020d08f0a05ae6e7141d3449503e7",
+      "compressedBytes": 208183,
+      "boundsGltfMetres": {
+        "min": [
+          95065.20538163539,
+          2566.2133333587635,
+          -100760.67187630753
+        ],
+        "max": [
+          95212.29147934215,
+          2573.3849999809254,
+          -100652.09328265203
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p096.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p096.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "78e56f607a090bd3a63d89903cacbdd6299fb66502c78abf538368894e236904",
+      "compressedBytes": 6493505,
+      "boundsGltfMetres": {
+        "min": [
+          95063.39871508276,
+          2549.302754282671,
+          -100761.28579816064
+        ],
+        "max": [
+          95213.32484341133,
+          2575.239999952315,
+          -100651.47813403638
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p097.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p097.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "section": "E08",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 86,
+      "sha256": "8baf944c0f5a683e7bffeea348badde540cd15c2d22f6a8aee4cd73ba357221f",
+      "compressedBytes": 13265,
+      "boundsGltfMetres": {
+        "min": [
+          95091.4493206095,
+          2549.399999999999,
+          -100736.5727323598
+        ],
+        "max": [
+          95194.85046094708,
+          2575.039999952315,
+          -100653.41999942593
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p098.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-0000-308-con-ed-arq-mo-0002_v00/e08-l1t1-0000-308-con-ed-arq-mo-0002_v00-p098.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-2420-561-CON-ED-EST-MO-0001_VDD.ifc",
+      "section": "E08",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "a499747c6f41d2f9d8cbd22d7131d118a239a864140b8836c6ed7f24fd52586d",
+      "compressedBytes": 704484,
+      "boundsGltfMetres": {
+        "min": [
+          95048.66402911623,
+          2523.2301005554173,
+          -100775.61618906459
+        ],
+        "max": [
+          95236.95900421517,
+          2563.2501002741838,
+          -100626.87042457866
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p001.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p001.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-2420-561-CON-ED-EST-MO-0001_VDD.ifc",
+      "section": "E08",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "17aa5548a89f45cfdbd0a05fdc76f016722233b7c9b26fd2b34f6d314f7b7e49",
+      "compressedBytes": 571683,
+      "boundsGltfMetres": {
+        "min": [
+          95048.66316698739,
+          2554.5374760281475,
+          -100777.0404771557
+        ],
+        "max": [
+          95236.95985810383,
+          2563.449856023437,
+          -100625.68952401729
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p002.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p002.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-2420-561-CON-ED-EST-MO-0001_VDD.ifc",
+      "section": "E08",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "b7e7c9ef05470443fb42b0ca593083f79c63543b2b9fa700166065550be6172e",
+      "compressedBytes": 600214,
+      "boundsGltfMetres": {
+        "min": [
+          95101.28817925551,
+          2553.970100272991,
+          -100734.34774156088
+        ],
+        "max": [
+          95209.40543653046,
+          2563.445203085592,
+          -100659.45713531037
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p003.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p003.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-2420-561-CON-ED-EST-MO-0001_VDD.ifc",
+      "section": "E08",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "bc1af0266aca3249bdbba61f2c9d076fd38bd585d7f84ddceae4fe6a673de277",
+      "compressedBytes": 85374,
+      "boundsGltfMetres": {
+        "min": [
+          95062.86993127766,
+          2555.4830822365525,
+          -100768.1453428778
+        ],
+        "max": [
+          95222.99514585282,
+          2563.0931005477905,
+          -100629.28155007861
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p004.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p004.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-2420-561-CON-ED-EST-MO-0001_VDD.ifc",
+      "section": "E08",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "9c1c441401169ba2428bb932e32ef0800fbb1c298dfcbcb5e5d369e5477cbef8",
+      "compressedBytes": 94728,
+      "boundsGltfMetres": {
+        "min": [
+          95063.259994499,
+          2555.4830822365525,
+          -100768.05398634993
+        ],
+        "max": [
+          95222.94137510908,
+          2563.0849999999878,
+          -100629.42775087715
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p005.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p005.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-2420-561-CON-ED-EST-MO-0001_VDD.ifc",
+      "section": "E08",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "2115649f05df039828b8e68d2f15d56d2f31cf73e40e93610afcc4803b68b162",
+      "compressedBytes": 317583,
+      "boundsGltfMetres": {
+        "min": [
+          95062.93713406674,
+          2553.786540746689,
+          -100779.2164293358
+        ],
+        "max": [
+          95216.1391895074,
+          2563.0752148425504,
+          -100624.78093587358
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p006.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p006.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-2420-561-CON-ED-EST-MO-0001_VDD.ifc",
+      "section": "E08",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "83860205af442619060905def55d85dd3ef8d18d2fbf9dbac1c06f43875f160c",
+      "compressedBytes": 1863867,
+      "boundsGltfMetres": {
+        "min": [
+          95062.48753209013,
+          2555.117446725692,
+          -100776.59484704699
+        ],
+        "max": [
+          95223.18648303454,
+          2563.095000267029,
+          -100626.22916752829
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p007.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p007.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-2420-561-CON-ED-EST-MO-0001_VDD.ifc",
+      "section": "E08",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "995904ee0709c8bb7bdd0732a2d1ecbcefaee4be763511484320b2f1f70920b2",
+      "compressedBytes": 213228,
+      "boundsGltfMetres": {
+        "min": [
+          95115.76173727722,
+          2560.935,
+          -100734.32100320612
+        ],
+        "max": [
+          95202.39273727954,
+          2563.0950910088236,
+          -100659.45356973351
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p008.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p008.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-2420-561-CON-ED-EST-MO-0001_VDD.ifc",
+      "section": "E08",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "78701d8acbb771196a53664920e4b2065033c90d869cbdb7f93cf5ca0455fb9b",
+      "compressedBytes": 343351,
+      "boundsGltfMetres": {
+        "min": [
+          95077.02352500956,
+          2556.048278611645,
+          -100767.43479479465
+        ],
+        "max": [
+          95204.05207145558,
+          2563.095100402832,
+          -100629.70676258618
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p009.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p009.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-2420-561-CON-ED-EST-MO-0001_VDD.ifc",
+      "section": "E08",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "92f517a61956f96a95d4d9c8bb14ec08adbd9a487f18dbc910b6a520f6ca0617",
+      "compressedBytes": 380368,
+      "boundsGltfMetres": {
+        "min": [
+          95062.73136661715,
+          2553.880100272991,
+          -100773.71222175768
+        ],
+        "max": [
+          95222.99454852527,
+          2563.093147277832,
+          -100625.70602433206
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p010.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p010.glb.gz",
+      "initialOverlay": true
+    },
+    {
+      "source": "L1T1-2420-561-CON-ED-EST-MO-0001_VDD.ifc",
+      "section": "E08",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 422,
+      "sha256": "51243f7ddfb95563c8a7f12746cbf8737850eb3719c2a0b6a4989ae59c9cc16e",
+      "compressedBytes": 5884251,
+      "boundsGltfMetres": {
+        "min": [
+          95048.66403997043,
+          2554.755100272992,
+          -100776.99610004059
+        ],
+        "max": [
+          95236.95899724682,
+          2564.634700316288,
+          -100625.47975485076
+        ]
+      },
+      "instanceIdentity": "ifc-globalid",
+      "file": "assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p011.glb.gz",
+      "url": "./assets/stations/e08/models59/l1t1-2420-561-con-ed-est-mo-0001_vdd/e08-l1t1-2420-561-con-ed-est-mo-0001_vdd-p011.glb.gz",
+      "initialOverlay": true
     }
   ],
   "geometryReconverted": false,
   "legacyGrouped": false,
   "sourceIfcFiles": [
-    "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
     "L1T1-1150-308-CON-ED-EST-MO-0001_V00.ifc",
     "L1T1-1200-308-CON-ED-EST-MO-0001_V01.ifc",
     "L1T1-5400-308-CON-ED-INS-MO-0001_VDD.ifc",
-    "L1T1-1100-308-CON-ED-EST-MO-0001_V01.ifc"
+    "L1T1-1100-308-CON-ED-EST-MO-0001_V01.ifc",
+    "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+    "L1T1-2420-561-CON-ED-EST-MO-0001_VDD.ifc"
   ],
   "installations": {
     "source": "L1T1-5400-308-CON-ED-INS-MO-0001_VDD.ifc",
@@ -2274,7 +3416,9 @@
   },
   "integrationNotes": [],
   "newGeometryConverted": [
-    "L1T1-5400-308-CON-ED-INS-MO-0001_VDD.ifc"
+    "L1T1-5400-308-CON-ED-INS-MO-0001_VDD.ifc",
+    "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+    "L1T1-2420-561-CON-ED-EST-MO-0001_VDD.ifc"
   ],
   "reusedGeometryReconverted": false,
   "renderOriginGltfMetres": [
@@ -2306,5 +3450,50 @@
       ]
     },
     "nativePlacementPreserved": true
+  },
+  "architectureRevision": {
+    "replaces": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
+    "source": "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+    "sha256": "80d9795646c8f5210bcac2aa69c06e6e1c98927a0c5f3e38ad54a94b3afdbb94",
+    "levelCorrespondence": [
+      {
+        "applicationLevel": "1k3q6JTYT4Du6v6y0vI9q8",
+        "name": "ARQ_PL_00_SÓTANO",
+        "newIfcGlobalId": "1Dlxfp6691jAsfZSMRfxRI",
+        "elevationDifference": -2.2737367544323206e-12
+      },
+      {
+        "applicationLevel": "1k3q6JTYT4Du6v6y0v3tWv",
+        "name": "ARQ_PL_01_ACCESO",
+        "newIfcGlobalId": "1ZvOeQwd10lPlZWEpLLxYV",
+        "elevationDifference": -2.2737367544323206e-12
+      },
+      {
+        "applicationLevel": "1k3q6JTYT4Du6v6y0v38O3",
+        "name": "ARQ_PL_02_INTERMEDIO",
+        "newIfcGlobalId": "2SCB_wEvLD9uWO8$uQSW5e",
+        "elevationDifference": -2.2737367544323206e-12
+      },
+      {
+        "applicationLevel": "1k3q6JTYT4Du6v6y0v38PQ",
+        "name": "ARQ_PL_03_PLATAFORMA",
+        "newIfcGlobalId": "2SCB_wEvLD9uWO8$uQSW4n",
+        "elevationDifference": -2.2737367544323206e-12
+      },
+      {
+        "applicationLevel": "1k3q6JTYT4Du6v6y0vJI6j",
+        "name": "ARQ_PL_05_CUB_NVC",
+        "newIfcGlobalId": "2mfzNd0vDCL9qEq4EUegXG",
+        "elevationDifference": -2.2737367544323206e-12
+      }
+    ]
+  },
+  "modelUpdate59": {
+    "replaced": "L1T1-0000-308-CON-ED-ARQ-MO-0001_VEE.ifc",
+    "added": [
+      "L1T1-0000-308-CON-ED-ARQ-MO-0002_V00.ifc",
+      "L1T1-2420-561-CON-ED-EST-MO-0001_VDD.ifc"
+    ],
+    "coordinateOriginPreserved": true
   }
 }
