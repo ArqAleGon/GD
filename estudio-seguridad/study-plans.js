@@ -9,7 +9,8 @@ export class PlanViewer{
  choosePage(kind,pages,active,current){const available=pages.filter(p=>this.visible(active,this.registration?.[kind]?.[p.page]));return available.find(p=>p.page===current)||available[0];}
  draw(kind,page,level,active,onLoad,onError){
   this.kind=kind;this.page=page;this.level=level;this.active=active;this.svg.replaceChildren();this.markers=[];this.reg=this.registration?.[kind]?.[page.page];
-  const reg=this.reg,[x,y,w,h]=reg?.crop||page.crop||[0,0,page.width,page.height],rotation=reg?.rotation??page.rotation??90;this.dimensions=rotation===90?[h,w]:[w,h];this.svg.setAttribute('viewBox',`0 0 ${this.dimensions[0]} ${this.dimensions[1]}`);this.svg.setAttribute('data-page',page.page);this.svg.setAttribute('data-kind',kind);
+  const routeCrop=this.routes?.active&&kind==='architecture'?this.routes.routeSource?.planCrops?.[level.id]:null;
+  const reg=this.reg,[x,y,w,h]=routeCrop||reg?.crop||page.crop||[0,0,page.width,page.height],rotation=reg?.rotation??page.rotation??90;this.dimensions=rotation===90?[h,w]:[w,h];this.svg.setAttribute('viewBox',`0 0 ${this.dimensions[0]} ${this.dimensions[1]}`);this.svg.setAttribute('data-page',page.page);this.svg.setAttribute('data-kind',kind);
   this.layer=el('g',{transform:rotation===90?`translate(${h} 0) rotate(90) translate(${-x} ${-y})`:`translate(${-x} ${-y})`});this.svg.append(this.layer);
   const layers=page.layers||[page];let loaded=0,failed=false;
   this.layer.append(el('rect',{x,y,width:w,height:h,fill:'#fff'}));

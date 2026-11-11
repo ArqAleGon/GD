@@ -1,12 +1,12 @@
-import {originalSheets} from './study-plan-originals.js?v=20261111-e08originals67';
+import {originalSheets} from './study-plan-originals.js?v=20261111-e08pmr68';
 import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
-import {station,stations} from './study-stations.js?v=20261111-e08originals67';
+import {station,stations} from './study-stations.js?v=20261111-e08pmr68';
 import {StationVideo} from './study-station-video.js?v=20261106-e04delivery52';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
-import {PlanViewer} from './study-plans.js?v=20261104-integrity45';
+import {PlanViewer} from './study-plans.js?v=20261111-e08pmr68';
 import {StudyScene} from './study-scene.js?v=20261104-integrity45';
 import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261028-e01media23';
-import {RouteStudy} from './study-routes.js?v=20261111-e08originals67';
+import {RouteStudy} from './study-routes.js?v=20261111-e08pmr68';
 import {SpaceStudy} from './study-spaces.js?v=20261109-e0708integration57';
 const $=s=>document.querySelector(s);
 const levels=station.levels;
@@ -88,7 +88,7 @@ $('#show-brt').addEventListener('change',e=>{if(scene){scene.showBrt=e.target.ch
 for(const code of ['1100','1310'])$('#show-structure-'+code).addEventListener('change',e=>{if(scene){scene.hiddenPackages ||= new Set();const key='e09-est-complementary-'+code;if(e.target.checked)scene.hiddenPackages.delete(key);else scene.hiddenPackages.add(key);scene.filter();}});
 $('#show-structure-914').addEventListener('change',e=>{if(scene){scene.hiddenPackages ||= new Set();if(e.target.checked)scene.hiddenPackages.delete('e09-str-914');else scene.hiddenPackages.add('e09-str-914');scene.filter();}});
 $('#show-structure-1300').addEventListener('change',e=>{if(scene){scene.showStructure1300=e.target.checked;scene.filter();}});
-function syncAxonView(){const full=!!scene?.fullStation||level.id==='all',cut=routes?.active?routes.data.routeCuts?.[level.id]:null;$('#frame-station').setAttribute('aria-pressed',String(full));$('#axon-title').textContent='Planta 3D';$('#axon-subtitle').textContent=full?'Todos los niveles · sin cortes · modelos cargados':`${level.name} · corte de ${(cut?.min??level.cutMin).toFixed(1)} a ${(cut?.max??level.cutMax).toFixed(1)} m`;document.body.dataset.axonMode=full?'station':'level';}
+function syncAxonView(){const full=!!scene?.fullStation||level.id==='all',cut=routes?.active?(routes.routeSource?.routeCuts?.[level.id]??routes.data.routeCuts?.[level.id]):null;$('#frame-station').setAttribute('aria-pressed',String(full));$('#axon-title').textContent='Planta 3D';$('#axon-subtitle').textContent=full?'Todos los niveles · sin cortes · modelos cargados':`${level.name} · corte de ${(cut?.min??level.cutMin).toFixed(1)} a ${(cut?.max??level.cutMax).toFixed(1)} m`;document.body.dataset.axonMode=full?'station':'level';}
 function showLevelView(){scene?.setLevel(level);syncAxonView();}
 $('#frame-station').addEventListener('click',()=>{if(!modelsReady)return;for(const id of ['show-installations','show-brt','show-structure-1300','show-structure-1100','show-structure-1310','show-structure-914'])$('#'+id).checked=true;scene.showFullStation();syncAxonView();});
 $('#frame-level').addEventListener('click',showLevelView);$('#frame-camera').addEventListener('click',()=>{showLevelView();scene?.focusSelected();});$('#help-button').addEventListener('click',()=>$('#help-dialog').showModal());

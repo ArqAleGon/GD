@@ -207,7 +207,7 @@ export class RouteStudy{
   }
   if(this.avatar){this.avatar.group.visible=false;for(const p of this.parts)for(const arrow of p.arrows)arrow.visible=this.planAnimationStarted(p)&&(!p.leg.directionFromAnimation||p===this.current);}
   if(this.simulation)this.simulation.group.visible=false;for(const p of this.contextParts||[])p.group.visible=p.leg.level===s.level.id;
-  const full=s.fullStation||s.level.id==='all',originY=this.data.originY??2550,extra=this.data.routeCuts?.[s.level.id];const floor=full?-Infinity:(extra?.min??s.level.cutMin)-originY,ceiling=full?Infinity:(extra?.max??s.level.cutMax)-originY;s.setModelClipping(full?[]:[new THREE.Plane(new THREE.Vector3(0,-1,0),ceiling),new THREE.Plane(new THREE.Vector3(0,1,0),-floor)]);
+  const full=s.fullStation||s.level.id==='all',originY=this.data.originY??2550,extra=this.routeSource?.routeCuts?.[s.level.id]??this.data.routeCuts?.[s.level.id];const floor=full?-Infinity:(extra?.min??s.level.cutMin)-originY,ceiling=full?Infinity:(extra?.max??s.level.cutMax)-originY;s.setModelClipping(full?[]:[new THREE.Plane(new THREE.Vector3(0,-1,0),ceiling),new THREE.Plane(new THREE.Vector3(0,1,0),-floor)]);
   for(const mesh of s.staticMeshes){const b=mesh.userData.bounds;mesh.visible=!s.hiddenPackages?.has(mesh.userData.package)&&!mesh.userData.detachedAxis&&(!b||b.max[1]>=floor&&b.min[1]<=ceiling);}
   for(const p of this.parts)p.group.visible=full||!p.leg.schematic&&p.leg.level===s.level.id;this.leader.visible=this.planAnimationStarted()&&!this.current?.leg.schematic&&(full||this.current?.leg.level===s.level.id);
   s.markerGroup.visible=s.showMarkers!==false;for(const marker of s.markers)marker.visible=full||marker.userData.record.ifcStorey===s.level.ifc;
