@@ -1,12 +1,12 @@
-import {originalSheets} from './study-plan-originals.js?v=20261111-e08originals65';
+import {originalSheets} from './study-plan-originals.js?v=20261111-e08bici66';
 import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
-import {station,stations} from './study-stations.js?v=20261111-e08originals65';
+import {station,stations} from './study-stations.js?v=20261111-e08bici66';
 import {StationVideo} from './study-station-video.js?v=20261106-e04delivery52';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
 import {PlanViewer} from './study-plans.js?v=20261104-integrity45';
 import {StudyScene} from './study-scene.js?v=20261104-integrity45';
 import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261028-e01media23';
-import {RouteStudy} from './study-routes.js?v=20261111-e08originals65';
+import {RouteStudy} from './study-routes.js?v=20261111-e08bici66';
 import {SpaceStudy} from './study-spaces.js?v=20261109-e0708integration57';
 const $=s=>document.querySelector(s);
 const levels=station.levels;
@@ -247,3 +247,5 @@ async function loadRecoveredData(){
 }
 
 if(station.id==='E07'&&station.assets.routes){$('#routes-drawer h2').textContent='Recorridos · E07';$('#routes-drawer > p').textContent='BRT–Metro, Usuarios y PMR · recorridos sincronizados con el POV.';$('#routes-drawer .micro-note').textContent='Azul: BRT–Metro · Negro: Usuarios · Naranja: PMR.';}
+
+if(station.id==='E08'&&station.assets.routes){$('#routes-drawer h2').textContent='Recorridos · E08';$('#routes-drawer > p').textContent='Biciusuarios · recorrido negro sincronizado con BICI-EM8.';$('#routes-drawer .micro-note').textContent='PMR: video disponible; trazado En construcción.';}

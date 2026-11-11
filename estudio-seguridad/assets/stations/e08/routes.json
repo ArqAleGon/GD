@@ -1,0 +1,663 @@
+{
+  "station": "E08",
+  "revision": 66,
+  "unifiedPlans": true,
+  "originY": 2565.8454379361365,
+  "videoClockIn3D": true,
+  "hideSegments": true,
+  "videoManifestUrl": "./assets/videotours/manifest.json?v=20261111-e08videos64",
+  "pageByLevel": {
+    "1k3q6JTYT4Du6v6y0vI9q8": 1,
+    "1k3q6JTYT4Du6v6y0v3tWv": 2,
+    "1k3q6JTYT4Du6v6y0v38O3": 3,
+    "1k3q6JTYT4Du6v6y0v38PQ": 4
+  },
+  "sourceLabel": "E08 · BICI-EM8 · cinco referencias gráficas y video original",
+  "measurementNote": "Registro visual sobre plantas e IFC; distancias aproximadas. Cruce exterior anterior al ingreso fuera de las referencias. Escalera mecánica registrada en planta con cotas de Intermedio y Plataforma.",
+  "families": [
+    {
+      "id": "bici",
+      "label": "E08 · Biciusuarios",
+      "color": "#000000"
+    },
+    {
+      "id": "pmr",
+      "label": "E08 · PMR (Personas con movilidad reducida)",
+      "color": "#f58220"
+    }
+  ],
+  "routes": [
+    {
+      "id": "e08-bici-ingreso",
+      "family": "bici",
+      "level": "1k3q6JTYT4Du6v6y0v3tWv",
+      "label": "Ingreso sur · descenso al sótano",
+      "points": [
+        [
+          -30.55378519629856,
+          -10.11543793613555,
+          20.688774383259318
+        ],
+        [
+          -25.314663525309562,
+          -10.11543793613555,
+          12.520893024419077
+        ],
+        [
+          -22.216673461517825,
+          -10.42054886753378,
+          11.423486357106905
+        ],
+        [
+          4.881669053634016,
+          -14.203660201380826,
+          28.81549885998283
+        ],
+        [
+          5.908135480831871,
+          -14.203660201380826,
+          27.216170500507783
+        ]
+      ],
+      "color": "#000000",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e08-bici-validacion",
+      "family": "bici",
+      "level": "1k3q6JTYT4Du6v6y0vI9q8",
+      "label": "Sótano · validación de cicloparqueaderos",
+      "points": [
+        [
+          5.908135480831871,
+          -14.203660201380826,
+          27.216170500507783
+        ],
+        [
+          -10.08120321360892,
+          -16.369226825057396,
+          16.954038108796897
+        ],
+        [
+          -12.212201443891228,
+          -16.365437936135095,
+          14.856878741857257
+        ],
+        [
+          -4.884692657458399,
+          -16.365437936135095,
+          3.4260048379062695
+        ],
+        [
+          -2.9682672825451824,
+          -16.365437936135095,
+          0.4363916630267814
+        ]
+      ],
+      "color": "#000000",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e08-bici-escalera-ba",
+      "family": "bici",
+      "level": "1k3q6JTYT4Du6v6y0vI9q8",
+      "label": "Sótano · ascensor y ascenso por escalera a Acceso",
+      "points": [
+        [
+          -6.48545925299165,
+          -16.365437936135095,
+          -1.8182264251064024
+        ],
+        [
+          -9.191000958751456,
+          -16.365437936135095,
+          2.4024039394293464
+        ],
+        [
+          -12.884052527720236,
+          -16.365437936135095,
+          0.03505494688950051
+        ],
+        [
+          -13.753002456061656,
+          -16.346866507182696,
+          1.397056399365615
+        ],
+        [
+          -15.340609584367117,
+          -14.401152204821683,
+          3.871135355637278
+        ],
+        [
+          -14.907648011225648,
+          -14.401152204821683,
+          5.118318776434714
+        ],
+        [
+          -11.9630671831664,
+          -12.079723786662198,
+          7.018100404484826
+        ],
+        [
+          -10.720722550698946,
+          -12.079723786662198,
+          6.580758705428617
+        ],
+        [
+          -9.112956376238918,
+          -10.115437936137296,
+          4.106522965580642
+        ]
+      ],
+      "color": "#000000",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e08-bici-escalera-ai",
+      "family": "bici",
+      "level": "1k3q6JTYT4Du6v6y0v3tWv",
+      "label": "Acceso · ascenso por escalera a Intermedio",
+      "points": [
+        [
+          -9.112956376238918,
+          -10.115437936137296,
+          4.106522965580642
+        ],
+        [
+          -7.569684200065962,
+          -10.11543793613555,
+          1.1814634651308111
+        ],
+        [
+          -12.619960592968955,
+          -10.11543793613555,
+          -2.057818352034323
+        ],
+        [
+          -13.467772673161289,
+          -10.098693750898674,
+          -0.7135224029861112
+        ],
+        [
+          -11.952878793526269,
+          -8.878228616069391,
+          0.2589064234142845
+        ],
+        [
+          -15.531131479918264,
+          -8.878228616069391,
+          2.5013003191014516
+        ],
+        [
+          -14.01619357303873,
+          -7.4642750733600405,
+          3.4738177111183726
+        ],
+        [
+          -14.907648011147044,
+          -7.4642750733600405,
+          5.118318775038913
+        ],
+        [
+          -11.963067183245002,
+          -5.166600655864313,
+          7.018100405880625
+        ],
+        [
+          -10.912593271064539,
+          -5.166600655864313,
+          5.212153219506242
+        ],
+        [
+          -9.37479853962796,
+          -3.7526473515735415,
+          6.182054526080512
+        ],
+        [
+          -7.322916194572627,
+          -3.7526473515735415,
+          2.9684371951005164
+        ],
+        [
+          -8.837802158624022,
+          -2.515438031505182,
+          1.9960367413340245
+        ]
+      ],
+      "color": "#000000",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e08-bici-intermedio",
+      "family": "bici",
+      "level": "1k3q6JTYT4Du6v6y0v38O3",
+      "label": "Intermedio · validación Metro y escalera mecánica",
+      "points": [
+        [
+          -8.837802158624022,
+          -2.515438031505182,
+          1.9960367413340245
+        ],
+        [
+          -5.331720040810057,
+          -2.5154379361356405,
+          -3.465207481748874
+        ],
+        [
+          -10.1024005307439,
+          -2.5154379361356405,
+          -6.527172124493513
+        ],
+        [
+          -14.926684172250026,
+          -2.5154379361356405,
+          -9.62354086434762
+        ],
+        [
+          -20.555015087340504,
+          -2.5154379361356405,
+          -13.235971060844108
+        ],
+        [
+          -22.163109634509222,
+          -2.5154379361356405,
+          -14.268093974128803
+        ],
+        [
+          -24.84326721312373,
+          -2.5154379361356405,
+          -15.988298829603323
+        ],
+        [
+          -26.719377518153895,
+          -2.5154379361356405,
+          -17.192442228435482
+        ],
+        [
+          -30.15978722910291,
+          -2.5154379361356405,
+          -11.83212707120644
+        ],
+        [
+          -33.94423791114684,
+          -2.5154379361356405,
+          -5.935780398254507
+        ],
+        [
+          -31.53209609039378,
+          -2.5154379361356405,
+          -4.387596028327449
+        ],
+        [
+          -13.713706751596805,
+          6.974562063864596,
+          7.042453284466136
+        ]
+      ],
+      "color": "#000000",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e08-bici-plataforma",
+      "family": "bici",
+      "level": "1k3q6JTYT4Du6v6y0v38PQ",
+      "label": "Plataforma · puertas hacia Calle 72",
+      "points": [
+        [
+          -13.713706751596805,
+          6.974562063864596,
+          7.042453284466136
+        ],
+        [
+          -10.64328160886466,
+          6.974562063864596,
+          8.785346016058039
+        ],
+        [
+          -9.084887770710791,
+          6.974562063864596,
+          6.358183290449221
+        ],
+        [
+          -6.833874448933009,
+          6.974562063864596,
+          2.8522815756809248
+        ]
+      ],
+      "color": "#000000",
+      "directionFromAnimation": true
+    }
+  ],
+  "links": [],
+  "journeys": [
+    {
+      "id": "e08-bici-pov",
+      "family": "bici",
+      "label": "POV · Biciusuarios",
+      "legs": [
+        "e08-bici-ingreso",
+        "e08-bici-validacion",
+        "e08-bici-escalera-ba",
+        "e08-bici-escalera-ai",
+        "e08-bici-intermedio",
+        "e08-bici-plataforma"
+      ],
+      "note": "Ingreso sur, cicloparqueaderos, escaleras a Acceso e Intermedio y escalera mecánica hacia Plataforma. El corte del video entre validación y salida no dibuja un enlace ficticio.",
+      "videoSync": {
+        "videoId": "e08-bici-v64",
+        "duration": 120.704,
+        "keys": [
+          {
+            "time": 0,
+            "leg": "e08-bici-ingreso",
+            "fraction": 0.0
+          },
+          {
+            "time": 20,
+            "leg": "e08-bici-ingreso",
+            "fraction": 0.0
+          },
+          {
+            "time": 22,
+            "leg": "e08-bici-ingreso",
+            "fraction": 0.20504145217472494
+          },
+          {
+            "time": 24,
+            "leg": "e08-bici-ingreso",
+            "fraction": 0.2747866983415908
+          },
+          {
+            "time": 33,
+            "leg": "e08-bici-ingreso",
+            "fraction": 0.9598444906652778
+          },
+          {
+            "time": 35,
+            "leg": "e08-bici-ingreso",
+            "fraction": 1.0
+          },
+          {
+            "time": 35,
+            "leg": "e08-bici-validacion",
+            "fraction": 0.0
+          },
+          {
+            "time": 40,
+            "leg": "e08-bici-validacion",
+            "fraction": 0.48730201629807635
+          },
+          {
+            "time": 42,
+            "leg": "e08-bici-validacion",
+            "fraction": 0.563494110600845
+          },
+          {
+            "time": 44,
+            "leg": "e08-bici-validacion",
+            "fraction": 0.9095048765879798
+          },
+          {
+            "time": 47,
+            "leg": "e08-bici-validacion",
+            "fraction": 1.0
+          },
+          {
+            "time": 48,
+            "leg": "e08-bici-validacion",
+            "fraction": 1.0
+          },
+          {
+            "time": 48,
+            "leg": "e08-bici-escalera-ba",
+            "fraction": 0.0
+          },
+          {
+            "time": 50,
+            "leg": "e08-bici-escalera-ba",
+            "fraction": 0.20112605933831798
+          },
+          {
+            "time": 53,
+            "leg": "e08-bici-escalera-ba",
+            "fraction": 0.20112605933831798
+          },
+          {
+            "time": 55,
+            "leg": "e08-bici-escalera-ba",
+            "fraction": 0.3771113612593466
+          },
+          {
+            "time": 56,
+            "leg": "e08-bici-escalera-ba",
+            "fraction": 0.4419299279026446
+          },
+          {
+            "time": 57.0,
+            "leg": "e08-bici-escalera-ba",
+            "fraction": 0.4419299279026446
+          },
+          {
+            "time": 59.4074915495943,
+            "leg": "e08-bici-escalera-ba",
+            "fraction": 0.5833561366032617
+          },
+          {
+            "time": 60.309092181644054,
+            "leg": "e08-bici-escalera-ba",
+            "fraction": 0.6363199607854755
+          },
+          {
+            "time": 63.17972864460297,
+            "leg": "e08-bici-escalera-ba",
+            "fraction": 0.8049532552958729
+          },
+          {
+            "time": 64.0791969942994,
+            "leg": "e08-bici-escalera-ba",
+            "fraction": 0.8577918202184391
+          },
+          {
+            "time": 66.5,
+            "leg": "e08-bici-escalera-ba",
+            "fraction": 1.0
+          },
+          {
+            "time": 66.5,
+            "leg": "e08-bici-escalera-ai",
+            "fraction": 0.0
+          },
+          {
+            "time": 68,
+            "leg": "e08-bici-escalera-ai",
+            "fraction": 0.09178093024781636
+          },
+          {
+            "time": 69,
+            "leg": "e08-bici-escalera-ai",
+            "fraction": 0.25828729075819956
+          },
+          {
+            "time": 70,
+            "leg": "e08-bici-escalera-ai",
+            "fraction": 0.30239594793814417
+          },
+          {
+            "time": 70.2,
+            "leg": "e08-bici-escalera-ai",
+            "fraction": 0.30239594793814417
+          },
+          {
+            "time": 70.96137224826535,
+            "leg": "e08-bici-escalera-ai",
+            "fraction": 0.3627523531105703
+          },
+          {
+            "time": 72.43968601407423,
+            "leg": "e08-bici-escalera-ai",
+            "fraction": 0.4799429977977398
+          },
+          {
+            "time": 73.24105645559492,
+            "leg": "e08-bici-escalera-ai",
+            "fraction": 0.5434701872531305
+          },
+          {
+            "time": 73.89590443649281,
+            "leg": "e08-bici-escalera-ai",
+            "fraction": 0.5953820741802778
+          },
+          {
+            "time": 75.36285066332469,
+            "leg": "e08-bici-escalera-ai",
+            "fraction": 0.7116715778160474
+          },
+          {
+            "time": 76.09424746136409,
+            "leg": "e08-bici-escalera-ai",
+            "fraction": 0.7696517334952917
+          },
+          {
+            "time": 76.90054954179855,
+            "leg": "e08-bici-escalera-ai",
+            "fraction": 0.8335698696881304
+          },
+          {
+            "time": 78.23532927722658,
+            "leg": "e08-bici-escalera-ai",
+            "fraction": 0.9393821142386584
+          },
+          {
+            "time": 79.0,
+            "leg": "e08-bici-escalera-ai",
+            "fraction": 1.0
+          },
+          {
+            "time": 79,
+            "leg": "e08-bici-intermedio",
+            "fraction": 0.0
+          },
+          {
+            "time": 80,
+            "leg": "e08-bici-intermedio",
+            "fraction": 0.09096403213732568
+          },
+          {
+            "time": 81,
+            "leg": "e08-bici-intermedio",
+            "fraction": 0.17041993162893837
+          },
+          {
+            "time": 84,
+            "leg": "e08-bici-intermedio",
+            "fraction": 0.25076859403618695
+          },
+          {
+            "time": 88,
+            "leg": "e08-bici-intermedio",
+            "fraction": 0.34450870017797713
+          },
+          {
+            "time": 90,
+            "leg": "e08-bici-intermedio",
+            "fraction": 0.37129158764706005
+          },
+          {
+            "time": 92,
+            "leg": "e08-bici-intermedio",
+            "fraction": 0.41592973342886486
+          },
+          {
+            "time": 94,
+            "leg": "e08-bici-intermedio",
+            "fraction": 0.4471764354761283
+          },
+          {
+            "time": 96,
+            "leg": "e08-bici-intermedio",
+            "fraction": 0.536452727039738
+          },
+          {
+            "time": 100,
+            "leg": "e08-bici-intermedio",
+            "fraction": 0.6346566477597088
+          },
+          {
+            "time": 102,
+            "leg": "e08-bici-intermedio",
+            "fraction": 0.674830978963333
+          },
+          {
+            "time": 113.5,
+            "leg": "e08-bici-intermedio",
+            "fraction": 1.0
+          },
+          {
+            "time": 113.5,
+            "leg": "e08-bici-plataforma",
+            "fraction": 0.0
+          },
+          {
+            "time": 116,
+            "leg": "e08-bici-plataforma",
+            "fraction": 0.3336635027272203
+          },
+          {
+            "time": 117,
+            "leg": "e08-bici-plataforma",
+            "fraction": 0.6062557061569943
+          },
+          {
+            "time": 120,
+            "leg": "e08-bici-plataforma",
+            "fraction": 1.0
+          },
+          {
+            "time": 120.704,
+            "leg": "e08-bici-plataforma",
+            "fraction": 1.0
+          }
+        ],
+        "hiddenWindows": [
+          [
+            0,
+            20
+          ],
+          [
+            47.8,
+            48.5
+          ]
+        ],
+        "waitingLabel": "Cruce exterior / transición del video · fuera del tramo registrado",
+        "method": "Cinco imágenes registradas mediante puntos comunes; vuelos IFC para rampas y escaleras; hitos temporales de llegada, giros, pausas y cambios de nivel."
+      }
+    },
+    {
+      "id": "e08-pmr-pov",
+      "family": "pmr",
+      "label": "POV · PMR",
+      "legs": [],
+      "videoOnly": true,
+      "videoSync": {
+        "videoId": "e08-pmr-v64",
+        "duration": 80.384,
+        "keys": []
+      },
+      "note": "Video PMR disponible; trazado En construcción."
+    }
+  ],
+  "routeCuts": {
+    "1k3q6JTYT4Du6v6y0v3tWv": {
+      "min": 2551.3,
+      "max": 2563.4
+    },
+    "1k3q6JTYT4Du6v6y0vI9q8": {
+      "min": 2549.1,
+      "max": 2555.9
+    },
+    "1k3q6JTYT4Du6v6y0v38O3": {
+      "min": 2562.95,
+      "max": 2573.0
+    }
+  }
+}

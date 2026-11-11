@@ -67,3 +67,6 @@ for(const key of ['architecture','registration','spaces'])stations.E08.assets[ke
 // E08 embedded POV videos (64).
 stations.E08.povVideo={"title": "E08", "manifestUrl": "./assets/videotours/manifest.json?v=20261111-e08videos64", "videos": [{"id": "e08-bici-v64", "title": "E08 · Biciusuarios", "label": "Biciusuarios"}, {"id": "e08-pmr-v64", "title": "E08 · PMR (Personas con movilidad reducida)", "label": "PMR (Personas con movilidad reducida)"}]};
 stations.E08.description='Arquitectura, estructura e instalaciones; plantas, espacios y cámaras IFC vinculados. Videos Biciusuarios y PMR integrados. Trazados: En construcción.';
+
+stations.E08.assets.routes='./assets/stations/e08/routes.json?v=20261111-e08bici66';
+stations.E08.description='Plantas, espacios y cámaras IFC vinculados. Biciusuarios sincronizado con POV; PMR disponible en video, trazado En construcción.';
