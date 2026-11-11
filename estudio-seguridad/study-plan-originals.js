@@ -304,56 +304,69 @@ export const originalPlans={
   },
   "E08": {
     "1": {
-      "pdf": "./assets/plan-originals/e08/L1T1-0000-308-CON-ED-ARQ-PL-0022_V01-hoja-04-B.pdf",
+      "pdf": "./assets/plan-originals/e08/L1T1-0000-308-CON-ED-ARQ-PL-0022_04.pdf",
       "level": "Sótano",
       "code": "B",
       "building": "General",
-      "source": "PDFsam_ExtractL1T1-0000-308-CON-ED-ARQ-PL-0022_V01.pdf",
+      "source": "L1T1-0000-308-CON-ED-ARQ-PL-0022_04.pdf",
       "sourcePage": 1,
       "sheetNumber": 4,
       "pageCount": 1,
-      "sourceSha256": "b989d268612145fead5dee74f7d3fe2b73c4c008ef7cc9a37106fa52d9b34b62",
-      "sha256": "c5bcc8dafa141a0975896fae53a61e40f036ea72c20e68642306ba9c0a8ca996",
-      "renderIdentical": true
+      "sourceSha256": "c45fa23e08ea7ad2468741ae2bd181860debc0d0c685154669d96379fd9dcc77",
+      "sha256": "c45fa23e08ea7ad2468741ae2bd181860debc0d0c685154669d96379fd9dcc77",
+      "byteIdentical": true
     },
     "2": {
-      "pdf": "./assets/plan-originals/e08/L1T1-0000-308-CON-ED-ARQ-PL-0022_V01-hoja-05-A.pdf",
+      "pdf": "./assets/plan-originals/e08/L1T1-0000-308-CON-ED-ARQ-PL-0022_05.pdf",
       "level": "Acceso",
       "code": "A",
       "building": "General",
-      "source": "PDFsam_ExtractL1T1-0000-308-CON-ED-ARQ-PL-0022_V01.pdf",
-      "sourcePage": 2,
+      "source": "L1T1-0000-308-CON-ED-ARQ-PL-0022_05.pdf",
+      "sourcePage": 1,
       "sheetNumber": 5,
       "pageCount": 1,
-      "sourceSha256": "b989d268612145fead5dee74f7d3fe2b73c4c008ef7cc9a37106fa52d9b34b62",
-      "sha256": "f03f8971f6f4bf6334ae449bd986b373a03e193ed7d1e3f786693d437ea63ffd",
-      "renderIdentical": true
+      "sourceSha256": "0c092748016db16a1fbd571e581879dde984df8fc1016db47a7cf22e458bc89e",
+      "sha256": "0c092748016db16a1fbd571e581879dde984df8fc1016db47a7cf22e458bc89e",
+      "byteIdentical": true
     },
     "3": {
-      "pdf": "./assets/plan-originals/e08/L1T1-0000-308-CON-ED-ARQ-PL-0022_V01-hoja-06-I.pdf",
+      "pdf": "./assets/plan-originals/e08/L1T1-0000-308-CON-ED-ARQ-PL-0022_06.pdf",
       "level": "Intermedio",
       "code": "I",
       "building": "General",
-      "source": "PDFsam_ExtractL1T1-0000-308-CON-ED-ARQ-PL-0022_V01.pdf",
-      "sourcePage": 3,
+      "source": "L1T1-0000-308-CON-ED-ARQ-PL-0022_06.pdf",
+      "sourcePage": 1,
       "sheetNumber": 6,
       "pageCount": 1,
-      "sourceSha256": "b989d268612145fead5dee74f7d3fe2b73c4c008ef7cc9a37106fa52d9b34b62",
-      "sha256": "6b4636d9db4969b293a432e979072c640c7bcda9879eda984a935eae20043c92",
-      "renderIdentical": true
+      "sourceSha256": "eb7045576a93ad0b093865d931e7a596f8664f7fd4b7f71474212f8e83d24ea3",
+      "sha256": "eb7045576a93ad0b093865d931e7a596f8664f7fd4b7f71474212f8e83d24ea3",
+      "byteIdentical": true
     },
     "4": {
-      "pdf": "./assets/plan-originals/e08/L1T1-0000-308-CON-ED-ARQ-PL-0022_V01-hoja-07-P.pdf",
+      "pdf": "./assets/plan-originals/e08/L1T1-0000-308-CON-ED-ARQ-PL-0022_07.pdf",
       "level": "Plataforma",
       "code": "P",
       "building": "General",
-      "source": "PDFsam_ExtractL1T1-0000-308-CON-ED-ARQ-PL-0022_V01.pdf",
-      "sourcePage": 4,
+      "source": "L1T1-0000-308-CON-ED-ARQ-PL-0022_07.pdf",
+      "sourcePage": 1,
       "sheetNumber": 7,
       "pageCount": 1,
-      "sourceSha256": "b989d268612145fead5dee74f7d3fe2b73c4c008ef7cc9a37106fa52d9b34b62",
-      "sha256": "5cf17360878c04b13bea8f3221b2921556e025f9e22314de17c0dd53c9b4bdda",
-      "renderIdentical": true
+      "sourceSha256": "568540d63297a140e5070393d75bc07d524e4f2c73331d9a04fa1fd053b460df",
+      "sha256": "568540d63297a140e5070393d75bc07d524e4f2c73331d9a04fa1fd053b460df",
+      "byteIdentical": true
+    },
+    "5": {
+      "pdf": "./assets/plan-originals/e08/L1T1-0000-308-CON-ED-ARQ-PL-0022_08.pdf",
+      "level": "ARQ_PL_05_CUB_NVC",
+      "code": "C",
+      "building": "General",
+      "source": "L1T1-0000-308-CON-ED-ARQ-PL-0022_08.pdf",
+      "sourcePage": 1,
+      "sheetNumber": 8,
+      "pageCount": 1,
+      "sourceSha256": "c85e55c5a662019c7808a15570dfd4cfc78d121d2b90ae91180f88e3fd22e0ea",
+      "sha256": "c85e55c5a662019c7808a15570dfd4cfc78d121d2b90ae91180f88e3fd22e0ea",
+      "byteIdentical": true
     }
   },
   "E09": {

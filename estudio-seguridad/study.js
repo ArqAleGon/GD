@@ -1,12 +1,12 @@
-import {originalSheets} from './study-plan-originals.js?v=20261111-e08bici66';
+import {originalSheets} from './study-plan-originals.js?v=20261111-e08originals67';
 import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
-import {station,stations} from './study-stations.js?v=20261111-e08bici66';
+import {station,stations} from './study-stations.js?v=20261111-e08originals67';
 import {StationVideo} from './study-station-video.js?v=20261106-e04delivery52';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
 import {PlanViewer} from './study-plans.js?v=20261104-integrity45';
 import {StudyScene} from './study-scene.js?v=20261104-integrity45';
 import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261028-e01media23';
-import {RouteStudy} from './study-routes.js?v=20261111-e08bici66';
+import {RouteStudy} from './study-routes.js?v=20261111-e08originals67';
 import {SpaceStudy} from './study-spaces.js?v=20261109-e0708integration57';
 const $=s=>document.querySelector(s);
 const levels=station.levels;
@@ -109,7 +109,7 @@ for(const button of document.querySelectorAll('[data-toggle-cameras]'))button.ad
 });
 function svgElement(tag,attrs={}){const e=document.createElementNS('http://www.w3.org/2000/svg',tag);for(const [k,v] of Object.entries(attrs))e.setAttribute(k,v);return e;}
 function pagesForLevel(pages){return pages.filter(p=>level.id==='all'||!p.level||p.level===level.name).sort((a,b)=>Number(!a.level)-Number(!b.level));}
-function populateSheets(){const hasArchitecture=architecture.some(p=>p.level===level.name);$('#plan-kind option[value="architecture"]').disabled=false;if(!hasArchitecture&&inventory.length&&$('#plan-kind').value==='architecture'&&!station.modelOnly)$('#plan-kind').value='inventory';const pages=$('#plan-kind').value==='architecture'?architecture:inventory;const filtered=pagesForLevel(pages);options($('#plan-sheet'),filtered.map(p=>[p.page,p.label||`${p.level} · ${p.buildings?.length===1?p.buildings[0]:'Todas las edificaciones'}`]));if(!filtered.length)$('#plan-sheet').append(new Option('En construcción',''));$('#plan-sheet').disabled=!filtered.length;zoom=1;drawPlan();}
+function populateSheets(){const hasArchitecture=architecture.some(p=>p.level===level.name)||originalSheets(station.id,'architecture',undefined,level).length>0;$('#plan-kind option[value="architecture"]').disabled=false;if(!hasArchitecture&&inventory.length&&$('#plan-kind').value==='architecture'&&!station.modelOnly)$('#plan-kind').value='inventory';const pages=$('#plan-kind').value==='architecture'?architecture:inventory;const filtered=pagesForLevel(pages);options($('#plan-sheet'),filtered.map(p=>[p.page,p.label||`${p.level} · ${p.buildings?.length===1?p.buildings[0]:'Todas las edificaciones'}`]));if(!filtered.length)$('#plan-sheet').append(new Option('En construcción',''));$('#plan-sheet').disabled=!filtered.length;zoom=1;drawPlan();}
 function syncPlan(){
  if(routes?.active){routes.drawPlan();return;}
  const kind=$('#plan-kind').value,pages=(kind==='architecture'?architecture:inventory).filter(p=>p.level===level.name),current=Number($('#plan-sheet').value),preferred=planView.choosePage(kind,pages,active,current);
