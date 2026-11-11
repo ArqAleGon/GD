@@ -1,5 +1,5 @@
 {
-  "version": 58,
+  "version": 64,
   "videos": [
     {
       "id": "e09-ruta-1",
@@ -147,6 +147,20 @@
       "height": 1080,
       "fps": 30,
       "sourceUpdated": "2026-11-09"
+    },
+    {
+      "id": "e08-bici-v64",
+      "title": "E08 · Biciusuarios",
+      "file": "https://raw.githubusercontent.com/ArqAleGon/GD/36d8440419510b68dee4b28ee2fa65c83373045f/estudio-seguridad/assets/videotours/e08-bici-v64.mp4",
+      "duration": 120.7,
+      "sourceUpdated": "2026-11-11"
+    },
+    {
+      "id": "e08-pmr-v64",
+      "title": "E08 · PMR (Personas con movilidad reducida)",
+      "file": "https://raw.githubusercontent.com/ArqAleGon/GD/36d8440419510b68dee4b28ee2fa65c83373045f/estudio-seguridad/assets/videotours/e08-pmr-v64.mp4",
+      "duration": 80.37,
+      "sourceUpdated": "2026-11-11"
     }
   ]
 }
