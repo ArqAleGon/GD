@@ -70,3 +70,8 @@ stations.E08.description='Arquitectura, estructura e instalaciones; plantas, esp
 
 stations.E08.assets.routes='./assets/stations/e08/routes.json?v=20261111-e08pmr68';
 stations.E08.description='Plantas, espacios y cámaras IFC vinculados. Biciusuarios y PMR sincronizados con sus videos POV, plantas 2D y vistas 3D.';
+
+// E11 original POV media; spatial routes remain pending.
+stations.E11.povVideo={"title": "E11", "manifestUrl": "./assets/stations/e11/videos.json?v=20261112-e11-v51", "videos": [{"id": "e11-brt-original", "title": "E11 · BRT–EM11", "label": "BRT–EM11"}, {"id": "e11-bici-original", "title": "E11 · Biciusuarios", "label": "Biciusuarios"}, {"id": "e11-pmr-original", "title": "E11 · PMR", "label": "PMR"}]};
+
+stations.E11.modelManifest="./assets/stations/e11/recovered-models.json?v=20261112-e11-v51";

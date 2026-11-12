@@ -1,0 +1,33 @@
+{
+  "station": "E11",
+  "videos": [
+    {
+      "id": "e11-brt-original",
+      "title": "E11 · BRT–EM11",
+      "label": "BRT–EM11",
+      "file": "https://raw.githubusercontent.com/ArqAleGon/GD/e82f37e603bc8841be1343f7aeede1671dc8144f/estudio-seguridad/assets/videotours/e11-brt-v51.mp4",
+      "sha256": "fa27b41aee1608e26d6f249b178466a4477a47cc1b0afbe3a7bada608c23e1ef",
+      "bytes": 53547738,
+      "duration": 104.17
+    },
+    {
+      "id": "e11-bici-original",
+      "title": "E11 · Biciusuarios",
+      "label": "Biciusuarios",
+      "file": "https://raw.githubusercontent.com/ArqAleGon/GD/e82f37e603bc8841be1343f7aeede1671dc8144f/estudio-seguridad/assets/videotours/e11-bici-v51.mp4",
+      "sha256": "f1c317fa4a2b31a0b5cd315cd2399a0c20f039d2c4a7a2cac1b64d43b1112402",
+      "bytes": 58735932,
+      "duration": 119.72999999999999
+    },
+    {
+      "id": "e11-pmr-original",
+      "title": "E11 · PMR",
+      "label": "PMR",
+      "file": "https://raw.githubusercontent.com/ArqAleGon/GD/e82f37e603bc8841be1343f7aeede1671dc8144f/estudio-seguridad/assets/videotours/e11-pmr-v51.mp4",
+      "sha256": "72fa427e1bb6d34b1ee35e8da887cc48617064132caf3cf4891f188892e82607",
+      "bytes": 79921787,
+      "duration": 163.23
+    }
+  ],
+  "revision": 51
+}

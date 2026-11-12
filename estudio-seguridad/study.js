@@ -1,12 +1,12 @@
-import {originalSheets} from './study-plan-originals.js?v=20261111-e08pmr68';
+import {originalSheets} from './study-plan-originals.js?v=20261112-e11-v51';
 import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
-import {station,stations} from './study-stations.js?v=20261111-e08pmr68';
+import {station,stations} from './study-stations.js?v=20261112-e11-v51';
 import {StationVideo} from './study-station-video.js?v=20261106-e04delivery52';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
-import {PlanViewer} from './study-plans.js?v=20261111-e08pmr68';
+import {PlanViewer} from './study-plans.js?v=20261112-e11-v51';
 import {StudyScene} from './study-scene.js?v=20261104-integrity45';
 import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261028-e01media23';
-import {RouteStudy} from './study-routes.js?v=20261111-e08pmr68';
+import {RouteStudy} from './study-routes.js?v=20261112-e11-v51';
 import {SpaceStudy} from './study-spaces.js?v=20261109-e0708integration57';
 const $=s=>document.querySelector(s);
 const levels=station.levels;
@@ -232,7 +232,7 @@ async function loadRecoveredData(){
  $('#plan-kind option[value="architecture"]').textContent=station.assets.architecture?'Planta arquitectónica':'Planta arquitectónica · En construcción';if(!inventory.length)$('#plan-kind option[value="inventory"]').textContent='Inventario CCTV · En construcción';$('#type-legend').textContent='Arquitectura · estructura · instalaciones';
  if(station.assets.spaces){
   spacesData=await json(station.assets.spaces);
- }else if(['E03','E04'].includes(station.id)){
+ }else if(['E03','E04','E11'].includes(station.id)){
   try{areaRegister=new AreaRegister(await json('./assets/stations/'+station.id.toLowerCase()+'/area-register.json'));}
   catch(error){$('#spaces-summary').textContent='No se pudo cargar el cuadro de áreas';$('#spaces-source').textContent='Recarga para reintentar la consulta del registro PDF.';console.error(error);}
  }else{
