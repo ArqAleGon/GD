@@ -1,0 +1,33 @@
+{
+  "station": "E12",
+  "revision": 59,
+  "videos": [
+    {
+      "id": "e12-brt-v58",
+      "title": "E12 · BRT–EM12",
+      "label": "BRT–EM12",
+      "file": "e12-brt-v58.mp4",
+      "duration": 156.43,
+      "bytes": 80183598,
+      "sha256": "a852c73c972193d399d2f8d5454bd2a4a5740a19f694b4ce5df2c0a66bace833"
+    },
+    {
+      "id": "e12-bici-v58",
+      "title": "E12 · Biciusuarios",
+      "label": "Biciusuarios",
+      "file": "e12-bici-v58.mp4",
+      "duration": 197.23,
+      "bytes": 80706038,
+      "sha256": "33989196c415423d69e6eee88d7a5263d4792311795a9f85bcfd74fc2d6db424"
+    },
+    {
+      "id": "e12-pmr-v59",
+      "title": "E12 · PMR · TM–EM12",
+      "label": "PMR · TM–EM12",
+      "file": "e12-pmr-v59.mp4",
+      "duration": 187.1,
+      "bytes": 81593748,
+      "sha256": "5269893c61527fd21c36ebf5269487f0621c69de99e6d0cc507bdff239c4703e"
+    }
+  ]
+}
