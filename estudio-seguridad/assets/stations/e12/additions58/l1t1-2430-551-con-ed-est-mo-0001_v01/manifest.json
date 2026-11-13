@@ -1,0 +1,161 @@
+{
+  "station": "E12",
+  "source": "L1T1-2430-551-CON-ED-EST-MO-0001_V01.ifc",
+  "sourceSha256": "407876d72ff2908d1089c0cae8e97033e6196c7b16e30fb4e81520e5ec7d7f53",
+  "sourceSchema": "IFC2X3",
+  "converter": "IfcOpenShell 0.8.5",
+  "ifcLengthUnitToMetres": 1,
+  "files": [
+    {
+      "file": "e12-l1t1-2430-551-con-ed-est-mo-0001_v01-p001.glb.gz",
+      "source": "L1T1-2430-551-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E12",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "db2a5a17ef5ae0ab77990d060c78eac794b428d30906e78f7d018b2405b75c7b",
+      "compressedBytes": 1337489,
+      "boundsGltfMetres": {
+        "min": [
+          99688.60248714172,
+          2580.4500000053395,
+          -100877.58784995727
+        ],
+        "max": [
+          99790.27964527579,
+          2595.1390202758444,
+          -100775.86621805916
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e12-l1t1-2430-551-con-ed-est-mo-0001_v01-p002.glb.gz",
+      "source": "L1T1-2430-551-CON-ED-EST-MO-0001_V01.ifc",
+      "section": "E12",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 452,
+      "sha256": "e47581151f2b1cdaad5d6364ba467c2eee77712c6aa80eca3b800d77cf212ec2",
+      "compressedBytes": 1087190,
+      "boundsGltfMetres": {
+        "min": [
+          99713.45814430872,
+          2584.9599999999987,
+          -100878.40838568342
+        ],
+        "max": [
+          99785.63577281586,
+          2595.3410140125875,
+          -100781.13300287735
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    }
+  ],
+  "expectedRepresentedElements": 934,
+  "convertedElements": 952,
+  "renderableElements": 934,
+  "convertedOpeningElements": 18,
+  "cameraCandidates": 0,
+  "bounds": {
+    "min": [
+      99688.60248714172,
+      2580.4500000053395,
+      -100878.40838568342
+    ],
+    "max": [
+      99790.27964527579,
+      2595.3410140125875,
+      -100775.86621805916
+    ]
+  },
+  "audit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 5.317975226848404e-11,
+    "representedMissing": [],
+    "sourceWithoutGeometry": [
+      {
+        "ifcGlobalId": "25ejh6Q0f8ov78gTxpWA2l",
+        "ifcExpressId": 399431,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:3978341",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2430-551-CON-ED-EST-MO-0001_V01.ifc",
+        "ifcSection": "E12",
+        "discipline": "EST",
+        "ifcStorey": "ACCESO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "2GVDy8MXfE_ujKg38t8sPb",
+        "ifcExpressId": 400935,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:3981768",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2430-551-CON-ED-EST-MO-0001_V01.ifc",
+        "ifcSection": "E12",
+        "discipline": "EST",
+        "ifcStorey": "ACCESO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      }
+    ],
+    "overlapWithRecoveredStationMetres": [
+      82.2311779003503,
+      14.891014007248032,
+      43.6992435666034
+    ],
+    "triangles": 243557,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ],
+    "identicalIteratorShapesDeduplicated": 0
+  },
+  "seconds": 20.54,
+  "coordinateConvention": "glTF metres [IFC X, IFC Z, -IFC Y]; native placement preserved",
+  "simplification": false,
+  "nativeLevels": [
+    {
+      "id": "2AlXl2NCb2uxn_pgtpIt17",
+      "name": "PLANTA DE CIMENTACIÓN.",
+      "elevation": 2583.935599999999
+    },
+    {
+      "id": "2AlXl2NCb2uxn_pgtpJxaL",
+      "name": "ACCESO",
+      "elevation": 2585.365599999999
+    },
+    {
+      "id": "2AlXl2NCb2uxn_pgtpIt5U",
+      "name": "PLANTA DE CUBIERTA",
+      "elevation": 2586.41
+    },
+    {
+      "id": "2AlXl2NCb2uxn_pgtpJwjf",
+      "name": "NIVEL PLACA SUPERIOR",
+      "elevation": 2588.515599999999
+    },
+    {
+      "id": "2AlXl2NCb2uxn_pgtpIAUw",
+      "name": "ESCALERA T1",
+      "elevation": 2589.8390163693634
+    },
+    {
+      "id": "2AlXl2NCb2uxn_pgtpJqUS",
+      "name": "ESCALERA T2",
+      "elevation": 2590.6807602991407
+    },
+    {
+      "id": "2AlXl2NCb2uxn_pgtpJSyI",
+      "name": "PLANTA DE CUBIERTA BRT",
+      "elevation": 2593.637999999998
+    }
+  ]
+}

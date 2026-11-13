@@ -1,0 +1,221 @@
+{
+  "station": "E12",
+  "source": "L1T1-2430-551-CON-ED-ARQ-MO-0001_V00.ifc",
+  "sourceSha256": "a0a396e2663a016b24e823d1592b5f81a7522b1b23b24fa6568a60293e91f1f3",
+  "sourceSchema": "IFC2X3",
+  "converter": "IfcOpenShell 0.8.5",
+  "ifcLengthUnitToMetres": 1,
+  "files": [
+    {
+      "file": "e12-l1t1-2430-551-con-ed-arq-mo-0001_v00-p001.glb.gz",
+      "source": "L1T1-2430-551-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E12",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "fdabcca108b0fb8c177d3445324b5487fadbde96f649afb485cf03bc1df3ef79",
+      "compressedBytes": 4321116,
+      "boundsGltfMetres": {
+        "min": [
+          99689.43398857015,
+          2582.6436500027776,
+          -100860.6950131953
+        ],
+        "max": [
+          99772.65707359744,
+          2593.3052101135254,
+          -100774.35835119651
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e12-l1t1-2430-551-con-ed-arq-mo-0001_v00-p002.glb.gz",
+      "source": "L1T1-2430-551-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E12",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 45,
+      "sha256": "692542fc0ef1e216f122192c2172aedbf025807a5c60bae4993cb1664ead52c4",
+      "compressedBytes": 4419810,
+      "boundsGltfMetres": {
+        "min": [
+          99691.33416242876,
+          2582.6112011345367,
+          -100860.69502630761
+        ],
+        "max": [
+          99772.6569964489,
+          2591.8852110294274,
+          -100777.39234087749
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    }
+  ],
+  "expectedRepresentedElements": 400,
+  "convertedElements": 545,
+  "renderableElements": 400,
+  "convertedOpeningElements": 145,
+  "cameraCandidates": 0,
+  "bounds": {
+    "min": [
+      99689.43398857015,
+      2582.6112011345367,
+      -100860.69502630761
+    ],
+    "max": [
+      99772.65707359744,
+      2593.3052101135254,
+      -100774.35835119651
+    ]
+  },
+  "audit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 1.4551915228366852e-11,
+    "representedMissing": [],
+    "sourceWithoutGeometry": [
+      {
+        "ifcGlobalId": "3QP8GEPPjDzAa598t$E0_0",
+        "ifcExpressId": 1594278,
+        "ifcType": "IfcCurtainWall",
+        "ifcName": "Curtain Wall:ARC_CWA_STEEL_1.00x0.15m-Ø1/2”:2046030",
+        "ifcTypeName": "Curtain Wall:ARC_CWA_STEEL_1.00x0.15m-Ø1/2”",
+        "ifcSource": "L1T1-2430-551-CON-ED-ARQ-MO-0001_V00.ifc",
+        "ifcSection": "E12",
+        "discipline": "ARQ",
+        "ifcStorey": "ARQ_PL_00_PISO-CONEXION",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "3Xhga6i0z9$x9CWH$U4IIe",
+        "ifcExpressId": 663154,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:1798543",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2430-551-CON-ED-ARQ-MO-0001_V00.ifc",
+        "ifcSection": "E12",
+        "discipline": "ARQ",
+        "ifcStorey": "ARQ_PL_00_PISO-CONEXION",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "1QNSnPMDv7YBQd$uPXbx7B",
+        "ifcExpressId": 793544,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:1811254",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2430-551-CON-ED-ARQ-MO-0001_V00.ifc",
+        "ifcSection": "E12",
+        "discipline": "ARQ",
+        "ifcStorey": "ARQ_PL_00_PISO-CONEXION",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "1JEC5RLUz2aueU1HnGO9MI",
+        "ifcExpressId": 1686723,
+        "ifcType": "IfcElementAssembly",
+        "ifcName": "Specialty Equipment Assembly:UF6.27:2167679",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2430-551-CON-ED-ARQ-MO-0001_V00.ifc",
+        "ifcSection": "E12",
+        "discipline": "ARQ",
+        "ifcStorey": "ARQ_PL_00_STATION-BASEMENT",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "0o6iTabJv9c9HSWtrhHJk4",
+        "ifcExpressId": 1781771,
+        "ifcType": "IfcElementAssembly",
+        "ifcName": "Specialty Equipment Assembly:UF6.42:2217773",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2430-551-CON-ED-ARQ-MO-0001_V00.ifc",
+        "ifcSection": "E12",
+        "discipline": "ARQ",
+        "ifcStorey": "ARQ_PL_00_STATION-BASEMENT",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "0yxnSuEL98oPtmsIoY3D5c",
+        "ifcExpressId": 1965815,
+        "ifcType": "IfcElementAssembly",
+        "ifcName": "Doors Assembly:DO2.90:2685540",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2430-551-CON-ED-ARQ-MO-0001_V00.ifc",
+        "ifcSection": "E12",
+        "discipline": "ARQ",
+        "ifcStorey": "ARQ_PL_00_STATION-BASEMENT",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "1I4e0B07T1rx5MuJvPLd2j",
+        "ifcExpressId": 1965846,
+        "ifcType": "IfcElementAssembly",
+        "ifcName": "Doors Assembly:DO2.91:2685661",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2430-551-CON-ED-ARQ-MO-0001_V00.ifc",
+        "ifcSection": "E12",
+        "discipline": "ARQ",
+        "ifcStorey": "ARQ_PL_00_STATION-BASEMENT",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      }
+    ],
+    "overlapWithRecoveredStationMetres": [
+      81.39967647191952,
+      10.694008978988677,
+      45.20711042925541
+    ],
+    "triangles": 1327425,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ],
+    "identicalIteratorShapesDeduplicated": 0
+  },
+  "seconds": 59.71,
+  "coordinateConvention": "glTF metres [IFC X, IFC Z, -IFC Y]; native placement preserved",
+  "simplification": false,
+  "nativeLevels": [
+    {
+      "id": "0PH9yIopb8kB3L0GYmPj3n",
+      "name": "ARQ_PL_00_STATION-BASEMENT",
+      "elevation": 2582.75
+    },
+    {
+      "id": "0PH9yIopb8kB3L0GYmPnty",
+      "name": "ARQ_PL_00_PISO-CONEXION",
+      "elevation": 2585.203995741055
+    },
+    {
+      "id": "0PH9yIopb8kB3L0GYmOiDg",
+      "name": "ARQ_PL_01_ACCES_NORTH",
+      "elevation": 2586.3999999999983
+    },
+    {
+      "id": "0PH9yIopb8kB3L0GYmOMGR",
+      "name": "ARQ_PL_01_ESTRUCTURA",
+      "elevation": 2588.0189957410553
+    },
+    {
+      "id": "0PH9yIopb8kB3L0GYmPEGr",
+      "name": "ARQ_PL_01_ACCESS",
+      "elevation": 2589.5
+    },
+    {
+      "id": "0PH9yIopb8kB3L0GYmPZUC",
+      "name": "ARQ_PL_01_BRT-PLATFORM",
+      "elevation": 2590.005211253879
+    }
+  ]
+}

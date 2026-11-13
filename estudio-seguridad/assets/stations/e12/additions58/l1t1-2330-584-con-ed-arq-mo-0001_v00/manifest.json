@@ -1,0 +1,208 @@
+{
+  "station": "E12",
+  "source": "L1T1-2330-584-CON-ED-ARQ-MO-0001_V00.ifc",
+  "sourceSha256": "f49907be0d4f41594fbdf78e27dcac1de16150d53c67a0fb88d2c12786954463",
+  "sourceSchema": "IFC2X3",
+  "converter": "IfcOpenShell 0.8.5",
+  "ifcLengthUnitToMetres": 1,
+  "files": [
+    {
+      "file": "e12-l1t1-2330-584-con-ed-arq-mo-0001_v00-p001.glb.gz",
+      "source": "L1T1-2330-584-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E12",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "e96d3a6503966ee1a2eb85ea831d37530af12033691902c8bfcafccfbf084daa",
+      "compressedBytes": 1268420,
+      "boundsGltfMetres": {
+        "min": [
+          99630.72437097364,
+          2588.57375,
+          -100964.63412953647
+        ],
+        "max": [
+          99846.38572105522,
+          2596.2135427868366,
+          -100669.929824294
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e12-l1t1-2330-584-con-ed-arq-mo-0001_v00-p002.glb.gz",
+      "source": "L1T1-2330-584-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E12",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "fec9a506bbc2c020a14b39d10dced6f4e5f00f989669888ba94a9a1aa4379ad1",
+      "compressedBytes": 180976,
+      "boundsGltfMetres": {
+        "min": [
+          99632.7886504868,
+          2592.8398868836384,
+          -100953.07774882496
+        ],
+        "max": [
+          99837.99384875392,
+          2596.2181034279047,
+          -100671.43723601373
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e12-l1t1-2330-584-con-ed-arq-mo-0001_v00-p003.glb.gz",
+      "source": "L1T1-2330-584-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E12",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "f10fb76537ea2f77c2a389225b7a3dda23ae543d4df693a51fcc770849bf4921",
+      "compressedBytes": 6456748,
+      "boundsGltfMetres": {
+        "min": [
+          99627.26006972551,
+          2587.7224060344697,
+          -100971.69214678198
+        ],
+        "max": [
+          99851.66744782832,
+          2596.2517859975464,
+          -100664.27032344189
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e12-l1t1-2330-584-con-ed-arq-mo-0001_v00-p004.glb.gz",
+      "source": "L1T1-2330-584-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E12",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "dee6a52bdf284577e50335f7808b6291cc05e88ae753dbf4b60127fc7714b917",
+      "compressedBytes": 4872322,
+      "boundsGltfMetres": {
+        "min": [
+          99632.51692983975,
+          2587.7177499999993,
+          -100964.18877892705
+        ],
+        "max": [
+          99846.43510726122,
+          2596.4818048387997,
+          -100671.74501471307
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e12-l1t1-2330-584-con-ed-arq-mo-0001_v00-p005.glb.gz",
+      "source": "L1T1-2330-584-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E12",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 492,
+      "sha256": "7a9b22acfab42eb21a03fb30545b0c2f89600e510cc9af69c4cbe5f0b0212bb9",
+      "compressedBytes": 2182605,
+      "boundsGltfMetres": {
+        "min": [
+          99624.87842419733,
+          2587.611887568278,
+          -100980.0530913885
+        ],
+        "max": [
+          99857.55431861094,
+          2595.903471432066,
+          -100659.52578940072
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    }
+  ],
+  "expectedRepresentedElements": 2302,
+  "convertedElements": 2492,
+  "renderableElements": 2302,
+  "convertedOpeningElements": 190,
+  "cameraCandidates": 0,
+  "bounds": {
+    "min": [
+      99624.87842419733,
+      2587.611887568278,
+      -100980.0530913885
+    ],
+    "max": [
+      99857.55431861094,
+      2596.4818048387997,
+      -100659.52578940072
+    ]
+  },
+  "audit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 1.4551915228366852e-11,
+    "representedMissing": [],
+    "sourceWithoutGeometry": [],
+    "overlapWithRecoveredStationMetres": [
+      145.95524084473436,
+      8.86991727052191,
+      160.03967222504434
+    ],
+    "triangles": 16727195,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ],
+    "identicalIteratorShapesDeduplicated": 0
+  },
+  "seconds": 87.72,
+  "coordinateConvention": "glTF metres [IFC X, IFC Z, -IFC Y]; native placement preserved",
+  "simplification": false,
+  "nativeLevels": [
+    {
+      "id": "1Ynt6zKbrAwwgLWDqlrWYr",
+      "name": "ARC_PL_01_ACCESS",
+      "elevation": 2590.255
+    },
+    {
+      "id": "1Ynt6zKbrAwwgLWDql_TTp",
+      "name": "ARC_PL_00_FOUNDATION",
+      "elevation": 2587.8050000000003
+    },
+    {
+      "id": "1Ynt6zKbrAwwgLWDql_Yww",
+      "name": "ARC_PL_01_BRT_RACK",
+      "elevation": 2589.355
+    },
+    {
+      "id": "1Ynt6zKbrAwwgLWDql_ECC",
+      "name": "ARC_PL_01.1_MEDIAN",
+      "elevation": 2589.505
+    },
+    {
+      "id": "1Ynt6zKbrAwwgLWDql_T20",
+      "name": "ARC_PL_02_BRT_PLATFORM",
+      "elevation": 2590.255
+    },
+    {
+      "id": "1Ynt6zKbrAwwgLWDql_KQM",
+      "name": "ARC_PL_03.1_BRT_TECHNICAL_ROOF",
+      "elevation": 2593.01
+    },
+    {
+      "id": "1Ynt6zKbrAwwgLWDql_TSt",
+      "name": "ARC_PL_03_BRT_ROOF",
+      "elevation": 2593.638
+    },
+    {
+      "id": "1Ynt6zKbrAwwgLWDql_T3P",
+      "name": "ARC_PL_04_PLATFORM",
+      "elevation": 2603.955
+    }
+  ]
+}
