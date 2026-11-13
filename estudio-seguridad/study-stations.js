@@ -74,11 +74,13 @@ stations.E08.description='Plantas, espacios y cámaras IFC vinculados. Biciusuar
 // E11 original POV media; spatial routes remain pending.
 stations.E11.povVideo={"title": "E11", "manifestUrl": "./assets/stations/e11/videos.json?v=20261112-e11-v51", "videos": [{"id": "e11-brt-original", "title": "E11 · BRT–EM11", "label": "BRT–EM11"}, {"id": "e11-bici-original", "title": "E11 · Biciusuarios", "label": "Biciusuarios"}, {"id": "e11-pmr-original", "title": "E11 · PMR", "label": "PMR"}]};
 
-stations.E11.modelManifest="./assets/stations/e11/recovered-models.json?v=20261113-e11cctv54";
+stations.E11.modelManifest="./assets/stations/e11/recovered-models.json?v=20261113-e11bici55";
 // E11 uses the existing shared space controls and level-specific original sheets.
-for(const key of ['architecture','registration','spaces'])stations.E11.assets[key]='./assets/stations/e11/'+(key==='registration'?'plan-registration':key)+'.json?v=20261113-e11cctv54';
-stations.E11.description='Modelos, cámaras IFC y videos POV incorporados. Plantas, colores, etiquetas y áreas vinculados al PDF arquitectónico V01. Cuatro ubicaciones de espacios y trazados de videorrecorridos: En construcción.';
+for(const key of ['architecture','registration','spaces'])stations.E11.assets[key]='./assets/stations/e11/'+(key==='registration'?'plan-registration':key)+'.json?v=20261113-e11bici55';
+stations.E11.description='Modelos, cámaras IFC y videos POV incorporados. Plantas, colores, etiquetas y áreas vinculados al PDF arquitectónico V01. Biciusuarios sincronizado con EM11-BICI. Cuatro ubicaciones de espacios y trazados BRT y PMR: En construcción.';
 
 stations.E11.sourceCount=9;
 
-stations.E11.assets.inventory='./assets/stations/e11/inventory.json?v=20261113-e11cctv54';
+stations.E11.assets.inventory='./assets/stations/e11/inventory.json?v=20261113-e11bici55';
+
+stations.E11.assets.routes='./assets/stations/e11/routes.json?v=20261113-e11bici55';
