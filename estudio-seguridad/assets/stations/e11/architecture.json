@@ -1,0 +1,52 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "level": "Sótano",
+      "levelId": "2SCB_wEvLD9uWO8$uQSWQR",
+      "label": "Sótano · E11 · Calle 1",
+      "imageUrl": "./assets/stations/e11/architecture/B.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/plan-originals/e11/PDFsam_ExtractL1T1-0000-311-CON-ED-ARQ-PL-0001_V01-pagina-01-B.pdf",
+      "source": "PLANO SOTANO E11 A.pdf",
+      "sourceSha256": "47162fd6003da24c649ef92d76023c84d64c5ab85be6bfd0a2a26806b21c0bb5"
+    },
+    {
+      "page": 2,
+      "level": "Acceso",
+      "levelId": "1ZvOeQwd10lPlZWEpLLxYV",
+      "label": "Acceso · E11 · Calle 1",
+      "imageUrl": "./assets/stations/e11/architecture/A.jpg",
+      "width": 2760,
+      "height": 2010,
+      "pdf": "./assets/plan-originals/e11/PDFsam_ExtractL1T1-0000-311-CON-ED-ARQ-PL-0001_V01-pagina-02-A.pdf",
+      "source": "PDFsam_ExtractL1T1-0000-311-CON-ED-ARQ-PL-0001_V01.pdf",
+      "sourceSha256": "398e6a6193265215e233d122d9a19fb775b4962eb418b477bffcbec5db8d7784"
+    },
+    {
+      "page": 3,
+      "level": "Intermedio",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · E11 · Calle 1",
+      "imageUrl": "./assets/stations/e11/architecture/I.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/plan-originals/e11/PDFsam_ExtractL1T1-0000-311-CON-ED-ARQ-PL-0001_V01-pagina-03-I.pdf",
+      "source": "PLANO INT E11 A.pdf",
+      "sourceSha256": "dc92df6d85250863c3ee7da751db937be7e4c9ce474ba7859de095607d72c835"
+    },
+    {
+      "page": 4,
+      "level": "Plataforma",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · E11 · Calle 1",
+      "imageUrl": "./assets/stations/e11/architecture/P.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/plan-originals/e11/PDFsam_ExtractL1T1-0000-311-CON-ED-ARQ-PL-0001_V01-pagina-04-P.pdf",
+      "source": "PLANO PLA E11 A.pdf",
+      "sourceSha256": "b99f8911ea8ab36dd18332041f96ccf4aacefef122e7e36c4b160270c9036de5"
+    }
+  ]
+}

@@ -1,0 +1,102 @@
+{
+  "originIfc": [
+    98958.5977685076,
+    99787.75553530248,
+    2584.7448500049095
+  ],
+  "architecture": {
+    "1": {
+      "matrix": [
+        [
+          27.10600262128688,
+          32.311315428926385,
+          2930.636473157857
+        ],
+        [
+          32.311315428926385,
+          -27.10600262128688,
+          3512.9760134205935
+        ]
+      ],
+      "crop": [
+        0,
+        0,
+        6000,
+        4243
+      ],
+      "rotation": 90,
+      "status": "Registro visual de muros y ejes PDF–IFC · E11",
+      "method": "Muros de geometría procesada y planta técnica V01; colores proyectados por nivel"
+    },
+    "2": {
+      "matrix": [
+        [
+          9.993740361601471,
+          11.910075979392312,
+          1400.3529
+        ],
+        [
+          11.910075979392312,
+          -9.993740361601471,
+          872.1133250000001
+        ]
+      ],
+      "crop": [
+        0,
+        0,
+        2760,
+        2010
+      ],
+      "rotation": 90,
+      "status": "Registro visual de muros y ejes PDF–IFC · E11",
+      "method": "Muros de geometría procesada y planta técnica V01; colores proyectados por nivel"
+    },
+    "3": {
+      "matrix": [
+        [
+          20.96233249699055,
+          24.97397661588343,
+          2972.9186788782454
+        ],
+        [
+          24.97397661588343,
+          -20.96233249699055,
+          1932.5764569158835
+        ]
+      ],
+      "crop": [
+        0,
+        0,
+        6000,
+        4243
+      ],
+      "rotation": 90,
+      "status": "Registro visual de muros y ejes PDF–IFC · E11",
+      "method": "Muros de geometría procesada y planta técnica V01; colores proyectados por nivel"
+    },
+    "4": {
+      "matrix": [
+        [
+          20.8431061551646,
+          24.82268528306384,
+          3106.3139379190034
+        ],
+        [
+          24.82268528306384,
+          -20.843106155164598,
+          1843.5912159039808
+        ]
+      ],
+      "crop": [
+        0,
+        0,
+        6000,
+        4243
+      ],
+      "rotation": 90,
+      "status": "Registro visual de muros y ejes PDF–IFC · E11",
+      "method": "Muros de geometría procesada y planta técnica V01; colores proyectados por nivel"
+    }
+  },
+  "inventory": {}
+}

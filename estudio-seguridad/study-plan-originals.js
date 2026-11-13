@@ -513,52 +513,88 @@ export const originalPlans={
   },
   "E11": {
     "1": {
-      "pdf": "./assets/plan-originals/e11/L1T1-0000-311-CON-ED-ARQ-PL-0001_V01-hoja-05-B.pdf",
+      "pdf": "./assets/plan-originals/e11/PDFsam_ExtractL1T1-0000-311-CON-ED-ARQ-PL-0001_V01-pagina-01-B.pdf",
       "level": "Sótano",
       "code": "B",
       "building": "General",
-      "source": "L1T1-0000-311-CON-ED-ARQ-PL-0001_V01.pdf",
-      "sourcePage": 5,
-      "sheetNumber": 5,
+      "source": "PDFsam_ExtractL1T1-0000-311-CON-ED-ARQ-PL-0001_V01.pdf",
+      "sourcePage": 1,
       "pageCount": 1,
-      "sourceSha256": "d4eb1c9d1af11755b9624c6156028f5824841718e7abdf9bbf662c72bfb02038",
-      "sha256": "158bddc8cc649007e6dd1f9e406760bd52da9b9cbff875c2513776f718ddd50c"
+      "sourceSha256": "398e6a6193265215e233d122d9a19fb775b4962eb418b477bffcbec5db8d7784",
+      "sha256": "9f28077a4e01d775fdb08aa9b07e1f445464545dee662995793b6661936b2fac",
+      "renderIdentical": true
     },
     "2": {
-      "pdf": "./assets/plan-originals/e11/L1T1-0000-311-CON-ED-ARQ-PL-0001_V01-hoja-06-A.pdf",
+      "pdf": "./assets/plan-originals/e11/PDFsam_ExtractL1T1-0000-311-CON-ED-ARQ-PL-0001_V01-pagina-02-A.pdf",
       "level": "Acceso",
       "code": "A",
       "building": "General",
-      "source": "L1T1-0000-311-CON-ED-ARQ-PL-0001_V01.pdf",
-      "sourcePage": 6,
-      "sheetNumber": 6,
+      "source": "PDFsam_ExtractL1T1-0000-311-CON-ED-ARQ-PL-0001_V01.pdf",
+      "sourcePage": 2,
       "pageCount": 1,
-      "sourceSha256": "d4eb1c9d1af11755b9624c6156028f5824841718e7abdf9bbf662c72bfb02038",
-      "sha256": "37c2b30c84d63d077d50c92002b3f982719a427918becade746687a2345c4ac7"
+      "sourceSha256": "398e6a6193265215e233d122d9a19fb775b4962eb418b477bffcbec5db8d7784",
+      "sha256": "8d1d767a54d4d4750dfc8f5f8496eb4e1a0e2a702ea16138fb8266e59de0cf7b",
+      "renderIdentical": true
     },
     "3": {
-      "pdf": "./assets/plan-originals/e11/L1T1-0000-311-CON-ED-ARQ-PL-0001_V01-hoja-07-I.pdf",
+      "pdf": "./assets/plan-originals/e11/PDFsam_ExtractL1T1-0000-311-CON-ED-ARQ-PL-0001_V01-pagina-03-I.pdf",
       "level": "Intermedio",
       "code": "I",
       "building": "General",
-      "source": "L1T1-0000-311-CON-ED-ARQ-PL-0001_V01.pdf",
-      "sourcePage": 7,
-      "sheetNumber": 7,
+      "source": "PDFsam_ExtractL1T1-0000-311-CON-ED-ARQ-PL-0001_V01.pdf",
+      "sourcePage": 3,
       "pageCount": 1,
-      "sourceSha256": "d4eb1c9d1af11755b9624c6156028f5824841718e7abdf9bbf662c72bfb02038",
-      "sha256": "849b20ce940bc593bd6c6a334a092b52ef96fb959755176c345a16a423e5db14"
+      "sourceSha256": "398e6a6193265215e233d122d9a19fb775b4962eb418b477bffcbec5db8d7784",
+      "sha256": "259fc2ce7cef91414200a1d43121bea669dfdae7d6e53627b41a702aeb273eb4",
+      "renderIdentical": true
     },
     "4": {
-      "pdf": "./assets/plan-originals/e11/L1T1-0000-311-CON-ED-ARQ-PL-0001_V01-hoja-08-P.pdf",
+      "pdf": "./assets/plan-originals/e11/PDFsam_ExtractL1T1-0000-311-CON-ED-ARQ-PL-0001_V01-pagina-04-P.pdf",
       "level": "Plataforma",
       "code": "P",
       "building": "General",
-      "source": "L1T1-0000-311-CON-ED-ARQ-PL-0001_V01.pdf",
-      "sourcePage": 8,
-      "sheetNumber": 8,
+      "source": "PDFsam_ExtractL1T1-0000-311-CON-ED-ARQ-PL-0001_V01.pdf",
+      "sourcePage": 4,
       "pageCount": 1,
-      "sourceSha256": "d4eb1c9d1af11755b9624c6156028f5824841718e7abdf9bbf662c72bfb02038",
-      "sha256": "7673d6b6c46d67b2d360301a2c5995dec0fac80c3d1e911187ae3ad6ce646bdf"
+      "sourceSha256": "398e6a6193265215e233d122d9a19fb775b4962eb418b477bffcbec5db8d7784",
+      "sha256": "f790092a5d79a355ebe0ebff9efbc47ee5ff249a994c3627bfd835c4f85d3566",
+      "renderIdentical": true
+    },
+    "5": {
+      "pdf": "./assets/plan-originals/e11/PDFsam_ExtractL1T1-0000-311-CON-ED-ARQ-PL-0001_V01-pagina-05-C.pdf",
+      "level": "ARQ_PL_04_CUB_EDIFICACIONES",
+      "code": "C",
+      "building": "General",
+      "source": "PDFsam_ExtractL1T1-0000-311-CON-ED-ARQ-PL-0001_V01.pdf",
+      "sourcePage": 5,
+      "pageCount": 1,
+      "sourceSha256": "398e6a6193265215e233d122d9a19fb775b4962eb418b477bffcbec5db8d7784",
+      "sha256": "42161c6a149104b119dc0127bcd45d26f6e381d753d7bbf43e15cdcc57d428f1",
+      "renderIdentical": true
+    },
+    "6": {
+      "pdf": "./assets/plan-originals/e11/PDFsam_ExtractL1T1-0000-311-CON-ED-ARQ-PL-0001_V01-pagina-05-C.pdf",
+      "level": "ARQ_PL_04.1_CUB_NVC",
+      "code": "C",
+      "building": "General",
+      "source": "PDFsam_ExtractL1T1-0000-311-CON-ED-ARQ-PL-0001_V01.pdf",
+      "sourcePage": 5,
+      "pageCount": 1,
+      "sourceSha256": "398e6a6193265215e233d122d9a19fb775b4962eb418b477bffcbec5db8d7784",
+      "sha256": "42161c6a149104b119dc0127bcd45d26f6e381d753d7bbf43e15cdcc57d428f1",
+      "renderIdentical": true
+    },
+    "7": {
+      "pdf": "./assets/plan-originals/e11/PDFsam_ExtractL1T1-0000-311-CON-ED-ARQ-PL-0001_V01-pagina-05-C.pdf",
+      "level": "ARQ_PL_05_CUB_NVC",
+      "code": "C",
+      "building": "General",
+      "source": "PDFsam_ExtractL1T1-0000-311-CON-ED-ARQ-PL-0001_V01.pdf",
+      "sourcePage": 5,
+      "pageCount": 1,
+      "sourceSha256": "398e6a6193265215e233d122d9a19fb775b4962eb418b477bffcbec5db8d7784",
+      "sha256": "42161c6a149104b119dc0127bcd45d26f6e381d753d7bbf43e15cdcc57d428f1",
+      "renderIdentical": true
     }
   },
   "E12": {
