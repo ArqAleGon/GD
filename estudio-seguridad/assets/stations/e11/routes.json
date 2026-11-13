@@ -1,6 +1,6 @@
 {
   "station": "E11",
-  "revision": 55,
+  "revision": 56,
   "unifiedPlans": true,
   "originY": 2584.7448500049095,
   "videoClockIn3D": true,
@@ -12,8 +12,8 @@
     "2SCB_wEvLD9uWO8$uQSW5e": 3,
     "2SCB_wEvLD9uWO8$uQSW4n": 4
   },
-  "sourceLabel": "EM11-BICI · cuatro referencias del usuario y video POV",
-  "measurementNote": "Registro visual de planos y modelo IFC; distancias aproximadas. El cambio de ascensor entre 1:02 y 1:04 corresponde a una transición editada del video.",
+  "sourceLabel": "E11 · EM11-BICI y EM11-PMR · referencias gráficas y videos POV",
+  "measurementNote": "Registro visual de planos e IFC; distancias aproximadas. Enlaces de ascensor esquemáticos vinculados a los cambios de nivel del video.",
   "families": [
     {
       "id": "bici",
@@ -330,6 +330,299 @@
       ],
       "color": "#000000",
       "directionFromAnimation": true
+    },
+    {
+      "id": "e11-pmr-a",
+      "family": "pmr",
+      "level": "1ZvOeQwd10lPlZWEpLLxYV",
+      "label": "Acceso · ingreso desde calle 3",
+      "points": [
+        [
+          44.600811344425836,
+          -9.264850004910386,
+          2.899430663840146
+        ],
+        [
+          49.331446705299754,
+          -9.264850004910386,
+          6.868432350662179
+        ],
+        [
+          54.06208206617367,
+          -9.264850004910386,
+          10.837434037484218
+        ],
+        [
+          60.566705687375304,
+          -9.264850004910386,
+          16.2948113568645
+        ],
+        [
+          62.57722571574672,
+          -9.264850004910386,
+          17.981637073763864
+        ],
+        [
+          64.95862672783994,
+          -9.264850004910386,
+          15.143255857239517
+        ]
+      ],
+      "color": "#f58220",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e11-pmr-lift1",
+      "family": "pmr",
+      "level": "1ZvOeQwd10lPlZWEpLLxYV",
+      "label": "Ascensor · Acceso a Intermedio",
+      "points": [
+        [
+          64.95862672783994,
+          -9.264850004910386,
+          15.143255857239517
+        ],
+        [
+          64.95862672783994,
+          -2.6648500049095674,
+          15.143255857239517
+        ]
+      ],
+      "color": "#f58220",
+      "directionFromAnimation": true,
+      "connectionType": "elevator",
+      "schematic": true,
+      "fromLevel": "Acceso",
+      "toLevel": "Intermedio"
+    },
+    {
+      "id": "e11-pmr-i",
+      "family": "pmr",
+      "level": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · validación y pasarela hacia Gibraltar",
+      "points": [
+        [
+          64.95862672783994,
+          -2.6648500049095674,
+          15.143255857239517
+        ],
+        [
+          63.34973008039471,
+          -2.6648500049113863,
+          13.74434730596169
+        ],
+        [
+          60.14768211757776,
+          -2.6648500049113863,
+          17.560084135276554
+        ],
+        [
+          55.98506012196155,
+          -2.6648500049113863,
+          14.066940903112595
+        ],
+        [
+          48.513614875388654,
+          -2.6648500049113863,
+          22.97032683818061
+        ],
+        [
+          42.012487193305745,
+          -2.6648500049113863,
+          30.717428885577455
+        ],
+        [
+          41.862067792786874,
+          -2.6648500049113863,
+          35.12345344330313
+        ],
+        [
+          38.46595631707193,
+          -2.6648500049113863,
+          39.17044705015223
+        ],
+        [
+          37.49563875258194,
+          -2.6648500049113863,
+          40.3267309378234
+        ],
+        [
+          34.25804386710264,
+          -2.6648500049113863,
+          37.60984175725143
+        ],
+        [
+          31.34709117363269,
+          -2.6648500049113863,
+          41.07869342026494
+        ],
+        [
+          29.406456044652714,
+          -2.6648500049113863,
+          43.391261195607285
+        ],
+        [
+          23.584550657712782,
+          -2.6648500049113863,
+          50.328964521634305
+        ],
+        [
+          17.762645270772865,
+          -2.6648500049113863,
+          57.26666784766133
+        ],
+        [
+          4.263975770850166,
+          -2.6648500049113863,
+          59.73281318731761
+        ],
+        [
+          -2.591243836187573,
+          -2.6648500049113863,
+          52.403690151546755
+        ],
+        [
+          -11.643402829800536,
+          -2.6648500049113863,
+          43.23096374324493
+        ],
+        [
+          -19.442246179293335,
+          -2.6648500049113863,
+          34.91292651066597
+        ],
+        [
+          -25.700727210177362,
+          -2.6648500049113863,
+          28.281622402356223
+        ],
+        [
+          -33.111443533874166,
+          -2.6648500049113863,
+          19.5010716147088
+        ],
+        [
+          -39.865582789604495,
+          -2.6648500049113863,
+          10.877391075323134
+        ],
+        [
+          -37.43978887837953,
+          -2.6648500049113863,
+          7.986681356145205
+        ],
+        [
+          -33.558518620419584,
+          -2.6648500049113863,
+          3.3615458054605227
+        ],
+        [
+          -29.09265557088115,
+          -2.6648500049113863,
+          2.971016526780037
+        ],
+        [
+          -22.397464375900242,
+          -2.6648500049113863,
+          -5.007342298151041
+        ],
+        [
+          -16.187431963164315,
+          -2.6648500049113863,
+          -12.407559179246533
+        ],
+        [
+          -22.77825012289,
+          -2.6648500049113863,
+          -17.93836929683946
+        ],
+        [
+          -18.60588459558305,
+          -2.6648500049113863,
+          -22.9103900138255
+        ]
+      ],
+      "color": "#f58220",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e11-pmr-lift2",
+      "family": "pmr",
+      "level": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Ascensor · Intermedio a Plataforma",
+      "points": [
+        [
+          -18.60588459558305,
+          -2.6648500049113863,
+          -22.9103900138255
+        ],
+        [
+          -18.60588459558305,
+          6.075149995090669,
+          -22.9103900138255
+        ]
+      ],
+      "color": "#f58220",
+      "directionFromAnimation": true,
+      "connectionType": "elevator",
+      "schematic": true,
+      "fromLevel": "Intermedio",
+      "toLevel": "Plataforma"
+    },
+    {
+      "id": "e11-pmr-p",
+      "family": "pmr",
+      "level": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · pasarela y puertas hacia Gibraltar",
+      "points": [
+        [
+          -18.60588459558305,
+          6.075149995090669,
+          -22.9103900138255
+        ],
+        [
+          -20.64135874620692,
+          6.07514999508885,
+          -20.58120846105257
+        ],
+        [
+          -25.018662122235796,
+          6.07514999508885,
+          -15.364235823696013
+        ],
+        [
+          -31.633253890457226,
+          6.07514999508885,
+          -7.480810505023889
+        ],
+        [
+          -26.184415802551484,
+          6.07514999508885,
+          -2.908960312282609
+        ],
+        [
+          -19.400362962105845,
+          6.07514999508885,
+          2.1905523798406747
+        ],
+        [
+          -11.187798784528354,
+          6.07514999508885,
+          8.883758239499905
+        ],
+        [
+          -8.289480652663599,
+          6.07514999508885,
+          11.31559344840484
+        ],
+        [
+          -6.55048977354474,
+          6.07514999508885,
+          12.774694573747801
+        ]
+      ],
+      "color": "#f58220",
+      "directionFromAnimation": true
     }
   ],
   "links": [],
@@ -632,20 +925,293 @@
     {
       "id": "e11-pmr-pov",
       "family": "pmr",
-      "label": "POV · PMR",
-      "legs": [],
-      "videoOnly": true,
+      "label": "POV · EM11-PMR",
+      "legs": [
+        "e11-pmr-a",
+        "e11-pmr-lift1",
+        "e11-pmr-i",
+        "e11-pmr-lift2",
+        "e11-pmr-p"
+      ],
       "videoSync": {
         "videoId": "e11-pmr-original",
         "duration": 163.23,
         "keys": [
           {
-            "time": 0
+            "time": 0,
+            "leg": "e11-pmr-a",
+            "fraction": 0.0
           },
           {
-            "time": 163.23
+            "time": 2,
+            "leg": "e11-pmr-a",
+            "fraction": 0.22727272727272738
+          },
+          {
+            "time": 4,
+            "leg": "e11-pmr-a",
+            "fraction": 0.4545454545454549
+          },
+          {
+            "time": 8,
+            "leg": "e11-pmr-a",
+            "fraction": 0.7670454545454545
+          },
+          {
+            "time": 10,
+            "leg": "e11-pmr-a",
+            "fraction": 0.8636363636363636
+          },
+          {
+            "time": 12,
+            "leg": "e11-pmr-a",
+            "fraction": 1.0
+          },
+          {
+            "time": 16,
+            "leg": "e11-pmr-a",
+            "fraction": 1.0
+          },
+          {
+            "time": 16,
+            "leg": "e11-pmr-lift1",
+            "fraction": 0.0
+          },
+          {
+            "time": 24,
+            "leg": "e11-pmr-lift1",
+            "fraction": 1.0
+          },
+          {
+            "time": 26,
+            "leg": "e11-pmr-lift1",
+            "fraction": 1.0
+          },
+          {
+            "time": 26,
+            "leg": "e11-pmr-i",
+            "fraction": 0.0
+          },
+          {
+            "time": 28,
+            "leg": "e11-pmr-i",
+            "fraction": 0.010428223126842587
+          },
+          {
+            "time": 30,
+            "leg": "e11-pmr-i",
+            "fraction": 0.034792810910522345
+          },
+          {
+            "time": 32,
+            "leg": "e11-pmr-i",
+            "fraction": 0.061372361219991185
+          },
+          {
+            "time": 40,
+            "leg": "e11-pmr-i",
+            "fraction": 0.11822306604857734
+          },
+          {
+            "time": 48,
+            "leg": "e11-pmr-i",
+            "fraction": 0.1676905624578666
+          },
+          {
+            "time": 52,
+            "leg": "e11-pmr-i",
+            "fraction": 0.18925408185476666
+          },
+          {
+            "time": 56,
+            "leg": "e11-pmr-i",
+            "fraction": 0.2150953113223058
+          },
+          {
+            "time": 60,
+            "leg": "e11-pmr-i",
+            "fraction": 0.22247851974160274
+          },
+          {
+            "time": 62,
+            "leg": "e11-pmr-i",
+            "fraction": 0.24315150331563415
+          },
+          {
+            "time": 64,
+            "leg": "e11-pmr-i",
+            "fraction": 0.26530112857352484
+          },
+          {
+            "time": 68,
+            "leg": "e11-pmr-i",
+            "fraction": 0.26530112857352484
+          },
+          {
+            "time": 72,
+            "leg": "e11-pmr-i",
+            "fraction": 0.28006754541211865
+          },
+          {
+            "time": 76,
+            "leg": "e11-pmr-i",
+            "fraction": 0.3243667959279001
+          },
+          {
+            "time": 80,
+            "leg": "e11-pmr-i",
+            "fraction": 0.36866604644368145
+          },
+          {
+            "time": 84,
+            "leg": "e11-pmr-i",
+            "fraction": 0.4357842435942893
+          },
+          {
+            "time": 88,
+            "leg": "e11-pmr-i",
+            "fraction": 0.48487008760327754
+          },
+          {
+            "time": 92,
+            "leg": "e11-pmr-i",
+            "fraction": 0.5479047024173683
+          },
+          {
+            "time": 96,
+            "leg": "e11-pmr-i",
+            "fraction": 0.60367603376307
+          },
+          {
+            "time": 100,
+            "leg": "e11-pmr-i",
+            "fraction": 0.648275746339226
+          },
+          {
+            "time": 104,
+            "leg": "e11-pmr-i",
+            "fraction": 0.7044754950454905
+          },
+          {
+            "time": 108,
+            "leg": "e11-pmr-i",
+            "fraction": 0.7580533787961187
+          },
+          {
+            "time": 112,
+            "leg": "e11-pmr-i",
+            "fraction": 0.7765113998443608
+          },
+          {
+            "time": 116,
+            "leg": "e11-pmr-i",
+            "fraction": 0.8060442335215484
+          },
+          {
+            "time": 118,
+            "leg": "e11-pmr-i",
+            "fraction": 0.8279712438303819
+          },
+          {
+            "time": 122,
+            "leg": "e11-pmr-i",
+            "fraction": 0.8789153819235306
+          },
+          {
+            "time": 126,
+            "leg": "e11-pmr-i",
+            "fraction": 0.9261679158070308
+          },
+          {
+            "time": 128,
+            "leg": "e11-pmr-i",
+            "fraction": 0.9682522037970233
+          },
+          {
+            "time": 132,
+            "leg": "e11-pmr-i",
+            "fraction": 1.0
+          },
+          {
+            "time": 134,
+            "leg": "e11-pmr-i",
+            "fraction": 1.0
+          },
+          {
+            "time": 134,
+            "leg": "e11-pmr-lift2",
+            "fraction": 0.0
+          },
+          {
+            "time": 140,
+            "leg": "e11-pmr-lift2",
+            "fraction": 1.0
+          },
+          {
+            "time": 140,
+            "leg": "e11-pmr-p",
+            "fraction": 0.0
+          },
+          {
+            "time": 142,
+            "leg": "e11-pmr-p",
+            "fraction": 0.05898441090837597
+          },
+          {
+            "time": 144,
+            "leg": "e11-pmr-p",
+            "fraction": 0.1888443688420321
+          },
+          {
+            "time": 146,
+            "leg": "e11-pmr-p",
+            "fraction": 0.3850771941640015
+          },
+          {
+            "time": 148,
+            "leg": "e11-pmr-p",
+            "fraction": 0.5207087057835981
+          },
+          {
+            "time": 152,
+            "leg": "e11-pmr-p",
+            "fraction": 0.6825439356331101
+          },
+          {
+            "time": 156,
+            "leg": "e11-pmr-p",
+            "fraction": 0.8845689262811943
+          },
+          {
+            "time": 158,
+            "leg": "e11-pmr-p",
+            "fraction": 0.9567133473554478
+          },
+          {
+            "time": 160,
+            "leg": "e11-pmr-p",
+            "fraction": 1.0
+          },
+          {
+            "time": 163.23,
+            "leg": "e11-pmr-p",
+            "fraction": 1.0
           }
-        ]
+        ],
+        "hiddenWindows": [
+          [
+            0,
+            0.5
+          ]
+        ],
+        "waitingLabel": "Inicio del video",
+        "method": "Hitos de giro, validación, ascensores y pasarelas registrados en las tres plantas; cotas de piso contrastadas con el modelo."
+      },
+      "routeCuts": {
+        "1ZvOeQwd10lPlZWEpLLxYV": {
+          "min": 2575.1,
+          "max": 2581.8
+        }
       }
     }
   ],
