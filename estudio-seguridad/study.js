@@ -1,12 +1,12 @@
-import {originalSheets} from './study-plan-originals.js?v=20261113-e11pmr56';
+import {originalSheets} from './study-plan-originals.js?v=20261113-e11brt57';
 import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
-import {station,stations} from './study-stations.js?v=20261113-e11pmr56';
+import {station,stations} from './study-stations.js?v=20261113-e11brt57';
 import {StationVideo} from './study-station-video.js?v=20261106-e04delivery52';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
-import {PlanViewer} from './study-plans.js?v=20261113-e11pmr56';
+import {PlanViewer} from './study-plans.js?v=20261113-e11brt57';
 import {StudyScene} from './study-scene.js?v=20261104-integrity45';
 import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261028-e01media23';
-import {RouteStudy} from './study-routes.js?v=20261113-e11pmr56';
+import {RouteStudy} from './study-routes.js?v=20261113-e11brt57';
 import {SpaceStudy} from './study-spaces.js?v=20261109-e0708integration57';
 const $=s=>document.querySelector(s);
 const levels=station.levels;
@@ -250,4 +250,4 @@ if(station.id==='E07'&&station.assets.routes){$('#routes-drawer h2').textContent
 
 if(station.id==='E08'&&station.assets.routes){$('#routes-drawer h2').textContent='Recorridos · E08';$('#routes-drawer > p').textContent='Biciusuarios · recorrido negro sincronizado con BICI-EM8.';$('#routes-drawer .micro-note').textContent='PMR: video disponible; trazado En construcción.';}
 
-if(station.id==='E11'&&station.assets.routes){$('#routes-drawer h2').textContent='Recorridos · E11';$('#routes-drawer > p').textContent='Biciusuarios y PMR · recorridos sincronizados con sus videos POV.';$('#routes-drawer .micro-note').textContent='Negro: Biciusuarios · Naranja: PMR. BRT: video disponible; trazado En construcción.';}
+if(station.id==='E11'&&station.assets.routes){$('#routes-drawer h2').textContent='Recorridos · E11';$('#routes-drawer > p').textContent='Biciusuarios, PMR y BRT · recorridos sincronizados con sus videos POV.';$('#routes-drawer .micro-note').textContent='Negro: Biciusuarios · Naranja: PMR · Azul: BRT. Avance sincronizado con cada video POV.';}
