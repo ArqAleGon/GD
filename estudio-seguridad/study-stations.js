@@ -74,19 +74,21 @@ stations.E08.description='Plantas, espacios y cámaras IFC vinculados. Biciusuar
 // E11 original POV media; spatial routes remain pending.
 stations.E11.povVideo={"title": "E11", "manifestUrl": "./assets/stations/e11/videos.json?v=20261112-e11-v51", "videos": [{"id": "e11-brt-original", "title": "E11 · BRT–EM11", "label": "BRT–EM11"}, {"id": "e11-bici-original", "title": "E11 · Biciusuarios", "label": "Biciusuarios"}, {"id": "e11-pmr-original", "title": "E11 · PMR", "label": "PMR"}]};
 
-stations.E11.modelManifest="./assets/stations/e11/recovered-models.json?v=20261113-e12videos59";
+stations.E11.modelManifest="./assets/stations/e11/recovered-models.json?v=20261113-e12plans60";
 // E11 uses the existing shared space controls and level-specific original sheets.
-for(const key of ['architecture','registration','spaces'])stations.E11.assets[key]='./assets/stations/e11/'+(key==='registration'?'plan-registration':key)+'.json?v=20261113-e12videos59';
+for(const key of ['architecture','registration','spaces'])stations.E11.assets[key]='./assets/stations/e11/'+(key==='registration'?'plan-registration':key)+'.json?v=20261113-e12plans60';
 stations.E11.description='Modelos, cámaras IFC y videos POV incorporados. Plantas, colores, etiquetas y áreas vinculados al PDF arquitectónico V01. Biciusuarios, PMR y BRT sincronizados con sus videos POV. Cuatro ubicaciones de espacios: En construcción.';
 
 stations.E11.sourceCount=9;
 
-stations.E11.assets.inventory='./assets/stations/e11/inventory.json?v=20261113-e12videos59';
+stations.E11.assets.inventory='./assets/stations/e11/inventory.json?v=20261113-e12plans60';
 
-stations.E11.assets.routes='./assets/stations/e11/routes.json?v=20261113-e12videos59';
+stations.E11.assets.routes='./assets/stations/e11/routes.json?v=20261113-e12plans60';
 
-stations.E12.modelManifest="./assets/stations/e12/recovered-models.json?v=20261113-e12videos59";
+stations.E12.modelManifest="./assets/stations/e12/recovered-models.json?v=20261113-e12plans60";
 stations.E12.sourceCount=9;
 
 // E12 embedded videos; shared manual playback controls.
-stations.E12.povVideo={"title": "E12", "manifestUrl": "./assets/stations/e12/videos.json?v=20261113-e12videos59", "videos": [{"id": "e12-brt-v58", "title": "E12 · BRT–EM12", "label": "BRT–EM12"}, {"id": "e12-bici-v58", "title": "E12 · Biciusuarios", "label": "Biciusuarios"}, {"id": "e12-pmr-v59", "title": "E12 · PMR · TM–EM12", "label": "PMR · TM–EM12"}]};
+stations.E12.povVideo={"title": "E12", "manifestUrl": "./assets/stations/e12/videos.json?v=20261113-e12plans60", "videos": [{"id": "e12-brt-v58", "title": "E12 · BRT–EM12", "label": "BRT–EM12"}, {"id": "e12-bici-v58", "title": "E12 · Biciusuarios", "label": "Biciusuarios"}, {"id": "e12-pmr-v59", "title": "E12 · PMR · TM–EM12", "label": "PMR · TM–EM12"}]};
+
+for(const key of ['architecture','inventory','registration'])stations.E12.assets[key]='./assets/stations/e12/'+(key==='registration'?'plan-registration':key)+'.json?v=20261113-e12plans60';

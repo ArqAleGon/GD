@@ -1,0 +1,52 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "level": "Sótano",
+      "levelId": "2SCB_wEvLD9uWO8$uQSWQR",
+      "label": "Sótano · E12 · Calle 10",
+      "imageUrl": "./assets/stations/e12/architecture/B.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/plan-originals/e12/PDFsam_ExtractL1T1-0000-312-CON-ED-ARQ-PL-0001_V02-pagina-01-B.pdf",
+      "source": "PLANO SOTANO E12 A.pdf",
+      "sourceSha256": "b7441be5bbf175da8beeffcb03b41b11f6074aca5eec86c050d975bcc68b0b84"
+    },
+    {
+      "page": 2,
+      "level": "Acceso",
+      "levelId": "1ZvOeQwd10lPlZWEpLLxYV",
+      "label": "Acceso · E12 · Calle 10",
+      "imageUrl": "./assets/stations/e12/architecture/A.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/plan-originals/e12/PDFsam_ExtractL1T1-0000-312-CON-ED-ARQ-PL-0001_V02-pagina-02-A.pdf",
+      "source": "PLANO ACCESO E12 A.pdf",
+      "sourceSha256": "85e87e6ddbbd943cd78ed804fb145d162410ad8cc412ab9b26c72abde97c28d3"
+    },
+    {
+      "page": 3,
+      "level": "Intermedio",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · E12 · Calle 10",
+      "imageUrl": "./assets/stations/e12/architecture/I.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/plan-originals/e12/PDFsam_ExtractL1T1-0000-312-CON-ED-ARQ-PL-0001_V02-pagina-03-I.pdf",
+      "source": "PLANO INT E12 A.pdf",
+      "sourceSha256": "b16f0fa8c05c611431811553fb15ca95cb0cefb6c26a41e73369308b25fcaacf"
+    },
+    {
+      "page": 4,
+      "level": "Plataforma",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · E12 · Calle 10",
+      "imageUrl": "./assets/stations/e12/architecture/P.jpg",
+      "width": 6000,
+      "height": 4243,
+      "pdf": "./assets/plan-originals/e12/PDFsam_ExtractL1T1-0000-312-CON-ED-ARQ-PL-0001_V02-pagina-04-P.pdf",
+      "source": "PLANO PLA E12 A.pdf",
+      "sourceSha256": "d8600deccb3d49d1370cbe102424b90c5d8063de7b453492cfc97a55e0c1d323"
+    }
+  ]
+}
