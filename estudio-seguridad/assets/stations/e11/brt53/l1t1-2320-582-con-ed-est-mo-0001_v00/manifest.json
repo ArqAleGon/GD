@@ -1,0 +1,214 @@
+{
+  "station": "E11",
+  "source": "L1T1-2320-582-CON-ED-EST-MO-0001_V00.ifc",
+  "sourceSha256": "1be3f2a6ec13ff15ad4cbc270c9306c087559ff97eddd5790d8d3d44e614895e",
+  "sourceSchema": "IFC2X3",
+  "converter": "IfcOpenShell 0.8.5",
+  "ifcLengthUnitToMetres": 1,
+  "files": [
+    {
+      "file": "e11-l1t1-2320-582-con-ed-est-mo-0001_v00-p001.glb.gz",
+      "source": "L1T1-2320-582-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E11",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "32e536dcaf65f63cd782c887c08bd957e6e3442dbc3ee6742f3b5c0228b70236",
+      "compressedBytes": 1762868,
+      "boundsGltfMetres": {
+        "min": [
+          98939.10787013941,
+          2573.636899915692,
+          -99884.76127728916
+        ],
+        "max": [
+          99048.71303232545,
+          2580.8327365321807,
+          -99753.12660026843
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e11-l1t1-2320-582-con-ed-est-mo-0001_v00-p002.glb.gz",
+      "source": "L1T1-2320-582-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E11",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "38ff0d51ed757f36bdeb7eeb8b67b546d42857c70a06efbdf9847f5d6c68dc34",
+      "compressedBytes": 784530,
+      "boundsGltfMetres": {
+        "min": [
+          98938.54500025124,
+          2573.4447734823743,
+          -99911.00962541754
+        ],
+        "max": [
+          99069.93111964538,
+          2580.890793795202,
+          -99752.56373868595
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e11-l1t1-2320-582-con-ed-est-mo-0001_v00-p003.glb.gz",
+      "source": "L1T1-2320-582-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E11",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "c51578349def5bafc5ddc0788c1810a9fbbb743e81be089ed75cdac6367d60f9",
+      "compressedBytes": 145771,
+      "boundsGltfMetres": {
+        "min": [
+          98939.55883595145,
+          2574.586899988075,
+          -99910.00302698721
+        ],
+        "max": [
+          99068.91979951372,
+          2580.8995613315865,
+          -99753.56831866462
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e11-l1t1-2320-582-con-ed-est-mo-0001_v00-p004.glb.gz",
+      "source": "L1T1-2320-582-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E11",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "8eb269f3ce6a23a0233263caba1f965ac4e09268f2874d71e3bdf94c8a1e17ae",
+      "compressedBytes": 661972,
+      "boundsGltfMetres": {
+        "min": [
+          98944.12217012477,
+          2575.559979918175,
+          -99904.05158330346
+        ],
+        "max": [
+          99064.21360316232,
+          2580.631614231708,
+          -99759.53455135044
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e11-l1t1-2320-582-con-ed-est-mo-0001_v00-p005.glb.gz",
+      "source": "L1T1-2320-582-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E11",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "4ebd58a6dff296ffd02034f273f0844eb2ddb2cf03318871fe9c4bd888afc69f",
+      "compressedBytes": 444696,
+      "boundsGltfMetres": {
+        "min": [
+          98945.24367001143,
+          2574.744495343098,
+          -99901.7410740862
+        ],
+        "max": [
+          99064.36926617625,
+          2580.844156638381,
+          -99761.05579076808
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e11-l1t1-2320-582-con-ed-est-mo-0001_v00-p006.glb.gz",
+      "source": "L1T1-2320-582-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E11",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 132,
+      "sha256": "a878dc1a4158ee1fed61bd594d9c0b5ffc040af48d820365abebd0b1de57bda5",
+      "compressedBytes": 110047,
+      "boundsGltfMetres": {
+        "min": [
+          99013.2406956566,
+          2579.6650009155273,
+          -99904.75253046698
+        ],
+        "max": [
+          99065.06574224735,
+          2580.8899000143974,
+          -99847.28299324043
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    }
+  ],
+  "expectedRepresentedElements": 2630,
+  "convertedElements": 2632,
+  "renderableElements": 2630,
+  "convertedOpeningElements": 2,
+  "cameraCandidates": 0,
+  "bounds": {
+    "min": [
+      98938.54500025124,
+      2573.4447734823743,
+      -99911.00962541754
+    ],
+    "max": [
+      99069.93111964538,
+      2580.8995613315865,
+      -99752.56373868595
+    ]
+  },
+  "audit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 5.7733465909851105e-11,
+    "representedMissing": [],
+    "sourceWithoutGeometry": [],
+    "overlapWithRecoveredStationMetres": [
+      93.01642082574836,
+      7.454787849212153,
+      116.83827720320551
+    ],
+    "triangles": 398338,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ],
+    "identicalIteratorShapesDeduplicated": 0
+  },
+  "seconds": 39.53,
+  "coordinateConvention": "glTF metres [IFC X, IFC Z, -IFC Y]; native placement preserved",
+  "simplification": false,
+  "nativeLevels": [
+    {
+      "id": "35FS56crLCyQHl5DFc_dVd",
+      "name": "STR_PL_01_FOUNDATION-BRT",
+      "elevation": 2573.601999999997
+    },
+    {
+      "id": "35FS56crLCyQHl5DFc_BHU",
+      "name": "STR_PL_02_PLATFORM-BRT",
+      "elevation": 2576.265999999997
+    },
+    {
+      "id": "35FS56crLCyQHl5DFc_BU8",
+      "name": "STR_PL_03_ROOF-BRT",
+      "elevation": 2579.648999999997
+    }
+  ],
+  "integrationSpatialReview": {
+    "overlapWithBrtArchitectureMetres": [
+      131.38611939414113,
+      6.0126613315878785,
+      158.44588673159888
+    ],
+    "nativePlacementPreserved": true
+  }
+}

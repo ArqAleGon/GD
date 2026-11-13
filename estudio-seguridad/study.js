@@ -1,12 +1,12 @@
-import {originalSheets} from './study-plan-originals.js?v=20261113-e11pdf52';
+import {originalSheets} from './study-plan-originals.js?v=20261113-e11brt53';
 import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
-import {station,stations} from './study-stations.js?v=20261113-e11pdf52';
+import {station,stations} from './study-stations.js?v=20261113-e11brt53';
 import {StationVideo} from './study-station-video.js?v=20261106-e04delivery52';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
-import {PlanViewer} from './study-plans.js?v=20261113-e11pdf52';
+import {PlanViewer} from './study-plans.js?v=20261113-e11brt53';
 import {StudyScene} from './study-scene.js?v=20261104-integrity45';
 import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261028-e01media23';
-import {RouteStudy} from './study-routes.js?v=20261113-e11pdf52';
+import {RouteStudy} from './study-routes.js?v=20261113-e11brt53';
 import {SpaceStudy} from './study-spaces.js?v=20261109-e0708integration57';
 const $=s=>document.querySelector(s);
 const levels=station.levels;
@@ -227,7 +227,7 @@ async function loadRecoveredData(){
  for(const source of modelManifest.sourceIfcFiles){
   const label=document.createElement('label'),input=document.createElement('input');input.type='checkbox';input.checked=true;input.dataset.modelPackage=source;
   input.addEventListener('change',()=>{if(!scene)return;scene.hiddenPackages ||= new Set();if(input.checked)scene.hiddenPackages.delete(source);else scene.hiddenPackages.add(source);scene.filter();});
-  label.title=source;label.append(input,document.createTextNode(' '+(source.includes('-INS-')?'Instalaciones':source.includes('-ARQ-')?'Arquitectura':'Estructura')+' · '+source.split('-')[1]+' · '+source.split('-MO-')[1]));packageTarget.before(label);
+  const sourceLabel=modelManifest.sourceLabels?.[source]||((source.includes('-INS-')?'Instalaciones':source.includes('-ARQ-')?'Arquitectura':'Estructura')+' · '+source.split('-')[1]+' · '+source.split('-MO-')[1]);label.title=source;label.append(input,document.createTextNode(' '+sourceLabel));packageTarget.before(label);
  }
  $('#plan-kind option[value="architecture"]').textContent=station.assets.architecture?'Planta arquitectónica':'Planta arquitectónica · En construcción';if(!inventory.length)$('#plan-kind option[value="inventory"]').textContent='Inventario CCTV · En construcción';$('#type-legend').textContent='Arquitectura · estructura · instalaciones';
  if(station.assets.spaces){

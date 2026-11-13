@@ -1,0 +1,99 @@
+{
+  "station": "E11",
+  "source": "L1T1-2320-582-CON-ED-EST-MO-0003_V00.ifc",
+  "sourceSha256": "90b3000fe3841d3be0db0c16a91ce64980754d42b3edc6243c2185f74894ea8e",
+  "sourceSchema": "IFC2X3",
+  "converter": "IfcOpenShell 0.8.5",
+  "ifcLengthUnitToMetres": 1,
+  "files": [
+    {
+      "file": "e11-l1t1-2320-582-con-ed-est-mo-0003_v00-p001.glb.gz",
+      "source": "L1T1-2320-582-CON-ED-EST-MO-0003_V00.ifc",
+      "section": "E11",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 108,
+      "sha256": "bc59afa2ecd4695fd35371573556c80c1fd4ab8b578fb81624b7d2befd17942b",
+      "compressedBytes": 22151,
+      "boundsGltfMetres": {
+        "min": [
+          99092.34971441541,
+          2574.889999953267,
+          -99950.68993290952
+        ],
+        "max": [
+          99102.50654786518,
+          2580.170000076294,
+          -99938.27120507986
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    }
+  ],
+  "expectedRepresentedElements": 108,
+  "convertedElements": 108,
+  "renderableElements": 108,
+  "convertedOpeningElements": 0,
+  "cameraCandidates": 0,
+  "bounds": {
+    "min": [
+      99092.34971441541,
+      2574.889999953267,
+      -99950.68993290952
+    ],
+    "max": [
+      99102.50654786518,
+      2580.170000076294,
+      -99938.27120507986
+    ]
+  },
+  "audit": {
+    "status": "review",
+    "maxPlacementMatrixDifference": 1.4551915228366852e-11,
+    "representedMissing": [],
+    "sourceWithoutGeometry": [],
+    "overlapWithRecoveredStationMetres": [
+      -60.78829333842441,
+      5.280000123027094,
+      -68.8691891907074
+    ],
+    "triangles": 4816,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ],
+    "identicalIteratorShapesDeduplicated": 0
+  },
+  "seconds": 1.14,
+  "coordinateConvention": "glTF metres [IFC X, IFC Z, -IFC Y]; native placement preserved",
+  "simplification": false,
+  "nativeLevels": [
+    {
+      "id": "2YrbNjXATFQwGpmjWv7W4m",
+      "name": "STR_PL_01_FOUNDATION-BRT",
+      "elevation": 2573.601999999997
+    },
+    {
+      "id": "2YrbNjXATFQwGpmjWv7CA9",
+      "name": "STR_PL_02_PLATFORM-BRT",
+      "elevation": 2576.265999999997
+    },
+    {
+      "id": "2YrbNjXATFQwGpmjWv7C5V",
+      "name": "STR_PL_03_ROOF-BRT",
+      "elevation": 2579.648999999997
+    }
+  ],
+  "integrationSpatialReview": {
+    "overlapWithBrtArchitectureMetres": [
+      10.156833449771511,
+      5.280000123027094,
+      12.418727829659474
+    ],
+    "nativePlacementPreserved": true
+  }
+}

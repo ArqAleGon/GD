@@ -1,0 +1,254 @@
+{
+  "station": "E11",
+  "source": "L1T1-2330-582-CON-ED-ARQ-MO-0001_V00.ifc",
+  "sourceSha256": "bfaa6a7597fc7a957a4457c9b1c168c571c598e4d933acb443c41ba286a2ec60",
+  "sourceSchema": "IFC2X3",
+  "converter": "IfcOpenShell 0.8.5",
+  "ifcLengthUnitToMetres": 1,
+  "files": [
+    {
+      "file": "e11-l1t1-2330-582-con-ed-arq-mo-0001_v00-p001.glb.gz",
+      "source": "L1T1-2330-582-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E11",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "92024f99496bdb60c738c17f63be3299c5e79bfab0f83c286559bb427b4d7b4f",
+      "compressedBytes": 984919,
+      "boundsGltfMetres": {
+        "min": [
+          98939.10761057404,
+          2574.9956555042263,
+          -99910.44704164127
+        ],
+        "max": [
+          99069.36857271282,
+          2580.9606037448652,
+          -99753.12644385273
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e11-l1t1-2330-582-con-ed-arq-mo-0001_v00-p002.glb.gz",
+      "source": "L1T1-2330-582-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E11",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "599169ee8dcac562e0632538901139d458b3c273de9830e4c518e4f2f6c6c05d",
+      "compressedBytes": 8988543,
+      "boundsGltfMetres": {
+        "min": [
+          98914.66747706025,
+          2574.9960000000005,
+          -99949.36592027901
+        ],
+        "max": [
+          99100.10562856818,
+          2583.07778358351,
+          -99732.99444298416
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e11-l1t1-2330-582-con-ed-arq-mo-0001_v00-p003.glb.gz",
+      "source": "L1T1-2330-582-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E11",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "bcde0ba2757d61acf2ffbbd130fb5472e7ed3a93acccb0eb70797b39f7d95a0a",
+      "compressedBytes": 2376964,
+      "boundsGltfMetres": {
+        "min": [
+          98916.1920317094,
+          2574.8868999999986,
+          -99950.69032764125
+        ],
+        "max": [
+          99102.59000291703,
+          2586.966745833261,
+          -99731.00368507614
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e11-l1t1-2330-582-con-ed-arq-mo-0001_v00-p004.glb.gz",
+      "source": "L1T1-2330-582-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E11",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 281,
+      "sha256": "abf580df11311f154665c223e69e584a8c4c70ccdfd491cd932a34cbe104ed61",
+      "compressedBytes": 6490774,
+      "boundsGltfMetres": {
+        "min": [
+          98915.49056331824,
+          2574.9653231397106,
+          -99947.91488171292
+        ],
+        "max": [
+          99100.79629132157,
+          2583.094466758823,
+          -99733.43574913753
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    }
+  ],
+  "expectedRepresentedElements": 1649,
+  "convertedElements": 1781,
+  "renderableElements": 1649,
+  "convertedOpeningElements": 132,
+  "cameraCandidates": 0,
+  "bounds": {
+    "min": [
+      98914.66747706025,
+      2574.8868999999986,
+      -99950.69032764125
+    ],
+    "max": [
+      99102.59000291703,
+      2586.966745833261,
+      -99731.00368507614
+    ]
+  },
+  "audit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 1.4551915228366852e-11,
+    "representedMissing": [],
+    "sourceWithoutGeometry": [
+      {
+        "ifcGlobalId": "0iPD$lZnb0GwEKGjljfATL",
+        "ifcExpressId": 5131139,
+        "ifcType": "IfcRoof",
+        "ifcName": "Basic Roof:ARC_ROF_ALUZINC_SINGLE-525mm-e=0.6mm:3195278",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2330-582-CON-ED-ARQ-MO-0001_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "ARQ",
+        "ifcStorey": "ARQ_PL_04_PLATFORM",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "04ENZkQmv2uOnbnsTOV7qY",
+        "ifcExpressId": 7712382,
+        "ifcType": "IfcRoof",
+        "ifcName": "Basic Roof:ARC_ROF_POLYCARBONATE_CELLULAR-e=8mm-OPAL:3305504",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2330-582-CON-ED-ARQ-MO-0001_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "ARQ",
+        "ifcStorey": "ARQ_PL_02_BRT-PLATFORM",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "1YZ00NogL8nAIDpSNCvdY7",
+        "ifcExpressId": 1283970,
+        "ifcType": "IfcStair",
+        "ifcName": "Assembled Stair:Stair:2118796",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2330-582-CON-ED-ARQ-MO-0001_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "ARQ",
+        "ifcStorey": "ARQ_PL_02_BRT-PLATFORM",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "1YZ00NogL8nAIDpSNCvdbZ",
+        "ifcExpressId": 1285149,
+        "ifcType": "IfcStair",
+        "ifcName": "Assembled Stair:Stair:2119016",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2330-582-CON-ED-ARQ-MO-0001_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "ARQ",
+        "ifcStorey": "ARQ_PL_02_BRT-PLATFORM",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "1cOYVcCf9Esv4Om9WnaDJ7",
+        "ifcExpressId": 1286252,
+        "ifcType": "IfcStair",
+        "ifcName": "Assembled Stair:Stair:2122966",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2330-582-CON-ED-ARQ-MO-0001_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "ARQ",
+        "ifcStorey": "ARQ_PL_02_BRT-PLATFORM",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      }
+    ],
+    "overlapWithRecoveredStationMetres": [
+      116.89394401673053,
+      12.079845833262425,
+      138.39833081301185
+    ],
+    "triangles": 10188242,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ],
+    "identicalIteratorShapesDeduplicated": 0
+  },
+  "seconds": 110.14,
+  "coordinateConvention": "glTF metres [IFC X, IFC Z, -IFC Y]; native placement preserved",
+  "simplification": false,
+  "nativeLevels": [
+    {
+      "id": "1n7XH3Een6yeZN_RkzWhYE",
+      "name": "ARQ_PL_00_FOUNDATION",
+      "elevation": 2573.602
+    },
+    {
+      "id": "1n7XH3Een6yeZN_RkzWK57",
+      "name": "ARQ_PL_01_BRT-TRACK",
+      "elevation": 2575.366
+    },
+    {
+      "id": "1n7XH3Een6yeZN_RkzWagf",
+      "name": "ARQ_PL_01.1_MEDIAN",
+      "elevation": 2575.516
+    },
+    {
+      "id": "1n7XH3Een6yeZN_RkzWhzz",
+      "name": "ARQ_PL_02_BRT-PLATFORM",
+      "elevation": 2576.2659999999996
+    },
+    {
+      "id": "1n7XH3Een6yeZN_RkzWYbh",
+      "name": "ARQ_PL_03.1_BRT-TECHNICAL-ROOF",
+      "elevation": 2579.0209999999997
+    },
+    {
+      "id": "1n7XH3Een6yeZN_RkzWhZA",
+      "name": "ARQ_PL_03_BRT-ROOF",
+      "elevation": 2579.649
+    },
+    {
+      "id": "1n7XH3Een6yeZN_RkzWhya",
+      "name": "ARQ_PL_04_PLATFORM",
+      "elevation": 2590.649999999998
+    }
+  ],
+  "integrationSpatialReview": {
+    "overlapWithBrtArchitectureMetres": [
+      187.92252585677488,
+      12.079845833262425,
+      219.68664256510965
+    ],
+    "nativePlacementPreserved": true
+  }
+}

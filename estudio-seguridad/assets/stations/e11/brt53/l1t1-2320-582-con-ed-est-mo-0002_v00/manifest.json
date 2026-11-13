@@ -1,0 +1,99 @@
+{
+  "station": "E11",
+  "source": "L1T1-2320-582-CON-ED-EST-MO-0002_V00.ifc",
+  "sourceSha256": "dcd4277ae789ee4e008b10647681296a4e1980e551ce8811f0e5d90c1e3e5205",
+  "sourceSchema": "IFC2X3",
+  "converter": "IfcOpenShell 0.8.5",
+  "ifcLengthUnitToMetres": 1,
+  "files": [
+    {
+      "file": "e11-l1t1-2320-582-con-ed-est-mo-0002_v00-p001.glb.gz",
+      "source": "L1T1-2320-582-CON-ED-EST-MO-0002_V00.ifc",
+      "section": "E11",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 255,
+      "sha256": "68fb12195ca6346a694d1c828166061554b9da2cfccadaa0cc23a399fa8c2152",
+      "compressedBytes": 1643257,
+      "boundsGltfMetres": {
+        "min": [
+          98979.61636108864,
+          2574.38461660322,
+          -99838.85459248882
+        ],
+        "max": [
+          99010.90379294995,
+          2586.500000002978,
+          -99805.59690326273
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    }
+  ],
+  "expectedRepresentedElements": 255,
+  "convertedElements": 255,
+  "renderableElements": 255,
+  "convertedOpeningElements": 0,
+  "cameraCandidates": 0,
+  "bounds": {
+    "min": [
+      98979.61636108864,
+      2574.38461660322,
+      -99838.85459248882
+    ],
+    "max": [
+      99010.90379294995,
+      2586.500000002978,
+      -99805.59690326273
+    ]
+  },
+  "audit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 2.8867493795463555e-11,
+    "representedMissing": [],
+    "sourceWithoutGeometry": [],
+    "overlapWithRecoveredStationMetres": [
+      31.287431861303048,
+      12.11538339975823,
+      33.25768922608404
+    ],
+    "triangles": 154134,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ],
+    "identicalIteratorShapesDeduplicated": 0
+  },
+  "seconds": 8.81,
+  "coordinateConvention": "glTF metres [IFC X, IFC Z, -IFC Y]; native placement preserved",
+  "simplification": false,
+  "nativeLevels": [
+    {
+      "id": "1D9Lk3Ot1EeRf0NkWTLol7",
+      "name": "STR_PL_01_CIMENTACIÓN",
+      "elevation": 2573.601999999997
+    },
+    {
+      "id": "1D9Lk3Ot1EeRf0NkWTLUX_",
+      "name": "STR_PL_02_PLATAFORMA_BRT",
+      "elevation": 2576.265999999997
+    },
+    {
+      "id": "1D9Lk3Ot1EeRf0NkWTLUke",
+      "name": "STR_PL_03_CUBIERTA_BRT",
+      "elevation": 2579.648999999997
+    }
+  ],
+  "integrationSpatialReview": {
+    "overlapWithBrtArchitectureMetres": [
+      31.287431861303048,
+      11.613100002979536,
+      33.25768922608404
+    ],
+    "nativePlacementPreserved": true
+  }
+}
