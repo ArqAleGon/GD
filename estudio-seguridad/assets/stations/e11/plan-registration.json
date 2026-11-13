@@ -98,5 +98,342 @@
       "method": "Muros de geometría procesada y planta técnica V01; colores proyectados por nivel"
     }
   },
-  "inventory": {}
+  "inventory": {
+    "2": {
+      "matrix": [
+        [
+          19.341479175467967,
+          23.050277293450048,
+          2968.665236791992
+        ],
+        [
+          23.050277293450048,
+          -19.341479175467967,
+          3048.72134428711
+        ]
+      ],
+      "crop": [
+        891,
+        1296,
+        4230,
+        1353
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · CCTV V00 · E11",
+      "method": "Muros y elementos comunes con plantas arquitectónicas registradas",
+      "fitInliers": 54
+    },
+    "3": {
+      "matrix": [
+        [
+          19.342047468780663,
+          23.050071282191766,
+          2712.2306526990938
+        ],
+        [
+          23.050071282191766,
+          -19.342047468780663,
+          2945.2679664773464
+        ]
+      ],
+      "crop": [
+        633,
+        1188,
+        4230,
+        1500
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · CCTV V00 · E11",
+      "method": "Muros y elementos comunes con plantas arquitectónicas registradas",
+      "fitInliers": 321
+    },
+    "4": {
+      "matrix": [
+        [
+          19.341479175467967,
+          23.050277293450048,
+          2590.4940862840785
+        ],
+        [
+          23.050277293450048,
+          -19.341479175467967,
+          2937.5929834479484
+        ]
+      ],
+      "crop": [
+        354,
+        1188,
+        4893,
+        1662
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · CCTV V00 · E11",
+      "method": "Muros y elementos comunes con plantas arquitectónicas registradas",
+      "fitInliers": 7
+    },
+    "5": {
+      "matrix": [
+        [
+          19.341575330702305,
+          23.053417759120087,
+          2643.1825267194213
+        ],
+        [
+          23.053417759120087,
+          -19.341575330702305,
+          2985.1836968129
+        ]
+      ],
+      "crop": [
+        408,
+        1107,
+        4638,
+        1743
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · CCTV V00 · E11",
+      "method": "Muros y elementos comunes con plantas arquitectónicas registradas",
+      "fitInliers": 781
+    },
+    "6": {
+      "matrix": [
+        [
+          19.341479175467967,
+          23.050277293450048,
+          2587.6390348284685
+        ],
+        [
+          23.050277293450048,
+          -19.341479175467967,
+          690.2236824694903
+        ]
+      ],
+      "crop": [
+        225,
+        990,
+        5295,
+        1860
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · CCTV V00 · E11",
+      "method": "Muros y elementos comunes con plantas arquitectónicas registradas",
+      "fitInliers": 8
+    },
+    "7": {
+      "matrix": [
+        [
+          26.59604765386985,
+          31.693191297659826,
+          3107.7367516579798
+        ],
+        [
+          31.693191297659826,
+          -26.596047653869853,
+          -172.99057185824927
+        ]
+      ],
+      "crop": [
+        105,
+        990,
+        4977,
+        1860
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · CCTV V00 · E11",
+      "method": "Muros y elementos comunes con plantas arquitectónicas registradas",
+      "fitInliers": 410
+    },
+    "8": {
+      "matrix": [
+        [
+          19.341479175467967,
+          23.050277293450048,
+          2324.622778612943
+        ],
+        [
+          23.050277293450048,
+          -19.341479175467967,
+          2502.4036182714244
+        ]
+      ],
+      "crop": [
+        75,
+        990,
+        5445,
+        1860
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · CCTV V00 · E11",
+      "method": "Muros y elementos comunes con plantas arquitectónicas registradas",
+      "fitInliers": 17
+    },
+    "9": {
+      "matrix": [
+        [
+          19.339705103982126,
+          23.04935007120121,
+          2229.6883554134915
+        ],
+        [
+          23.049350071201207,
+          -19.339705103982126,
+          2400.7018813155582
+        ]
+      ],
+      "crop": [
+        75,
+        990,
+        5445,
+        1860
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · CCTV V00 · E11",
+      "method": "Muros y elementos comunes con plantas arquitectónicas registradas",
+      "fitInliers": 977
+    },
+    "10": {
+      "matrix": [
+        [
+          19.341479175467967,
+          23.050277293450048,
+          2688.813436263248
+        ],
+        [
+          23.050277293450048,
+          -19.341479175467967,
+          830.9155242541328
+        ]
+      ],
+      "crop": [
+        306,
+        990,
+        5214,
+        1860
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · CCTV V00 · E11",
+      "method": "Muros y elementos comunes con plantas arquitectónicas registradas",
+      "fitInliers": 9
+    },
+    "11": {
+      "matrix": [
+        [
+          19.34104114345599,
+          23.05035376288918,
+          2924.212076087546
+        ],
+        [
+          23.05035376288918,
+          -19.34104114345599,
+          846.38941178964
+        ]
+      ],
+      "crop": [
+        543,
+        990,
+        4977,
+        1860
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · CCTV V00 · E11",
+      "method": "Muros y elementos comunes con plantas arquitectónicas registradas",
+      "fitInliers": 655
+    },
+    "12": {
+      "matrix": [
+        [
+          19.341479175467967,
+          23.050277293450044,
+          2712.687037950793
+        ],
+        [
+          23.050277293450044,
+          -19.341479175467967,
+          2693.0447651757013
+        ]
+      ],
+      "crop": [
+        324,
+        990,
+        5052,
+        1860
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · CCTV V00 · E11",
+      "method": "Muros y elementos comunes con plantas arquitectónicas registradas",
+      "fitInliers": 11
+    },
+    "13": {
+      "matrix": [
+        [
+          19.339134893386287,
+          23.048997662783307,
+          2807.4224491094496
+        ],
+        [
+          23.048997662783307,
+          -19.339134893386287,
+          2667.9629333312023
+        ]
+      ],
+      "crop": [
+        75,
+        990,
+        5445,
+        1860
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · CCTV V00 · E11",
+      "method": "Muros y elementos comunes con plantas arquitectónicas registradas",
+      "fitInliers": 488
+    },
+    "14": {
+      "matrix": [
+        [
+          19.341479175467967,
+          23.050277293450044,
+          2800.111022827795
+        ],
+        [
+          23.050277293450044,
+          -19.341479175467967,
+          787.3001888705364
+        ]
+      ],
+      "crop": [
+        381,
+        990,
+        5052,
+        1860
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · CCTV V00 · E11",
+      "method": "Muros y elementos comunes con plantas arquitectónicas registradas",
+      "fitInliers": 6
+    },
+    "15": {
+      "matrix": [
+        [
+          19.341800928776017,
+          23.050197031341796,
+          3036.635908424808
+        ],
+        [
+          23.050197031341796,
+          -19.341800928776017,
+          778.7881201950172
+        ]
+      ],
+      "crop": [
+        75,
+        990,
+        5445,
+        1860
+      ],
+      "rotation": 90,
+      "status": "Registro visual PDF–IFC · CCTV V00 · E11",
+      "method": "Muros y elementos comunes con plantas arquitectónicas registradas",
+      "fitInliers": 762
+    }
+  }
 }
