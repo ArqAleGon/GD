@@ -1,0 +1,58 @@
+{
+  "pages": [
+    {
+      "page": 2,
+      "level": "Acceso",
+      "levelId": "ins-1",
+      "label": "Acceso · E15 · Calle 63",
+      "imageUrl": "./assets/stations/e15/architecture/A.jpg",
+      "width": 4243,
+      "height": 6000,
+      "crop": [
+        6,
+        0,
+        4237,
+        6000
+      ],
+      "rotation": 90,
+      "source": "PLANO ACCESO E15 A.pdf",
+      "sourceSha256": "869ba5137cd06926539173517f1fa42652c575a97aca17180e50aedeb791ba73"
+    },
+    {
+      "page": 3,
+      "level": "Intermedio",
+      "levelId": "ins-2",
+      "label": "Intermedio · E15 · Calle 63",
+      "imageUrl": "./assets/stations/e15/architecture/I.jpg",
+      "width": 4243,
+      "height": 6000,
+      "crop": [
+        28,
+        0,
+        4215,
+        6000
+      ],
+      "rotation": 90,
+      "source": "PLANO INT E15 A.pdf",
+      "sourceSha256": "acefc5041e46a274db66cebdec7481dc8c5bf0001ad03f814e979f1ae20ec2ee"
+    },
+    {
+      "page": 4,
+      "level": "Plataforma",
+      "levelId": "ins-3",
+      "label": "Plataforma · E15 · Calle 63",
+      "imageUrl": "./assets/stations/e15/architecture/P.jpg",
+      "width": 4243,
+      "height": 6000,
+      "crop": [
+        9,
+        0,
+        4234,
+        6000
+      ],
+      "rotation": 90,
+      "source": "PLANO PLA E15 A.pdf",
+      "sourceSha256": "ba9753b6f49a1fa0bfa2453e0b10f93a1d1876753900b2dbb11f48f7d084f629"
+    }
+  ]
+}

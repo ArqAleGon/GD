@@ -1,0 +1,76 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "level": "Sótano",
+      "levelId": "2SCB_wEvLD9uWO8$uQSWQR",
+      "label": "Sótano · E14 · Calle 45",
+      "imageUrl": "./assets/stations/e14/architecture/B.jpg",
+      "width": 4243,
+      "height": 6000,
+      "crop": [
+        0,
+        0,
+        4243,
+        6000
+      ],
+      "rotation": 90,
+      "source": "PLANO SOTANO E14 A.pdf",
+      "sourceSha256": "1d9072f92769f9a8f7ac3bbf39ecb480164308f111a04a0e796b73ebbc1eb65d"
+    },
+    {
+      "page": 2,
+      "level": "Acceso",
+      "levelId": "1ZvOeQwd10lPlZWEpLLxYV",
+      "label": "Acceso · E14 · Calle 45",
+      "imageUrl": "./assets/stations/e14/architecture/A.jpg",
+      "width": 4243,
+      "height": 6000,
+      "crop": [
+        0,
+        35,
+        4243,
+        5947
+      ],
+      "rotation": 90,
+      "source": "PLANO ACCESO E14 A.pdf",
+      "sourceSha256": "9e478d9aaea01fee119278a4a2fc5f1206dc6bfbf5b10d76a468c0aedcc83e55"
+    },
+    {
+      "page": 3,
+      "level": "Intermedio",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · E14 · Calle 45",
+      "imageUrl": "./assets/stations/e14/architecture/I.jpg",
+      "width": 4243,
+      "height": 6000,
+      "crop": [
+        99,
+        0,
+        4144,
+        6000
+      ],
+      "rotation": 90,
+      "source": "PLANO INT E14 A.pdf",
+      "sourceSha256": "3fd5d06a1be69ec145dbd14698efa2cec9707d5ca312c4bc9843d7d70d999c83"
+    },
+    {
+      "page": 4,
+      "level": "Plataforma",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · E14 · Calle 45",
+      "imageUrl": "./assets/stations/e14/architecture/P.jpg",
+      "width": 4243,
+      "height": 6000,
+      "crop": [
+        105,
+        0,
+        4138,
+        6000
+      ],
+      "rotation": 90,
+      "source": "PLANO PLA E14 A.pdf",
+      "sourceSha256": "eb8f553671dfd0a187907d31e1cf50e15d08606a71db217cf6d966a20c665fc6"
+    }
+  ]
+}

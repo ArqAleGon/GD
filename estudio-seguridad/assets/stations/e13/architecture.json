@@ -1,0 +1,76 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "level": "Sótano",
+      "levelId": "2SCB_wEvLD9uWO8$uQSWQR",
+      "label": "Sótano · E13 · Calle 26",
+      "imageUrl": "./assets/stations/e13/architecture/B.jpg",
+      "width": 4243,
+      "height": 6000,
+      "crop": [
+        420,
+        0,
+        3823,
+        6000
+      ],
+      "rotation": 90,
+      "source": "PLANO SOTANO E13 A.pdf",
+      "sourceSha256": "5435fbeafd91ec0b6b3186d19ace46a084833025d6e67436cfe519b3c1fcccd1"
+    },
+    {
+      "page": 2,
+      "level": "Acceso",
+      "levelId": "10$eqGDcn23eaT8u_dzCf2",
+      "label": "Acceso · E13 · Calle 26",
+      "imageUrl": "./assets/stations/e13/architecture/A.jpg",
+      "width": 4243,
+      "height": 6000,
+      "crop": [
+        0,
+        289,
+        4243,
+        5420
+      ],
+      "rotation": 90,
+      "source": "PLANO ACCESO E13 A.pdf",
+      "sourceSha256": "fc76b2fbf1c230d384585bf78900a6173bccc39938f4fa44c8e94bea82a92e13"
+    },
+    {
+      "page": 3,
+      "level": "Intermedio",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · E13 · Calle 26",
+      "imageUrl": "./assets/stations/e13/architecture/I.jpg",
+      "width": 4243,
+      "height": 6000,
+      "crop": [
+        0,
+        325,
+        4243,
+        5350
+      ],
+      "rotation": 90,
+      "source": "PLANO INT E13 A.pdf",
+      "sourceSha256": "d63a39ddbd17e20705c245d3abde50c8f0197ae5ce8a751326edbd65aeed877f"
+    },
+    {
+      "page": 4,
+      "level": "Plataforma",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · E13 · Calle 26",
+      "imageUrl": "./assets/stations/e13/architecture/P.jpg",
+      "width": 4243,
+      "height": 6000,
+      "crop": [
+        0,
+        209,
+        4243,
+        5581
+      ],
+      "rotation": 90,
+      "source": "PLANO PLA E13 A.pdf",
+      "sourceSha256": "df67e13de9a8b73fb9bdecb508c9f75bb5669de86b1aca956e2919d49313cdb7"
+    }
+  ]
+}
