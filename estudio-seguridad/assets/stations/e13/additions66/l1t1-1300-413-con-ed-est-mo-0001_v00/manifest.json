@@ -1,0 +1,382 @@
+{
+  "station": "E13",
+  "source": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+  "sourceSha256": "6324442c1c53a3e43fc2abc4ea8c33b17e8fda456a78880c15330777dfb7ed5c",
+  "sourceSchema": "IFC2X3",
+  "converter": "IfcOpenShell 0.8.5",
+  "ifcLengthUnitToMetres": 1,
+  "files": [
+    {
+      "file": "e13-l1t1-1300-413-con-ed-est-mo-0001_v00-p001.glb.gz",
+      "source": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E13",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "c1f6707dc7b733ed529b73af8826cc63aae09158c3b32f61a73b4da1f6663283",
+      "compressedBytes": 380288,
+      "boundsGltfMetres": {
+        "min": [
+          100408.07105477445,
+          2558.5999992370603,
+          -101935.75700808609
+        ],
+        "max": [
+          100472.14406555964,
+          2616.3399999046324,
+          -101835.80379825288
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e13-l1t1-1300-413-con-ed-est-mo-0001_v00-p002.glb.gz",
+      "source": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E13",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "466dbf94b8b2a8e15ddfddf3bb47a2690d47242eef505abeede4f08479e2f8fb",
+      "compressedBytes": 172090,
+      "boundsGltfMetres": {
+        "min": [
+          100410.78526232754,
+          2551.5999992370603,
+          -101935.10961231576
+        ],
+        "max": [
+          100471.27309283384,
+          2616.4410130080873,
+          -101837.54828161455
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e13-l1t1-1300-413-con-ed-est-mo-0001_v00-p003.glb.gz",
+      "source": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E13",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 184,
+      "sha256": "a6ba106eab468fbbbbc5b0ff9534a9f5677bf9a441b6ef2ac101551c2e71fa79",
+      "compressedBytes": 69611,
+      "boundsGltfMetres": {
+        "min": [
+          100408.956202769,
+          2588.6,
+          -101935.0580490495
+        ],
+        "max": [
+          100472.1440649069,
+          2616.441013008088,
+          -101836.5454095894
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    }
+  ],
+  "expectedRepresentedElements": 1155,
+  "convertedElements": 1184,
+  "renderableElements": 1155,
+  "convertedOpeningElements": 29,
+  "cameraCandidates": 0,
+  "bounds": {
+    "min": [
+      100408.07105477445,
+      2551.5999992370603,
+      -101935.75700808609
+    ],
+    "max": [
+      100472.14406555964,
+      2616.441013008088,
+      -101835.80379825288
+    ]
+  },
+  "audit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 1.4551915228366852e-11,
+    "representedMissing": [],
+    "sourceWithoutGeometry": [
+      {
+        "ifcGlobalId": "1OJeCp539BjenBhCAm4$98",
+        "ifcExpressId": 136994,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4405185",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E13",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA DE CIMENTACIÓN",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "1OJeCp539BjenBhCAm4vYC",
+        "ifcExpressId": 139924,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4414725",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E13",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA NIVEL DE INTERMEDIO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "26669IqwjBmf6Au40GUpPx",
+        "ifcExpressId": 143680,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4415294",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E13",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA DE CIMENTACIÓN",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "26669IqwjBmf6Au40GUm8V",
+        "ifcExpressId": 146660,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4418394",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E13",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA DE CIMENTACIÓN",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "26669IqwjBmf6Au40GU_eL",
+        "ifcExpressId": 149640,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4424528",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E13",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA DE CIMENTACIÓN",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "26669IqwjBmf6Au40GU_rU",
+        "ifcExpressId": 152620,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4424731",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E13",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA NIVEL DE INTERMEDIO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "26669IqwjBmf6Au40GU_nB",
+        "ifcExpressId": 156240,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4424974",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E13",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA NIVEL DE INTERMEDIO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "26669IqwjBmf6Au40GU_y1",
+        "ifcExpressId": 159860,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4425284",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E13",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA NIVEL DE INTERMEDIO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "26669IqwjBmf6Au40GU_xj",
+        "ifcExpressId": 163480,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4425640",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E13",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA DE CIMENTACIÓN",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "26669IqwjBmf6Au40GU_67",
+        "ifcExpressId": 166588,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4425922",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E13",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA DE CIMENTACIÓN",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "26669IqwjBmf6Au40GU_2P",
+        "ifcExpressId": 169696,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4426204",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E13",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA DE CIMENTACIÓN",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "26669IqwjBmf6Au40GU_E0",
+        "ifcExpressId": 172804,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4426437",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E13",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA NIVEL DE INTERMEDIO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "26669IqwjBmf6Au40GU_B_",
+        "ifcExpressId": 176424,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4426683",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E13",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA NIVEL DE INTERMEDIO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "26669IqwjBmf6Au40GU_HY",
+        "ifcExpressId": 180044,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4427047",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E13",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA NIVEL DE INTERMEDIO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "1k$0rchaX5Xusc0SSD1U2I",
+        "ifcExpressId": 183664,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4428410",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E13",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA DE CIMENTACIÓN",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "1k$0rchaX5Xusc0SSD1VnG",
+        "ifcExpressId": 185700,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4429163",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E13",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA NIVEL DE INTERMEDIO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "1k$0rchaX5Xusc0SSD1Vf6",
+        "ifcExpressId": 189456,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4429575",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E13",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA NIVEL DE PLATAFORMA",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "3O5SVHoBb74g8ZtVwYkfYi",
+        "ifcExpressId": 214437,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:5197778",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-413-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E13",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA DE CIMENTACIÓN",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      }
+    ],
+    "overlapWithRecoveredStationMetres": [
+      64.07301078518503,
+      64.84101377102752,
+      99.9532098332129
+    ],
+    "triangles": 97134,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ],
+    "identicalIteratorShapesDeduplicated": 0
+  },
+  "seconds": 5.9,
+  "coordinateConvention": "glTF metres [IFC X, IFC Z, -IFC Y]; native placement preserved",
+  "simplification": false,
+  "nativeLevels": [
+    {
+      "id": "2FbxAANiv62egn90f3UtXP",
+      "name": "STR_LEVEL BASE _0.00",
+      "elevation": 0.0
+    },
+    {
+      "id": "2FbxAANiv62egn90f3UDd7",
+      "name": "PLANTA DE CIMENTACIÓN",
+      "elevation": 2591.2999999999997
+    },
+    {
+      "id": "2FbxAANiv62egn90f3UDd0",
+      "name": "PLANTA NIVEL DE INTERMEDIO",
+      "elevation": 2597.8999999999996
+    },
+    {
+      "id": "2FbxAANiv62egn90f3UDd1",
+      "name": "PLANTA NIVEL DE PLATAFORMA",
+      "elevation": 2606.64
+    },
+    {
+      "id": "2FbxAANiv62egn90f3UDd3",
+      "name": "PLANTA NIVEL DE CUBIERTA",
+      "elevation": 2613.24
+    }
+  ]
+}

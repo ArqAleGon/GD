@@ -1,0 +1,241 @@
+{
+  "station": "E14",
+  "source": "L1T1-1310-414-CON-ED-EST-MO-0001_V00.ifc",
+  "sourceSha256": "8b241394284185900a1ec49a8eddd0e19de26c3ca3472b27e72f83cf99ede8cb",
+  "sourceSchema": "IFC2X3",
+  "converter": "IfcOpenShell 0.8.5",
+  "ifcLengthUnitToMetres": 1,
+  "files": [
+    {
+      "file": "e14-l1t1-1310-414-con-ed-est-mo-0001_v00-p001.glb.gz",
+      "source": "L1T1-1310-414-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E14",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "3ee0e9eb41fbb4451940c5f7006e43d3c6ab594092fa6ad9ee90c8001c726240",
+      "compressedBytes": 3367969,
+      "boundsGltfMetres": {
+        "min": [
+          101031.82670253426,
+          2579.5470008850098,
+          -103890.48048410573
+        ],
+        "max": [
+          101093.21123202238,
+          2593.5072230221067,
+          -103783.28255962954
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e14-l1t1-1310-414-con-ed-est-mo-0001_v00-p002.glb.gz",
+      "source": "L1T1-1310-414-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E14",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "3d415f59131050a3e40a6874dbdb9fc32681530357bbf579d99718c5b3ed59e3",
+      "compressedBytes": 1767318,
+      "boundsGltfMetres": {
+        "min": [
+          101038.88997671964,
+          2579.279999999759,
+          -103890.38418349331
+        ],
+        "max": [
+          101093.37199797231,
+          2588.780136113998,
+          -103832.45626595725
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e14-l1t1-1310-414-con-ed-est-mo-0001_v00-p003.glb.gz",
+      "source": "L1T1-1310-414-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E14",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "2c95e6ae4ac2566c0e2d02b2d9c05a97b0d3826de61ed3851a2c7ea4d1243d98",
+      "compressedBytes": 3618877,
+      "boundsGltfMetres": {
+        "min": [
+          101031.44246310274,
+          2579.5499999999975,
+          -103889.27505536455
+        ],
+        "max": [
+          101092.73136674677,
+          2594.1447196149347,
+          -103779.27684927596
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e14-l1t1-1310-414-con-ed-est-mo-0001_v00-p004.glb.gz",
+      "source": "L1T1-1310-414-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E14",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "163220548dfb43a7bf0bdad3f145fd6c8432fb62b2bb7950911ad12c29c4a3e8",
+      "compressedBytes": 3304963,
+      "boundsGltfMetres": {
+        "min": [
+          101038.86667650173,
+          2579.2799999977324,
+          -103890.62372903792
+        ],
+        "max": [
+          101087.02408273646,
+          2594.1445316871223,
+          -103779.88598089018
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e14-l1t1-1310-414-con-ed-est-mo-0001_v00-p005.glb.gz",
+      "source": "L1T1-1310-414-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E14",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "901bc3859d3fd40709720543f53a958fe2427de9f1d41649aabd426b739f609d",
+      "compressedBytes": 2522667,
+      "boundsGltfMetres": {
+        "min": [
+          101039.93325096517,
+          2580.0000499999483,
+          -103888.78814424106
+        ],
+        "max": [
+          101093.38217093819,
+          2594.109501594561,
+          -103781.00173563974
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e14-l1t1-1310-414-con-ed-est-mo-0001_v00-p006.glb.gz",
+      "source": "L1T1-1310-414-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E14",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 339,
+      "sha256": "1fab793ce3125fee9436c85ac45963a8fa8baa29b9e2eee10f4880d60caba5f2",
+      "compressedBytes": 145422,
+      "boundsGltfMetres": {
+        "min": [
+          101032.42584365435,
+          2579.5469999999973,
+          -103888.98032980549
+        ],
+        "max": [
+          101092.78829809472,
+          2594.1445316871223,
+          -103780.7523451872
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    }
+  ],
+  "expectedRepresentedElements": 2839,
+  "convertedElements": 2839,
+  "renderableElements": 2839,
+  "convertedOpeningElements": 0,
+  "cameraCandidates": 0,
+  "bounds": {
+    "min": [
+      101031.44246310274,
+      2579.2799999977324,
+      -103890.62372903792
+    ],
+    "max": [
+      101093.38217093819,
+      2594.1447196149347,
+      -103779.27684927596
+    ]
+  },
+  "audit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 2.607333793314126e-10,
+    "representedMissing": [],
+    "sourceWithoutGeometry": [],
+    "overlapWithRecoveredStationMetres": [
+      61.93970783545228,
+      14.864719617202354,
+      111.3468797619571
+    ],
+    "triangles": 1455978,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ],
+    "identicalIteratorShapesDeduplicated": 0
+  },
+  "seconds": 84.64,
+  "coordinateConvention": "glTF metres [IFC X, IFC Z, -IFC Y]; native placement preserved",
+  "simplification": false,
+  "nativeLevels": [
+    {
+      "id": "2pC8a4AQ52He_hyBpX9w1d",
+      "name": "NIVEL ACCESO P.",
+      "elevation": 2581.0299999999975
+    },
+    {
+      "id": "2pC8a4AQ52He_hyBpX9u1B",
+      "name": "NIVEL CUBIERTA__",
+      "elevation": 2584.9469999999974
+    },
+    {
+      "id": "2pC8a4AQ52He_hyBpX9eTU",
+      "name": "STR_LEVEL BASE _0.02",
+      "elevation": 2589.099999999997
+    },
+    {
+      "id": "2pC8a4AQ52He_hyBpX9g7o",
+      "name": "STR_LEVEL BASE _PLATAFORMA",
+      "elevation": 2589.599999999997
+    },
+    {
+      "id": "2pC8a4AQ52He_hyBpX8B1k",
+      "name": "NIVEL PLATAFORMA P.",
+      "elevation": 2589.782699999997
+    },
+    {
+      "id": "2pC8a4AQ52He_hyBpX9erQ",
+      "name": "STR_LEVEL_CUBIERTA PASARELA",
+      "elevation": 2592.7469999999976
+    },
+    {
+      "id": "2pC8a4AQ52He_hyBpXMh6E",
+      "name": "NIVEL_CUBIERTA_",
+      "elevation": 2593.573103532373
+    },
+    {
+      "id": "2pC8a4AQ52He_hyBpX8B4g",
+      "name": "NIVEL CUBIERTA P.",
+      "elevation": 2593.714531710964
+    },
+    {
+      "id": "2pC8a4AQ52He_hyBpXMMUw",
+      "name": "NIVEL LUCARNA",
+      "elevation": 2594.1445317109637
+    },
+    {
+      "id": "2pC8a4AQ52He_hyBpX8B3X",
+      "name": "STR_LEVEL ROOF",
+      "elevation": 2599.4699999999984
+    }
+  ]
+}
