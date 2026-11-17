@@ -1,0 +1,141 @@
+{
+  "station": "E07",
+  "source": "L1T1-2430-407-CON-ED-EST-MO-0001_V00.ifc",
+  "sourceSha256": "db25ffb6e5a9a3dc0aebd8b6ce1919a5fe7418ebe03436413544a810e0413c29",
+  "sourceSchema": "IFC2X3",
+  "converter": "IfcOpenShell 0.8.5",
+  "ifcLengthUnitToMetres": 1,
+  "files": [
+    {
+      "file": "e07-l1t1-2430-407-con-ed-est-mo-0001_v00-p001.glb.gz",
+      "source": "L1T1-2430-407-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E07",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 378,
+      "sha256": "968471f5b9288a60e63daf74b2f11f2e52c67691e9ac9a98db89e1a29f427185",
+      "compressedBytes": 408772,
+      "boundsGltfMetres": {
+        "min": [
+          94280.01952073548,
+          2535.7000003814687,
+          -101439.84790834178
+        ],
+        "max": [
+          94312.4356069815,
+          2563.66183733336,
+          -101411.36733401023
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    }
+  ],
+  "expectedRepresentedElements": 368,
+  "convertedElements": 378,
+  "renderableElements": 368,
+  "convertedOpeningElements": 10,
+  "cameraCandidates": 0,
+  "bounds": {
+    "min": [
+      94280.01952073548,
+      2535.7000003814687,
+      -101439.84790834178
+    ],
+    "max": [
+      94312.4356069815,
+      2563.66183733336,
+      -101411.36733401023
+    ]
+  },
+  "audit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 1.4551915228366852e-11,
+    "representedMissing": [],
+    "sourceWithoutGeometry": [
+      {
+        "ifcGlobalId": "1RmYmrLhjDWRgxhPA7kgOX",
+        "ifcExpressId": 1693,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:3312456",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2430-407-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E07",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA LOCALIZACIÓN MUROS Y COLUMNAS BOX",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "1RmYmrLhjDWRgxhPA7kgOw",
+        "ifcExpressId": 4136,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:3312467",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2430-407-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E07",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA LOCALIZACIÓN MUROS Y COLUMNAS BOX",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "1RmYmrLhjDWRgxhPA7kgOt",
+        "ifcExpressId": 6588,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:3312478",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2430-407-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E07",
+        "discipline": "EST",
+        "ifcStorey": "PLANTA LOCALIZACIÓN MUROS Y COLUMNAS BOX",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      }
+    ],
+    "overlapWithRecoveredStationMetres": [
+      31.89050241858058,
+      27.9618369518912,
+      28.121805976275937
+    ],
+    "triangles": 48787,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ],
+    "identicalIteratorShapesDeduplicated": 0
+  },
+  "seconds": 4.71,
+  "coordinateConvention": "glTF metres [IFC X, IFC Z, -IFC Y]; native placement preserved",
+  "simplification": false,
+  "nativeLevels": [
+    {
+      "id": "2QdxbCNuX6FBgsUi8BuEnU",
+      "name": "NIVEL DE CIMENTACIÓN",
+      "elevation": 2550.829999999999
+    },
+    {
+      "id": "2QdxbCNuX6FBgsUi8BuKfv",
+      "name": "PLANTA INTERMEDIO",
+      "elevation": 2564.3999999999987
+    },
+    {
+      "id": "2QdxbCNuX6FBgsUi8BurG4",
+      "name": "STR_PL_00_BASEMENT_",
+      "elevation": 2550.0
+    },
+    {
+      "id": "2QdxbCNuX6FBgsUi8BuKfz",
+      "name": "PLANTA LOCALIZACIÓN MUROS Y COLUMNAS BOX",
+      "elevation": 2556.599999999999
+    },
+    {
+      "id": "2QdxbCNuX6FBgsUi8BuKf_",
+      "name": "STR_LEVEL BASE _0.04",
+      "elevation": 2560.691068288601
+    }
+  ]
+}
