@@ -1,0 +1,165 @@
+{
+  "station": "E12",
+  "source": "L1T1-1330-412-CON-ED-EST-MO-0004_VCC.ifc",
+  "sourceSha256": "e6213b8e7f60dfa83e533aef79a20615daa3f1ceaa234713a24c547af2b053cd",
+  "sourceSchema": "IFC2X3",
+  "converter": "IfcOpenShell 0.8.5",
+  "ifcLengthUnitToMetres": 1,
+  "files": [
+    {
+      "file": "e12-l1t1-1330-412-con-ed-est-mo-0004_vcc-p001.glb.gz",
+      "source": "L1T1-1330-412-CON-ED-EST-MO-0004_VCC.ifc",
+      "section": "E12",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 470,
+      "sha256": "09841732650e77875f2d53253ec724960e8bab859c76bf2724034ed19f5ab5ab",
+      "compressedBytes": 1450081,
+      "boundsGltfMetres": {
+        "min": [
+          99622.4975918582,
+          2586.349999999999,
+          -100841.96551203933
+        ],
+        "max": [
+          99693.59745493357,
+          2599.6024587983275,
+          -100767.74914352754
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    }
+  ],
+  "expectedRepresentedElements": 456,
+  "convertedElements": 470,
+  "renderableElements": 456,
+  "convertedOpeningElements": 14,
+  "cameraCandidates": 0,
+  "bounds": {
+    "min": [
+      99622.4975918582,
+      2586.349999999999,
+      -100841.96551203933
+    ],
+    "max": [
+      99693.59745493357,
+      2599.6024587983275,
+      -100767.74914352754
+    ]
+  },
+  "audit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 6.661338147750939e-16,
+    "representedMissing": [],
+    "sourceWithoutGeometry": [],
+    "overlapWithRecoveredStationMetres": [
+      71.09986307536019,
+      13.252458798328462,
+      74.21636851178482
+    ],
+    "triangles": 194034,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ],
+    "identicalIteratorShapesDeduplicated": 0,
+    "nonSurfaceRepresentations": [
+      {
+        "ifcGlobalId": "0EnPk34ND2Pw0tUNeDiCjd",
+        "ifcExpressId": 891321,
+        "ifcType": "IfcFastener",
+        "ifcName": "",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1330-412-CON-ED-EST-MO-0004_VCC.ifc",
+        "ifcSection": "E12",
+        "discipline": "EST",
+        "ifcStorey": "STR_PL_0.00",
+        "isCamera": false,
+        "reason": "IfcFastener Weld represented only by IfcPolyline in GeometricCurveSet; no surface or solid in IFC",
+        "representationExpressId": 891332
+      }
+    ],
+    "nativeOverlapWithRecoveredStationMetres": [
+      71.09986307536019,
+      -2527.61754120167,
+      74.21636851178482
+    ]
+  },
+  "seconds": 12.61,
+  "coordinateConvention": "glTF metres [IFC X, IFC Z, -IFC Y]; native placement preserved",
+  "simplification": false,
+  "nativeLevels": [
+    {
+      "id": "05XyA1gxL1CQo8PBLcCP1H",
+      "name": "STR_PL_0.00",
+      "elevation": -1.90000000000112
+    },
+    {
+      "id": "05XyA1gxL1CQo8PBLcC_a8",
+      "name": "STR_PL_NC2",
+      "elevation": -0.75
+    },
+    {
+      "id": "05XyA1gxL1CQo8PBLcDvc2",
+      "name": "STR_PL_NC1",
+      "elevation": -0.35
+    },
+    {
+      "id": "05XyA1gxL1CQo8PBLcC_WY",
+      "name": "STR_PL_1.00_ACCESO",
+      "elevation": 0.0
+    },
+    {
+      "id": "05XyA1gxL1CQo8PBLcDvIa",
+      "name": "STR_PL_2.00",
+      "elevation": 3.09999999999999
+    },
+    {
+      "id": "05XyA1gxL1CQo8PBLcD9kU",
+      "name": "STR_PL_3.10_CUBIERTA",
+      "elevation": 6.65000000000043
+    },
+    {
+      "id": "05XyA1gxL1CQo8PBLcD9Y8",
+      "name": "STR_PL_3.20_CUBIERTA",
+      "elevation": 8.10000000000006
+    },
+    {
+      "id": "05XyA1gxL1CQo8PBLcCyk9",
+      "name": "STR_PL_3.30_CUBIERTA",
+      "elevation": 10.0
+    }
+  ],
+  "nativeBounds": {
+    "min": [
+      99622.4975918582,
+      -2.90000000000112,
+      -100841.96551203933
+    ],
+    "max": [
+      99693.59745493357,
+      10.352458798327355,
+      -100767.74914352754
+    ]
+  },
+  "renderDatumCorrection": {
+    "translationGltfMetres": [
+      0,
+      2589.25,
+      0
+    ],
+    "reason": "IFC site RefElevation is 2589.25 m and local access is 0 m, matching station access 2589.25 m; original IFC unchanged.",
+    "evidence": [
+      {
+        "ifcSiteRefElevation": 2589.25,
+        "sourceAccessElevation": 0.0,
+        "referenceAccessElevation": 2589.25,
+        "sourceSiteExpressId": 891359
+      }
+    ]
+  }
+}

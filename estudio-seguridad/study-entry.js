@@ -1,2 +1,2 @@
-import {station} from './study-stations.js?v=20261117-e04spaces64';
-await import('./study.js?v=20261117-e04spaces64');
+import {station} from './study-stations.js?v=20261117-e1112models65';
+await import('./study.js?v=20261117-e1112models65');

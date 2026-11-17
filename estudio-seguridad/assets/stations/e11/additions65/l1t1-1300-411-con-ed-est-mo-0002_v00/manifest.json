@@ -1,0 +1,508 @@
+{
+  "station": "E11",
+  "source": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+  "sourceSha256": "0524f6e667919731f11f1dd9fe2bd0b913f0361424183c81996da38223168770",
+  "sourceSchema": "IFC2X3",
+  "converter": "IfcOpenShell 0.8.5",
+  "ifcLengthUnitToMetres": 1,
+  "files": [
+    {
+      "file": "e11-l1t1-1300-411-con-ed-est-mo-0002_v00-p001.glb.gz",
+      "source": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+      "section": "E11",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "1eb6c378fb17d6dcfee5c7eb3a1c635c8f1ba8c39af42b3b28663805a3db990a",
+      "compressedBytes": 344015,
+      "boundsGltfMetres": {
+        "min": [
+          98886.27243592405,
+          2545.5,
+          -99871.70181083484
+        ],
+        "max": [
+          98986.17765992743,
+          2597.240001678467,
+          -99753.83424460905
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e11-l1t1-1300-411-con-ed-est-mo-0002_v00-p002.glb.gz",
+      "source": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+      "section": "E11",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "345431f6b56414bff23412a1361a2aa73e55d245e2871cc9b454cf0b5b8250ab",
+      "compressedBytes": 193648,
+      "boundsGltfMetres": {
+        "min": [
+          98888.7350759033,
+          2545.5,
+          -99870.01115358545
+        ],
+        "max": [
+          98985.4578263446,
+          2600.4399999046313,
+          -99753.98740338221
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e11-l1t1-1300-411-con-ed-est-mo-0002_v00-p003.glb.gz",
+      "source": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+      "section": "E11",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "8c34ce8a3dfbe796944642efb4bbaef47717a43dc3b09e3ed8ef922f8a4f9474",
+      "compressedBytes": 165735,
+      "boundsGltfMetres": {
+        "min": [
+          98887.15736401564,
+          2520.3500007629395,
+          -99871.7018113395
+        ],
+        "max": [
+          98984.1864545638,
+          2598.3680958681093,
+          -99760.52058366331
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e11-l1t1-1300-411-con-ed-est-mo-0002_v00-p004.glb.gz",
+      "source": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+      "section": "E11",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "36485a09bedb4276555947c962b4498837f350e01bb84af3e22f82e0ab98a6d4",
+      "compressedBytes": 210503,
+      "boundsGltfMetres": {
+        "min": [
+          98886.83581768651,
+          2521.8500015258796,
+          -99871.70184627357
+        ],
+        "max": [
+          98984.62942173345,
+          2597.2399999985087,
+          -99754.8330967921
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e11-l1t1-1300-411-con-ed-est-mo-0002_v00-p005.glb.gz",
+      "source": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+      "section": "E11",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 235,
+      "sha256": "63be4528391001a95782fabe4e49359ffa8b7f57c7ae6d9b3ee6303415d27e89",
+      "compressedBytes": 67681,
+      "boundsGltfMetres": {
+        "min": [
+          98886.27243592405,
+          2561.53039124012,
+          -99862.83086122757
+        ],
+        "max": [
+          98984.5329579469,
+          2600.3127638392248,
+          -99753.83438223107
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    }
+  ],
+  "expectedRepresentedElements": 2173,
+  "convertedElements": 2235,
+  "renderableElements": 2173,
+  "convertedOpeningElements": 62,
+  "cameraCandidates": 0,
+  "bounds": {
+    "min": [
+      98886.27243592405,
+      2520.3500007629395,
+      -99871.70184627357
+    ],
+    "max": [
+      98986.17765992743,
+      2600.4399999046313,
+      -99753.83424460905
+    ]
+  },
+  "audit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 1.4551915228366852e-11,
+    "representedMissing": [],
+    "sourceWithoutGeometry": [
+      {
+        "ifcGlobalId": "1giNv1LOH7bAK9$A_Rl072",
+        "ifcExpressId": 148917,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:3930250",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_04_CUBIERTA",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "1N9d3vt1nFvx$h6PN7KF1D",
+        "ifcExpressId": 167306,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4056094",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_02_INTERMEDIO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "1N9d3vt1nFvx$h6PN7KF0V",
+        "ifcExpressId": 170895,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4056140",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_02_INTERMEDIO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "1N9d3vt1nFvx$h6PN7KFaG",
+        "ifcExpressId": 174483,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4058435",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_01_ACCESO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "3rfkK$UWf3dvup2_JeNzlg",
+        "ifcExpressId": 180331,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4142154",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_02_INTERMEDIO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "35Xgj6BD5EiAQ0phMf46Ai",
+        "ifcExpressId": 187796,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4156025",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_02_INTERMEDIO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "2vFq7Bx21A1ugwz6_lSGYd",
+        "ifcExpressId": 191770,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4162862",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_01_ACCESO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "2vFq7Bx21A1ugwz6_lSGZ2",
+        "ifcExpressId": 195390,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4162891",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_02_INTERMEDIO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "28e8hjnfH4LhyJoBlSFjjm",
+        "ifcExpressId": 200839,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4540543",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_00_CIMENTACION A",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "3nMs1Z7xvAc92v3xn9K1mL",
+        "ifcExpressId": 204138,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4553031",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_01_ACCESO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "19jrk5_OT1uB1sRveuhr9L",
+        "ifcExpressId": 208775,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4561148",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_01_ACCESO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "19jrk5_OT1uB1sRveuhrEa",
+        "ifcExpressId": 212201,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4561165",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_01_ACCESO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "3RlfMeiFD40vgZop9rbAg3",
+        "ifcExpressId": 225428,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4759256",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_03_PLATAFORMA",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "0Jm5s4Bo53cAVEIEQCH9m8",
+        "ifcExpressId": 231332,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4814693",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_02_INTERMEDIO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "1glWK5Qz57$v8rBgIoDmgx",
+        "ifcExpressId": 240458,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4823489",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_01_ACCESO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "3zJ0GGJVzA1fjjtHYYMFhO",
+        "ifcExpressId": 244336,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:4825587",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_00_CIMENTACION A",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "3tp5YKiDn8mwXhjLUjuq4r",
+        "ifcExpressId": 275921,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:5635149",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_02_INTERMEDIO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "2r7NKy0UH3gBWXcvgHUSMH",
+        "ifcExpressId": 288789,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:6476050",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_01_ACCESO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "2r7NKy0UH3gBWXcvgHUSMY",
+        "ifcExpressId": 291943,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:6476065",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_01_ACCESO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "2r7NKy0UH3gBWXcvgHUSMp",
+        "ifcExpressId": 295097,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:6476080",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_01_ACCESO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "1fWC7cz$D3pQZvaY3_GrYg",
+        "ifcExpressId": 302636,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:6668918",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_01_ACCESO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "0xGHF4WOnEBQ6v7BtxotZM",
+        "ifcExpressId": 305969,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:6798623",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_01_ACCESO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "3i4q00aVD8su00IHYQaqtj",
+        "ifcExpressId": 366289,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:8795383",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-411-CON-ED-EST-MO-0002_V00.ifc",
+        "ifcSection": "E11",
+        "discipline": "EST",
+        "ifcStorey": "ARQ_PL_02_INTERMEDIO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      }
+    ],
+    "overlapWithRecoveredStationMetres": [
+      99.90522400337795,
+      76.7699991416921,
+      117.86760166451859
+    ],
+    "triangles": 138883,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ],
+    "identicalIteratorShapesDeduplicated": 0
+  },
+  "seconds": 8.32,
+  "coordinateConvention": "glTF metres [IFC X, IFC Z, -IFC Y]; native placement preserved",
+  "simplification": false,
+  "nativeLevels": [
+    {
+      "id": "0D8Tr$CFvF6hNej$ByOixT",
+      "name": "ARQ_PL_00_CIMENTACION B",
+      "elevation": 2563.4
+    },
+    {
+      "id": "0D8Tr$CFvF6hNej$ByR0if",
+      "name": "ARQ_PL_00_SR2",
+      "elevation": 2567.2000000000007
+    },
+    {
+      "id": "0D8Tr$CFvF6hNej$ByOX2f",
+      "name": "ARQ_PL_00_CIMENTACION A",
+      "elevation": 2567.7000000000007
+    },
+    {
+      "id": "0D8Tr$CFvF6hNej$ByOX2s",
+      "name": "ARQ_PL_01_ACCESO",
+      "elevation": 2575.4
+    },
+    {
+      "id": "0D8Tr$CFvF6hNej$ByOTsc",
+      "name": "STR_PL_00_BASE",
+      "elevation": 0.0
+    },
+    {
+      "id": "0D8Tr$CFvF6hNej$ByOX2r",
+      "name": "ARQ_PL_02_INTERMEDIO",
+      "elevation": 2582.0
+    },
+    {
+      "id": "0D8Tr$CFvF6hNej$ByOX2q",
+      "name": "ARQ_PL_03_PLATAFORMA",
+      "elevation": 2590.739999999999
+    },
+    {
+      "id": "0D8Tr$CFvF6hNej$ByOX2e",
+      "name": "ARQ_PL_04_CUBIERTA",
+      "elevation": 2597.339999999999
+    }
+  ]
+}
