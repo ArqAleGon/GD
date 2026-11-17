@@ -1,0 +1,267 @@
+{
+  "station": "E14",
+  "source": "L1T1-2320-588-CON-ED-EST-MO-0001_V00.ifc",
+  "sourceSha256": "298f05881608bd9651f968c6a8e69b1767ac215ca19e2fe7217e8d73be8a4a30",
+  "sourceSchema": "IFC2X3",
+  "converter": "IfcOpenShell 0.8.5",
+  "ifcLengthUnitToMetres": 1,
+  "files": [
+    {
+      "file": "e14-l1t1-2320-588-con-ed-est-mo-0001_v00-p001.glb.gz",
+      "source": "L1T1-2320-588-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E14",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "70464b6b103fa3d42bb880a811e188aec66f8c9b3b96c5b9c4f6b0bcb650d148",
+      "compressedBytes": 4203911,
+      "boundsGltfMetres": {
+        "min": [
+          101044.84666961111,
+          2570.2654647903423,
+          -103979.93697358099
+        ],
+        "max": [
+          101091.2257666223,
+          2578.101899989126,
+          -103763.29689821598
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e14-l1t1-2320-588-con-ed-est-mo-0001_v00-p002.glb.gz",
+      "source": "L1T1-2320-588-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E14",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "2e11739b30a0dbedebda4476c3531867aa495891a3beaa7e0cefb1342edf283d",
+      "compressedBytes": 1681124,
+      "boundsGltfMetres": {
+        "min": [
+          101045.31236931184,
+          2569.741449404793,
+          -103989.61530715824
+        ],
+        "max": [
+          101093.44312267985,
+          2578.103427375527,
+          -103763.76259877087
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e14-l1t1-2320-588-con-ed-est-mo-0001_v00-p003.glb.gz",
+      "source": "L1T1-2320-588-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E14",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "3a86fa732fde21b8835ac67d951c86c04a4cac28ccf6d0e54eaf51c6471faf62",
+      "compressedBytes": 3895338,
+      "boundsGltfMetres": {
+        "min": [
+          101045.4663413587,
+          2571.2070318234078,
+          -103988.80486691739
+        ],
+        "max": [
+          101092.58073717904,
+          2578.10537339395,
+          -103764.10586929969
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e14-l1t1-2320-588-con-ed-est-mo-0001_v00-p004.glb.gz",
+      "source": "L1T1-2320-588-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E14",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "e352eaba270242d9eb797786e9bf8e1e2700f16f4e33e91ff20b6aede0c289f7",
+      "compressedBytes": 1338502,
+      "boundsGltfMetres": {
+        "min": [
+          101045.46389692515,
+          2572.08791775081,
+          -103981.17783835332
+        ],
+        "max": [
+          101092.79503985675,
+          2578.101899989126,
+          -103771.78299208438
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e14-l1t1-2320-588-con-ed-est-mo-0001_v00-p005.glb.gz",
+      "source": "L1T1-2320-588-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E14",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "aeb6b358388c9538e6c24ff74ebde9dee48a364491ae2a237434bdbc8fa1dbbf",
+      "compressedBytes": 441817,
+      "boundsGltfMetres": {
+        "min": [
+          101045.5474645109,
+          2571.097370347642,
+          -103980.97816882134
+        ],
+        "max": [
+          101092.58170871479,
+          2577.9591183634107,
+          -103763.99549482207
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e14-l1t1-2320-588-con-ed-est-mo-0001_v00-p006.glb.gz",
+      "source": "L1T1-2320-588-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E14",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "5f66f56fbcbb14b8eb62914a243d50ee13916598f08983fb56dde435dad22987",
+      "compressedBytes": 1299198,
+      "boundsGltfMetres": {
+        "min": [
+          101050.00224617857,
+          2571.2832384624344,
+          -103979.82470063171
+        ],
+        "max": [
+          101091.30264499785,
+          2577.941904067993,
+          -103772.96395385345
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e14-l1t1-2320-588-con-ed-est-mo-0001_v00-p007.glb.gz",
+      "source": "L1T1-2320-588-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E14",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "fd1a4c469f99e96f4cda1e4c59dcba40732904c56ab825790510b7440d5dec94",
+      "compressedBytes": 135226,
+      "boundsGltfMetres": {
+        "min": [
+          101045.68795095742,
+          2572.413808822632,
+          -103980.18452683512
+        ],
+        "max": [
+          101091.27613639817,
+          2577.940572206984,
+          -103772.80084298048
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e14-l1t1-2320-588-con-ed-est-mo-0001_v00-p008.glb.gz",
+      "source": "L1T1-2320-588-CON-ED-EST-MO-0001_V00.ifc",
+      "section": "E14",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 225,
+      "sha256": "54df1a91752113f206a9e1bd4420c9dfe108ee84bb7bab42d4d5d12cb14cf646",
+      "compressedBytes": 452697,
+      "boundsGltfMetres": {
+        "min": [
+          101046.32769981511,
+          2572.024199999998,
+          -103980.96775590933
+        ],
+        "max": [
+          101092.8024135493,
+          2578.101899989126,
+          -103773.20464384521
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    }
+  ],
+  "expectedRepresentedElements": 3724,
+  "convertedElements": 3725,
+  "renderableElements": 3723,
+  "convertedOpeningElements": 2,
+  "cameraCandidates": 0,
+  "bounds": {
+    "min": [
+      101044.84666961111,
+      2569.741449404793,
+      -103989.61530715824
+    ],
+    "max": [
+      101093.44312267985,
+      2578.10537339395,
+      -103763.29689821598
+    ]
+  },
+  "audit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 3.9284677386278356e-10,
+    "representedMissing": [],
+    "sourceWithoutGeometry": [],
+    "overlapWithRecoveredStationMetres": [
+      48.59645306873426,
+      8.363923989156774,
+      160.66319003916578
+    ],
+    "triangles": 1431778,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ],
+    "identicalIteratorShapesDeduplicated": 0,
+    "sourceAxisOnlyElements": [
+      {
+        "ifcGlobalId": "3coKwOkEf8Rw9kWvEt00yE",
+        "ifcExpressId": 5547336,
+        "ifcType": "IfcBeam",
+        "ifcName": "STR_SFR_STEEL-BEAM-ROOF:STR_SFR_STEEL-BEAM-ROOF_IPE-160:4138448",
+        "ifcTypeName": "STR_SFR_STEEL-BEAM-ROOF_IPE-160",
+        "ifcSource": "L1T1-2320-588-CON-ED-EST-MO-0001_V00.ifc",
+        "ifcSection": "E14",
+        "discipline": "EST",
+        "ifcStorey": "STR_PL_02_PLATAFORMA_BRT-I",
+        "isCamera": false,
+        "reason": "Source representation #5547324 is Axis/MappedRepresentation; mapped #5547316 is Axis/Curve3D only. No Body or solid in source IFC."
+      }
+    ]
+  },
+  "seconds": 139.25,
+  "coordinateConvention": "glTF metres [IFC X, IFC Z, -IFC Y]; native placement preserved",
+  "simplification": false,
+  "nativeLevels": [
+    {
+      "id": "1S27nSu2vFyApnBgTwO5GX",
+      "name": "STR_PL_01_CIMENTACIÓN",
+      "elevation": 2571.949999999998
+    },
+    {
+      "id": "1S27nSu2vFyApnBgTwOfUO",
+      "name": "STR_PL_02_PLATAFORMA_BRT-I",
+      "elevation": 2574.3999999999983
+    },
+    {
+      "id": "1S27nSu2vFyApnBgTwOfHE",
+      "name": "STR_PL_03_CUBIERTA_BRT",
+      "elevation": 2577.782999999998
+    }
+  ]
+}
