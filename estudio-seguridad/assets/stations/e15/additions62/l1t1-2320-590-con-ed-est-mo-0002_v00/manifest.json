@@ -1,0 +1,91 @@
+{
+  "station": "E15",
+  "source": "L1T1-2320-590-CON-ED-EST-MO-0002_V00.ifc",
+  "sourceSha256": "b5e15538c7ec5c8374c31ad021fea4a99a8e175e36c7f59a122eb984f4654175",
+  "sourceSchema": "IFC2X3",
+  "converter": "IfcOpenShell 0.8.5",
+  "ifcLengthUnitToMetres": 1,
+  "files": [
+    {
+      "file": "e15-l1t1-2320-590-con-ed-est-mo-0002_v00-p001.glb.gz",
+      "source": "L1T1-2320-590-CON-ED-EST-MO-0002_V00.ifc",
+      "section": "E15",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 263,
+      "sha256": "1358cc3c0078ced4d22784088a55f5703cf0ef0c153b59429bca205eca97aedf",
+      "compressedBytes": 1788823,
+      "boundsGltfMetres": {
+        "min": [
+          101398.26516951452,
+          2567.471007709976,
+          -105785.38401676776
+        ],
+        "max": [
+          101412.59923308714,
+          2580.2000007629395,
+          -105743.33629807495
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    }
+  ],
+  "expectedRepresentedElements": 263,
+  "convertedElements": 263,
+  "renderableElements": 263,
+  "convertedOpeningElements": 0,
+  "cameraCandidates": 0,
+  "bounds": {
+    "min": [
+      101398.26516951452,
+      2567.471007709976,
+      -105785.38401676776
+    ],
+    "max": [
+      101412.59923308714,
+      2580.2000007629395,
+      -105743.33629807495
+    ]
+  },
+  "audit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 1.4551915228366852e-11,
+    "representedMissing": [],
+    "sourceWithoutGeometry": [],
+    "overlapWithRecoveredStationMetres": [
+      14.334063572619925,
+      12.728993052963233,
+      42.047718692803755
+    ],
+    "triangles": 164218,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ],
+    "identicalIteratorShapesDeduplicated": 0
+  },
+  "seconds": 9.92,
+  "coordinateConvention": "glTF metres [IFC X, IFC Z, -IFC Y]; native placement preserved",
+  "simplification": false,
+  "nativeLevels": [
+    {
+      "id": "3dEJmxuZf5sQc3h4Q3WHu$",
+      "name": "STR_PL_01_CIMENTACIÓN",
+      "elevation": 2566.717999999996
+    },
+    {
+      "id": "3dEJmxuZf5sQc3h4Q3Wzs6",
+      "name": "STR_PL_02_PLATAFORMA_BRT-I",
+      "elevation": 2569.167999999996
+    },
+    {
+      "id": "3dEJmxuZf5sQc3h4Q3WzvG",
+      "name": "STR_PL_03_CUBIERTA_BRT",
+      "elevation": 2572.550999999996
+    }
+  ]
+}

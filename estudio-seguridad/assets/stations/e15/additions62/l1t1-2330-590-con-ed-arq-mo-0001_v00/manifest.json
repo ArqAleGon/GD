@@ -1,0 +1,269 @@
+{
+  "station": "E15",
+  "source": "L1T1-2330-590-CON-ED-ARQ-MO-0001_V00.ifc",
+  "sourceSha256": "71099293b4735585f123f1b6124bfa063eae1c2873ff11bff6a265c9af51b952",
+  "sourceSchema": "IFC2X3",
+  "converter": "IfcOpenShell 0.8.5",
+  "ifcLengthUnitToMetres": 1,
+  "files": [
+    {
+      "file": "e15-l1t1-2330-590-con-ed-arq-mo-0001_v00-p001.glb.gz",
+      "source": "L1T1-2330-590-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E15",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "96779dd7f25592a768d70a267e44397c821feffd8c2f91eb70c4f6febc499a15",
+      "compressedBytes": 831440,
+      "boundsGltfMetres": {
+        "min": [
+          101382.1404437623,
+          2568.0654123001095,
+          -105877.82000742188
+        ],
+        "max": [
+          101429.01092611848,
+          2573.678039657261,
+          -105652.34134059548
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e15-l1t1-2330-590-con-ed-arq-mo-0001_v00-p002.glb.gz",
+      "source": "L1T1-2330-590-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E15",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "6670d76b732d1ca6e70cffcf1354a0a0a025ae0b91bd2d79b99362c3ba60ca85",
+      "compressedBytes": 3484662,
+      "boundsGltfMetres": {
+        "min": [
+          101382.06160023203,
+          2568.8484018865292,
+          -105877.9454673931
+        ],
+        "max": [
+          101429.08447632355,
+          2576.692321405748,
+          -105652.31446589669
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e15-l1t1-2330-590-con-ed-arq-mo-0001_v00-p003.glb.gz",
+      "source": "L1T1-2330-590-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E15",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "b17839c652bbfae4581b2f84d9f3f64cb9b1c2ef47fa399ed1f8c712eef17f87",
+      "compressedBytes": 4849248,
+      "boundsGltfMetres": {
+        "min": [
+          101383.42743165974,
+          2567.941599999998,
+          -105878.13782722167
+        ],
+        "max": [
+          101457.14977078307,
+          2574.3894000495466,
+          -105661.49547811555
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e15-l1t1-2330-590-con-ed-arq-mo-0001_v00-p004.glb.gz",
+      "source": "L1T1-2330-590-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E15",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 500,
+      "sha256": "7466c18db4069d9d174b40631656c194de9cbc47859849f4fa4f3ae8f23c06c9",
+      "compressedBytes": 4231554,
+      "boundsGltfMetres": {
+        "min": [
+          101382.03616541137,
+          2567.9473214969894,
+          -105884.90751972605
+        ],
+        "max": [
+          101457.15398975025,
+          2580.04299999809,
+          -105645.28274591119
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    },
+    {
+      "file": "e15-l1t1-2330-590-con-ed-arq-mo-0001_v00-p005.glb.gz",
+      "source": "L1T1-2330-590-CON-ED-ARQ-MO-0001_V00.ifc",
+      "section": "E15",
+      "discipline": "ARQ",
+      "role": "detail",
+      "converted": 14,
+      "sha256": "8216ee9ea46b8d0257dd7dc0b87e8876582c41f6b1c05eb233e24ea6cbb4c117",
+      "compressedBytes": 31236,
+      "boundsGltfMetres": {
+        "min": [
+          101390.70196190878,
+          2568.901043847385,
+          -105863.5546812028
+        ],
+        "max": [
+          101420.40991213781,
+          2571.6946916251873,
+          -105666.58857985324
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    }
+  ],
+  "expectedRepresentedElements": 1863,
+  "convertedElements": 2014,
+  "renderableElements": 1863,
+  "convertedOpeningElements": 151,
+  "cameraCandidates": 0,
+  "bounds": {
+    "min": [
+      101382.03616541137,
+      2567.941599999998,
+      -105884.90751972605
+    ],
+    "max": [
+      101457.15398975025,
+      2580.04299999809,
+      -105645.28274591119
+    ]
+  },
+  "audit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 1.4551915228366852e-11,
+    "representedMissing": [],
+    "sourceWithoutGeometry": [
+      {
+        "ifcGlobalId": "3nq9x5mZP3R8E2_Kvvd0Rk",
+        "ifcExpressId": 5337632,
+        "ifcType": "IfcRoof",
+        "ifcName": "Basic Roof:ARC_ROF_ALUZINC_SINGLE-525mm-e=0.6mm:3687594",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2330-590-CON-ED-ARQ-MO-0001_V00.ifc",
+        "ifcSection": "E15",
+        "discipline": "ARQ",
+        "ifcStorey": "ARC_PL_03_PLATFORM",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "0e27DNZZjCnO0yt3Qu_rGA",
+        "ifcExpressId": 5480330,
+        "ifcType": "IfcRoof",
+        "ifcName": "Basic Roof:ARC_ROF_ALUZINC_SINGLE-525mm-e=0.6mm:4508243",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2330-590-CON-ED-ARQ-MO-0001_V00.ifc",
+        "ifcSection": "E15",
+        "discipline": "ARQ",
+        "ifcStorey": "ARC_PL_03.1_BRT TECHNICAL ROOF",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "0vj1LPDsLDBRAqIfviH3Tc",
+        "ifcExpressId": 882856,
+        "ifcType": "IfcStair",
+        "ifcName": "Assembled Stair:Stair:2121190",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2330-590-CON-ED-ARQ-MO-0001_V00.ifc",
+        "ifcSection": "E15",
+        "discipline": "ARQ",
+        "ifcStorey": "ARC_PL_02_INTERMEDIATE",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "0vj1LPDsLDBRAqIfviH0mT",
+        "ifcExpressId": 884069,
+        "ifcType": "IfcStair",
+        "ifcName": "Assembled Stair:Stair:2123421",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2330-590-CON-ED-ARQ-MO-0001_V00.ifc",
+        "ifcSection": "E15",
+        "discipline": "ARQ",
+        "ifcStorey": "ARC_PL_02_INTERMEDIATE",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "0vj1LPDsLDBRAqIfviH08U",
+        "ifcExpressId": 885207,
+        "ifcType": "IfcStair",
+        "ifcName": "Assembled Stair:Stair:2123934",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-2330-590-CON-ED-ARQ-MO-0001_V00.ifc",
+        "ifcSection": "E15",
+        "discipline": "ARQ",
+        "ifcStorey": "ARC_PL_02_INTERMEDIATE",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      }
+    ],
+    "overlapWithRecoveredStationMetres": [
+      75.11782433888584,
+      12.101399998092347,
+      153.04678481456358
+    ],
+    "triangles": 11191991,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ],
+    "identicalIteratorShapesDeduplicated": 0
+  },
+  "seconds": 84.83,
+  "coordinateConvention": "glTF metres [IFC X, IFC Z, -IFC Y]; native placement preserved",
+  "simplification": false,
+  "nativeLevels": [
+    {
+      "id": "3z5s41HnT8LBNaRN$ZUqgJ",
+      "name": "ARC_PL_00_FOUNDATION",
+      "elevation": 2566.718
+    },
+    {
+      "id": "3z5s41HnT8LBNaRN$ZUqgK",
+      "name": "ARC_PL_01_BRT TRACK",
+      "elevation": 2568.2679999999996
+    },
+    {
+      "id": "3z5s41HnT8LBNaRN$ZUqgj",
+      "name": "ARC_PL_01.1_MEDIAN",
+      "elevation": 2568.4179999999997
+    },
+    {
+      "id": "3z5s41HnT8LBNaRN$ZUceL",
+      "name": "ARC_PL_02_INTERMEDIATE",
+      "elevation": 2569.168
+    },
+    {
+      "id": "3z5s41HnT8LBNaRN$ZUqgG",
+      "name": "ARC_PL_03.1_BRT TECHNICAL ROOF",
+      "elevation": 2571.923
+    },
+    {
+      "id": "3z5s41HnT8LBNaRN$ZUqgI",
+      "name": "ARC_PL_03_BRT ROOF_60",
+      "elevation": 2572.5509999999995
+    },
+    {
+      "id": "3z5s41HnT8LBNaRN$ZUcfC",
+      "name": "ARC_PL_03_PLATFORM",
+      "elevation": 2582.868
+    }
+  ]
+}
