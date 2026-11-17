@@ -1,0 +1,154 @@
+{
+  "station": "E15",
+  "source": "L1T1-1300-415-CON-ED-EST-MO-0003_V00.ifc",
+  "sourceSha256": "047822fcb0fe5f9122974e2f959926598ab47217b144949f79a9641ad10a824b",
+  "sourceSchema": "IFC2X3",
+  "converter": "IfcOpenShell 0.8.5",
+  "ifcLengthUnitToMetres": 1,
+  "files": [
+    {
+      "file": "e15-l1t1-1300-415-con-ed-est-mo-0003_v00-p001.glb.gz",
+      "source": "L1T1-1300-415-CON-ED-EST-MO-0003_V00.ifc",
+      "section": "E15",
+      "discipline": "EST",
+      "role": "detail",
+      "converted": 366,
+      "sha256": "f770ec5321d0cf0d08b9ca4a1e6f19492d5b699fa82a5883e0a530ed99107594",
+      "compressedBytes": 185773,
+      "boundsGltfMetres": {
+        "min": [
+          101364.06432294115,
+          2522.730000305176,
+          -105867.95348338528
+        ],
+        "max": [
+          101400.45827441217,
+          2594.1399999046316,
+          -105848.17281341407
+        ]
+      },
+      "instanceIdentity": "ifc-globalid"
+    }
+  ],
+  "expectedRepresentedElements": 346,
+  "convertedElements": 366,
+  "renderableElements": 346,
+  "convertedOpeningElements": 20,
+  "cameraCandidates": 0,
+  "bounds": {
+    "min": [
+      101364.06432294115,
+      2522.730000305176,
+      -105867.95348338528
+    ],
+    "max": [
+      101400.45827441217,
+      2594.1399999046316,
+      -105848.17281341407
+    ]
+  },
+  "audit": {
+    "status": "passed",
+    "maxPlacementMatrixDifference": 1.4551915228366852e-11,
+    "representedMissing": [],
+    "sourceWithoutGeometry": [
+      {
+        "ifcGlobalId": "2R0s4zRiz1DeRcoMnSk92L",
+        "ifcExpressId": 48012,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:3835701",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-415-CON-ED-EST-MO-0003_V00.ifc",
+        "ifcSection": "E15",
+        "discipline": "EST",
+        "ifcStorey": "NIVEL DE CIMENTACIÓN",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "34Rz1qudD9YBoPJf1Dl9cP",
+        "ifcExpressId": 51461,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:3836943",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-415-CON-ED-EST-MO-0003_V00.ifc",
+        "ifcSection": "E15",
+        "discipline": "EST",
+        "ifcStorey": "NIVEL DE CIMENTACIÓN",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "0i97dYsuTBoPI69HSBBJw3",
+        "ifcExpressId": 56551,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:3844716",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-415-CON-ED-EST-MO-0003_V00.ifc",
+        "ifcSection": "E15",
+        "discipline": "EST",
+        "ifcStorey": "NIVEL INTERMEDIO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      },
+      {
+        "ifcGlobalId": "1iarIgLIr2GBd9nMGx0cBj",
+        "ifcExpressId": 60301,
+        "ifcType": "IfcStair",
+        "ifcName": "Cast-In-Place Stair:Stair:3847990",
+        "ifcTypeName": null,
+        "ifcSource": "L1T1-1300-415-CON-ED-EST-MO-0003_V00.ifc",
+        "ifcSection": "E15",
+        "discipline": "EST",
+        "ifcStorey": "NIVEL INTERMEDIO",
+        "isCamera": false,
+        "reason": "No shape items in the source IFC"
+      }
+    ],
+    "overlapWithRecoveredStationMetres": [
+      36.393951471021865,
+      71.40999959945566,
+      19.780669971209136
+    ],
+    "triangles": 22277,
+    "checks": [
+      "Source SHA256",
+      "All converted GlobalIds",
+      "Native IFC placement matrices in metres",
+      "Finite coordinates",
+      "Index bounds",
+      "Coordinate overlap"
+    ],
+    "identicalIteratorShapesDeduplicated": 0
+  },
+  "seconds": 2.3,
+  "coordinateConvention": "glTF metres [IFC X, IFC Z, -IFC Y]; native placement preserved",
+  "simplification": false,
+  "nativeLevels": [
+    {
+      "id": "0bDaRzNgL0zAeAg$opUJH$",
+      "name": "NIVEL DE CIMENTACIÓN",
+      "elevation": 2567.8
+    },
+    {
+      "id": "0bDaRzNgL0zAeAg$opU4WI",
+      "name": "LEVEL_0.00",
+      "elevation": 0.0
+    },
+    {
+      "id": "0bDaRzNgL0zAeAg$opUJH_",
+      "name": "NIVEL INTERMEDIO",
+      "elevation": 2575.6999999999985
+    },
+    {
+      "id": "0bDaRzNgL0zAeAg$opUJH1",
+      "name": "NIVEL PLATAFORMA",
+      "elevation": 2584.439999999998
+    },
+    {
+      "id": "0bDaRzNgL0zAeAg$opUJH2",
+      "name": "NIVEL DE CUBIERTA",
+      "elevation": 2591.039999999999
+    }
+  ]
+}
