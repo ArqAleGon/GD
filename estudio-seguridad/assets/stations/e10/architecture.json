@@ -1,0 +1,76 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "level": "Sótano",
+      "levelId": "2SCB_wEvLD9uWO8$uQSWQR",
+      "label": "Sótano · E10 · Nariño",
+      "imageUrl": "./assets/stations/e10/architecture/B.jpg",
+      "width": 4243,
+      "height": 6000,
+      "crop": [
+        1103,
+        0,
+        3140,
+        5983
+      ],
+      "rotation": 90,
+      "source": "PLANO SOTANO E10 A.pdf",
+      "sourceSha256": "59760c9a782cb10d0df107cd803e21b40606340567be59d9865221896179013b"
+    },
+    {
+      "page": 2,
+      "level": "Acceso",
+      "levelId": "1ZvOeQwd10lPlZWEpLLxYV",
+      "label": "Acceso · E10 · Nariño",
+      "imageUrl": "./assets/stations/e10/architecture/A.jpg",
+      "width": 4243,
+      "height": 6000,
+      "crop": [
+        127,
+        0,
+        4116,
+        6000
+      ],
+      "rotation": 90,
+      "source": "PLANO ACCESO E10 A.pdf",
+      "sourceSha256": "16881d7af239d13b740decb9fbb0a4e585364c52137516d9cc66ce161b16d3f3"
+    },
+    {
+      "page": 3,
+      "level": "Intermedio",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · E10 · Nariño",
+      "imageUrl": "./assets/stations/e10/architecture/I.jpg",
+      "width": 4243,
+      "height": 6000,
+      "crop": [
+        118,
+        0,
+        4125,
+        6000
+      ],
+      "rotation": 90,
+      "source": "PLANO INT E10 A.pdf",
+      "sourceSha256": "5379852bc3183fa1c00558e6179918fcbec0da11d6cd5bac4a847d1c393537c5"
+    },
+    {
+      "page": 4,
+      "level": "Plataforma",
+      "levelId": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · E10 · Nariño",
+      "imageUrl": "./assets/stations/e10/architecture/P.jpg",
+      "width": 4243,
+      "height": 6000,
+      "crop": [
+        128,
+        0,
+        4115,
+        6000
+      ],
+      "rotation": 90,
+      "source": "PLANO PLA E10 A.pdf",
+      "sourceSha256": "c56004aced6211178276ec437b96e6a9943d57d313954484eaf2c003848ee358"
+    }
+  ]
+}

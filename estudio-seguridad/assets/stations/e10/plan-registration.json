@@ -1,0 +1,106 @@
+{
+  "originIfc": [
+    97835.92316216585,
+    99792.7280167123,
+    2576.894849999999
+  ],
+  "inventory": {},
+  "architecture": {
+    "1": {
+      "matrix": [
+        [
+          15.902097648451115,
+          50.16595750771758,
+          597.7057427141133
+        ],
+        [
+          50.177780735977706,
+          -15.905845491403849,
+          3090.788687471415
+        ]
+      ],
+      "crop": [
+        1103,
+        0,
+        3140,
+        5983
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado · planos arquitectónicos / modelo",
+      "method": "Muros y columnas del modelo; correspondencias entre hoja técnica y planta limpia",
+      "modelFitErrorPixels": 0.0
+    },
+    "2": {
+      "matrix": [
+        [
+          10.364218708749467,
+          32.882557807360975,
+          2266.1861845844337
+        ],
+        [
+          32.89030764422342,
+          -10.366661371655136,
+          2745.6340531516994
+        ]
+      ],
+      "crop": [
+        127,
+        0,
+        4116,
+        6000
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado · planos arquitectónicos / modelo",
+      "method": "Muros y columnas del modelo; correspondencias entre hoja técnica y planta limpia",
+      "modelFitErrorPixels": 0.06575412562364079
+    },
+    "3": {
+      "matrix": [
+        [
+          10.403148753361608,
+          33.05674492237694,
+          2264.6421676004425
+        ],
+        [
+          33.06453581205933,
+          -10.405600591389737,
+          2730.140191745982
+        ]
+      ],
+      "crop": [
+        118,
+        0,
+        4125,
+        6000
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado · planos arquitectónicos / modelo",
+      "method": "Muros y columnas del modelo; correspondencias entre hoja técnica y planta limpia",
+      "modelFitErrorPixels": 0.013325691359793666
+    },
+    "4": {
+      "matrix": [
+        [
+          10.351494551604981,
+          32.88410669692106,
+          2264.496977566743
+        ],
+        [
+          32.89185689882936,
+          -10.353934215652027,
+          2715.7206088267203
+        ]
+      ],
+      "crop": [
+        128,
+        0,
+        4115,
+        6000
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado · planos arquitectónicos / modelo",
+      "method": "Muros y columnas del modelo; correspondencias entre hoja técnica y planta limpia",
+      "modelFitErrorPixels": 0.008403361344537815
+    }
+  }
+}
