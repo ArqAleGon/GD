@@ -1,6 +1,31 @@
 {
   "pages": [
     {
+      "page": 1,
+      "level": "Sótano",
+      "levelId": "ins-0",
+      "label": "Sótano · E15 · Calle 63",
+      "imageUrl": "./assets/stations/e15/architecture/B.jpg",
+      "width": 3420,
+      "height": 960,
+      "crop": [
+        0,
+        0,
+        3420,
+        960
+      ],
+      "rotation": 90,
+      "source": "L1T1-0000-315-CON-ED-ARQ-PL-0001_V01.pdf",
+      "sourceSha256": "72173a85dfe927d44424156fba5294668fef8a94fb05ff9da1a72f5ab7fb41cf",
+      "derivedFrom": "./assets/plan-originals/e15/L1T1-0000-315-CON-ED-ARQ-PL-0001_V01-hoja-05-B.pdf",
+      "sourceCrop3000": [
+        130,
+        210,
+        1840,
+        690
+      ]
+    },
+    {
       "page": 2,
       "level": "Acceso",
       "levelId": "ins-1",

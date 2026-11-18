@@ -4,6 +4,7 @@
     100722.46705075412,
     2603.95
   ],
+  "inventory": {},
   "architecture": {
     "1": {
       "matrix": [
@@ -93,6 +94,5 @@
       "rotation": 90,
       "status": "Registro visual PDF–IFC · E12"
     }
-  },
-  "inventory": {}
+  }
 }
