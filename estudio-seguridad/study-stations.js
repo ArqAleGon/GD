@@ -167,3 +167,6 @@ stations.E10.povVideo={"title": "E10", "manifestUrl": "./assets/stations/e10/vid
 
 stations.E06.assets.routes='./assets/stations/e06/routes.json?v=20261119-e06routes76';
 stations.E06.description='Plantas, espacios, cámaras IFC y recorridos Biciusuarios y PMR sincronizados con sus videos POV.';
+
+stations.E10.assets.routes='./assets/stations/e10/routes.json?v=20261119-e10routes77';
+stations.E10.description='Plantas, espacios, cámaras IFC y recorridos Biciusuarios y PMR sincronizados con sus videos POV.';

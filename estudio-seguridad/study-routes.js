@@ -130,7 +130,7 @@ export class RouteStudy{
  }
  setTransparency(on){for(const group of [this.scene.staticGroup,this.scene.cameraGroup])group.traverse(n=>{if(!n.material)return;for(const m of Array.isArray(n.material)?n.material:[n.material]){if(!this.materials.has(m))this.materials.set(m,{transparent:m.transparent,opacity:m.opacity,depthWrite:m.depthWrite});if(on){m.transparent=true;m.opacity=this.opacity;m.depthWrite=false;}else Object.assign(m,this.materials.get(m));m.needsUpdate=true;}});}
  fit(){
-  const meshes=this.scene.staticMeshes.filter(mesh=>!mesh.userData.detachedAxis&&!this.scene.hiddenPackages?.has(mesh.userData.package));
+  const meshes=this.scene.staticMeshes.filter(mesh=>!mesh.userData.detachedAxis&&!mesh.userData.frameExcluded&&!this.scene.hiddenPackages?.has(mesh.userData.package));
   const box=new THREE.Box3();for(const mesh of meshes){const b=mesh.userData.bounds;if(b){box.expandByPoint(new THREE.Vector3(...b.min));box.expandByPoint(new THREE.Vector3(...b.max));}}
   if(box.isEmpty())return;const center=box.getCenter(new THREE.Vector3()),back=new THREE.Vector3(.8,.9,1).normalize(),right=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),back).normalize(),up=new THREE.Vector3().crossVectors(back,right),rect=this.scene.pov.getBoundingClientRect(),tv=Math.tan(42*Math.PI/360),th=tv*Math.max(.1,rect.width/rect.height);let distance=40;
   for(const mesh of meshes){const b=mesh.userData.bounds;if(!b)continue;for(const x of [b.min[0],b.max[0]])for(const y of [b.min[1],b.max[1]])for(const z of [b.min[2],b.max[2]]){const v=new THREE.Vector3(x,y,z).sub(center);distance=Math.max(distance,Math.abs(v.dot(right))/th+v.dot(back),Math.abs(v.dot(up))/tv+v.dot(back));}}

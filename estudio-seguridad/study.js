@@ -1,12 +1,12 @@
 import {originalSheets} from './study-plan-originals.js?v=20261119-e10-74a';
 import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
-import {station,stations} from './study-stations.js?v=20261119-e06routes76';
+import {station,stations} from './study-stations.js?v=20261119-e10routes77';
 import {StationVideo} from './study-station-video.js?v=20261106-e04delivery52';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
 import {PlanViewer} from './study-plans.js?v=20261119-e10-74a';
 import {StudyScene} from './study-scene.js?v=20261119-e10-74a';
 import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261028-e01media23';
-import {RouteStudy} from './study-routes.js?v=20261119-e10-74a';
+import {RouteStudy} from './study-routes.js?v=20261119-e10routes77';
 import {SpaceStudy} from './study-spaces.js?v=20261109-e0708integration57';
 const $=s=>document.querySelector(s);
 const levels=station.levels;
@@ -253,3 +253,5 @@ if(station.id==='E08'&&station.assets.routes){$('#routes-drawer h2').textContent
 if(station.id==='E11'&&station.assets.routes){$('#routes-drawer h2').textContent='Recorridos · E11';$('#routes-drawer > p').textContent='Biciusuarios, PMR y BRT · recorridos sincronizados con sus videos POV.';$('#routes-drawer .micro-note').textContent='Negro: Biciusuarios · Naranja: PMR · Azul: BRT. Avance sincronizado con cada video POV.';}
 
 if(station.id==='E06'&&station.assets.routes){$('#routes-drawer h2').textContent='Recorridos · E06';$('#routes-drawer > p').textContent='Biciusuarios y PMR · recorridos sincronizados con el POV.';$('#routes-drawer .micro-note').textContent='Negro: Biciusuarios. Naranja: PMR. Giros, pausas y cambios de nivel vinculados al video.';}
+
+if(station.id==='E10'&&station.assets.routes){$('#routes-drawer h2').textContent='Recorridos · E10';$('#routes-drawer > p').textContent='Biciusuarios y PMR · recorridos sincronizados con el POV.';$('#routes-drawer .micro-note').textContent='Negro: Biciusuarios. Naranja: PMR. Giros, pausas y cambios de nivel vinculados al video.';}
