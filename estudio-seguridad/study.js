@@ -1,12 +1,12 @@
-import {originalSheets} from './study-plan-originals.js?v=20261119-e06-73';
+import {originalSheets} from './study-plan-originals.js?v=20261119-e10-74a';
 import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
-import {station,stations} from './study-stations.js?v=20261119-e06-73';
+import {station,stations} from './study-stations.js?v=20261119-e10-74a';
 import {StationVideo} from './study-station-video.js?v=20261106-e04delivery52';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
-import {PlanViewer} from './study-plans.js?v=20261119-e06-73';
-import {StudyScene} from './study-scene.js?v=20261104-integrity45';
+import {PlanViewer} from './study-plans.js?v=20261119-e10-74a';
+import {StudyScene} from './study-scene.js?v=20261119-e10-74a';
 import {opticsProfiles,initDrawers,initFullscreen} from './study-controls.js?v=20261028-e01media23';
-import {RouteStudy} from './study-routes.js?v=20261119-e06-73';
+import {RouteStudy} from './study-routes.js?v=20261119-e10-74a';
 import {SpaceStudy} from './study-spaces.js?v=20261109-e0708integration57';
 const $=s=>document.querySelector(s);
 const levels=station.levels;

@@ -47,7 +47,7 @@ export async function loadRecoveredGeometry(view,manifest,origin){
    if(group.materials.length===1)for(const g of group.geometries)g.dispose();
    geometry.computeBoundingBox();geometry.computeBoundingSphere();
    const object=new group.kind(geometry,group.materials.length>1?group.materials:group.materials[0]),b=geometry.boundingBox;
-   object.userData={file:file.file,package:file.source,source:file.source,ifcGlobalIds:group.ids,bounds:{min:b.min.toArray(),max:b.max.toArray()}};
+   object.userData={file:file.file,package:file.source,source:file.source,ifcGlobalIds:group.ids,frameExcluded:!!file.excludeLinesFromFrame&&object.isLine,bounds:{min:b.min.toArray(),max:b.max.toArray()}};
    view.staticGroup.add(object);view.staticMeshes.push(object);
   }
   for(const geometry of originalGeometries)geometry.dispose();for(const material of originalMaterials)material.dispose();

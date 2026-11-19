@@ -74,67 +74,67 @@ stations.E08.description='Plantas, espacios y cámaras IFC vinculados. Biciusuar
 // E11 original POV media; spatial routes remain pending.
 stations.E11.povVideo={"title": "E11", "manifestUrl": "./assets/stations/e11/videos.json?v=20261112-e11-v51", "videos": [{"id": "e11-brt-original", "title": "E11 · BRT–EM11", "label": "BRT–EM11"}, {"id": "e11-bici-original", "title": "E11 · Biciusuarios", "label": "Biciusuarios"}, {"id": "e11-pmr-original", "title": "E11 · PMR", "label": "PMR"}]};
 
-stations.E11.modelManifest="./assets/stations/e11/recovered-models.json?v=20261119-e06-73";
+stations.E11.modelManifest="./assets/stations/e11/recovered-models.json?v=20261119-e10-74a";
 // E11 uses the existing shared space controls and level-specific original sheets.
-for(const key of ['architecture','registration','spaces'])stations.E11.assets[key]='./assets/stations/e11/'+(key==='registration'?'plan-registration':key)+'.json?v=20261119-e06-73';
+for(const key of ['architecture','registration','spaces'])stations.E11.assets[key]='./assets/stations/e11/'+(key==='registration'?'plan-registration':key)+'.json?v=20261119-e10-74a';
 stations.E11.description='Modelos, cámaras IFC y videos POV incorporados. Plantas, colores, etiquetas y áreas vinculados al PDF arquitectónico V01. Biciusuarios, PMR y BRT sincronizados con sus videos POV. Cuatro ubicaciones de espacios: En construcción.';
 
 stations.E11.sourceCount=9;
 
-stations.E11.assets.inventory='./assets/stations/e11/inventory.json?v=20261119-e06-73';
+stations.E11.assets.inventory='./assets/stations/e11/inventory.json?v=20261119-e10-74a';
 
-stations.E11.assets.routes='./assets/stations/e11/routes.json?v=20261119-e06-73';
+stations.E11.assets.routes='./assets/stations/e11/routes.json?v=20261119-e10-74a';
 
-stations.E12.modelManifest="./assets/stations/e12/recovered-models.json?v=20261119-e06-73";
+stations.E12.modelManifest="./assets/stations/e12/recovered-models.json?v=20261119-e10-74a";
 stations.E12.sourceCount=9;
 
 // E12 embedded videos; shared manual playback controls.
-stations.E12.povVideo={"title": "E12", "manifestUrl": "./assets/stations/e12/videos.json?v=20261119-e06-73", "videos": [{"id": "e12-brt-v58", "title": "E12 · BRT–EM12", "label": "BRT–EM12"}, {"id": "e12-bici-v58", "title": "E12 · Biciusuarios", "label": "Biciusuarios"}, {"id": "e12-pmr-v59", "title": "E12 · PMR · TM–EM12", "label": "PMR · TM–EM12"}]};
+stations.E12.povVideo={"title": "E12", "manifestUrl": "./assets/stations/e12/videos.json?v=20261119-e10-74a", "videos": [{"id": "e12-brt-v58", "title": "E12 · BRT–EM12", "label": "BRT–EM12"}, {"id": "e12-bici-v58", "title": "E12 · Biciusuarios", "label": "Biciusuarios"}, {"id": "e12-pmr-v59", "title": "E12 · PMR · TM–EM12", "label": "PMR · TM–EM12"}]};
 
-for(const key of ['architecture','inventory','registration'])stations.E12.assets[key]='./assets/stations/e12/'+(key==='registration'?'plan-registration':key)+'.json?v=20261119-e06-73';
+for(const key of ['architecture','inventory','registration'])stations.E12.assets[key]='./assets/stations/e12/'+(key==='registration'?'plan-registration':key)+'.json?v=20261119-e10-74a';
 
-stations.E14.modelManifest="./assets/stations/e14/recovered-models.json?v=20261119-e06-73";
+stations.E14.modelManifest="./assets/stations/e14/recovered-models.json?v=20261119-e10-74a";
 stations.E14.sourceCount=8;
 
-stations.E15.modelManifest="./assets/stations/e15/recovered-models.json?v=20261119-e06-73";
+stations.E15.modelManifest="./assets/stations/e15/recovered-models.json?v=20261119-e10-74a";
 stations.E15.sourceCount=6;
 
-stations.E16.modelManifest="./assets/stations/e16/recovered-models.json?v=20261119-e06-73";
+stations.E16.modelManifest="./assets/stations/e16/recovered-models.json?v=20261119-e10-74a";
 stations.E16.sourceCount=8;
 
-stations.E05.modelManifest="./assets/stations/e05/recovered-models.json?v=20261119-e06-73";
+stations.E05.modelManifest="./assets/stations/e05/recovered-models.json?v=20261119-e10-74a";
 stations.E05.sourceCount=8;
 
-stations.E07.modelManifest="./assets/stations/e07/recovered-models.json?v=20261119-e06-73";
+stations.E07.modelManifest="./assets/stations/e07/recovered-models.json?v=20261119-e10-74a";
 stations.E07.sourceCount=8;
 
-stations.E04.assets.spaces='./assets/stations/e04/spaces.json?v=20261119-e06-73';
+stations.E04.assets.spaces='./assets/stations/e04/spaces.json?v=20261119-e10-74a';
 
-stations.E11.modelManifest="./assets/stations/e11/recovered-models.json?v=20261119-e06-73";
+stations.E11.modelManifest="./assets/stations/e11/recovered-models.json?v=20261119-e10-74a";
 stations.E11.sourceCount=12;
 
-stations.E12.modelManifest="./assets/stations/e12/recovered-models.json?v=20261119-e06-73";
+stations.E12.modelManifest="./assets/stations/e12/recovered-models.json?v=20261119-e10-74a";
 stations.E12.sourceCount=15;
 
-stations.E13.modelManifest="./assets/stations/e13/recovered-models.json?v=20261119-e06-73";
+stations.E13.modelManifest="./assets/stations/e13/recovered-models.json?v=20261119-e10-74a";
 stations.E13.sourceCount=8;
 
-stations.E14.modelManifest="./assets/stations/e14/recovered-models.json?v=20261119-e06-73";
+stations.E14.modelManifest="./assets/stations/e14/recovered-models.json?v=20261119-e10-74a";
 stations.E14.sourceCount=12;
 
-stations.E15.modelManifest="./assets/stations/e15/recovered-models.json?v=20261119-e06-73";
+stations.E15.modelManifest="./assets/stations/e15/recovered-models.json?v=20261119-e10-74a";
 stations.E15.sourceCount=10;
 
-stations.E16.modelManifest="./assets/stations/e16/recovered-models.json?v=20261119-e06-73";
+stations.E16.modelManifest="./assets/stations/e16/recovered-models.json?v=20261119-e10-74a";
 stations.E16.sourceCount=11;
 
-for(const id of ['E12','E13','E14','E15','E16'])stations[id].assets.architecture='./assets/stations/'+id.toLowerCase()+'/architecture.json?v=20261119-e06-73';
+for(const id of ['E12','E13','E14','E15','E16'])stations[id].assets.architecture='./assets/stations/'+id.toLowerCase()+'/architecture.json?v=20261119-e10-74a';
 
-for(const id of ['E12','E13','E14','E15','E16'])stations[id].assets.inventory='./assets/stations/'+id.toLowerCase()+'/inventory.json?v=20261119-e06-73';
+for(const id of ['E12','E13','E14','E15','E16'])stations[id].assets.inventory='./assets/stations/'+id.toLowerCase()+'/inventory.json?v=20261119-e10-74a';
 
 // Shared spatial catalogue: original-sheet areas, registered labels and plan colours.
 for(const id of ['E12','E13','E14','E15','E16']){
- for(const key of ['architecture','registration','spaces'])stations[id].assets[key]='./assets/stations/'+id.toLowerCase()+'/'+(key==='registration'?'plan-registration':key)+'.json?v=20261119-e06-73';
+ for(const key of ['architecture','registration','spaces'])stations[id].assets[key]='./assets/stations/'+id.toLowerCase()+'/'+(key==='registration'?'plan-registration':key)+'.json?v=20261119-e10-74a';
 }
 // Architectural basement datum: PDF E15 NPT -7.15 m relative to 2569.10 m.
 const e15Basement=stations.E15.levels.find(l=>l.id==='ins-0');if(e15Basement){e15Basement.elevation=2561.95;e15Basement.cutMin=2561.65;}
@@ -154,10 +154,11 @@ stations.E15.description='Modelos, plantas arquitectónicas, hojas originales e 
 for(const [id,floor] of Object.entries({"ins-0": 2553.600000000002, "ins-1": 2558.75, "ins-2": 2566.8, "ins-3": 2575.54})){const level=stations.E16.levels.find(l=>l.id===id);if(level)level.cutMin=Math.min(level.cutMin??floor-.3,floor-.3);}
 stations.E16.description='Modelos, plantas arquitectónicas, hojas originales e inventario CCTV disponibles. Etiquetas, colores y áreas vinculados al documento arquitectónico; las correspondencias individuales pendientes se indican en el cuadro de espacios.';
 
-for(const key of ['architecture','inventory','registration','spaces'])stations.E10.assets[key]='./assets/stations/e10/'+(key==='registration'?'plan-registration':key)+'.json?v=20261119-e06-73';
+for(const key of ['architecture','inventory','registration','spaces'])stations.E10.assets[key]='./assets/stations/e10/'+(key==='registration'?'plan-registration':key)+'.json?v=20261119-e10-74a';
 stations.E10.description='Modelos, cuatro plantas arquitectónicas, hojas originales, inventario CCTV y espacios con etiquetas, colores y áreas documentales. Correspondencias individuales pendientes indicadas en el cuadro de espacios.';
+stations.E10.modelManifest='./assets/stations/e10/recovered-models.json?v=20261119-e10-74a';
 for(const [id,floor] of Object.entries({"2SCB_wEvLD9uWO8$uQSWQR": 2560.2999999999993, "1ZvOeQwd10lPlZWEpLLxYV": 2566.6, "2SCB_wEvLD9uWO8$uQSW5e": 2573.7, "2SCB_wEvLD9uWO8$uQSW4n": 2582.44})){const l=stations.E10.levels.find(l=>l.id===id);if(l)l.cutMin=Math.min(l.cutMin,floor-.3);}
 
-for(const key of ['architecture','inventory','registration','spaces'])stations.E06.assets[key]='./assets/stations/e06/'+(key==='registration'?'plan-registration':key)+'.json?v=20261119-e06-73';
-stations.E06.povVideo={"title": "E06", "manifestUrl": "./assets/videotours/manifest.json?v=20261119-e06-73", "videos": [{"id": "e06-bici-v73", "title": "E06 · Biciusuarios", "label": "Biciusuarios"}, {"id": "e06-pmr-v73", "title": "E06 · PMR (Personas con movilidad reducida)", "label": "PMR (Personas con movilidad reducida)"}]};
+for(const key of ['architecture','inventory','registration','spaces'])stations.E06.assets[key]='./assets/stations/e06/'+(key==='registration'?'plan-registration':key)+'.json?v=20261119-e10-74a';
+stations.E06.povVideo={"title": "E06", "manifestUrl": "./assets/videotours/manifest.json?v=20261119-e10-74a", "videos": [{"id": "e06-bici-v73", "title": "E06 · Biciusuarios", "label": "Biciusuarios"}, {"id": "e06-pmr-v73", "title": "E06 · PMR (Personas con movilidad reducida)", "label": "PMR (Personas con movilidad reducida)"}]};
 stations.E06.description='Modelos, cuatro plantas arquitectónicas, PDF originales por nivel, inventario CCTV, espacios con etiquetas, colores y áreas documentales. Videos Biciusuarios y PMR integrados; trazados en construcción.';

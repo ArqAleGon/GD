@@ -4,7 +4,856 @@
     99792.7280167123,
     2576.894849999999
   ],
-  "inventory": {},
+  "inventory": {
+    "2": {
+      "matrix": [
+        [
+          28.533216306329454,
+          -9.03092056924795,
+          3008.277411048803
+        ],
+        [
+          -9.03092056924795,
+          -28.533216306329454,
+          1861.745009752285
+        ]
+      ],
+      "crop": [
+        780.0,
+        452.0,
+        3900.0,
+        1039.6000000000001
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Geometría IFC y correspondencias de la hoja CCTV por nivel",
+      "pairedSheetInliers": 109,
+      "allowedCameraIds": [
+        "35iwytWrD0bR$IYWAFos13",
+        "35iwytWrD0bR$IYWAFos6e",
+        "35iwytWrD0bR$IYWAFos6f",
+        "0rBj6MaN9At8z1n$dbQ6HR",
+        "0rBj6MaN9At8z1n$dbQ6HD",
+        "0rBj6MaN9At8z1n$dbQ6HF",
+        "0rBj6MaN9At8z1n$dbQ6H0",
+        "0rBj6MaN9At8z1n$dbQ6Ie",
+        "0rBj6MaN9At8z1n$dbQ6Ia",
+        "0rBj6MaN9At8z1n$dbQ6JN",
+        "0rBj6MaN9At8z1n$dbQ6JH",
+        "0rBj6MaN9At8z1n$dbQ6Sg",
+        "0rBj6MaN9At8z1n$dbQ6SP",
+        "0rBj6MaN9At8z1n$dbQ6S9",
+        "0rBj6MaN9At8z1n$dbQ6Tm",
+        "0rBj6MaN9At8z1n$dbQ6db",
+        "0rBj6MaN9At8z1n$dbQ6dA",
+        "0rBj6MaN9At8z1n$dbQ6W_",
+        "0rBj6MaN9At8z1n$dbQ6Wu",
+        "0rBj6MaN9At8z1n$dbQ6Ws",
+        "0rBj6MaN9At8z1n$dbQ6Wt",
+        "0rBj6MaN9At8z1n$dbQ6WH",
+        "0rBj6MaN9At8z1n$dbQ6WI",
+        "0rBj6MaN9At8z1n$dbQ6X_",
+        "0rBj6MaN9At8z1n$dbQ6Xd",
+        "0rBj6MaN9At8z1n$dbQ6XE",
+        "0rBj6MaN9At8z1n$dbQ6Yo",
+        "0rBj6MaN9At8z1n$dbQ6YM"
+      ]
+    },
+    "3": {
+      "matrix": [
+        [
+          28.619787518355757,
+          -9.053586664041672,
+          3009.2649124114882
+        ],
+        [
+          -9.053586664041672,
+          -28.619787518355757,
+          1968.7440841244988
+        ]
+      ],
+      "crop": [
+        772.2845990664184,
+        552.9856324058073,
+        3900.0,
+        1039.6000000000001
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Geometría IFC y correspondencias de la hoja CCTV por nivel",
+      "pairedSheetInliers": 109,
+      "allowedCameraIds": [
+        "35iwytWrD0bR$IYWAFos13",
+        "35iwytWrD0bR$IYWAFos6e",
+        "35iwytWrD0bR$IYWAFos6f",
+        "0rBj6MaN9At8z1n$dbQ6HR",
+        "0rBj6MaN9At8z1n$dbQ6HD",
+        "0rBj6MaN9At8z1n$dbQ6HF",
+        "0rBj6MaN9At8z1n$dbQ6H0",
+        "0rBj6MaN9At8z1n$dbQ6Ie",
+        "0rBj6MaN9At8z1n$dbQ6Ia",
+        "0rBj6MaN9At8z1n$dbQ6JN",
+        "0rBj6MaN9At8z1n$dbQ6JH",
+        "0rBj6MaN9At8z1n$dbQ6Sg",
+        "0rBj6MaN9At8z1n$dbQ6SP",
+        "0rBj6MaN9At8z1n$dbQ6S9",
+        "0rBj6MaN9At8z1n$dbQ6Tm",
+        "0rBj6MaN9At8z1n$dbQ6db",
+        "0rBj6MaN9At8z1n$dbQ6dA",
+        "0rBj6MaN9At8z1n$dbQ6W_",
+        "0rBj6MaN9At8z1n$dbQ6Wu",
+        "0rBj6MaN9At8z1n$dbQ6Ws",
+        "0rBj6MaN9At8z1n$dbQ6Wt",
+        "0rBj6MaN9At8z1n$dbQ6WH",
+        "0rBj6MaN9At8z1n$dbQ6WI",
+        "0rBj6MaN9At8z1n$dbQ6X_",
+        "0rBj6MaN9At8z1n$dbQ6Xd",
+        "0rBj6MaN9At8z1n$dbQ6XE",
+        "0rBj6MaN9At8z1n$dbQ6Yo",
+        "0rBj6MaN9At8z1n$dbQ6YM"
+      ]
+    },
+    "4": {
+      "matrix": [
+        [
+          28.604631083633553,
+          -9.02459112552388,
+          2972.6463806574
+        ],
+        [
+          -9.02459112552388,
+          -28.604631083633553,
+          1893.3957287386024
+        ]
+      ],
+      "crop": [
+        780.0,
+        429.4,
+        3900.0,
+        1017.0000000000001
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Geometría IFC y correspondencias de la hoja CCTV por nivel",
+      "pairedSheetInliers": 238,
+      "allowedCameraIds": [
+        "35iwytWrD0bR$IYWAFos7O",
+        "35iwytWrD0bR$IYWAFos4g",
+        "3GJYxs7aP9XwiLX8U5JLUJ",
+        "3GJYxs7aP9XwiLX8U5JLU7",
+        "3GJYxs7aP9XwiLX8U5JLUc",
+        "3GJYxs7aP9XwiLX8U5JLUa",
+        "3GJYxs7aP9XwiLX8U5JLVN",
+        "3GJYxs7aP9XwiLX8U5JLV1",
+        "3GJYxs7aP9XwiLX8U5JLVW",
+        "3GJYxs7aP9XwiLX8U5JLVf",
+        "3GJYxs7aP9XwiLX8U5JLS1",
+        "1k5Qw1Ndr7hAC3oJLQNTvw",
+        "1k5Qw1Ndr7hAC3oJLQNTvu",
+        "1k5Qw1Ndr7hAC3oJLQNTvo",
+        "1k5Qw1Ndr7hAC3oJLQNTvm",
+        "1k5Qw1Ndr7hAC3oJLQNTvj",
+        "1k5Qw1Ndr7hAC3oJLQNTvZ",
+        "1k5Qw1Ndr7hAC3oJLQNTuG",
+        "1k5Qw1Ndr7hAC3oJLQNTum",
+        "1k5Qw1Ndr7hAC3oJLQNT$C",
+        "1k5Qw1Ndr7hAC3oJLQNT_U",
+        "1k5Qw1Ndr7hAC3oJLQNT_Y",
+        "1k5Qw1Ndr7hAC3oJLQNTzA",
+        "1k5Qw1Ndr7hAC3oJLQNTz5",
+        "1k5Qw1Ndr7hAC3oJLQNTzx",
+        "1k5Qw1Ndr7hAC3oJLQNTz$",
+        "39IkK7PWn99QbNP1TVwm5A",
+        "2PnPno$jL1r9EMtvGxHuq3"
+      ]
+    },
+    "5": {
+      "matrix": [
+        [
+          28.648463876184085,
+          -9.036154226251012,
+          3137.7253643752397
+        ],
+        [
+          -9.036154226251012,
+          -28.648463876184085,
+          1955.8356341608999
+        ]
+      ],
+      "crop": [
+        940.7277701392788,
+        488.76740517373446,
+        3900.0,
+        1017.0000000000002
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Geometría IFC y correspondencias de la hoja CCTV por nivel",
+      "pairedSheetInliers": 238,
+      "allowedCameraIds": [
+        "35iwytWrD0bR$IYWAFos7O",
+        "35iwytWrD0bR$IYWAFos4g",
+        "3GJYxs7aP9XwiLX8U5JLUJ",
+        "3GJYxs7aP9XwiLX8U5JLU7",
+        "3GJYxs7aP9XwiLX8U5JLUc",
+        "3GJYxs7aP9XwiLX8U5JLUa",
+        "3GJYxs7aP9XwiLX8U5JLVN",
+        "3GJYxs7aP9XwiLX8U5JLV1",
+        "3GJYxs7aP9XwiLX8U5JLVW",
+        "3GJYxs7aP9XwiLX8U5JLVf",
+        "3GJYxs7aP9XwiLX8U5JLS1",
+        "1k5Qw1Ndr7hAC3oJLQNTvw",
+        "1k5Qw1Ndr7hAC3oJLQNTvu",
+        "1k5Qw1Ndr7hAC3oJLQNTvo",
+        "1k5Qw1Ndr7hAC3oJLQNTvm",
+        "1k5Qw1Ndr7hAC3oJLQNTvj",
+        "1k5Qw1Ndr7hAC3oJLQNTvZ",
+        "1k5Qw1Ndr7hAC3oJLQNTuG",
+        "1k5Qw1Ndr7hAC3oJLQNTum",
+        "1k5Qw1Ndr7hAC3oJLQNT$C",
+        "1k5Qw1Ndr7hAC3oJLQNT_U",
+        "1k5Qw1Ndr7hAC3oJLQNT_Y",
+        "1k5Qw1Ndr7hAC3oJLQNTzA",
+        "1k5Qw1Ndr7hAC3oJLQNTz5",
+        "1k5Qw1Ndr7hAC3oJLQNTzx",
+        "1k5Qw1Ndr7hAC3oJLQNTz$",
+        "39IkK7PWn99QbNP1TVwm5A",
+        "2PnPno$jL1r9EMtvGxHuq3"
+      ]
+    },
+    "6": {
+      "matrix": [
+        [
+          28.58856151107832,
+          -9.01952127087521,
+          2951.7993950666882
+        ],
+        [
+          -9.01952127087521,
+          -28.58856151107832,
+          -61.61324238939618
+        ]
+      ],
+      "crop": [
+        780.0,
+        519.8000000000001,
+        4020.0,
+        971.8000000000001
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Geometría IFC y correspondencias de la hoja CCTV por nivel",
+      "pairedSheetInliers": 222,
+      "allowedCameraIds": [
+        "35iwytWrD0bR$IYWAFos4X",
+        "1k5Qw1Ndr7hAC3oJLQNTej",
+        "1k5Qw1Ndr7hAC3oJLQNTlK",
+        "1k5Qw1Ndr7hAC3oJLQNTlY",
+        "1k5Qw1Ndr7hAC3oJLQNTkE",
+        "1k5Qw1Ndr7hAC3oJLQNTk3",
+        "1k5Qw1Ndr7hAC3oJLQNTk1",
+        "1k5Qw1Ndr7hAC3oJLQNTk5",
+        "1k5Qw1Ndr7hAC3oJLQNTkh",
+        "1k5Qw1Ndr7hAC3oJLQNTjJ",
+        "1k5Qw1Ndr7hAC3oJLQNTjH",
+        "1k5Qw1Ndr7hAC3oJLQNTjN",
+        "1k5Qw1Ndr7hAC3oJLQNTjD",
+        "1k5Qw1Ndr7hAC3oJLQNTju",
+        "1a100zvf1FK8mslQuSABJc",
+        "1a100zvf1FK8mslQuSABS2",
+        "1a100zvf1FK8mslQuSABS6",
+        "1a100zvf1FK8mslQuSABSJ",
+        "1a100zvf1FK8mslQuSABSN",
+        "1a100zvf1FK8mslQuSABSd",
+        "1a100zvf1FK8mslQuSABSv",
+        "1a100zvf1FK8mslQuSABTd",
+        "1a100zvf1FK8mslQuSABU2",
+        "1a100zvf1FK8mslQuSABV5",
+        "1a100zvf1FK8mslQuSABVw"
+      ]
+    },
+    "7": {
+      "matrix": [
+        [
+          28.630235303120315,
+          -9.03147918233405,
+          3043.3787989314033
+        ],
+        [
+          -9.03147918233405,
+          -28.630235303120315,
+          5.276440324196585
+        ]
+      ],
+      "crop": [
+        867.3094610456982,
+        586.6670223632126,
+        4020.0,
+        971.8000000000001
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Geometría IFC y correspondencias de la hoja CCTV por nivel",
+      "pairedSheetInliers": 222,
+      "allowedCameraIds": [
+        "35iwytWrD0bR$IYWAFos4X",
+        "1k5Qw1Ndr7hAC3oJLQNTej",
+        "1k5Qw1Ndr7hAC3oJLQNTlK",
+        "1k5Qw1Ndr7hAC3oJLQNTlY",
+        "1k5Qw1Ndr7hAC3oJLQNTkE",
+        "1k5Qw1Ndr7hAC3oJLQNTk3",
+        "1k5Qw1Ndr7hAC3oJLQNTk1",
+        "1k5Qw1Ndr7hAC3oJLQNTk5",
+        "1k5Qw1Ndr7hAC3oJLQNTkh",
+        "1k5Qw1Ndr7hAC3oJLQNTjJ",
+        "1k5Qw1Ndr7hAC3oJLQNTjH",
+        "1k5Qw1Ndr7hAC3oJLQNTjN",
+        "1k5Qw1Ndr7hAC3oJLQNTjD",
+        "1k5Qw1Ndr7hAC3oJLQNTju",
+        "1a100zvf1FK8mslQuSABJc",
+        "1a100zvf1FK8mslQuSABS2",
+        "1a100zvf1FK8mslQuSABS6",
+        "1a100zvf1FK8mslQuSABSJ",
+        "1a100zvf1FK8mslQuSABSN",
+        "1a100zvf1FK8mslQuSABSd",
+        "1a100zvf1FK8mslQuSABSv",
+        "1a100zvf1FK8mslQuSABTd",
+        "1a100zvf1FK8mslQuSABU2",
+        "1a100zvf1FK8mslQuSABV5",
+        "1a100zvf1FK8mslQuSABVw"
+      ]
+    },
+    "8": {
+      "matrix": [
+        [
+          28.53895536501631,
+          -8.999871624308474,
+          3073.752046108092
+        ],
+        [
+          -8.999871624308474,
+          -28.53895536501631,
+          1802.6579601710855
+        ]
+      ],
+      "crop": [
+        780.0,
+        316.40000000000003,
+        4080.0,
+        1717.6
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Geometría IFC y correspondencias de la hoja CCTV por nivel",
+      "pairedSheetInliers": 291,
+      "allowedCameraIds": [
+        "35iwytWrD0bR$IYWAFotxg",
+        "35iwytWrD0bR$IYWAFotxn",
+        "35iwytWrD0bR$IYWAFotx8",
+        "35iwytWrD0bR$IYWAFotx9",
+        "07TdIVBGz8sf4wKi1mJIpP",
+        "07TdIVBGz8sf4wKi1mJIp6",
+        "07TdIVBGz8sf4wKi1mJIp4",
+        "07TdIVBGz8sf4wKi1mJIp_",
+        "07TdIVBGz8sf4wKi1mJIpy",
+        "07TdIVBGz8sf4wKi1mJIpo",
+        "07TdIVBGz8sf4wKi1mJIpt",
+        "07TdIVBGz8sf4wKi1mJIpr",
+        "07TdIVBGz8sf4wKi1mJIph",
+        "07TdIVBGz8sf4wKi1mJIpW",
+        "07TdIVBGz8sf4wKi1mJIpc",
+        "07TdIVBGz8sf4wKi1mJIoQ",
+        "07TdIVBGz8sf4wKi1mJIoH",
+        "07TdIVBGz8sf4wKi1mJIoF",
+        "07TdIVBGz8sf4wKi1mJIo5",
+        "07TdIVBGz8sf4wKi1mJIox",
+        "07TdIVBGz8sf4wKi1mJInV",
+        "07TdIVBGz8sf4wKi1mJIn6",
+        "07TdIVBGz8sf4wKi1mJIn5",
+        "07TdIVBGz8sf4wKi1mJInx",
+        "07TdIVBGz8sf4wKi1mJInv",
+        "07TdIVBGz8sf4wKi1mJIna",
+        "07TdIVBGz8sf4wKi1mJImP",
+        "07TdIVBGz8sf4wKi1mJImV",
+        "07TdIVBGz8sf4wKi1mJI$J",
+        "10ad7Wkjn2FeFPFLjTRRSl",
+        "10ad7Wkjn2FeFPFLjTRRSu",
+        "10ad7Wkjn2FeFPFLjTRRS_",
+        "10ad7Wkjn2FeFPFLjTRRSz",
+        "10ad7Wkjn2FeFPFLjTRRS3",
+        "10ad7Wkjn2FeFPFLjTRRSC",
+        "10ad7Wkjn2FeFPFLjTRRSR",
+        "10ad7Wkjn2FeFPFLjTRRSP"
+      ]
+    },
+    "9": {
+      "matrix": [
+        [
+          28.64258244045294,
+          -9.031759219388634,
+          2841.649933387647
+        ],
+        [
+          -9.031759219388634,
+          -28.64258244045294,
+          1639.2759353383315
+        ]
+      ],
+      "crop": [
+        536.806798327396,
+        146.4091842660766,
+        4080.0,
+        1717.6
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Geometría IFC y correspondencias de la hoja CCTV por nivel",
+      "pairedSheetInliers": 291,
+      "allowedCameraIds": [
+        "35iwytWrD0bR$IYWAFotxg",
+        "35iwytWrD0bR$IYWAFotxn",
+        "35iwytWrD0bR$IYWAFotx8",
+        "35iwytWrD0bR$IYWAFotx9",
+        "07TdIVBGz8sf4wKi1mJIpP",
+        "07TdIVBGz8sf4wKi1mJIp6",
+        "07TdIVBGz8sf4wKi1mJIp4",
+        "07TdIVBGz8sf4wKi1mJIp_",
+        "07TdIVBGz8sf4wKi1mJIpy",
+        "07TdIVBGz8sf4wKi1mJIpo",
+        "07TdIVBGz8sf4wKi1mJIpt",
+        "07TdIVBGz8sf4wKi1mJIpr",
+        "07TdIVBGz8sf4wKi1mJIph",
+        "07TdIVBGz8sf4wKi1mJIpW",
+        "07TdIVBGz8sf4wKi1mJIpc",
+        "07TdIVBGz8sf4wKi1mJIoQ",
+        "07TdIVBGz8sf4wKi1mJIoH",
+        "07TdIVBGz8sf4wKi1mJIoF",
+        "07TdIVBGz8sf4wKi1mJIo5",
+        "07TdIVBGz8sf4wKi1mJIox",
+        "07TdIVBGz8sf4wKi1mJInV",
+        "07TdIVBGz8sf4wKi1mJIn6",
+        "07TdIVBGz8sf4wKi1mJIn5",
+        "07TdIVBGz8sf4wKi1mJInx",
+        "07TdIVBGz8sf4wKi1mJInv",
+        "07TdIVBGz8sf4wKi1mJIna",
+        "07TdIVBGz8sf4wKi1mJImP",
+        "07TdIVBGz8sf4wKi1mJImV",
+        "07TdIVBGz8sf4wKi1mJI$J",
+        "10ad7Wkjn2FeFPFLjTRRSl",
+        "10ad7Wkjn2FeFPFLjTRRSu",
+        "10ad7Wkjn2FeFPFLjTRRS_",
+        "10ad7Wkjn2FeFPFLjTRRSz",
+        "10ad7Wkjn2FeFPFLjTRRS3",
+        "10ad7Wkjn2FeFPFLjTRRSC",
+        "10ad7Wkjn2FeFPFLjTRRSR",
+        "10ad7Wkjn2FeFPFLjTRRSP"
+      ]
+    },
+    "10": {
+      "matrix": [
+        [
+          28.58180221513876,
+          -9.013383546720348,
+          3124.4844857255566
+        ],
+        [
+          -9.013383546720348,
+          -28.58180221513876,
+          231.27733828270067
+        ]
+      ],
+      "crop": [
+        780.0,
+        90.4,
+        4200.0,
+        1672.3999999999999
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Geometría IFC y correspondencias de la hoja CCTV por nivel",
+      "pairedSheetInliers": 211,
+      "allowedCameraIds": [
+        "35iwytWrD0bR$IYWAFotx$",
+        "35iwytWrD0bR$IYWAFotxO",
+        "35iwytWrD0bR$IYWAFotxP",
+        "10ad7Wkjn2FeFPFLjTRRSP",
+        "10ad7Wkjn2FeFPFLjTRRTc",
+        "10ad7Wkjn2FeFPFLjTRRTg",
+        "10ad7Wkjn2FeFPFLjTRRTn",
+        "10ad7Wkjn2FeFPFLjTRRTr",
+        "10ad7Wkjn2FeFPFLjTRRT6",
+        "10ad7Wkjn2FeFPFLjTRRUC",
+        "10ad7Wkjn2FeFPFLjTRRVs",
+        "10ad7Wkjn2FeFPFLjTRRVw",
+        "10ad7Wkjn2FeFPFLjTRRV0",
+        "10ad7Wkjn2FeFPFLjTRRVE",
+        "10ad7Wkjn2FeFPFLjTRRVP",
+        "10ad7Wkjn2FeFPFLjTRROk",
+        "10ad7Wkjn2FeFPFLjTRROu",
+        "10ad7Wkjn2FeFPFLjTRRO5",
+        "10ad7Wkjn2FeFPFLjTRROO",
+        "10ad7Wkjn2FeFPFLjTRRPW",
+        "10ad7Wkjn2FeFPFLjTRRPj",
+        "10ad7Wkjn2FeFPFLjTRRPz",
+        "10ad7Wkjn2FeFPFLjTRRP5",
+        "10ad7Wkjn2FeFPFLjTRRPO",
+        "10ad7Wkjn2FeFPFLjTRRPU",
+        "10ad7Wkjn2FeFPFLjTRRQY",
+        "10ad7Wkjn2FeFPFLjTRRQX",
+        "10ad7Wkjn2FeFPFLjTRRQk",
+        "10ad7Wkjn2FeFPFLjTRRQ2",
+        "10ad7Wkjn2FeFPFLjTRRRe",
+        "10ad7Wkjn2FeFPFLjTRRRy",
+        "10ad7Wkjn2FeFPFLjTRRR6",
+        "10ad7Wkjn2FeFPFLjTRRRE",
+        "10ad7Wkjn2FeFPFLjTRRRI",
+        "10ad7Wkjn2FeFPFLjTRRRO",
+        "10ad7Wkjn2FeFPFLjTRQad",
+        "10ad7Wkjn2FeFPFLjTRQaf",
+        "10ad7Wkjn2FeFPFLjTRQal",
+        "10ad7Wkjn2FeFPFLjTRQa2"
+      ]
+    },
+    "11": {
+      "matrix": [
+        [
+          28.583272215057434,
+          -9.014594600299684,
+          2754.855830589245
+        ],
+        [
+          -9.014594600299684,
+          -28.583272215057434,
+          114.96471079194484
+        ]
+      ],
+      "crop": [
+        410.1817094936777,
+        0,
+        4200.0,
+        1646.5480644178426
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Geometría IFC y correspondencias de la hoja CCTV por nivel",
+      "pairedSheetInliers": 211,
+      "allowedCameraIds": [
+        "35iwytWrD0bR$IYWAFotx$",
+        "35iwytWrD0bR$IYWAFotxO",
+        "35iwytWrD0bR$IYWAFotxP",
+        "10ad7Wkjn2FeFPFLjTRRTc",
+        "10ad7Wkjn2FeFPFLjTRRTg",
+        "10ad7Wkjn2FeFPFLjTRRTn",
+        "10ad7Wkjn2FeFPFLjTRRTr",
+        "10ad7Wkjn2FeFPFLjTRRT6",
+        "10ad7Wkjn2FeFPFLjTRRUC",
+        "10ad7Wkjn2FeFPFLjTRRVs",
+        "10ad7Wkjn2FeFPFLjTRRVw",
+        "10ad7Wkjn2FeFPFLjTRRV0",
+        "10ad7Wkjn2FeFPFLjTRRVE",
+        "10ad7Wkjn2FeFPFLjTRRVP",
+        "10ad7Wkjn2FeFPFLjTRROk",
+        "10ad7Wkjn2FeFPFLjTRROu",
+        "10ad7Wkjn2FeFPFLjTRRO5",
+        "10ad7Wkjn2FeFPFLjTRROO",
+        "10ad7Wkjn2FeFPFLjTRRPW",
+        "10ad7Wkjn2FeFPFLjTRRPj",
+        "10ad7Wkjn2FeFPFLjTRRPz",
+        "10ad7Wkjn2FeFPFLjTRRP5",
+        "10ad7Wkjn2FeFPFLjTRRPO",
+        "10ad7Wkjn2FeFPFLjTRRPU",
+        "10ad7Wkjn2FeFPFLjTRRQY",
+        "10ad7Wkjn2FeFPFLjTRRQX",
+        "10ad7Wkjn2FeFPFLjTRRQk",
+        "10ad7Wkjn2FeFPFLjTRRQ2",
+        "10ad7Wkjn2FeFPFLjTRRRe",
+        "10ad7Wkjn2FeFPFLjTRRRy",
+        "10ad7Wkjn2FeFPFLjTRRR6",
+        "10ad7Wkjn2FeFPFLjTRRRE",
+        "10ad7Wkjn2FeFPFLjTRRRI",
+        "10ad7Wkjn2FeFPFLjTRRRO",
+        "10ad7Wkjn2FeFPFLjTRQad",
+        "10ad7Wkjn2FeFPFLjTRQaf",
+        "10ad7Wkjn2FeFPFLjTRQal",
+        "10ad7Wkjn2FeFPFLjTRQa2"
+      ]
+    },
+    "12": {
+      "matrix": [
+        [
+          28.555205931967233,
+          -8.999823284891047,
+          2662.502947071459
+        ],
+        [
+          -8.999823284891047,
+          -28.555205931967233,
+          1767.9255363785842
+        ]
+      ],
+      "crop": [
+        300.0,
+        271.2,
+        5100.0,
+        1762.8
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Geometría IFC y correspondencias de la hoja CCTV por nivel",
+      "pairedSheetInliers": 394,
+      "allowedCameraIds": [
+        "35iwytWrD0bR$IYWAFot$U",
+        "35iwytWrD0bR$IYWAFotyg",
+        "35iwytWrD0bR$IYWAFotyh",
+        "35iwytWrD0bR$IYWAFotyi",
+        "35iwytWrD0bR$IYWAFotyj",
+        "35iwytWrD0bR$IYWAFotyk",
+        "35iwytWrD0bR$IYWAFotyl",
+        "35iwytWrD0bR$IYWAFotyW",
+        "35iwytWrD0bR$IYWAFotyX",
+        "35iwytWrD0bR$IYWAFotyY",
+        "35iwytWrD0bR$IYWAFotyb",
+        "35iwytWrD0bR$IYWAFoty2",
+        "2G4MixyA10ex$U2CvTh7xO",
+        "2G4MixyA10ex$U2CvTh7xQ",
+        "2G4MixyA10ex$U2CvTh7xK",
+        "2G4MixyA10ex$U2CvTh7ul",
+        "2G4MixyA10ex$U2CvTh7uf",
+        "2G4MixyA10ex$U2CvTh7uh",
+        "2G4MixyA10ex$U2CvTh7ub",
+        "2G4MixyA10ex$U2CvTh7u_",
+        "2G4MixyA10ex$U2CvTh7um",
+        "2G4MixyA10ex$U2CvTh7uo",
+        "2G4MixyA10ex$U2CvTh7u4",
+        "2G4MixyA10ex$U2CvTh7u6",
+        "2G4MixyA10ex$U2CvTh7u2",
+        "2G4MixyA10ex$U2CvTh7uS",
+        "2G4MixyA10ex$U2CvTh7uU",
+        "2G4MixyA10ex$U2CvTh7uO",
+        "2G4MixyA10ex$U2CvTh7uQ",
+        "2G4MixyA10ex$U2CvTh7uK",
+        "2G4MixyA10ex$U2CvTh7uM",
+        "2G4MixyA10ex$U2CvTh7uG",
+        "2G4MixyA10ex$U2CvTh7uI",
+        "2G4MixyA10ex$U2CvTh7vi",
+        "2G4MixyA10ex$U2CvTh7vk",
+        "2G4MixyA10ex$U2CvTh7ve",
+        "2G4MixyA10ex$U2CvTh7vv",
+        "2G4MixyA10ex$U2CvTh7vx",
+        "2G4MixyA10ex$U2CvTh7vr",
+        "2G4MixyA10ex$U2CvTh7vo",
+        "2G4MixyA10ex$U2CvTh7vC",
+        "2G4MixyA10ex$U2CvTh7v0",
+        "2G4MixyA10ex$U2CvTh7vU",
+        "2G4MixyA10ex$U2CvTh7vL",
+        "2G4MixyA10ex$U2CvTh45x",
+        "2G4MixyA10ex$U2CvTh45t"
+      ]
+    },
+    "13": {
+      "matrix": [
+        [
+          28.596434732841836,
+          -9.012696410703368,
+          2808.0434586499196
+        ],
+        [
+          -9.012696410703366,
+          -28.59643473284184,
+          1804.2611032995014
+        ]
+      ],
+      "crop": [
+        441.7063705308425,
+        304.97486725237775,
+        5058.293629469157,
+        1745.0251327476221
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Geometría IFC y correspondencias de la hoja CCTV por nivel",
+      "pairedSheetInliers": 394,
+      "allowedCameraIds": [
+        "35iwytWrD0bR$IYWAFot$U",
+        "35iwytWrD0bR$IYWAFotyg",
+        "35iwytWrD0bR$IYWAFotyh",
+        "35iwytWrD0bR$IYWAFotyi",
+        "35iwytWrD0bR$IYWAFotyk",
+        "35iwytWrD0bR$IYWAFotyl",
+        "35iwytWrD0bR$IYWAFotyX",
+        "35iwytWrD0bR$IYWAFotyY",
+        "35iwytWrD0bR$IYWAFotyb",
+        "35iwytWrD0bR$IYWAFoty2",
+        "2G4MixyA10ex$U2CvTh7xO",
+        "2G4MixyA10ex$U2CvTh7xQ",
+        "2G4MixyA10ex$U2CvTh7xK",
+        "2G4MixyA10ex$U2CvTh7ul",
+        "2G4MixyA10ex$U2CvTh7uf",
+        "2G4MixyA10ex$U2CvTh7uh",
+        "2G4MixyA10ex$U2CvTh7ub",
+        "2G4MixyA10ex$U2CvTh7u_",
+        "2G4MixyA10ex$U2CvTh7um",
+        "2G4MixyA10ex$U2CvTh7uo",
+        "2G4MixyA10ex$U2CvTh7u4",
+        "2G4MixyA10ex$U2CvTh7u6",
+        "2G4MixyA10ex$U2CvTh7u2",
+        "2G4MixyA10ex$U2CvTh7uS",
+        "2G4MixyA10ex$U2CvTh7uU",
+        "2G4MixyA10ex$U2CvTh7uO",
+        "2G4MixyA10ex$U2CvTh7uQ",
+        "2G4MixyA10ex$U2CvTh7uK",
+        "2G4MixyA10ex$U2CvTh7uM",
+        "2G4MixyA10ex$U2CvTh7uG",
+        "2G4MixyA10ex$U2CvTh7uI",
+        "2G4MixyA10ex$U2CvTh7vi",
+        "2G4MixyA10ex$U2CvTh7vk",
+        "2G4MixyA10ex$U2CvTh7ve",
+        "2G4MixyA10ex$U2CvTh7vv",
+        "2G4MixyA10ex$U2CvTh7vx",
+        "2G4MixyA10ex$U2CvTh7vr",
+        "2G4MixyA10ex$U2CvTh7vo",
+        "2G4MixyA10ex$U2CvTh7vC",
+        "2G4MixyA10ex$U2CvTh7v0",
+        "2G4MixyA10ex$U2CvTh7vU",
+        "2G4MixyA10ex$U2CvTh7vL",
+        "2G4MixyA10ex$U2CvTh45x"
+      ]
+    },
+    "14": {
+      "matrix": [
+        [
+          28.603927556923576,
+          -9.015179014273793,
+          2640.400286942083
+        ],
+        [
+          -9.015179014273793,
+          -28.603927556923576,
+          138.12099958499687
+        ]
+      ],
+      "crop": [
+        300.0,
+        90.4,
+        5100.0,
+        1649.8
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Geometría IFC y correspondencias de la hoja CCTV por nivel",
+      "pairedSheetInliers": 128,
+      "allowedCameraIds": [
+        "35iwytWrD0bR$IYWAFot$U",
+        "35iwytWrD0bR$IYWAFotyg",
+        "35iwytWrD0bR$IYWAFotyh",
+        "35iwytWrD0bR$IYWAFotyi",
+        "35iwytWrD0bR$IYWAFotyj",
+        "35iwytWrD0bR$IYWAFotyk",
+        "35iwytWrD0bR$IYWAFotyl",
+        "35iwytWrD0bR$IYWAFotyW",
+        "35iwytWrD0bR$IYWAFotyX",
+        "35iwytWrD0bR$IYWAFotyc",
+        "35iwytWrD0bR$IYWAFotyd",
+        "35iwytWrD0bR$IYWAFotyv",
+        "2G4MixyA10ex$U2CvTh7vo",
+        "2G4MixyA10ex$U2CvTh7vL",
+        "2G4MixyA10ex$U2CvTh46m",
+        "2G4MixyA10ex$U2CvTh46C",
+        "2G4MixyA10ex$U2CvTh468",
+        "2G4MixyA10ex$U2CvTh467",
+        "2G4MixyA10ex$U2CvTh461",
+        "2G4MixyA10ex$U2CvTh46O",
+        "2G4MixyA10ex$U2CvTh47d",
+        "2G4MixyA10ex$U2CvTh47W",
+        "2G4MixyA10ex$U2CvTh47y",
+        "2G4MixyA10ex$U2CvTh47_",
+        "2G4MixyA10ex$U2CvTh47u",
+        "2G4MixyA10ex$U2CvTh47r",
+        "2G4MixyA10ex$U2CvTh47t",
+        "2G4MixyA10ex$U2CvTh47p",
+        "2G4MixyA10ex$U2CvTh47D",
+        "2G4MixyA10ex$U2CvTh47F",
+        "2G4MixyA10ex$U2CvTh473",
+        "2G4MixyA10ex$U2CvTh47P",
+        "2G4MixyA10ex$U2CvTh47R",
+        "2G4MixyA10ex$U2CvTh47L",
+        "2G4MixyA10ex$U2CvTh47N",
+        "2G4MixyA10ex$U2CvTh47H",
+        "2G4MixyA10ex$U2CvTh47J",
+        "2G4MixyA10ex$U2CvTh45l",
+        "2G4MixyA10ex$U2CvTh45x",
+        "2G4MixyA10ex$U2CvTh45t",
+        "2G4MixyA10ex$U2CvTh45P"
+      ]
+    },
+    "15": {
+      "matrix": [
+        [
+          28.606233931927562,
+          -9.017739865767574,
+          2691.6488187526006
+        ],
+        [
+          -9.017739865767574,
+          -28.606233931927562,
+          83.28152400418683
+        ]
+      ],
+      "crop": [
+        350.9790427689609,
+        35.70084159199847,
+        5100.0,
+        1649.8000000000002
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Geometría IFC y correspondencias de la hoja CCTV por nivel",
+      "pairedSheetInliers": 128,
+      "allowedCameraIds": [
+        "35iwytWrD0bR$IYWAFot$U",
+        "35iwytWrD0bR$IYWAFotyg",
+        "35iwytWrD0bR$IYWAFotyh",
+        "35iwytWrD0bR$IYWAFotyi",
+        "35iwytWrD0bR$IYWAFotyj",
+        "35iwytWrD0bR$IYWAFotyk",
+        "35iwytWrD0bR$IYWAFotyl",
+        "35iwytWrD0bR$IYWAFotyW",
+        "35iwytWrD0bR$IYWAFotyX",
+        "35iwytWrD0bR$IYWAFotyc",
+        "35iwytWrD0bR$IYWAFotyd",
+        "35iwytWrD0bR$IYWAFotyv",
+        "2G4MixyA10ex$U2CvTh7vo",
+        "2G4MixyA10ex$U2CvTh7vL",
+        "2G4MixyA10ex$U2CvTh46m",
+        "2G4MixyA10ex$U2CvTh46C",
+        "2G4MixyA10ex$U2CvTh468",
+        "2G4MixyA10ex$U2CvTh467",
+        "2G4MixyA10ex$U2CvTh461",
+        "2G4MixyA10ex$U2CvTh46O",
+        "2G4MixyA10ex$U2CvTh47d",
+        "2G4MixyA10ex$U2CvTh47W",
+        "2G4MixyA10ex$U2CvTh47y",
+        "2G4MixyA10ex$U2CvTh47_",
+        "2G4MixyA10ex$U2CvTh47u",
+        "2G4MixyA10ex$U2CvTh47r",
+        "2G4MixyA10ex$U2CvTh47t",
+        "2G4MixyA10ex$U2CvTh47p",
+        "2G4MixyA10ex$U2CvTh47D",
+        "2G4MixyA10ex$U2CvTh47F",
+        "2G4MixyA10ex$U2CvTh473",
+        "2G4MixyA10ex$U2CvTh47P",
+        "2G4MixyA10ex$U2CvTh47R",
+        "2G4MixyA10ex$U2CvTh47L",
+        "2G4MixyA10ex$U2CvTh47N",
+        "2G4MixyA10ex$U2CvTh47H",
+        "2G4MixyA10ex$U2CvTh47J",
+        "2G4MixyA10ex$U2CvTh45l",
+        "2G4MixyA10ex$U2CvTh45x",
+        "2G4MixyA10ex$U2CvTh45t",
+        "2G4MixyA10ex$U2CvTh45P"
+      ]
+    }
+  },
   "architecture": {
     "1": {
       "matrix": [

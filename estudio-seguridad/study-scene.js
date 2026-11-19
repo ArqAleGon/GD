@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import {OrbitControls} from './vendor/OrbitControls.js';
 import {GLTFLoader} from './vendor/GLTFLoader.js';
-import {loadRecoveredGeometry} from './study-recovered-geometry.js?v=20261103-quality36';
+import {loadRecoveredGeometry} from './study-recovered-geometry.js?v=20261119-e10-74a';
 export const ORIGIN=new THREE.Vector3(96310,2550,-100150);
 export function fixedPose(record,yaw=0,tilt=0){
  const m=new THREE.Matrix4().fromArray(record.placementMatrixIfcColumnMajor);
@@ -132,11 +132,11 @@ export class StudyScene{
  filter(){if(!this.level)return;for(const m of this.markers)m.visible=this.fullStation||m.userData.record.ifcStorey===this.level.ifc;for(const n of this.cameraNodes)n.visible=this.fullStation||n.userData.ifcStorey===this.level.ifc;for(const mesh of this.staticMeshes)mesh.visible=!mesh.userData.detachedAxis&&(mesh.userData.package!=='e09-ins'||this.installations!==false)&&(!mesh.userData.package.startsWith('e09-brt-')||this.showBrt!==false)&&(!mesh.userData.package.startsWith('e09-est-1300-')||this.showStructure1300!==false)&&!this.hiddenPackages?.has(mesh.userData.package);this.dirty=true;}
  frame(camera=this.axonCamera,controls=this.controls,element=this.axon,fullStation=this.fullStation){const visible=this.records?.filter(r=>fullStation||r.ifcStorey===this.level?.ifc)||[];const box=new THREE.Box3();for(const r of visible)box.expandByPoint(new THREE.Vector3().fromArray(r.positionGltfMetres).sub(ORIGIN));
   const floor=fullStation?-Infinity:this.level.cutMin-ORIGIN.y,ceiling=fullStation?Infinity:this.level.cutMax-ORIGIN.y;
-  for(const mesh of this.staticMeshes){const b=mesh.userData.bounds;if(!b||!mesh.visible||b.max[1]<floor||b.min[1]>ceiling)continue;box.expandByPoint(new THREE.Vector3(b.min[0],Math.max(b.min[1],floor),b.min[2]));box.expandByPoint(new THREE.Vector3(b.max[0],Math.min(b.max[1],ceiling),b.max[2]));}
+  for(const mesh of this.staticMeshes){const b=mesh.userData.bounds;if(!b||!mesh.visible||mesh.userData.frameExcluded||b.max[1]<floor||b.min[1]>ceiling)continue;box.expandByPoint(new THREE.Vector3(b.min[0],Math.max(b.min[1],floor),b.min[2]));box.expandByPoint(new THREE.Vector3(b.max[0],Math.min(b.max[1],ceiling),b.max[2]));}
   if(box.isEmpty())return;
   const center=box.getCenter(new THREE.Vector3()),back=new THREE.Vector3().fromArray(this.frameDirection||[.8,.9,1]).normalize(),right=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),back).normalize(),up=new THREE.Vector3().crossVectors(back,right),rect=element.getBoundingClientRect(),tanV=Math.tan(THREE.MathUtils.degToRad(camera.fov/2)),tanH=tanV*Math.max(.1,rect.width/rect.height);let distance=40;
   const fitPoint=p=>{const v=p.sub(center);distance=Math.max(distance,Math.abs(v.dot(right))/tanH+v.dot(back),Math.abs(v.dot(up))/tanV+v.dot(back));};
-  if(this.frameAxes){for(const mesh of this.staticMeshes){const b=mesh.userData.bounds,f=mesh.userData.frameBounds;if(!mesh.visible||!f||b.max[1]<floor||b.min[1]>ceiling)continue;for(const u of [f.u0,f.u1])for(const v of [f.v0,f.v1])for(const y of [Math.max(b.min[1],floor),Math.min(b.max[1],ceiling)])fitPoint(this.frameAxes.right.clone().multiplyScalar(u).addScaledVector(this.frameAxes.horizontal,v).setY(y));}for(const record of visible)fitPoint(new THREE.Vector3().fromArray(record.positionGltfMetres).sub(ORIGIN));}
+  if(this.frameAxes){for(const mesh of this.staticMeshes){const b=mesh.userData.bounds,f=mesh.userData.frameBounds;if(!mesh.visible||mesh.userData.frameExcluded||!f||b.max[1]<floor||b.min[1]>ceiling)continue;for(const u of [f.u0,f.u1])for(const v of [f.v0,f.v1])for(const y of [Math.max(b.min[1],floor),Math.min(b.max[1],ceiling)])fitPoint(this.frameAxes.right.clone().multiplyScalar(u).addScaledVector(this.frameAxes.horizontal,v).setY(y));}for(const record of visible)fitPoint(new THREE.Vector3().fromArray(record.positionGltfMetres).sub(ORIGIN));}
   else for(const x of [box.min.x,box.max.x])for(const y of [box.min.y,box.max.y])for(const z of [box.min.z,box.max.z])fitPoint(new THREE.Vector3(x,y,z));
   if(camera===this.axonCamera)document.body.dataset.axonFrame=JSON.stringify({min:box.min.toArray(),max:box.max.toArray(),distance,viewport:[rect.width,rect.height]});camera.far=Math.max(1500,distance*3+box.getSize(new THREE.Vector3()).length());camera.updateProjectionMatrix();controls.target.copy(center);camera.position.copy(center).addScaledVector(back,distance*1.12);controls.update();this.dirty=true;
  }

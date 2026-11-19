@@ -3368,7 +3368,9 @@
       "role": "detail",
       "gitBlobSha": "fee85872840e4a727d531573eae14c3fa2c1eb59",
       "expectedBytes": 1719,
-      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e10-1200-p017.glb.gz"
+      "url": "https://raw.githubusercontent.com/ArqAleGon/GD/8dbfe01f55996d40c4074f75b47407b0c77fefd0/assets/models/stations/e10-1200-p017.glb.gz",
+      "excludeLinesFromFrame": true,
+      "framingNote": "Detached structural axis linework 8 km from station; retained in model, excluded only from camera fit."
     },
     {
       "file": "assets/models/stations/e10-overview.glb.gz",
