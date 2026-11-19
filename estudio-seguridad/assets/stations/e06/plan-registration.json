@@ -1,0 +1,299 @@
+{
+  "originIfc": [
+    92995.55179492083,
+    102460.09867146933,
+    2566.3950000000004
+  ],
+  "inventory": {
+    "2": {
+      "matrix": [
+        [
+          28.12740825199046,
+          -11.102529428988937,
+          3532.024839735477
+        ],
+        [
+          -11.102529428988937,
+          -28.127408251990463,
+          1716.666309521828
+        ]
+      ],
+      "crop": [
+        898.776,
+        1114.0500000000002,
+        4620.0,
+        1338.0
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Correspondencias arquitectónicas con hoja CCTV; revisión de muros y columnas",
+      "inliers": 12
+    },
+    "3": {
+      "matrix": [
+        [
+          28.15567821279944,
+          -11.175862254319508,
+          3752.526519381877
+        ],
+        [
+          -11.175862254319506,
+          -28.155678212799444,
+          1795.471755001201
+        ]
+      ],
+      "crop": [
+        136.776,
+        1189.65,
+        5382.0,
+        1901.9999999999995
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Correspondencias arquitectónicas con hoja CCTV; revisión de muros y columnas",
+      "inliers": 11
+    },
+    "4": {
+      "matrix": [
+        [
+          27.80286693876411,
+          -11.370586433325485,
+          2951.6767313116316
+        ],
+        [
+          -11.370586433325483,
+          -27.80286693876411,
+          1888.6899858244035
+        ]
+      ],
+      "crop": [
+        364.77600000000007,
+        1288.0500000000002,
+        5100.0,
+        1344.0
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Correspondencias arquitectónicas con hoja CCTV; revisión de muros y columnas",
+      "inliers": 20
+    },
+    "5": {
+      "matrix": [
+        [
+          27.779076595708545,
+          -11.382189088764536,
+          2869.62254802947
+        ],
+        [
+          -11.382189088764536,
+          -27.779076595708545,
+          1944.8198189851773
+        ]
+      ],
+      "crop": [
+        280.77600000000007,
+        1114.0500000000002,
+        5106.0,
+        1608.0
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Correspondencias arquitectónicas con hoja CCTV; revisión de muros y columnas",
+      "inliers": 11
+    },
+    "6": {
+      "matrix": [
+        [
+          27.841828321603167,
+          -11.392253529561062,
+          2838.883182820532
+        ],
+        [
+          -11.392253529561062,
+          -27.841828321603167,
+          1910.662747354723
+        ]
+      ],
+      "crop": [
+        136.776,
+        1294.0500000000002,
+        5154.0,
+        1458.0
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Correspondencias arquitectónicas con hoja CCTV; revisión de muros y columnas",
+      "inliers": 34
+    },
+    "7": {
+      "matrix": [
+        [
+          27.851589771580034,
+          -11.408413827284182,
+          2860.775667739852
+        ],
+        [
+          -11.408413827284182,
+          -27.851589771580034,
+          1984.0289861836711
+        ]
+      ],
+      "crop": [
+        136.776,
+        1066.0500000000002,
+        5244.0,
+        1782.0
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Correspondencias arquitectónicas con hoja CCTV; revisión de muros y columnas",
+      "inliers": 14
+    },
+    "8": {
+      "matrix": [
+        [
+          27.860452726119142,
+          -11.365407557548606,
+          2871.8208138602567
+        ],
+        [
+          -11.365407557548606,
+          -27.860452726119142,
+          1880.4473414246686
+        ]
+      ],
+      "crop": [
+        178.776,
+        1060.0500000000002,
+        5262.0,
+        1668.0
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Correspondencias arquitectónicas con hoja CCTV; revisión de muros y columnas",
+      "inliers": 22
+    },
+    "9": {
+      "matrix": [
+        [
+          27.867355821364214,
+          -11.359738307394613,
+          2851.5751823481387
+        ],
+        [
+          -11.359738307394613,
+          -27.867355821364214,
+          1920.2251222258255
+        ]
+      ],
+      "crop": [
+        136.776,
+        1096.0500000000002,
+        5382.0,
+        1674.0
+      ],
+      "rotation": 90,
+      "status": "Registro visual verificado",
+      "method": "Correspondencias arquitectónicas con hoja CCTV; revisión de muros y columnas",
+      "inliers": 15
+    }
+  },
+  "architecture": {
+    "1": {
+      "matrix": [
+        [
+          12.780014885074301,
+          32.03044595146586,
+          2178.3008477564817
+        ],
+        [
+          32.037994960646024,
+          -12.783026908379764,
+          3106.4939673038284
+        ]
+      ],
+      "crop": [
+        1197,
+        0,
+        3046,
+        6000
+      ],
+      "rotation": 0,
+      "status": "Registro visual verificado · planos arquitectónicos / modelo",
+      "method": "Muros y columnas del modelo; correspondencias entre hoja técnica y planta limpia",
+      "modelFitErrorPixels": 0.0
+    },
+    "2": {
+      "matrix": [
+        [
+          13.297561035529535,
+          32.48702300602322,
+          2274.2473828939296
+        ],
+        [
+          32.49467962233386,
+          -13.300695035302226,
+          3071.902181274555
+        ]
+      ],
+      "crop": [
+        986,
+        0,
+        3257,
+        6000
+      ],
+      "rotation": 0,
+      "status": "Registro visual verificado · planos arquitectónicos / modelo",
+      "method": "Muros y columnas del modelo; correspondencias entre hoja técnica y planta limpia",
+      "modelFitErrorPixels": 0.0
+    },
+    "3": {
+      "matrix": [
+        [
+          13.264326933674063,
+          32.386096114133125,
+          2178.393456430853
+        ],
+        [
+          32.39372894376172,
+          -13.267453100757182,
+          3019.246880616181
+        ]
+      ],
+      "crop": [
+        1071,
+        0,
+        3172,
+        6000
+      ],
+      "rotation": 0,
+      "status": "Registro visual verificado · planos arquitectónicos / modelo",
+      "method": "Muros y columnas del modelo; correspondencias entre hoja técnica y planta limpia",
+      "modelFitErrorPixels": 0.05748070290688126
+    },
+    "4": {
+      "matrix": [
+        [
+          12.116377622102293,
+          29.707878404367044,
+          2038.5367433232234
+        ],
+        [
+          29.714880025485208,
+          -12.11923323785108,
+          3002.19193824213
+        ]
+      ],
+      "crop": [
+        595,
+        0,
+        3648,
+        6000
+      ],
+      "rotation": 0,
+      "status": "Registro visual verificado · planos arquitectónicos / modelo",
+      "method": "Muros y columnas del modelo; correspondencias entre hoja técnica y planta limpia",
+      "modelFitErrorPixels": 0.046263345195729534
+    }
+  }
+}

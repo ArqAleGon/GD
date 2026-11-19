@@ -1,0 +1,190 @@
+{
+  "source": "L1T1-5445-306-CON-ED-INS-PL-0009_V00.pdf",
+  "sourceSha256": "ac065a88d6f56a3715f2d54d5bdcfb21db168186cdb37b4b0c0485c26a87a1b7",
+  "pages": [
+    {
+      "page": 2,
+      "sourcePage": 2,
+      "level": "Sótano",
+      "levelId": "0BXQ6nGx53X9KRoVyG5XNG",
+      "label": "Sótano · Disposición de cámaras · Hoja 2 · V00",
+      "imageUrl": "./assets/stations/e06/inventory/p2.jpg",
+      "width": 6000,
+      "height": 4000,
+      "crop": [
+        898.776,
+        1114.0500000000002,
+        4620.0,
+        1338.0
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e06/inventory/L1T1-5445-306-CON-ED-INS-PL-0009_V00-pagina-02.pdf",
+      "source": "L1T1-5445-306-CON-ED-INS-PL-0009_V00.pdf",
+      "sourceSha256": "ac065a88d6f56a3715f2d54d5bdcfb21db168186cdb37b4b0c0485c26a87a1b7",
+      "pageCount": 1,
+      "renderIdentical": true,
+      "sheetType": "inventory"
+    },
+    {
+      "page": 3,
+      "sourcePage": 3,
+      "level": "Sótano",
+      "levelId": "0BXQ6nGx53X9KRoVyG5XNG",
+      "label": "Sótano · Cobertura · Hoja 3 · V00",
+      "imageUrl": "./assets/stations/e06/inventory/p3.jpg",
+      "width": 6000,
+      "height": 4000,
+      "crop": [
+        136.776,
+        1189.65,
+        5382.0,
+        1901.9999999999995
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e06/inventory/L1T1-5445-306-CON-ED-INS-PL-0009_V00-pagina-03.pdf",
+      "source": "L1T1-5445-306-CON-ED-INS-PL-0009_V00.pdf",
+      "sourceSha256": "ac065a88d6f56a3715f2d54d5bdcfb21db168186cdb37b4b0c0485c26a87a1b7",
+      "pageCount": 1,
+      "renderIdentical": true,
+      "sheetType": "coverage"
+    },
+    {
+      "page": 4,
+      "sourcePage": 4,
+      "level": "Acceso",
+      "levelId": "0BXQ6nGx53X9KRoVyG5UmP",
+      "label": "Acceso · Disposición de cámaras · Hoja 4 · V00",
+      "imageUrl": "./assets/stations/e06/inventory/p4.jpg",
+      "width": 6000,
+      "height": 4000,
+      "crop": [
+        364.77600000000007,
+        1288.0500000000002,
+        5100.0,
+        1344.0
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e06/inventory/L1T1-5445-306-CON-ED-INS-PL-0009_V00-pagina-04.pdf",
+      "source": "L1T1-5445-306-CON-ED-INS-PL-0009_V00.pdf",
+      "sourceSha256": "ac065a88d6f56a3715f2d54d5bdcfb21db168186cdb37b4b0c0485c26a87a1b7",
+      "pageCount": 1,
+      "renderIdentical": true,
+      "sheetType": "inventory"
+    },
+    {
+      "page": 5,
+      "sourcePage": 5,
+      "level": "Acceso",
+      "levelId": "0BXQ6nGx53X9KRoVyG5UmP",
+      "label": "Acceso · Cobertura · Hoja 5 · V00",
+      "imageUrl": "./assets/stations/e06/inventory/p5.jpg",
+      "width": 6000,
+      "height": 4000,
+      "crop": [
+        280.77600000000007,
+        1114.0500000000002,
+        5106.0,
+        1608.0
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e06/inventory/L1T1-5445-306-CON-ED-INS-PL-0009_V00-pagina-05.pdf",
+      "source": "L1T1-5445-306-CON-ED-INS-PL-0009_V00.pdf",
+      "sourceSha256": "ac065a88d6f56a3715f2d54d5bdcfb21db168186cdb37b4b0c0485c26a87a1b7",
+      "pageCount": 1,
+      "renderIdentical": true,
+      "sheetType": "coverage"
+    },
+    {
+      "page": 6,
+      "sourcePage": 6,
+      "level": "Intermedio",
+      "levelId": "0BXQ6nGx53X9KRoVyG5X8Z",
+      "label": "Intermedio · Disposición de cámaras · Hoja 6 · V00",
+      "imageUrl": "./assets/stations/e06/inventory/p6.jpg",
+      "width": 6000,
+      "height": 4000,
+      "crop": [
+        136.776,
+        1294.0500000000002,
+        5154.0,
+        1458.0
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e06/inventory/L1T1-5445-306-CON-ED-INS-PL-0009_V00-pagina-06.pdf",
+      "source": "L1T1-5445-306-CON-ED-INS-PL-0009_V00.pdf",
+      "sourceSha256": "ac065a88d6f56a3715f2d54d5bdcfb21db168186cdb37b4b0c0485c26a87a1b7",
+      "pageCount": 1,
+      "renderIdentical": true,
+      "sheetType": "inventory"
+    },
+    {
+      "page": 7,
+      "sourcePage": 7,
+      "level": "Intermedio",
+      "levelId": "0BXQ6nGx53X9KRoVyG5X8Z",
+      "label": "Intermedio · Cobertura · Hoja 7 · V00",
+      "imageUrl": "./assets/stations/e06/inventory/p7.jpg",
+      "width": 6000,
+      "height": 4000,
+      "crop": [
+        136.776,
+        1066.0500000000002,
+        5244.0,
+        1782.0
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e06/inventory/L1T1-5445-306-CON-ED-INS-PL-0009_V00-pagina-07.pdf",
+      "source": "L1T1-5445-306-CON-ED-INS-PL-0009_V00.pdf",
+      "sourceSha256": "ac065a88d6f56a3715f2d54d5bdcfb21db168186cdb37b4b0c0485c26a87a1b7",
+      "pageCount": 1,
+      "renderIdentical": true,
+      "sheetType": "coverage"
+    },
+    {
+      "page": 8,
+      "sourcePage": 8,
+      "level": "Plataforma",
+      "levelId": "0BXQ6nGx53X9KRoVyG5X9w",
+      "label": "Plataforma · Disposición de cámaras · Hoja 8 · V00",
+      "imageUrl": "./assets/stations/e06/inventory/p8.jpg",
+      "width": 6000,
+      "height": 4000,
+      "crop": [
+        178.776,
+        1060.0500000000002,
+        5262.0,
+        1668.0
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e06/inventory/L1T1-5445-306-CON-ED-INS-PL-0009_V00-pagina-08.pdf",
+      "source": "L1T1-5445-306-CON-ED-INS-PL-0009_V00.pdf",
+      "sourceSha256": "ac065a88d6f56a3715f2d54d5bdcfb21db168186cdb37b4b0c0485c26a87a1b7",
+      "pageCount": 1,
+      "renderIdentical": true,
+      "sheetType": "inventory"
+    },
+    {
+      "page": 9,
+      "sourcePage": 9,
+      "level": "Plataforma",
+      "levelId": "0BXQ6nGx53X9KRoVyG5X9w",
+      "label": "Plataforma · Cobertura · Hoja 9 · V00",
+      "imageUrl": "./assets/stations/e06/inventory/p9.jpg",
+      "width": 6000,
+      "height": 4000,
+      "crop": [
+        136.776,
+        1096.0500000000002,
+        5382.0,
+        1674.0
+      ],
+      "rotation": 90,
+      "pdf": "./assets/stations/e06/inventory/L1T1-5445-306-CON-ED-INS-PL-0009_V00-pagina-09.pdf",
+      "source": "L1T1-5445-306-CON-ED-INS-PL-0009_V00.pdf",
+      "sourceSha256": "ac065a88d6f56a3715f2d54d5bdcfb21db168186cdb37b4b0c0485c26a87a1b7",
+      "pageCount": 1,
+      "renderIdentical": true,
+      "sheetType": "coverage"
+    }
+  ]
+}

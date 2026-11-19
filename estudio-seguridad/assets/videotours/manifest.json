@@ -1,5 +1,5 @@
 {
-  "version": 64,
+  "version": 73,
   "videos": [
     {
       "id": "e09-ruta-1",
@@ -161,6 +161,20 @@
       "file": "https://raw.githubusercontent.com/ArqAleGon/GD/36d8440419510b68dee4b28ee2fa65c83373045f/estudio-seguridad/assets/videotours/e08-pmr-v64.mp4",
       "duration": 80.37,
       "sourceUpdated": "2026-11-11"
+    },
+    {
+      "id": "e06-bici-v73",
+      "title": "E06 · Biciusuarios",
+      "file": "e06-bici-v73.mp4",
+      "duration": 115.97,
+      "sourceUpdated": "2026-11-19"
+    },
+    {
+      "id": "e06-pmr-v73",
+      "title": "E06 · PMR (Personas con movilidad reducida)",
+      "file": "e06-pmr-v73.mp4",
+      "duration": 58.57,
+      "sourceUpdated": "2026-11-19"
     }
   ]
 }

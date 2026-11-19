@@ -1,0 +1,76 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "level": "Sótano",
+      "levelId": "0BXQ6nGx53X9KRoVyG5XNG",
+      "label": "Sótano · E06 · Av. Boyacá",
+      "imageUrl": "./assets/stations/e06/architecture/B.jpg",
+      "width": 4243,
+      "height": 6000,
+      "crop": [
+        1197,
+        0,
+        3046,
+        6000
+      ],
+      "rotation": 0,
+      "source": "PLANO SOTANO E6 A.pdf",
+      "sourceSha256": "b74abf8b36620e6af8693692b77f84f7482598bb9c2c86f5c7f33e0e14d4f27b"
+    },
+    {
+      "page": 2,
+      "level": "Acceso",
+      "levelId": "0BXQ6nGx53X9KRoVyG5UmP",
+      "label": "Acceso · E06 · Av. Boyacá",
+      "imageUrl": "./assets/stations/e06/architecture/A.jpg",
+      "width": 4243,
+      "height": 6000,
+      "crop": [
+        986,
+        0,
+        3257,
+        6000
+      ],
+      "rotation": 0,
+      "source": "PLANO ACCESO E6 A.pdf",
+      "sourceSha256": "fc92d8b9c900687efdd9d7346f9f8bc7b3878d141a15cbc51690b7480c2b94d6"
+    },
+    {
+      "page": 3,
+      "level": "Intermedio",
+      "levelId": "0BXQ6nGx53X9KRoVyG5X8Z",
+      "label": "Intermedio · E06 · Av. Boyacá",
+      "imageUrl": "./assets/stations/e06/architecture/I.jpg",
+      "width": 4243,
+      "height": 6000,
+      "crop": [
+        1071,
+        0,
+        3172,
+        6000
+      ],
+      "rotation": 0,
+      "source": "PLANO INT E6 A.pdf",
+      "sourceSha256": "5148a8eeb439413d2d4658f981ec2b62f47c700c23fd9aa51a9df2ea1b5adf7a"
+    },
+    {
+      "page": 4,
+      "level": "Plataforma",
+      "levelId": "0BXQ6nGx53X9KRoVyG5X9w",
+      "label": "Plataforma · E06 · Av. Boyacá",
+      "imageUrl": "./assets/stations/e06/architecture/P.jpg",
+      "width": 4243,
+      "height": 6000,
+      "crop": [
+        595,
+        0,
+        3648,
+        6000
+      ],
+      "rotation": 0,
+      "source": "PLANO PLA E6 A.pdf",
+      "sourceSha256": "63a015d4dd6d54c4c1ade9f3aca4f3f680cb2d0d5f9008e086d183994a2ad834"
+    }
+  ]
+}
