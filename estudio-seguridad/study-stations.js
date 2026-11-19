@@ -164,3 +164,6 @@ stations.E06.povVideo={"title": "E06", "manifestUrl": "./assets/videotours/manif
 stations.E06.description='Modelos, cuatro plantas arquitectónicas, PDF originales por nivel, inventario CCTV, espacios con etiquetas, colores y áreas documentales. Videos Biciusuarios y PMR integrados; trazados en construcción.';
 
 stations.E10.povVideo={"title": "E10", "manifestUrl": "./assets/stations/e10/videos.json?v=20261119-e10-videos75", "videos": [{"id": "e10-bici-v75", "title": "E10 · Biciusuarios", "label": "Biciusuarios"}, {"id": "e10-pmr-v75", "title": "E10 · PMR (Personas con movilidad reducida)", "label": "PMR (Personas con movilidad reducida)"}]};
+
+stations.E06.assets.routes='./assets/stations/e06/routes.json?v=20261119-e06routes76';
+stations.E06.description='Plantas, espacios, cámaras IFC y recorridos Biciusuarios y PMR sincronizados con sus videos POV.';
