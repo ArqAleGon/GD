@@ -1,6 +1,6 @@
 {
   "station": "E06",
-  "revision": 76,
+  "revision": 78,
   "unifiedPlans": true,
   "originY": 2566.3950000000004,
   "videoClockIn3D": true,
@@ -18,7 +18,8 @@
     {
       "id": "bici",
       "label": "E06 · Biciusuarios",
-      "color": "#000000"
+      "color": "#000000",
+      "secondaryColor": "#39e600"
     },
     {
       "id": "pmr",
@@ -109,7 +110,7 @@
           20.31889706265058
         ]
       ],
-      "color": "#000000",
+      "color": "#39e600",
       "directionFromAnimation": true
     },
     {
