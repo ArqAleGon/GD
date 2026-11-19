@@ -170,3 +170,5 @@ stations.E06.description='Plantas, espacios, cámaras IFC y recorridos Biciusuar
 
 stations.E10.assets.routes='./assets/stations/e10/routes.json?v=20261119-e10routes77';
 stations.E10.description='Plantas, espacios, cámaras IFC y recorridos Biciusuarios y PMR sincronizados con sus videos POV.';
+
+stations.E13.povVideo={"title": "E13", "manifestUrl": "./assets/stations/e13/videos.json?v=20261119-e13-videos79", "videos": [{"id": "e13-bici-v79", "title": "E13 · Biciusuarios", "label": "Biciusuarios"}, {"id": "e13-pmr-v79", "title": "E13 · PMR (Personas con movilidad reducida)", "label": "PMR (Personas con movilidad reducida)"}]};
