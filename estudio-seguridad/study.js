@@ -1,6 +1,6 @@
 import {originalSheets} from './study-plan-originals.js?v=20261119-e10-74a';
 import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
-import {station,stations} from './study-stations.js?v=20261120-e13routes82';
+import {station,stations} from './study-stations.js?v=20261120-e14routes83';
 import {StationVideo} from './study-station-video.js?v=20261106-e04delivery52';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
 import {PlanViewer} from './study-plans.js?v=20261119-e10-74a';
@@ -259,3 +259,5 @@ if(station.id==='E10'&&station.assets.routes){$('#routes-drawer h2').textContent
 if(station.id==='E12'&&station.assets.routes){$('#routes-drawer h2').textContent='Recorridos · E12';$('#routes-drawer > p').textContent='BRT, Biciusuarios y PMR · sincronizados con el POV.';$('#routes-drawer .micro-note').textContent='Azul: BRT. Negro y verde: Biciusuarios. Naranja: PMR.';}
 
 if(station.id==='E13'&&station.assets.routes){$('#routes-drawer h2').textContent='Recorridos · E13';$('#routes-drawer > p').textContent='Biciusuarios y PMR · sincronizados con el POV.';$('#routes-drawer .micro-note').textContent='Negro y verde: Biciusuarios. Naranja: PMR.';}
+
+if(station.id==='E14'&&station.assets.routes){$('#routes-drawer h2').textContent='Recorridos · E14';$('#routes-drawer > p').textContent='Biciusuarios, PMR y Metro–BRT · sincronizados con el POV.';$('#routes-drawer .micro-note').textContent='Negro y verde: Biciusuarios. Naranja: PMR. Azul: Metro–BRT.';}
