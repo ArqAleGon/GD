@@ -1,0 +1,23 @@
+{
+  "version": 80,
+  "videos": [
+    {
+      "id": "e16-bici-v80",
+      "title": "E16 · Biciusuarios",
+      "file": "e16-bici-v80.mp4",
+      "duration": 106.43
+    },
+    {
+      "id": "e16-brt-v80",
+      "title": "E16 · BRT–Metro",
+      "file": "e16-brt-v80.mp4",
+      "duration": 107.57
+    },
+    {
+      "id": "e16-pmr-v80",
+      "title": "E16 · PMR",
+      "file": "e16-pmr-v80.mp4",
+      "duration": 126.73
+    }
+  ]
+}
