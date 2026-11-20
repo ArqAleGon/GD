@@ -1,0 +1,1104 @@
+{
+  "station": "E13",
+  "revision": 82,
+  "unifiedPlans": true,
+  "originY": 2607.3949999999986,
+  "videoClockIn3D": true,
+  "hideSegments": true,
+  "videoManifestUrl": "./assets/stations/e13/videos.json?v=20261120-e13routes82",
+  "pageByLevel": {
+    "2SCB_wEvLD9uWO8$uQSWQR": 1,
+    "10$eqGDcn23eaT8u_dzCf2": 2,
+    "2SCB_wEvLD9uWO8$uQSW5e": 3,
+    "2SCB_wEvLD9uWO8$uQSW4n": 4
+  },
+  "sourceLabel": "E13 · siete referencias de Recorridos y videos originales",
+  "measurementNote": "Registro visual sobre plantas y geometría IFC. Distancias aproximadas; tiempos vinculados a los hitos del POV.",
+  "families": [
+    {
+      "id": "bici",
+      "label": "E13 · Biciusuarios",
+      "color": "#000000",
+      "secondaryColor": "#39e600"
+    },
+    {
+      "id": "pmr",
+      "label": "E13 · PMR (Personas con movilidad reducida)",
+      "color": "#f58220"
+    }
+  ],
+  "routes": [
+    {
+      "id": "e13-bici-plataforma",
+      "family": "bici",
+      "level": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · pasarela al edificio de acceso",
+      "points": [
+        [
+          22.288951340299754,
+          -0.6750000000001819,
+          -0.15082127130872222
+        ],
+        [
+          24.316457635606547,
+          -0.6750000000001819,
+          0.8838277249367353
+        ],
+        [
+          34.291081575929184,
+          -0.6750000000001819,
+          -18.662517926661245
+        ],
+        [
+          45.00456654886831,
+          -0.6750000000001819,
+          -39.656741033933166
+        ],
+        [
+          59.28292592851004,
+          -0.6750000000001819,
+          -25.07071474315107
+        ],
+        [
+          50.416593537112135,
+          -0.6750000000001819,
+          -7.696185275063974
+        ],
+        [
+          44.284046966395266,
+          -0.6750000000001819,
+          4.321197607029608
+        ],
+        [
+          50.36656585231564,
+          -0.6750000000001819,
+          7.425144595765993
+        ],
+        [
+          53.64882541810321,
+          -0.6750002288817268,
+          1.7295107634064892
+        ]
+      ],
+      "color": "#000000",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e13-bici-escalera-pi",
+      "family": "bici",
+      "level": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Escalera mecánica · descenso a Intermedio",
+      "points": [
+        [
+          53.64882541810321,
+          -0.6750002288817268,
+          1.7295107634064892
+        ],
+        [
+          55.14943248438522,
+          -2.8375997924803595,
+          -1.1191850302750241
+        ],
+        [
+          56.01576903934697,
+          -2.7726002120970588,
+          -2.7654120836105354
+        ],
+        [
+          57.64671756608745,
+          -5.110000171661268,
+          -5.861841913030005
+        ],
+        [
+          58.51311251069352,
+          -5.045000114440809,
+          -7.508077535241718
+        ],
+        [
+          60.14406103743398,
+          -7.382400074005018,
+          -10.604507364661188
+        ],
+        [
+          61.01034112495695,
+          -7.317400016784559,
+          -12.250733685012532
+        ],
+        [
+          62.511061123505755,
+          -9.40019999999542,
+          -15.099430931012769
+        ]
+      ],
+      "color": "#000000",
+      "directionFromAnimation": true,
+      "connectionType": "stairs"
+    },
+    {
+      "id": "e13-bici-intermedio",
+      "family": "bici",
+      "level": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · pasarela, validación y ascensor",
+      "points": [
+        [
+          62.511061123505755,
+          -9.40019999999542,
+          -15.099430931012769
+        ],
+        [
+          64.36422680790321,
+          -9.414999999999964,
+          -19.978766704515362
+        ],
+        [
+          58.1163633433962,
+          -9.414999999999964,
+          -23.144045174789536
+        ],
+        [
+          48.46048304528586,
+          -9.414999999999964,
+          -4.084542822004154
+        ],
+        [
+          40.427439772068006,
+          -9.414999999999964,
+          11.771681824430754
+        ],
+        [
+          26.240226418082106,
+          -9.414999999999964,
+          6.395633933236355
+        ],
+        [
+          13.496909784945837,
+          -9.414999999999964,
+          1.3485461627452116
+        ],
+        [
+          -2.5711406740258305,
+          -9.414999999999964,
+          2.4666889332202264
+        ],
+        [
+          -24.0153149857556,
+          -9.414999999999964,
+          2.672638065451613
+        ],
+        [
+          -31.692500644752855,
+          -9.414999999999964,
+          -3.63202182489218
+        ],
+        [
+          -36.89176626866233,
+          -9.414999999999964,
+          -7.674964533137204
+        ],
+        [
+          -42.86711420804578,
+          -9.414999999999964,
+          -1.4436796183730856
+        ],
+        [
+          -51.01803996220264,
+          -9.414999999999964,
+          7.503769098849826
+        ]
+      ],
+      "color": "#000000",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e13-bici-ascensor-ib",
+      "family": "bici",
+      "level": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Ascensor · Intermedio a Sótano",
+      "points": [
+        [
+          -51.01803996220264,
+          -9.414999999999964,
+          7.503769098849826
+        ],
+        [
+          -51.01803996220264,
+          -25.114999999998872,
+          7.503769098849826
+        ]
+      ],
+      "color": "#000000",
+      "directionFromAnimation": true,
+      "connectionType": "elevator"
+    },
+    {
+      "id": "e13-bici-sotano",
+      "family": "bici",
+      "level": "2SCB_wEvLD9uWO8$uQSWQR",
+      "label": "Sótano · validación cicloparqueaderos",
+      "points": [
+        [
+          -51.01803996220264,
+          -25.114999999998872,
+          7.503769098849826
+        ],
+        [
+          -48.22396288945077,
+          -25.115000000000236,
+          4.829017892414109
+        ],
+        [
+          -46.04836455982882,
+          -25.115000000000236,
+          2.3390250843130493
+        ],
+        [
+          -50.47003651366245,
+          -25.115000000000236,
+          -1.5972770362282123
+        ],
+        [
+          -51.92203022798502,
+          -25.115000000000236,
+          0.23350022299208292
+        ],
+        [
+          -53.115422848139104,
+          -25.115000000000236,
+          1.8105452804171625
+        ]
+      ],
+      "color": "#000000",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e13-bici-cicloparqueadero",
+      "family": "bici",
+      "level": "2SCB_wEvLD9uWO8$uQSWQR",
+      "label": "Biciusuarios · salida y aproximación a escalera",
+      "points": [
+        [
+          -53.115422848139104,
+          -25.115000000000236,
+          1.8105452804171625
+        ],
+        [
+          -56.1755756246467,
+          -25.115000000000236,
+          0.24421624883081114
+        ],
+        [
+          -50.48395931107808,
+          -25.115000000000236,
+          -5.59406527139357
+        ],
+        [
+          -41.782857953857615,
+          -25.115000000000236,
+          1.0474436548273576
+        ],
+        [
+          -33.143524231290854,
+          -25.115000000000236,
+          8.81562596047079
+        ],
+        [
+          -32.15155295780779,
+          -25.123275000378655,
+          6.657299277108567
+        ]
+      ],
+      "color": "#39e600",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e13-bici-escalera-bici",
+      "family": "bici",
+      "level": "2SCB_wEvLD9uWO8$uQSWQR",
+      "label": "Escalera de biciusuarios · primeros vuelos y giros",
+      "points": [
+        [
+          -32.15155295780779,
+          -25.123275000378655,
+          6.657299277108567
+        ],
+        [
+          -24.683580630149798,
+          -23.28624998569505,
+          -8.16805466176646
+        ],
+        [
+          -18.879214424715407,
+          -23.163900008201765,
+          -5.244489238721595
+        ],
+        [
+          -33.90391642704494,
+          -19.49812482833879,
+          24.585454053385124
+        ],
+        [
+          -39.70915799759397,
+          -19.37577508926408,
+          21.66141578783889
+        ]
+      ],
+      "color": "#39e600",
+      "directionFromAnimation": true,
+      "connectionType": "stairs"
+    },
+    {
+      "id": "e13-bici-escalera-acceso",
+      "family": "bici",
+      "level": "10$eqGDcn23eaT8u_dzCf2",
+      "label": "Escalera de biciusuarios · último vuelo hacia Acceso",
+      "points": [
+        [
+          -39.70915799759397,
+          -19.37577508926408,
+          21.66141578783889
+        ],
+        [
+          -29.543010651299507,
+          -16.885625114441083,
+          1.4779406257976195
+        ]
+      ],
+      "color": "#39e600",
+      "directionFromAnimation": true,
+      "connectionType": "stairs"
+    },
+    {
+      "id": "e13-bici-salida",
+      "family": "bici",
+      "level": "10$eqGDcn23eaT8u_dzCf2",
+      "label": "Acceso · rampa y salida por Carrera 16",
+      "points": [
+        [
+          -29.543010651299507,
+          -16.885625114441083,
+          1.4779406257976195
+        ],
+        [
+          -26.329230399540013,
+          -16.884999999998854,
+          -3.590223001209411
+        ],
+        [
+          -30.885092610621857,
+          -16.884999999998854,
+          -5.913525246205469
+        ],
+        [
+          -34.448690195084566,
+          -17.114999999998872,
+          -9.780562685479572
+        ],
+        [
+          -40.44972656206365,
+          -17.46499999999878,
+          -15.30054346249985
+        ],
+        [
+          -46.696427819918,
+          -18.01499999999851,
+          -20.74082829225292
+        ],
+        [
+          -48.40007361751465,
+          -18.1649999999986,
+          -22.224542336731023
+        ]
+      ],
+      "color": "#39e600",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e13-pmr-acceso",
+      "family": "pmr",
+      "level": "10$eqGDcn23eaT8u_dzCf2",
+      "label": "Acceso · ingreso por rampas al ascensor",
+      "points": [
+        [
+          -28.353163882073346,
+          -18.614999999998872,
+          26.114803721901726
+        ],
+        [
+          -33.74442821498457,
+          -18.614999999998872,
+          36.68775456070688
+        ],
+        [
+          -43.06936091596681,
+          -17.81499999999869,
+          28.03874020431575
+        ],
+        [
+          -51.09588663408055,
+          -17.114999999998872,
+          20.461706150439674
+        ],
+        [
+          -58.55774435942031,
+          -16.76499999999851,
+          13.78746485310561
+        ],
+        [
+          -55.016703174265395,
+          -16.76499999999851,
+          10.059320391665086
+        ],
+        [
+          -51.01803996220264,
+          -16.76499999999851,
+          7.503769098849826
+        ]
+      ],
+      "color": "#f58220",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e13-pmr-ascensor-ai",
+      "family": "pmr",
+      "level": "10$eqGDcn23eaT8u_dzCf2",
+      "label": "Ascensor · Acceso a Intermedio",
+      "points": [
+        [
+          -51.01803996220264,
+          -16.76499999999851,
+          7.503769098849826
+        ],
+        [
+          -51.01803996220264,
+          -9.414999999999964,
+          7.503769098849826
+        ]
+      ],
+      "color": "#f58220",
+      "directionFromAnimation": true,
+      "connectionType": "elevator"
+    },
+    {
+      "id": "e13-pmr-intermedio",
+      "family": "pmr",
+      "level": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Intermedio · validación Metro y segundo ascensor",
+      "points": [
+        [
+          -51.01803996220264,
+          -9.414999999999964,
+          7.503769098849826
+        ],
+        [
+          -44.7988165196603,
+          -9.414999999999964,
+          0.794983420006649
+        ],
+        [
+          -39.9484964130851,
+          -9.414999999999964,
+          -5.198961067299843
+        ],
+        [
+          -34.11075708642106,
+          -9.414999999999964,
+          -0.8307684370065773
+        ],
+        [
+          -25.63386009285089,
+          -9.414999999999964,
+          5.479094395579146
+        ],
+        [
+          -20.358039799679915,
+          -9.414999999999964,
+          -4.9280475182008034
+        ],
+        [
+          -16.299716497240716,
+          -9.414999999999964,
+          -12.933541298031514
+        ]
+      ],
+      "color": "#f58220",
+      "directionFromAnimation": true
+    },
+    {
+      "id": "e13-pmr-ascensor-ip",
+      "family": "pmr",
+      "level": "2SCB_wEvLD9uWO8$uQSW5e",
+      "label": "Ascensor · Intermedio a Plataforma",
+      "points": [
+        [
+          -16.299716497240716,
+          -9.414999999999964,
+          -12.933541298031514
+        ],
+        [
+          -16.299716497240716,
+          -0.6749999999988177,
+          -12.933541298031514
+        ]
+      ],
+      "color": "#f58220",
+      "directionFromAnimation": true,
+      "connectionType": "elevator"
+    },
+    {
+      "id": "e13-pmr-plataforma",
+      "family": "pmr",
+      "level": "2SCB_wEvLD9uWO8$uQSW4n",
+      "label": "Plataforma · pasarela y acceso al andén",
+      "points": [
+        [
+          -16.299716497240716,
+          -0.6749999999988177,
+          -12.933541298031514
+        ],
+        [
+          -13.089964570074539,
+          -0.6750000000001819,
+          -21.667310543022193
+        ],
+        [
+          -9.43308433092343,
+          -0.6750000000001819,
+          -33.123784615284606
+        ],
+        [
+          2.9571743933024215,
+          -0.6750000000001819,
+          -36.65505204091327
+        ],
+        [
+          14.84204859125713,
+          -0.6750000000001819,
+          -40.62677809346201
+        ],
+        [
+          27.607769158814545,
+          -0.6750000000001819,
+          -45.608965327233136
+        ],
+        [
+          32.71524927139002,
+          -0.6750000000001819,
+          -47.74723706534861
+        ],
+        [
+          35.611674318314776,
+          -0.6750000000001819,
+          -46.268879515855474
+        ]
+      ],
+      "color": "#f58220",
+      "directionFromAnimation": true
+    }
+  ],
+  "links": [],
+  "journeys": [
+    {
+      "id": "e13-bici-pov",
+      "family": "bici",
+      "label": "POV · Biciusuarios",
+      "legs": [
+        "e13-bici-plataforma",
+        "e13-bici-escalera-pi",
+        "e13-bici-intermedio",
+        "e13-bici-ascensor-ib",
+        "e13-bici-sotano",
+        "e13-bici-cicloparqueadero",
+        "e13-bici-escalera-bici",
+        "e13-bici-escalera-acceso",
+        "e13-bici-salida"
+      ],
+      "note": "Plantas y geometría IFC coordinadas con los hitos del video. Los viajes en ascensor se interpolan durante la transición del POV.",
+      "videoSync": {
+        "videoId": "e13-bici-v79",
+        "duration": 182.5,
+        "keys": [
+          {
+            "time": 0,
+            "leg": "e13-bici-plataforma",
+            "fraction": 0.0
+          },
+          {
+            "time": 1,
+            "leg": "e13-bici-plataforma",
+            "fraction": 0.0
+          },
+          {
+            "time": 3,
+            "leg": "e13-bici-plataforma",
+            "fraction": 0.019862172583469076
+          },
+          {
+            "time": 7,
+            "leg": "e13-bici-plataforma",
+            "fraction": 0.21134513621302123
+          },
+          {
+            "time": 11,
+            "leg": "e13-bici-plataforma",
+            "fraction": 0.41701202307439217
+          },
+          {
+            "time": 17,
+            "leg": "e13-bici-plataforma",
+            "fraction": 0.5951186985135225
+          },
+          {
+            "time": 24,
+            "leg": "e13-bici-plataforma",
+            "fraction": 0.7653257772953467
+          },
+          {
+            "time": 29,
+            "leg": "e13-bici-plataforma",
+            "fraction": 0.8830523401194417
+          },
+          {
+            "time": 33,
+            "leg": "e13-bici-plataforma",
+            "fraction": 0.942638857869849
+          },
+          {
+            "time": 36,
+            "leg": "e13-bici-plataforma",
+            "fraction": 1.0
+          },
+          {
+            "time": 36.0,
+            "leg": "e13-bici-escalera-pi",
+            "fraction": 0.0
+          },
+          {
+            "time": 37.964804980439716,
+            "leg": "e13-bici-escalera-pi",
+            "fraction": 0.17861863458542876
+          },
+          {
+            "time": 38.907741700238994,
+            "leg": "e13-bici-escalera-pi",
+            "fraction": 0.2643401545671814
+          },
+          {
+            "time": 41.039642904652474,
+            "leg": "e13-bici-escalera-pi",
+            "fraction": 0.4581493549684069
+          },
+          {
+            "time": 41.98259723866016,
+            "leg": "e13-bici-escalera-pi",
+            "fraction": 0.5438724762418325
+          },
+          {
+            "time": 44.114498443073636,
+            "leg": "e13-bici-escalera-pi",
+            "fraction": 0.737681676643058
+          },
+          {
+            "time": 45.057421529958525,
+            "leg": "e13-bici-escalera-pi",
+            "fraction": 0.8234019572689569
+          },
+          {
+            "time": 47.0,
+            "leg": "e13-bici-escalera-pi",
+            "fraction": 1.0
+          },
+          {
+            "time": 47,
+            "leg": "e13-bici-intermedio",
+            "fraction": 0.0
+          },
+          {
+            "time": 50,
+            "leg": "e13-bici-intermedio",
+            "fraction": 0.03366251679590529
+          },
+          {
+            "time": 54,
+            "leg": "e13-bici-intermedio",
+            "fraction": 0.07883405847288631
+          },
+          {
+            "time": 60,
+            "leg": "e13-bici-intermedio",
+            "fraction": 0.2166326961222042
+          },
+          {
+            "time": 64,
+            "leg": "e13-bici-intermedio",
+            "fraction": 0.3312718988724772
+          },
+          {
+            "time": 69,
+            "leg": "e13-bici-intermedio",
+            "fraction": 0.42912103365435705
+          },
+          {
+            "time": 73,
+            "leg": "e13-bici-intermedio",
+            "fraction": 0.517520044876831
+          },
+          {
+            "time": 77,
+            "leg": "e13-bici-intermedio",
+            "fraction": 0.6214011121123899
+          },
+          {
+            "time": 82,
+            "leg": "e13-bici-intermedio",
+            "fraction": 0.7597111112018524
+          },
+          {
+            "time": 87,
+            "leg": "e13-bici-intermedio",
+            "fraction": 0.8237813305368198
+          },
+          {
+            "time": 90,
+            "leg": "e13-bici-intermedio",
+            "fraction": 0.8662587109938008
+          },
+          {
+            "time": 93,
+            "leg": "e13-bici-intermedio",
+            "fraction": 0.9219388802523352
+          },
+          {
+            "time": 98,
+            "leg": "e13-bici-intermedio",
+            "fraction": 1.0
+          },
+          {
+            "time": 98,
+            "leg": "e13-bici-ascensor-ib",
+            "fraction": 0.0
+          },
+          {
+            "time": 100,
+            "leg": "e13-bici-ascensor-ib",
+            "fraction": 0.0
+          },
+          {
+            "time": 104,
+            "leg": "e13-bici-ascensor-ib",
+            "fraction": 1.0
+          },
+          {
+            "time": 104,
+            "leg": "e13-bici-sotano",
+            "fraction": 0.0
+          },
+          {
+            "time": 107,
+            "leg": "e13-bici-sotano",
+            "fraction": 0.22218430915793616
+          },
+          {
+            "time": 110,
+            "leg": "e13-bici-sotano",
+            "fraction": 0.41211984247033456
+          },
+          {
+            "time": 112,
+            "leg": "e13-bici-sotano",
+            "fraction": 0.7521738098569217
+          },
+          {
+            "time": 114,
+            "leg": "e13-bici-sotano",
+            "fraction": 0.8863972298766909
+          },
+          {
+            "time": 116,
+            "leg": "e13-bici-sotano",
+            "fraction": 1.0
+          },
+          {
+            "time": 116,
+            "leg": "e13-bici-cicloparqueadero",
+            "fraction": 0.0
+          },
+          {
+            "time": 118,
+            "leg": "e13-bici-cicloparqueadero",
+            "fraction": 0.09410415019188659
+          },
+          {
+            "time": 120,
+            "leg": "e13-bici-cicloparqueadero",
+            "fraction": 0.3172988199433071
+          },
+          {
+            "time": 122,
+            "leg": "e13-bici-cicloparqueadero",
+            "fraction": 0.6169394606714408
+          },
+          {
+            "time": 124,
+            "leg": "e13-bici-cicloparqueadero",
+            "fraction": 0.9349762418697802
+          },
+          {
+            "time": 125,
+            "leg": "e13-bici-cicloparqueadero",
+            "fraction": 1.0
+          },
+          {
+            "time": 125.0,
+            "leg": "e13-bici-escalera-bici",
+            "fraction": 0.0
+          },
+          {
+            "time": 131.0,
+            "leg": "e13-bici-escalera-bici",
+            "fraction": 0.2638304351303298
+          },
+          {
+            "time": 133,
+            "leg": "e13-bici-escalera-bici",
+            "fraction": 0.3665138772778604
+          },
+          {
+            "time": 145.0,
+            "leg": "e13-bici-escalera-bici",
+            "fraction": 0.8973008506692202
+          },
+          {
+            "time": 148,
+            "leg": "e13-bici-escalera-bici",
+            "fraction": 1.0
+          },
+          {
+            "time": 148.0,
+            "leg": "e13-bici-escalera-acceso",
+            "fraction": 0.0
+          },
+          {
+            "time": 160.0,
+            "leg": "e13-bici-escalera-acceso",
+            "fraction": 1.0
+          },
+          {
+            "time": 160,
+            "leg": "e13-bici-salida",
+            "fraction": 0.0
+          },
+          {
+            "time": 163,
+            "leg": "e13-bici-salida",
+            "fraction": 0.17094522845519744
+          },
+          {
+            "time": 166,
+            "leg": "e13-bici-salida",
+            "fraction": 0.3166195948399138
+          },
+          {
+            "time": 170,
+            "leg": "e13-bici-salida",
+            "fraction": 0.46655528829034026
+          },
+          {
+            "time": 174,
+            "leg": "e13-bici-salida",
+            "fraction": 0.6990275330568283
+          },
+          {
+            "time": 178,
+            "leg": "e13-bici-salida",
+            "fraction": 0.9355058999407485
+          },
+          {
+            "time": 182.5,
+            "leg": "e13-bici-salida",
+            "fraction": 1.0
+          }
+        ],
+        "hiddenWindows": [
+          [
+            0,
+            1
+          ]
+        ],
+        "waitingLabel": "Presentación del video",
+        "method": "Referencias registradas por correspondencia visual; giros y cambios de nivel medidos en el POV. Escaleras sobre vuelos IFC y descansos."
+      }
+    },
+    {
+      "id": "e13-pmr-pov",
+      "family": "pmr",
+      "label": "POV · PMR",
+      "legs": [
+        "e13-pmr-acceso",
+        "e13-pmr-ascensor-ai",
+        "e13-pmr-intermedio",
+        "e13-pmr-ascensor-ip",
+        "e13-pmr-plataforma"
+      ],
+      "note": "Plantas y geometría IFC coordinadas con los hitos del video. Los viajes en ascensor se interpolan durante la transición del POV.",
+      "videoSync": {
+        "videoId": "e13-pmr-v79",
+        "duration": 77.63,
+        "keys": [
+          {
+            "time": 0,
+            "leg": "e13-pmr-acceso",
+            "fraction": 0.0
+          },
+          {
+            "time": 1,
+            "leg": "e13-pmr-acceso",
+            "fraction": 0.0
+          },
+          {
+            "time": 4,
+            "leg": "e13-pmr-acceso",
+            "fraction": 0.21354588312823056
+          },
+          {
+            "time": 8,
+            "leg": "e13-pmr-acceso",
+            "fraction": 0.4428442130568392
+          },
+          {
+            "time": 12,
+            "leg": "e13-pmr-acceso",
+            "fraction": 0.6418512816927114
+          },
+          {
+            "time": 15,
+            "leg": "e13-pmr-acceso",
+            "fraction": 0.8220953597354402
+          },
+          {
+            "time": 18,
+            "leg": "e13-pmr-acceso",
+            "fraction": 0.9146126059819243
+          },
+          {
+            "time": 21,
+            "leg": "e13-pmr-acceso",
+            "fraction": 1.0
+          },
+          {
+            "time": 21,
+            "leg": "e13-pmr-ascensor-ai",
+            "fraction": 0.0
+          },
+          {
+            "time": 24,
+            "leg": "e13-pmr-ascensor-ai",
+            "fraction": 0.0
+          },
+          {
+            "time": 28,
+            "leg": "e13-pmr-ascensor-ai",
+            "fraction": 1.0
+          },
+          {
+            "time": 28,
+            "leg": "e13-pmr-intermedio",
+            "fraction": 0.0
+          },
+          {
+            "time": 31,
+            "leg": "e13-pmr-intermedio",
+            "fraction": 0.165244324424265
+          },
+          {
+            "time": 34,
+            "leg": "e13-pmr-intermedio",
+            "fraction": 0.30452328898524805
+          },
+          {
+            "time": 36,
+            "leg": "e13-pmr-intermedio",
+            "fraction": 0.4362253201117736
+          },
+          {
+            "time": 39,
+            "leg": "e13-pmr-intermedio",
+            "fraction": 0.6271100436482607
+          },
+          {
+            "time": 42,
+            "leg": "e13-pmr-intermedio",
+            "fraction": 0.8378739320209833
+          },
+          {
+            "time": 45,
+            "leg": "e13-pmr-intermedio",
+            "fraction": 1.0
+          },
+          {
+            "time": 45,
+            "leg": "e13-pmr-ascensor-ip",
+            "fraction": 0.0
+          },
+          {
+            "time": 48,
+            "leg": "e13-pmr-ascensor-ip",
+            "fraction": 0.0
+          },
+          {
+            "time": 52,
+            "leg": "e13-pmr-ascensor-ip",
+            "fraction": 1.0
+          },
+          {
+            "time": 52,
+            "leg": "e13-pmr-plataforma",
+            "fraction": 0.0
+          },
+          {
+            "time": 55,
+            "leg": "e13-pmr-plataforma",
+            "fraction": 0.1343903836445575
+          },
+          {
+            "time": 58,
+            "leg": "e13-pmr-plataforma",
+            "fraction": 0.30808079839466307
+          },
+          {
+            "time": 62,
+            "leg": "e13-pmr-plataforma",
+            "fraction": 0.4941588412714122
+          },
+          {
+            "time": 66,
+            "leg": "e13-pmr-plataforma",
+            "fraction": 0.6751429713821713
+          },
+          {
+            "time": 72,
+            "leg": "e13-pmr-plataforma",
+            "fraction": 0.8730620674373089
+          },
+          {
+            "time": 75,
+            "leg": "e13-pmr-plataforma",
+            "fraction": 0.9530330038843885
+          },
+          {
+            "time": 77.63,
+            "leg": "e13-pmr-plataforma",
+            "fraction": 1.0
+          }
+        ],
+        "hiddenWindows": [
+          [
+            0,
+            1
+          ]
+        ],
+        "waitingLabel": "Presentación del video",
+        "method": "Referencias registradas por correspondencia visual; giros y cambios de nivel medidos en el POV. Escaleras sobre vuelos IFC y descansos."
+      }
+    }
+  ]
+}

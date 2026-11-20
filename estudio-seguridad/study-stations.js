@@ -182,3 +182,5 @@ stations.E12.assets.routes='./assets/stations/e12/routes.json?v=20261120-e12rout
 stations.E12.assets.registration='./assets/stations/e12/plan-registration.json?v=20261120-e12routes81';
 
 stations.E12.assets.spaces='./assets/stations/e12/spaces.json?v=20261120-e12routes81';
+
+stations.E13.assets.routes='./assets/stations/e13/routes.json?v=20261120-e13routes82';
