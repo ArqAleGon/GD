@@ -176,3 +176,9 @@ stations.E13.povVideo={"title": "E13", "manifestUrl": "./assets/stations/e13/vid
 stations.E14.povVideo={"title": "E14", "manifestUrl": "./assets/stations/e14/videos.json?v=20261120-e141516-videos80", "videos": [{"id": "e14-bici-v80", "title": "E14 · Biciusuarios", "label": "Biciusuarios"}, {"id": "e14-brt-v80", "title": "E14 · Metro–BRT", "label": "Metro–BRT"}, {"id": "e14-pmr-v80", "title": "E14 · PMR", "label": "PMR"}]};
 stations.E15.povVideo={"title": "E15", "manifestUrl": "./assets/stations/e15/videos.json?v=20261120-e141516-videos80", "videos": [{"id": "e15-bici-v80", "title": "E15 · Biciusuarios", "label": "Biciusuarios"}, {"id": "e15-brt-pmr-v80", "title": "E15 · BRT–Metro / PMR", "label": "BRT–Metro / PMR"}]};
 stations.E16.povVideo={"title": "E16", "manifestUrl": "./assets/stations/e16/videos.json?v=20261120-e141516-videos80", "videos": [{"id": "e16-bici-v80", "title": "E16 · Biciusuarios", "label": "Biciusuarios"}, {"id": "e16-brt-v80", "title": "E16 · BRT–Metro", "label": "BRT–Metro"}, {"id": "e16-pmr-v80", "title": "E16 · PMR", "label": "PMR"}]};
+
+stations.E12.assets.routes='./assets/stations/e12/routes.json?v=20261120-e12routes81';
+
+stations.E12.assets.registration='./assets/stations/e12/plan-registration.json?v=20261120-e12routes81';
+
+stations.E12.assets.spaces='./assets/stations/e12/spaces.json?v=20261120-e12routes81';
