@@ -1,0 +1,33 @@
+MVP interior PT102 — Un acceso seguro
+
+Abrir: http://127.0.0.1:8788/estudio-seguridad/dist/metro-play/
+Entrada directa: pt102.html. Versión anterior exterior: exterior.html.
+Servidor: python estudio-seguridad/recovery/serve_metro_play.py
+
+WASD o flechas: caminar. Shift: correr. Arrastrar: mirar. Rueda: distancia.
+E: interactuar. F: primera/tercera persona. Reiniciar: borrar avance del ejercicio.
+
+Misión: abrir la puerta exterior, entrar y recoger el encargo en la tableta,
+caminar por el corredor al norte del patio acristalado, registrar y retirar
+la caja temporal, volver al escritorio de control y entregar el registro.
+
+Base: los once paquetes GLB de arquitectura PT102 del catálogo MetroDigital.
+La geometría se transforma desde su origen IFC al marco local de renderizado.
+No se desplazaron muros ni se eliminaron acristalamientos para crear el recorrido.
+Puerta exterior animada para el ejercicio; materiales reinterpretados.
+
+Validación en Edge: carga, apertura, recorrido interior con teclado, cinco pasos,
+informe JSON, cambio a primera persona y persistencia tras recargar. Sin errores JS.
+Evidencias en output/metro-play/pt102-*.png, pt102-qa.json y pt102-informe.json.
+
+Límites: MVP local de planta baja, sin navegación por escaleras; no equivale
+a un videojuego fotorrealista terminado. Avatar animado provisional del ejemplo
+Soldier de Three.js, no trabajador EMB ni representación de EPP aprobado.
+Mobiliario temporal, incidente, suelo exterior, señalización e iluminación son
+ambientación educativa. El informe no acredita aceptación de obras reales.
+Colisiones mediante rayos contra geometría, no simulación física completa.
+
+Higgsfield: primer fotograma generado como objetivo visual, separado del juego.
+Referencia registrada en output/metro-play/higgsfield-reference.json.
+Ese fotograma no es una captura del MVP. No se generó video en esta iteración.
+Créditos de recursos en models/ATTRIBUTIONS.txt.
