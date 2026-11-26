@@ -1,6 +1,6 @@
 import {originalSheets} from './study-plan-originals.js?v=20261119-e10-74a';
 import {AreaRegister} from './study-area-register.js?v=20261103-areas37';
-import {station,stations} from './study-stations.js?v=20261123-e1516routes84';
+import {station,stations} from './study-stations.js?v=20261126-e12platform85';
 import {StationVideo} from './study-station-video.js?v=20261106-e04delivery52';
 import {displayName,initCameraDashboard} from './study-dashboard.js?v=20261103-quality36';
 import {PlanViewer} from './study-plans.js?v=20261119-e10-74a';

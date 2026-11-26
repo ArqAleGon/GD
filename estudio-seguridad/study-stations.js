@@ -190,3 +190,5 @@ stations.E14.assets.routes='./assets/stations/e14/routes.json?v=20261120-e14rout
 stations.E15.assets.routes='./assets/stations/e15/routes.json?v=20261123-e1516routes84';
 
 stations.E16.assets.routes='./assets/stations/e16/routes.json?v=20261123-e1516routes84';
+
+stations.E12.assets.routes='./assets/stations/e12/routes.json?v=20261126-e12platform85';
