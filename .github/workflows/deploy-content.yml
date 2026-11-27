@@ -1,0 +1,140 @@
+name: Deploy Static Content
+
+on:
+  push:
+    branches:
+      - deploy
+
+permissions:
+  contents: read
+
+concurrency:
+  group: static-content-deployment
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout content repository
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Deploy new release
+        shell: bash
+        env:
+          SHA: ${{ github.sha }}
+          DEPLOY_ROOT: /opt/web-deployments
+        run: |
+          set -Eeuo pipefail
+
+          RELEASES="$DEPLOY_ROOT/releases"
+          RELEASE="$RELEASES/$SHA"
+
+          # Validate commit identifier
+          [[ "$SHA" =~ ^[0-9a-f]{40}$ ]]
+
+          # Prevent concurrent deployments
+          exec 9>"$DEPLOY_ROOT/.deploy.lock"
+          flock 9
+
+          STAGING=""
+
+          NEXT_LINK="$DEPLOY_ROOT/.current.next-$GITHUB_RUN_ID"
+
+          cleanup() {
+            if [[ -n "$STAGING" && -d "$STAGING" ]]; then
+              rm -rf -- "$STAGING"
+            fi
+            rm -f -- "$NEXT_LINK"
+          }
+
+          trap cleanup EXIT
+
+          # Validate a release
+          validate_release() {
+            local DIR="$1"
+
+            test -s "$DIR/index.html"
+
+            (
+              cd "$DIR"
+            )
+          }
+
+          # Reuse an existing release or create a new one
+          if [[ -e "$RELEASE" || -L "$RELEASE" ]]; then
+
+            [[ -d "$RELEASE" && ! -L "$RELEASE" ]]
+            validate_release "$RELEASE"
+
+          else
+
+            STAGING=$(mktemp -d "$RELEASES/.staging-${SHA}.XXXXXX")
+
+            # Copy repository contents locally
+            tar \
+              --exclude=.git \
+              --exclude=.github \
+              -C "$GITHUB_WORKSPACE" \
+              -cf - . | tar -C "$STAGING" -xf -
+
+            # Reject symbolic links in published content
+            if [[ -n "$(find "$STAGING" -type l -print -quit)" ]]; then
+              echo "Symbolic links are not allowed in releases"
+              exit 1
+            fi
+
+            # Validate before publication
+            validate_release "$STAGING"
+
+            # Set permissions for NGINX
+            find "$STAGING" -type d -exec chmod 755 {} +
+            find "$STAGING" -type f -exec chmod 644 {} +
+
+            # Finalize release
+            mv -- "$STAGING" "$RELEASE"
+            STAGING=""
+
+          fi
+
+          # Activate release atomically
+          ln -s "releases/$SHA" "$NEXT_LINK"
+          mv -Tf "$NEXT_LINK" "$DEPLOY_ROOT/current"
+
+          # Update deployment timestamp
+          touch "$RELEASE"
+
+          echo "Activated release: $SHA"
+
+          # Retain active release + four most recent releases
+          mapfile -t RELEASES_LIST < <(
+            find "$RELEASES" \
+              -mindepth 1 \
+              -maxdepth 1 \
+              -type d \
+              ! -name '.staging-*' \
+              -printf '%T@ %f\n' |
+              sort -rn |
+              cut -d' ' -f2-
+          )
+
+          KEPT=0
+
+          for VERSION in "${RELEASES_LIST[@]}"; do
+
+            # Never remove the active release
+            [[ "$VERSION" == "$SHA" ]] && continue
+
+            if (( KEPT < 4 )); then
+              KEPT=$((KEPT + 1))
+            else
+              echo "Removing old release: $VERSION"
+              rm -rf -- "$RELEASES/$VERSION"
+            fi
+
+          done
+
+          echo "Deployment completed successfully"
